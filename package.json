@@ -18,7 +18,6 @@
     "express-generator": "^4.16.0",
     "isomorphic-fetch": "^2.2.1",
     "node-fetch": "^2.6.0",
-    "nodemon": "^1.18.3",
-    "ramda": "^0.27.0"
+    "nodemon": "^1.18.3"
   }
 }
