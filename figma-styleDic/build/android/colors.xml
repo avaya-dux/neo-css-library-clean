@@ -2,28 +2,8 @@
 
 <!--
   Do not edit directly
-  Generated on Tue, 05 May 2020 18:32:55 GMT
+  Generated on Tue, 05 May 2020 21:20:07 GMT
 -->
 <resources>
-  <color name="color_base_semantic_red_mid">#ffeb0000</color>
-  <color name="color_base_secondary_7">#ff353535</color>
-  <color name="color_base_secondary_4">#ffcdcdcd</color>
-  <color name="color_base_secondary_5">#ff9e9e9e</color>
-  <color name="color_base_semantic_red_dark">#ff89201a</color>
-  <color name="color_base_semantic_red_light">#fffa8e82</color>
-  <color name="color_base_semantic_blue_light">#ff71aef9</color>
-  <color name="color_base_semantic_blue_mid">#ff1473e6</color>
-  <color name="color_base_semantic_blue_dark">#ff0c468d</color>
-  <color name="color_base_semantic_green_light">#ff5ce55c</color>
-  <color name="color_base_semantic_green_mid">#ff088a08</color>
-  <color name="color_base_semantic_green_dark">#ff08540a</color>
-  <color name="color_base_semantic_bronze_light">#ffd9a46c</color>
-  <color name="color_base_semantic_bronze_mid">#ffab6611</color>
-  <color name="color_base_semantic_bronze_dark">#ff633e14</color>
-  <color name="color_base_secondary_1">#ffffffff</color>
-  <color name="color_base_secondary_2">#fff8f8f8</color>
-  <color name="color_base_secondary_3">#ffefefef</color>
-  <color name="color_base_secondary_6">#ff606060</color>
-  <color name="color_base_secondary_8">#ff000000</color>
   
 </resources>

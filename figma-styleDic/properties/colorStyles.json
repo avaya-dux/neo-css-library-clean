@@ -1,26 +1,22 @@
 {
-  "color": {
-    "base": {
-      "semantic/red/mid": { "value": "#eb0000" },
-      "secondary/7": { "value": "#353535" },
-      "secondary/4": { "value": "#cdcdcd" },
-      "secondary/5": { "value": "#9e9e9e" },
-      "semantic/red/dark": { "value": "#89201a" },
-      "semantic/red/light": { "value": "#fa8e82" },
-      "semantic/blue/light": { "value": "#71aef9" },
-      "semantic/blue/mid": { "value": "#1473e6" },
-      "semantic/blue/dark": { "value": "#0c468d" },
-      "semantic/green/light": { "value": "#5ce55c" },
-      "semantic/green/mid": { "value": "#088a08" },
-      "semantic/green/dark": { "value": "#08540a" },
-      "semantic/bronze/light": { "value": "#d9a46c" },
-      "semantic/bronze/mid": { "value": "#ab6611" },
-      "semantic/bronze/dark": { "value": "#633e14" },
-      "secondary/1": { "value": "#ffffff" },
-      "secondary/2": { "value": "#f8f8f8" },
-      "secondary/3": { "value": "#efefef" },
-      "secondary/6": { "value": "#606060" },
-      "secondary/8": { "value": "#000000" }
-    }
-  }
+  "semantic/red/mid": { "value": "#eb0000" },
+  "secondary/7": { "value": "#353535" },
+  "secondary/4": { "value": "#cdcdcd" },
+  "secondary/5": { "value": "#9e9e9e" },
+  "semantic/red/dark": { "value": "#89201a" },
+  "semantic/red/light": { "value": "#fa8e82" },
+  "semantic/blue/light": { "value": "#71aef9" },
+  "semantic/blue/mid": { "value": "#1473e6" },
+  "semantic/blue/dark": { "value": "#0c468d" },
+  "semantic/green/light": { "value": "#5ce55c" },
+  "semantic/green/mid": { "value": "#088a08" },
+  "semantic/green/dark": { "value": "#08540a" },
+  "semantic/bronze/light": { "value": "#d9a46c" },
+  "semantic/bronze/mid": { "value": "#ab6611" },
+  "semantic/bronze/dark": { "value": "#633e14" },
+  "secondary/1": { "value": "#ffffff" },
+  "secondary/2": { "value": "#f8f8f8" },
+  "secondary/3": { "value": "#efefef" },
+  "secondary/6": { "value": "#606060" },
+  "secondary/8": { "value": "#000000" }
 }
