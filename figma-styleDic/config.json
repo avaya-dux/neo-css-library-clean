@@ -11,6 +11,22 @@
         }
       ]
     },
+    "assets/embed/scss": {
+      "transforms": ["attribute/cti", "name/cti/kebab", "asset/base64"],
+      "buildPath": "build/scss/",
+      "files": [
+        {
+          "destination": "assets_icons.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "asset",
+              "type": "icon"
+            }
+          }
+        }
+      ]
+    },
     "android": {
       "transformGroup": "android",
       "buildPath": "build/android/",
