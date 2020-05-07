@@ -3,13 +3,21 @@
 // StyleDictionary.swift
 //
 // Do not edit directly
-// Generated on Tue, 05 May 2020 21:20:07 GMT
+// Generated on Thu, 07 May 2020 00:43:30 GMT
 //
 
 
 import UIKit
 
 public class StyleDictionary {
+    public static let effectStylesModalColor = rgba(0,0,0,0.20000000298023224)
+    public static let effectStylesModalRadius = 4
+    public static let effectStylesModalXOffset = 0
+    public static let effectStylesModalYOffset = 2
+    public static let effectStylesSidenavColor = rgba(0,0,0,0.15000000596046448)
+    public static let effectStylesSidenavRadius = 8
+    public static let effectStylesSidenavXOffset = 0
+    public static let effectStylesSidenavYOffset = 4
     public static let secondary1 = #ffffff
     public static let secondary2 = #f8f8f8
     public static let secondary3 = #efefef
