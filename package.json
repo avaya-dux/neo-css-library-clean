@@ -19,8 +19,10 @@
     "express": "^4.16.3",
     "express-generator": "^4.16.0",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.18.3",
+    "style-dictionary": "^2.10.0"
   },
   "devDependencies": {}
 }

@@ -1,0 +1,12 @@
+<% _.each(allProperties, function(prop) {
+
+console.log(`*******${JSON.stringify(prop.attributes)}`);
+
+console.log(prop.value.value1);
+
+console.log(prop.value.value2);
+
+console.log(prop.value.value3);
+
+%>.<%= prop.name %> <%= JSON.stringify(prop.value.value1) %> ;<% if (prop.comment) { %> // <%= prop.comment %><% } %>
+<% }); %>
