@@ -7,7 +7,7 @@
       "files": [
         {
           "destination": "_classes.scss",
-          "format": "custom/format/scss",
+          "format": "custom/format/scss-classes",
           "filter": "isClass"
         }
       ]
