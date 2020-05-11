@@ -2,17 +2,20 @@
 
 var attributes = prop.attributes;
 
-var readableAttributes = JSON.stringify(attributes)
+const classAttributesArray = Object.entries(prop.value)
 
-console.log(`****${readableAttributes}`)
+var classAttributes = '';
 
-console.log(attributes["type"])
+classAttributesArray.forEach(attribute => {
 
-console.log(prop.value.value1);
 
-console.log(prop.value.value2);
+    classAttributes += `${JSON.stringify(attribute[1]).replace(/\"|\{|\}/g, "")}; `
 
-console.log(prop.value.value3);
 
-%>.<%= attributes["type"] %> <%= JSON.stringify(prop.value.value1) %> ;<% if (prop.comment) { %> // <%= prop.comment %><% } %>
+})
+
+console.log(classAttributes)
+
+
+%>.<%= attributes["type"] %> { <%= classAttributes %> };<% if (prop.comment) { %> // <%= prop.comment %><% } %>
 <% }); %>

@@ -1,0 +1,23 @@
+<% function testFunction(allProperties) {
+
+console.log("This is running")
+
+const tokens = _.each(allProperties, function(prop) {
+
+var attributes = prop.attributes;
+        
+const classAttributesArray = Object.entries(prop.value)
+        
+var classAttributes = '';
+        
+classAttributesArray.forEach(attribute => {       
+classAttributes += `${JSON.stringify(attribute[1]).replace(/\"|\{|\}/g, "")}; `      
+})
+
+return classAttributes
+
+})
+
+console.log("This ran")
+    
+%><% tokens %><% }; %>

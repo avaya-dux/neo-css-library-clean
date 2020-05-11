@@ -4,7 +4,7 @@
       "value": {
         "value1": { "height": "70px" },
         "value2": { "width": "70px" },
-        "value3": { "background-color": "#e0e" }
+        "value3": { "background-color": "'#e0e'" }
       }
     }
   }

@@ -11,6 +11,22 @@
           "filter": "isClass"
         }
       ]
+    },
+    "assets/embed/scss": {
+      "transforms": ["attribute/cti", "name/cti/kebab"],
+      "buildPath": "build/scss/",
+      "files": [
+        {
+          "destination": "assets_icons.scss",
+          "format": "scss/icons",
+          "filter": {
+            "attributes": {
+              "category": "content",
+              "type": "icon"
+            }
+          }
+        }
+      ]
     }
   }
 }
