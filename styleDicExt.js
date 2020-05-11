@@ -7,6 +7,8 @@ const _ = require('lodash');
 console.log('Build started.....\n');
 console.log('=======================================');
 
+// this is an attempt to insert comments at top of file
+
 const fileHeader =
   '// Mo generated this file automatically on ' + new Date().toUTCString + '\n';
 
@@ -31,7 +33,19 @@ StyleDictionary.registerFilter({
   },
 });
 
-StyleDictionary.buildPlatform('web');
+// this is where we register our custom filter for just atomic design tokens
+
+StyleDictionary.registerFilter({
+  name: 'isDesignToken',
+  matcher: function (prop) {
+    return (
+      prop.attributes.category !== 'class' &&
+      prop.attributes.category !== 'content'
+    );
+  },
+});
+
+StyleDictionary.buildPlatform('scss');
 
 console.log('=======================================\n');
 console.log('Build completed....');

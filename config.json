@@ -9,6 +9,11 @@
           "destination": "_classes.scss",
           "format": "custom/format/scss-classes",
           "filter": "isClass"
+        },
+        {
+          "destination": "_variables.scss",
+          "format": "scss/variables",
+          "filter": "isDesignToken"
         }
       ]
     },
