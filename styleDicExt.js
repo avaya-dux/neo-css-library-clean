@@ -14,16 +14,22 @@ const fileHeader =
 
 // code for all our custom templates
 
-// this custom template creates classes
-const template = _.template(
+// this custom template creates scss classes
+const scssTemplate = _.template(
   fs.readFileSync(__dirname + '/templates/scss-classes.template')
 );
 
-// this is where we register our custom Format and Filter to create classes
+// this custom template creates css classes
+
+const cssTemplate = _.template(
+  fs.readFileSync(__dirname + '/templates/css-classes.template')
+);
+
+// this is where we register our custom Format and Filter to create classes in scss
 
 StyleDictionary.registerFormat({
   name: 'custom/format/scss-classes',
-  formatter: template,
+  formatter: scssTemplate,
 });
 
 StyleDictionary.registerFilter({
@@ -31,6 +37,13 @@ StyleDictionary.registerFilter({
   matcher: function (prop) {
     return prop.attributes.category === 'class';
   },
+});
+
+// this is where we register our custom Format to create classes in css
+
+StyleDictionary.registerFormat({
+  name: 'custom/format/css-classes',
+  formatter: cssTemplate,
 });
 
 // this is where we register our custom filter for just atomic design tokens
@@ -45,7 +58,7 @@ StyleDictionary.registerFilter({
   },
 });
 
-StyleDictionary.buildPlatform('scss');
+StyleDictionary.buildPlatform('css');
 
 console.log('=======================================\n');
 console.log('Build completed....');

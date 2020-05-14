@@ -1,6 +1,22 @@
 {
   "source": ["properties/**/*.json"],
   "platforms": {
+    "css": {
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "files": [
+        {
+          "destination": "class-styles.css",
+          "format": "custom/format/css-classes",
+          "filter": "isClass"
+        },
+        {
+          "destination": "token-styles.css",
+          "format": "css/variables",
+          "filter": "isDesignToken"
+        }
+      ]
+    },
     "scss": {
       "transformGroup": "scss",
       "buildPath": "build/scss/",
