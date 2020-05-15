@@ -48,6 +48,17 @@
           }
         }
       ]
+    },
+    "js": {
+      "transformGroup": "js",
+      "buildPath": "build/js/",
+      "files": [
+        {
+          "format": "javascript/es6",
+          "destination": "tokens.js",
+          "filter": "isDesignToken"
+        }
+      ]
     }
   }
 }
