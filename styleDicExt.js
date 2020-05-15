@@ -58,7 +58,7 @@ StyleDictionary.registerFilter({
   },
 });
 
-StyleDictionary.buildPlatform('css');
+StyleDictionary.buildAllPlatforms();
 
 console.log('=======================================\n');
 console.log('Build completed....');
