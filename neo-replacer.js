@@ -14,6 +14,10 @@ console.log(tokens[semGreenDark]);
 
 // var fromSemGreenDark = `/${semGreenDark}/g`;
 
+var tokenRegExName = new RegExp(semGreenDark, 'g');
+
+var tokenRegExValue = new RegExp(tokens[semGreenDark], 'g');
+
 // change style To
 
 const optionsToName = {
@@ -32,20 +36,20 @@ const optionsToValue = {
 
 const optionsFromName = {
   files: './neo/scss/**/*.scss',
-  from: /SemanticGreenDark/g,
+  from: tokenRegExName,
   to: 'neo-presence-red',
 };
 
 const optionsFromValue = {
   files: './neo/scss/**/*.scss',
-  from: /#08540a/g,
+  from: tokenRegExValue,
   to: '#d50000',
 };
 
-replace(optionsFromName).then((results) => {
+replace(optionsToName).then((results) => {
   console.log('Replacement results:', results);
 
-  replace(optionsFromValue).then((results) => {
+  replace(optionsToValue).then((results) => {
     console.log('******************************\n');
 
     console.log('Replacement results:', results);

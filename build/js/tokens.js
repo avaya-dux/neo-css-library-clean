@@ -1,6 +1,6 @@
 /**
  * Do not edit directly
- * Generated on Fri, 15 May 2020 14:56:30 GMT
+ * Generated on Fri, 15 May 2020 16:19:09 GMT
  */
 
 export const SemanticRedMid = "#eb0000";
