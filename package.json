@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
-    "scss": "node-sass neo/scss/main.scss neo/css/main.css"
+    "scss": "node-sass neo/scss/main.scss neo/css/main.css",
+    "automated": "npm start && node styleDicExt.js && node neo-replacer.js && npm run scss"
   },
   "keywords": [
     "Figma"

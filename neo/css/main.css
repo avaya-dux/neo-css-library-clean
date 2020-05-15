@@ -12,10 +12,10 @@
   --neo-success-color-h: 120;
   --neo-success-color-s: 100%;
   --neo-success-color-l: 25.09804%;
-  --neo-alert-color: hsl(0, 100%, 41.76471%);
-  --neo-alert-color-h: 0;
-  --neo-alert-color-s: 100%;
-  --neo-alert-color-l: 41.76471%;
+  --neo-alert-color: hsl(121.57895, 82.6087%, 18.03922%);
+  --neo-alert-color-h: 121.57895;
+  --neo-alert-color-s: 82.6087%;
+  --neo-alert-color-l: 18.03922%;
   --neo-warning-color: hsl(41.97531, 96.04743%, 50.39216%);
   --neo-warning-color-h: 41.97531;
   --neo-warning-color-s: 96.04743%;
@@ -539,10 +539,10 @@ template {
 
 /* stylelint-disable selector-class-pattern */
 .color-red {
-  color: #d50000 !important; }
+  color: #08540a !important; }
 
 .bg-color-red {
-  background-color: #d50000; }
+  background-color: #08540a; }
 
 .color-yellow {
   color: #fab107 !important; }
@@ -1388,7 +1388,7 @@ hr {
         border-left-width: 1px;
         border-right-width: 0; }
   .neo-input-group__icon {
-    color: #d50000;
+    color: #08540a;
     display: flex;
     font-size: 20px;
     position: absolute;
@@ -1583,17 +1583,17 @@ hr {
     border-color: transparent; }
 
 .neo-btn--alert {
-  background-color: #d50000;
+  background-color: #08540a;
   color: var(--neo-global-text-inverse-color); }
   .neo-btn--alert:focus {
-    background-color: #bc0000; }
+    background-color: #063d07; }
   .neo-btn--alert:hover {
-    background-color: #bc0000; }
+    background-color: #063d07; }
   .neo-btn--alert:focus {
     box-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5); }
   .neo-btn--alert:active {
-    background-color: #d50000;
-    box-shadow: 0 1px 3px 3px rgba(213, 0, 0, 0.2); }
+    background-color: #08540a;
+    box-shadow: 0 1px 3px 3px rgba(8, 84, 10, 0.2); }
   .neo-btn--alert[disabled], .neo-btn--alert--disabled {
     background-color: #f2f2f2;
     color: hsla(var(--neo-global-text-color-h), var(--neo-global-text-color-s), var(--neo-global-text-color-l), 50%);
@@ -4122,10 +4122,10 @@ hr {
   --neo-success-color-h: 120;
   --neo-success-color-s: 100%;
   --neo-success-color-l: 25.09804%;
-  --neo-alert-color: hsl(0, 100%, 41.76471%);
-  --neo-alert-color-h: 0;
-  --neo-alert-color-s: 100%;
-  --neo-alert-color-l: 41.76471%;
+  --neo-alert-color: hsl(121.57895, 82.6087%, 18.03922%);
+  --neo-alert-color-h: 121.57895;
+  --neo-alert-color-s: 82.6087%;
+  --neo-alert-color-l: 18.03922%;
   --neo-warning-color: hsl(41.97531, 96.04743%, 50.39216%);
   --neo-warning-color-h: 41.97531;
   --neo-warning-color-s: 96.04743%;

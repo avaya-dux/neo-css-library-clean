@@ -1,16 +1,1 @@
-{
-  "effectStyles": {
-    "modal": {
-      "xOffset": { "value": 0 },
-      "yOffset": { "value": 2 },
-      "radius": { "value": 4 },
-      "color": { "value": "rgba(0,0,0,0.20000000298023224)" }
-    },
-    "sidenav": {
-      "xOffset": { "value": 0 },
-      "yOffset": { "value": 4 },
-      "radius": { "value": 8 },
-      "color": { "value": "rgba(0,0,0,0.15000000596046448)" }
-    }
-  }
-}
+{"effectStyles":{"modal":{"xOffset":{"value":0},"yOffset":{"value":2},"radius":{"value":4},"color":{"value":"rgba(0,0,0,0.20000000298023224)"}},"sidenav":{"xOffset":{"value":0},"yOffset":{"value":4},"radius":{"value":8},"color":{"value":"rgba(0,0,0,0.15000000596046448)"}}}}
