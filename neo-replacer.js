@@ -8,7 +8,7 @@ const replace = require('replace-in-file');
 
 const optionsToName = {
   files: './neo/scss/**/*.scss',
-  from: /custom-token-name/g,
+  from: /neo-presence-red/g,
   to: 'semantic-green-dark',
 };
 
@@ -21,7 +21,7 @@ const optionsToValue = {
 const optionsFromName = {
   files: './neo/scss/**/*.scss',
   from: /semantic-green-dark/g,
-  to: 'custom-token-name',
+  to: 'neo-presence-red',
 };
 
 const optionsFromValue = {

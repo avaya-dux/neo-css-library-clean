@@ -27,7 +27,7 @@ $neo-off-white: #f2f2f2 !default;
 $neo-strong-orange: #f4511e !default;
 $neo-mid-orange: #f7941e !default;
 $neo-light-orange: #f9d9b1 !default;
-$custom-token-name: #d50000 !default;
+$neo-presence-red: #d50000 !default;
 $neo-presence-yellow: #fab107 !default;
 $neo-presence-green: #4baa39 !default;
 $neo-active-green: #008000 !default;
@@ -184,7 +184,7 @@ $input-asterix-required-color: $neo-alert-color !default;
 $input-icon-size: 20px !default;
 $input-space-right: 30px !default;
 $input-background-color: $global-background !default;
-$input-required-background: lighten($custom-token-name, 50%) !default;
+$input-required-background: lighten($neo-presence-red, 50%) !default;
 $input-border-color: $global-border-color !default;
 $input-focus-border-color: $neo-mid-blue !default;
 $input-focus-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5) !default;
@@ -358,12 +358,12 @@ $button-types: map-merge(
       disabled-bg-color: $neo-off-white,
     ),
     alert: (
-      bg-color: $custom-token-name,
+      bg-color: $neo-presence-red,
       text-color: $global-text-inverse-color,
-      hover-bg-color: darken($custom-token-name, 5%),
-      focus-bg-color: darken($custom-token-name, 5%),
-      active-bg-color: $custom-token-name,
-      active-box-shadow-color: $custom-token-name,
+      hover-bg-color: darken($neo-presence-red, 5%),
+      focus-bg-color: darken($neo-presence-red, 5%),
+      active-bg-color: $neo-presence-red,
+      active-box-shadow-color: $neo-presence-red,
       disabled-bg-color: $neo-off-white,
     ),
     info: (
