@@ -2,56 +2,79 @@
 
 const replace = require('replace-in-file');
 
-const tokens = require('./build/js/tokens');
+// we import all tokens as a js =bject
 
-// $semantic-green-dark: #08540a;
+// const tokens = require('./build/js/tokens');
 
-var semGreenDark = Object.keys(tokens)[11];
+// we import all icons as a js object;
 
-console.log(semGreenDark);
+const icons = require('./build/js/icons');
 
-console.log(tokens[semGreenDark]);
+var testIconName = Object.keys(icons)[0];
 
-// var fromSemGreenDark = `/${semGreenDark}/g`;
+var testIconBase64 = icons[testIconName];
 
-var tokenRegExName = new RegExp(semGreenDark, 'g');
+// console.log(testIconBase64);
 
-var tokenRegExValue = new RegExp(tokens[semGreenDark], 'g');
+var utf8encoded = new Buffer(testIconBase64, 'base64').toString('utf8');
 
-// change style To
+console.log(utf8encoded);
 
-const optionsToName = {
-  files: './neo/scss/**/*.scss',
-  from: /neo-presence-red/g,
-  to: semGreenDark,
-};
+// #region Code to replace colors
 
-const optionsToValue = {
-  files: './neo/scss/**/*.scss',
-  from: /#d50000/g,
-  to: tokens[semGreenDark],
-};
+// we get the name of a particular token, in this case semGreenDark
 
-// change style From
+// var semGreenDark = Object.keys(tokens)[11];
 
-const optionsFromName = {
-  files: './neo/scss/**/*.scss',
-  from: tokenRegExName,
-  to: 'neo-presence-red',
-};
+// // we save the token's name and value in a Regular Expression
 
-const optionsFromValue = {
-  files: './neo/scss/**/*.scss',
-  from: tokenRegExValue,
-  to: '#d50000',
-};
+// var tokenRegExName = new RegExp(semGreenDark, 'g');
 
-replace(optionsToName).then((results) => {
-  console.log('Replacement results:', results);
+// var tokenRegExValue = new RegExp(tokens[semGreenDark], 'g');
 
-  replace(optionsToValue).then((results) => {
-    console.log('******************************\n');
+// // change style To -- we write functions that change the style from what it is in current Neo
+// // to what we want it to be
 
-    console.log('Replacement results:', results);
-  });
-});
+// // TODO -- replace scss directly with css file
+
+// const optionsToName = {
+//   files: './neo/scss/**/*.scss',
+//   from: /neo-presence-red/g,
+//   to: semGreenDark,
+// };
+
+// const optionsToValue = {
+//   files: './neo/scss/**/*.scss',
+//   from: /#d50000/g,
+//   to: tokens[semGreenDark],
+// };
+
+// // change style From -- we write functions that revert the style back to current Neo
+
+// const optionsFromName = {
+//   files: './neo/scss/**/*.scss',
+//   from: tokenRegExName,
+//   to: 'neo-presence-red',
+// };
+
+// const optionsFromValue = {
+//   files: './neo/scss/**/*.scss',
+//   from: tokenRegExValue,
+//   to: '#d50000',
+// };
+
+// we call the function as necessary
+
+// replace(optionsToName).then((results) => {
+//   console.log('Replacement results:', results);
+
+//   replace(optionsToValue).then((results) => {
+//     console.log('******************************\n');
+
+//     console.log('Replacement results:', results);
+//   });
+// });
+
+// #endregion
+
+// #region Code to replace tokens

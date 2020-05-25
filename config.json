@@ -57,6 +57,16 @@
           "format": "javascript/es6",
           "destination": "tokens.js",
           "filter": "isDesignToken"
+        },
+        {
+          "format": "javascript/es6",
+          "destination": "icons.js",
+          "filter": {
+            "attributes": {
+              "category": "content",
+              "type": "icon"
+            }
+          }
         }
       ]
     }
