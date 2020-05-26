@@ -14,6 +14,16 @@
           "destination": "token-styles.css",
           "format": "css/variables",
           "filter": "isDesignToken"
+        },
+        {
+          "destination": "icons.css",
+          "format": "css/variables",
+          "filter": {
+            "attributes": {
+              "category": "content",
+              "type": "icon"
+            }
+          }
         }
       ]
     },
