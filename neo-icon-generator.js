@@ -22,6 +22,7 @@
 // const SVGIcons2SVGFontStream = require('svgicons2svgfont');
 
 const fs = require('fs').promises;
+const fsdefault = require('fs');
 
 // const fontStream = new SVGIcons2SVGFontStream({
 //   fontName: 'neo-icons',
@@ -84,8 +85,6 @@ const fs = require('fs').promises;
 
 // webfontsGenerator
 
-// two issues - need to get array of filenames, need to feed base64 into .css template
-
 const webfontsGenerator = require('webfonts-generator');
 
 async function convertToBase64() {
@@ -98,10 +97,20 @@ async function convertToBase64() {
   return contents_in_base64.toString();
 }
 
-convertToBase64().then((result) => {
+convertToBase64().then(async (result) => {
+  SVGArray = await fs
+    .readdir(__dirname + '/properties/assets/icons/')
+    .then((files) => {
+      return files.map((file) => {
+        return `properties/assets/icons/${file}`;
+      });
+    });
+
+  console.log(SVGArray);
+
   webfontsGenerator(
     {
-      files: [__dirname + '/properties/assets/icons/accounts.svg'],
+      files: SVGArray,
       dest: 'webfonts-gen-test/',
       fontName: 'neo-iconfont',
       cssTemplate: 'css.hbs',
