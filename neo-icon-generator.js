@@ -22,7 +22,6 @@
 // const SVGIcons2SVGFontStream = require('svgicons2svgfont');
 
 const fs = require('fs').promises;
-const fsdefault = require('fs');
 
 // const fontStream = new SVGIcons2SVGFontStream({
 //   fontName: 'neo-icons',

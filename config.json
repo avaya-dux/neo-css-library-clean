@@ -1,32 +1,6 @@
 {
   "source": ["properties/**/*.json"],
   "platforms": {
-    "css": {
-      "transformGroup": "css",
-      "buildPath": "build/css/",
-      "files": [
-        {
-          "destination": "class-styles.css",
-          "format": "custom/format/css-classes",
-          "filter": "isClass"
-        },
-        {
-          "destination": "token-styles.css",
-          "format": "css/variables",
-          "filter": "isDesignToken"
-        },
-        {
-          "destination": "icons.css",
-          "format": "css/variables",
-          "filter": {
-            "attributes": {
-              "category": "content",
-              "type": "icon"
-            }
-          }
-        }
-      ]
-    },
     "scss": {
       "transformGroup": "scss",
       "buildPath": "build/scss/",
@@ -43,22 +17,6 @@
         }
       ]
     },
-    "assets/embed/scss": {
-      "transforms": ["attribute/cti", "name/cti/kebab"],
-      "buildPath": "build/scss/",
-      "files": [
-        {
-          "destination": "assets_icons.scss",
-          "format": "scss/icons",
-          "filter": {
-            "attributes": {
-              "category": "content",
-              "type": "icon"
-            }
-          }
-        }
-      ]
-    },
     "js": {
       "transformGroup": "js",
       "buildPath": "build/js/",
@@ -67,16 +25,6 @@
           "format": "javascript/es6",
           "destination": "tokens.js",
           "filter": "isDesignToken"
-        },
-        {
-          "format": "javascript/es6",
-          "destination": "icons.js",
-          "filter": {
-            "attributes": {
-              "category": "content",
-              "type": "icon"
-            }
-          }
         }
       ]
     }
