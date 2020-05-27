@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
+    "icongen": "npx icon-font-generator properties/assets/icons/*.svg -o properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false && node neo-icon-generator.js",
     "scss": "node-sass neo/scss/main.scss neo/css/main.css",
     "automatescss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run scss",
     "automatecss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js"

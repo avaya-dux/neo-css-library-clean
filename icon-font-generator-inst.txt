@@ -1,0 +1,28 @@
+// icon-font-generator (npx icon-font-generator)
+
+// CLI tool to generator icon fonts
+// -o, --out        Output icon font set files to <out> directory
+// -n, --name       Name to use for generated fonts and files (Default: icons)
+// -s, --silent     Do not produce output logs other than errors (Default: false)
+// -f, --fontspath  Relative path to fonts directory to use in output files (Default: ./)
+// -c, --css        Generate CSS file if true (Default: true)
+// --types          Comma delimited list of font types (Defaults to svg,ttf,woff,eot)
+// --csspath        CSS output path (Defaults to <out>/<name>.css)
+// --cssfontsurl    CSS fonts directory url (Defaults to relative path)
+// --csstp          CSS handlebars template path (Optional)
+// --html           Generate HTML preview file if true (Default: true)
+// --htmlpath       HTML output path (Defaults to <out>/<name>.html)
+// --htmltp         HTML handlebars template path (Optional)
+// --codepoint      The starting character code to count up from (Optional)
+// --codepoints     Path to explicit character code mapping JSON file (Optional)
+// -j, --json       Generate JSON map file if true (Default: true)
+// --jsonpath       JSON output path (Defaults to <out>/<name>.json)
+// -p, --prefix     CSS classname prefix for icons (Default: icon)
+// -t, --tag        CSS base selector for icons (Default: i)
+// --selector       Use a selector instead of 'tag + prefix' (Default: null)
+// --normalize      Normalize icons sizes (Default: false)
+// --round          Setup SVG rounding (Default: 10e12)
+// --descent        Offset applied to the baseline (Default: 0)
+// --mono           Make font monospace (Default: false)
+// --height         Fixed font height value
+// --center         Center font horizontally
