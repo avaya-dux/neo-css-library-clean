@@ -27,7 +27,8 @@
     "node-sass": "^4.14.1",
     "nodemon": "^1.18.3",
     "replace-in-file": "^6.0.0",
-    "style-dictionary": "^2.10.0"
+    "style-dictionary": "^2.10.0",
+    "webfonts-generator": "^0.4.0"
   },
   "devDependencies": {}
 }

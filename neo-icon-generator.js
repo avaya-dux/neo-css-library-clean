@@ -52,6 +52,7 @@ const fs = require('fs').promises;
 // fontStream.end();
 
 // icon-font-generator (npx icon-font-generator)
+
 // CLI tool to generator icon fonts
 // -o, --out        Output icon font set files to <out> directory
 // -n, --name       Name to use for generated fonts and files (Default: icons)
@@ -81,6 +82,12 @@ const fs = require('fs').promises;
 
 // npx icon-font-generator properties/assets/icons/*.svg -o icon-font-gen-test/ --name "neo-icon-font"
 
+// webfontsGenerator
+
+// two issues - need to get array of filenames, need to feed base64 into .css template
+
+const webfontsGenerator = require('webfonts-generator');
+
 async function convertToBase64() {
   const base64FileBuffer = await fs.readFile(
     'icon-font-gen-test/neo-icon-font.woff'
@@ -88,7 +95,27 @@ async function convertToBase64() {
 
   const contents_in_base64 = await base64FileBuffer.toString('base64');
 
-  console.log(contents_in_base64);
+  return contents_in_base64.toString();
 }
 
-convertToBase64();
+convertToBase64().then((result) => {
+  webfontsGenerator(
+    {
+      files: [__dirname + '/properties/assets/icons/accounts.svg'],
+      dest: 'webfonts-gen-test/',
+      fontName: 'neo-iconfont',
+      cssTemplate: 'css.hbs',
+      templateOptions: {
+        src: `url(data:application/font-woff;base64,${result}) format('woff')`,
+        classPrefix: 'icon-',
+      },
+    },
+    function (error) {
+      if (error) {
+        console.log('Fail!', error);
+      } else {
+        console.log('Done!');
+      }
+    }
+  );
+});
