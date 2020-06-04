@@ -6,20 +6,6 @@ const replace = require('replace-in-file');
 
 // const tokens = require('./build/js/tokens');
 
-// we import all icons as a js object;
-
-const icons = require('./build/js/icons');
-
-var testIconName = Object.keys(icons)[0];
-
-var testIconBase64 = icons[testIconName];
-
-// console.log(testIconBase64);
-
-var utf8encoded = new Buffer(testIconBase64, 'base64').toString('utf8');
-
-console.log(utf8encoded);
-
 // #region Code to replace colors
 
 // we get the name of a particular token, in this case semGreenDark
@@ -77,4 +63,5 @@ console.log(utf8encoded);
 
 // #endregion
 
-// #region Code to replace tokens
+// might have to use this to replace entire files as opposed to Strings in files
+// could replace colors files for example

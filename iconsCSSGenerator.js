@@ -39,6 +39,10 @@ convertIconFontToBase64().then(async (result) => {
         src: `url(data:application/font-woff;base64,${result}) format('woff')`,
         classPrefix: 'icon-',
       },
+      html: true,
+      htmlTemplate: 'templates/html.hbs',
+      normalize: true,
+      fontHeight: 1000,
     },
     function (error) {
       if (error) {
