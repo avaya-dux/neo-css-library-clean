@@ -1,5 +1,5 @@
-@import "mixins";
-@import "helpers";
+@import 'mixins';
+@import 'helpers';
 
 // Variables
 //
@@ -33,8 +33,8 @@ $neo-presence-green: #4baa39 !default;
 $neo-active-green: #008000 !default;
 $neo-observe-purple: #9932cc !default;
 
-@import "themes/default";
-@import "themes/light";
+@import 'themes/default';
+@import 'themes/light';
 
 // Theme colors
 $neo-primary-color: var-color-name(primary) !default;
@@ -93,7 +93,7 @@ $global-opacity: 0.5;
 
 // Typography
 
-$body-font-family: "Roboto", sans-serif !default;
+$body-font-family: 'Roboto', sans-serif !default;
 $body-line-height: 1.5 !default;
 $heading-font-sizes: () !default;
 $heading-color: $neo-blue-grey;
@@ -136,11 +136,11 @@ $neo-breakpoints: map-merge(
 // Location: src/scss/elements/_float-grid.scss,
 
 // Grid classes names
-$row-class-name: "row" !default;
-$col-class-prefix: "grid" !default;
-$col-class-hidden-prefix: "hidden" !default;
-$col-class-push-prefix: "push" !default;
-$col-class-pull-prefix: "pull" !default;
+$row-class-name: 'row' !default;
+$col-class-prefix: 'grid' !default;
+$col-class-hidden-prefix: 'hidden' !default;
+$col-class-push-prefix: 'push' !default;
+$col-class-pull-prefix: 'pull' !default;
 
 // Grid colors - used only in documentation
 $grid-colors: $neo-ice-blue !default;
@@ -154,11 +154,11 @@ $susy: () !default;
 
 $susy: map-merge(
   (
-    "svg-grid-colors": $grid-colors,
-    "columns": susy-repeat($columns),
-    "gutters": $gutters,
-    "spread": "narrow",
-    "container-spread": "narrow",
+    'svg-grid-colors': $grid-colors,
+    'columns': susy-repeat($columns),
+    'gutters': $gutters,
+    'spread': 'narrow',
+    'container-spread': 'narrow',
   ),
   $susy
 );
@@ -233,7 +233,7 @@ $select-box-shadow: $input-box-shadow !default;
 $select-font-size: $input-font-size !default;
 $select-line-height: $input-line-height !default;
 $select-height: $input-height !default;
-$select-arrow-icon: "\25BE" !default;
+$select-arrow-icon: '\25BE' !default;
 $select-icon-height: 16px !default;
 $select-icon-width: $select-icon-height !default;
 $select-offset-x: $select-icon-height * 2 !default;
