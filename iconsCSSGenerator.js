@@ -36,7 +36,10 @@ convertIconFontToBase64().then(async (result) => {
           .then(async (code) => {
             var iconName = file.replace('.svg', '');
             console.log(iconName);
-            var codeString = await code.toString();
+            var codeString = await code
+              .toString()
+              .replace(/xlink:href/g, 'xlinkHref')
+              .replace(/xmlns:xlink/g, 'xmlnsXlink');
             await fs.appendFile(
               'svgs.js',
               `export const ${iconName} = (${codeString});`
