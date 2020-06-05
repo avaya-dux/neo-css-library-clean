@@ -179,7 +179,7 @@ content: "\f136";
 .icon-dashboardspaces:before {
 content: "\f137";
 }
-.icon-delete:before {
+.icon-deleteicon:before {
 content: "\f138";
 }
 .icon-dialpad:before {
@@ -365,117 +365,114 @@ content: "\f174";
 .icon-settings:before {
 content: "\f175";
 }
-.icon-share solid:before {
+.icon-share:before {
 content: "\f176";
 }
-.icon-share:before {
+.icon-sharescreencobrowse:before {
 content: "\f177";
 }
-.icon-sharescreencobrowse:before {
+.icon-sharescreenoff:before {
 content: "\f178";
 }
-.icon-sharescreenoff:before {
+.icon-sharescreenon:before {
 content: "\f179";
 }
-.icon-sharescreenon:before {
+.icon-sharescreenpresentationmodealt:before {
 content: "\f17a";
 }
-.icon-sharescreenpresentationmodealt:before {
+.icon-sharescreenpresentationmodedefault:before {
 content: "\f17b";
 }
-.icon-sharescreenpresentationmodedefault:before {
+.icon-sharesolid:before {
 content: "\f17c";
 }
-.icon-sharesolid:before {
+.icon-signout:before {
 content: "\f17d";
 }
-.icon-signout:before {
+.icon-sip:before {
 content: "\f17e";
 }
-.icon-sip:before {
+.icon-socialintegrations:before {
 content: "\f17f";
 }
-.icon-socialintegrations:before {
+.icon-space:before {
 content: "\f180";
 }
-.icon-space:before {
+.icon-spacesfilled:before {
 content: "\f181";
 }
-.icon-spacesfilled:before {
+.icon-spacesoutlined:before {
 content: "\f182";
 }
-.icon-spacesoutlined:before {
+.icon-speakerbluetooth:before {
 content: "\f183";
 }
-.icon-speakerbluetooth:before {
+.icon-speakeron:before {
 content: "\f184";
 }
-.icon-speakeron:before {
+.icon-starfilled:before {
 content: "\f185";
 }
-.icon-starfilled:before {
+.icon-starol:before {
 content: "\f186";
 }
-.icon-starol:before {
+.icon-strikethorugh:before {
 content: "\f187";
 }
-.icon-strikethorugh:before {
+.icon-subaccounts:before {
 content: "\f188";
 }
-.icon-subaccounts:before {
+.icon-supervisor:before {
 content: "\f189";
 }
-.icon-supervisor:before {
+.icon-support:before {
 content: "\f18a";
 }
-.icon-support:before {
+.icon-template:before {
 content: "\f18b";
 }
-.icon-template:before {
+.icon-transfer:before {
 content: "\f18c";
 }
-.icon-transfer:before {
+.icon-underline:before {
 content: "\f18d";
 }
-.icon-underline:before {
+.icon-undo:before {
 content: "\f18e";
 }
-.icon-undo:before {
+.icon-userfilled:before {
 content: "\f18f";
 }
-.icon-userfilled:before {
+.icon-useroutlined:before {
 content: "\f190";
 }
-.icon-useroutlined:before {
+.icon-videofilled:before {
 content: "\f191";
 }
-.icon-videofilled:before {
+.icon-videooff:before {
 content: "\f192";
 }
-.icon-videooff:before {
+.icon-videoon:before {
 content: "\f193";
 }
-.icon-videoon:before {
+.icon-videorecording:before {
 content: "\f194";
 }
-.icon-videorecording:before {
+.icon-viewcards:before {
 content: "\f195";
 }
-.icon-viewcards:before {
+.icon-viewtable:before {
 content: "\f196";
 }
-.icon-viewtable:before {
+.icon-voicemail:before {
 content: "\f197";
 }
-.icon-voicemail:before {
+.icon-warning:before {
 content: "\f198";
 }
-.icon-warning:before {
+.icon-workflow:before {
 content: "\f199";
 }
-.icon-workflow:before {
-content: "\f19a";
-}
 .icon-xls:before {
-content: "\f19b";
+content: "\f19a";
 }
