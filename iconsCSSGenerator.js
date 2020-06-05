@@ -20,7 +20,29 @@ convertIconFontToBase64().then(async (result) => {
 
   SVGArray = await fs
     .readdir(__dirname + '/properties/assets/icons/')
-    .then((files) => {
+    .then(async (files) => {
+      // this code is used to generate a list of icon name Strings for use in our Design System portal
+      // files.forEach((file) => {
+      //   console.log(`"${file.replace('.svg', '')}",`);
+      // });
+      // this code is used to generate a .js file with exportable SVG code so users can copy it on our portal
+      await fs.writeFile(
+        'svgs.js',
+        'import React from "react"; import { renderToString } from "react-dom";'
+      );
+      files.forEach(async (file) => {
+        var imageCode = await fs
+          .readFile(`properties/assets/icons/${file}`)
+          .then(async (code) => {
+            var iconName = file.replace('.svg', '');
+            console.log(iconName);
+            var codeString = await code.toString();
+            await fs.appendFile(
+              'svgs.js',
+              `export const ${iconName} = (${codeString});`
+            );
+          });
+      });
       return files.map((file) => {
         return `properties/assets/icons/${file}`;
       });
