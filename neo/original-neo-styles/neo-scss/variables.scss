@@ -68,14 +68,17 @@ $link-hover-decoration: none !default;
 //
 
 $global-background: var-color-name(global-background) !default;
+// Global text styles
 $global-text-color: var-color-name(global-text) !default;
-$global-text-inverse-color: var-color-name(global-text-inverse) !default;
+$global-text-inverse-color: var-color-name(global-text-inverse) !default;=
 $global-font-size: 14px !default;
 $global-font-size-x-small: 9px !default;
 $global-font-size-small: 12px !default;
+
 $global-font-size-medium: 16px !default;
 $global-font-size-large: 18px !default;
 $global-font-size-x-large: 24px !default;
+// end of Global text styles
 $global-spacer: 6px !default;
 $global-spacer-small: 3px !default;
 $global-spacer-large: 10px !default;
@@ -103,6 +106,7 @@ $heading-font-sizes: map-merge(
     h2: $global-font-size * 2.7,
     h3: $global-font-size * 2,
     h4: $global-font-size * 1.4,
+    // we only go up to h4
     h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
