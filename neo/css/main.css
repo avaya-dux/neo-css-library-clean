@@ -574,7 +574,7 @@ template {
 
 /* stylelint-enable */
 * {
-  font-family: 'Noto Sans', sans-serif;
+  font-family: noto-sans, sans-serif;
   font-size: 14px;
   line-height: 16.40625px;
 }
