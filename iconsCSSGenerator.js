@@ -19,7 +19,7 @@ convertIconFontToBase64().then(async (result) => {
   // We get an array of the file names in our icons folder
 
   SVGArray = await fs
-    .readdir(__dirname + '/properties/assets/icons/')
+    .readdir(__dirname + '/properties/assets/icons/svgs')
     .then(async (files) => {
       // this code is used to generate a list of icon name Strings for use in our Design System portal
       // files.forEach((file) => {
@@ -32,10 +32,9 @@ convertIconFontToBase64().then(async (result) => {
       );
       files.forEach(async (file) => {
         var imageCode = await fs
-          .readFile(`properties/assets/icons/${file}`)
+          .readFile(`properties/assets/icons/svgs/${file}`)
           .then(async (code) => {
             var iconName = file.replace('.svg', '');
-            console.log(iconName);
             var codeString = await code
               .toString()
               .replace(/xlink:href/g, 'xlinkHref')
@@ -47,7 +46,7 @@ convertIconFontToBase64().then(async (result) => {
           });
       });
       return files.map((file) => {
-        return `properties/assets/icons/${file}`;
+        return `properties/assets/icons/svgs/${file}`;
       });
     });
 
