@@ -58,6 +58,37 @@ StyleDictionary.registerFilter({
   },
 });
 
+// this is where we create a custom filter and Format to create Swift text styles
+
+StyleDictionary.registerFilter({
+  name: 'isTextStyle',
+  matcher: function (prop) {
+    if (prop.attributes.category == 'textStyles') {
+      if (
+        typeof prop.original.value == 'number' &&
+        prop.attributes.item != 'fontWeight'
+      ) {
+        prop.value = `${prop.original.value * 0.75}pt`;
+      }
+    }
+    return prop.attributes.category == 'textStyles';
+  },
+});
+
+StyleDictionary.registerFilter({
+  name: 'isColorStyle',
+  matcher: function (prop) {
+    if (
+      prop.attributes.category !== 'class' &&
+      prop.attributes.category !== 'content' &&
+      prop.attributes.category !== 'textStyles' &&
+      prop.attributes.category !== 'effectStyles'
+    ) {
+      return prop;
+    }
+  },
+});
+
 StyleDictionary.buildAllPlatforms();
 
 console.log('=======================================\n');

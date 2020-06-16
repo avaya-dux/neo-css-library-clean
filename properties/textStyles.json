@@ -1,1 +1,99 @@
-{"textStyles":{"body - semibold":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":16.40625},"letterSpacing":{"value":0},"fontSize":{"value":14},"fontWeight":{"value":600}},"tiny body - italic":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":11.71875},"letterSpacing":{"value":0},"fontSize":{"value":10},"fontWeight":{"value":400},"textStyle":{"value":"italic"}},"body - underline":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":16.40625},"letterSpacing":{"value":0},"fontSize":{"value":14},"fontWeight":{"value":400},"textDecoration":{"value":"underline"}},"heading 2 - underline":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":37.5},"letterSpacing":{"value":0},"fontSize":{"value":32},"fontWeight":{"value":400},"textDecoration":{"value":"underline"}},"heading 2 - bold":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":37.5},"letterSpacing":{"value":0},"fontSize":{"value":32},"fontWeight":{"value":700}},"heading 2 - regular":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":37.5},"letterSpacing":{"value":0},"fontSize":{"value":32},"fontWeight":{"value":400}},"body - italic":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":16.40625},"letterSpacing":{"value":0},"fontSize":{"value":14},"fontWeight":{"value":400},"textStyle":{"value":"italic"}},"small body - light":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":14.0625},"letterSpacing":{"value":0},"fontSize":{"value":12},"fontWeight":{"value":300}},"tiny body":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":11.71875},"letterSpacing":{"value":0},"fontSize":{"value":10},"fontWeight":{"value":400}},"heading 1":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":51.5625},"letterSpacing":{"value":0},"fontSize":{"value":44},"fontWeight":{"value":700}},"heading 4":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":22.265625},"letterSpacing":{"value":0},"fontSize":{"value":19},"fontWeight":{"value":400}},"heading 3":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":30.46875},"letterSpacing":{"value":0},"fontSize":{"value":26},"fontWeight":{"value":400}},"large body":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":18.75},"letterSpacing":{"value":0},"fontSize":{"value":16},"fontWeight":{"value":400}},"body - regular":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":16.40625},"letterSpacing":{"value":0},"fontSize":{"value":14},"fontWeight":{"value":400}},"small body":{"fontFamily":{"value":"\"Noto Sans\""},"lineHeight":{"value":14.0625},"letterSpacing":{"value":0},"fontSize":{"value":12},"fontWeight":{"value":400}}}}
+{
+  "textStyles": {
+    "fontFamily": { "value": "\"Noto Sans\"" },
+    "body - semibold": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 600 }
+    },
+    "tiny body - italic": {
+      "lineHeight": { "value": 11.71875 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 10 },
+      "fontWeight": { "value": 400 },
+      "textStyle": { "value": "italic" }
+    },
+    "body - underline": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 400 },
+      "textDecoration": { "value": "underline" }
+    },
+    "heading 2 - underline": {
+      "lineHeight": { "value": 37.5 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 32 },
+      "fontWeight": { "value": 400 },
+      "textDecoration": { "value": "underline" }
+    },
+    "heading 2 - bold": {
+      "lineHeight": { "value": 37.5 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 32 },
+      "fontWeight": { "value": 700 }
+    },
+    "heading 2 - regular": {
+      "lineHeight": { "value": 37.5 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 32 },
+      "fontWeight": { "value": 400 }
+    },
+    "body - italic": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 400 },
+      "textStyle": { "value": "italic" }
+    },
+    "small body - light": {
+      "lineHeight": { "value": 14.0625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 12 },
+      "fontWeight": { "value": 300 }
+    },
+    "tiny body": {
+      "lineHeight": { "value": 11.71875 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 10 },
+      "fontWeight": { "value": 400 }
+    },
+    "heading 1": {
+      "lineHeight": { "value": 51.5625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 44 },
+      "fontWeight": { "value": 700 }
+    },
+    "heading 4": {
+      "lineHeight": { "value": 22.265625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 19 },
+      "fontWeight": { "value": 400 }
+    },
+    "heading 3": {
+      "lineHeight": { "value": 30.46875 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 26 },
+      "fontWeight": { "value": 400 }
+    },
+    "large body": {
+      "lineHeight": { "value": 18.75 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 16 },
+      "fontWeight": { "value": 400 }
+    },
+    "body - regular": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 400 }
+    },
+    "small body": {
+      "lineHeight": { "value": 14.0625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 12 },
+      "fontWeight": { "value": 400 }
+    }
+  }
+}
