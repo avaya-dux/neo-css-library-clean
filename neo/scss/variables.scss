@@ -70,12 +70,57 @@ $link-hover-decoration: none !default;
 $global-background: var-color-name(global-background) !default;
 $global-text-color: var-color-name(global-text) !default;
 $global-text-inverse-color: var-color-name(global-text-inverse) !default;
-$global-font-size: 14px !default;
-$global-font-size-x-small: 9px !default;
-$global-font-size-small: 12px !default;
-$global-font-size-medium: 16px !default;
+
+// Typography tokens
+
+// body-tiny
+$body-fontsize-tiny: 10px;
+$body-lineheight-tiny: 11.71875px;
+$body-letterspacing-tiny: 0;
+$body-fontweight-tiny: 400;
+
+// body-tiny-italic
+$body-fontstyle-tiny-italic: italic;
+
+// body-small
+$body-lineheight-small: 14.0625;
+$body-letterspacing-small: 0;
+$body-fontsize-small: 12px;
+$body-fontweight-small: 400;
+
+//body-small-light
+$body-fontweight-small-light: 300;
+
+//body-regular
+$body-lineheight-regular: 16.40625px;
+$body-letterspacing-regular: 0;
+$body-fontsize-regular: 14px;
+$body-fontweight-regular: 400;
+
+//body-regular-italic
+$body-fontstyle-regular-italic: italic;
+
+//body-regular-underline
+$body-textdecoration-regular-underline: underline;
+
+//body-regular-semibold
+$body-fontweight-regular-semibold: 600;
+
+//body-large
+$body-lineheight-large: 18.75px;
+$body-letterspacing-large: 0;
+$body-fontsize-large: 16px;
+$body-fontweight-large: 400;
+
+// text sizes
+$global-font-size: $body-fontsize-regular !default;
+$global-font-size-x-small: $body-fontsize-tiny !default;
+$global-font-size-small: $body-fontsize-small !default;
+$global-font-size-medium: $body-fontsize-large !default;
+// do we need to replace these with medium?
 $global-font-size-large: 18px !default;
 $global-font-size-x-large: 24px !default;
+// end of text sizes
 $global-spacer: 6px !default;
 $global-spacer-small: 3px !default;
 $global-spacer-large: 10px !default;
@@ -93,23 +138,29 @@ $global-opacity: 0.5;
 
 // Typography
 
-$body-font-family: 'Roboto', sans-serif !default;
-$body-line-height: 1.5 !default;
-$heading-font-sizes: () !default;
+// Changed to Noto Sans
+$body-font-family: 'Noto Sans', sans-serif !default;
+// using variable declared in typography partial didn't work, hard-coded instead
+$body-line-height: $body-lineheight-regular !default;
 $heading-color: $neo-blue-grey;
-$heading-font-sizes: map-merge(
-  (
-    h1: $global-font-size * 3.4,
-    h2: $global-font-size * 2.7,
-    h3: $global-font-size * 2,
-    h4: $global-font-size * 1.4,
-    h5: $global-font-size,
-    h6: $global-font-size * 0.7,
-  ),
-  $heading-font-sizes
-);
-$heading-font-weight: normal !default;
-$heading-line-height: 1 !default;
+
+// // commented out function here and added it to typography partial
+// $heading-font-sizes: () !default;
+// $heading-font-sizes: map-merge(
+//   (
+//     h1: $global-font-size * 3.4,
+//     h2: $global-font-size * 2.7,
+//     h3: $global-font-size * 2,
+//     h4: $global-font-size * 1.4,
+//     h5: $global-font-size,
+//     h6: $global-font-size * 0.7,
+//   ),
+//   $heading-font-sizes
+// );
+
+// // commented these, h1 to h4 is specified and h5 to h6 will be default?
+// $heading-font-weight: normal !default;
+// $heading-line-height: 1 !default;
 
 $subtitle-line-height: $global-font-size * 1.4 !default;
 $subtitle-padding-y: $global-spacer-large !default;

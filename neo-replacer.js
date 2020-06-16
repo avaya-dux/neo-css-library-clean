@@ -2,56 +2,66 @@
 
 const replace = require('replace-in-file');
 
-const tokens = require('./build/js/tokens');
+// we import all tokens as a js =bject
 
-// $semantic-green-dark: #08540a;
+// const tokens = require('./build/js/tokens');
 
-var semGreenDark = Object.keys(tokens)[11];
+// #region Code to replace colors
 
-console.log(semGreenDark);
+// we get the name of a particular token, in this case semGreenDark
 
-console.log(tokens[semGreenDark]);
+// var semGreenDark = Object.keys(tokens)[11];
 
-// var fromSemGreenDark = `/${semGreenDark}/g`;
+// // we save the token's name and value in a Regular Expression
 
-var tokenRegExName = new RegExp(semGreenDark, 'g');
+// var tokenRegExName = new RegExp(semGreenDark, 'g');
 
-var tokenRegExValue = new RegExp(tokens[semGreenDark], 'g');
+// var tokenRegExValue = new RegExp(tokens[semGreenDark], 'g');
 
-// change style To
+// // change style To -- we write functions that change the style from what it is in current Neo
+// // to what we want it to be
 
-const optionsToName = {
-  files: './neo/scss/**/*.scss',
-  from: /neo-presence-red/g,
-  to: semGreenDark,
-};
+// // TODO -- replace scss directly with css file
 
-const optionsToValue = {
-  files: './neo/scss/**/*.scss',
-  from: /#d50000/g,
-  to: tokens[semGreenDark],
-};
+// const optionsToName = {
+//   files: './neo/scss/**/*.scss',
+//   from: /neo-presence-red/g,
+//   to: semGreenDark,
+// };
 
-// change style From
+// const optionsToValue = {
+//   files: './neo/scss/**/*.scss',
+//   from: /#d50000/g,
+//   to: tokens[semGreenDark],
+// };
 
-const optionsFromName = {
-  files: './neo/scss/**/*.scss',
-  from: tokenRegExName,
-  to: 'neo-presence-red',
-};
+// // change style From -- we write functions that revert the style back to current Neo
 
-const optionsFromValue = {
-  files: './neo/scss/**/*.scss',
-  from: tokenRegExValue,
-  to: '#d50000',
-};
+// const optionsFromName = {
+//   files: './neo/scss/**/*.scss',
+//   from: tokenRegExName,
+//   to: 'neo-presence-red',
+// };
 
-replace(optionsToName).then((results) => {
-  console.log('Replacement results:', results);
+// const optionsFromValue = {
+//   files: './neo/scss/**/*.scss',
+//   from: tokenRegExValue,
+//   to: '#d50000',
+// };
 
-  replace(optionsToValue).then((results) => {
-    console.log('******************************\n');
+// we call the function as necessary
 
-    console.log('Replacement results:', results);
-  });
-});
+// replace(optionsToName).then((results) => {
+//   console.log('Replacement results:', results);
+
+//   replace(optionsToValue).then((results) => {
+//     console.log('******************************\n');
+
+//     console.log('Replacement results:', results);
+//   });
+// });
+
+// #endregion
+
+// might have to use this to replace entire files as opposed to Strings in files
+// could replace colors files for example

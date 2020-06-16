@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
+    "icongen": "node iconsFileFunctions.js &&  npx icon-font-generator properties/assets/icons/svgs/*.svg -o properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node iconsCSSGenerator.js",
     "scss": "node-sass neo/scss/main.scss neo/css/main.css",
-    "automated": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run scss"
+    "automatescss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run scss",
+    "automatecss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js"
   },
   "keywords": [
     "Figma"
@@ -20,13 +22,16 @@
     "esm": "^3.2.25",
     "express": "^4.16.3",
     "express-generator": "^4.16.0",
+    "firebase-admin": "^8.12.1",
+    "fontmin": "^0.9.8",
     "isomorphic-fetch": "^2.2.1",
     "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
     "node-sass": "^4.14.1",
     "nodemon": "^1.18.3",
     "replace-in-file": "^6.0.0",
-    "style-dictionary": "^2.10.0"
+    "style-dictionary": "^2.10.0",
+    "webfonts-generator": "^0.4.0"
   },
   "devDependencies": {}
 }
