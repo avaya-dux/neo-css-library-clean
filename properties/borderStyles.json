@@ -1,0 +1,10 @@
+{
+  "borderStyles": {
+    "border-solid-1px": { "border": { "value": "1px solid #ffffff" } },
+    "border-dotted-1px": { "border": { "value": "1px dotted #ffffff" } },
+    "border-solid-2px": { "border": { "value": "2px solid #ffffff" } },
+    "border-dotted-2px": { "border": { "value": "2px dotted #ffffff" } },
+    "border-solid-3px": { "border": { "value": "3px solid #ffffff" } },
+    "border-dotted-3px": { "border": { "value": "3px dotted #ffffff" } }
+  }
+}
