@@ -89,6 +89,58 @@ StyleDictionary.registerFilter({
   },
 });
 
+// test code to register Transforms from github.com/didoo/style-dictionary-demo
+
+const iOSTemplate = _.template(
+  fs.readFileSync(__dirname + '/templates/ios-plist.template')
+);
+
+const androidTemplate = _.template(
+  fs.readFileSync(__dirname + '/templates/android-xml.template')
+);
+
+StyleDictionary.registerTransform({
+  name: 'size/pxToPt',
+  type: 'value',
+  matcher: function (prop) {
+    return prop.value.match(/^[\d.]+px$/);
+  },
+  transformer: function (prop) {
+    return prop.value.replace(/px$/, 'pt');
+  },
+});
+
+StyleDictionary.registerTransform({
+  name: 'size/pxToDp',
+  type: 'value',
+  matcher: function (prop) {
+    return prop.value.match(/^[\d.]+px$/);
+  },
+  transformer: function (prop) {
+    return prop.value.replace(/px$/, 'dp');
+  },
+});
+
+StyleDictionary.registerTransformGroup({
+  name: 'tokens-ios',
+  transforms: ['attribute/cti', 'name/cti/camel', 'size/pxToPt'],
+});
+
+StyleDictionary.registerFormat({
+  name: 'ios/plist',
+  formatter: iOSTemplate,
+});
+
+StyleDictionary.registerTransformGroup({
+  name: 'tokens-android',
+  transforms: ['attribute/cti', 'name/cti/camel', 'size/pxToDp'],
+});
+
+StyleDictionary.registerFormat({
+  name: 'android/xml',
+  formatter: androidTemplate,
+});
+
 StyleDictionary.buildAllPlatforms();
 
 console.log('=======================================\n');

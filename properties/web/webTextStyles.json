@@ -1,0 +1,111 @@
+{
+  "textStyles": {
+    "fontFamily": { "value": "\"Noto Sans\"" },
+    "web/body - semibold": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 600 }
+    },
+    "web/heading 3": {
+      "lineHeight": { "value": 29.899999618530273 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 26 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/body - italic": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 400 },
+      "textStyle": { "value": "italic" }
+    },
+    "web/tiny body - italic": {
+      "lineHeight": { "value": 11.71875 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 10 },
+      "fontWeight": { "value": 400 },
+      "textStyle": { "value": "italic" }
+    },
+    "web/tiny body": {
+      "lineHeight": { "value": 11.71875 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 10 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/heading 4": {
+      "lineHeight": { "value": 22.265625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 19 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/heading 2 - bold": {
+      "lineHeight": { "value": 36.79999923706055 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 32 },
+      "fontWeight": { "value": 700 }
+    },
+    "web/heading 2 - regular": {
+      "lineHeight": { "value": 36.79999923706055 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 32 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/heading 2 - underline": {
+      "lineHeight": { "value": 36.79999923706055 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 32 },
+      "fontWeight": { "value": 400 },
+      "textDecoration": { "value": "underline" }
+    },
+    "web/body - regular": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/heading 1 - bold": {
+      "lineHeight": { "value": 50.599998474121094 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 44 },
+      "fontWeight": { "value": 700 }
+    },
+    "web/small body - light": {
+      "lineHeight": { "value": 14.0625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 12 },
+      "fontWeight": { "value": 300 }
+    },
+    "web/small body": {
+      "lineHeight": { "value": 14.0625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 12 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/large body": {
+      "lineHeight": { "value": 18.75 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 16 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/heading 1 - jumbo": {
+      "lineHeight": { "value": 92 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 80 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/heading 1 - regular": {
+      "lineHeight": { "value": 50.599998474121094 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 44 },
+      "fontWeight": { "value": 400 }
+    },
+    "web/body - underline": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 400 },
+      "textDecoration": { "value": "underline" }
+    }
+  }
+}
