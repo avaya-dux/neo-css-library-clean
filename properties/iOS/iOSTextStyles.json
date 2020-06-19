@@ -1,0 +1,71 @@
+{
+  "textStyles": {
+    "fontFamily": { "value": "\"Noto Sans\"" },
+    "ios/body": {
+      "lineHeight": { "value": 22 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 17 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/footnote": {
+      "lineHeight": { "value": 18 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 13 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/headline": {
+      "lineHeight": { "value": 22 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 17 },
+      "fontWeight": { "value": 600 }
+    },
+    "ios/large title": {
+      "lineHeight": { "value": 41 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 34 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/title 2": {
+      "lineHeight": { "value": 28 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 22 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/title 1": {
+      "lineHeight": { "value": 34 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 28 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/caption 2": {
+      "lineHeight": { "value": 13 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 11 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/callout": {
+      "lineHeight": { "value": 21 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 16 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/title3": {
+      "lineHeight": { "value": 25 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 20 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/subhead": {
+      "lineHeight": { "value": 20 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 15 },
+      "fontWeight": { "value": 400 }
+    },
+    "ios/caption 1": {
+      "lineHeight": { "value": 16 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 12 },
+      "fontWeight": { "value": 400 }
+    }
+  }
+}

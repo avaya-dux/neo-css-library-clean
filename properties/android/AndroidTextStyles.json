@@ -1,0 +1,83 @@
+{
+  "textStyles": {
+    "fontFamily": { "value": "\"Noto Sans\"" },
+    "android-mobile/subtitle 1": {
+      "lineHeight": { "value": 18.75 },
+      "letterSpacing": { "value": 0.024000000953674317 },
+      "fontSize": { "value": 16 },
+      "fontWeight": { "value": 400 }
+    },
+    "android-mobile/headline 6": {
+      "lineHeight": { "value": 23.4375 },
+      "letterSpacing": { "value": 0.030000001192092896 },
+      "fontSize": { "value": 20 },
+      "fontWeight": { "value": 500 }
+    },
+    "android-mobile/subtitle 2": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0.014000000208616258 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 500 }
+    },
+    "android-mobile/headline 5": {
+      "lineHeight": { "value": 28.125 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 24 },
+      "fontWeight": { "value": 400 }
+    },
+    "android-mobile/body 1": {
+      "lineHeight": { "value": 18.75 },
+      "letterSpacing": { "value": 0.08 },
+      "fontSize": { "value": 16 },
+      "fontWeight": { "value": 400 }
+    },
+    "android-mobile/headline 3": {
+      "lineHeight": { "value": 56.25 },
+      "letterSpacing": { "value": 0 },
+      "fontSize": { "value": 48 },
+      "fontWeight": { "value": 400 }
+    },
+    "android-mobile/headline 1": {
+      "lineHeight": { "value": 112.5 },
+      "letterSpacing": { "value": -1.44 },
+      "fontSize": { "value": 96 },
+      "fontWeight": { "value": 300 }
+    },
+    "android-mobile/body 2": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0.035 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 400 }
+    },
+    "android-mobile/headline 2": {
+      "lineHeight": { "value": 70.3125 },
+      "letterSpacing": { "value": -0.3 },
+      "fontSize": { "value": 60 },
+      "fontWeight": { "value": 300 }
+    },
+    "android-mobile/headline 4": {
+      "lineHeight": { "value": 39.84375 },
+      "letterSpacing": { "value": 0.085 },
+      "fontSize": { "value": 34 },
+      "fontWeight": { "value": 400 }
+    },
+    "android-mobile/button": {
+      "lineHeight": { "value": 16.40625 },
+      "letterSpacing": { "value": 0.17500000000000002 },
+      "fontSize": { "value": 14 },
+      "fontWeight": { "value": 500 }
+    },
+    "android-mobile/caption": {
+      "lineHeight": { "value": 14.0625 },
+      "letterSpacing": { "value": 0.048000000715255745 },
+      "fontSize": { "value": 12 },
+      "fontWeight": { "value": 400 }
+    },
+    "android-mobile/overline": {
+      "lineHeight": { "value": 11.71875 },
+      "letterSpacing": { "value": 0.15 },
+      "fontSize": { "value": 10 },
+      "fontWeight": { "value": 400 }
+    }
+  }
+}

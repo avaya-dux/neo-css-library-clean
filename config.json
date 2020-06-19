@@ -22,6 +22,17 @@
           "format": "android/xml"
         }
       ]
+    },
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "build/scss/",
+      "prefix": "token",
+      "files": [
+        {
+          "destination": "_colors.scss",
+          "format": "scss/variables"
+        }
+      ]
     }
   }
 }
