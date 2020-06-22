@@ -103,7 +103,7 @@ StyleDictionary.registerTransform({
   name: 'size/pxToPt',
   type: 'value',
   matcher: function (prop) {
-    return prop.value.match(/^[\d.]+px$/);
+    if (typeof prop.value === 'string') return prop.value.match(/^[\d.]+px$/);
   },
   transformer: function (prop) {
     return prop.value.replace(/px$/, 'pt');
@@ -114,7 +114,7 @@ StyleDictionary.registerTransform({
   name: 'size/pxToDp',
   type: 'value',
   matcher: function (prop) {
-    return prop.value.match(/^[\d.]+px$/);
+    if (typeof prop === 'string') return prop.value.match(/^[\d.]+px$/);
   },
   transformer: function (prop) {
     return prop.value.replace(/px$/, 'dp');

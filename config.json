@@ -1,5 +1,5 @@
 {
-  "source": ["properties/colorStyles.json"],
+  "source": ["properties/**/*.json"],
   "platforms": {
     "ios": {
       "transformGroup": "tokens-ios",
@@ -7,8 +7,20 @@
       "prefix": "token",
       "files": [
         {
-          "destination": "tokens-all.plist",
-          "format": "ios/plist"
+          "destination": "tokens-color.plist",
+          "format": "ios/plist",
+          "filter": {
+            "type": "color"
+          }
+        },
+        {
+          "destination": "tokens-typography.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "iOS-typography"
+            }
+          }
         }
       ]
     },
@@ -18,8 +30,20 @@
       "prefix": "token",
       "files": [
         {
-          "destination": "tokens-all.xml",
-          "format": "android/xml"
+          "destination": "tokens-color.xml",
+          "format": "android/xml",
+          "filter": {
+            "type": "color"
+          }
+        },
+        {
+          "destination": "tokens-typography.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "Android-typography"
+            }
+          }
         }
       ]
     },
@@ -30,7 +54,19 @@
       "files": [
         {
           "destination": "_colors.scss",
-          "format": "scss/variables"
+          "format": "scss/variables",
+          "filter": {
+            "type": "color"
+          }
+        },
+        {
+          "destination": "_typography.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "Web-typography"
+            }
+          }
         }
       ]
     }

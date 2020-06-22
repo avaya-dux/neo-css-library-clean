@@ -1,1 +1,28 @@
-{"effectStyles":{"elevation400":{"xOffset":{"value":0},"yOffset":{"value":16},"radius":{"value":32},"color":{"value":"rgba(0,0,0,0.25)"}},"elevation300":{"xOffset":{"value":0},"yOffset":{"value":8},"radius":{"value":16},"color":{"value":"rgba(0,0,0,0.25)"}},"elevation200":{"xOffset":{"value":0},"yOffset":{"value":4},"radius":{"value":8},"color":{"value":"rgba(0,0,0,0.25)"}},"elevation100":{"xOffset":{"value":0},"yOffset":{"value":4},"radius":{"value":4},"color":{"value":"rgba(0,0,0,0.25)"}}}}
+{
+  "effectStyles": {
+    "elevation400": {
+      "xOffset": { "value": 0 },
+      "yOffset": { "value": 16 },
+      "radius": { "value": 32 },
+      "color": { "value": "rgba(0,0,0,0.25)" }
+    },
+    "elevation300": {
+      "xOffset": { "value": 0 },
+      "yOffset": { "value": 8 },
+      "radius": { "value": 16 },
+      "color": { "value": "rgba(0,0,0,0.25)" }
+    },
+    "elevation200": {
+      "xOffset": { "value": 0 },
+      "yOffset": { "value": 4 },
+      "radius": { "value": 8 },
+      "color": { "value": "rgba(0,0,0,0.25)" }
+    },
+    "elevation100": {
+      "xOffset": { "value": 0 },
+      "yOffset": { "value": 4 },
+      "radius": { "value": 4 },
+      "color": { "value": "rgba(0,0,0,0.25)" }
+    }
+  }
+}
