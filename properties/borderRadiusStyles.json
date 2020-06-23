@@ -1,7 +1,7 @@
 {
-  "borderRadiiStyles": {
-    "border-radius-4px": { "value": 4 },
-    "border-radius-16px": { "value": 16 },
-    "border-radius-100%": { "value": "100%" }
+  "borderRadius": {
+    "4px": { "value": "4px" },
+    "16px": { "value": "16px" },
+    "100%": { "value": "100%" }
   }
 }

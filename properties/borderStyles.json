@@ -1,1 +1,34 @@
-{"border":{"solid-1px":{"value":"1px solid #ffffff"},"dotted-1px":{"value":"1px dotted #ffffff"},"solid-2px":{"value":"2px solid #ffffff"},"dotted-2px":{"value":"2px dotted #ffffff"},"solid-3px":{"value":"3px solid #ffffff"},"dotted-3px":{"value":"3px dotted #ffffff"}}}
+{
+  "border": {
+    "solid-1px": {
+      "borderWidth": { "value": "1px" },
+      "borderStyle": { "value": "solid" },
+      "borderColor": { "value": "#ffffff" }
+    },
+    "dotted-1px": {
+      "borderWidth": { "value": "1px" },
+      "borderStyle": { "value": "dotted" },
+      "borderColor": { "value": "#ffffff" }
+    },
+    "solid-2px": {
+      "borderWidth": { "value": "2px" },
+      "borderStyle": { "value": "solid" },
+      "borderColor": { "value": "#ffffff" }
+    },
+    "dotted-2px": {
+      "borderWidth": { "value": "2px" },
+      "borderStyle": { "value": "dotted" },
+      "borderColor": { "value": "#ffffff" }
+    },
+    "solid-3px": {
+      "borderWidth": { "value": "3px" },
+      "borderStyle": { "value": "solid" },
+      "borderColor": { "value": "#ffffff" }
+    },
+    "dotted-3px": {
+      "borderWidth": { "value": "3px" },
+      "borderStyle": { "value": "dotted" },
+      "borderColor": { "value": "#ffffff" }
+    }
+  }
+}
