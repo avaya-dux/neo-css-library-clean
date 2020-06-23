@@ -220,3 +220,20 @@
         }
       ]
     }
+
+"css": {
+      "transformGroup": "css",
+      "buildPath": "build/css/",
+      "prefix": "token",
+      "files": [
+        {
+          "destination": "buttons.css",
+          "format": "css/variables",
+          "filter": {
+            "attributes": {
+              "category": "button"
+            }
+          }
+        }
+      ]
+    },

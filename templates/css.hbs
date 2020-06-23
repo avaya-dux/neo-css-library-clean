@@ -14,6 +14,11 @@ line-height: 1;
 -moz-osx-font-smoothing: grayscale;
 }
 
+[class^="{{classPrefix}}"].button:not(:empty):before,
+[class*="{{classPrefix}}"].button:not(:empty):before {
+margin-right: 10px;
+}
+
 {{# each codepoints }}
 .{{ ../classPrefix }}{{ @key }}:before {
 content: "\\{{ this }}";

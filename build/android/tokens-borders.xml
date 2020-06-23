@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <item name="tokenBorderSolid1PxBorderWidth">1px</item>
+    <item name="tokenBorderSolid1PxBorderStyle">solid</item>
+    <item name="tokenBorderSolid1PxBorderColor">#ffffff</item>
+    <item name="tokenBorderDotted1PxBorderWidth">1px</item>
+    <item name="tokenBorderDotted1PxBorderStyle">dotted</item>
+    <item name="tokenBorderDotted1PxBorderColor">#ffffff</item>
+    <item name="tokenBorderSolid2PxBorderWidth">2px</item>
+    <item name="tokenBorderSolid2PxBorderStyle">solid</item>
+    <item name="tokenBorderSolid2PxBorderColor">#ffffff</item>
+    <item name="tokenBorderDotted2PxBorderWidth">2px</item>
+    <item name="tokenBorderDotted2PxBorderStyle">dotted</item>
+    <item name="tokenBorderDotted2PxBorderColor">#ffffff</item>
+    <item name="tokenBorderSolid3PxBorderWidth">3px</item>
+    <item name="tokenBorderSolid3PxBorderStyle">solid</item>
+    <item name="tokenBorderSolid3PxBorderColor">#ffffff</item>
+    <item name="tokenBorderDotted3PxBorderWidth">3px</item>
+    <item name="tokenBorderDotted3PxBorderStyle">dotted</item>
+    <item name="tokenBorderDotted3PxBorderColor">#ffffff</item>
+    
+</resources>

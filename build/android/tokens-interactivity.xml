@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <item name="tokenInteractivityMotionEaseIn">cubic-bezier(.4, 0, .7, .2)</item>
+    <item name="tokenInteractivityMotionEaseOut">cubic-bezier(0, 0, .2, 1)</item>
+    <item name="tokenInteractivityMotionFadeFast">all .15s</item>
+    <item name="tokenInteractivityMotionFadeSlow">all .6s</item>
+    <item name="tokenInteractivityMotionComboFastShort">transform .15s, background .15s</item>
+    <item name="tokenInteractivityMotionComboFastMedium">transform .3s, background .15s</item>
+    <item name="tokenInteractivityMotionComboSlowLong">transform .6s, background .6s</item>
+    
+</resources>

@@ -30,6 +30,42 @@
               "category": "shadows"
             }
           }
+        },
+        {
+          "destination": "tokens-borders.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "border"
+            }
+          }
+        },
+        {
+          "destination": "tokens-border-radius.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "borderRadius"
+            }
+          }
+        },
+        {
+          "destination": "tokens-interactivity.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "interactivity"
+            }
+          }
+        },
+        {
+          "destination": "tokens-buttons.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "button"
+            }
+          }
         }
       ]
     },
@@ -62,6 +98,42 @@
               "category": "shadows"
             }
           }
+        },
+        {
+          "destination": "tokens-borders.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "border"
+            }
+          }
+        },
+        {
+          "destination": "tokens-border-radius.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "borderRadius"
+            }
+          }
+        },
+        {
+          "destination": "tokens-interactivity.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "interactivity"
+            }
+          }
+        },
+        {
+          "destination": "tokens-buttons.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "button"
+            }
+          }
         }
       ]
     },
@@ -92,6 +164,42 @@
           "filter": {
             "attributes": {
               "category": "shadows"
+            }
+          }
+        },
+        {
+          "destination": "_borders.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "border"
+            }
+          }
+        },
+        {
+          "destination": "_border-radius.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "borderRadius"
+            }
+          }
+        },
+        {
+          "destination": "_interactivity.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "interactivity"
+            }
+          }
+        },
+        {
+          "destination": "_buttons.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "button"
             }
           }
         }
