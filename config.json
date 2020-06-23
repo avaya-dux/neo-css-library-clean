@@ -21,6 +21,15 @@
               "category": "iOS-typography"
             }
           }
+        },
+        {
+          "destination": "tokens-shadows.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "shadows"
+            }
+          }
         }
       ]
     },
@@ -44,6 +53,15 @@
               "category": "Android-typography"
             }
           }
+        },
+        {
+          "destination": "tokens-shadows.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "shadows"
+            }
+          }
         }
       ]
     },
@@ -65,6 +83,15 @@
           "filter": {
             "attributes": {
               "category": "Web-typography"
+            }
+          }
+        },
+        {
+          "destination": "_shadows.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "shadows"
             }
           }
         }

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <item name="tokenShadowsElevation400XOffset">0px</item>
+    <item name="tokenShadowsElevation400YOffset">16px</item>
+    <item name="tokenShadowsElevation400Radius">32px</item>
+    <item name="tokenShadowsElevation400Color">rgba(0,0,0,0.25)</item>
+    <item name="tokenShadowsElevation300XOffset">0px</item>
+    <item name="tokenShadowsElevation300YOffset">8px</item>
+    <item name="tokenShadowsElevation300Radius">16px</item>
+    <item name="tokenShadowsElevation300Color">rgba(0,0,0,0.25)</item>
+    <item name="tokenShadowsElevation200XOffset">0px</item>
+    <item name="tokenShadowsElevation200YOffset">4px</item>
+    <item name="tokenShadowsElevation200Radius">8px</item>
+    <item name="tokenShadowsElevation200Color">rgba(0,0,0,0.25)</item>
+    <item name="tokenShadowsElevation100XOffset">0px</item>
+    <item name="tokenShadowsElevation100YOffset">4px</item>
+    <item name="tokenShadowsElevation100Radius">4px</item>
+    <item name="tokenShadowsElevation100Color">rgba(0,0,0,0.25)</item>
+    
+</resources>

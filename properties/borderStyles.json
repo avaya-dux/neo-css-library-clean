@@ -1,10 +1,1 @@
-{
-  "borderStyles": {
-    "border-solid-1px": { "border": { "value": "1px solid #ffffff" } },
-    "border-dotted-1px": { "border": { "value": "1px dotted #ffffff" } },
-    "border-solid-2px": { "border": { "value": "2px solid #ffffff" } },
-    "border-dotted-2px": { "border": { "value": "2px dotted #ffffff" } },
-    "border-solid-3px": { "border": { "value": "3px solid #ffffff" } },
-    "border-dotted-3px": { "border": { "value": "3px dotted #ffffff" } }
-  }
-}
+{"border":{"solid-1px":{"value":"1px solid #ffffff"},"dotted-1px":{"value":"1px dotted #ffffff"},"solid-2px":{"value":"2px solid #ffffff"},"dotted-2px":{"value":"2px dotted #ffffff"},"solid-3px":{"value":"3px solid #ffffff"},"dotted-3px":{"value":"3px dotted #ffffff"}}}

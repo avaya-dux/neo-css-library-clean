@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<dict>
+    <key>tokenShadowsElevation400XOffset</key><string>0pt</string>
+    <key>tokenShadowsElevation400YOffset</key><string>16pt</string>
+    <key>tokenShadowsElevation400Radius</key><string>32pt</string>
+    <key>tokenShadowsElevation400Color</key><string>rgba(0,0,0,0.25)</string>
+    <key>tokenShadowsElevation300XOffset</key><string>0pt</string>
+    <key>tokenShadowsElevation300YOffset</key><string>8pt</string>
+    <key>tokenShadowsElevation300Radius</key><string>16pt</string>
+    <key>tokenShadowsElevation300Color</key><string>rgba(0,0,0,0.25)</string>
+    <key>tokenShadowsElevation200XOffset</key><string>0pt</string>
+    <key>tokenShadowsElevation200YOffset</key><string>4pt</string>
+    <key>tokenShadowsElevation200Radius</key><string>8pt</string>
+    <key>tokenShadowsElevation200Color</key><string>rgba(0,0,0,0.25)</string>
+    <key>tokenShadowsElevation100XOffset</key><string>0pt</string>
+    <key>tokenShadowsElevation100YOffset</key><string>4pt</string>
+    <key>tokenShadowsElevation100Radius</key><string>4pt</string>
+    <key>tokenShadowsElevation100Color</key><string>rgba(0,0,0,0.25)</string>
+    
+</dict>
+</plist>
