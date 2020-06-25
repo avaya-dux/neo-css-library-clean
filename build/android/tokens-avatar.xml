@@ -28,5 +28,7 @@
     <item name="tokenAvatarInitialsLargeFontSize">32px</item>
     <item name="tokenAvatarInitialsLargeLetterSpacing">0px</item>
     <item name="tokenAvatarInitialsLargeLineHeight">36.79999923706055px</item>
+    <item name="tokenAvatarAvatarBorderWidth">2px</item>
+    <item name="tokenAvatarAvatarBorderStyle">solid</item>
     
 </resources>

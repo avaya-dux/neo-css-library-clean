@@ -30,6 +30,8 @@
     <key>tokenAvatarInitialsLargeFontSize</key><string>32pt</string>
     <key>tokenAvatarInitialsLargeLetterSpacing</key><string>0pt</string>
     <key>tokenAvatarInitialsLargeLineHeight</key><string>36.79999923706055pt</string>
+    <key>tokenAvatarAvatarBorderWidth</key><string>2pt</string>
+    <key>tokenAvatarAvatarBorderStyle</key><string>solid</string>
     
 </dict>
 </plist>
