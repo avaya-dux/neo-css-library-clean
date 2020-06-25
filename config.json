@@ -66,6 +66,15 @@
               "category": "button"
             }
           }
+        },
+        {
+          "destination": "tokens-avatar.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
         }
       ]
     },
@@ -134,6 +143,15 @@
               "category": "button"
             }
           }
+        },
+        {
+          "destination": "tokens-avatar.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
         }
       ]
     },
@@ -200,6 +218,15 @@
           "filter": {
             "attributes": {
               "category": "button"
+            }
+          }
+        },
+        {
+          "destination": "_avatar.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
             }
           }
         }

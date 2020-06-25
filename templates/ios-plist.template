@@ -3,7 +3,6 @@
 <plist version="1.0">
 <%
 var allProperties = _.each(allProperties, function(prop) {
-    console.log(typeof prop.value)
     if(prop.type === 'color') {
         prop.tag = 'string';
     } else if(prop.type === 'size') {
