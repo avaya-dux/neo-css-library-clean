@@ -75,6 +75,24 @@
               "category": "avatar"
             }
           }
+        },
+        {
+          "destination": "tokens-badge.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "tokens-chip.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "chip"
+            }
+          }
         }
       ]
     },
@@ -152,6 +170,24 @@
               "category": "avatar"
             }
           }
+        },
+        {
+          "destination": "tokens-badge.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "badge"
+            }
+          }
+        },
+        {
+          "destination": "tokens-chip.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "chip"
+            }
+          }
         }
       ]
     },
@@ -227,6 +263,24 @@
           "filter": {
             "attributes": {
               "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "_badge.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "_chip.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "chip"
             }
           }
         }
