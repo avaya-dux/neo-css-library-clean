@@ -22,9 +22,9 @@ convertIconFontToBase64().then(async (result) => {
     .readdir(__dirname + '/properties/assets/icons/svgs')
     .then(async (files) => {
       // this code is used to generate a list of icon name Strings for use in our Design System portal
-      // files.forEach((file) => {
-      //   console.log(`"${file.replace('.svg', '')}",`);
-      // });
+      files.forEach((file) => {
+        console.log(`"${file.replace('.svg', '')}",`);
+      });
       // this code is used to generate a .js file with exportable SVG code so users can copy it on our portal
       await fs.writeFile(
         'svgs.js',
