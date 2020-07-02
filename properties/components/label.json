@@ -1,0 +1,28 @@
+{
+  "label": {
+    "default-color": { "value": "{color.base/1000.value}" },
+    "stateful-color": { "value": "{color.base/100.value}" },
+    "fontWeight": {
+      "value": "{Web-typography.web/small body.fontWeight.value}"
+    },
+    "fontSize": { "value": "{Web-typography.web/small body.fontSize.value}" },
+    "lineHeight": {
+      "value": "{Web-typography.web/small body.lineHeight.value}"
+    },
+    "borderRadius": { "value": "{borderRadius.4px.value}" },
+    "default-background": { "value": "{color.base/300.value}" },
+    "default-background-hover": { "value": "{color.base/400.value}" },
+    "alert-background": { "value": "{color.functional - red/500.value}" },
+    "alert-background-hover": { "value": "{color.functional - red/600.value}" },
+    "warning-background": { "value": "{color.functional - orange/500.value}" },
+    "warning-background-hover": {
+      "value": "{color.functional - orange/600.value}"
+    },
+    "success-background": { "value": "{color.functional - green/500.value}" },
+    "success-background-hover": {
+      "value": "{color.functional - green/600.value}"
+    },
+    "info-background": { "value": "{color.functional - blue/500.value}" },
+    "info-background-hover": { "value": "{color.functional - blue/600.value}" }
+  }
+}
