@@ -1,11 +1,1 @@
-{
-  "interactivity": {
-    "motionEaseIn": { "value": "cubic-bezier(.4, 0, .7, .2)" },
-    "motionEaseOut": { "value": "cubic-bezier(0, 0, .2, 1)" },
-    "motionFadeFast": { "value": "all .15s" },
-    "motionFadeSlow": { "value": "all .6s" },
-    "motionComboFastShort": { "value": "transform .15s, background .15s" },
-    "motionComboFastMedium": { "value": "transform .3s, background .15s" },
-    "motionComboSlowLong": { "value": "transform .6s, background .6s" }
-  }
-}
+{"interactivity":{"motionEaseIn":{"value":"cubic-bezier(.4, 0, .7, .2)"},"motionEaseOut":{"value":"cubic-bezier(0, 0, .2, 1)"},"motionFadeFast":{"value":"all .15s"},"motionFadeSlow":{"value":"all .6s"},"motionComboFastShort":{"value":"transform .15s, background .15s"},"motionComboFastMedium":{"value":"transform .3s, background .15s"},"motionComboSlowLong":{"value":"transform .6s, background .6s"}}}
