@@ -1,196 +1,6 @@
 {
   "source": ["properties/**/*.json"],
   "platforms": {
-    "ios": {
-      "transformGroup": "tokens-ios",
-      "buildPath": "build/ios/",
-      "prefix": "token",
-      "files": [
-        {
-          "destination": "tokens-color.plist",
-          "format": "ios/plist",
-          "filter": {
-            "type": "color"
-          }
-        },
-        {
-          "destination": "tokens-typography.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "iOS-typography"
-            }
-          }
-        },
-        {
-          "destination": "tokens-shadows.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "shadows"
-            }
-          }
-        },
-        {
-          "destination": "tokens-borders.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "border"
-            }
-          }
-        },
-        {
-          "destination": "tokens-border-radius.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "borderRadius"
-            }
-          }
-        },
-        {
-          "destination": "tokens-interactivity.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "interactivity"
-            }
-          }
-        },
-        {
-          "destination": "tokens-buttons.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "button"
-            }
-          }
-        },
-        {
-          "destination": "tokens-avatar.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "avatar"
-            }
-          }
-        },
-        {
-          "destination": "tokens-badge.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "avatar"
-            }
-          }
-        },
-        {
-          "destination": "tokens-chip.plist",
-          "format": "ios/plist",
-          "filter": {
-            "attributes": {
-              "category": "chip"
-            }
-          }
-        }
-      ]
-    },
-    "android": {
-      "transformGroup": "tokens-android",
-      "buildPath": "build/android/",
-      "prefix": "token",
-      "files": [
-        {
-          "destination": "tokens-color.xml",
-          "format": "android/xml",
-          "filter": {
-            "type": "color"
-          }
-        },
-        {
-          "destination": "tokens-typography.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "Android-typography"
-            }
-          }
-        },
-        {
-          "destination": "tokens-shadows.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "shadows"
-            }
-          }
-        },
-        {
-          "destination": "tokens-borders.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "border"
-            }
-          }
-        },
-        {
-          "destination": "tokens-border-radius.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "borderRadius"
-            }
-          }
-        },
-        {
-          "destination": "tokens-interactivity.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "interactivity"
-            }
-          }
-        },
-        {
-          "destination": "tokens-buttons.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "button"
-            }
-          }
-        },
-        {
-          "destination": "tokens-avatar.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "avatar"
-            }
-          }
-        },
-        {
-          "destination": "tokens-badge.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "badge"
-            }
-          }
-        },
-        {
-          "destination": "tokens-chip.xml",
-          "format": "android/xml",
-          "filter": {
-            "attributes": {
-              "category": "chip"
-            }
-          }
-        }
-      ]
-    },
     "scss": {
       "transformGroup": "scss",
       "buildPath": "build/scss/",
@@ -258,6 +68,15 @@
           }
         },
         {
+          "destination": "_accordion.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "accordion"
+            }
+          }
+        },
+        {
           "destination": "_avatar.scss",
           "format": "scss/variables",
           "filter": {
@@ -271,7 +90,25 @@
           "format": "scss/variables",
           "filter": {
             "attributes": {
-              "category": "avatar"
+              "category": "badge"
+            }
+          }
+        },
+        {
+          "destination": "_button.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "button"
+            }
+          }
+        },
+        {
+          "destination": "_checkbox.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "checkbox"
             }
           }
         },
@@ -281,6 +118,141 @@
           "filter": {
             "attributes": {
               "category": "chip"
+            }
+          }
+        },
+        {
+          "destination": "_dropdown.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "dropdown"
+            }
+          }
+        },
+        {
+          "destination": "_input.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "input"
+            }
+          }
+        },
+        {
+          "destination": "_inputGroup.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "inputGroup"
+            }
+          }
+        },
+        {
+          "destination": "_label.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "label"
+            }
+          }
+        },
+        {
+          "destination": "_list.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "list"
+            }
+          }
+        },
+        {
+          "destination": "_menu.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "menu"
+            }
+          }
+        },
+        {
+          "destination": "_modal.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "modal"
+            }
+          }
+        },
+        {
+          "destination": "_notification.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "notification"
+            }
+          }
+        },
+        {
+          "destination": "_popover.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "popover"
+            }
+          }
+        },
+        {
+          "destination": "_radio.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "radio"
+            }
+          }
+        },
+        {
+          "destination": "_spinner.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "spinner"
+            }
+          }
+        },
+        {
+          "destination": "_switch.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "switch"
+            }
+          }
+        },
+        {
+          "destination": "_table.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "table"
+            }
+          }
+        },
+        {
+          "destination": "_tabs.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "tabs"
+            }
+          }
+        },
+        {
+          "destination": "_tooltip.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "tooltip"
             }
           }
         }

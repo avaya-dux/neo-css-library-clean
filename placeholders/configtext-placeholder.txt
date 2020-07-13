@@ -237,3 +237,194 @@
         }
       ]
     },
+
+    "ios": {
+      "transformGroup": "tokens-ios",
+      "buildPath": "build/ios/",
+      "prefix": "token",
+      "files": [
+        {
+          "destination": "tokens-color.plist",
+          "format": "ios/plist",
+          "filter": {
+            "type": "color"
+          }
+        },
+        {
+          "destination": "tokens-typography.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "iOS-typography"
+            }
+          }
+        },
+        {
+          "destination": "tokens-shadows.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "shadows"
+            }
+          }
+        },
+        {
+          "destination": "tokens-borders.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "border"
+            }
+          }
+        },
+        {
+          "destination": "tokens-border-radius.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "borderRadius"
+            }
+          }
+        },
+        {
+          "destination": "tokens-interactivity.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "interactivity"
+            }
+          }
+        },
+        {
+          "destination": "tokens-buttons.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "button"
+            }
+          }
+        },
+        {
+          "destination": "tokens-avatar.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "tokens-badge.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "tokens-chip.plist",
+          "format": "ios/plist",
+          "filter": {
+            "attributes": {
+              "category": "chip"
+            }
+          }
+        }
+      ]
+    },
+    "android": {
+      "transformGroup": "tokens-android",
+      "buildPath": "build/android/",
+      "prefix": "token",
+      "files": [
+        {
+          "destination": "tokens-color.xml",
+          "format": "android/xml",
+          "filter": {
+            "type": "color"
+          }
+        },
+        {
+          "destination": "tokens-typography.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "Android-typography"
+            }
+          }
+        },
+        {
+          "destination": "tokens-shadows.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "shadows"
+            }
+          }
+        },
+        {
+          "destination": "tokens-borders.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "border"
+            }
+          }
+        },
+        {
+          "destination": "tokens-border-radius.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "borderRadius"
+            }
+          }
+        },
+        {
+          "destination": "tokens-interactivity.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "interactivity"
+            }
+          }
+        },
+        {
+          "destination": "tokens-buttons.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "button"
+            }
+          }
+        },
+        {
+          "destination": "tokens-avatar.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "tokens-badge.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "badge"
+            }
+          }
+        },
+        {
+          "destination": "tokens-chip.xml",
+          "format": "android/xml",
+          "filter": {
+            "attributes": {
+              "category": "chip"
+            }
+          }
+        }
+      ]
+    },
