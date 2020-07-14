@@ -36,6 +36,10 @@
   &-control {
     margin-bottom: $form-control-margin-bottom;
 
+    & label {
+      font-size: $token-input-label-font-size;
+      line-height: $token-input-label-line-height;
+    }
     @include form--states;
     @include form--required;
   }
