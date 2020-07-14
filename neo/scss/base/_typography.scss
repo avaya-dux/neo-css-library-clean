@@ -1,95 +1,4 @@
-// Typography styles
-
-// body-tiny
-body.tiny {
-  font-size: $body-fontsize-tiny;
-  line-height: $body-lineheight-tiny;
-  letter-spacing: $body-letterspacing-tiny;
-  font-weight: $body-fontweight-tiny;
-  // body-tiny-italic
-  &.italic {
-    font-style: $body-fontstyle-tiny-italic;
-  }
-}
-
-// body-small
-body.small {
-  font-size: $body-fontsize-small;
-  line-height: $body-lineheight-small;
-  letter-spacing: $body-letterspacing-small;
-  font-weight: $body-fontweight-small;
-  //body-small-light
-  &.light {
-    font-weight: $body-fontweight-small-light;
-  }
-}
-
-//body-regular
-body.regular {
-  font-size: $body-fontsize-regular;
-  line-height: $body-lineheight-regular;
-  letter-spacing: $body-letterspacing-regular;
-  font-weight: $body-fontweight-regular;
-  //body-regular-italic
-  &.italic {
-    font-style: $body-fontstyle-regular-italic;
-  }
-  //body-regular-underline
-  &.underline {
-    text-decoration: $body-textdecoration-regular-underline;
-  }
-  //body-regular-semibold
-  &.semibold {
-    font-weight: $body-fontweight-regular-semibold;
-  }
-}
-
-//body-large
-body.large {
-  font-size: $body-fontsize-large;
-  line-height: $body-lineheight-large;
-  letter-spacing: $body-letterspacing-large;
-  font-weight: $body-fontweight-large;
-}
-
-// Headings - one for each level
-h1 {
-  line-height: 51.5625px;
-  letter-spacing: 0;
-  font-size: 44px;
-  font-weight: 700;
-}
-
-h2 {
-  line-height: 37.5px;
-  letter-spacing: 0;
-  font-size: 32px;
-  font-weight: 400;
-  // h2 underline
-  &.h2-underline {
-    text-decoration: underline;
-  }
-  // h2 bold
-  &.h2-bold {
-    font-weight: 700;
-  }
-}
-
-h3 {
-  line-height: 30.46875px;
-  letter-spacing: 0;
-  font-size: 26px;
-  font-weight: 400;
-}
-
-h4 {
-  line-height: 22.265625px;
-  letter-spacing: 0;
-  font-size: 19px;
-  font-weight: 400;
-}
-
-// universal header styles - check variables.scss for more
+// Headings
 h1,
 h2,
 h3,
@@ -97,43 +6,21 @@ h4,
 h5,
 h6 {
   color: $heading-color;
-  // font-weight: $heading-font-weight;
-  // line-height: $heading-line-height;
+  font-weight: $heading-font-weight;
+  line-height: $heading-line-height;
   margin-top: 0;
 }
 
-// copied from variables partial
-$heading-font-sizes: () !default;
-$heading-font-sizes: map-merge(
-  (
-    h1: 44px,
-    h2: 32px,
-    h3: 26px,
-    h4: 19px,
-    h5: $global-font-size,
-    h6: $global-font-size * 0.7,
-  ),
-  $heading-font-sizes
-);
-
-// split these into two functions -- the first to preserve margin values for h1 to h6, the second to keep h5 and h6 font sizes declared
-
 @for $i from 1 through 6 {
   h#{$i} {
+    font-size: map_get($heading-font-sizes, h#{$i});
     margin-bottom: map_get($heading-font-sizes, h#{$i}) * 0.4;
+
     &:last-child {
       margin-bottom: 0;
     }
   }
 }
-
-@for $i from 5 through 6 {
-  h#{$i} {
-    font-size: map_get($heading-font-sizes, h#{$i});
-  }
-}
-
-// end of universal header styles
 
 .neo-subtitle {
   line-height: $subtitle-line-height;
