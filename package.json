@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
     "icongen": "node iconsFileFunctions.js &&  npx icon-font-generator properties/assets/icons/svgs/*.svg -o properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node iconsCSSGenerator.js",
-    "scss": "node-sass neo/scss/main.scss neo/css/main.css",
+    "scss": "node-sass neo/scss/main.scss neo/css/neo.css",
     "automatescss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run scss",
     "automatecss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js"
   },
@@ -31,6 +31,7 @@
     "nodemon": "^1.18.3",
     "replace-in-file": "^6.0.0",
     "style-dictionary": "^2.10.0",
+    "susy": "^3.0.5",
     "webfonts-generator": "^0.4.0"
   },
   "devDependencies": {}

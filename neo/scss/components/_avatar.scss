@@ -1,6 +1,6 @@
 @mixin neo-avatar-img {
   .neo-img {
-    border-radius: 50%;
+    border-radius: $token-border-radius-100;
     height: 100%;
     position: relative;
     width: 100%;
@@ -21,49 +21,49 @@
 
 @mixin neo-avatar-sizes {
   &--x-small {
-    font-size: $avatar-font-size * 0.5;
-    height: $avatar-size * 0.5;
-    width: $avatar-size * 0.5;
+    font-size: $token-web-typography-web-tiny-body-font-size;
+    height: $token-avatar-x-small-height;
+    width: $token-avatar-x-small-width;
   }
 
   &--small {
-    font-size: $avatar-font-size * 0.6;
-    height: $avatar-size * 0.7;
-    width: $avatar-size * 0.7;
+    font-size: $token-web-typography-web-body-regular-font-size;
+    height: $token-avatar-small-height;
+    width: $token-avatar-small-width;
   }
 
   &--large {
-    font-size: $avatar-font-size * 1.5;
-    height: $avatar-size * 1.5;
-    width: $avatar-size * 1.5;
+    font-size: $token-web-typography-web-heading-2-regular-font-size;
+    height: $token-avatar-large-height;
+    width: $token-avatar-large-width;
   }
 }
 
 @mixin avatar-border-color() {
   @each $name, $color in $neo-state-colors {
     &--#{$name} {
-      border-color: $color;
-      border-style: solid;
-      border-width: 2px;
+      border-color: $token-avatar-avatar-border-color;
+      border-style: $token-avatar-avatar-border-style;
+      border-width: $token-avatar-avatar-border-width;
     }
   }
 }
 
 @mixin neo-avatar-as-thumbnail {
   &.neo-thumbnail {
-    background: $neo-white;
+    background: $global-background;
   }
 }
 
 .neo-avatar {
   background: $avatar-background;
-  border-radius: 50%;
+  border-radius: $token-border-radius-100;
   color: $avatar-font-color;
   display: inline-block;
   font-size: $avatar-font-size;
   font-weight: $avatar-font-weight;
   height: $avatar-size;
-  line-height: 1.4;
+  line-height: $token-avatar-initials-regular-line-height;
   margin: 0;
   position: relative;
   vertical-align: middle;

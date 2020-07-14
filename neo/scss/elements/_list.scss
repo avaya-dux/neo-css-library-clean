@@ -34,12 +34,12 @@
     cursor: pointer;
   }
 
-  @each $name, $color in $neo-state-colors {
-    &--hover
-      &__#{$child-element}--#{$name}:hover:not(&__#{$child-element}--disabled) {
-      background-color: darken-var($color, 5%);
-    }
-  }
+  // @each $name, $color in $neo-state-colors {
+  //   &--hover
+  //     &__#{$child-element}--#{$name}:hover:not(&__#{$child-element}--disabled) {
+  //     // background-color: darken-var($color, 5%);
+  //   }
+  // }
 }
 
 // Group list with action buttons

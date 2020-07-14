@@ -1,6 +1,6 @@
 @import 'mixins';
 @import 'helpers';
-@import '../../build/scss/tokens.scss'
+@import '../../build/scss/tokens.scss';
 // importing all _scss partials from Style Dictionary
 
 // Variables
@@ -60,6 +60,34 @@ $neo-state-colors: map-merge(
   $neo-state-colors
 );
 
+$neo-hover-colors: () !default;
+
+$neo-hover-colors: map-merge(
+  (
+    primary: $token-color-accent-600,
+    secondary: $token-color-accent-600,
+    success: $token-color-functional-green-600,
+    warning: $token-color-functional-orange-600,
+    alert: $token-color-functional-red-600,
+    info: $token-color-functional-blue-600,
+  ),
+  $neo-hover-colors
+);
+
+$neo-close-colors: () !default;
+
+$neo-close-colors: map-merge(
+  (
+    primary: $token-color-accent-900,
+    secondary: $token-color-accent-900,
+    success: $token-color-functional-green-900,
+    warning: $token-color-functional-orange-900,
+    alert: $token-color-functional-red-900,
+    info: $token-color-functional-blue-900,
+  ),
+  $neo-close-colors
+);
+
 // Link colors
 $link-color: var-color-name(link-color) !default;
 $link-hover-color: darken-var($link-color, 15%) !default;
@@ -69,10 +97,10 @@ $link-hover-decoration: none !default;
 // Global
 //
 
-$global-background: $token-color-base-100, !default;
+$global-background: $token-color-base-100 !default;
 // Global text styles
 $global-text-color: $token-color-base-1000 !default;
-$global-text-inverse-color: var-color-name(global-text-inverse) !default;=
+$global-text-inverse-color: var-color-name(global-text-inverse) !default;
 $global-font-size: 14px !default;
 $global-font-size-x-small: 9px !default;
 $global-font-size-small: 12px !default;
@@ -106,10 +134,10 @@ $heading-font-sizes: map-merge(
   (
     h1: $token-web-typography-web-heading-1-regular-font-size,
     h2: $token-web-typography-web-heading-2-regular-font-size,
-    h3: $token-web-typography-web-heading-3-regular-font-size,
-    h4: $token-web-typography-web-heading-4-regular-font-size,
+    h3: $token-web-typography-web-heading-3-font-size,
+    h4: $token-web-typography-web-heading-4-font-size,
     // we only go up to h4
-    h5: $global-font-size,
+      h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes
@@ -210,7 +238,7 @@ $input-group-icon-padding: 30px !default;
 $input-group-icon-offset: 0 8px !default;
 $input-hint-font-size: $token-input-helper-font-size !default;
 $input-hint-margin-top: $global-spacer-small !default;
-$input-hint-muted-color: lighten-var($input-font-color, 40%) !default;
+$input-hint-muted-color: $token-input-helper-color !default;
 $input-disabled-bg: $token-input-disabled-background-color !default;
 $input-disabled-color: $token-input-disabled-filled-color !default;
 $input-state-color-map: () !default;
@@ -252,7 +280,8 @@ $select-disabled-bg: $token-dropdown-disabled-background-color !default;
 
 $radio-background: $global-background !default;
 $radio-background-active-color: $token-radio-selected-target-background !default;
-$radio-border: $token-radio-border-width $token-radio-border-style $token-radio-border-color !default;
+$radio-border: $token-radio-border-width $token-radio-border-style
+  $token-radio-border-color !default;
 $radio-text-offset: 22px !default;
 $radio-label-offset-x: $global-spacer-x-large !default;
 $radio-disabled-opacity: $global-opacity !default;
@@ -274,7 +303,8 @@ $table-head-hover: $table-head-background !default;
 $table-head-font-color: $global-text-color !default;
 
 $table-border-width: $token-table-row-border-bottom-width !default;
-$table-border: $table-border-width $token-table-row-border-bottom-style $token-table-row-border-bottom-color !default;
+$table-border: $table-border-width $token-table-row-border-bottom-style
+  $token-table-row-border-bottom-color !default;
 
 $table-striped-background: lighten($table-row-hover, 20%) !default;
 $table-stripe: even !default;
@@ -382,8 +412,8 @@ $button-types: map-merge(
       bg-color: $global-background,
       text-color: $global-text-color,
       border-color: $neo-blue-grey,
-      hover-bg-color: darken-var($global-background, 5%),
-      active-bg-color: darken-var($global-background, 5%),
+      hover-bg-color: $neo-off-white,
+      active-bg-color: $neo-off-white,
       active-box-shadow-color: $neo-light-grey,
       disabled-bg-color: $neo-off-white,
     ),
@@ -571,9 +601,9 @@ $compressed-footer-indicator-left-radius: 15px !default;
 //
 
 $group-list-item-background: $global-background !default;
-$group-list-item-color: $global-text-color!default;
+$group-list-item-color: $global-text-color !default;
 $group-list-item-opacity: $global-opacity !default;
-$group-list-item-hover: $token-list-hover!default;
+$group-list-item-hover: $token-list-hover !default;
 $group-list-border-width: $token-list-border-bottom-width !default;
 $group-list-borderless: 0 !default;
 $group-list-border-color: $token-list-border-bottom-color !default;
@@ -611,7 +641,8 @@ $pagination-btn-background: $global-background !default;
 $pagination-btn-padding: $global-spacer-small $global-spacer-large !default;
 $pagination-border-color: $global-border-color !default;
 $pagination-border-color-hover: $token-table-pagination-active-div-border-color !default;
-$pagination-border: $token-table-pagination-active-div-border-width $token-table-pagination-active-div-border-style $pagination-border-color !default;
+$pagination-border: $token-table-pagination-active-div-border-width
+  $token-table-pagination-active-div-border-style $pagination-border-color !default;
 $pagination-dots-color: $global-text-color !default;
 $pagination-color: $token-table-pagination-color !default;
 $pagination-margin: $global-spacer !default;
@@ -635,7 +666,8 @@ $tooltip-offset: 8px !default;
 $tooltip-animation-duration: $global-transition-duration !default;
 $tooltip-text-size: $token-tooltip-font-size !default;
 $tooltip-border-radius: 0 !default;
-$tooltip-padding: $token-tooltip-vertical-padding $token-tooltip-horizontal-padding !default;
+$tooltip-padding: $token-tooltip-vertical-padding
+  $token-tooltip-horizontal-padding !default;
 $tooltip-z: 999 !default;
 
 //--------------------------------------------//
@@ -710,8 +742,8 @@ $chip-offset: ($input-height - $chip-height) / 2 - 1 !default;
 $chip-font-size: $token-chip-font-size !default;
 $chip-border-radius: $token-chip-border-radius !default;
 $chip-line-height: $token-chip-line-height !default;
-$chip-padding-x: $label-padding-x !default;
-$chip-padding-y: $label-padding-y !default;
+$chip-padding-x: $token-chip-padding-horizontal !default;
+$chip-padding-y: $token-chip-padding-vertical !default;
 $chip-btn-margin-left: $global-spacer !default;
 $chip-btn-opacity: 0.4 !default;
 $chip-disabled-bg: $neo-light-grey !default;
@@ -786,8 +818,9 @@ $dropdown-animation-duration: $global-transition-duration !default;
 $dropdown-radius: $global-radius !default;
 $dropdown-min-width: 150px !default;
 $dropdown-content-border-width: $token-menu-separator-border-bottom-width !default;
-$dropdown-content-border: $token-menu-separator-border-bottom-width $token-menu-separator-border-bottom-style
-$token-menu-separator-border-bottom-color !default;
+$dropdown-content-border: $token-menu-separator-border-bottom-width
+  $token-menu-separator-border-bottom-style
+  $token-menu-separator-border-bottom-color !default;
 $dropdown-content-padding: $global-spacer !default;
 $dropdown-content-shadow: none !default;
 $dropdown-content-z: 20 !default;
@@ -815,7 +848,8 @@ $popover-border-color: $token-popover-title-border-bottom-color;
 $popover-header-padding: 5px 10px !default;
 $popover-animation-duration: $global-transition-duration !default;
 $popover-content-background-color: $token-popover-body-background-color !default;
-$popover-content-border: $token-popover-border-width $token-popover-border-style $token-popover-border-color !default;
+$popover-content-border: $token-popover-border-width $token-popover-border-style
+  $token-popover-border-color !default;
 $popover-radius: 0 !default;
 $popover-content-shadow: none !default;
 $popover-content-padding: 0 !default;
@@ -900,8 +934,10 @@ $modal-width: 550px !default;
 $modal-shadow-color: $token-modal-box-shadow-color !default;
 $modal-padding-y: 20px !default;
 $modal-margin: $global-spacer-large !default;
-$modal-shadow: $token-modal-box-shadow-x-offset $token-modal-box-shadow-y-offset $token-modal-box-shadow-radius 0 $modal-shadow-color,
-$token-modal-box-shadow-x-offset $token-modal-box-shadow-y-offset $token-modal-box-shadow-radius 0 $modal-shadow-color !default;
+$modal-shadow: $token-modal-box-shadow-x-offset $token-modal-box-shadow-y-offset
+    $token-modal-box-shadow-radius 0 $modal-shadow-color,
+  $token-modal-box-shadow-x-offset $token-modal-box-shadow-y-offset
+    $token-modal-box-shadow-radius 0 $modal-shadow-color !default;
 $modal-radius: $global-radius !default;
 $modal-border-width: 1px !default;
 $modal-message-font-size: $global-font-size-medium !default;

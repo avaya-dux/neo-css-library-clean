@@ -35,10 +35,27 @@
 
   @include chip-states($chip-bg-color, $self);
 
+  &:hover {
+    background-color: $token-chip-default-background-hover;
+  }
+
   @each $name, $background-color in $neo-state-colors {
     &--#{$name} {
       color: $global-text-inverse-color;
-      @include chip-states($background-color, $self);
+      // @include chip-states($background-color, $self);
+      background-color: $background-color;
+    }
+  }
+
+  @each $name, $color in $neo-hover-colors {
+    &--#{$name}:hover {
+      background-color: $color;
+    }
+  }
+
+  @each $name, $color in $neo-close-colors {
+    &--#{$name} .neo-close {
+      background-color: $color;
     }
   }
 }
@@ -52,13 +69,17 @@
   //  $chip-color-light
   //);
 
-  &:hover {
-    background-color: darken-var($backgroundColor, 5%);
-  }
+  // &:hover {
+  //   @each $name, $color in $neo-hover-colors {
+  //     &--#{$name} {
+  //       background-color: $color;
+  //     }
+  //   }
+  // }
 
-  &#{$selector}--selected {
-    background-color: darken-var($backgroundColor, 10%);
-  }
+  // &#{$selector}--selected {
+  //   background-color: darken-var($backgroundColor, 10%);
+  // }
 }
 
 @mixin chip-avatar {
@@ -94,13 +115,13 @@
   > .neo-close {
     @include rtl-selector {
       margin: {
-        left: -$global-spacer;
+        // left: -$global-spacer;
         right: $global-spacer;
       }
     }
     margin: {
       left: $global-spacer;
-      right: -$global-spacer;
+      // right: -$global-spacer;
     }
   }
 }
@@ -142,8 +163,8 @@
   cursor: pointer;
   display: inline-flex;
   font-size: $chip-font-size;
-  line-height: $chip-line-height * $chip-font-size + 2 * $chip-padding-y;
-  padding: 0 $chip-padding-x;
+  line-height: $chip-line-height;
+  padding: $chip-padding-y $chip-padding-x;
   transition: $chip-transition;
 
   &:focus {

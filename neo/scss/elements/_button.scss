@@ -39,7 +39,7 @@
   &--disabled {
     @if (map_has_key($button-type-colors, disabled-bg-color)) {
       background-color: map_get($button-type-colors, disabled-bg-color);
-      color: alpha($global-text-color, 50%);
+      // color: alpha($global-text-color, 50%);
       cursor: not-allowed;
       border-color: transparent;
     }
@@ -68,11 +68,11 @@
   transition: $button-transition;
   width: auto;
 
-  &[type="button"] {
+  &[type='button'] {
     line-height: 1;
   }
 
-  @include button-colors(map_get($button-types, "default"));
+  @include button-colors(map_get($button-types, 'default'));
 }
 
 .neo-btn {
@@ -96,7 +96,7 @@
 }
 
 @each $button-type-name, $button-type-colors in $button-types {
-  @if ($button-type-name != "default") {
+  @if ($button-type-name != 'default') {
     .neo-btn--#{$button-type-name} {
       @include button-colors($button-type-colors);
     }
