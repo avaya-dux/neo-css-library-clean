@@ -12,7 +12,7 @@
     &::before {
       background: $checkbox-icon-color;
       border: 1px solid $checkbox-checked-background;
-      content: "";
+      content: '';
       display: inline-block;
       height: $checkbox-size;
       margin-right: $checkbox-label-indent;
@@ -38,11 +38,24 @@
 
   &:checked + label::before {
     background: $checkbox-checked-background;
+    font-family: 'AOC-Icons' !important;
+    content: '\e911';
+    font-size: $token-web-typography-web-tiny-body-font-size;
+    color: $token-color-base-100;
+    padding-left: 2px;
   }
 
   &:disabled + label {
     color: $checkbox-disabled-background;
     cursor: not-allowed;
+
+    &:checked {
+      font-family: 'AOC-Icons' !important;
+      content: '\e911';
+      font-size: $token-web-typography-web-tiny-body-font-size;
+      color: $token-color-base-100;
+      padding-left: 2px;
+    }
 
     &::before {
       background: $checkbox-disabled-background;
@@ -55,7 +68,7 @@
   + label::after {
     border: solid $neo-white;
     border-width: 0 2px 2px 0;
-    content: "";
+    content: '';
     display: none;
     height: $checkbox-icon-height;
     left: ($checkbox-size - $checkbox-icon-width) / 2;
@@ -71,6 +84,6 @@
   }
 
   &:checked + label::after {
-    display: block;
+    // display: block;
   }
 }
