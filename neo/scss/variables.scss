@@ -293,7 +293,7 @@ $radio-disabled-opacity: $global-opacity !default;
 
 $table-background: $global-background !default;
 $table-button-margin: $global-spacer;
-$table-padding: $global-spacer !default;
+$table-padding: $token-table-padding !default;
 $table-condensed-padding: $table-padding / 2 !default;
 $table-row-hover: $token-table-row-hover-color;
 $table-color-scale: 5% !default;

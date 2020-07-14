@@ -1872,11 +1872,10 @@ hr {
   .neo-table thead,
   .neo-table tbody,
   .neo-table tfoot {
-    background-color: #ffffff;
-    border: 1px solid #ffffff; }
+    background-color: #ffffff; }
   .neo-table td,
   .neo-table th {
-    padding: 6px;
+    padding: 16px;
     text-align: left;
     vertical-align: middle; }
     [dir="rtl"] .neo-table td, [dir="rtl"]
@@ -1906,7 +1905,7 @@ hr {
     background-color: #f1f1f3;
     color: #000000; }
   .neo-table td {
-    border-top: 1px solid #ffffff; }
+    border-bottom: 1px solid #c0c0cc; }
   .neo-table thead th {
     vertical-align: bottom; }
   .neo-table tfoot {
@@ -1914,7 +1913,7 @@ hr {
     color: #000000; }
   .neo-table--bordered th,
   .neo-table--bordered td {
-    border: 1px solid #ffffff; }
+    border: 1px solid #c0c0cc; }
   .neo-table--striped tbody tr:nth-of-type(even) {
     background-color: white;
     border-bottom: 0; }
@@ -1927,7 +1926,7 @@ hr {
     background-color: #f1f1f3; }
   .neo-table--condensed th,
   .neo-table--condensed td {
-    padding: 3px; }
+    padding: 8px; }
   .neo-table--responsive {
     display: block;
     -ms-overflow-style: -ms-autohiding-scrollbar;
@@ -1940,7 +1939,7 @@ hr {
     .neo-table--sortable th:hover {
       background-color: #e3e3e7; }
     .neo-table--sortable th::after {
-      font-family: "AOC-Icons";
+      font-family: 'AOC-Icons';
       font-size: 9px;
       line-height: 24px;
       position: absolute;
@@ -1959,7 +1958,7 @@ hr {
       position: relative; }
       .neo-table--editable > td:first-child::before {
         border-left: 3px solid #008000;
-        content: "";
+        content: '';
         height: 100%;
         left: 0;
         position: absolute;
