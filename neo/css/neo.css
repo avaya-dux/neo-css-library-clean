@@ -1268,8 +1268,15 @@ hr {
     border-color: var(--neo-alert-color); }
   .neo-form-control--required > label::after {
     color: #db3232;
-    content: "*";
+    content: '*';
     padding-left: 2px; }
+
+.neo-form-control--error textarea::after {
+  font-family: 'AOC-Icons' !important;
+  content: '\e911';
+  font-size: 10px;
+  color: #ffffff;
+  padding-left: 2px; }
 
 .neo-form--inline {
   align-items: center;
@@ -1741,7 +1748,8 @@ hr {
     font-family: 'AOC-Icons' !important;
     content: '\e911';
     font-size: 10px;
-    color: white; }
+    color: #ffffff;
+    padding-left: 2px; }
   .neo-check:disabled + label {
     color: #9bcde8;
     cursor: not-allowed; }
@@ -1749,7 +1757,8 @@ hr {
       font-family: 'AOC-Icons' !important;
       content: '\e911';
       font-size: 10px;
-      color: white; }
+      color: #ffffff;
+      padding-left: 2px; }
     .neo-check:disabled + label::before {
       background: #9bcde8;
       border: 0;
