@@ -17,7 +17,7 @@
 
 @mixin spin-ring-sizes {
   @each $name, $config in $spinner-ring-sizes {
-    @if $name == "default" {
+    @if $name == 'default' {
       @include spinner-size($config);
     } @else {
       &--#{$name} {
@@ -41,7 +41,7 @@
 
     @include spinner-size(
       (
-        size: 18px
+        size: 18px,
       )
     );
   }
@@ -49,7 +49,7 @@
 
 @mixin different-sizes {
   @each $name, $config in $spinner-ring-sizes {
-    @if $name == "default" {
+    @if $name == 'default' {
       @include spinner-size($config);
     } @else {
       &--#{$name} {
@@ -73,7 +73,7 @@
     border-radius: 50%;
     border-style: solid;
     box-sizing: border-box;
-    content: " ";
+    content: ' ';
     display: inline-block;
     height: 100%;
     margin: auto;
@@ -94,7 +94,7 @@
 
     @include spinner-size(
       (
-        size: $spinner-button-size
+        size: $spinner-button-size,
       )
     );
   }

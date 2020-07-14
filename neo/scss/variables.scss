@@ -921,7 +921,7 @@ $spinner-ring-color: $token-spinner-color !default;
 $spinner-button-size: 14px !default;
 $spinner-timing-0: 0.55, 0.055, 0.675, 0.19 !default;
 $spinner-timing-50: 0.215, 0.61, 0.355, 1 !default;
-$spinner-animation-duration: $token-spinner-animation-duration !default;
+$spinner-animation-duration: 500ms !default;
 
 // Component name: Modal
 // Location: src/scss/components/_modal.scss

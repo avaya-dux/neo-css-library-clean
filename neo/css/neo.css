@@ -1187,7 +1187,7 @@ hr {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  animation: spinner-animation infinite infinite;
+  animation: spinner-animation 500ms infinite;
   height: 20px;
   width: 20px; }
   .neo-spinner::after {
@@ -1197,7 +1197,7 @@ hr {
     border-radius: 50%;
     border-style: solid;
     box-sizing: border-box;
-    content: " ";
+    content: ' ';
     display: inline-block;
     height: 100%;
     margin: auto;
@@ -1798,16 +1798,10 @@ hr {
     width: 1px; }
   .neo-close::after, .neo-close::before {
     background-color: var(--neo-global-text-inverse-color); }
-  .neo-close:hover {
-    background-color: rgba(8, 23, 35, 0.6); }
   .neo-close--clear {
     background-color: transparent; }
     .neo-close--clear::after, .neo-close--clear::before {
       background-color: #6a788a; }
-    .neo-close--clear:hover {
-      background-color: transparent; }
-    .neo-close--clear:hover::after, .neo-close--clear:hover::before {
-      background-color: #081723; }
   .neo-close--small {
     height: 13px;
     width: 13px; }
@@ -2229,7 +2223,7 @@ hr {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  animation: spinner-animation infinite infinite;
+  animation: spinner-animation 500ms infinite;
   height: 20px;
   width: 20px;
   animation: none;
@@ -2242,7 +2236,7 @@ hr {
     border-radius: 50%;
     border-style: solid;
     box-sizing: border-box;
-    content: " ";
+    content: ' ';
     display: inline-block;
     height: 100%;
     margin: auto;
@@ -2279,7 +2273,7 @@ hr {
     margin: 0;
     top: 8px;
     width: 16px;
-    animation: spinner-animation infinite infinite; }
+    animation: spinner-animation 500ms infinite; }
 
 .neo-select__icon {
   align-items: center;

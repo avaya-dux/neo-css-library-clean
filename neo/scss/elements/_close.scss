@@ -10,20 +10,20 @@
     }
   }
 
-  @if map_has_key($config, hover-background-color) {
-    &:hover {
-      background-color: map_get($config, hover-background-color);
-    }
-  }
+  // @if map_has_key($config, hover-background-color) {
+  //   &:hover {
+  //     background-color: map_get($config, hover-background-color);
+  //   }
+  // }
 
-  @if map_has_key($config, hover-color) {
-    &:hover {
-      &::after,
-      &::before {
-        background-color: map_get($config, hover-color);
-      }
-    }
-  }
+  // @if map_has_key($config, hover-color) {
+  //   &:hover {
+  //     &::after,
+  //     &::before {
+  //       background-color: map_get($config, hover-color);
+  //     }
+  //   }
+  // }
 }
 
 @mixin close-size($value) {
