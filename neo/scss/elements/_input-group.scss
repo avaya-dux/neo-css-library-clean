@@ -19,12 +19,15 @@
   }
 
   .neo-btn {
-    flex: none;
+    display: flex;
+    justify-content: center;
     padding-bottom: $input-padding-y;
     padding-top: $input-padding-y;
+    height: $button-height;
+    width: $button-min-width;
   }
 
-  @include neo-group-border-radius($global-radius);
+  // @include neo-group-border-radius($global-radius);
   @include neo-input-group-addon;
 }
 
@@ -88,7 +91,7 @@
     label:not(.neo-switch):not(.neo-label) {
       &::after {
         color: $input-asterix-required-color;
-        content: "*";
+        content: '*';
       }
     }
   }

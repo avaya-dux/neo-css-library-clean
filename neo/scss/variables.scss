@@ -332,12 +332,12 @@ $table-editable-bg-color: lighten($neo-presence-green, 45%);
 
 $button-bg-color-lightness-scale: 60 !default;
 $button-transition: background-color $global-transition-duration ease-in-out !default;
-$button-font-weight: 400 !default;
-$button-height: $input-height !default;
-$button-padding-x: $global-spacer-x-large !default;
-$button-min-width: 70px !default;
-$button-border-width: 2px !default;
-$button-border-radius: $global-radius !default;
+$button-font-weight: $token-button-primary-defaultfont-weight !default;
+$button-height: $token-button-primary-defaultheight !default;
+$button-padding-x: 16px !default;
+$button-min-width: $token-button-primary-defaultwidth !default;
+$button-border-width: $token-button-secondary-defaultborder-weight !default;
+$button-border-radius: $token-button-circular-primary-defaultborder-radius !default;
 $button-icon-size: $button-height !default;
 $button-icon-size-ratio: 2/3 !default;
 $button-icon-padding: $global-spacer-small !default;
@@ -357,56 +357,56 @@ $button-types: map-merge(
       disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     primary: (
-      bg-color: var-color-name(button-primary-bg),
+      bg-color: $token-color-accent-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: lighten-var(var-color-name(button-primary-bg), 5%),
-      active-bg-color: lighten-var(var-color-name(button-primary-bg), 5%),
-      active-box-shadow-color: var-color-name(button-primary-bg),
-      disabled-bg-color: var-color-name(button-default-disabled-bg),
+      hover-bg-color: $token-color-accent-600,
+      active-bg-color: $token-color-accent-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     secondary: (
-      bg-color: $neo-light-grey,
-      text-color: $global-text-color,
-      hover-bg-color: darken($neo-light-grey, 5%),
-      active-bg-color: darken($neo-light-grey, 5%),
-      active-box-shadow-color: $neo-light-grey,
-      disabled-bg-color: $neo-off-white,
+      bg-color: $token-color-accent-500,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: $token-color-accent-600,
+      active-bg-color: $token-color-accent-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     success: (
-      bg-color: $neo-active-green,
+      bg-color: $token-color-functional-green-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: darken($neo-active-green, 5%),
-      focus-bg-color: darken($neo-active-green, 5%),
-      active-bg-color: $neo-active-green,
-      active-box-shadow-color: $neo-active-green,
-      disabled-bg-color: $neo-off-white,
+      hover-bg-color: $token-color-functional-green-600,
+      focus-bg-color: $token-color-functional-green-600,
+      active-bg-color: $token-color-functional-green-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     warning: (
-      bg-color: $neo-presence-yellow,
+      bg-color: $token-color-functional-orange-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: darken($neo-presence-yellow, 5%),
-      focus-bg-color: darken($neo-presence-yellow, 5%),
-      active-bg-color: $neo-presence-yellow,
-      active-box-shadow-color: $neo-presence-yellow,
-      disabled-bg-color: $neo-off-white,
+      hover-bg-color: $token-color-functional-orange-600,
+      focus-bg-color: $token-color-functional-orange-600,
+      active-bg-color: $token-color-functional-orange-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     alert: (
-      bg-color: $neo-presence-red,
+      bg-color: $token-color-functional-red-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: darken($neo-presence-red, 5%),
-      focus-bg-color: darken($neo-presence-red, 5%),
-      active-bg-color: $neo-presence-red,
-      active-box-shadow-color: $neo-presence-red,
-      disabled-bg-color: $neo-off-white,
+      hover-bg-color: $token-color-functional-red-600,
+      focus-bg-color: $token-color-functional-red-600,
+      active-bg-color: $token-color-functional-red-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     info: (
-      bg-color: $neo-mid-blue,
+      bg-color: $token-color-functional-blue-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: darken($neo-mid-blue, 5%),
-      focus-bg-color: darken($neo-mid-blue, 5%),
-      active-bg-color: $neo-mid-blue,
-      active-box-shadow-color: $neo-mid-blue,
-      disabled-bg-color: $neo-off-white,
+      hover-bg-color: $token-color-functional-blue-600,
+      focus-bg-color: $token-color-functional-blue-600,
+      active-bg-color: $token-color-functional-blue-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     ghost: (
       bg-color: $global-background,

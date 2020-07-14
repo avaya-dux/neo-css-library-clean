@@ -58,7 +58,7 @@
 %button {
   align-items: center;
   border: 0;
-  border-radius: $button-border-radius;
+  // border-radius: $button-border-radius;
   cursor: pointer;
   display: inline-flex;
   font-weight: $button-font-weight;
@@ -104,7 +104,7 @@
 }
 
 .neo-btn--circle {
-  border-radius: 50%;
+  border-radius: $token-button-circular-primary-defaultborder-radius;
 
   &.neo-btn:empty {
     &::before {

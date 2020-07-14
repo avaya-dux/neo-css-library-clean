@@ -28,7 +28,7 @@
   }
 
   &:hover + label::before {
-    background: $checkbox-checked-background;
+    // background: $checkbox-checked-background;
   }
 
   &:focus + label::before {
