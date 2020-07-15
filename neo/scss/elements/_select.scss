@@ -2,7 +2,18 @@
   background-color: $select-background-color;
   display: inline-block;
   position: relative;
-  width: 100%;
+  min-width: $token-dropdown-width;
+  height: $token-dropdown-height;
+  // &::after {
+  //   font-family: 'AOC-Icons' !important;
+  //   content: '\e9a1';
+  //   font-size: $token-web-typography-web-tiny-body-font-size;
+  //   color: $token-color-base-1000;
+  //   padding-left: 2px;
+  //   &:hover {
+  //     color: $token-color-base-1000;
+  //   }
+  // }
 }
 
 @mixin neo-select-element {
@@ -24,6 +35,9 @@
     padding: $select-padding-y $select-offset-x $select-padding-y
       $select-padding-x;
     width: 100%;
+    &:hover {
+      background-color: $token-dropdown-hover;
+    }
 
     @include rtl-selector {
       padding: {
@@ -76,8 +90,9 @@
 
 @mixin neo-select-arrow {
   &:not(.neo-select--multiple)::after {
+    font-family: 'AOC-Icons' !important;
     align-items: center;
-    content: $select-arrow-icon;
+    content: '\e9a1';
     display: inline-flex;
     justify-content: center;
     pointer-events: none;
@@ -95,7 +110,7 @@
   }
 
   &:hover::after {
-    color: $neo-mid-blue;
+    // color: $neo-mid-blue;
   }
 }
 
@@ -112,7 +127,7 @@
   width: 100%;
 
   &:not(.neo-select--multiple)::after {
-    content: "";
+    content: '';
     height: $select-icon-height;
     left: auto;
     margin: 0;
