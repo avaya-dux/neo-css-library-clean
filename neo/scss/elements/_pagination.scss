@@ -53,9 +53,9 @@
 
 @mixin pagination-item--hover {
   &:hover {
-    background-color: $pagination-btn-background;
+    background-color: $token-table-pagination-active-background-color;
     border-color: $pagination-border-color-hover;
-    color: $neo-black;
+    color: $token-table-pagination-active-color;
     transition: $pagination-transition;
   }
 }
@@ -75,15 +75,16 @@
 
 @mixin pagination-item--active {
   &--active {
-    background-color: $pagination-item-color-current;
-    border-color: darken($pagination-item-color-current, 20%);
-    color: $neo-white;
-    font-weight: bold;
+    background-color: $token-table-pagination-active-background-color;
+    border-color: $pagination-border-color-hover;
+    color: $token-table-pagination-active-color;
+    // font-weight: bold;
 
     &:hover {
-      background-color: lighten($pagination-item-color-current, 5%);
-      border-color: darken($pagination-item-color-current, 5%);
-      color: $neo-white;
+      // background-color: lighten($pagination-item-color-current, 5%);
+      // border-color: darken($pagination-item-color-current, 5%);
+      // color: $neo-white;
+      cursor: default;
     }
   }
 }

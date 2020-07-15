@@ -663,7 +663,7 @@ $pagination-label-font-size: $global-font-size-small !default;
 $pagination-spacer: $global-spacer !default;
 $pagination-btn-background: $global-background !default;
 $pagination-btn-padding: $global-spacer-small $global-spacer-large !default;
-$pagination-border-color: $global-border-color !default;
+$pagination-border-color: $token-table-pagination-active-div-border-color !default;
 $pagination-border-color-hover: $token-table-pagination-active-div-border-color !default;
 $pagination-border: $token-table-pagination-active-div-border-width
   $token-table-pagination-active-div-border-style $pagination-border-color !default;
