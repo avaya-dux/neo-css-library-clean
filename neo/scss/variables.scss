@@ -945,7 +945,7 @@ $modal-message-margin-bottom: $global-spacer-large;
 $modal-body-color: $modal-color !default;
 $modal-body-background: $global-background !default;
 $modal-body-height: 200px !default;
-$modal-background: $global-background !default;
+$modal-background: $token-modal-scrim-color !default;
 $modal-element-background: $modal-body-background !default;
 $modal-border-color: $modal-body-background !default;
 $modal-border: $modal-border-width solid darken($modal-border-color, 5%) !default;

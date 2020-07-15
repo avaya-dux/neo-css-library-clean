@@ -44,12 +44,13 @@
 
   .neo-modal__header {
     @include modal-element($modal-header-padding);
+    text-align: center;
   }
 
   .neo-modal__body {
     min-height: $modal-body-height;
 
-    @include modal-element($modal-padding, "top");
+    @include modal-element($modal-padding);
   }
 
   .neo-modal__message {
@@ -77,6 +78,6 @@
       }
     }
 
-    @include modal-element($modal-padding, "top");
+    @include modal-element($modal-padding);
   }
 }
