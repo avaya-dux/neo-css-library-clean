@@ -41,6 +41,9 @@
     font-size: 24px;
     line-height: 1;
     margin-right: $global-spacer-large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
     @include rtl-selector {
       margin: {
@@ -80,9 +83,15 @@
   padding: $notification-padding-y $notification-padding-x;
   position: relative;
 
-  @each $name, $color in $neo-state-colors {
+  @each $name, $color in $neo-notification-colors {
     &--#{$name} {
-      background-color: rgba($color, $notification-opacity);
+      background-color: $color;
+    }
+  }
+
+  @each $name, $color in $neo-notification-icon-colors {
+    &--#{$name} .neo-notification__icon {
+      color: $color;
     }
   }
 
@@ -99,9 +108,14 @@
   @include notification-close-btn;
   @include notification-counter;
 
-  @each $name, $color in $neo-state-colors {
+  @each $name, $color in $neo-notification-colors {
     &--#{$name} {
       background-color: $color !important;
+    }
+  }
+  @each $name, $color in $neo-notification-icon-colors {
+    &--#{$name} .neo-notification__icon {
+      color: $color;
     }
   }
 }

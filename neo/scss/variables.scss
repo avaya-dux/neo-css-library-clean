@@ -88,6 +88,30 @@ $neo-close-colors: map-merge(
   $neo-close-colors
 );
 
+$neo-notification-colors: () !default;
+
+$neo-notification-colors: map-merge(
+  (
+    success: $token-color-functional-green-100,
+    warning: $token-color-functional-orange-100,
+    alert: $token-color-functional-red-100,
+    info: $token-color-functional-blue-100,
+  ),
+  $neo-notification-colors
+);
+
+$neo-notification-icon-colors: () !default;
+
+$neo-notification-icon-colors: map-merge(
+  (
+    success: $token-color-functional-green-600,
+    warning: $token-color-functional-orange-600,
+    alert: $token-color-functional-red-600,
+    info: $token-color-functional-blue-600,
+  ),
+  $neo-notification-icon-colors
+);
+
 // Link colors
 $link-color: var-color-name(link-color) !default;
 $link-hover-color: darken-var($link-color, 15%) !default;
@@ -478,16 +502,16 @@ $label-radius: $global-radius !default;
 //
 
 $notification-background: $neo-primary-color !default;
-$notification-color: $global-text-inverse-color !default;
-$notification-radius: $global-radius !default;
-$notification-font-size: $global-font-size-large !default;
+$notification-color: $global-text-color !default;
+$notification-radius: 0 !default;
+$notification-font-size: $token-web-typography-web-heading-4-font-size !default;
 $notification-padding-y: $global-spacer * 2 !default;
 $notification-padding-x: $global-spacer-large * 2 !default;
 $notification-margin-bottom: $global-spacer !default;
 $notification-btn-offset: $global-spacer !default;
 $notification-icon-offset-y: $global-spacer-small !default;
 $notification-icon-offset-x: $global-spacer-large !default;
-$notification-description-font-size: $global-font-size !default;
+$notification-description-font-size: $token-web-typography-web-body-regular-font-size !default;
 $notification-counter-font-size: $global-font-size !default;
 $notification-opacity: 0.8 !default;
 
