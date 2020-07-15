@@ -118,8 +118,9 @@
 //
 %list-item {
   background-color: $group-list-item-background;
-  border: $group-list-border-width solid $group-list-border-color;
-  border-bottom: 0; /* Remove border-bottom for better stylization */
+  // border: $group-list-border-width solid $group-list-border-color;
+  // border-bottom: 0; /* Remove border-bottom for better stylization */
+  border-bottom: $group-list-border-width solid $group-list-border-color;
   color: $group-list-item-color;
   display: flex;
   font-size: $group-list-font-size;
