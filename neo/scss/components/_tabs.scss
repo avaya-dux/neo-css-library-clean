@@ -186,10 +186,10 @@
       a {
         background-color: $tab-bordered-bg-color;
         border: $tab-bordered-border;
-        border-top: {
-          left-radius: $tab-bordered-border-radius;
-          right-radius: $tab-bordered-border-radius;
-        }
+        // border-top: {
+        //   left-radius: $tab-bordered-border-radius;
+        //   right-radius: $tab-bordered-border-radius;
+        // }
       }
 
       &--active a {
@@ -259,12 +259,12 @@
     padding: $tab-action-padding-default;
 
     @include rtl-selector {
-      @include tab-slider-action-content(prev, "\e99f");
-      @include tab-slider-action-content(next, "\e99e");
+      @include tab-slider-action-content(prev, '\e99f');
+      @include tab-slider-action-content(next, '\e99e');
     }
 
     &::after {
-      font-family: "AOC-Icons";
+      font-family: 'AOC-Icons';
       line-height: $tab-action-line-height;
     }
 
@@ -283,8 +283,8 @@
       cursor: default;
     }
 
-    @include tab-slider-action-content(prev, "\e99e");
-    @include tab-slider-action-content(next, "\e99f");
+    @include tab-slider-action-content(prev, '\e99e');
+    @include tab-slider-action-content(next, '\e99f');
   }
 }
 

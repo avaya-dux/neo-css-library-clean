@@ -779,7 +779,7 @@ $chip-disabled-color: $neo-mid-grey !default;
 
 $tab-offset: $global-spacer !default;
 $tab-container-margin: 0 6px !default;
-$tab-border-bottom-color: $token-tabs-border-bottom-color;
+$tab-border-bottom-color: $global-background;
 $tab-transition: transform 0.5s ease !default;
 $tab-padding-default: 15px 30px !default;
 $tab-padding-small: 6px 25px !default;
@@ -792,8 +792,8 @@ $tab-min-height-large: $tab-min-height-default !default;
 $tab-action-color: rgba($neo-blue-grey-dark, 0.6) !default;
 $tab-action-border-bottom-width: $token-tabs-border-bottom-width !default;
 $tab-action-active-color: $token-tabs-color !default;
-$tab-action-active-border-color: $tab-border-bottom-color !default;
-$tab-action-disabled-color: $neo-light-grey !default;
+$tab-action-active-border-color: $token-tabs-color !default;
+$tab-action-disabled-color: $token-color-disabled-background !default;
 $tab-action-line-height: $token-tabs-line-height !default;
 $tab-action-padding-default: 15px 15px !default;
 $tab-action-padding-small: 6px 15px !default;
@@ -807,7 +807,7 @@ $tab-bordered-border-radius: $global-radius !default;
 $tab-bordered-bg-color: $neo-off-white !default;
 $tab-bordered-active-bg-color: transparent !default;
 $tab-bordered-active-border-color: $global-border-color-darker !default;
-$tab-bordered-active-border-bottom-color: $neo-white !default;
+$tab-bordered-active-border-bottom-color: $token-tabs-color !default;
 $tab-bordered-disabled-bg-color: rgba(
   $tab-bordered-bg-color,
   $global-opacity
