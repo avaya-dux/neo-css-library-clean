@@ -6,7 +6,15 @@
 
 @mixin neo-popover-header {
   &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: $token-popover-header-height;
     padding: $popover-header-padding;
+    line-height: $token-web-typography-web-body-semibold-line-height;
+    letter-spacing: $token-web-typography-web-body-semibold-letter-spacing;
+    font-size: $token-web-typography-web-body-semibold-font-size;
+    font-weight: $token-web-typography-web-body-semibold-font-weight;
   }
 }
 
@@ -22,16 +30,16 @@
     }
   }
 
-  @each $name, $color in $neo-state-colors {
-    &__content--#{$name} {
-      border-color: $color;
+  // @each $name, $color in $neo-state-colors {
+  //   &__content--#{$name} {
+  //     border-color: $color;
 
-      #{$self}__header {
-        background-color: $color;
-        color: $neo-white;
-      }
-    }
-  }
+  //     #{$self}__header {
+  //       background-color: $color;
+  //       color: $neo-white;
+  //     }
+  //   }
+  // }
 }
 
 .neo-popover {
