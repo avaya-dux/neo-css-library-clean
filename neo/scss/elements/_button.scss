@@ -124,8 +124,14 @@
   @extend %button;
   @each $name, $color in $neo-state-colors {
     &--#{$name} {
-      background-color: $color !important;
-      color: $global-text-inverse-color !important;
+      background-color: $color;
+      color: $global-text-inverse-color;
+    }
+  }
+  @each $name, $color in $neo-hover-colors {
+    &--#{$name}:hover {
+      background-color: $color;
+      // color: $global-text-inverse-color;
     }
   }
 }
@@ -161,3 +167,16 @@
     background-color: $token-color-base-200;
   }
 }
+
+// .neo-btn--newcircle {
+//   border-radius: $token-button-circular-primary-defaultborder-radius;
+//   height: 35px;
+//   width: 35px;
+
+//   &.neo-btn:empty {
+//     &::before {
+//       margin-left: 12px;
+//       font-size: $button-circle-icon-size;
+//     }
+//   }
+// }

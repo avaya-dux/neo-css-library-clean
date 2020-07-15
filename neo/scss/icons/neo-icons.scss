@@ -1,20 +1,20 @@
-@import "neo-icons-variables";
-@import "neo-icons-font-face";
-@import "../variables";
+@import 'neo-icons-variables';
+@import 'neo-icons-font-face';
+@import '../variables';
 
 /* stylelint-disable property-no-vendor-prefix */
-[class^="aoc-"]::before,
-[class*="aoc-"]::before,
-[class^="neo-icon-"]::before,
-[class*="neo-icon-"]::before {
+[class^='aoc-']::before,
+[class*='aoc-']::before,
+[class^='neo-icon-']::before,
+[class*='neo-icon-']::before {
   display: inline-block;
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "AOC-Icons" !important;
-  -webkit-font-feature-settings: "liga";
-  -moz-font-feature-settings: "liga=1";
-  -moz-font-feature-settings: "liga";
-  -ms-font-feature-settings: "liga" 1;
-  font-feature-settings: "liga";
+  font-family: 'AOC-Icons' !important;
+  -webkit-font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga=1';
+  -moz-font-feature-settings: 'liga';
+  -ms-font-feature-settings: 'liga' 1;
+  font-feature-settings: 'liga';
 
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
@@ -37,14 +37,14 @@
 }
 
 @function format-icon-content($icon-content) {
-  @return unquote('"') + unquote(str-insert($icon-content, "\\", 1)) +
+  @return unquote('"') + unquote(str-insert($icon-content, '\\', 1)) +
     unquote('"');
 }
 
 @mixin icon-rtl-render($icon-content) {
   @at-root {
-    [dir="rtl"] & {
-      @if ($icon-content == "mirror") {
+    [dir='rtl'] & {
+      @if ($icon-content == 'mirror') {
         transform: scaleX(-1) !important;
       } @else {
         content: format-icon-content($icon-content);
