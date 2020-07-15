@@ -21,6 +21,8 @@
   &--disabled {
     cursor: not-allowed;
     opacity: $group-list-item-opacity;
+    background-color: $token-accordion-hover-disabled-background-color;
+    color: $token-accordion-hover-disabled-color;
   }
 }
 
