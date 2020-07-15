@@ -349,13 +349,17 @@ $table-sortable-icon-line-height: 24px !default;
 $table-editable-border: 3px solid $neo-active-green;
 $table-editable-bg-color: lighten($neo-presence-green, 45%);
 
+$table-disabled-bg-color: $token-table-row-disabled-background-color;
+$table-disabled-text-color: $token-table-row-disabled-default-color;
+$table-disabled-clickable-color: $token-table-row-disabled-clickable-color;
+
 //
 // Component name: Buttons
 // Location: src/scss/elements/_button.scss
 //
 
 $button-bg-color-lightness-scale: 60 !default;
-$button-transition: background-color $global-transition-duration ease-in-out !default;
+$button-transition: all $global-transition-duration ease-in-out !default;
 $button-font-weight: $token-button-primary-defaultfont-weight !default;
 $button-height: $token-button-primary-defaultheight !default;
 $button-padding-x: 16px !default;
@@ -761,7 +765,7 @@ $chip-bg-color: var-color-name(button-secondary-bg) !default;
 $chip-color-dark: $token-chip-default-color !default;
 $chip-color-light: $token-chip-stateful-color !default;
 $chip-bg-color-selected: darken-var($chip-bg-color, 10%) !default;
-$chip-height: $label-height !default;
+$chip-height: $token-chip-editable-height !default;
 $chip-offset: ($input-height - $chip-height) / 2 - 1 !default;
 $chip-font-size: $token-chip-font-size !default;
 $chip-border-radius: $token-chip-border-radius !default;

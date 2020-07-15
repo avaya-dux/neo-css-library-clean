@@ -9,6 +9,10 @@
     @if (map_has_key($button-type-colors, hover-bg-color)) {
       background-color: map_get($button-type-colors, hover-bg-color);
     }
+    box-shadow: $token-button-primary-defaulthover-shadow-g-offset
+      $token-button-primary-defaulthover-shadow-v-offset
+      $token-button-primary-defaulthover-shadow-blur
+      $token-button-primary-defaulthover-shadow-color;
   }
 
   &:focus {
@@ -66,6 +70,7 @@
   outline: 0;
   padding: 0 $button-padding-x;
   transition: $button-transition;
+  transition-property: background-color, box-shadow;
   width: auto;
 
   &[type='button'] {
@@ -110,5 +115,49 @@
     &::before {
       font-size: $button-circle-icon-size;
     }
+  }
+}
+
+// new button classes
+
+.neo-btn-newprimary {
+  @extend %button;
+  @each $name, $color in $neo-state-colors {
+    &--#{$name} {
+      background-color: $color !important;
+      color: $global-text-inverse-color !important;
+    }
+  }
+}
+
+.neo-btn-newsecondary {
+  @extend %button;
+  background-color: $global-background;
+  border-width: $token-button-secondary-defaultborder-weight;
+  border-style: $token-button-secondary-defaultborder-style;
+  @each $name, $color in $neo-state-colors {
+    &--#{$name} {
+      // background-color: $color !important;
+      border-color: $color;
+      color: $color !important;
+    }
+  }
+  &:hover {
+    background-color: $global-background;
+  }
+}
+
+.neo-btn-newtertiary {
+  @extend %button;
+  background-color: transparent;
+  @each $name, $color in $neo-state-colors {
+    &--#{$name} {
+      // background-color: $color !important;
+      border-color: $color;
+      color: $color !important;
+    }
+  }
+  &:hover {
+    background-color: $token-color-base-200;
   }
 }

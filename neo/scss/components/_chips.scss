@@ -166,6 +166,7 @@
   line-height: $chip-line-height;
   padding: $chip-padding-y $chip-padding-x;
   transition: $chip-transition;
+  // min-width: $token-chip-editable-width;
 
   &:focus {
     outline: none;

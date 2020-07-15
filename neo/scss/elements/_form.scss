@@ -40,6 +40,11 @@
       font-size: $token-input-label-font-size;
       line-height: $token-input-label-line-height;
     }
+
+    th > &,
+    td > & {
+      margin-bottom: 0;
+    }
     @include form--states;
     @include form--required;
   }

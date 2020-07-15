@@ -15,6 +15,11 @@
     padding: $table-padding;
     text-align: left;
     vertical-align: middle;
+    text-align: center;
+    & a {
+      color: $token-table-row-clickable-color;
+      text-decoration: none;
+    }
 
     @include rtl-selector {
       text-align: right;
@@ -35,6 +40,12 @@
   .neo-table--disabled {
     cursor: not-allowed;
     opacity: 0.5;
+    background-color: $table-disabled-bg-color;
+    color: $table-disabled-text-color;
+    & a {
+      color: $table-disabled-clickable-color;
+      cursor: not-allowed;
+    }
   }
 
   th {

@@ -30,11 +30,11 @@
 @mixin spin-inside-button {
   .neo-btn > & {
     color: inherit;
-    margin-right: $global-spacer-small;
+    margin-right: $global-spacer-medium;
 
     @include rtl-selector {
       margin: {
-        left: $global-spacer-small;
+        left: $global-spacer-medium;
         right: initial;
       }
     }
@@ -81,7 +81,8 @@
     @include position(absolute, 0, 0, 0, 0);
   }
 
-  .neo-btn > & {
+  [class^='neo-btn-'] > &,
+  [class*='neo-btn-'] > & {
     color: inherit;
     margin-right: $global-spacer;
 
