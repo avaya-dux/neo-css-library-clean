@@ -242,6 +242,26 @@
   max-width: 100%;
   width: 100%;
 
+  // these style are hard-coded for now
+
+  &-page-select {
+    height: $token-table-pagination-count-height;
+    width: $token-table-pagination-count-width;
+    & > label {
+      margin-right: 8px;
+    }
+    & > .neo-select {
+      min-width: auto;
+      & > select {
+        // padding: 0 9px 0 16px;
+      }
+    }
+  }
+
+  & > .neo-input-filter {
+    width: 116px;
+  }
+
   @include neo-table-children;
   @include neo-table--bordered;
   @include neo-table--striped;

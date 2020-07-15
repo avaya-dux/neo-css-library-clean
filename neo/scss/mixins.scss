@@ -15,7 +15,7 @@
 
 @mixin define-color-hsl($color, $hsl...) {
   $hsl: nth($hsl, 1);
-  $hue: str-replace(#{nth($hsl, 1)}, "deg", "");
+  $hue: str-replace(#{nth($hsl, 1)}, 'deg', '');
   $saturation: nth($hsl, 2);
   $lightness: nth($hsl, 3);
   @include print-css-vars($color, $hue, $saturation, $lightness);
@@ -23,7 +23,7 @@
 
 @mixin print-css-vars($color, $hue, $saturation, $lightness) {
   --neo-#{$color}-color: #{unquote(
-      "hsl(#{$hue}, #{$saturation}, #{$lightness})"
+      'hsl(#{$hue}, #{$saturation}, #{$lightness})'
     )};
   --neo-#{$color}-color-h: #{$hue};
   --neo-#{$color}-color-s: #{$saturation};
@@ -39,24 +39,24 @@
 
 /// Removes the focus ring around an element when a mouse input is detected.
 @mixin disable-mouse-outline {
-  [data-whatinput="mouse"] & {
+  [data-whatinput='mouse'] & {
     outline: 0;
   }
 }
 
 @mixin neo-icon-context($is-same-level: false) {
   @if ($is-same-level) {
-    &[class^="aoc-"],
-    &[class*="aoc-"],
-    &[class^="neo-icon-"],
-    &[class*="neo-icon-"] {
+    &[class^='aoc-'],
+    &[class*='aoc-'],
+    &[class^='neo-icon-'],
+    &[class*='neo-icon-'] {
       @content;
     }
   } @else {
-    [class^="aoc-"],
-    [class*="aoc-"],
-    [class^="neo-icon-"],
-    [class*="neo-icon-"] {
+    [class^='aoc-'],
+    [class*='aoc-'],
+    [class^='neo-icon-'],
+    [class*='neo-icon-'] {
       @content;
     }
   }
@@ -87,7 +87,7 @@
 }
 
 @mixin rtl-selector() {
-  @at-root [dir="rtl"] & {
+  @at-root [dir='rtl'] & {
     @content;
   }
 }
@@ -127,6 +127,90 @@
 }
 
 @mixin neo-popover-states {
+  &--onhover:hover > &__content,
+  &--active > &__content {
+    display: block;
+    position: absolute;
+  }
+}
+
+// New tooltip mixins
+
+@mixin neo-new-tooltip-content(
+  $animation-duration: $popover-animation-duration,
+  $content-background-color: $popover-content-background-color,
+  $content-border: $popover-content-border,
+  $radius: $popover-radius,
+  $content-shadow: $popover-content-shadow,
+  $content-padding: $popover-content-padding,
+  $content-z: $popover-content-z,
+  $content-min-width: $popover-min-width
+) {
+  &__content {
+    animation: show-element $animation-duration;
+    background-color: $token-tooltip-background-color;
+    color: $token-tooltip-color;
+    border: $content-border;
+    border-radius: $radius;
+    box-shadow: $content-shadow;
+    display: none;
+    left: 0;
+    margin: 0;
+    min-width: $content-min-width;
+    padding: $tooltip-padding;
+    position: absolute;
+    top: 100%;
+    z-index: $content-z;
+    text-align: center;
+
+    // & > .neo-arrow::after {
+    //   border-color: $token-tooltip-background-color;
+    // }
+
+    .neo-new-tooltip--right & .neo-arrow::before {
+      border-right-color: $token-tooltip-background-color !important;
+    }
+
+    .neo-new-tooltip--right & .neo-arrow::after {
+      border-color: transparent !important;
+      border-right-color: $token-tooltip-background-color !important;
+    }
+
+    .neo-new-tooltip--up & .neo-arrow::before {
+      border-bottom-color: $token-tooltip-background-color !important;
+    }
+
+    .neo-new-tooltip--up & .neo-arrow::after {
+      border-color: transparent !important;
+      border-top-color: $token-tooltip-background-color !important;
+    }
+
+    .neo-new-tooltip--left & .neo-arrow::before {
+      border-left-color: $token-tooltip-background-color !important;
+    }
+
+    .neo-new-tooltip--left & .neo-arrow::after {
+      border-color: transparent !important;
+      border-left-color: $token-tooltip-background-color !important;
+    }
+
+    .neo-new-tooltip--down & .neo-arrow::before {
+      border-top-color: $token-tooltip-background-color !important;
+    }
+
+    .neo-new-tooltip--down & .neo-arrow::after {
+      border-color: transparent !important;
+      border-bottom-color: $token-tooltip-background-color !important;
+    }
+
+    @include rtl-selector {
+      left: initial;
+      right: 0;
+    }
+  }
+}
+
+@mixin neo-new-tooltip-states {
   &--onhover:hover > &__content,
   &--active > &__content {
     display: block;

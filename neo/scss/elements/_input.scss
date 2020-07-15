@@ -43,6 +43,16 @@
   }
 }
 
+// these values are hard-coded
+
+@mixin input--filter {
+  &-filter {
+    width: 116px;
+    & .neo-btn {
+    }
+  }
+}
+
 //@mixin input--di
 
 .neo-input {
@@ -82,20 +92,20 @@
   }
 
   &::-webkit-input-placeholder {
-    font-style: italic
+    font-style: italic;
   }
   &::-moz-placeholder {
-    font-style: italic
+    font-style: italic;
   }
   &:-ms-input-placeholder {
-    font-style: italic
+    font-style: italic;
   }
   &::placeholder {
-    font-style: italic
+    font-style: italic;
   }
-    
 
   @include input--rounded;
   @include input--editable;
   @include input--states;
+  @include input--filter;
 }

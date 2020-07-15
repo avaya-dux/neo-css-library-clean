@@ -9,7 +9,7 @@
     &::after {
       border-color: transparent;
       border-style: solid;
-      content: "";
+      content: '';
       display: block;
       position: absolute;
     }
@@ -27,7 +27,7 @@
 }
 
 @mixin neo-arrow-left(
-  $position: "left",
+  $position: 'left',
   $arrow-border-width: $arrow-border-width,
   $arrow-outer-color: $arrow-outer-color,
   $arrow-color: $arrow-color
