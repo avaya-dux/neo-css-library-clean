@@ -964,6 +964,7 @@ $avatar-background-update: $token-avatar-background-color !default;
 $avatar-font-color-update: $token-avatar-color !default;
 $avatar-font-size-update: $token-avatar-initials-regular-font-size !default;
 $avatar-font-weight-update: $token-avatar-initials-regular-font-weight !default;
+$avatar-line-height-update: $token-avatar-initials-regular-line-height !default;
 // end of updated variables
 
 $avatar-size: 48px !default;
@@ -991,6 +992,13 @@ $card-margin-bottom: $global-spacer !default;
 // Location: src/scss/components/_switch.scss
 //
 
+// updated variables
+
+$switch-inactive-color-update: $token-switch-off-background-color !default;
+$switch-active-color-update: $token-switch-on-background-color !default;
+
+// end of updated variables
+
 $switch-inactive-color: $neo-mid-grey !default;
 $switch-active-color: $neo-active-green !default;
 $switch-height: 20px !default;
@@ -1006,6 +1014,18 @@ $switch-disabled-opacity: $global-opacity !default;
 // Component name: Chip
 // Location: src/scss/components/_chips.scss
 //
+
+// updated variables
+
+$chip-color-dark-update: $token-chip-default-color !default;
+$chip-color-light-update: $token-chip-stateful-color !default;
+$chip-font-size-update: $token-chip-font-size !default;
+$chip-border-radius-update: $token-chip-border-radius !default;
+$chip-padding-x-update: $token-chip-padding-horizontal !default;
+$chip-padding-y-update: $token-chip-padding-vertical !default;
+$chip-height-update: $token-chip-editable-height !default;
+
+// end of updated variables
 
 $chips-border-color: $input-border-color !default;
 $chips-border-radius: $input-border-radius !default;
