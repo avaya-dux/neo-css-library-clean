@@ -473,10 +473,14 @@ $button-box-shadow-update: $token-button-primary-defaulthover-shadow-g-offset
   $token-button-primary-defaulthover-shadow-v-offset
   $token-button-primary-defaulthover-shadow-blur
   $token-button-primary-defaulthover-shadow-color !default;
-$button-inverse-text-color-update: $token-button-primary-defaultcolor;
-$button-secondary-border-width-update: $token-button-secondary-defaultborder-weight;
-$button-secondary-border-style-update: $token-button-secondary-defaultborder-style;
-$button-tertiary-hover-bg-color: $token-color-base-200;
+$button-inverse-text-color-update: $token-button-primary-defaultcolor !default;
+$button-secondary-border-width-update: $token-button-secondary-defaultborder-weight !default;
+$button-secondary-border-style-update: $token-button-secondary-defaultborder-style !default;
+$button-tertiary-hover-bg-color: $token-color-base-200 !default;
+$button-circular-height-update: $token-button-circular-height !default;
+$button-circular-width-update: $token-button-circular-width !default;
+$button-padding-x-update: $token-button-primary-defaultpadding-x !default;
+$button-padding-y-update: $token-button-primary-defaultpadding-y !default;
 $button-types-update: () !default;
 $button-types-update: map-merge(
   (

@@ -95,15 +95,6 @@
           }
         },
         {
-          "destination": "_button.scss",
-          "format": "scss/variables",
-          "filter": {
-            "attributes": {
-              "category": "button"
-            }
-          }
-        },
-        {
           "destination": "_checkbox.scss",
           "format": "scss/variables",
           "filter": {

@@ -180,9 +180,9 @@
   cursor: pointer;
   display: inline-flex;
   font-weight: $button-font-weight;
-  height: $button-height;
+  height: $button-height-update;
   outline: 0;
-  padding: 0 $button-padding-x;
+  padding: 0 $button-padding-x-update;
   transition: $button-transition;
   transition-property: background-color, box-shadow;
   width: auto;
@@ -282,15 +282,15 @@
   }
 }
 
-// .neo-btn--newcircle {
-//   border-radius: $token-button-circular-primary-defaultborder-radius;
-//   height: 35px;
-//   width: 35px;
+.neo-btn--circle-update {
+  border-radius: $button-border-radius-update;
+  height: $button-circular-height-update;
+  width: $button-circular-width-update;
 
-//   &.neo-btn:empty {
-//     &::before {
-//       margin-left: 12px;
-//       font-size: $button-circle-icon-size;
-//     }
-//   }
-// }
+  &.neo-btn:empty {
+    &::before {
+      margin-left: 12px;
+      font-size: $button-circle-icon-size;
+    }
+  }
+}
