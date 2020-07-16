@@ -1,0 +1,225 @@
+%input-group-error {
+  background-color: $input-background-color;
+  display: flex;
+}
+
+@mixin neo-input-group-children {
+  label:not(.neo-switch):not(.neo-label) {
+    line-height: $input-line-height;
+    padding: $input-padding-y 0;
+  }
+
+  .neo-input,
+  .neo-switch,
+  .neo-check,
+  .neo-btn {
+    border-radius: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .neo-btn {
+    display: flex;
+    justify-content: center;
+    padding-bottom: $input-padding-y;
+    padding-top: $input-padding-y;
+    // height: $button-height;
+    // width: $button-min-width;
+  }
+
+  @include neo-group-border-radius($global-radius);
+  @include neo-input-group-addon;
+}
+
+@mixin neo-input-group-addon {
+  /* stylelint-disable-next-line selector-class-pattern */
+  .neo-input-group__addon {
+    align-items: center;
+    background: $input-group-addon-background-color;
+    border: 1px solid $input-border-color;
+    display: flex;
+    line-height: $input-line-height;
+    padding: $input-padding-y $input-padding-x;
+
+    &:first-child {
+      border-right-width: 0;
+
+      @include rtl-selector {
+        border-left-width: 0;
+        border-right-width: 1px;
+      }
+    }
+
+    &:last-child {
+      border-left-width: 0;
+
+      @include rtl-selector {
+        border-left-width: 1px;
+        border-right-width: 0;
+      }
+    }
+  }
+}
+
+@mixin neo-input-group-label-positioning {
+  label > &,
+  label + & {
+    margin-top: $input-in-label-margin-top;
+  }
+}
+
+@mixin neo-input-group--float-grid {
+  &.#{$row-class-name} {
+    display: block;
+  }
+}
+
+@mixin neo-input-group-icon {
+  &__icon {
+    color: $neo-presence-red;
+    display: flex;
+    font-size: $input-icon-size;
+    position: absolute;
+    right: $input-space-right;
+    z-index: 1;
+  }
+}
+
+// @Deprecated
+@mixin neo-input-group--required-state {
+  &--required-state {
+    label:not(.neo-switch):not(.neo-label) {
+      &::after {
+        color: $input-asterix-required-color;
+        content: '*';
+      }
+    }
+  }
+}
+
+@mixin neo-input-group--rounded {
+  &--rounded {
+    @include neo-group-border-radius($input-rounded-border-radius);
+  }
+}
+
+.neo-input-group {
+  border-radius: $input-border-radius;
+  display: flex;
+  vertical-align: middle;
+  width: 100%;
+
+  .neo-input-hint + & {
+    margin-bottom: 0;
+  }
+
+  @include neo-input-group-children;
+  @include neo-input-group-icon;
+  @include neo-input-group-label-positioning;
+  @include neo-input-group--float-grid;
+  @include neo-input-group--required-state;
+  @include neo-input-group--rounded;
+}
+
+// update input group styles
+
+%input-group-error-update {
+  background-color: $input-background-color;
+  display: flex;
+}
+
+@mixin neo-input-group-children-update {
+  label:not(.neo-switch):not(.neo-label) {
+    line-height: $input-line-height-update;
+    padding: $input-padding-y 0;
+  }
+
+  .neo-input-update,
+  .neo-switch-update,
+  .neo-check-update,
+  .neo-btn-update {
+    border-radius: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .neo-btn-update {
+    flex: none;
+    padding-bottom: $input-padding-y;
+    padding-top: $input-padding-y;
+  }
+
+  // @include neo-group-border-radius($global-radius);
+  @include neo-input-group-addon-update;
+}
+
+@mixin neo-input-group-addon-update {
+  /* stylelint-disable-next-line selector-class-pattern */
+  .neo-input-group__addon-update {
+    align-items: center;
+    background: $input-group-addon-background-color-update;
+    border: $input-border-width-update $input-border-style-update
+      $input-border-color-update;
+    display: flex;
+    line-height: $input-line-height-update;
+    padding: $input-padding-y $input-padding-x;
+
+    &:first-child {
+      border-right-width: 0;
+
+      @include rtl-selector {
+        border-left-width: 0;
+        border-right-width: $input-border-width-update;
+      }
+    }
+
+    &:last-child {
+      border-left-width: 0;
+
+      @include rtl-selector {
+        border-left-width: $input-border-width-update;
+        border-right-width: 0;
+      }
+    }
+  }
+}
+
+@mixin neo-input-group-label-positioning-update {
+  label > &,
+  label + & {
+    margin-top: $input-in-label-margin-top;
+  }
+}
+
+@mixin neo-input-group--float-grid-update {
+  &.#{$row-class-name} {
+    display: block;
+  }
+}
+
+@mixin neo-input-group-icon-update {
+  &__icon {
+    color: $token-color-functional-red-500;
+    display: flex;
+    font-size: $input-icon-size;
+    position: absolute;
+    right: $input-space-right;
+    z-index: 1;
+  }
+}
+
+.neo-input-group-update {
+  border-radius: $input-border-radius-update;
+  display: flex;
+  vertical-align: middle;
+  width: 100%;
+
+  .neo-input-hint-update + & {
+    margin-bottom: 0;
+  }
+
+  @include neo-input-group-children-update;
+  @include neo-input-group-icon-update;
+  @include neo-input-group-label-positioning-update;
+  @include neo-input-group--float-grid-update;
+}

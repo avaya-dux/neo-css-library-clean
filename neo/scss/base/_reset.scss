@@ -1,7 +1,21 @@
+// * {
+//   font-family: $body-font-family;
+//   font-size: $global-font-size;
+//   line-height: $body-line-height;
+
+//   *,
+//   *::before,
+//   *::after {
+//     box-sizing: border-box;
+//   }
+// }
+
+// have to create new reset styles since cannot add class to all (*) selector
+
 * {
-  font-family: $body-font-family;
-  font-size: $global-font-size;
-  line-height: $body-line-height;
+  font-family: $body-font-family-update;
+  font-size: $global-font-size-update;
+  line-height: $body-line-height-update;
 
   *,
   *::before,

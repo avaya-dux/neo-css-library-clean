@@ -1,3 +1,7 @@
+// importing Noto Sans
+
+@import url('https://use.typekit.net/jyd4rjy.css');
+
 // Headings
 h1,
 h2,
@@ -21,6 +25,28 @@ h6 {
     }
   }
 }
+
+// new heading classes
+
+@for $i from 1 through 6 {
+  h#{$i}-update {
+    color: $heading-color-update;
+    font-size: map_get($heading-font-sizes-update, h#{$i});
+    margin-bottom: map_get($heading-font-sizes-update, h#{$i}) * 0.4;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+@for $i from 1 through 4 {
+  h#{$i}-update {
+    line-height: $token-web-typography-web-heading-#{$i}-line-height;
+  }
+}
+
+// end of new heading classes
 
 .neo-subtitle {
   line-height: $subtitle-line-height;
