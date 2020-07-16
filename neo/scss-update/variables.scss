@@ -481,6 +481,7 @@ $button-circular-height-update: $token-button-circular-height !default;
 $button-circular-width-update: $token-button-circular-width !default;
 $button-padding-x-update: $token-button-primary-defaultpadding-x !default;
 $button-padding-y-update: $token-button-primary-defaultpadding-y !default;
+$button-icon-font-size-update: $token-button-icon-font-size !default;
 $button-types-update: () !default;
 $button-types-update: map-merge(
   (
