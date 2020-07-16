@@ -84,7 +84,7 @@
 }
 
 // Uses for normal elements (that doesn’t have styles on after and before)
-.neo-tooltip[data-tooltip]:not([data-tooltip=""]) {
+.neo-tooltip[data-tooltip]:not([data-tooltip='']) {
   position: relative;
 
   &:hover::after {
@@ -108,4 +108,104 @@
   &:hover {
     @include tooltip-wrapper;
   }
+}
+
+// new tooltip-class
+
+// New tooltip mixins
+
+@mixin neo-tooltip-update-content(
+  $animation-duration: $popover-animation-duration,
+  $content-background-color: $popover-content-background-color,
+  $content-border: $popover-content-border,
+  $radius: $popover-radius,
+  $content-shadow: $popover-content-shadow,
+  $content-padding: $popover-content-padding,
+  $content-z: $popover-content-z,
+  $content-min-width: $popover-min-width
+) {
+  &__content {
+    animation: show-element $animation-duration;
+    background-color: $tooltip-background-update;
+    color: $tooltip-color-update;
+    border: $content-border;
+    border-radius: $radius;
+    box-shadow: $content-shadow;
+    display: none;
+    left: 0;
+    margin: 0;
+    min-width: $content-min-width;
+    padding: $tooltip-padding-update;
+    position: absolute;
+    top: 100%;
+    z-index: $content-z;
+    text-align: center;
+
+    .neo-tooltip-update--right & .neo-arrow::before {
+      border-right-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--right & .neo-arrow::after {
+      border-color: transparent !important;
+      border-right-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--up & .neo-arrow::before {
+      border-bottom-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--up & .neo-arrow::after {
+      border-color: transparent !important;
+      border-top-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--left & .neo-arrow::before {
+      border-left-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--left & .neo-arrow::after {
+      border-color: transparent !important;
+      border-left-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--down & .neo-arrow::before {
+      border-top-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--down & .neo-arrow::after {
+      border-color: transparent !important;
+      border-bottom-color: $tooltip-background-update !important;
+    }
+
+    @include rtl-selector {
+      left: initial;
+      right: 0;
+    }
+  }
+}
+
+@mixin neo-tooltip-update-states {
+  &--onhover:hover > &__content,
+  &--active > &__content {
+    display: block;
+    position: absolute;
+  }
+}
+
+%neo-tooltip-update {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  background-color: red;
+  width: $tooltip-width-update;
+  font-size: $tooltip-font-size-update;
+  padding: $tooltip-padding-update;
+}
+
+.neo-tooltip-update {
+  @extend %neo-popover;
+
+  @include neo-tooltip-update-content;
+  @include neo-tooltip-update-states;
+  @include neo-position(&);
 }

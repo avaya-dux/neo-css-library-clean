@@ -916,12 +916,15 @@ $pagination-disabled-color: rgba($neo-blue-grey-dark, $global-opacity) !default;
 //
 
 // updated variables
-$tooltip-background: $token-tooltip-background-color !default;
-$tooltip-color: $token-tooltip-color !default;
-$tooltip-text-size: $token-tooltip-font-size !default;
-$tooltip-border-radius: 0 !default;
-$tooltip-padding: $token-tooltip-vertical-padding
+$tooltip-background-update: $token-tooltip-background-color !default;
+$tooltip-color-update: $token-tooltip-color !default;
+$tooltip-text-size-update: $token-tooltip-font-size !default;
+$tooltip-border-radius-update: 0 !default;
+$tooltip-padding-update: $token-tooltip-vertical-padding
   $token-tooltip-horizontal-padding !default;
+$tooltip-font-size-update: $token-tooltip-font-size !default;
+$tooltip-width-update: $token-tooltip-width !default;
+$tooltip-height-update: $token-tooltip-height !default;
 // end of updated variables
 
 $tooltip-background: #fcf8d1 !default;
@@ -951,13 +954,24 @@ $image-thumbnail-border-radius: $global-radius !default;
 // Location: src/scss/components/_avatar.scss
 //
 
+// updated variables
+$avatar-border-radius-update: $token-border-radius-100;
+$avatar-border-color-update: $token-avatar-avatar-border-color;
+$avatar-border-style-update: $token-avatar-avatar-border-style;
+$avatar-border-width-update: $token-avatar-avatar-border-width;
+$avatar-size-update: $token-avatar-default-width !default;
+$avatar-background-update: $token-avatar-background-color !default;
+$avatar-font-color-update: $token-avatar-color !default;
+$avatar-font-size-update: $token-avatar-initials-regular-font-size !default;
+$avatar-font-weight-update: $token-avatar-initials-regular-font-weight !default;
+// end of updated variables
+
 $avatar-size: 48px !default;
 $avatar-background: $neo-primary-color !default;
 $avatar-font-color: $global-text-inverse-color !default;
 $avatar-font-size: $global-font-size-large !default;
 $avatar-font-weight: 300 !default;
 $avatar-initials-selector: data-initials !default;
-
 //
 // Component name: Card
 // Location: src/scss/components/_card.scss
