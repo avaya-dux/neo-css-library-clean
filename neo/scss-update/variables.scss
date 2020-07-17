@@ -80,6 +80,7 @@ $neo-hover-colors-update: () !default;
 
 $neo-hover-colors-update: map-merge(
   (
+    default: $token-color-base-400,
     primary: $token-color-accent-600,
     success: $token-color-functional-green-600,
     warning: $token-color-functional-orange-600,
@@ -118,7 +119,7 @@ $neo-notification-colors-update: map-merge(
   $neo-notification-colors-update
 );
 
-// updated notiication icon colors
+// updated notification icon colors
 
 $neo-notification-icon-colors-update: () !default;
 
@@ -427,6 +428,8 @@ $table-disabled-bg-color-update: $token-table-row-disabled-background-color !def
 $table-disabled-text-color-update: $token-table-row-disabled-default-color !default;
 $table-disabled-clickable-color-update: $token-table-row-disabled-clickable-color !default;
 $table-row-hover-update: $token-table-row-hover-color !default;
+$table-page-select-height: $token-table-pagination-count-height !default;
+$table-page-select-width: $token-table-pagination-count-width !default;
 //end of updated table variables
 
 $table-background: $global-background !default;
@@ -1250,7 +1253,7 @@ $empty-state-icon-size: $global-font-size * 3.5 !default;
 // updated spinner variables
 
 $spinner-ring-color-update: $token-spinner-color;
-$spinner-animation-duration-update: $token-spinner-animation-duration;
+$spinner-animation-duration-update: 500ms;
 
 $spinner-ring-sizes-update: () !default;
 $spinner-ring-sizes-update: map-merge(

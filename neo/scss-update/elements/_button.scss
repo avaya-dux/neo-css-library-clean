@@ -199,7 +199,7 @@
   @include neo-icons;
 }
 
-@include neo-icon-context {
+@include neo-icon-context-update {
   &.neo-btn-update:empty {
     display: inline-flex;
     font-size: $button-icon-font-size-update;
@@ -217,7 +217,7 @@
 @each $button-type-name, $button-type-colors in $button-types {
   @if ($button-type-name != 'default') {
     .neo-btn-update--#{$button-type-name} {
-      @include button-colors($button-type-colors);
+      @include button-colors-update($button-type-colors);
     }
   }
 }

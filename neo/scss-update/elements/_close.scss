@@ -112,11 +112,11 @@
     }
   }
 
-  @if map_has_key($config, hover-background-color) {
-    &:hover {
-      background-color: map_get($config, hover-background-color);
-    }
-  }
+  // @if map_has_key($config, hover-background-color) {
+  //   &:hover {
+  //     background-color: map_get($config, hover-background-color);
+  //   }
+  // }
 
   @if map_has_key($config, hover-color) {
     &:hover {

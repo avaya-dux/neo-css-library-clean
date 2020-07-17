@@ -59,7 +59,7 @@
   }
 }
 
-.neo-label {
+.neo-label-update {
   @extend %label-update;
   @include label-colors-update;
 }

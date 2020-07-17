@@ -240,6 +240,7 @@
 @mixin neo-select-arrow-update {
   &:not(.neo-select--multiple)::after {
     align-items: center;
+    font-family: 'AOC Icons';
     content: '\e9a1';
     display: inline-flex;
     justify-content: center;
@@ -263,7 +264,7 @@
 
 @mixin neo-select-spinner-update {
   &__spinner {
-    @include neo-spinner;
+    @include neo-spinner-update;
     @include neo-select-spinner-override-update;
   }
 }
@@ -274,13 +275,12 @@
   width: 100%;
 
   &:not(.neo-select--multiple-update)::after {
-    content: '';
     height: $select-icon-height;
     left: auto;
     margin: 0;
     top: $select-icon-width / 2;
     width: $select-icon-width;
-    @include spinner-animation;
+    @include spinner-animation-update;
   }
 }
 
@@ -310,7 +310,7 @@
   }
 }
 
-.neo-select {
+.neo-select-update {
   @extend %neo-select-update;
 
   @include neo-select-element-update;

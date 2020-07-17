@@ -154,7 +154,7 @@
   }
 }
 
-@mixin neo-icon($is-same-level: false) {
+@mixin neo-icon-update($is-same-level: false) {
   @if ($is-same-level) {
     @include neo-icon-context-update($is-same-level: true) {
       &::before {

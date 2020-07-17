@@ -479,6 +479,29 @@
   max-width: 100%;
   width: 100%;
 
+  // new table select styles - hard-coded for now
+
+  &-page-select-update {
+    height: $table-page-select-height;
+    width: $table-page-select-width;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & > label {
+      margin-right: 8px;
+    }
+    & > .neo-select-update {
+      & > select {
+        min-width: auto;
+      }
+    }
+  }
+
+  & > .neo-input-filter-update {
+    width: 116px;
+  }
+
   @include neo-table-children-update;
   @include neo-table--bordered-update;
   @include neo-table--striped-update;

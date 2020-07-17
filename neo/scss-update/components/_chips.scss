@@ -238,7 +238,7 @@
   @each $name, $background-color in $neo-state-colors-update {
     &--#{$name} {
       color: $global-text-inverse-color;
-      // @include chip-states($background-color, $self);
+      // @include chip-states-update($background-color, $self);
       background-color: $background-color;
     }
   }
@@ -250,7 +250,7 @@
   }
 
   @each $name, $color in $neo-close-colors-update {
-    &--#{$name} .neo-close {
+    &--#{$name} .neo-close-update {
       background-color: $color;
     }
   }
@@ -356,7 +356,7 @@
   display: inline-flex;
   font-size: $chip-font-size-update;
   line-height: $chip-line-height-update;
-  padding: 0 $chip-padding-x-update;
+  padding: $chip-padding-y-update $chip-padding-x-update;
   transition: $chip-transition;
 
   &:focus {
@@ -391,11 +391,11 @@
 
 .neo-chip-update {
   @extend %neo-chip-update;
-  @include chip-colors();
-  @include chip--disabled;
+  @include chip-colors-update();
+  @include chip-update--disabled;
 }
 
-.neo-chips__item {
+.neo-chips-update__item {
   @extend %neo-chip;
   margin: 0 $chip-offset $chip-offset 0;
 
@@ -406,7 +406,7 @@
     }
   }
 
-  @include neo-chip-edit;
-  @include chip-colors();
-  @include chip--disabled;
+  @include neo-chip-edit-update;
+  @include chip-colors-update();
+  @include chip-update--disabled;
 }
