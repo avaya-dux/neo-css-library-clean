@@ -60,3 +60,76 @@
   @include neo-popover-colors;
   @include neo-position(&);
 }
+
+// updated popover styles
+
+%neo-popover-update {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+}
+
+@mixin neo-popover-header-update {
+  &__header {
+    padding: $popover-header-padding;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: $popover-header-height-update;
+    line-height: $popover-line-height-update;
+    letter-spacing: $popover-letter-spacing-update;
+    font-size: $popover-font-size-update;
+    font-weight: $popover-font-weight-update;
+  }
+}
+
+@mixin neo-popover-colors-update() {
+  $self: &;
+
+  &__content {
+    border-color: $popover-border-color-update;
+
+    #{$self}__header {
+      background-color: $popover-background-color-update;
+      color: $popover-text-color-update;
+    }
+  }
+
+  @each $name, $color in $neo-state-colors-update {
+    &__content--#{$name} {
+      border-color: $color;
+
+      #{$self}__header {
+        background-color: $color;
+        color: $global-background-update;
+      }
+    }
+  }
+}
+
+.neo-popover-update {
+  @extend %neo-popover-update;
+
+  .neo-btn-update {
+    margin-bottom: 0;
+  }
+
+  .neo-close-update {
+    @include rtl-selector {
+      @include position(
+        absolute,
+        $popover-btn-offset,
+        auto,
+        auto,
+        $popover-btn-offset
+      );
+    }
+    @include position(absolute, $popover-btn-offset, $popover-btn-offset);
+  }
+
+  @include neo-popover-header-update;
+  @include neo-popover-content-update;
+  @include neo-popover-states-update;
+  @include neo-popover-colors-update;
+  @include neo-position(&);
+}

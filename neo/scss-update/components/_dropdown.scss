@@ -1,7 +1,212 @@
-@include neo-icon-context {
-  &.neo-dropdown__link {
+// @include neo-icon-context {
+//   &.neo-dropdown__link {
+//     &::before {
+//       font-size: $global-font-size;
+//       margin-bottom: $dropdown-icon-margin-y;
+//       margin-right: $dropdown-icon-margin-x;
+
+//       @include rtl-selector {
+//         margin: {
+//           left: $dropdown-icon-margin-x;
+//           right: initial;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @mixin neo-dropdown-arrow(
+//   $arrow-icon: "\25BE",
+//   $color: $dropdown-subcontent-arrow-color,
+//   $padding-left: $dropdown-padding-x
+// ) {
+//   &::after {
+//     color: $color;
+//     content: $arrow-icon;
+//     padding: 0 0 0 $padding-left;
+
+//     @include rtl-selector {
+//       padding: {
+//         left: initial;
+//         right: $padding-left;
+//       }
+//     }
+//   }
+// }
+
+// @mixin neo-dropdown-item {
+//   $self: &;
+
+//   &__item {
+//     display: block;
+//     height: 100%;
+//     position: relative;
+//     width: 100%;
+
+//     > #{$self}__link {
+//       @include neo-dropdown-arrow($arrow-icon: "\25B8");
+//     }
+//   }
+// }
+
+// @mixin neo-dropdown-link {
+//   $self: &;
+
+//   & > &__link {
+//     border-radius: $dropdown-radius;
+//     display: inline-block;
+
+//     @include neo-dropdown-arrow;
+//   }
+
+//   &__link {
+//     background: $dropdown-content-background-color;
+//     color: $dropdown-item-color;
+//     cursor: pointer;
+//     display: block;
+//     font-size: $dropdown-font-size;
+//     line-height: $dropdown-line-height;
+//     padding: $dropdown-padding-y $dropdown-padding-x;
+//     text-decoration: none;
+//     white-space: nowrap;
+
+//     &:hover,
+//     #{$self}--active > & {
+//       background-color: $dropdown-item-hover-background-color;
+//       color: $dropdown-item-hover-color;
+//     }
+
+//     @include neo-icons;
+//   }
+// }
+
+// @mixin neo-dropdown-content {
+//   &__content &__content {
+//     left: 100%;
+//     top: -$dropdown-content-padding - $dropdown-content-border-width;
+
+//     @include rtl-selector {
+//       left: initial;
+//       right: 100%;
+//     }
+//   }
+
+//   @include neo-popover-content(
+//     $dropdown-animation-duration,
+//     $dropdown-content-background-color,
+//     $dropdown-content-border,
+//     $dropdown-radius,
+//     $dropdown-content-shadow,
+//     $dropdown-content-padding,
+//     $dropdown-content-z,
+//     $dropdown-min-width
+//   );
+// }
+
+// @mixin neo-dropdown-separator {
+//   & &__separator {
+//     border-bottom: $dropdown-divider-border;
+//     margin: 0;
+//     padding: 0;
+//   }
+// }
+
+// @mixin neo-dropdown-disabled {
+//   $self: &;
+
+//   &--disabled {
+//     cursor: not-allowed;
+//     opacity: 0.5;
+
+//     &:hover {
+//       background-color: transparent;
+//     }
+
+//     #{$self}__link {
+//       background-color: transparent;
+//     }
+//   }
+// }
+
+// @mixin neo-dropdown-avatar {
+//   .neo-avatar {
+//     margin: 0 $dropdown-avatar-sm-margin-x 0 0; /* Custom margin-right for avatar within dropdown items */
+
+//     @include rtl-selector {
+//       margin: {
+//         left: $dropdown-avatar-sm-margin-x;
+//         right: 0;
+//       }
+//     }
+//   }
+// }
+
+// @mixin neo-dropdown-position {
+//   &--right &__content {
+//     left: auto;
+//     right: 100%;
+//   }
+
+//   &--right > &__content {
+//     right: 0;
+
+//     @include rtl-selector {
+//       left: 0;
+//       right: auto;
+//     }
+//   }
+// }
+
+// @mixin neo-dropdown-input {
+//   .neo-input {
+//     background-color: $dropdown-input-bg;
+//     border: $dropdown-input-border;
+//     color: $dropdown-color;
+//     margin: $dropdown-input-offset;
+//     width: calc(100% - #{$dropdown-input-offset} * 2);
+
+//     &::placeholder {
+//       color: $dropdown-color;
+//     }
+//   }
+
+//   .neo-input-icon {
+//     margin: $dropdown-input-offset;
+
+//     .neo-input {
+//       margin: 0;
+//       width: 100%;
+//     }
+
+//     [class*="aoc-"],
+//     [class*="neo-icon"] {
+//       color: $dropdown-input-icon-color;
+//     }
+//   }
+// }
+
+// .neo-dropdown {
+//   box-sizing: border-box;
+//   display: inline-block;
+//   position: relative;
+
+//   @include neo-dropdown-item;
+//   @include neo-dropdown-link;
+//   @include neo-dropdown-content;
+//   @include neo-dropdown-separator;
+//   @include neo-dropdown-disabled;
+//   @include neo-dropdown-avatar;
+//   @include neo-dropdown-position;
+//   @include neo-dropdown-input;
+//   @include neo-popover-states;
+// }
+
+// updated dropdown styles
+
+@include neo-icon-context-update {
+  &.neo-dropdown-update__link {
     &::before {
-      font-size: $global-font-size;
+      font-size: $global-font-size-update;
       margin-bottom: $dropdown-icon-margin-y;
       margin-right: $dropdown-icon-margin-x;
 
@@ -15,8 +220,8 @@
   }
 }
 
-@mixin neo-dropdown-arrow(
-  $arrow-icon: "\25BE",
+@mixin neo-dropdown-arrow-update(
+  $arrow-icon: '\25BE',
   $color: $dropdown-subcontent-arrow-color,
   $padding-left: $dropdown-padding-x
 ) {
@@ -34,7 +239,7 @@
   }
 }
 
-@mixin neo-dropdown-item {
+@mixin neo-dropdown-item-update {
   $self: &;
 
   &__item {
@@ -44,24 +249,24 @@
     width: 100%;
 
     > #{$self}__link {
-      @include neo-dropdown-arrow($arrow-icon: "\25B8");
+      @include neo-dropdown-arrow-update($arrow-icon: '\25B8');
     }
   }
 }
 
-@mixin neo-dropdown-link {
+@mixin neo-dropdown-link-update {
   $self: &;
 
   & > &__link {
     border-radius: $dropdown-radius;
     display: inline-block;
 
-    @include neo-dropdown-arrow;
+    @include neo-dropdown-arrow-update;
   }
 
   &__link {
-    background: $dropdown-content-background-color;
-    color: $dropdown-item-color;
+    background: $dropdown-content-background-color-update;
+    color: $dropdown-item-color-update;
     cursor: pointer;
     display: block;
     font-size: $dropdown-font-size;
@@ -72,15 +277,15 @@
 
     &:hover,
     #{$self}--active > & {
-      background-color: $dropdown-item-hover-background-color;
-      color: $dropdown-item-hover-color;
+      background-color: $dropdown-item-hover-background-color-update;
+      color: $dropdown-item-hover-color-update;
     }
 
     @include neo-icons;
   }
 }
 
-@mixin neo-dropdown-content {
+@mixin neo-dropdown-content-update {
   &__content &__content {
     left: 100%;
     top: -$dropdown-content-padding - $dropdown-content-border-width;
@@ -91,10 +296,10 @@
     }
   }
 
-  @include neo-popover-content(
+  @include neo-popover-content-update(
     $dropdown-animation-duration,
-    $dropdown-content-background-color,
-    $dropdown-content-border,
+    $dropdown-content-background-color-update,
+    $dropdown-content-border-update,
     $dropdown-radius,
     $dropdown-content-shadow,
     $dropdown-content-padding,
@@ -103,7 +308,7 @@
   );
 }
 
-@mixin neo-dropdown-separator {
+@mixin neo-dropdown-separator-update {
   & &__separator {
     border-bottom: $dropdown-divider-border;
     margin: 0;
@@ -111,7 +316,7 @@
   }
 }
 
-@mixin neo-dropdown-disabled {
+@mixin neo-dropdown-disabled-update {
   $self: &;
 
   &--disabled {
@@ -128,8 +333,8 @@
   }
 }
 
-@mixin neo-dropdown-avatar {
-  .neo-avatar {
+@mixin neo-dropdown-avatar-update {
+  .neo-avatar-update {
     margin: 0 $dropdown-avatar-sm-margin-x 0 0; /* Custom margin-right for avatar within dropdown items */
 
     @include rtl-selector {
@@ -141,7 +346,7 @@
   }
 }
 
-@mixin neo-dropdown-position {
+@mixin neo-dropdown-position-update {
   &--right &__content {
     left: auto;
     right: 100%;
@@ -157,46 +362,46 @@
   }
 }
 
-@mixin neo-dropdown-input {
-  .neo-input {
+@mixin neo-dropdown-input-update {
+  .neo-input-update {
     background-color: $dropdown-input-bg;
     border: $dropdown-input-border;
-    color: $dropdown-color;
+    color: $dropdown-color-update;
     margin: $dropdown-input-offset;
     width: calc(100% - #{$dropdown-input-offset} * 2);
 
     &::placeholder {
-      color: $dropdown-color;
+      color: $dropdown-color-update;
     }
   }
 
-  .neo-input-icon {
+  .neo-input-icon-update {
     margin: $dropdown-input-offset;
 
-    .neo-input {
+    .neo-input-update {
       margin: 0;
       width: 100%;
     }
 
-    [class*="aoc-"],
-    [class*="neo-icon"] {
+    [class*='aoc-'],
+    [class*='neo-icon'] {
       color: $dropdown-input-icon-color;
     }
   }
 }
 
-.neo-dropdown {
+.neo-dropdown-update {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
 
-  @include neo-dropdown-item;
-  @include neo-dropdown-link;
-  @include neo-dropdown-content;
-  @include neo-dropdown-separator;
-  @include neo-dropdown-disabled;
-  @include neo-dropdown-avatar;
-  @include neo-dropdown-position;
-  @include neo-dropdown-input;
-  @include neo-popover-states;
+  @include neo-dropdown-item-update;
+  @include neo-dropdown-link-update;
+  @include neo-dropdown-content-update;
+  @include neo-dropdown-separator-update;
+  @include neo-dropdown-disabled-update;
+  @include neo-dropdown-avatar-update;
+  @include neo-dropdown-position-update;
+  @include neo-dropdown-input-update;
+  @include neo-popover-states-update;
 }

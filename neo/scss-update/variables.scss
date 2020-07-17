@@ -1024,6 +1024,9 @@ $chip-border-radius-update: $token-chip-border-radius !default;
 $chip-padding-x-update: $token-chip-padding-horizontal !default;
 $chip-padding-y-update: $token-chip-padding-vertical !default;
 $chip-height-update: $token-chip-editable-height !default;
+$chip-width-update: $token-chip-editable-width !default;
+$chip-offset-update: ($input-height-update - $chip-height-update) / 2 - 1 !default;
+$chip-line-height-update: $token-chip-line-height;
 
 // end of updated variables
 
@@ -1050,6 +1053,20 @@ $chip-disabled-color: $neo-mid-grey !default;
 // Component name: Tab
 // Location: src/scss/components/_tabs.scss
 //
+
+// updated variables
+
+$tab-border-bottom-color-upodate: $token-tabs-border-bottom-color !default;
+$tab-action-border-bottom-width-update: $token-tabs-border-bottom-width !default;
+$tab-action-active-color-update: $token-tabs-color !default;
+$tab-action-active-border-color-update: $token-tabs-color !default;
+$tab-action-line-height-update: $token-tabs-line-height !default;
+$tab-disabled-bg-color-update: $token-tabs-disabled-background-color !default;
+$tab-border-bottom-color-update: $global-background !default;
+$tab-bordered-active-border-bottom-color-update: $token-tabs-color !default;
+$tab-action-disabled-color-update: $token-color-disabled-background !default;
+
+// end of updated variables
 
 $tab-offset: $global-spacer !default;
 $tab-container-margin: 0 6px !default;
@@ -1103,6 +1120,22 @@ $tab-disabled-bg-color: transparent !default;
 // Location: src/scss/components/_dropdown.scss
 //
 
+// updated dropdown variables
+
+$dropdown-color-update: $token-menu-font-color !default;
+$dropdown-content-border-width-update: $token-menu-separator-border-bottom-width !default;
+$dropdown-content-border-update: $token-menu-separator-border-bottom-width
+  $token-menu-separator-border-bottom-style
+  $token-menu-separator-border-bottom-color !default;
+$dropdown-content-background-color-update: $token-menu-default-background-color !default;
+$dropdown-content-arrow-color-update: $token-menu-icon-color !default;
+$dropdown-subcontent-arrow-color-update: $dropdown-content-arrow-color-update !default;
+$dropdown-item-color-update: $token-menu-font-color !default;
+$dropdown-item-hover-color-update: $token-menu-hover !default;
+$dropdown-item-hover-background-color-update: $token-menu-default-active-color !default;
+
+// end of updated dropdown variables
+
 $dropdown-color: var-color-name(dropdown-text) !default;
 $dropdown-padding-x: 16px !default;
 $dropdown-padding-y: $global-spacer-large !default;
@@ -1139,6 +1172,26 @@ $dropdown-input-icon-color: $dropdown-item-color !default;
 // Component name: Popover
 // Location: src/scss/components/_popover.scss
 //
+
+// updated popover variables
+
+$popover-background-color-update: $token-popover-title-background-color !default;
+$popover-text-color-update: $global-text-color !default;
+$popover-border-color-update: $token-popover-title-border-bottom-color !default;
+$popover-content-background-color-update: $token-popover-body-background-color !default;
+$popover-border-width-update: $token-popover-border-width !default;
+$popover-border-style-update: $token-popover-border-style !default;
+$popover-content-border-update: $popover-border-width-update
+  $popover-border-style-update $popover-border-color-update !default;
+$popover-radius-update: 0 !default;
+$popover-header-height-update: $token-popover-header-height !default;
+$popover-line-height-update: $token-web-typography-web-body-semibold-line-height !default;
+$popover-letter-spacing-update: $token-web-typography-web-body-semibold-letter-spacing !default;
+$popover-font-size-update: $token-web-typography-web-body-semibold-font-size !default;
+$popover-font-weight-update: $token-web-typography-web-body-semibold-font-weight !default;
+
+// end of updated variables
+
 $popover-background-color: var-color-name(popover-background);
 $popover-text-color: var-color-name(popover-text);
 $popover-border-color: $popover-background-color;
