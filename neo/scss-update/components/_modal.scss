@@ -49,7 +49,7 @@
   .neo-modal__body {
     min-height: $modal-body-height;
 
-    @include modal-element($modal-padding, "top");
+    @include modal-element($modal-padding, 'top');
   }
 
   .neo-modal__message {
@@ -77,6 +77,92 @@
       }
     }
 
-    @include modal-element($modal-padding, "top");
+    @include modal-element($modal-padding, 'top');
+  }
+}
+
+// updated modal classes
+
+@mixin modal-element-update($value, $border-position: false) {
+  background-color: $modal-element-background-update;
+  padding: $value;
+
+  @if ($border-position) {
+    border-#{$border-position}: $modal-divider;
+  }
+}
+
+.neo-modal-update {
+  display: none;
+  position: absolute;
+
+  &--active {
+    animation: $modal-animation-time;
+    display: flex;
+
+    .neo-modal-update__background {
+      animation: show-element $modal-animation-time;
+      background-color: $modal-background-update;
+      height: 100%;
+      width: 100%;
+      z-index: $modal-z;
+
+      @include position(fixed, 0, 0, 0, 0);
+    }
+  }
+}
+
+.neo-modal-update__content {
+  animation: animation-modal-content $modal-animation-time;
+  background-color: $modal-background-update;
+  border: $modal-border-update;
+  border-radius: $modal-radius;
+  box-shadow: $modal-shadow-update;
+  display: flex;
+  flex-direction: column;
+  max-width: $modal-width;
+  overflow: auto;
+  padding: 0 $modal-padding-y;
+  position: relative;
+  width: $modal-width;
+  z-index: $modal-content-z;
+
+  .neo-modal-update__header {
+    @include modal-element-update($modal-header-padding);
+    text-align: center;
+  }
+
+  .neo-modal-update__body {
+    min-height: $modal-body-height;
+
+    @include modal-element-update($modal-padding, 'top');
+  }
+
+  .neo-modal-update__message {
+    font-size: $modal-message-font-size;
+    margin-bottom: $modal-message-margin-bottom;
+  }
+
+  .neo-modal-update__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .neo-btn-update {
+      margin-bottom: 0;
+
+      /* stylelint-disable max-nesting-depth */
+      &:not(:last-child) {
+        margin-right: $modal-margin;
+
+        @include rtl-selector {
+          margin: {
+            left: $modal-margin;
+            right: initial;
+          }
+        }
+      }
+    }
+
+    @include modal-element-update($modal-padding, 'top');
   }
 }
