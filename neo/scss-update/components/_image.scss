@@ -46,7 +46,7 @@
 }
 
 .neo-thumbnail-update {
-  @extend %neo-img;
+  @extend %neo-img-update;
   background-color: $neo-white;
   border: $image-thumbnail-border;
   border-radius: $image-thumbnail-border-radius;

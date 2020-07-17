@@ -10,7 +10,7 @@
     "scss": "node-sass neo/scss/main.scss ../NeoDocs/assets/css/neo/neo.css",
     "demo-mini": "node-sass neo/scss-update/main.scss ../neo-uxteam-demo/neo.css",
     "demo": "node -r esm designTokensFileFunctions.js && node -r esm server.js && node -r esm styleDicExt.js && node-sass neo/scss-update/main.scss ../neo-uxteam-demo/neo.css",
-    "update": "node-sass neo/scss/main.scss ../neo-update-demo/neo.css",
+    "update": "node-sass neo/scss-update/main.scss ../neo-update-demo/neo.css",
     "automatescss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run scss",
     "automatecss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js"
   },
