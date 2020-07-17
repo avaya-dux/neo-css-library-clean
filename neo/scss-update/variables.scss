@@ -1316,7 +1316,6 @@ $modal-element-background-update: $modal-background-update !default;
 $modal-border-color-update: $modal-background-update !default;
 $modal-border-update: $token-border-solid-1-px-border-width
   $token-border-solid-1-px-border-style $modal-border-color-update !default;
-$modal-background: $token-modal-scrim-color !default;
 
 // end of updated variables
 
@@ -1348,6 +1347,15 @@ $modal-animation-time: 0.4s !default;
 // Component name: Badge
 // Location: src/scss/elements/_badge.scss
 //
+
+// udpated variables
+
+$badge-font-size-update: $token-badge-font-size !default;
+$badge-background-color-update: $token-badge-background-color !default;
+$badge-color-update: $token-badge-color !default;
+$badge-padding-update: $token-badge-padding !default;
+
+// end of updated variables
 
 $badge-font-size: $global-font-size-small !default;
 $badge-background-color: $neo-alert-color !default;
