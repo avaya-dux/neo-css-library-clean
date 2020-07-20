@@ -295,6 +295,8 @@
   border-radius: $button-border-radius-update;
   height: $button-circular-height-update;
   width: $button-circular-width-update;
+  transition: $button-transition;
+  transition-property: background-color, box-shadow;
 
   &.neo-btn-update:empty {
     &::before {
@@ -302,7 +304,21 @@
       font-size: $button-icon-font-size-update;
     }
   }
-  &.neo-btn-update-secondary:empty {
+  &-secondary {
+    @each $name, $color in $neo-state-colors-update {
+      &--#{$name} {
+        // background-color: $color !important;
+        border-color: $color;
+        color: $color !important;
+        &:hover {
+          box-shadow: $button-box-shadow-update;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &-secondary:empty {
+    background-color: $global-background-update;
     &::before {
       // margin-left: 12px;
       font-size: $button-icon-font-size-update;
