@@ -252,6 +252,14 @@
     // border: $table-border-update;
   }
 
+  // styles to center checkbox in head
+
+  th label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   td,
   th {
     padding: $table-padding-update;
@@ -479,7 +487,7 @@
   max-width: 100%;
   width: 100%;
 
-  // new table select styles - hard-coded for now
+  // new table select styles
 
   &-page-select-update {
     height: $table-page-select-height;
@@ -494,12 +502,48 @@
     & > .neo-select-update {
       & > select {
         min-width: auto;
+        // this is hard-coded for now
+        width: $select-table-page-show-width-update;
+        padding-left: $select-padding-left-update;
+      }
+      &:not(.neo-select--multiple)::after {
+        right: $select-padding-right-update;
       }
     }
   }
 
-  & > .neo-input-filter-update {
-    width: 116px;
+  // new filter select styles
+
+  & ~ .neo-form-control-update {
+    & .neo-filter-update {
+      width: 116px;
+
+      padding-left: $select-padding-left-update;
+      & ~ button {
+        color: $global-text-color-update;
+        background-color: $table-filter-button-color-update;
+        // hard-coded padding for now
+        padding: 12px 0;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+      // may not work on all browsers
+
+      &::-webkit-input-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &::-moz-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &:-ms-input-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &::placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+    }
   }
 
   @include neo-table-children-update;
@@ -512,3 +556,53 @@
   @include neo-table--editable-update;
   @include neo-table-buttons-update;
 }
+
+// new date picker styles - only webkit version for now
+
+// placeholder date picker styles - hard-coded for now
+
+.neo-date-picker-update {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 220px;
+  height: 34px;
+  font-size: 14px;
+  font-style: italic;
+  color: $table-date-picker-font-color-update;
+  background-color: $table-date-picker-background-color-update;
+  &::before {
+    // hard-coded for now
+    padding-right: 8px;
+    content: 'MM DD YYYY';
+  }
+  &::after {
+    // hard-coded for now
+    padding-left: 8px;
+    content: 'MM DD YYYY';
+  }
+}
+
+// styles for sortable table heads
+
+.sortable {
+  &::after {
+    padding-left: 24px;
+  }
+}
+
+// & ~ input[type='date' i] {
+//   // background-color: red;
+//   &::-webkit-datetime-edit-text {
+//     display: none;
+//   }
+//   &::-webkit-datetime-edit-month-field {
+//     color: blue;
+//   }
+//   &::-webkit-datetime-edit-day-field {
+//     color: blue;
+//   }
+//   &::-webkit-datetime-edit-year-field {
+//     color: blue;
+//   }
+// }

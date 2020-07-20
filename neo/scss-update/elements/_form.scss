@@ -52,3 +52,55 @@
 // td > & {
 //   margin-bottom: 0;
 // }
+
+// new form classes
+
+@mixin form--states-update {
+  @each $state-color-name, $state-color-value in $input-state-color-map-update {
+    &--#{$state-color-name} {
+      > .neo-input-group-update ~ label,
+      > .neo-input-update ~ label,
+      > .neo-select-update ~ label,
+      > .neo-radio-update ~ label,
+      > .neo-check-update ~ label,
+      > .neo-switch-update,
+      .neo-input-hint-update {
+        color: $state-color-value;
+      }
+
+      .neo-input-update,
+      .neo-chips-update,
+      .neo-select-update select {
+        border-color: $state-color-value;
+      }
+    }
+  }
+}
+
+@mixin form--required-update {
+  &--required {
+    > label {
+      &::after {
+        color: $input-asterix-required-color-update;
+        content: '*';
+        padding-left: 2px;
+      }
+    }
+  }
+}
+
+.neo-form-update {
+  &-control {
+    margin-bottom: $form-control-margin-bottom;
+
+    @include form--states-update;
+    @include form--required-update;
+  }
+
+  &--inline {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

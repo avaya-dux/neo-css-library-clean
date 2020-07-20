@@ -38,3 +38,46 @@
   @include hint-muted;
   @include hint-states;
 }
+
+// new hint classes
+
+@mixin hint-states-update {
+  @each $hint-color-name, $hint-color-value in $input-state-color-map-update {
+    .neo-input-update--#{$hint-color-name} + &,
+    .neo-input-group-update--#{$hint-color-name} + & {
+      color: $hint-color-value;
+    }
+  }
+}
+
+@mixin hint-muted-update {
+  &--muted {
+    color: $input-hint-muted-color;
+  }
+}
+
+@mixin hint-positioning-update {
+  .neo-input-update + &,
+  .neo-select-update + &,
+  .neo-input-group-update + &,
+  .neo-switch-update + &,
+  .neo-check-update ~ & {
+    margin-top: $input-hint-margin-top;
+  }
+
+  .neo-chec-update ~ & {
+    margin-left: $checkbox-size + $checkbox-label-indent;
+  }
+
+  .neo-switch-update + & {
+    margin-left: $switch-width + $input-padding-x;
+  }
+}
+
+.neo-input-hint-update {
+  font-size: $input-hint-font-size;
+
+  @include hint-positioning-update;
+  @include hint-muted-update;
+  @include hint-states-update;
+}

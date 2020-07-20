@@ -152,7 +152,22 @@
   &__item {
     @extend %button;
     background-color: $pagination-btn-background;
-    border: $pagination-border;
+    border: $pagination-border-update;
+    border-radius: $pagination-border-radius-update;
+    color: $pagination-color-update;
+    margin: 0 $pagination-margin;
+    min-width: $pagination-min-width-item;
+    text-decoration: none;
+
+    @include pagination-item-update--hover;
+    @include pagination-item-update--disabled;
+    @include pagination-item-update--active;
+  }
+  &__item-arrow {
+    @extend %button;
+    background-color: $pagination-btn-background;
+    // border: $pagination-border;
+    border-radius: $pagination-border-radius-update;
     color: $pagination-color-update;
     margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
@@ -240,6 +255,8 @@
 
 @mixin pagination-dots-update {
   &__dots {
+    // hard-coded for now
+    padding: 0 16px;
     color: $pagination-dots-color-update;
     font-size: $pagination-dots-size;
     pointer-events: none;

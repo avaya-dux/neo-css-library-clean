@@ -77,6 +77,9 @@
 
 // updated checkbox styles
 
+$checkbox-checked-background-update: $token-checkbox-selected-background-color !default;
+$checkbox-disabled-background-update: $token-checkbox-disabled-background-color !default;
+
 .neo-check-update {
   opacity: 0;
   position: absolute;
@@ -116,12 +119,13 @@
   }
 
   &:checked + label::before {
-    background: $checkbox-checked-background;
+    background: $checkbox-checked-background-update;
     font-family: 'AOC-Icons' !important;
     content: '\e911';
-    font-size: $token-web-typography-web-tiny-body-font-size;
-    color: $token-color-base-100;
+    font-size: $checkbox-font-size-update;
+    color: $checkbox-color-update;
     padding-left: 2px;
+    padding-right: 2px;
   }
 
   &:disabled + label {
@@ -131,9 +135,10 @@
     &:checked {
       font-family: 'AOC-Icons' !important;
       content: '\e911';
-      font-size: $token-web-typography-web-tiny-body-font-size;
-      color: $token-color-base-100;
+      font-size: $checkbox-font-size-update;
+      color: $checkbox-color-update;
       padding-left: 2px;
+      padding-right: 2px;
     }
 
     &::before {
@@ -162,7 +167,9 @@
     }
   }
 
-  &:checked + label::after {
-    display: block;
-  }
+  // removing default checkbox
+
+  // &:checked + label::after {
+  //   display: block;
+  // }
 }

@@ -144,7 +144,7 @@ $link-hover-decoration: none !default;
 
 // new global variables
 $global-background-update: $token-color-base-100;
-$global-text-color-update: $token-color-base-100;
+$global-text-color-update: $token-color-base-1000;
 $global-font-size-update: $token-web-typography-web-body-regular-font-size;
 $global-font-size-x-small-update: $token-web-typography-web-tiny-body-font-size;
 $global-font-size-small-update: $token-web-typography-web-small-body-font-size;
@@ -373,6 +373,9 @@ $select-height-update: $token-dropdown-height !default;
 $select-width-update: $token-dropdown-width !default;
 $select-border-radius-update: $input-border-radius-update !default;
 $select-hover-bg-update: $token-dropdown-hover !default;
+$select-padding-left-update: $token-dropdown-padding-left !default;
+$select-padding-right-update: $token-dropdown-padding-right !default;
+$select-table-page-show-width-update: $token-table-pagination-count-select-width !default;
 //end of updated select variables
 
 $select-transition: 0.25s all ease !default;
@@ -430,6 +433,9 @@ $table-disabled-clickable-color-update: $token-table-row-disabled-clickable-colo
 $table-row-hover-update: $token-table-row-hover-color !default;
 $table-page-select-height: $token-table-pagination-count-height !default;
 $table-page-select-width: $token-table-pagination-count-width !default;
+$table-filter-button-color-update: $token-table-filter-button-color !default;
+$table-date-picker-background-color-update: $token-table-datepicker-background-color !default;
+$table-date-picker-font-color-update: $token-table-datepicker-font-color !default;
 //end of updated table variables
 
 $table-background: $global-background !default;
@@ -657,6 +663,8 @@ $arrow-color: $global-background;
 // updated variables
 $checkbox-checked-background-update: $token-checkbox-selected-background-color !default;
 $checkbox-disabled-background-update: $token-checkbox-disabled-background-color !default;
+$checkbox-font-size-update: $token-web-typography-web-tiny-body-font-size !default;
+$checkbox-color-update: $token-color-base-100 !default;
 // end of updated variables
 
 $checkbox-size: 16px !default;
@@ -884,6 +892,10 @@ $accordion-padding-x: $group-list-padding-x !default;
 // updated pagination variables
 
 $pagination-font-size-update: $token-table-font-size !default;
+$pagination-border-update: $token-table-pagination-active-div-border-width
+  $token-table-pagination-active-div-border-style
+  $token-table-pagination-active-div-border-color !default;
+$pagination-border-radius-update: $token-table-pagination-active-div-border-radius !default;
 $pagination-border-color-hover-update: $token-table-pagination-active-div-border-color !default;
 $pagination-dots-color-update: $global-text-color-update !default;
 $pagination-color-update: $token-table-pagination-color !default;
