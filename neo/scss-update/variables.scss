@@ -648,6 +648,10 @@ $neo-button-group-offset: 1px;
 // Location: src/scss/elements/_arrow.scss
 //
 
+// updated arrow variables - hard-coded
+
+$arrow-border-width-update: 8px;
+
 $arrow-width: $global-spacer-x-large !default;
 $arrow-offset: $global-spacer-x-large !default;
 $arrow-height: $arrow-width/2 !default;

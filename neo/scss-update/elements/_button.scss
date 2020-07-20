@@ -191,6 +191,13 @@
     line-height: 1;
   }
 
+  // custom selector for right-hand icon spacing
+
+  &[class^='right'],
+  &[class*='right']:not(:empty)::after {
+    margin-left: 10px;
+  }
+
   @include button-colors-update(map_get($button-types-update, 'default'));
 }
 

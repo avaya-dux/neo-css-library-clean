@@ -141,38 +141,57 @@
     z-index: $content-z;
     text-align: center;
 
-    .neo-tooltip-update--right & .neo-arrow::before {
+    .neo-tooltip-update--right & .neo-arrow-update::before {
       border-right-color: $tooltip-background-update !important;
+      // hard-coded arrow styles
+      border-width: $arrow-border-width-update;
+      bottom: -8px;
+      right: 31px;
     }
 
-    .neo-tooltip-update--right & .neo-arrow::after {
+    .neo-tooltip-update--right & .neo-arrow-update::after {
       border-color: transparent !important;
       border-right-color: $tooltip-background-update !important;
     }
 
-    .neo-tooltip-update--up & .neo-arrow::before {
+    .neo-tooltip-update--up & .neo-arrow-update::before {
       border-bottom-color: $tooltip-background-update !important;
+      // hard-coded arrow styles
+      border-width: $arrow-border-width-update;
+      bottom: -33px;
+      right: -50px;
+      transform: rotate(180deg);
     }
 
-    .neo-tooltip-update--up & .neo-arrow::after {
+    .neo-tooltip-update--up & .neo-arrow-update::after {
       border-color: transparent !important;
       border-top-color: $tooltip-background-update !important;
     }
 
-    .neo-tooltip-update--left & .neo-arrow::before {
+    .neo-tooltip-update--left & .neo-arrow-update::before {
       border-left-color: $tooltip-background-update !important;
+      // hard-coded arrow styles
+      border-width: $arrow-border-width-update;
+      bottom: -9px;
+      right: -133px;
+      transform: rotate(0deg);
     }
 
-    .neo-tooltip-update--left & .neo-arrow::after {
+    .neo-tooltip-update--left & .neo-arrow-update::after {
       border-color: transparent !important;
       border-left-color: $tooltip-background-update !important;
     }
 
-    .neo-tooltip-update--down & .neo-arrow::before {
+    .neo-tooltip-update--down & .neo-arrow-update::before {
       border-top-color: $tooltip-background-update !important;
+      // hard-coded arrow styles
+      border-width: $arrow-border-width-update;
+      bottom: 14px;
+      right: -51px;
+      transform: rotate(180deg);
     }
 
-    .neo-tooltip-update--down & .neo-arrow::after {
+    .neo-tooltip-update--down & .neo-arrow-update::after {
       border-color: transparent !important;
       border-bottom-color: $tooltip-background-update !important;
     }
@@ -203,7 +222,7 @@
 }
 
 .neo-tooltip-update {
-  @extend %neo-popover;
+  @extend %neo-popover-update;
 
   @include neo-tooltip-update-content;
   @include neo-tooltip-update-states;
