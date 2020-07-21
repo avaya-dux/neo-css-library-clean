@@ -87,9 +87,9 @@
   background-color: $modal-element-background-update;
   padding: $value;
 
-  @if ($border-position) {
-    border-#{$border-position}: $modal-divider;
-  }
+  // @if ($border-position) {
+  //   border-#{$border-position}: $modal-divider;
+  // }
 }
 
 .neo-modal-update {
@@ -165,4 +165,70 @@
 
     @include modal-element-update($modal-padding, 'top');
   }
+}
+
+// new menu modal class
+
+// filter button styles
+
+.neo-modal-menu-update {
+  width: 781px;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'menu   content content'
+    'menu   content content'
+    'footer footer footer';
+}
+
+.neo-modal-menu-header-update {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  & > .neo-input-group-update {
+    width: auto;
+    & .neo-filter-update {
+      width: 116px;
+
+      padding-left: $select-padding-left-update;
+      & ~ button {
+        color: $global-text-color-update;
+        background-color: $table-filter-button-color-update;
+        // hard-coded padding for now
+        padding: 12px 0;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+      // may not work on all browsers
+
+      &::-webkit-input-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &::-moz-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &:-ms-input-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &::placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+    }
+  }
+}
+
+.neo-modal-menu-side-update {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+}
+
+.neo-modal-menu-footer-update {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }

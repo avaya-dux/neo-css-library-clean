@@ -141,6 +141,7 @@
 
     &::after {
       background-color: $neo-white;
+      box-shadow: $button-box-shadow-update;
       height: $switch-knob-size;
       left: $switch-knob-indent;
       top: $switch-knob-indent;

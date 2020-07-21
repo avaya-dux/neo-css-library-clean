@@ -1148,14 +1148,16 @@ $tab-disabled-bg-color: transparent !default;
 $dropdown-color-update: $token-menu-font-color !default;
 $dropdown-content-border-width-update: $token-menu-separator-border-bottom-width !default;
 $dropdown-content-border-update: $token-menu-separator-border-bottom-width
-  $token-menu-separator-border-bottom-style
-  $token-menu-separator-border-bottom-color !default;
+  $token-menu-separator-border-bottom-style $token-color-base-400 !default;
 $dropdown-content-background-color-update: $token-menu-default-background-color !default;
 $dropdown-content-arrow-color-update: $token-menu-icon-color !default;
 $dropdown-subcontent-arrow-color-update: $dropdown-content-arrow-color-update !default;
 $dropdown-item-color-update: $token-menu-font-color !default;
 $dropdown-item-hover-color-update: $token-menu-hover !default;
 $dropdown-item-hover-background-color-update: $token-menu-default-active-color !default;
+$dropdown-box-shadow-update: $token-menu-box-shadow-x-offset
+  $token-menu-box-shadow-y-offset $token-menu-box-shadow-radius
+  $token-menu-box-shadow-color !default;
 
 // end of updated dropdown variables
 
@@ -1330,8 +1332,6 @@ $spinner-animation-duration: 500ms !default;
 $modal-scrim-color-update: $token-modal-scrim-color !default;
 $modal-shadow-color-update: $token-modal-box-shadow-color !default;
 $modal-shadow-update: $token-modal-box-shadow-x-offset
-  $token-modal-box-shadow-y-offset $token-modal-box-shadow-radius 0
-  $modal-shadow-color-update $token-modal-box-shadow-x-offset
   $token-modal-box-shadow-y-offset $token-modal-box-shadow-radius 0
   $modal-shadow-color-update !default;
 $modal-background-update: $global-background-update !default;

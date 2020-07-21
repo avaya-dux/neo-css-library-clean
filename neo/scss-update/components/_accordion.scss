@@ -11,8 +11,8 @@
     }
 
     &::after {
-      content: "\e9a1";
-      font-family: "AOC-Icons";
+      content: '\e9a1';
+      font-family: 'AOC-Icons';
       position: absolute;
       right: $accordion-icon-offset;
       text-align: center;
@@ -69,7 +69,85 @@
     }
   }
 
-  @include list--hover("header");
+  @include list--hover('header');
   @include accordion-header;
   @include list--borderless;
+}
+
+// new accordion styles
+
+@mixin accordion-header-update {
+  &__header {
+    @extend %list-item-update;
+
+    border: 0;
+    cursor: pointer;
+    position: relative;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::after {
+      content: '\e9a1';
+      font-family: 'AOC-Icons';
+      position: absolute;
+      right: $accordion-icon-offset;
+      text-align: center;
+      top: 50%;
+      transform: translate(0, -50%) $accordion-icon-animation;
+      transition: $accordion-icon-transition;
+
+      @include rtl-selector {
+        left: $accordion-icon-offset;
+        right: auto;
+      }
+    }
+
+    @include list-item-colors-update;
+    @include list-item-button-update;
+    @include list-item--disabled-update;
+  }
+}
+
+@mixin accordion--disabled-update {
+  &--disabled {
+    cursor: not-allowed;
+  }
+}
+
+.neo-accordion-update {
+  @extend %list-update;
+
+  &__item {
+    @extend %list-radius-update;
+
+    border: $accordion-border-width solid $accordion-border-color;
+    border-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    overflow-y: hidden;
+
+    @include accordion--disabled-update;
+  }
+
+  &__body {
+    background-color: $accordion-body-background;
+    list-style-type: none;
+  }
+
+  &__content {
+    padding: $accordion-padding-y $accordion-padding-x;
+  }
+
+  &__item--active {
+    .neo-accordion-update__header::after {
+      transform: translate(0, -50%) $accordion-active-icon-animation;
+    }
+  }
+
+  @include list-update--hover('header');
+  @include accordion-header-update;
+  @include list-update--borderless;
 }

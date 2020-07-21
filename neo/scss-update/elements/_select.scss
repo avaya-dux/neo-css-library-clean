@@ -187,6 +187,7 @@
     padding: $select-padding-y $select-offset-x $select-padding-y
       $select-padding-x;
     min-width: $select-width-update;
+    width: 100%;
 
     @include rtl-selector {
       padding: {
@@ -212,6 +213,17 @@
       padding: $select-padding-y $select-offset-x $select-padding-y
         $select-padding-x;
 
+      &::before {
+        font-family: 'AOC-Icons';
+        content: '\e911';
+        width: 1.3em;
+        text-align: center;
+        display: inline-block;
+      }
+      &:checked::before {
+        font-family: 'AOC-Icons';
+        content: '\e914';
+      }
       @include rtl-selector {
         padding: {
           left: $select-offset-x;
@@ -238,9 +250,9 @@
 }
 
 @mixin neo-select-arrow-update {
-  &:not(.neo-select--multiple)::after {
+  &:not(.neo-select-update--multiple)::after {
     align-items: center;
-    font-family: 'AOC Icons';
+    font-family: 'AOC-Icons';
     content: '\e9a1';
     display: inline-flex;
     justify-content: center;
@@ -254,7 +266,9 @@
     &:hover {
       background-color: $select-hover-bg-update;
     }
-
+    &[disabled] {
+      color: $select-disabled-color-update;
+    }
     @include rtl-selector {
       left: $select-padding-x;
       right: auto;
@@ -280,6 +294,7 @@
     margin: 0;
     top: $select-icon-width / 2;
     width: $select-icon-width;
+    content: '';
     @include spinner-animation-update;
   }
 }
@@ -318,4 +333,8 @@
   @include neo-select-arrow-update;
   @include neo-select-spinner-update;
   @include neo-select-icon-update;
+  // disabled color for arrow
+  &-disabled {
+    color: $select-disabled-color-update;
+  }
 }
