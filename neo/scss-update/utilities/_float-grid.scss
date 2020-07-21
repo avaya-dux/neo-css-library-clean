@@ -2,14 +2,14 @@
   .#{$row-class-name} {
     &::after {
       clear: both;
-      content: "";
+      content: '';
       display: block;
     }
   }
 }
 
 @mixin neo-float-grid-columns {
-  [class*="#{$col-class-prefix}--"] {
+  [class*='#{$col-class-prefix}--'] {
     box-sizing: border-box;
     float: left;
     width: 100%;

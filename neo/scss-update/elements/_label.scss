@@ -52,9 +52,16 @@
 
 @mixin label-colors-update {
   @each $name, $color in $neo-state-colors-update {
-    &--#{$name} {
-      background-color: $color !important;
-      color: $global-text-inverse-color !important;
+    @if $name == 'default' {
+      &--#{$name} {
+        background-color: $global-background-update !important;
+        color: $global-text-color-update !important;
+      }
+    } @else {
+      &--#{$name} {
+        background-color: $color !important;
+        color: $global-text-inverse-color !important;
+      }
     }
   }
 }
@@ -62,4 +69,11 @@
 .neo-label-update {
   @extend %label-update;
   @include label-colors-update;
+}
+
+// new input label styles
+
+.neo-label-update--input {
+  margin-bottom: $label-margin-bottom-update;
+  padding: 0;
 }
