@@ -1338,7 +1338,11 @@ $modal-background-update: $global-background-update !default;
 $modal-element-background-update: $modal-background-update !default;
 $modal-border-color-update: $modal-background-update !default;
 $modal-border-update: $token-border-solid-1-px-border-width
-  $token-border-solid-1-px-border-style $modal-border-color-update !default;
+  $token-border-solid-1-px-border-style $token-color-base-400 !default;
+$modal-menu-width-update: $token-modal-menu-modal-width !default;
+$modal-menu-active-border-update: 4px $token-border-solid-1-px-border-style
+  $token-color-accent-500 !default;
+$modal-menu-active-border-color-update: $token-color-accent-500 !default;
 
 // end of updated variables
 

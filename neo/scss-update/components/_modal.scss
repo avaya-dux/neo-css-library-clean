@@ -130,6 +130,7 @@
   .neo-modal-update__header {
     @include modal-element-update($modal-header-padding);
     text-align: center;
+    vertical-align: center;
   }
 
   .neo-modal-update__body {
@@ -172,7 +173,8 @@
 // filter button styles
 
 .neo-modal-menu-update {
-  width: 781px;
+  box-shadow: $modal-shadow-update;
+  width: $modal-menu-width-update;
   display: grid;
   grid-template-areas:
     'header header header'
@@ -186,7 +188,18 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  border-bottom: $modal-border-update;
+  .neo-modal-update__header {
+    // @include modal-element-update($modal-header-padding);
+    // text-align: center;
+    // vertical-align: center;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
   & > .neo-input-group-update {
+    padding-right: 17px;
     width: auto;
     & .neo-filter-update {
       width: 116px;
@@ -224,6 +237,31 @@
   grid-area: menu;
   display: flex;
   flex-direction: column;
+  border-right: $modal-border-update;
+  & .neo-group-list-update__item {
+    padding-left: 0;
+    border: none;
+    & .neo-modal-menu-side-item {
+      // background: tomato;
+      position: relative;
+      // margin: 0 auto;
+
+      &:before {
+        content: '';
+        height: 100%;
+        width: 50%;
+        position: absolute;
+        background: $modal-menu-active-border-color-update;
+        // border-radius: 50%;
+        clip-path: ellipse(15% 35% at 0% 52%);
+
+        left: 0;
+        // transition: all 0.8s;
+      }
+
+      padding-left: 12px;
+    }
+  }
 }
 
 .neo-modal-menu-footer-update {
