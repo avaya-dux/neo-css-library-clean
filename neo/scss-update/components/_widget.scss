@@ -38,7 +38,7 @@
         $neo-blue-grey-dark
       );
       background-size: 100vw;
-      content: "";
+      content: '';
       display: flex;
       height: 160px;
       opacity: 0.2;
@@ -49,7 +49,7 @@
       background-clip: content-box;
       box-shadow: 0 20px $neo-white, 0 60px $neo-white, 0 80px $neo-white,
         350px 100px $neo-white, 0 120px $neo-white, 450px 140px $neo-white;
-      content: "";
+      content: '';
       height: 20px;
       left: 0;
       padding-left: 50%;
@@ -114,4 +114,135 @@
   @include neo-widget-footer;
   @include neo-widget--disabled;
   @include neo-flat;
+}
+
+// new widget styles
+
+@mixin widget-element-update($value, $border-position: false) {
+  background-color: $modal-element-background-update;
+  padding: $value;
+
+  @if ($border-position) {
+    border-#{$border-position}: $modal-divider;
+  }
+}
+
+@mixin neo-widget-content-update--loading {
+  .neo-widget-update--loading > & {
+    color: transparent;
+    font-size: 0;
+    overflow: hidden;
+    padding: $widget-heading-padding;
+    text-shadow: none;
+
+    > * {
+      display: none;
+    }
+
+    &::before {
+      animation: widgetLoadingContent 2s infinite linear;
+      background: linear-gradient(
+        to right,
+        $neo-mid-grey 50%,
+        $neo-blue-grey-dark
+      );
+      background-size: 100vw;
+      content: '';
+      display: flex;
+      height: 160px;
+      opacity: 0.2;
+    }
+
+    &::after {
+      background: $neo-white;
+      background-clip: content-box;
+      box-shadow: 0 20px $neo-white, 0 60px $neo-white, 0 80px $neo-white,
+        350px 100px $neo-white, 0 120px $neo-white, 450px 140px $neo-white;
+      content: '';
+      height: 20px;
+      left: 0;
+      padding-left: 50%;
+      position: absolute;
+      top: $widget-heading-padding;
+      width: 100%;
+    }
+  }
+}
+
+.neo-widget-update__content {
+  // animation: animation-modal-content $modal-animation-time;
+  background-color: $modal-background-update;
+  border: $modal-border-update;
+  // border-radius: $modal-radius;
+  // box-shadow: $modal-shadow-update;
+  display: flex;
+  flex-direction: column;
+  max-width: $modal-width;
+  overflow: auto;
+  // padding: 0 $modal-padding-y;
+  position: relative;
+  width: $modal-width;
+  z-index: $modal-content-z;
+
+  .neo-widget-update__header {
+    @include widget-element-update(16px);
+    // text-align: center;
+    vertical-align: center;
+    display: flex;
+    flex-direction: row;
+    & h4 {
+      margin-left: 8px;
+    }
+    &-disabled {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+    }
+  }
+
+  .neo-widget-update__body {
+    min-height: $modal-body-height;
+
+    @include widget-element-update(16px, top);
+    &-disabled {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+    }
+  }
+
+  .neo-widget-update__message {
+    font-size: $modal-message-font-size;
+    margin-bottom: $modal-message-margin-bottom;
+    &-disabled {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+    }
+  }
+
+  .neo-widget-update__footer {
+    display: flex;
+    justify-content: flex-end;
+    &-disabled {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+    }
+
+    .neo-btn-update {
+      margin-bottom: 0;
+
+      /* stylelint-disable max-nesting-depth */
+      &:not(:last-child) {
+        margin-right: $modal-margin;
+
+        @include rtl-selector {
+          margin: {
+            left: $modal-margin;
+            right: initial;
+          }
+        }
+      }
+    }
+
+    @include widget-element-update(16px, top);
+    @include neo-widget-content-update--loading;
+  }
 }

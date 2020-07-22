@@ -255,6 +255,14 @@
       // color: $global-text-inverse-color;
     }
   }
+  &[disabled] {
+    background-color: $global-disabled-text-color-update;
+    // color: $global-disabled-text-color-update;
+    // border-color: $global-disabled-text-color-update;
+    &:hover {
+      box-shadow: none;
+    }
+  }
 }
 
 .neo-btn-update-secondary {
@@ -266,11 +274,19 @@
     &--#{$name} {
       // background-color: $color !important;
       border-color: $color;
-      color: $color !important;
+      color: $color;
     }
   }
   &:hover {
     background-color: $global-background-update;
+  }
+  &[disabled] {
+    background-color: $global-disabled-background-update;
+    color: $global-disabled-text-color-update;
+    border-color: $global-disabled-text-color-update;
+    &:hover {
+      box-shadow: none;
+    }
   }
 }
 

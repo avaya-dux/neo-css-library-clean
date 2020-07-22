@@ -150,6 +150,9 @@ $global-font-size-update: $token-web-typography-web-body-regular-font-size;
 $global-font-size-x-small-update: $token-web-typography-web-tiny-body-font-size;
 $global-font-size-small-update: $token-web-typography-web-small-body-font-size;
 $global-font-size-large-update: $token-web-typography-web-large-body-font-size;
+$global-disabled-background-update: $token-color-disabled-background;
+$global-disabled-text-color-update: $token-color-disabled-text;
+$global-disabled-accent: $token-color-disabled-accent;
 
 $global-background: var-color-name(global-background) !default;
 // Global text styles
@@ -769,6 +772,13 @@ $close-sizes: map-merge(
 // Location: src/scss/components/_navbar.scss
 //
 
+// udpated navbar variables
+
+$navbar-background-color-update: $global-background-update !default;
+$navbar-background-color-hover-update: $token-color-hover-background !default;
+
+// end of updated variables
+
 $navbar-background-color: var-color-name(navbar-background) !default;
 $navbar-text-color: var-color-name(navbar-text) !default;
 $navbar-height: 48px !default;
@@ -1343,6 +1353,7 @@ $modal-menu-width-update: $token-modal-menu-modal-width !default;
 $modal-menu-active-border-update: 4px $token-border-solid-1-px-border-style
   $token-color-accent-500 !default;
 $modal-menu-active-border-color-update: $token-color-accent-500 !default;
+$modal-padding-update: $global-spacer-large 17px $global-spacer-large 0 !default;
 
 // end of updated variables
 

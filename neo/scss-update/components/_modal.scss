@@ -168,7 +168,7 @@
   }
 }
 
-// new menu modal class
+// new menu modal class - all hard-coded for now
 
 // filter button styles
 
@@ -180,7 +180,7 @@
     'header header header'
     'menu   content content'
     'menu   content content'
-    'footer footer footer';
+    'menu footer footer';
 }
 
 .neo-modal-menu-header-update {
@@ -189,6 +189,7 @@
   flex-direction: row;
   justify-content: space-between;
   border-bottom: $modal-border-update;
+  padding: 11px 0;
   .neo-modal-update__header {
     // @include modal-element-update($modal-header-padding);
     // text-align: center;
@@ -239,24 +240,34 @@
   flex-direction: column;
   border-right: $modal-border-update;
   & .neo-group-list-update__item {
+    height: 48px;
     padding-left: 0;
     border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-active {
+      background: $token-color-base-150;
+    }
+    // vertical-align: center;
     & .neo-modal-menu-side-item {
       // background: tomato;
       position: relative;
       // margin: 0 auto;
 
-      &:before {
-        content: '';
-        height: 100%;
-        width: 50%;
-        position: absolute;
-        background: $modal-menu-active-border-color-update;
-        // border-radius: 50%;
-        clip-path: ellipse(15% 35% at 0% 52%);
+      &-active {
+        &:before {
+          content: '';
+          height: 100%;
+          width: 50%;
+          position: absolute;
+          background: $modal-menu-active-border-color-update;
+          // border-radius: 50%;
+          clip-path: ellipse(3% 35% at 0% 52%);
 
-        left: 0;
-        // transition: all 0.8s;
+          left: 0;
+          // transition: all 0.8s;
+        }
       }
 
       padding-left: 12px;
@@ -269,4 +280,27 @@
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+  border-top: $modal-border-update;
+  .neo-modal-update__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .neo-btn-update {
+      margin-bottom: 0;
+
+      /* stylelint-disable max-nesting-depth */
+      &:not(:last-child) {
+        margin-right: $modal-margin;
+
+        @include rtl-selector {
+          margin: {
+            left: $modal-margin;
+            right: initial;
+          }
+        }
+      }
+    }
+
+    @include modal-element-update($modal-padding-update, 'top');
+  }
 }
