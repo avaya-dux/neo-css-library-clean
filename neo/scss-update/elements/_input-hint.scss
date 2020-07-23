@@ -62,7 +62,7 @@
   .neo-input-group-update + &,
   .neo-switch-update + &,
   .neo-check-update ~ & {
-    margin-top: $input-hint-margin-top;
+    margin-top: 4px;
   }
 
   .neo-chec-update ~ & {
@@ -76,6 +76,8 @@
 
 .neo-input-hint-update {
   font-size: $input-hint-font-size;
+  // hard-coded margin for now
+  // margin-top: 4px;
 
   @include hint-positioning-update;
   @include hint-muted-update;

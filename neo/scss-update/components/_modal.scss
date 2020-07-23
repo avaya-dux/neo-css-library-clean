@@ -174,7 +174,7 @@
 
 .neo-modal-menu-update {
   box-shadow: $modal-shadow-update;
-  width: $modal-menu-width-update;
+  // width: $modal-menu-width-update;
   display: grid;
   grid-template-areas:
     'header header header'
@@ -209,8 +209,9 @@
       & ~ button {
         color: $global-text-color-update;
         background-color: $table-filter-button-color-update;
-        // hard-coded padding for now
+        // hard-coded padding and height for now
         padding: 12px 0;
+        height: 100%;
         &:hover {
           box-shadow: none;
         }

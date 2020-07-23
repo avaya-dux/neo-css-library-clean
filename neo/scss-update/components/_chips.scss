@@ -236,10 +236,18 @@
   @include chip-states-update($chip-bg-color, $self);
 
   @each $name, $background-color in $neo-state-colors-update {
-    &--#{$name} {
-      color: $global-text-inverse-color;
-      // @include chip-states-update($background-color, $self);
-      background-color: $background-color;
+    @if ($name == 'default') {
+      &--#{$name} {
+        color: $global-text-color-update;
+        // @include chip-states-update($background-color, $self);
+        background-color: $background-color;
+      }
+    } @else {
+      &--#{$name} {
+        color: $global-text-inverse-color;
+        // @include chip-states-update($background-color, $self);
+        background-color: $background-color;
+      }
     }
   }
 

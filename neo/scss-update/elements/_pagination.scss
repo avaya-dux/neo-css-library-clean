@@ -150,10 +150,10 @@
 
 @mixin pagination-item-update {
   &__item {
-    @extend %button;
+    @extend %button-update;
     background-color: $pagination-btn-background;
     border: $pagination-border-update;
-    border-radius: $pagination-border-radius-update;
+    // border-radius: $pagination-border-radius-update;
     color: $pagination-color-update;
     margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
@@ -164,10 +164,10 @@
     @include pagination-item-update--active;
   }
   &__item-arrow {
-    @extend %button;
+    @extend %button-update;
     background-color: $pagination-btn-background;
     // border: $pagination-border;
-    border-radius: $pagination-border-radius-update;
+    // border-radius: $pagination-border-radius-update;
     color: $pagination-color-update;
     margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;

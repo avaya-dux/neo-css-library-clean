@@ -13,6 +13,12 @@
 
         @include rtl-icons($custom-margin-right);
       }
+      // new code
+      &::after {
+        margin-left: $custom-margin-right;
+
+        @include rtl-icons($custom-margin-right);
+      }
     }
   }
 }

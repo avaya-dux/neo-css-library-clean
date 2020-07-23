@@ -118,54 +118,96 @@
 
 // new widget styles
 
+// experimental shimmer style -- credit to https://webdevtrick.com/pure-css-shimmer-text-effect/
+
+@mixin neo-shimmer-update {
+  &--loading > * {
+    text-align: center;
+    color: transparent;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#c0c0cc),
+      to(#c0c0cc),
+      color-stop(0.5, #fff)
+    );
+    background: -moz-gradient(
+      linear,
+      left top,
+      right top,
+      from(#c0c0cc),
+      to(#c0c0cc),
+      color-stop(0.5, #fff)
+    );
+    background: gradient(
+      linear,
+      left top,
+      right top,
+      from(#c0c0cc),
+      to(#c0c0cc),
+      color-stop(0.5, #fff)
+    );
+    -webkit-background-size: 125px 100%;
+    -moz-background-size: 125px 100%;
+    background-size: 125px 100%;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+    -webkit-animation-name: shimmer;
+    -moz-animation-name: shimmer;
+    animation-name: shimmer;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #c0c0cc;
+    // height: 50px;
+  }
+}
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
 @mixin widget-element-update($value, $border-position: false) {
   background-color: $modal-element-background-update;
   padding: $value;
 
   @if ($border-position) {
     border-#{$border-position}: $modal-divider;
-  }
-}
-
-@mixin neo-widget-content-update--loading {
-  .neo-widget-update--loading > & {
-    color: transparent;
-    font-size: 0;
-    overflow: hidden;
-    padding: $widget-heading-padding;
-    text-shadow: none;
-
-    > * {
-      display: none;
-    }
-
-    &::before {
-      animation: widgetLoadingContent 2s infinite linear;
-      background: linear-gradient(
-        to right,
-        $neo-mid-grey 50%,
-        $neo-blue-grey-dark
-      );
-      background-size: 100vw;
-      content: '';
-      display: flex;
-      height: 160px;
-      opacity: 0.2;
-    }
-
-    &::after {
-      background: $neo-white;
-      background-clip: content-box;
-      box-shadow: 0 20px $neo-white, 0 60px $neo-white, 0 80px $neo-white,
-        350px 100px $neo-white, 0 120px $neo-white, 450px 140px $neo-white;
-      content: '';
-      height: 20px;
-      left: 0;
-      padding-left: 50%;
-      position: absolute;
-      top: $widget-heading-padding;
-      width: 100%;
-    }
   }
 }
 
@@ -182,7 +224,7 @@
   // padding: 0 $modal-padding-y;
   position: relative;
   width: $modal-width;
-  z-index: $modal-content-z;
+  // z-index: $modal-content-z;
 
   .neo-widget-update__header {
     @include widget-element-update(16px);
@@ -196,6 +238,9 @@
     &-disabled {
       background-color: $global-disabled-background-update;
       color: $global-disabled-text-color-update;
+      & > * {
+        color: $global-disabled-text-color-update;
+      }
     }
   }
 
@@ -203,6 +248,7 @@
     min-height: $modal-body-height;
 
     @include widget-element-update(16px, top);
+    @include neo-shimmer-update;
     &-disabled {
       background-color: $global-disabled-background-update;
       color: $global-disabled-text-color-update;
@@ -243,6 +289,5 @@
     }
 
     @include widget-element-update(16px, top);
-    @include neo-widget-content-update--loading;
   }
 }

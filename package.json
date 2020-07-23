@@ -7,11 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
     "icongen": "node iconsFileFunctions.js &&  npx icon-font-generator properties/assets/icons/svgs/*.svg -o properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node iconsCSSGenerator.js",
-    "scss": "node-sass neo/scss/main.scss ../NeoDocs/assets/css/neo/neo.css",
-    "demo-mini": "node-sass neo/scss-update/main.scss ../neo-uxteam-demo/neo.css",
     "demo": "node -r esm designTokensFileFunctions.js && node -r esm server.js && node -r esm styleDicExt.js && node-sass neo/scss-update/main.scss ../neo-uxteam-demo/neo.css",
-    "update": "node-sass neo/scss-update/main.scss ../neo-update-demo/neo.css",
-    "automatescss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run scss",
+    "update": "node-sass neo/scss-update/main.scss neo/css/neo.css",
+    "automatescss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run update",
     "automatecss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js"
   },
   "keywords": [

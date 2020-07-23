@@ -65,7 +65,7 @@ $neo-state-colors-update: () !default;
 
 $neo-state-colors-update: map-merge(
   (
-    default: $token-color-base-100,
+    default: $token-color-base-300,
     primary: $token-color-accent-500,
     success: $token-color-functional-green-500,
     warning: $token-color-functional-orange-500,

@@ -197,10 +197,14 @@
     flex-direction: column;
     justify-content: center;
     color: $input-asterix-required-color-update;
+    //hard-coded for now
+    padding-right: 11px;
   }
 }
 
 .neo-input-hint-error-update {
+  // hard-coded margin for now
+  margin-top: 4px;
   color: $input-asterix-required-color-update;
 }
 
@@ -234,6 +238,8 @@
     border: none;
     background-color: $global-background-update;
     color: $input-clear-button-color;
+    // hard-coded for now
+    padding-right: 11px;
     &:hover {
       cursor: pointer;
     }
