@@ -14,6 +14,13 @@
           }
         },
         {
+          "destination": "_spacers.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": { "category": "global-spacer" }
+          }
+        },
+        {
           "destination": "_typography.scss",
           "format": "scss/variables",
           "filter": {

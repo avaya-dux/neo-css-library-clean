@@ -274,7 +274,7 @@ async function getButtonStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/button.json',
+      '../properties/components/button.json',
       JSON.stringify(buttonsJSONObject)
     )
     .then(function () {
@@ -361,7 +361,7 @@ async function getAvatarStyles(components) {
 
   avatarJSONObject.avatar['initials-xsmall'] = {
     'font-weight': {
-      value: '{Web-typography.web/tiny body.fontWeight.value}',
+      value: '{Web-typography.fontweight-regular.value}',
     },
     'font-size': { value: '{Web-typography.web/tiny body.fontSize.value}' },
     'letter-spacing': {
@@ -374,7 +374,7 @@ async function getAvatarStyles(components) {
 
   avatarJSONObject.avatar['initials-small'] = {
     'font-weight': {
-      value: '{Web-typography.web/body - regular.fontWeight.value}',
+      value: '{Web-typography.fontweight-regular.value}',
     },
     'font-size': {
       value: '{Web-typography.web/body - regular.fontSize.value}',
@@ -389,7 +389,7 @@ async function getAvatarStyles(components) {
 
   avatarJSONObject.avatar['initials-regular'] = {
     'font-weight': {
-      value: '{Web-typography.web/heading 4.fontWeight.value}',
+      value: '{Web-typography.fontweight-regular.value}',
     },
     'font-size': { value: '{Web-typography.web/heading 4.fontSize.value}' },
     'letter-spacing': {
@@ -402,7 +402,7 @@ async function getAvatarStyles(components) {
 
   avatarJSONObject.avatar['initials-large'] = {
     'font-weight': {
-      value: '{Web-typography.web/heading 2 - regular.fontWeight.value}',
+      value: '{Web-typography.fontweight-regular.value}',
     },
     'font-size': {
       value: '{Web-typography.web/heading 2 - regular.fontSize.value}',
@@ -447,7 +447,7 @@ async function getAvatarStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/avatar.json',
+      '../properties/components/avatar.json',
       JSON.stringify(avatarJSONObject)
     )
     .then(function () {
@@ -521,7 +521,7 @@ async function getBadgeStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/badge.json',
+      '../properties/components/badge.json',
       JSON.stringify(badgeJSONObject)
     )
     .then(function () {
@@ -582,7 +582,7 @@ async function getChipStyles(components) {
   // text styles
 
   chipJSONObject.chip[`fontWeight`] = {
-    value: `{Web-typography.web/small body.fontWeight.value}`,
+    value: `{Web-typography.fontweight-regular.value}`,
   };
 
   chipJSONObject.chip[`fontSize`] = {
@@ -673,7 +673,7 @@ async function getChipStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/chip.json',
+      '../properties/components/chip.json',
       JSON.stringify(chipJSONObject)
     )
     .then(function () {
@@ -722,7 +722,7 @@ async function getLabelStyles(components) {
   // text styles
 
   labelJSONObject.label[`fontWeight`] = {
-    value: `{Web-typography.web/small body.fontWeight.value}`,
+    value: `{Web-typography.fontweight-regular.value}`,
   };
 
   labelJSONObject.label[`fontSize`] = {
@@ -797,7 +797,7 @@ async function getLabelStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/label.json',
+      '../properties/components/label.json',
       JSON.stringify(labelJSONObject)
     )
     .then(function () {
@@ -842,7 +842,7 @@ async function getSpinnerStyles() {
 
   await fs
     .writeFile(
-      './properties/components/spinner.json',
+      '../properties/components/spinner.json',
       JSON.stringify(spinnerJSONObject)
     )
     .then(function () {
@@ -901,7 +901,7 @@ async function getTooltipStyles(components) {
   };
 
   toolTipJSONObject.tooltip[`fontWeight`] = {
-    value: `{Web-typography.web/body - regular.fontWeight.value}`,
+    value: `{Web-typography.fontweight-regular.value}`,
   };
 
   // toolTipJSONObject.tooltip[`width`] = {
@@ -922,7 +922,7 @@ async function getTooltipStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/tooltip.json',
+      '../properties/components/tooltip.json',
       JSON.stringify(toolTipJSONObject)
     )
     .then(function () {
@@ -1013,7 +1013,7 @@ async function getCheckboxStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/checkbox.json',
+      '../properties/components/checkbox.json',
       JSON.stringify(checkboxJSONObject)
     )
     .then(function () {
@@ -1122,7 +1122,7 @@ async function getRadioStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/radio.json',
+      '../properties/components/radio.json',
       JSON.stringify(radioJSONObject)
     )
     .then(function () {
@@ -1211,7 +1211,7 @@ async function getSwitchStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/switch.json',
+      '../properties/components/switch.json',
       JSON.stringify(switchJSONObject)
     )
     .then(function () {
@@ -1333,7 +1333,7 @@ async function getInputGroupStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/inputGroup.json',
+      '../properties/components/inputGroup.json',
       JSON.stringify(inputGroupJSONObject)
     )
     .then(function () {
@@ -1505,7 +1505,7 @@ async function getInputStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/input.json',
+      '../properties/components/input.json',
       JSON.stringify(inputJSONObject)
     )
     .then(function () {
@@ -1622,7 +1622,7 @@ async function getDropdownStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/dropdown.json',
+      '../properties/components/dropdown.json',
       JSON.stringify(dropdownJSONObject)
     )
     .then(function () {
@@ -1806,7 +1806,7 @@ async function getTableStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/table.json',
+      '../properties/components/table.json',
       JSON.stringify(tableJSONObject)
     )
     .then(function () {
@@ -1873,7 +1873,7 @@ async function getAccordionStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/accordion.json',
+      '../properties/components/accordion.json',
       JSON.stringify(accordionJSONObject)
     )
     .then(function () {
@@ -1968,7 +1968,7 @@ async function getMenuStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/menu.json',
+      '../properties/components/menu.json',
       JSON.stringify(menuJSONObject)
     )
     .then(function () {
@@ -2041,7 +2041,7 @@ async function getListGroupStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/listgroup.json',
+      '../properties/components/listgroup.json',
       JSON.stringify(listJSONObject)
     )
     .then(function () {
@@ -2303,7 +2303,7 @@ async function getNotificationStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/notification.json',
+      '../properties/components/notification.json',
       JSON.stringify(notificationJSONObject)
     )
     .then(function () {
@@ -2364,7 +2364,7 @@ async function getPopoverStyles(components) {
   };
 
   popoverJSONObject.popover[`title-fontWeight`] = {
-    value: `{Web-typography.web/body - semibold.fontWeight.value}`,
+    value: `{Web-typography.fontweight-semibold.value}`,
   };
 
   popoverJSONObject.popover[`title-background-color`] = {
@@ -2399,7 +2399,7 @@ async function getPopoverStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/popover.json',
+      '../properties/components/popover.json',
       JSON.stringify(popoverJSONObject)
     )
     .then(function () {
@@ -2468,7 +2468,7 @@ async function getTabStyles(components) {
 
   await fs
     .writeFile(
-      './properties/components/tabs.json',
+      '../properties/components/tabs.json',
       JSON.stringify(tabJSONObject)
     )
     .then(function () {
@@ -2513,29 +2513,29 @@ coreFigmaFunctions
     await fs.mkdir('../properties/components/', {
       recursive: true,
     });
-    // getButtonStyles(value);
-    // getAvatarStyles(value);
-    // getBadgeStyles(value);
-    // getChipStyles(value);
-    // getLabelStyles(value);
-    // getSpinnerStyles();
-    // getTooltipStyles(value);
-    // getCheckboxStyles(value);
-    // getRadioStyles(value);
-    // getSwitchStyles(value);
-    // getInputGroupStyles(value);
-    // getInputStyles(value);
-    // getDropdownStyles(value);
-    // getTableStyles(value);
-    // getAccordionStyles(value);
-    // getListGroupStyles(value);
-    // getModalStyles(value);
-    // getMenuStyles(value);
-    // getNavbarStyles(value);
-    // getNotificationStyles(value);
-    // getPopoverStyles(value);
-    // getTabStyles(value);
-    // getWidgetStyles(value);
+    getButtonStyles(value);
+    getAvatarStyles(value);
+    getBadgeStyles(value);
+    getChipStyles(value);
+    getLabelStyles(value);
+    getSpinnerStyles();
+    getTooltipStyles(value);
+    getCheckboxStyles(value);
+    getRadioStyles(value);
+    getSwitchStyles(value);
+    getInputGroupStyles(value);
+    getInputStyles(value);
+    getDropdownStyles(value);
+    getTableStyles(value);
+    getAccordionStyles(value);
+    getListGroupStyles(value);
+    getModalStyles(value);
+    getMenuStyles(value);
+    getNavbarStyles(value);
+    getNotificationStyles(value);
+    getPopoverStyles(value);
+    getTabStyles(value);
+    getWidgetStyles(value);
   });
 
 // #endregion

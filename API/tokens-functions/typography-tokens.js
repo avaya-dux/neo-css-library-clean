@@ -27,48 +27,116 @@ async function pullTypographyTokens(styles) {
     };
 
     platformTextStyles.forEach((style) => {
-      // we grab the name of each text style and convert it to lower case
-      var styleName = style[0].document.name.toLowerCase();
+      // this is specific functionality for typography tokens
+      // it limits duplication and makes it easier to import the tokens into Neo
 
-      textStylesJSONObject[`${platform}-typography`][`${styleName}`] = {};
+      if (platform === 'Web') {
+        var styleName = style[0].document.name.toLowerCase();
 
-      // line-height
-      textStylesJSONObject[`${platform}-typography`][styleName][
-        'lineHeight'
-      ] = {
-        value: `${style[0].document.style.lineHeightPx}px`,
-      };
-      // letter-spacing
-      textStylesJSONObject[`${platform}-typography`][styleName][
-        'letterSpacing'
-      ] = {
-        value: `${style[0].document.style.letterSpacing}px`,
-      };
-      // font-size
-      textStylesJSONObject[`${platform}-typography`][styleName]['fontSize'] = {
-        value: `${style[0].document.style.fontSize}px`,
-      };
-      // font-weight
-      textStylesJSONObject[`${platform}-typography`][styleName][
-        'fontWeight'
-      ] = {
-        value: style[0].document.style.fontWeight,
-      };
-      // text-style
-      if (style[0].document.style.italic) {
-        textStylesJSONObject[`${platform}-typography`][styleName][
-          'textStyle'
-        ] = {
-          value: 'italic',
+        // hard-coded font-weights for noto-sans
+        textStylesJSONObject[`${platform}-typography`]['fontweight-light'] = {
+          value: '300',
         };
-      }
-      // text-decoration
-      if (style[0].document.style.textDecoration === 'UNDERLINE') {
-        textStylesJSONObject[`${platform}-typography`][styleName][
-          'textDecoration'
-        ] = {
-          value: 'underline',
+        textStylesJSONObject[`${platform}-typography`]['fontweight-regular'] = {
+          value: '400',
         };
+        textStylesJSONObject[`${platform}-typography`][
+          'fontweight-semibold'
+        ] = {
+          value: '700',
+        };
+        textStylesJSONObject[`${platform}-typography`]['fontweight-bold'] = {
+          value: '700',
+        };
+
+        textStylesJSONObject[`${platform}-typography`][`${styleName}`] = {};
+
+        // line-height
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'lineHeight'
+        ] = {
+          value: `${style[0].document.style.lineHeightPx}px`,
+        };
+        // letter-spacing
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'letterSpacing'
+        ] = {
+          value: `${style[0].document.style.letterSpacing}px`,
+        };
+        // font-size
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'fontSize'
+        ] = {
+          value: `${style[0].document.style.fontSize}px`,
+        };
+        // // font-weight
+        // textStylesJSONObject[`${platform}-typography`][styleName][
+        //   'fontWeight'
+        // ] = {
+        //   value: style[0].document.style.fontWeight,
+        // };
+        // text-style
+        if (style[0].document.style.italic) {
+          textStylesJSONObject[`${platform}-typography`][styleName][
+            'textStyle'
+          ] = {
+            value: 'italic',
+          };
+        }
+        // text-decoration
+        if (style[0].document.style.textDecoration === 'UNDERLINE') {
+          textStylesJSONObject[`${platform}-typography`][styleName][
+            'textDecoration'
+          ] = {
+            value: 'underline',
+          };
+        }
+      } else {
+        // we grab the name of each text style and convert it to lower case
+        var styleName = style[0].document.name.toLowerCase();
+
+        textStylesJSONObject[`${platform}-typography`][`${styleName}`] = {};
+
+        // line-height
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'lineHeight'
+        ] = {
+          value: `${style[0].document.style.lineHeightPx}px`,
+        };
+        // letter-spacing
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'letterSpacing'
+        ] = {
+          value: `${style[0].document.style.letterSpacing}px`,
+        };
+        // font-size
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'fontSize'
+        ] = {
+          value: `${style[0].document.style.fontSize}px`,
+        };
+        // font-weight
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'fontWeight'
+        ] = {
+          value: style[0].document.style.fontWeight,
+        };
+        // text-style
+        if (style[0].document.style.italic) {
+          textStylesJSONObject[`${platform}-typography`][styleName][
+            'textStyle'
+          ] = {
+            value: 'italic',
+          };
+        }
+        // text-decoration
+        if (style[0].document.style.textDecoration === 'UNDERLINE') {
+          textStylesJSONObject[`${platform}-typography`][styleName][
+            'textDecoration'
+          ] = {
+            value: 'underline',
+          };
+        }
       }
     });
     await fs

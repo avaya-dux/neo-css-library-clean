@@ -1,0 +1,13 @@
+// could not create a new class for this as no way to override universal selector
+
+* {
+  font-family: $body-font-family;
+  font-size: $global-font-size;
+  line-height: $body-line-height;
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+}
