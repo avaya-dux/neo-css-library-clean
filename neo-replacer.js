@@ -51,6 +51,12 @@ const replace = require('replace-in-file');
 
 // we call the function as necessary
 
+const deleteRoot = {
+  files: './neo/scss/**/*.scss',
+  from: /neo-presence-red/g,
+  to: semGreenDark,
+};
+
 // replace(optionsToName).then((results) => {
 //   console.log('Replacement results:', results);
 
