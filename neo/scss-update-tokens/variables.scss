@@ -105,6 +105,8 @@ $global-opacity: 0.5;
 
 // Typography
 
+$heading-line-height: 1 !default;
+
 // new global typography variables
 
 $body-letter-spacing: $token-web-typography-web-body-regular-letter-spacing;
@@ -121,18 +123,18 @@ $heading-letter-spacing: $token-web-typography-web-heading-1-regular-letter-spac
 // specific header style tokens
 $heading-1-jumbo-font-size: $token-web-typography-web-heading-1-jumbo-font-size;
 $heading-1-jumbo-line-height: $token-web-typography-web-heading-1-jumbo-line-height;
-$header-line-heights: () !default;
+$heading-line-heights: () !default;
 $heading-line-heights: map-merge(
   (
     h1: $token-web-typography-web-heading-1-regular-line-height,
     h2: $token-web-typography-web-heading-2-regular-line-height,
-    h3: $token-web-typography-web-heading-3-regular-line-height,
-    h4: $token-web-typography-web-heading-4-regular-line-height,
+    h3: $token-web-typography-web-heading-3-line-height,
+    h4: $token-web-typography-web-heading-4-line-height,
     // we only go up to h4
       h5: $heading-line-height,
     h6: $heading-line-height,
   ),
-  $heading-line-heights-update
+  $heading-line-heights
 );
 
 // end of new global  typography variables
@@ -154,7 +156,6 @@ $heading-font-sizes: map-merge(
   $heading-font-sizes
 );
 $heading-font-weight: $global-font-regular-font-weight;
-// $heading-line-height: 1 !default;
 
 $subtitle-line-height: $global-line-height-tiny;
 $subtitle-padding-y: $global-spacer-large !default;
