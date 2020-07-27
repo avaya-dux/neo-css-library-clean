@@ -56,12 +56,12 @@ convertIconFontToBase64().then(async (result) => {
     {
       files: SVGArray,
       dest: 'build/css',
-      fontName: 'icons',
+      fontName: 'neo-icons-update',
       types: [],
       cssTemplate: 'templates/css.hbs',
       templateOptions: {
         src: `url(data:application/font-woff;base64,${result}) format('woff')`,
-        classPrefix: 'icon-',
+        classPrefix: 'neo-icon-',
       },
       html: true,
       htmlTemplate: 'templates/html.hbs',
