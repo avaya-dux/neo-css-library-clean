@@ -532,7 +532,7 @@ template {
 * {
   font-family: "noto-sans", sans-serif;
   font-size: 14px;
-  line-height: 16.40625px; }
+  line-height: 19.1px; }
   * *,
   * *::before,
   * *::after {
@@ -631,7 +631,7 @@ h3 {
   line-height: 29.9px; }
 
 h4 {
-  line-height: 22.26562px; }
+  line-height: 25.9px; }
 
 h5 {
   line-height: 1; }
@@ -662,14 +662,14 @@ h1-jumbo-token {
   font-weight: 700; }
 
 .neo-subtitle {
-  line-height: 11.71875px;
+  line-height: 13.6px;
   margin-bottom: 0;
   padding-bottom: 12px;
   padding-top: 12px; }
 
 small {
   font-size: 12px;
-  line-height: 14.0625px; }
+  line-height: 16.3px; }
 
 p {
   font-weight: 400;

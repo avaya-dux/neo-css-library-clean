@@ -33,6 +33,8 @@ async function pullTypographyTokens(styles) {
       if (platform === 'Web') {
         var styleName = style[0].document.name.toLowerCase();
 
+        // console.log(style[0].document);
+
         // hard-coded font-weights for noto-sans
         textStylesJSONObject[`${platform}-typography`]['fontweight-light'] = {
           value: '300',

@@ -59,8 +59,8 @@
     display: flex;
     padding: $footer-offset;
 
-    [class^="neo-"],
-    [class^="aoc-"] {
+    [class^='neo-'],
+    [class^='aoc-'] {
       border-radius: $footer-icon-border-radius;
       color: $footer-icon-color;
       font-size: $footer-icon-size;

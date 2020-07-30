@@ -61,7 +61,7 @@ convertIconFontToBase64().then(async (result) => {
       cssTemplate: 'templates/css.hbs',
       templateOptions: {
         src: `url(data:application/font-woff;base64,${result}) format('woff')`,
-        classPrefix: 'neo-icon-',
+        classPrefix: 'icons-update-',
       },
       html: true,
       htmlTemplate: 'templates/html.hbs',
