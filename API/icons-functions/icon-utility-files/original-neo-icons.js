@@ -1,3 +1,5 @@
+// this file allows us to console log all the original NEO icon names
+
 var icons = {
   'neo-icon-error-filled': 'e956',
   'neo-icon-error-outline': 'e957',
