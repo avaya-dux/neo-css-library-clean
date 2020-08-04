@@ -7,6 +7,9 @@
 @mixin neo-popover-header {
   &__header {
     padding: $popover-header-padding;
+    & ~ .popover-body {
+      padding: $global-spacer;
+    }
   }
 }
 

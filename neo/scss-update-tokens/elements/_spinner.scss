@@ -1,5 +1,5 @@
 @mixin spinner-animation {
-  animation: spinner-animation $spinner-animation-duration infinite;
+  animation: spinner-animation-update $spinner-animation-duration infinite;
 }
 
 @mixin spinner-size($config) {

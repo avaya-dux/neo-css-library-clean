@@ -28,14 +28,14 @@
 // Used in next components and elements:
 // *Spinner (../components/_spinner.scss)
 
-@keyframes spinner-animation {
+@keyframes spinner-animation-update {
   0% {
-    animation-timing-function: cubic-bezier($spinner-timing-0);
+    animation-timing-function: $token-interactivity-motion-ease-in;
     transform: rotate(0);
   }
 
   50% {
-    animation-timing-function: cubic-bezier($spinner-timing-50);
+    animation-timing-function: $token-interactivity-motion-ease-out;
     transform: rotate(180deg);
   }
 

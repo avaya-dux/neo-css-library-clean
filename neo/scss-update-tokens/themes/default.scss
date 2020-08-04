@@ -3,7 +3,7 @@
   @include define-color-hsl('secondary', hex-to-hsl($neo-mid-grey));
   @include define-color-hsl('success', hex-to-hsl($neo-active-green));
   @include define-color-hsl('alert', hex-to-hsl($neo-presence-red));
-  @include define-color-hsl('warning', hex-to-hsl($neo-presence-yellow));
+  @include define-color-hsl('warning', hex-to-hsl($neo-strong-orange));
   @include define-color-hsl('info', hex-to-hsl($neo-mid-blue));
 
   @include define-color-hsl('global-background', hex-to-hsl($neo-white));

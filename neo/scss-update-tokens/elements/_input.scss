@@ -79,6 +79,25 @@
     outline: none;
   }
 
+  // placeholder text colour
+
+  &::-webkit-input-placeholder {
+    color: $neo-mid-grey;
+    font-style: italic;
+  }
+  &::-moz-placeholder {
+    color: $neo-mid-grey;
+    font-style: italic;
+  }
+  &:-ms-input-placeholder {
+    color: $neo-mid-grey;
+    font-style: italic;
+  }
+  &::placeholder {
+    color: $neo-mid-grey;
+    font-style: italic;
+  }
+
   @include input--rounded;
   @include input--editable;
   @include input--states;

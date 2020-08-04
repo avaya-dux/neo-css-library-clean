@@ -13,7 +13,7 @@
 
 $neo-navy-black: $token-color-base-1000 !default;
 $neo-light-grey: $token-color-base-300 !default;
-$neo-mid-grey: $token-color-base-600 !default;
+$neo-mid-grey: $token-color-base-700 !default;
 $neo-blue-grey: $token-color-base-800 !default;
 $neo-light-blue-grey: $token-color-base-700 !default;
 $neo-blue-grey-dark: $token-color-base-900 !default;
@@ -397,8 +397,8 @@ $table-head-hover: $table-head-background !default;
 $table-head-font-color: $global-text-color !default;
 $table-border-width: 1px !default;
 $table-border: $table-border-width solid $global-border-color !default;
-$table-striped-background: lighten($table-row-hover, 20%) !default;
-@debug 'table-striped background: #{$table-striped-background}';
+$table-striped-background: $token-color-functional-blue-100 !default;
+// @debug 'table-striped background: #{$table-striped-background}';
 $table-stripe: even !default;
 $table-foot-background: $table-head-background !default;
 $table-foot-row-hover: $table-head-hover !default;
@@ -550,12 +550,12 @@ $button-types: map-merge(
       disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     warning: (
-      bg-color: $neo-presence-yellow,
+      bg-color: $neo-strong-orange,
       text-color: $global-text-inverse-color,
-      hover-bg-color: darken($neo-presence-yellow, 5%),
-      focus-bg-color: darken($neo-presence-yellow, 5%),
-      active-bg-color: $neo-presence-yellow,
-      active-box-shadow-color: $neo-presence-yellow,
+      hover-bg-color: darken($neo-strong-orange, 5%),
+      focus-bg-color: darken($neo-strong-orange, 5%),
+      active-bg-color: $neo-strong-orange,
+      active-box-shadow-color: $neo-strong-orange,
       disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     alert: (
@@ -880,7 +880,7 @@ $pagination-btn-padding: $global-spacer-small $global-spacer-large !default;
 $pagination-border-color: $global-border-color !default;
 $pagination-border-color-hover: $neo-mid-grey !default;
 $pagination-border: 1px solid $pagination-border-color !default;
-$pagination-dots-color: $neo-mid-grey !default;
+$pagination-dots-color: $neo-navy-black !default;
 $pagination-color: $neo-navy-black !default;
 $pagination-margin: $global-spacer !default;
 $pagination-transition: $global-transition-duration !default;
@@ -909,7 +909,7 @@ $pagination-disabled-color: rgba($neo-blue-grey-dark, $global-opacity) !default;
 // end of updated variables
 
 $tooltip-background: $neo-presence-yellow !default;
-$tooltip-color: #5b646e !default;
+$tooltip-color: #4a5359 !default;
 $tooltip-width: 20em !default;
 $tooltip-offset: 8px !default;
 $tooltip-animation-duration: $global-transition-duration !default;
@@ -1061,10 +1061,10 @@ $tab-min-height-default: 54px !default;
 $tab-min-height-small: 35px !default;
 $tab-min-height-medium: 44px !default;
 $tab-min-height-large: $tab-min-height-default !default;
-$tab-action-color: rgba($neo-blue-grey-dark, 0.6) !default;
+$tab-action-color: $neo-blue-grey-dark !default;
 $tab-action-border-bottom-width: 2px !default;
 $tab-action-active-color: $neo-blue-grey-dark !default;
-$tab-action-active-border-color: $neo-presence-yellow !default;
+$tab-action-active-border-color: $neo-mid-orange !default;
 $tab-action-disabled-color: $neo-light-grey !default;
 $tab-action-line-height: 14px !default;
 $tab-action-padding-default: 15px 15px !default;

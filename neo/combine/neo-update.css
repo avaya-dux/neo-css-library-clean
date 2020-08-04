@@ -5,10 +5,10 @@
   --neo-primary-color-h: 240;
   --neo-primary-color-s: 8.3871%;
   --neo-primary-color-l: 30.39216%;
-  --neo-secondary-color: hsl(240, 7.75862%, 54.5098%);
+  --neo-secondary-color: hsl(240, 7.8341%, 42.54902%);
   --neo-secondary-color-h: 240;
-  --neo-secondary-color-s: 7.75862%;
-  --neo-secondary-color-l: 54.5098%;
+  --neo-secondary-color-s: 7.8341%;
+  --neo-secondary-color-l: 42.54902%;
   --neo-success-color: hsl(120, 89.0411%, 28.62745%);
   --neo-success-color-h: 120;
   --neo-success-color-s: 89.0411%;
@@ -17,10 +17,10 @@
   --neo-alert-color-h: 0;
   --neo-alert-color-s: 70.12448%;
   --neo-alert-color-l: 52.7451%;
-  --neo-warning-color: hsl(30.2439, 88.48921%, 72.7451%);
-  --neo-warning-color-h: 30.2439;
-  --neo-warning-color-s: 88.48921%;
-  --neo-warning-color-l: 72.7451%;
+  --neo-warning-color: hsl(30, 81.4433%, 38.03922%);
+  --neo-warning-color-h: 30;
+  --neo-warning-color-s: 81.4433%;
+  --neo-warning-color-l: 38.03922%;
   --neo-info-color: hsl(212.85714, 84%, 49.01961%);
   --neo-info-color-h: 212.85714;
   --neo-info-color-s: 84%;
@@ -101,14 +101,14 @@
   --neo-dropdown-text-color-h: 0;
   --neo-dropdown-text-color-s: 0%;
   --neo-dropdown-text-color-l: 100%;
-  --neo-dropdown-divider-color: hsl(240, 7.75862%, 54.5098%);
+  --neo-dropdown-divider-color: hsl(240, 7.8341%, 42.54902%);
   --neo-dropdown-divider-color-h: 240;
-  --neo-dropdown-divider-color-s: 7.75862%;
-  --neo-dropdown-divider-color-l: 54.5098%;
-  --neo-dropdown-input-border-color: hsl(240, 7.75862%, 54.5098%);
+  --neo-dropdown-divider-color-s: 7.8341%;
+  --neo-dropdown-divider-color-l: 42.54902%;
+  --neo-dropdown-input-border-color: hsl(240, 7.8341%, 42.54902%);
   --neo-dropdown-input-border-color-h: 240;
-  --neo-dropdown-input-border-color-s: 7.75862%;
-  --neo-dropdown-input-border-color-l: 54.5098%;
+  --neo-dropdown-input-border-color-s: 7.8341%;
+  --neo-dropdown-input-border-color-l: 42.54902%;
   --neo-dropdown-item-hover-background-color: hsl(212.85714, 84%, 49.01961%);
   --neo-dropdown-item-hover-background-color-h: 212.85714;
   --neo-dropdown-item-hover-background-color-s: 84%;
@@ -1210,12 +1210,12 @@ hr {
   to {
     transform: scale(1); } }
 
-@keyframes spinner-animation {
+@keyframes spinner-animation-update {
   0% {
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.4, 0, 0.7, 0.2);
     transform: rotate(0); }
   50% {
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
     transform: rotate(180deg); }
   100% {
     transform: rotate(360deg); } }
@@ -1231,7 +1231,7 @@ hr {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  animation: spinner-animation 500ms infinite;
+  animation: spinner-animation-update 500ms infinite;
   height: 20px;
   width: 20px; }
   .neo-spinner::after {
@@ -1348,6 +1348,18 @@ hr {
   .neo-input:focus {
     box-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5);
     outline: none; }
+  .neo-input::-webkit-input-placeholder {
+    color: #646475;
+    font-style: italic; }
+  .neo-input::-moz-placeholder {
+    color: #646475;
+    font-style: italic; }
+  .neo-input:-ms-input-placeholder {
+    color: #646475;
+    font-style: italic; }
+  .neo-input::placeholder {
+    color: #646475;
+    font-style: italic; }
   .neo-input--rounded {
     border: 1px solid var(--neo-global-border-color);
     border-radius: 16px; }
@@ -1617,17 +1629,17 @@ hr {
     border-color: transparent; }
 
 .neo-btn--warning {
-  background-color: #f7ba7c;
+  background-color: #b06112;
   color: var(--neo-global-text-inverse-color); }
   .neo-btn--warning:focus {
-    background-color: #f6ad64; }
+    background-color: #995410; }
   .neo-btn--warning:hover {
-    background-color: #f6ad64; }
+    background-color: #995410; }
   .neo-btn--warning:focus {
     box-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5); }
   .neo-btn--warning:active {
-    background-color: #f7ba7c;
-    box-shadow: 0 1px 3px 3px rgba(247, 186, 124, 0.2); }
+    background-color: #b06112;
+    box-shadow: 0 1px 3px 3px rgba(176, 97, 18, 0.2); }
   .neo-btn--warning[disabled], .neo-btn--warning--disabled {
     background-color: var(--neo-button-default-disabled-bg-color);
     color: hsla(var(--neo-global-text-color-h), var(--neo-global-text-color-s), var(--neo-global-text-color-l), 50%);
@@ -1863,7 +1875,7 @@ hr {
   .neo-close--clear {
     background-color: transparent; }
     .neo-close--clear::after, .neo-close--clear::before {
-      background-color: #828294; }
+      background-color: #646475; }
     .neo-close--clear:hover {
       background-color: transparent; }
     .neo-close--clear:hover::after, .neo-close--clear:hover::before {
@@ -1982,7 +1994,7 @@ hr {
   .neo-table--bordered td {
     border: 1px solid var(--neo-global-border-color); }
   .neo-table--striped tbody tr:nth-of-type(even) {
-    background-color: white;
+    background-color: #e8f1fc;
     border-bottom: 0; }
   .neo-table--hover thead tr:hover {
     background-color: #dfdfe5; }
@@ -2187,7 +2199,7 @@ hr {
     text-decoration: none; }
     .neo-pagination__item:hover {
       background-color: var(--neo-global-background-color);
-      border-color: #828294;
+      border-color: #646475;
       color: #000000;
       transition: 0.4s; }
     .neo-pagination__item--disabled, .neo-pagination__item--disabled:hover, .neo-pagination__item--disabled:active, .neo-pagination__item[disabled] {
@@ -2206,7 +2218,7 @@ hr {
         border-color: #1267cf;
         color: #ffffff; }
   .neo-pagination__dots {
-    color: #828294;
+    color: #000000;
     font-size: 20px;
     pointer-events: none; }
   .neo-pagination--is-right .neo-pagination__list {
@@ -2295,7 +2307,7 @@ hr {
   display: inline-block;
   position: relative;
   vertical-align: middle;
-  animation: spinner-animation 500ms infinite;
+  animation: spinner-animation-update 500ms infinite;
   height: 20px;
   width: 20px;
   animation: none;
@@ -2345,7 +2357,7 @@ hr {
     margin: 0;
     top: 8px;
     width: 16px;
-    animation: spinner-animation 500ms infinite; }
+    animation: spinner-animation-update 500ms infinite; }
 
 .neo-select__icon {
   align-items: center;
@@ -2390,7 +2402,7 @@ hr {
   animation: show-element 0.4s;
   background: #f7ba7c;
   border-radius: 4px;
-  color: #5b646e;
+  color: #4a5359;
   content: attr(data-tooltip);
   display: none;
   font-size: 12px;
@@ -2615,7 +2627,7 @@ hr {
       position: absolute;
       transition: all 0.25s ease-in-out; }
     .neo-switch input + .neo-switch__icon::before {
-      background-color: #828294;
+      background-color: #646475;
       height: 20px;
       width: 40px; }
     .neo-switch input + .neo-switch__icon::after {
@@ -2754,7 +2766,7 @@ hr {
   .neo-chip--disabled .neo-close,
   .neo-chip--disabled .neo-close:hover {
     background: #dfdfe5;
-    color: #828294;
+    color: #646475;
     cursor: not-allowed; }
   .neo-chip .neo-close:focus {
     box-shadow: none; }
@@ -2821,7 +2833,7 @@ hr {
   .neo-chips__item--disabled .neo-close,
   .neo-chips__item--disabled .neo-close:hover {
     background: #dfdfe5;
-    color: #828294;
+    color: #646475;
     cursor: not-allowed; }
   .neo-chips__item .neo-close:focus {
     box-shadow: none; }
@@ -2937,7 +2949,7 @@ hr {
         margin-left: 0; }
     .neo-tabs__item a {
       border-bottom: 2px solid transparent;
-      color: rgba(54, 54, 64, 0.6);
+      color: #363640;
       cursor: pointer;
       display: block;
       margin: 0;
@@ -2950,7 +2962,7 @@ hr {
     .neo-tabs__item:hover a {
       color: #363640; }
     .neo-tabs__item--active a {
-      border-bottom-color: #f7ba7c;
+      border-bottom-color: #e57607;
       color: #363640; }
     .neo-tabs__item--disabled,
     .neo-tabs__item--disabled > a {
@@ -3000,7 +3012,7 @@ hr {
     overflow: hidden; }
   .neo-tabs .neo-tabs__action {
     align-items: center;
-    color: rgba(54, 54, 64, 0.6);
+    color: #363640;
     cursor: pointer;
     display: flex;
     margin: 0;
@@ -3196,6 +3208,8 @@ hr {
 
 .neo-popover__header {
   padding: 5px 10px; }
+  .neo-popover__header ~ .popover-body {
+    padding: 8px; }
 
 .neo-popover__content {
   animation: show-element 0.4s;
@@ -3651,7 +3665,7 @@ hr {
         display: none; }
       .neo-widget--loading > .neo-widget__content::before {
         animation: widgetLoadingContent 2s infinite linear;
-        background: linear-gradient(to right, #828294 50%, #363640);
+        background: linear-gradient(to right, #646475 50%, #363640);
         background-size: 100vw;
         content: '';
         display: flex;
@@ -3681,7 +3695,7 @@ hr {
     box-shadow: none; }
 
 .neo-empty-state {
-  color: #828294;
+  color: #646475;
   font-size: 16px;
   font-weight: 400;
   left: 0;
@@ -3703,7 +3717,7 @@ hr {
     margin-bottom: 0; }
 
 .neo-empty-state-update {
-  color: #828294;
+  color: #646475;
   font-size: 16px;
   font-weight: 400;
   left: 0;
@@ -4134,7 +4148,7 @@ hr {
         margin: 0;
         padding: 0; }
   .neo-footer__state {
-    background-color: #828294;
+    background-color: #646475;
     flex-shrink: 0;
     line-height: 47px;
     padding: 0 20px;
