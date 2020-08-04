@@ -3,6 +3,7 @@
   display: inline-block;
   position: relative;
   width: 100%;
+  margin-top: $select-margin-top;
 }
 
 @mixin neo-select-element {

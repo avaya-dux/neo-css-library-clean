@@ -64,7 +64,7 @@
   font-weight: $button-font-weight;
   height: $button-height;
   outline: 0;
-  padding: 0 $button-padding-x;
+  padding: $button-padding-y $button-padding-x;
   transition: $button-transition;
   width: auto;
 
@@ -86,7 +86,8 @@
     font-size: $button-icon-size;
     height: $button-icon-size;
     justify-content: center;
-    padding: 0;
+    // padding: 0;
+    padding: $token-global-spacer-regular;
     width: $button-icon-size;
 
     &::before {

@@ -89,10 +89,10 @@ $global-font-size-x-large: 24px !default;
 $global-spacer: $token-global-spacer-regular !default;
 $global-spacer-small: $token-global-spacer-small !default;
 $global-spacer-large: $token-global-spacer-large !default;
-$global-spacer-x-large: $token-global-spacer-large !default;
+$global-spacer-x-large: $token-global-spacer-x-large !default;
 $global-divider-thickness: 1px !default;
 // need a new one
-$global-radius: $token-border-radius-2-px !default;
+$global-radius: $token-border-radius-4-px !default;
 // need a new one
 $global-transition-duration: 0.4s !default;
 $global-border-color: var-color-name(global-border) !default;
@@ -273,7 +273,7 @@ $input-font-size: $global-font-size !default;
 $input-font-color: $global-text-color !default;
 $input-line-height: 1.2 !default;
 $input-in-label-margin-top: $global-spacer-small !default;
-$input-padding-x: $global-spacer-large !default;
+$input-padding-x: $global-spacer-x-large !default;
 $input-padding-y: $global-spacer !default;
 $input-rounded-border-radius: $input-height / 2 !default;
 $input-group-addon-background-color: darken-var(
@@ -285,9 +285,10 @@ $input-group-icon-padding: 30px !default;
 $input-group-icon-offset: 0 8px !default;
 $input-hint-font-size: $global-font-size-small !default;
 $input-hint-margin-top: $global-spacer-small !default;
-$input-hint-muted-color: lighten-var($input-font-color, 40%) !default;
-$input-disabled-bg: $global-disabled-background !default;
-$input-disabled-color: $global-disabled-text-color !default;
+$input-hint-muted-color: lighten-var($input-font-color, 30%) !default;
+@debug 'input-hint-muted-color: #{$input-hint-muted-color}';
+$input-disabled-bg: darken-var($input-background-color, 5%) !default;
+$input-disabled-color: rgba($input-font-color, $global-opacity) !default;
 $input-state-color-map: () !default;
 $input-state-color-map: map-merge(
   (
@@ -320,6 +321,10 @@ $input-state-color-map: map-merge(
 // $select-padding-right-update: $token-dropdown-padding-right !default;
 // $select-table-page-show-width-update: $token-table-pagination-count-select-width !default;
 //end of updated select variables
+
+// new select token variables
+$select-margin-top: $global-spacer-small;
+// end of select token variables
 
 $select-transition: 0.25s all ease !default;
 $select-font-color: $input-font-color !default;
@@ -391,8 +396,9 @@ $table-head-background: $neo-light-grey !default;
 $table-head-hover: $table-head-background !default;
 $table-head-font-color: $global-text-color !default;
 $table-border-width: 1px !default;
-$table-border: $table-border-width solid $table-head-background !default;
+$table-border: $table-border-width solid $global-border-color !default;
 $table-striped-background: lighten($table-row-hover, 20%) !default;
+@debug 'table-striped background: #{$table-striped-background}';
 $table-stripe: even !default;
 $table-foot-background: $table-head-background !default;
 $table-foot-row-hover: $table-head-hover !default;
@@ -486,6 +492,12 @@ $table-editable-bg-color: lighten($neo-presence-green, 45%);
 // );
 //end of updated button variables
 
+// new token wash button variables
+
+$button-padding-y: $global-spacer;
+
+// end of new token wash button variables
+
 $button-bg-color-lightness-scale: 60 !default;
 $button-transition: background-color $global-transition-duration ease-in-out !default;
 $button-font-weight: 400 !default;
@@ -510,7 +522,7 @@ $button-types: map-merge(
       hover-bg-color: lighten-var(var-color-name(button-default-bg), 5%),
       active-bg-color: lighten-var(var-color-name(button-default-bg), 5%),
       active-box-shadow-color: var-color-name(button-default-bg),
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     primary: (
       bg-color: var-color-name(button-primary-bg),
@@ -518,7 +530,7 @@ $button-types: map-merge(
       hover-bg-color: lighten-var(var-color-name(button-primary-bg), 5%),
       active-bg-color: lighten-var(var-color-name(button-primary-bg), 5%),
       active-box-shadow-color: var-color-name(button-primary-bg),
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     secondary: (
       bg-color: $neo-light-grey,
@@ -526,7 +538,7 @@ $button-types: map-merge(
       hover-bg-color: darken($neo-light-grey, 5%),
       active-bg-color: darken($neo-light-grey, 5%),
       active-box-shadow-color: $neo-light-grey,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     success: (
       bg-color: $neo-active-green,
@@ -535,7 +547,7 @@ $button-types: map-merge(
       focus-bg-color: darken($neo-active-green, 5%),
       active-bg-color: $neo-active-green,
       active-box-shadow-color: $neo-active-green,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     warning: (
       bg-color: $neo-presence-yellow,
@@ -544,7 +556,7 @@ $button-types: map-merge(
       focus-bg-color: darken($neo-presence-yellow, 5%),
       active-bg-color: $neo-presence-yellow,
       active-box-shadow-color: $neo-presence-yellow,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     alert: (
       bg-color: $neo-presence-red,
@@ -553,7 +565,7 @@ $button-types: map-merge(
       focus-bg-color: darken($neo-presence-red, 5%),
       active-bg-color: $neo-presence-red,
       active-box-shadow-color: $neo-presence-red,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     info: (
       bg-color: $neo-mid-blue,
@@ -562,7 +574,7 @@ $button-types: map-merge(
       focus-bg-color: darken($neo-mid-blue, 5%),
       active-bg-color: $neo-mid-blue,
       active-box-shadow-color: $neo-mid-blue,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     ghost: (
       bg-color: $global-background,
@@ -571,7 +583,7 @@ $button-types: map-merge(
       hover-bg-color: darken-var($global-background, 5%),
       active-bg-color: darken-var($global-background, 5%),
       active-box-shadow-color: $neo-light-grey,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
     ),
     clear: (
       bg-color: transparent,
@@ -896,7 +908,7 @@ $pagination-disabled-color: rgba($neo-blue-grey-dark, $global-opacity) !default;
 // $tooltip-height-update: $token-tooltip-height !default;
 // end of updated variables
 
-$tooltip-background: #fcf8d1 !default;
+$tooltip-background: $neo-presence-yellow !default;
 $tooltip-color: #5b646e !default;
 $tooltip-width: 20em !default;
 $tooltip-offset: 8px !default;

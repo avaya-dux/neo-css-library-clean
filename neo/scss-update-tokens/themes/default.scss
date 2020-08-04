@@ -7,7 +7,7 @@
   @include define-color-hsl('info', hex-to-hsl($neo-mid-blue));
 
   @include define-color-hsl('global-background', hex-to-hsl($neo-white));
-  @include define-color-hsl('global-border', hex-to-hsl($neo-light-grey));
+  @include define-color-hsl('global-border', hex-to-hsl($token-color-base-600));
   @include define-color-hsl('global-text', hex-to-hsl($neo-navy-black));
   @include define-color-hsl('global-text-inverse', hex-to-hsl($neo-white));
   @include define-color-hsl('link-color', hex-to-hsl($neo-mid-blue));

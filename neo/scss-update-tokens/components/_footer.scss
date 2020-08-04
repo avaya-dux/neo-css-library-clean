@@ -67,6 +67,8 @@
       margin-right: $footer-indent;
       padding: $footer-icon-padding;
       transition: $footer-icon-transition;
+      // hard-coded for now
+      line-height: 1.5;
 
       @include rtl-selector {
         margin: {

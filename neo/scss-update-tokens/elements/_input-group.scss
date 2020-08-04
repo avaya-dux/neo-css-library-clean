@@ -108,6 +108,7 @@
   display: flex;
   vertical-align: middle;
   width: 100%;
+  height: $input-height;
 
   .neo-input-hint + & {
     margin-bottom: 0;
