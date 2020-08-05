@@ -5,7 +5,10 @@ const fs = require('fs').promises;
 async function getIconInformation(string) {
   // file to record icon names for DS Portal
 
-  await fs.writeFile('./iconInfo.js', 'export const iconInfo = [');
+  await fs.writeFile(
+    './icons-functions/icon-utility-files/iconInfo.js',
+    'export const iconInfo = ['
+  );
 
   // get the full icon name ex. outline/content/worklog
 
@@ -29,7 +32,7 @@ async function getIconInformation(string) {
   // write this information to iconInfo.js utility file
 
   await fs.appendFile(
-    './iconInfo.js',
+    './icons-functions/icon-utility-files/iconInfo.js',
     `['${fullIconName}', '${iconName}', '${iconCategory}', '${iconOutlineType}'],`
   );
 }
