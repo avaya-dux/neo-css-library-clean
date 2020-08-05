@@ -6,13 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node -r esm server.js",
-    "icongen": "node iconsFileFunctions.js &&  npx icon-font-generator properties/assets/icons/svgs/*.svg -o properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node iconsCSSGenerator.js",
-    "demo": "node -r esm designTokensFileFunctions.js && node -r esm server.js && node -r esm styleDicExt.js && node-sass neo/scss-update/main.scss ../neo-uxteam-demo/neo.css",
-    "update": "node-sass neo/scss-update/main.scss ../Avaya_Design_Portal_proto/DT_gen_files//neo.css",
-    "update-tokens": "node-sass neo/scss-update-tokens/main.scss ../neo-update-demo/neo.css",
-    "update-combine": "node-sass neo/original-neo-styles/neo-scss/main.scss neo/combine/neo.css && node-sass neo/scss-update-tokens/main.scss neo/combine/neo-update.css && node-sass neo/combine/combine.scss ../Avaya_Design_Portal_proto/DT_gen_files/combined.css && node -r esm neo-replacer.js",
-    "automatescss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js && npm run update",
-    "automatecss": "npm start && node styleDicExt.js && node -r esm neo-replacer.js"
+    "icongen": "cd API && node -r esm design-system-functions.js && npx icon-font-generator ../properties/assets/icons/svgs/*.svg -o ../properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node -r esm ./icons-functions/icon-css-generator.js",
+    "update": "node-sass neo/original-neo-styles/neo-scss/main.scss neo/combine/neo.css && node-sass neo/scss-update-tokens/main.scss neo/combine/neo-update.css && node-sass neo/combine/combine.scss ../Avaya_Design_Portal_proto/DT_gen_files/combined.css && node -r esm neo-replacer.js"
   },
   "keywords": [
     "Figma"

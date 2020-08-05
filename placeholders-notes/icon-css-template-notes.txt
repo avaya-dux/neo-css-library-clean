@@ -1,0 +1,15 @@
+[class^="{{classPrefix}}"].button:not(:empty):before,
+[class*="{{classPrefix}}"].button:not(:empty):before {
+margin-right: 10px;
+}
+
+[dir="rtl"][class^="{{classPrefix}}"].button:not(:empty):before,
+[dir="rtl"][class^="{{classPrefix}}"].button:not(:empty):before {
+margin-left: 10px;
+}
+
+{{# each codepoints }}
+.{{ ../classPrefix }}right-{{ @key }}:after {
+content: "\\{{ this }}";
+}
+{{/ each }}

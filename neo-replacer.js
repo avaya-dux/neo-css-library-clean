@@ -1,4 +1,4 @@
-//Code to edit NEO .css file as necessary after creation
+//Code to edit NEO .css files as necessary AFTER RUNNING SCRIPT TO COMBINE .CSS FILES
 
 // import replace-in-file module
 
