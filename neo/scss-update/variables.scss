@@ -313,8 +313,8 @@ $input-state-color-map-update: map-merge(
   $input-state-color-map-update
 );
 $input-hint-muted-color-update: $token-input-helper-color !default;
-$input-width-update: $token-input-width !default;
-$input-height-update: $token-input-height !default;
+$input-width-update: auto !default;
+$input-height-update: 32px !default;
 $input-placeholder-font-style-update: $token-input-placeholder-font-style !default;
 $input-readonly-padding-update: $token-input-readonly-padding !default;
 $input-clear-button-color: $token-input-filled-close-button-color !default;
@@ -1223,7 +1223,7 @@ $popover-header-height-update: $token-popover-header-height !default;
 $popover-line-height-update: $token-web-typography-web-body-semibold-line-height !default;
 $popover-letter-spacing-update: $token-web-typography-web-body-semibold-letter-spacing !default;
 $popover-font-size-update: $token-web-typography-web-body-semibold-font-size !default;
-$popover-font-weight-update: $token-web-typography-web-body-semibold-font-weight !default;
+$popover-font-weight-update: $token-web-typography-fontweight-semibold !default;
 
 // end of updated variables
 

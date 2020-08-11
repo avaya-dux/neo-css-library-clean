@@ -27,7 +27,9 @@ async function getIconInformation(string) {
 
   // get the icon name ex. worklog
 
-  var iconName = string.slice(string.lastIndexOf('/') + 1);
+  var iconName = string
+    .slice(string.lastIndexOf('/') + 1)
+    .replace(/\/|\s+/g, '');
 
   // write this information to iconInfo.js utility file
 
@@ -35,15 +37,20 @@ async function getIconInformation(string) {
     './icons-functions/icon-utility-files/iconInfo.js',
     `['${fullIconName}', '${iconName}', '${iconCategory}', '${iconOutlineType}'],`
   );
+
+  // functionality to log icon names to console
+  // TO-DO: separate out into function
+
+  if (iconOutlineType != 'fill') {
+    console.log(`"${iconName}",`);
+    // console.log(iconCategory);
+  }
 }
 
 // test function to generate a list of icon names for use in our Design System portal
 
-// async function getIconNames(iconFiles) {
-
-//   files.forEach((file) => {
-//     console.log(`"${file.replace('.svg', '')}",`);
-//   });
+// async function getIconNames(iconName) {
+//   console.log(iconName);
 // }
 
 // test function to generate a .js file with exportable SVG code so users can copy it on our portal

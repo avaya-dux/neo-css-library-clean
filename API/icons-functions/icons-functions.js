@@ -106,7 +106,14 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
 
     // we seperate out '-' and '/' from icon name
 
-    var iconName = component.name.toLowerCase().replace(/\-|\/|\s+/g, '');
+    var iconName = component.name.toLowerCase().replace(/\/|\s+/g, '');
+
+    // temporarily skip over 'fill' icons
+    // TO-DO: separate this out
+
+    if (iconName.includes('fill') && !iconName.includes('star')) {
+      return;
+    }
 
     // we check to see whether any names in the Figma file are duplicated
 
@@ -167,6 +174,10 @@ async function generateIconFiles(iconArrays, URLs, fileType) {
       var iconFileName = `../properties/assets/icons/${fileType}s/${
         Object.keys(tag)[0]
       }.${fileType}`;
+
+      var iconName = Object.keys(tag)[0]
+        .slice(Object.keys(tag)[0].lastIndexOf('/') + 1)
+        .replace(/\-|\/|\s+/g, '');
 
       await writeIconContentFromURL(iconURL, iconFileName).catch((error) => {
         // if there was an error pulling icon content from the URL, we switch success to false

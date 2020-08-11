@@ -28,14 +28,13 @@ async function pullAllDesignTokens() {
   await spacerTokens.pullSpacerTokens();
 }
 
-// pullAllDesignTokens()
-//   .then(() =>
-iconFunctions
-  .pullIcons(
-    coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-    coreFigmaFunctions.figmaCredentials.iconsFileID
+pullAllDesignTokens()
+  .then(() =>
+    iconFunctions.pullIcons(
+      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+      coreFigmaFunctions.figmaCredentials.iconsFileID
+    )
   )
-  // )
   .catch((error) => console.log(error));
 
 // exports.createAllStyles = createAllStyles;

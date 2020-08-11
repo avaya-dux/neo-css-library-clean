@@ -3,6 +3,9 @@ const webfontsGenerator = require('webfonts-generator');
 
 const iconUtilityFunctions = require('./icon-utility-files/icons-utility-functions.js');
 
+const iconInfo = require('./icon-utility-files/iconInfo.js');
+const { includes } = require('lodash');
+
 // Code to generate .css file for icons -- THIS CODE TO BE RUN AFTER ICONGEN SCRIPT
 
 // This function converts our icon font .woff file to base64
@@ -29,8 +32,18 @@ convertIconFontToBase64().then(async (result) => {
 
       await iconUtilityFunctions.createCopyableSVG(files);
 
-      return files.map((file) => {
-        return `../properties/assets/icons/svgs/${file}`;
+      // we temporarily filter out 'fill' type icons
+
+      var unfilteredArray = files.map((file) => {
+        if (file.includes('fill') && !file.includes('star')) {
+          return;
+        } else {
+          return `../properties/assets/icons/svgs/${file}`;
+        }
+      });
+
+      return unfilteredArray.filter((icon) => {
+        return icon != undefined;
       });
     });
 
@@ -45,7 +58,9 @@ convertIconFontToBase64().then(async (result) => {
       cssTemplate: '../templates/css.hbs',
       templateOptions: {
         src: `url(data:application/font-woff;base64,${result}) format('woff')`,
-        classPrefix: 'neo-icon-',
+        // temporary class prefix for the purposes of side-by-side demo
+        // TO-DO: replace this with universal class name when using namespaces
+        classPrefix: 'neo-icons-update-',
       },
       html: true,
       htmlTemplate: '../templates/html.hbs',
