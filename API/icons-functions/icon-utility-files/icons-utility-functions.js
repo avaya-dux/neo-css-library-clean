@@ -65,7 +65,7 @@ async function createCopyableSVG(files) {
     await fs
       .readFile(`../properties/assets/icons/svgs/${file}`)
       .then(async (code) => {
-        var iconName = file.replace('.svg', '');
+        var iconName = file.replace(/.svg/g, '').replace(/-/g, '');
         var codeString = await code
           .toString()
           .replace(/xlink:href/g, 'xlinkHref')
