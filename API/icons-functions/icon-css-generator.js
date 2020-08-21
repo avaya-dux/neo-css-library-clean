@@ -6,6 +6,19 @@ const iconUtilityFunctions = require('./icon-utility-files/icons-utility-functio
 const iconInfo = require('./icon-utility-files/iconInfo.js');
 const { includes } = require('lodash');
 
+const Handlebars = require('handlebars');
+
+Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
+  var stringsToReplace = new RegExp(
+    /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
+    'g'
+  );
+
+  var amendedArg = arg1.replace(stringsToReplace, '');
+
+  return amendedArg === arg2 ? options.fn(this) : options.inverse(this);
+});
+
 // Code to generate .css file for icons -- THIS CODE TO BE RUN AFTER ICONGEN SCRIPT
 
 // This function converts our icon font .woff file to base64
@@ -53,14 +66,14 @@ convertIconFontToBase64().then(async (result) => {
     {
       files: IconsArray,
       dest: '../build/css',
-      fontName: 'AOC-Icons-update',
+      fontName: 'NEO-icon-update',
       types: [],
       cssTemplate: '../templates/css.hbs',
       templateOptions: {
         src: `url(data:application/font-woff;base64,${result}) format('woff')`,
         // temporary class prefix for the purposes of side-by-side demo
         // TO-DO: replace this with universal class name when using namespaces
-        classPrefix: 'neo-icons-update-',
+        classPrefix: 'neo-icon-',
       },
       html: true,
       htmlTemplate: '../templates/html.hbs',
@@ -71,7 +84,7 @@ convertIconFontToBase64().then(async (result) => {
       if (error) {
         console.log('Fail!', error);
       } else {
-        console.log('AOC-Icons-update.css generated in build/ folder');
+        console.log('NEO-icon-update.css generated in build/ folder');
       }
     }
   );

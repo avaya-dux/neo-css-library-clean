@@ -24,13 +24,14 @@ const replace = require('replace-in-file');
 
 */
 
+// this is also used in icons-utility-functions to create copyable SVGs
 var stringsToReplace = new RegExp(
-  /(?<!email-|info-|error-|warning-|star-)outline|status|communication|file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
+  /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
   'g'
 );
 
 const iconReplace = {
-  files: '../build/css/AOC-Icons-update.css',
+  files: '../build/css/NEO-icon-update.css',
   from: stringsToReplace,
   to: '',
 };

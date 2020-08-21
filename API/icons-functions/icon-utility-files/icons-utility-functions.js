@@ -2,6 +2,35 @@ const fs = require('fs').promises;
 
 // test functions for recording information on icons for inclusion in Design Portal site
 
+// test function to generate a .js file with exportable SVG code so users can copy it on our portal
+
+async function createCopyableSVG(files) {
+  await fs.writeFile(
+    './icons-functions/icon-utility-files/copyableSVGs.js',
+    'import React from "react"; import { renderToString } from "react-dom";'
+  );
+
+  files.forEach(async (file) => {
+    await fs
+      .readFile(`../properties/assets/icons/svgs/${file}`)
+      .then(async (code) => {
+        var stringsToReplace = new RegExp(
+          /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|social(?!-active)|logo|other/,
+          'g'
+        );
+        var iconName = file.replace(stringsToReplace, '').replace(/-/g, '');
+        var codeString = await code
+          .toString()
+          .replace(/xlink:href/g, 'xlinkHref')
+          .replace(/xmlns:xlink/g, 'xmlnsXlink');
+        await fs.appendFile(
+          './icons-functions/icon-utility-files/copyableSVGs.js',
+          `export const ${iconName.replace('.svg', '')} = (${codeString});`
+        );
+      });
+  });
+}
+
 async function getIconInformation(string) {
   // file to record icon names for DS Portal
 
@@ -13,6 +42,10 @@ async function getIconInformation(string) {
   // get the full icon name ex. outline/content/worklog
 
   var fullIconName = string.toLowerCase().replace(/\-|\/|\s+/g, '');
+
+  // this line logs the icon names to console for inclusion in the Design Portal
+  // TO-DO - create a seperate file to hold this information
+  // console.log(`"${fullIconName}",`);
 
   // get the icon type ex. outline
 
@@ -42,6 +75,7 @@ async function getIconInformation(string) {
   // TO-DO: separate out into function
 
   if (iconOutlineType != 'fill') {
+    // console.log(`"${iconName.replace(/-/g, '')}",`);
     console.log(`"${iconName}",`);
     // console.log(iconCategory);
   }
@@ -52,31 +86,6 @@ async function getIconInformation(string) {
 // async function getIconNames(iconName) {
 //   console.log(iconName);
 // }
-
-// test function to generate a .js file with exportable SVG code so users can copy it on our portal
-
-async function createCopyableSVG(files) {
-  await fs.writeFile(
-    './icons-functions/icon-utility-files/copyableSVGs.js',
-    'import React from "react"; import { renderToString } from "react-dom";'
-  );
-
-  files.forEach(async (file) => {
-    await fs
-      .readFile(`../properties/assets/icons/svgs/${file}`)
-      .then(async (code) => {
-        var iconName = file.replace(/.svg/g, '').replace(/-/g, '');
-        var codeString = await code
-          .toString()
-          .replace(/xlink:href/g, 'xlinkHref')
-          .replace(/xmlns:xlink/g, 'xmlnsXlink');
-        await fs.appendFile(
-          './icons-functions/icon-utility-files/copyableSVGs.js',
-          `export const ${iconName} = (${codeString});`
-        );
-      });
-  });
-}
 
 exports.getIconInformation = getIconInformation;
 exports.createCopyableSVG = createCopyableSVG;

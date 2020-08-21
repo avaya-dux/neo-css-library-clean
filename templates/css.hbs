@@ -37,7 +37,70 @@ transform: scaleX(-1) !important;
 }
 
 {{# each codepoints }}
-.{{ ../classPrefix }}{{ @key }}:before {
+.{{ ../classPrefix }}{{ @key }}:before, .aoc-icon-{{ @key}}:before {
 content: "\\{{ this }}";
 }
+
+{{#ifEquals @key "address-book"}}
+.{{ ../classPrefix }}-address-book-inverted:before, .aoc-icon-address-book-inverted:before,
+.{{ ../classPrefix }}-address-folder:before, .aoc-icon-address-folder:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "agents"}}
+.{{ ../classPrefix }}-agents-inverted:before, .aoc-icon-agents-inverted:before,
+.{{ ../classPrefix }}-my-agents:before, .aoc-icon-my-agents:before, .{{ ../classPrefix }}-customer-consult:before,
+.aoc-icon-customer-consult:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "arrow-down"}}
+.{{ ../classPrefix }}-inbound:before, .aoc-icon-inbound:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "arrow-up"}}
+.{{ ../classPrefix }}-outbound:before, .aoc-icon-outbound:before, .{{ ../classPrefix }}-outbound-channel:before,
+.aoc-icon-outbound-channel:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "awfos"}}
+.{{ ../classPrefix }}-awfos-portal:before, .aoc-icon-awfos-portal:before, .{{ ../classPrefix }}-rtl-awfos:before,
+.aoc-icon-rtl-awfos:before, .{{ ../classPrefix }}-rtl-evaluation:before, .aoc-icon-rtl-evaluation:before, {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "bot-avatar"}}
+.{{ ../classPrefix }}-robot:before, .aoc-icon-robot:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "bullet-list"}}
+.{{ ../classPrefix }}-list:before, .aoc-icon-list:before, .{{ ../classPrefix }}-list-closed:before,
+.aoc-icon-list-closed:before, .{{ ../classPrefix }}-list-clock:before, .aoc-icon-list-clock:before,
+.{{ ../classPrefix }}-list-file:before, .aoc-icon-list-file:before,{
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "chat"}}
+.{{ ../classPrefix }}-chat-channel:before, .aoc-icon-chat-channel:before, .{{ ../classPrefix }}-messaging:before,
+.aoc-icon-messaging:before, {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "chat-alerting"}}
+.{{ ../classPrefix }}-messaging-alerting:before, .aoc-icon-messaging-alerting:before, {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
 {{/ each }}
