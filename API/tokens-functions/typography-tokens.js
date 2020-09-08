@@ -45,7 +45,7 @@ async function pullTypographyTokens(styles) {
         textStylesJSONObject[`${platform}-typography`][
           'fontweight-semibold'
         ] = {
-          value: '700',
+          value: '600',
         };
         textStylesJSONObject[`${platform}-typography`]['fontweight-bold'] = {
           value: '700',

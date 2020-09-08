@@ -24,14 +24,14 @@ const replace = require('replace-in-file');
 
 */
 
-// this is also used in icons-utility-functions to create copyable SVGs
+// this is also used in icons-utility-functions to create copyable SVGs, and in our Firebase Functiosn file to change the file name as necessary
 var stringsToReplace = new RegExp(
-  /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
+  /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
   'g'
 );
 
 const iconReplace = {
-  files: '../build/css/NEO-icon-update.css',
+  files: '../build/css/updated-neo-icons.css',
   from: stringsToReplace,
   to: '',
 };

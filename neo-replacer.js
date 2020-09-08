@@ -11,7 +11,7 @@ var rootRegEx = new RegExp(':root', 'g');
 // create Object to use as function parameter
 
 const deleteRoot = {
-  files: '../Avaya_Design_Portal_proto/DT_gen_files/combined.css',
+  files: './neo/dist/3.0.0/neo.css',
   from: rootRegEx,
   to: '',
 };

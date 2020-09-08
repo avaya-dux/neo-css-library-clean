@@ -3,7 +3,11 @@ font-family: "{{ fontName }}";
 src: {{{ src }}};
 }
 
-[class^="{{classPrefix}}"]:before, [class*="{{classPrefix}}"]:before {
+
+
+
+[class^="{{classPrefix}}"]:before, [class*="{{classPrefix}}"]:before, [class^='aoc-']::before,
+[class*='aoc-']::before {
 font-family: {{ fontName }} !important;
 -webkit-font-feature-settings: "liga";
 -moz-font-feature-settings: "liga=1";
@@ -31,7 +35,9 @@ vertical-align: middle;
 font-size: 32px;
 }
 
-[dir="rtl"][class^="{{classPrefix}}"]:before, [dir="rtl"][class^="{{classPrefix}}"]:before
+[dir="rtl"][class^="{{classPrefix}}"]:before, [dir="rtl"][class^="{{classPrefix}}"]:before,
+[dir="rtl"][class^='aoc-']::before,
+[dir="rtl"][class*='aoc-']::before
 {
 transform: scaleX(-1) !important;
 }
@@ -343,8 +349,9 @@ content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
-{{#ifEquals @key "file-json"}}
-.{{ ../classPrefix }}rtl-json:before, .aoc-icon-rtl-json:before
+{{#ifEquals @key "filetype-json"}}
+.{{ ../classPrefix }}rtl-json:before, .aoc-icon-rtl-json:before, .{{ ../classPrefix }}file-json:before,
+.aoc-icon-file-json:before,
 {
 content: "\\{{ this }}";
 }

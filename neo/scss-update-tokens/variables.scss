@@ -131,7 +131,7 @@ $heading-line-heights: map-merge(
     h3: $token-web-typography-web-heading-3-line-height,
     h4: $token-web-typography-web-heading-4-line-height,
     // we only go up to h4
-      h5: $heading-line-height,
+    h5: $heading-line-height,
     h6: $heading-line-height,
   ),
   $heading-line-heights
@@ -150,7 +150,7 @@ $heading-font-sizes: map-merge(
     h3: $token-web-typography-web-heading-3-font-size,
     h4: $token-web-typography-web-heading-4-font-size,
     // we only go up to h4
-      h5: $global-font-size,
+    h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes

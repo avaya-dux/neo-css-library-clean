@@ -66,7 +66,7 @@ convertIconFontToBase64().then(async (result) => {
     {
       files: IconsArray,
       dest: '../build/css',
-      fontName: 'NEO-icon-update',
+      fontName: 'updated-neo-icons',
       types: [],
       cssTemplate: '../templates/css.hbs',
       templateOptions: {
@@ -84,7 +84,7 @@ convertIconFontToBase64().then(async (result) => {
       if (error) {
         console.log('Fail!', error);
       } else {
-        console.log('NEO-icon-update.css generated in build/ folder');
+        console.log('updated-neo-icons.css generated in build/ folder');
       }
     }
   );
