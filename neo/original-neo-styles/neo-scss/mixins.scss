@@ -15,7 +15,7 @@
 
 @mixin define-color-hsl($color, $hsl...) {
   $hsl: nth($hsl, 1);
-  $hue: str-replace(#{nth($hsl, 1)}, "deg", "");
+  $hue: str-replace(#{nth($hsl, 1)}, 'deg', '');
   $saturation: nth($hsl, 2);
   $lightness: nth($hsl, 3);
   @include print-css-vars($color, $hue, $saturation, $lightness);
@@ -23,7 +23,7 @@
 
 @mixin print-css-vars($color, $hue, $saturation, $lightness) {
   --neo-#{$color}-color: #{unquote(
-      "hsl(#{$hue}, #{$saturation}, #{$lightness})"
+      'hsl(#{$hue}, #{$saturation}, #{$lightness})'
     )};
   --neo-#{$color}-color-h: #{$hue};
   --neo-#{$color}-color-s: #{$saturation};
@@ -39,24 +39,24 @@
 
 /// Removes the focus ring around an element when a mouse input is detected.
 @mixin disable-mouse-outline {
-  [data-whatinput="mouse"] & {
+  [data-whatinput='mouse'] & {
     outline: 0;
   }
 }
 
 @mixin neo-icon-context($is-same-level: false) {
   @if ($is-same-level) {
-    &[class^="aoc-"],
-    &[class*="aoc-"],
-    &[class^="neo-icon-"],
-    &[class*="neo-icon-"] {
+    &[class^='aoc-'],
+    &[class*='aoc-'],
+    &[class^='neo-icon-'],
+    &[class*='neo-icon-'] {
       @content;
     }
   } @else {
-    [class^="aoc-"],
-    [class*="aoc-"],
-    [class^="neo-icon-"],
-    [class*="neo-icon-"] {
+    [class^='aoc-'],
+    [class*='aoc-'],
+    [class^='neo-icon-'],
+    [class*='neo-icon-'] {
       @content;
     }
   }
@@ -87,7 +87,7 @@
 }
 
 @mixin rtl-selector() {
-  @at-root [dir="rtl"] & {
+  @at-root [dir='rtl'] & {
     @content;
   }
 }

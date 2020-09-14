@@ -6,7 +6,6 @@ const interactivityTokens = require('./tokens-functions/interactivity-tokens');
 const spacerTokens = require('./tokens-functions/spacer-tokens');
 const coreFigmaFunctions = require('./figma-functions/core-figma-functions.js');
 const expandedFigmaFunctions = require('./figma-functions/expanded-figma-functions.js');
-
 const iconFunctions = require('./icons-functions/icons-functions.js');
 
 // this is where we create our design tokens

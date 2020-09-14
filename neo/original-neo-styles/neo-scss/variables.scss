@@ -107,7 +107,7 @@ $heading-font-sizes: map-merge(
     h3: $global-font-size * 2,
     h4: $global-font-size * 1.4,
     // we only go up to h4
-      h5: $global-font-size,
+    h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes

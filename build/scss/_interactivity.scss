@@ -1,10 +1,11 @@
-// Do not edit directly
-// Generated on Thu, 06 Aug 2020 19:54:20 GMT
 
-$token-interactivity-motion-ease-in: cubic-bezier(0.4, 0, 0.7, 0.2);
-$token-interactivity-motion-ease-out: cubic-bezier(0, 0, 0.2, 1);
-$token-interactivity-motion-fade-fast: all 0.15s;
-$token-interactivity-motion-fade-slow: all 0.6s;
-$token-interactivity-motion-combo-fast-short: transform 0.15s, background 0.15s;
-$token-interactivity-motion-combo-fast-medium: transform 0.3s, background 0.15s;
-$token-interactivity-motion-combo-slow-long: transform 0.6s, background 0.6s;
+// Do not edit directly
+// Generated on Thu, 10 Sep 2020 12:25:50 GMT
+
+$token-interactivity-motion-ease-in: cubic-bezier(.4, 0, .7, .2);
+$token-interactivity-motion-ease-out: cubic-bezier(0, 0, .2, 1);
+$token-interactivity-motion-fade-fast: all .15s;
+$token-interactivity-motion-fade-slow: all .6s;
+$token-interactivity-motion-combo-fast-short: transform .15s, background .15s;
+$token-interactivity-motion-combo-fast-medium: transform .3s, background .15s;
+$token-interactivity-motion-combo-slow-long: transform .6s, background .6s;

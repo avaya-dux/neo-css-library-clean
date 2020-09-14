@@ -75,8 +75,8 @@ convertIconFontToBase64().then(async (result) => {
         // TO-DO: replace this with universal class name when using namespaces
         classPrefix: 'neo-icon-',
       },
-      html: true,
-      htmlTemplate: '../templates/html.hbs',
+      html: false,
+      // htmlTemplate: '../templates/html.hbs',
       normalize: true,
       fontHeight: 1000,
     },

@@ -56,12 +56,3 @@
 
   @include radio--disabled;
 }
-
-@mixin radio--disabled {
-  &[disabled] {
-    + label {
-      cursor: not-allowed;
-      opacity: $radio-disabled-opacity;
-    }
-  }
-}

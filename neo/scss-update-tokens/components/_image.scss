@@ -26,62 +26,62 @@
   padding: $image-thumbnail-padding;
 }
 
-// updated image classes
+// // updated image classes
 
-@mixin img-fluid-update {
-  &--fluid {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
-}
+// @mixin img-fluid-update {
+//   &--fluid {
+//     display: block;
+//     height: auto;
+//     max-width: 100%;
+//   }
+// }
 
-%neo-img-update {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+// %neo-img-update {
+//   display: inline-block;
+//   height: auto;
+//   max-width: 100%;
+//   vertical-align: middle;
 
-  @include img-fluid-update;
-}
+//   @include img-fluid-update;
+// }
 
-.neo-thumbnail-update {
-  @extend %neo-img-update;
-  background-color: $neo-white;
-  border: $image-thumbnail-border;
-  border-radius: $image-thumbnail-border-radius;
-  line-height: 0;
-  margin-bottom: $global-spacer;
-  max-width: 100%;
-  padding: $image-thumbnail-padding;
-}
+// .neo-thumbnail-update {
+//   @extend %neo-img-update;
+//   background-color: $neo-white;
+//   border: $image-thumbnail-border;
+//   border-radius: $image-thumbnail-border-radius;
+//   line-height: 0;
+//   margin-bottom: $global-spacer;
+//   max-width: 100%;
+//   padding: $image-thumbnail-padding;
+// }
 
-// updated image classes - tokens
+// // updated image classes - tokens
 
-@mixin img-fluid-token {
-  &--fluid {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
-}
+// @mixin img-fluid-token {
+//   &--fluid {
+//     display: block;
+//     height: auto;
+//     max-width: 100%;
+//   }
+// }
 
-%neo-img-token {
-  display: inline-block;
-  height: auto;
-  max-width: 100%;
-  vertical-align: middle;
+// %neo-img-token {
+//   display: inline-block;
+//   height: auto;
+//   max-width: 100%;
+//   vertical-align: middle;
 
-  @include img-fluid-token;
-}
+//   @include img-fluid-token;
+// }
 
-.neo-thumbnail-token {
-  @extend %neo-img-token;
-  background-color: $neo-white;
-  border: $image-thumbnail-border;
-  border-radius: $image-thumbnail-border-radius;
-  line-height: 0;
-  margin-bottom: $global-spacer;
-  max-width: 100%;
-  padding: $image-thumbnail-padding;
-}
+// .neo-thumbnail-token {
+//   @extend %neo-img-token;
+//   background-color: $neo-white;
+//   border: $image-thumbnail-border;
+//   border-radius: $image-thumbnail-border-radius;
+//   line-height: 0;
+//   margin-bottom: $global-spacer;
+//   max-width: 100%;
+//   padding: $image-thumbnail-padding;
+// }

@@ -602,7 +602,7 @@ async function getChipStyles(components) {
   // color for default chips
 
   chipJSONObject.chip[`default-background`] = {
-    value: `{color.base/300.value}`,
+    value: `{color.old_base/300.value}`,
   };
 
   chipJSONObject.chip[`default-background-hover`] = {
@@ -742,7 +742,7 @@ async function getLabelStyles(components) {
   // color for default labels
 
   labelJSONObject.label[`default-background`] = {
-    value: `{color.base/300.value}`,
+    value: `{color.old_base/300.value}`,
   };
 
   labelJSONObject.label[`default-background-hover`] = {
@@ -1168,7 +1168,7 @@ async function getSwitchStyles(components) {
   // switch 'off' disabled color
 
   switchJSONObject.switch[`off-disabled-background-color`] = {
-    value: `{color.base/300.value}`,
+    value: `{color.old_base/300.value}`,
   };
 
   // slider box shadow style
@@ -1801,7 +1801,7 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`datepicker-font-color`] = {
-    value: `{color.base/700.value}`,
+    value: `{color.old_base/700.value}`,
   };
 
   await fs
@@ -2368,7 +2368,7 @@ async function getPopoverStyles(components) {
   };
 
   popoverJSONObject.popover[`title-background-color`] = {
-    value: `{color.base/150.value}`,
+    value: `{color.old_base/150.value}`,
   };
 
   popoverJSONObject.popover[`title-border-bottom-width`] = {
@@ -2459,7 +2459,7 @@ async function getTabStyles(components) {
   };
 
   tabJSONObject.tabs[`unselected--color`] = {
-    value: `{color.base/700.value}`,
+    value: `{color.old_base/700.value}`,
   };
 
   tabJSONObject.tabs[`disabled-background-color`] = {
