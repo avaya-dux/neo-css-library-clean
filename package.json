@@ -5,7 +5,12 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node -r esm server.js"
+    "start": "node -r esm server.js",
+    "icongen": "cd API && node -r esm design-system-functions.js && npx icon-font-generator ../properties/assets/icons/svgs/*.svg -o ../properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node -r esm ./icons-functions/icon-css-generator.js && node -r esm ./icons-functions/icon-file-replacer.js",
+    "update": "node-sass neo/original-neo-styles/neo-scss/main.scss neo/combine/neo.css && node-sass neo/scss-update-tokens/main.scss neo/combine/neo-update.css && node-sass neo/combine/combine.scss neo/dist/3.0.0/neo.css && node -r esm neo-replacer.js",
+    "demo": "cd API && node -r esm design-system-functions.js && cd .. && node -r esm styleDicExt.js && node-sass neo/scss-update-tokens/main.scss neo/demo/neo-update.css",
+    "demo-component": "cd API && node -r esm design-system-functions.js && node -r esm server.js && cd .. && node -r esm styleDicExt.js && node-sass neo/scss-update/main.scss ../neo-update-demo/neo-component.css",
+    "combine-custom": "node-sass neo/combine/combine.scss ../Avaya_Design_Portal_proto/DT_gen_files/combined.css && node -r esm neo-replacer.js"
   },
   "keywords": [
     "Figma"
@@ -13,13 +18,24 @@
   "author": "Mohammad Razian",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.2",
     "create-react-app": "^1.5.2",
     "esm": "^3.2.25",
     "express": "^4.16.3",
     "express-generator": "^4.16.0",
+    "firebase-admin": "^8.12.1",
+    "fontmin": "^0.9.8",
     "isomorphic-fetch": "^2.2.1",
+    "lodash": "^4.17.15",
     "node-fetch": "^2.6.0",
-    "nodemon": "^1.18.3"
+    "node-sass": "^4.14.1",
+    "nodemon": "^1.18.3",
+    "replace-in-file": "^6.0.0",
+    "style-dictionary": "^2.10.0",
+    "susy": "^3.0.5",
+    "webfonts-generator": "^0.4.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "cssnano": "^4.1.10"
+  }
 }

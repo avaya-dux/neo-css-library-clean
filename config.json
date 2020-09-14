@@ -1,0 +1,260 @@
+{
+  "source": ["properties/**/*.json"],
+  "platforms": {
+    "scss": {
+      "transformGroup": "scss",
+      "buildPath": "build/scss/",
+      "prefix": "token",
+      "files": [
+        {
+          "destination": "_colors.scss",
+          "format": "scss/variables",
+          "filter": {
+            "type": "color"
+          }
+        },
+        {
+          "destination": "_spacers.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": { "category": "global-spacer" }
+          }
+        },
+        {
+          "destination": "_typography.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "Web-typography"
+            }
+          }
+        },
+        {
+          "destination": "_shadows.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "shadows"
+            }
+          }
+        },
+        {
+          "destination": "_borders.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "border"
+            }
+          }
+        },
+        {
+          "destination": "_border-radius.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "borderRadius"
+            }
+          }
+        },
+        {
+          "destination": "_interactivity.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "interactivity"
+            }
+          }
+        },
+        {
+          "destination": "_buttons.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "button"
+            }
+          }
+        },
+        {
+          "destination": "_accordion.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "accordion"
+            }
+          }
+        },
+        {
+          "destination": "_avatar.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "_badge.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "badge"
+            }
+          }
+        },
+        {
+          "destination": "_checkbox.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "checkbox"
+            }
+          }
+        },
+        {
+          "destination": "_chip.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "chip"
+            }
+          }
+        },
+        {
+          "destination": "_dropdown.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "dropdown"
+            }
+          }
+        },
+        {
+          "destination": "_input.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "input"
+            }
+          }
+        },
+        {
+          "destination": "_inputGroup.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "inputGroup"
+            }
+          }
+        },
+        {
+          "destination": "_label.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "label"
+            }
+          }
+        },
+        {
+          "destination": "_list.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "list"
+            }
+          }
+        },
+        {
+          "destination": "_menu.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "menu"
+            }
+          }
+        },
+        {
+          "destination": "_modal.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "modal"
+            }
+          }
+        },
+        {
+          "destination": "_notification.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "notification"
+            }
+          }
+        },
+        {
+          "destination": "_popover.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "popover"
+            }
+          }
+        },
+        {
+          "destination": "_radio.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "radio"
+            }
+          }
+        },
+        {
+          "destination": "_spinner.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "spinner"
+            }
+          }
+        },
+        {
+          "destination": "_switch.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "switch"
+            }
+          }
+        },
+        {
+          "destination": "_table.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "table"
+            }
+          }
+        },
+        {
+          "destination": "_tabs.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "tabs"
+            }
+          }
+        },
+        {
+          "destination": "_tooltip.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "tooltip"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

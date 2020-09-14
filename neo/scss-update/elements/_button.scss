@@ -1,0 +1,536 @@
+@mixin button-colors($button-type-colors) {
+  &:focus {
+    @if (map_has_key($button-type-colors, focus-bg-color)) {
+      background-color: map_get($button-type-colors, focus-bg-color);
+    }
+  }
+
+  &:hover {
+    @if (map_has_key($button-type-colors, hover-bg-color)) {
+      background-color: map_get($button-type-colors, hover-bg-color);
+    }
+  }
+
+  &:focus {
+    box-shadow: $input-focus-shadow;
+  }
+
+  &:active {
+    @if (map_has_key($button-type-colors, active-bg-color)) {
+      background-color: map_get($button-type-colors, active-bg-color);
+    }
+
+    @if (map_has_key($button-type-colors, active-box-shadow-color)) {
+      @if (
+        map_get($button-type-colors, active-box-shadow-color) != transparent
+      ) {
+        box-shadow: 0
+          1px
+          3px
+          3px
+          rgba(map_get($button-type-colors, active-box-shadow-color), 0.2);
+      } @else {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &[disabled],
+  &--disabled {
+    @if (map_has_key($button-type-colors, disabled-bg-color)) {
+      background-color: map_get($button-type-colors, disabled-bg-color);
+      color: alpha($global-text-color, 50%);
+      cursor: not-allowed;
+      border-color: transparent;
+    }
+  }
+
+  @if (map_has_key($button-type-colors, bg-color)) {
+    background-color: map_get($button-type-colors, bg-color);
+    color: map_get($button-type-colors, text-color);
+
+    @if (map_has_key($button-type-colors, border-color)) {
+      border: 1px solid map_get($button-type-colors, border-color);
+    }
+  }
+}
+
+%button {
+  align-items: center;
+  border: 0;
+  border-radius: $button-border-radius;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: $button-font-weight;
+  height: $button-height;
+  outline: 0;
+  padding: 0 $button-padding-x;
+  transition: $button-transition;
+  width: auto;
+
+  &[type='button'] {
+    line-height: 1;
+  }
+
+  @include button-colors(map_get($button-types, 'default'));
+}
+
+.neo-btn {
+  @extend %button;
+  @include neo-icons;
+}
+
+@include neo-icon-context {
+  &.neo-btn:empty {
+    display: inline-flex;
+    font-size: $button-icon-size;
+    height: $button-icon-size;
+    justify-content: center;
+    padding: 0;
+    width: $button-icon-size;
+
+    &::before {
+      font-size: #{$button-icon-size-ratio}em;
+    }
+  }
+}
+
+@each $button-type-name, $button-type-colors in $button-types {
+  @if ($button-type-name != 'default') {
+    .neo-btn--#{$button-type-name} {
+      @include button-colors($button-type-colors);
+    }
+  }
+}
+
+.neo-btn--circle {
+  border-radius: 50%;
+
+  &.neo-btn:empty {
+    &::before {
+      font-size: $button-circle-icon-size;
+    }
+  }
+}
+
+// updated button styles
+
+@mixin button-colors-update($button-type-colors) {
+  &:focus {
+    @if (map_has_key($button-type-colors, focus-bg-color)) {
+      background-color: map_get($button-type-colors, focus-bg-color);
+    }
+  }
+
+  &:hover {
+    @if (map_has_key($button-type-colors, hover-bg-color)) {
+      background-color: map_get($button-type-colors, hover-bg-color);
+      box-shadow: $button-box-shadow-update;
+    }
+  }
+
+  &:focus {
+    box-shadow: $input-focus-shadow;
+  }
+
+  &:active {
+    @if (map_has_key($button-type-colors, active-bg-color)) {
+      background-color: map_get($button-type-colors, active-bg-color);
+    }
+
+    @if (map_has_key($button-type-colors, active-box-shadow-color)) {
+      @if (
+        map_get($button-type-colors, active-box-shadow-color) != transparent
+      ) {
+        box-shadow: 0
+          1px
+          3px
+          3px
+          rgba(map_get($button-type-colors, active-box-shadow-color), 0.2);
+      } @else {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &[disabled],
+  &--disabled {
+    @if (map_has_key($button-type-colors, disabled-bg-color)) {
+      background-color: map_get($button-type-colors, disabled-bg-color);
+      // color: alpha($global-text-color, 50%);
+      cursor: not-allowed;
+      border-color: transparent;
+    }
+  }
+
+  @if (map_has_key($button-type-colors, bg-color)) {
+    background-color: map_get($button-type-colors, bg-color);
+    color: map_get($button-type-colors, text-color);
+
+    @if (map_has_key($button-type-colors, border-color)) {
+      border: 1px solid map_get($button-type-colors, border-color);
+    }
+  }
+}
+
+%button-update {
+  align-items: center;
+  border: 0;
+  // border-radius: $button-border-radius;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: $button-font-weight;
+  height: $button-height-update;
+  outline: 0;
+  padding: 0 $button-padding-x-update;
+  transition: $button-transition;
+  transition-property: background-color, box-shadow;
+  width: auto;
+
+  &[type='button'] {
+    line-height: 1;
+  }
+
+  // custom selector for right-hand icon spacing
+
+  &[class^='right'],
+  &[class*='right']:not(:empty)::after {
+    margin-left: 10px;
+  }
+
+  @include button-colors-update(map_get($button-types-update, 'default'));
+}
+
+.neo-btn-update {
+  @extend %button-update;
+  @include neo-icons;
+}
+
+@include neo-icon-context-update {
+  &.neo-btn-update:empty {
+    display: inline-flex;
+    font-size: $button-icon-font-size-update;
+    height: $button-circular-height-update;
+    justify-content: center;
+    padding: 0;
+    width: $button-circular-width-update;
+
+    &::before {
+      font-size: $button-icon-font-size-update;
+    }
+  }
+}
+
+@each $button-type-name, $button-type-colors in $button-types {
+  @if ($button-type-name != 'default') {
+    .neo-btn-update--#{$button-type-name} {
+      @include button-colors-update($button-type-colors);
+    }
+  }
+}
+
+// .neo-btn--circle-update {
+//   border-radius: 50%;
+
+//   &.neo-btn-update:empty {
+//     &::before {
+//       font-size: $button-circle-icon-size;
+//     }
+//   }
+// }
+
+// new button classes
+
+.neo-btn-update-primary {
+  @extend %button-update;
+  @each $name, $color in $neo-state-colors-update {
+    &--#{$name} {
+      background-color: $color;
+      color: $button-inverse-text-color-update;
+    }
+  }
+  @each $name, $color in $neo-hover-colors-update {
+    &--#{$name}:hover {
+      background-color: $color;
+      // color: $global-text-inverse-color;
+    }
+  }
+  &[disabled] {
+    background-color: $global-disabled-text-color-update;
+    // color: $global-disabled-text-color-update;
+    // border-color: $global-disabled-text-color-update;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.neo-btn-update-secondary {
+  @extend %button-update;
+  background-color: $global-background-update;
+  border-width: $button-secondary-border-width-update;
+  border-style: $button-secondary-border-style-update;
+  @each $name, $color in $neo-state-colors-update {
+    &--#{$name} {
+      // background-color: $color !important;
+      border-color: $color;
+      color: $color;
+    }
+  }
+  &:hover {
+    background-color: $global-background-update;
+  }
+  &[disabled] {
+    background-color: $global-disabled-background-update;
+    color: $global-disabled-text-color-update;
+    border-color: $global-disabled-text-color-update;
+    &:hover {
+      box-shadow: none;
+    }
+  }
+}
+
+.neo-btn-update-tertiary {
+  @extend %button-update;
+  background-color: transparent;
+  @each $name, $color in $neo-state-colors-update {
+    &--#{$name} {
+      // background-color: $color !important;
+      border-color: $color;
+      color: $color;
+    }
+  }
+  &:hover {
+    background-color: $button-tertiary-hover-bg-color;
+  }
+}
+
+.neo-btn--circle-update {
+  // display: flex;
+  // border: 0;
+  justify-content: center;
+  border-radius: $button-border-radius-update;
+  height: $button-circular-height-update;
+  width: $button-circular-width-update;
+  transition: $button-transition;
+  transition-property: background-color, color, box-shadow;
+  font-size: $button-icon-font-size-update;
+  &::before {
+    font-size: 19px;
+  }
+
+  &-primary {
+    border: 0;
+    &[disabled] {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+      // border-color: $global-disabled-text-color-update;
+      &:hover {
+        background-color: $global-disabled-background-update;
+        color: $global-disabled-text-color-update;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+
+    @each $name, $color in $neo-state-colors-update {
+      &--#{$name} {
+        background-color: $color;
+        // border-color: $color;
+        color: $global-background-update;
+      }
+    }
+    @each $name, $color in $neo-hover-colors-update {
+      &--#{$name}:hover {
+        background-color: $color;
+        box-shadow: $button-box-shadow-update;
+        cursor: pointer;
+      }
+    }
+  }
+
+  &-secondary {
+    &[disabled] {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+      // border-color: $global-disabled-text-color-update;
+      &:hover {
+        background-color: $global-disabled-background-update;
+        color: $global-disabled-text-color-update;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+    border-width: 1px;
+    @each $name, $color in $neo-state-colors-update {
+      &--#{$name} {
+        background-color: transparent;
+        border-color: $color;
+        color: $color;
+      }
+      @each $name, $color in $neo-hover-colors-update {
+        &--#{$name}:hover {
+          box-shadow: $button-box-shadow-update;
+          border-color: $color;
+          color: $color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // &-secondary:empty {
+  //   background-color: $global-background-update;
+  //   &::before {
+  //     // margin-left: 12px;
+  //     font-size: $button-icon-font-size-update;
+  //   }
+  // }
+  &-tertiary {
+    &[disabled] {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+      // border-color: $global-disabled-text-color-update;
+      &:hover {
+        background-color: $global-disabled-background-update;
+        color: $global-disabled-text-color-update;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+    border: 0;
+    @each $name, $color in $neo-state-colors-update {
+      &--#{$name} {
+        border: none;
+        background-color: transparent;
+        color: $color;
+        &:hover {
+          box-shadow: $button-box-shadow-update;
+          background-color: $button-tertiary-hover-bg-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // &-tertiary:empty {
+  //   &::before {
+  //     // margin-left: 12px;
+  //     font-size: $button-icon-font-size-update;
+  //   }
+  // }
+}
+
+.neo-btn--square-update {
+  // display: flex;
+
+  justify-content: center;
+  height: $button-circular-height-update;
+  width: $button-circular-width-update;
+  transition: $button-transition;
+  transition-property: background-color, color, box-shadow;
+  &::before {
+    font-size: 21px;
+  }
+
+  &-primary {
+    border: 0;
+    &[disabled] {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+      // border-color: $global-disabled-text-color-update;
+      &:hover {
+        background-color: $global-disabled-background-update;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+    @each $name, $color in $neo-state-colors-update {
+      &--#{$name} {
+        background-color: $color;
+        // border-color: $color;
+        color: $global-background-update;
+      }
+    }
+    @each $name, $color in $neo-hover-colors-update {
+      &--#{$name}:hover {
+        background-color: $color;
+        box-shadow: $button-box-shadow-update;
+        cursor: pointer;
+      }
+    }
+  }
+  // &-primary:empty {
+  //   // background-color: $global-background-update;
+  //   &::before {
+  //     // margin-left: 12px;
+  //     font-size: $button-icon-font-size-update;
+  //   }
+  // }
+  &-secondary {
+    &[disabled] {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+      // border-color: $global-disabled-text-color-update;
+      &:hover {
+        background-color: $global-disabled-background-update;
+        color: $global-disabled-text-color-update;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+    border-width: 1px;
+    @each $name, $color in $neo-state-colors-update {
+      &--#{$name} {
+        background-color: transparent;
+        border-color: $color;
+        color: $color;
+      }
+      @each $name, $color in $neo-hover-colors-update {
+        &--#{$name}:hover {
+          box-shadow: $button-box-shadow-update;
+          color: $color;
+          border-color: $color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // &-secondary:empty {
+  //   background-color: $global-background-update;
+  //   &::before {
+  //     // margin-left: 12px;
+  //     font-size: $button-icon-font-size-update;
+  //   }
+  // }
+  &-tertiary {
+    border: 0;
+    &[disabled] {
+      background-color: $global-disabled-background-update;
+      color: $global-disabled-text-color-update;
+      // border-color: $global-disabled-text-color-update;
+      &:hover {
+        background-color: $global-disabled-background-update;
+        color: $global-disabled-text-color-update;
+        box-shadow: none;
+        cursor: not-allowed;
+      }
+    }
+    @each $name, $color in $neo-state-colors-update {
+      &--#{$name} {
+        border: none;
+        background-color: transparent;
+        color: $color;
+        &:hover {
+          box-shadow: $button-box-shadow-update;
+          background-color: $button-tertiary-hover-bg-color;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  // &-tertiary:empty {
+  //   &::before {
+  //     // margin-left: 12px;
+  //     font-size: $button-icon-font-size-update;
+  //   }
+  // }
+}

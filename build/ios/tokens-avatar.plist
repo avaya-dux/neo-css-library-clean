@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<dict>
+    <key>tokenAvatarBackgroundColor</key><string>#1b7db3</string>
+    <key>tokenAvatarBorderRadius</key><string>100%</string>
+    <key>tokenAvatarColor</key><string>#ffffff</string>
+    <key>tokenAvatarXSmallHeight</key><string>24pt</string>
+    <key>tokenAvatarXSmallWidth</key><string>24pt</string>
+    <key>tokenAvatarSmallHeight</key><string>32pt</string>
+    <key>tokenAvatarSmallWidth</key><string>32pt</string>
+    <key>tokenAvatarDefaultHeight</key><string>48pt</string>
+    <key>tokenAvatarDefaultWidth</key><string>48pt</string>
+    <key>tokenAvatarLargeHeight</key><string>72pt</string>
+    <key>tokenAvatarLargeWidth</key><string>72pt</string>
+    <key>tokenAvatarInitialsXsmallFontWeight</key><string>400</string>
+    <key>tokenAvatarInitialsXsmallFontSize</key><string>10pt</string>
+    <key>tokenAvatarInitialsXsmallLetterSpacing</key><string>0pt</string>
+    <key>tokenAvatarInitialsXsmallLineHeight</key><string>11.71875pt</string>
+    <key>tokenAvatarInitialsSmallFontWeight</key><string>400</string>
+    <key>tokenAvatarInitialsSmallFontSize</key><string>14pt</string>
+    <key>tokenAvatarInitialsSmallLetterSpacing</key><string>0pt</string>
+    <key>tokenAvatarInitialsSmallLineHeight</key><string>16.40625pt</string>
+    <key>tokenAvatarInitialsRegularFontWeight</key><string>400</string>
+    <key>tokenAvatarInitialsRegularFontSize</key><string>19pt</string>
+    <key>tokenAvatarInitialsRegularLetterSpacing</key><string>0pt</string>
+    <key>tokenAvatarInitialsRegularLineHeight</key><string>22.265625pt</string>
+    <key>tokenAvatarInitialsLargeFontWeight</key><string>400</string>
+    <key>tokenAvatarInitialsLargeFontSize</key><string>32pt</string>
+    <key>tokenAvatarInitialsLargeLetterSpacing</key><string>0pt</string>
+    <key>tokenAvatarInitialsLargeLineHeight</key><string>36.79999923706055pt</string>
+    <key>tokenAvatarAvatarBorderWidth</key><string>2pt</string>
+    <key>tokenAvatarAvatarBorderStyle</key><string>solid</string>
+    
+</dict>
+</plist>

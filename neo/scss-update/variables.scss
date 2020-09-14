@@ -1,0 +1,1402 @@
+@import 'mixins';
+@import 'helpers';
+@import '../../build/scss/tokens.scss';
+
+// Variables
+//
+// Variables should follow the `$component-state-property` formula for consistent naming,
+// eg. $tab-foot-background or $global-spacer
+
+//
+// Colors - MD neo Color Palette
+//
+
+$neo-navy-black: #081723 !default;
+$neo-light-grey: #dce1e6 !default;
+$neo-mid-grey: #6a788a !default;
+$neo-blue-grey: #3c5064 !default;
+$neo-light-blue-grey: #546e7a !default;
+$neo-blue-grey-dark: #304050 !default;
+$neo-dark-grey: #5a646e !default;
+$neo-header-grey: #303030 !default;
+$neo-white: #fff !default;
+$neo-black: #000 !default;
+$neo-mid-blue: #06f !default;
+$neo-light-blue: #a0c9e9 !default;
+$neo-ice-blue: #ecf4fb !default;
+$neo-off-white: #f2f2f2 !default;
+$neo-strong-orange: #f4511e !default;
+$neo-mid-orange: #f7941e !default;
+$neo-light-orange: #f9d9b1 !default;
+$neo-presence-red: #d50000 !default;
+$neo-presence-yellow: #fab107 !default;
+$neo-presence-green: #4baa39 !default;
+$neo-active-green: #008000 !default;
+$neo-observe-purple: #9932cc !default;
+
+@import 'themes/default';
+@import 'themes/light';
+
+// Theme colors
+$neo-primary-color: var-color-name(primary) !default;
+$neo-secondary-color: var-color-name(secondary) !default;
+$neo-success-color: var-color-name(success) !default;
+$neo-alert-color: var-color-name(alert) !default;
+$neo-warning-color: var-color-name(warning) !default;
+$neo-info-color: var-color-name(info) !default;
+
+$neo-state-colors: () !default;
+
+$neo-state-colors: map-merge(
+  (
+    primary: $neo-primary-color,
+    secondary: $neo-secondary-color,
+    success: $neo-success-color,
+    warning: $neo-warning-color,
+    alert: $neo-alert-color,
+    info: $neo-info-color,
+  ),
+  $neo-state-colors
+);
+
+// updated state colors
+
+$neo-state-colors-update: () !default;
+
+$neo-state-colors-update: map-merge(
+  (
+    default: $token-color-base-300,
+    primary: $token-color-accent-500,
+    success: $token-color-functional-green-500,
+    warning: $token-color-functional-orange-500,
+    alert: $token-color-functional-red-500,
+    info: $token-color-functional-blue-500,
+  ),
+  $neo-state-colors-update
+);
+
+// updated hover state colors
+
+$neo-hover-colors-update: () !default;
+
+$neo-hover-colors-update: map-merge(
+  (
+    default: $token-color-base-400,
+    primary: $token-color-accent-600,
+    success: $token-color-functional-green-600,
+    warning: $token-color-functional-orange-600,
+    alert: $token-color-functional-red-600,
+    info: $token-color-functional-blue-600,
+  ),
+  $neo-hover-colors-update
+);
+
+// updated close button colors
+
+$neo-close-colors-update: () !default;
+
+$neo-close-colors-update: map-merge(
+  (
+    primary: $token-color-accent-900,
+    success: $token-color-functional-green-900,
+    warning: $token-color-functional-orange-900,
+    alert: $token-color-functional-red-900,
+    info: $token-color-functional-blue-900,
+  ),
+  $neo-close-colors-update
+);
+
+// updated notification colors
+
+$neo-notification-colors-update: () !default;
+
+$neo-notification-colors-update: map-merge(
+  (
+    success: $token-color-functional-green-100,
+    warning: $token-color-functional-orange-100,
+    alert: $token-color-functional-red-100,
+    info: $token-color-functional-blue-100,
+  ),
+  $neo-notification-colors-update
+);
+
+// updated notification icon colors
+
+$neo-notification-icon-colors-update: () !default;
+
+$neo-notification-icon-colors-update: map-merge(
+  (
+    success: $token-color-functional-green-600,
+    warning: $token-color-functional-orange-600,
+    alert: $token-color-functional-red-600,
+    info: $token-color-functional-blue-600,
+  ),
+  $neo-notification-icon-colors-update
+);
+
+// Link colors
+$link-color: var-color-name(link-color) !default;
+$link-hover-color: darken-var($link-color, 15%) !default;
+$link-hover-decoration: none !default;
+
+//
+// Global
+//
+
+// new global variables
+$global-background-update: $token-color-base-100;
+$global-text-color-update: $token-color-base-1000;
+$global-font-size-update: $token-web-typography-web-body-regular-font-size;
+$global-font-size-x-small-update: $token-web-typography-web-tiny-body-font-size;
+$global-font-size-small-update: $token-web-typography-web-small-body-font-size;
+$global-font-size-large-update: $token-web-typography-web-large-body-font-size;
+$global-disabled-background-update: $token-color-disabled-background;
+$global-disabled-text-color-update: $token-color-disabled-text;
+$global-disabled-accent: $token-color-disabled-accent;
+
+$global-background: var-color-name(global-background) !default;
+// Global text styles
+$global-text-color: var-color-name(global-text) !default;
+$global-text-inverse-color: var-color-name(global-text-inverse) !default;
+$global-font-size: 14px !default;
+$global-font-size-x-small: 9px !default;
+$global-font-size-small: 12px !default;
+
+$global-font-size-medium: 16px !default;
+$global-font-size-large: 18px !default;
+$global-font-size-x-large: 24px !default;
+// end of Global text styles
+$global-spacer: 6px !default;
+$global-spacer-small: 3px !default;
+$global-spacer-large: 10px !default;
+$global-spacer-x-large: 15px !default;
+$global-divider-thickness: 1px !default;
+$global-radius: 3px !default;
+$global-transition-duration: 0.4s !default;
+$global-border-color: var-color-name(global-border) !default;
+$global-border-color-darker: var-color-name(global-border) !default;
+$global-text-direction: ltr !default;
+$global-icon-offset: $global-spacer-large !default;
+$global-left: if($global-text-direction == rtl, right, left) !default;
+$global-right: if($global-text-direction == rtl, left, right) !default;
+$global-opacity: 0.5;
+
+// Typography
+
+// new typography variables
+
+$body-font-family-update: $token-web-typography-font-family;
+$body-line-height-update: $token-web-typography-web-body-regular-line-height;
+$heading-color-update: $token-color-base-1000;
+$heading-font-sizes-update: () !default;
+$heading-font-sizes-update: map-merge(
+  (
+    h1: $token-web-typography-web-heading-1-regular-font-size,
+    h2: $token-web-typography-web-heading-2-regular-font-size,
+    h3: $token-web-typography-web-heading-3-font-size,
+    h4: $token-web-typography-web-heading-4-font-size,
+    // we only go up to h4
+      h5: $global-font-size,
+    h6: $global-font-size * 0.7,
+  ),
+  $heading-font-sizes-update
+);
+
+$body-font-family: 'Roboto', sans-serif !default;
+$body-line-height: 1.5 !default;
+$heading-font-sizes: () !default;
+$heading-color: $neo-blue-grey;
+$heading-font-sizes: map-merge(
+  (
+    h1: $global-font-size * 3.4,
+    h2: $global-font-size * 2.7,
+    h3: $global-font-size * 2,
+    h4: $global-font-size * 1.4,
+    h5: $global-font-size,
+    h6: $global-font-size * 0.7,
+  ),
+  $heading-font-sizes
+);
+$heading-font-weight: normal !default;
+$heading-line-height: 1 !default;
+
+$subtitle-line-height: $global-font-size * 1.4 !default;
+$subtitle-padding-y: $global-spacer-large !default;
+
+//
+// Media Breakpoints
+//
+
+$neo-breakpoints: () !default;
+
+$neo-breakpoints: map-merge(
+  (
+    medium: 0,
+    large: 992px,
+  ),
+  $neo-breakpoints
+);
+
+//--------------------------------------------//
+//              Grid System                   //
+//--------------------------------------------//
+
+// Component name: Float grid
+// Location: src/scss/elements/_float-grid.scss,
+
+// Grid classes names
+$row-class-name: 'row' !default;
+$col-class-prefix: 'grid' !default;
+$col-class-hidden-prefix: 'hidden' !default;
+$col-class-push-prefix: 'push' !default;
+$col-class-pull-prefix: 'pull' !default;
+
+// Grid colors - used only in documentation
+$grid-colors: $neo-ice-blue !default;
+
+// Grid sizes
+$columns: 12 !default;
+$gutters: 0.2 !default;
+
+// Susy configuration
+$susy: () !default;
+
+$susy: map-merge(
+  (
+    'svg-grid-colors': $grid-colors,
+    'columns': susy-repeat($columns),
+    'gutters': $gutters,
+    'spread': 'narrow',
+    'container-spread': 'narrow',
+  ),
+  $susy
+);
+
+//--------------------------------------------//
+//                 Elements                   //
+//--------------------------------------------//
+
+// Component name: Form
+// Location: src/scss/elements/_form.scss,
+//
+
+$form-control-margin-bottom: $global-spacer-x-large !default;
+
+// Component name: Input
+// Location: src/scss/elements/_input.scss,
+//           src/scss/elements/_input-group.scss
+//           src/scss/elements/_input-hint.scss
+//
+
+// updated input variables
+$input-asterix-required-color-update: $token-input-label-required-asterix-color !default;
+$input-background-color-update: $global-background-update !default;
+$input-required-background-update: $global-background-update !default;
+$input-border-width-update: $token-input-border-width;
+$input-border-style-update: $token-input-border-style;
+$input-border-color-update: $token-input-border-color !default;
+$input-border-radius-update: 0 !default;
+$input-font-color-update: $global-text-color-update;
+$input-font-size-update: $token-input-filled-input-font-size !default;
+$input-line-height-update: $token-input-placeholder-line-height !default;
+$input-rounded-border-radius-update: 0 !default;
+$input-group-addon-background-color-update: $token-input-group-addon-text-background-color !default;
+$input-hint-font-size-update: $token-input-helper-font-size !default;
+$input-disabled-bg-update: $token-input-disabled-background-color !default;
+$input-disabled-color-update: $token-input-disabled-filled-color !default;
+$input-state-color-map-update: () !default;
+$input-state-color-map-update: map-merge(
+  (
+    success: $global-text-color-update,
+    error: $token-input-error-text-color,
+  ),
+  $input-state-color-map-update
+);
+$input-hint-muted-color-update: $token-input-helper-color !default;
+$input-width-update: auto !default;
+$input-height-update: 32px !default;
+$input-placeholder-font-style-update: $token-input-placeholder-font-style !default;
+$input-readonly-padding-update: $token-input-readonly-padding !default;
+$input-clear-button-color: $token-input-filled-close-button-color !default;
+//end of updated input variables
+
+$input-color-scale: 15% !default;
+$input-asterix-required-color: $neo-alert-color !default;
+$input-icon-size: 20px !default;
+$input-space-right: 30px !default;
+$input-background-color: $global-background !default;
+$input-required-background: lighten($neo-presence-red, 50%) !default;
+$input-border-color: $global-border-color !default;
+$input-focus-border-color: $neo-mid-blue !default;
+$input-focus-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5) !default;
+$input-border-radius: $global-radius !default;
+$input-box-shadow: none !default;
+$input-height: 32px !default;
+$input-font-size: $global-font-size !default;
+$input-font-color: $global-text-color !default;
+$input-line-height: 1.2 !default;
+$input-in-label-margin-top: $global-spacer-small !default;
+$input-padding-x: $global-spacer-large !default;
+$input-padding-y: $global-spacer !default;
+$input-rounded-border-radius: $input-height / 2 !default;
+$input-group-addon-background-color: darken-var(
+  $input-background-color,
+  $input-color-scale / 3
+) !default;
+$input-group-icon-height: $input-height !default;
+$input-group-icon-padding: 30px !default;
+$input-group-icon-offset: 0 8px !default;
+$input-hint-font-size: $global-font-size-small !default;
+$input-hint-margin-top: $global-spacer-small !default;
+$input-hint-muted-color: lighten-var($input-font-color, 40%) !default;
+$input-disabled-bg: darken-var($input-background-color, 5%) !default;
+$input-disabled-color: rgba($input-font-color, $global-opacity) !default;
+$input-state-color-map: () !default;
+$input-state-color-map: map-merge(
+  (
+    success: $neo-success-color,
+    error: $neo-alert-color,
+  ),
+  $input-state-color-map
+);
+
+//
+// Element name: Select
+// Location: src/scss/elements/_select.scss
+//
+
+//updated select variables
+$select-border-color-update: $token-dropdown-border-color !default;
+$select-border-style-update: $token-dropdown-border-style !default;
+$select-border-width-update: $token-dropdown-border-width !default;
+$select-font-size-update: $token-dropdown-text-font-size !default;
+$select-line-height-update: $token-dropdown-text-line-height !default;
+// set to placeholder icon temporarily
+$select-arrow-icon-update: $token-dropdown-icon !default;
+$select-disabled-color-update: $token-dropdown-disabled-color !default;
+$select-disabled-bg-update: $token-dropdown-disabled-background-color !default;
+$select-height-update: $token-dropdown-height !default;
+$select-width-update: $token-dropdown-width !default;
+$select-border-radius-update: $input-border-radius-update !default;
+$select-hover-bg-update: $token-dropdown-hover !default;
+$select-padding-left-update: $token-dropdown-padding-left !default;
+$select-padding-right-update: $token-dropdown-padding-right !default;
+$select-table-page-show-width-update: $token-table-pagination-count-select-width !default;
+//end of updated select variables
+
+$select-transition: 0.25s all ease !default;
+$select-font-color: $input-font-color !default;
+$select-background-color: $input-background-color !default;
+$select-border-color: $input-border-color !default;
+$select-border-radius: $input-border-radius !default;
+$select-box-shadow: $input-box-shadow !default;
+$select-font-size: $input-font-size !default;
+$select-line-height: $input-line-height !default;
+$select-height: $input-height !default;
+$select-arrow-icon: '\25BE' !default;
+$select-icon-height: 16px !default;
+$select-icon-width: $select-icon-height !default;
+$select-offset-x: $select-icon-height * 2 !default;
+$select-padding-x: $select-icon-height / 2 !default;
+$select-padding-y: $input-padding-y !default;
+$select-disabled-color: $input-disabled-color !default;
+$select-disabled-bg: $input-disabled-bg !default;
+
+//
+// Element name: Radio
+// Location: src/scss/elements/_radio-button.scss
+//
+
+//updated radio variables
+$radio-background-update: $global-background-update !default;
+$radio-background-active-color-update: $token-radio-selected-target-background !default;
+$radio-border-update: $token-radio-border-width $token-radio-border-style
+  $token-radio-border-color !default;
+//end of updated variables
+
+$radio-background: $global-background !default;
+$radio-background-active-color: $neo-blue-grey-dark !default;
+$radio-border: 1px solid $neo-blue-grey-dark !default;
+$radio-text-offset: 22px !default;
+$radio-label-offset-x: $global-spacer-x-large !default;
+$radio-disabled-opacity: $global-opacity !default;
+
+//
+// Component name: Table
+// Location: src/scss/elements/_table.scss
+//
+
+//updated table variables
+$table-background-update: $global-background-update !default;
+$table-head-background-update: $token-table-header-default-background-color !default;
+$table-border-width-update: $token-table-row-border-bottom-width !default;
+$table-border-update: $table-border-width-update
+  $token-table-row-border-bottom-style $token-table-row-border-bottom-color !default;
+$table-padding-update: $token-table-padding !default;
+$table-disabled-bg-color-update: $token-table-row-disabled-background-color !default;
+$table-disabled-text-color-update: $token-table-row-disabled-default-color !default;
+$table-disabled-clickable-color-update: $token-table-row-disabled-clickable-color !default;
+$table-row-hover-update: $token-table-row-hover-color !default;
+$table-page-select-height: $token-table-pagination-count-height !default;
+$table-page-select-width: $token-table-pagination-count-width !default;
+$table-filter-button-color-update: $token-table-filter-button-color !default;
+$table-date-picker-background-color-update: $token-table-datepicker-background-color !default;
+$table-date-picker-font-color-update: $token-table-datepicker-font-color !default;
+//end of updated table variables
+
+$table-background: $global-background !default;
+$table-button-margin: $global-spacer;
+$table-padding: $global-spacer !default;
+$table-condensed-padding: $table-padding / 2 !default;
+$table-row-hover: $neo-light-blue;
+$table-color-scale: 5% !default;
+$table-head-background: $neo-light-grey !default;
+$table-head-hover: $table-head-background !default;
+$table-head-font-color: $global-text-color !default;
+$table-border-width: 1px !default;
+$table-border: $table-border-width solid $table-head-background !default;
+$table-striped-background: lighten($table-row-hover, 20%) !default;
+$table-stripe: even !default;
+$table-foot-background: $table-head-background !default;
+$table-foot-row-hover: $table-head-hover !default;
+$table-foot-font-color: $global-text-color !default;
+$table-sortable-background-active: darken(
+  $table-head-background,
+  $table-color-scale
+) !default;
+$table-sortable-background-hover: $table-sortable-background-active !default;
+$table-sortable-icon-size: $global-font-size-x-small !default;
+$table-sortable-icon-margin-x: $global-spacer-large !default;
+$table-sortable-icon-line-height: 24px !default;
+$table-editable-border: 3px solid $neo-active-green;
+$table-editable-bg-color: lighten($neo-presence-green, 45%);
+
+//
+// Component name: Buttons
+// Location: src/scss/elements/_button.scss
+//
+
+//updated button variables
+
+$button-font-weight-update: $token-button-primary-defaultfont-weight !default;
+$button-height-update: $token-button-primary-defaultheight !default;
+$button-min-width-update: $token-button-primary-defaultwidth !default;
+$button-border-width-update: $token-button-secondary-defaultborder-weight !default;
+$button-border-radius-update: $token-button-circular-primary-defaultborder-radius !default;
+$button-transition-update: all $global-transition-duration ease-in-out !default;
+$button-box-shadow-update: $token-button-primary-defaulthover-shadow-g-offset
+  $token-button-primary-defaulthover-shadow-v-offset
+  $token-button-primary-defaulthover-shadow-blur
+  $token-button-primary-defaulthover-shadow-color !default;
+$button-inverse-text-color-update: $token-button-primary-defaultcolor !default;
+$button-secondary-border-width-update: $token-button-secondary-defaultborder-weight !default;
+$button-secondary-border-style-update: $token-button-secondary-defaultborder-style !default;
+$button-tertiary-hover-bg-color: $token-color-base-200 !default;
+$button-circular-height-update: $token-button-circular-height !default;
+$button-circular-width-update: $token-button-circular-width !default;
+$button-padding-x-update: $token-button-primary-defaultpadding-x !default;
+$button-padding-y-update: $token-button-primary-defaultpadding-y !default;
+$button-icon-font-size-update: $token-button-icon-font-size !default;
+$button-types-update: () !default;
+$button-types-update: map-merge(
+  (
+    default: (
+      bg-color: $token-color-accent-500,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: $token-color-accent-600,
+      active-bg-color: $token-color-accent-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
+    ),
+    success: (
+      bg-color: $token-color-functional-green-500,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: $token-color-functional-green-600,
+      focus-bg-color: $token-color-functional-green-600,
+      active-bg-color: $token-color-functional-green-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
+    ),
+    warning: (
+      bg-color: $token-color-functional-orange-500,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: $token-color-functional-orange-600,
+      focus-bg-color: $token-color-functional-orange-600,
+      active-bg-color: $token-color-functional-orange-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
+    ),
+    alert: (
+      bg-color: $token-color-functional-red-500,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: $token-color-functional-red-600,
+      focus-bg-color: $token-color-functional-red-600,
+      active-bg-color: $token-color-functional-red-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
+    ),
+    info: (
+      bg-color: $token-color-functional-blue-500,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: $token-color-functional-blue-600,
+      focus-bg-color: $token-color-functional-blue-600,
+      active-bg-color: $token-color-functional-blue-600,
+      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
+      disabled-bg-color: $token-button-disabled-defaultbg-color,
+    ),
+  ),
+  $button-types-update
+);
+//end of updated button variables
+
+$button-bg-color-lightness-scale: 60 !default;
+$button-transition: background-color $global-transition-duration ease-in-out !default;
+$button-font-weight: 400 !default;
+$button-height: $input-height !default;
+$button-padding-x: $global-spacer-x-large !default;
+$button-min-width: 70px !default;
+$button-border-width: 2px !default;
+$button-border-radius: $global-radius !default;
+$button-icon-size: $button-height !default;
+$button-icon-size-ratio: 2/3 !default;
+$button-icon-padding: $global-spacer-small !default;
+$button-circle-icon-size: 22px !default;
+$button-color-dark: $neo-blue-grey-dark !default;
+$button-color-light: var-color-name(global-text-inverse) !default;
+
+$button-types: () !default;
+$button-types: map-merge(
+  (
+    default: (
+      bg-color: var-color-name(button-default-bg),
+      text-color: $global-text-inverse-color,
+      hover-bg-color: lighten-var(var-color-name(button-default-bg), 5%),
+      active-bg-color: lighten-var(var-color-name(button-default-bg), 5%),
+      active-box-shadow-color: var-color-name(button-default-bg),
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
+    ),
+    primary: (
+      bg-color: var-color-name(button-primary-bg),
+      text-color: $global-text-inverse-color,
+      hover-bg-color: lighten-var(var-color-name(button-primary-bg), 5%),
+      active-bg-color: lighten-var(var-color-name(button-primary-bg), 5%),
+      active-box-shadow-color: var-color-name(button-primary-bg),
+      disabled-bg-color: var-color-name(button-default-disabled-bg),
+    ),
+    secondary: (
+      bg-color: $neo-light-grey,
+      text-color: $global-text-color,
+      hover-bg-color: darken($neo-light-grey, 5%),
+      active-bg-color: darken($neo-light-grey, 5%),
+      active-box-shadow-color: $neo-light-grey,
+      disabled-bg-color: $neo-off-white,
+    ),
+    success: (
+      bg-color: $neo-active-green,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: darken($neo-active-green, 5%),
+      focus-bg-color: darken($neo-active-green, 5%),
+      active-bg-color: $neo-active-green,
+      active-box-shadow-color: $neo-active-green,
+      disabled-bg-color: $neo-off-white,
+    ),
+    warning: (
+      bg-color: $neo-presence-yellow,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: darken($neo-presence-yellow, 5%),
+      focus-bg-color: darken($neo-presence-yellow, 5%),
+      active-bg-color: $neo-presence-yellow,
+      active-box-shadow-color: $neo-presence-yellow,
+      disabled-bg-color: $neo-off-white,
+    ),
+    alert: (
+      bg-color: $neo-presence-red,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: darken($neo-presence-red, 5%),
+      focus-bg-color: darken($neo-presence-red, 5%),
+      active-bg-color: $neo-presence-red,
+      active-box-shadow-color: $neo-presence-red,
+      disabled-bg-color: $neo-off-white,
+    ),
+    info: (
+      bg-color: $neo-mid-blue,
+      text-color: $global-text-inverse-color,
+      hover-bg-color: darken($neo-mid-blue, 5%),
+      focus-bg-color: darken($neo-mid-blue, 5%),
+      active-bg-color: $neo-mid-blue,
+      active-box-shadow-color: $neo-mid-blue,
+      disabled-bg-color: $neo-off-white,
+    ),
+    ghost: (
+      bg-color: $global-background,
+      text-color: $global-text-color,
+      border-color: $neo-blue-grey,
+      hover-bg-color: darken-var($global-background, 5%),
+      active-bg-color: darken-var($global-background, 5%),
+      active-box-shadow-color: $neo-light-grey,
+      disabled-bg-color: $neo-off-white,
+    ),
+    clear: (
+      bg-color: transparent,
+      text-color: $global-text-color,
+      hover-bg-color: transparent,
+      active-bg-color: transparent,
+      active-box-shadow-color: transparent,
+    ),
+  ),
+  $button-types
+);
+
+$neo-button-group-offset: 1px;
+
+//
+// Element name: Arrow
+// Location: src/scss/elements/_arrow.scss
+//
+
+// updated arrow variables - hard-coded
+
+$arrow-border-width-update: 8px;
+
+$arrow-width: $global-spacer-x-large !default;
+$arrow-offset: $global-spacer-x-large !default;
+$arrow-height: $arrow-width/2 !default;
+$arrow-border-width: 1px !default;
+$arrow-outer-color: $neo-blue-grey;
+$arrow-color: $global-background;
+
+//
+// Component name: Checkbox
+// Location: src/scss/elements/_check.scss
+//
+
+// updated variables
+$checkbox-checked-background-update: $token-checkbox-selected-background-color !default;
+$checkbox-disabled-background-update: $token-checkbox-disabled-background-color !default;
+$checkbox-font-size-update: $token-web-typography-web-tiny-body-font-size !default;
+$checkbox-color-update: $token-color-base-100 !default;
+// end of updated variables
+
+$checkbox-size: 16px !default;
+$checkbox-background: $global-background !default;
+$checkbox-checked-background: $neo-blue-grey-dark !default;
+$checkbox-disabled-background: rgba(
+  $checkbox-checked-background,
+  $global-opacity
+) !default;
+$checkbox-icon-width: 6px !default;
+$checkbox-icon-height: 9px !default;
+$checkbox-icon-color: $global-background !default;
+$checkbox-label-indent: $global-spacer-large !default;
+
+//
+// Component name: Label
+// Location: src/scss/elements/_label.scss
+//
+
+// updated label variables
+
+$label-font-size-update: $token-label-font-size !default;
+$label-line-height-update: $token-label-line-height !default;
+$label-margin-bottom-update: $token-input-label-spacing !default;
+
+// end of updated label variables
+
+$label-background: $neo-primary-color !default;
+$label-color: $global-text-color !default;
+$label-color-alt: $neo-black !default;
+$label-font-size: $global-font-size-small !default;
+$label-height: 24px !default;
+$label-line-height: 1.1 !default;
+$label-padding-y: $global-spacer !default;
+$label-padding-x: $global-spacer-large !default;
+$label-spacing: 0 !default;
+$label-radius: $global-radius !default;
+
+//
+// Element name: Notification
+// Location: src/scss/elements/_notification.scss
+//
+
+// updated notification variables
+$notification-color-update: $global-text-color-update !default;
+$notification-radius-update: 0 !default;
+$notification-font-size-update: $token-web-typography-web-heading-4-font-size !default;
+// end of updated notification variables
+
+$notification-background: $neo-primary-color !default;
+$notification-color: $global-text-inverse-color !default;
+$notification-radius: $global-radius !default;
+$notification-font-size: $global-font-size-large !default;
+$notification-padding-y: $global-spacer * 2 !default;
+$notification-padding-x: $global-spacer-large * 2 !default;
+$notification-margin-bottom: $global-spacer !default;
+$notification-btn-offset: $global-spacer !default;
+$notification-icon-offset-y: $global-spacer-small !default;
+$notification-icon-offset-x: $global-spacer-large !default;
+$notification-description-font-size: $global-font-size !default;
+$notification-counter-font-size: $global-font-size !default;
+$notification-opacity: 0.8 !default;
+
+$close-types: () !default;
+$close-types: map-merge(
+  (
+    default: (
+      background-color: rgba($neo-navy-black, 0.2),
+      hover-background-color: rgba($neo-navy-black, 0.6),
+      color: $global-text-inverse-color,
+    ),
+    clear: (
+      background-color: transparent,
+      hover-background-color: transparent,
+      color: $neo-mid-grey,
+      hover-color: $neo-navy-black,
+    ),
+  ),
+  $close-types
+);
+
+$close-sizes: () !default;
+$close-sizes: map-merge(
+  (
+    small: 13px,
+    default: 16px,
+    large: 20px,
+    x-large: 26px,
+  ),
+  $close-sizes
+);
+
+//
+// Component name: Navbar
+// Location: src/scss/components/_navbar.scss
+//
+
+// udpated navbar variables
+
+$navbar-background-color-update: $global-background-update !default;
+$navbar-background-color-hover-update: $token-color-hover-background !default;
+
+// end of updated variables
+
+$navbar-background-color: var-color-name(navbar-background) !default;
+$navbar-text-color: var-color-name(navbar-text) !default;
+$navbar-height: 48px !default;
+$navbar-padding-x: $global-spacer-x-large !default;
+$navbar-z: 30 !default;
+$navbar-button-font-size: $global-font-size-x-large !default;
+
+$navbar-brand-color: $navbar-text-color !default;
+$navbar-brand-font-size: 20px !default;
+$navbar-brand-offset-x: $global-spacer-x-large !default;
+$navbar-brand-height: $navbar-height;
+
+$navbar-item-padding: $global-spacer $global-spacer-x-large !default;
+$navbar-item-line-height: 1.2 !default;
+$navbar-item-font-size: $global-font-size !default;
+$navbar-item-icon-font-size: $global-font-size-large !default;
+$navbar-item-border-radius: $global-radius !default;
+$navbar-item-color: $navbar-text-color !default;
+$navbar-item-hover-color: $navbar-item-color !default;
+$navbar-item-active-color: $navbar-item-color !default;
+$navbar-item-disabled-color: darken-var($navbar-text-color, 30%) !default;
+$navbar-item-hover-background-color: transparent !default;
+$navbar-item-active-background-color: transparent !default;
+
+//
+// Component name: Footer
+// Location: src/scss/components/_footer.scss
+//
+
+$footer-offset: 0 10px !default;
+$footer-height: 48px !default;
+$footer-brand-height: $footer-height - 20px !default;
+$footer-color: lighten-var($global-text-inverse-color, 13%) !default;
+$footer-bg-color: var-color-name(footer-background) !default;
+$footer-border-width: 1px !default;
+$footer-border-color: alpha(var-color-name(footer-border), 0.4) !default;
+$footer-indent: 2px !default;
+$footer-divider-color: alpha(var-color-name(footer-border), 0.4) !default;
+
+$footer-expansion-transition: width $global-transition-duration ease !default;
+
+$footer-icon-border-radius: $global-radius !default;
+$footer-icon-size: 19px !default;
+$footer-icon-padding: 0 5px !default;
+$footer-icon-color: lighten-var(var-color-name(footer-text), 10%) !default;
+$footer-icon-transition: color $global-transition-duration !default;
+
+$footer-info-color: var-color-name(footer-text) !default;
+$footer-info-offset: 0 10px !default;
+$footer-info-padding: 10px !default;
+$footer-info-font-size: $global-font-size-small !default;
+$footer-info-text-indent: $footer-indent !default;
+
+$footer-state-height: $footer-height - $footer-border-width !default;
+$footer-state-bg-color: $neo-mid-grey !default;
+$footer-state-offset: 20px !default;
+
+$compressed-footer-bg-color: var-color-name(footer-background) !default;
+$compressed-footer-height: 24px !default;
+$compressed-footer-state-height: $compressed-footer-height -
+  $footer-border-width !default;
+$compressed-footer-state-offset: 10px !default;
+$compressed-footer-border-width: 1px !default;
+$compressed-footer-border: $compressed-footer-border-width solid
+  $footer-border-color !default;
+
+$compressed-footer-indicator-padding: 0 10px !default;
+$compressed-footer-indicator-line-height: $compressed-footer-height !default;
+$compressed-footer-indicator-left-radius: 15px !default;
+
+//
+// Component name: Group List
+// Location: src/scss/components/_group-list.scss
+//
+
+// updated variables
+$group-list-item-background-update: $global-background-update !default;
+$group-list-item-color-update: $global-text-color-update !default;
+$group-list-item-hover-update: $token-list-hover !default;
+$group-list-border-width-update: $token-list-border-bottom-width !default;
+$group-list-border-color-update: $token-list-border-bottom-color !default;
+$group-list-font-size-update: $token-list-font-size !default;
+$group-list-white-update: $token-color-base-100 !default;
+$group-list-disabled-bg-color-update: $token-accordion-hover-disabled-background-color !default;
+$group-list-disabled-hover-color-update: $token-accordion-hover-disabled-color !default;
+// end of updated variables
+
+$group-list-item-background: $neo-white !default;
+$group-list-item-color: $neo-navy-black !default;
+$group-list-item-opacity: $global-opacity !default;
+$group-list-item-hover: $neo-light-blue !default;
+$group-list-border-width: 1px !default;
+$group-list-borderless: 0 !default;
+$group-list-border-color: $global-border-color !default;
+$group-list-radius: $global-radius !default;
+$group-list-font-size: $global-font-size !default;
+$group-list-padding-y: $global-spacer-large !default;
+$group-list-padding-x: $global-spacer-x-large !default;
+$group-list-spacer: $global-spacer !default;
+$group-list-transition: background-color $global-transition-duration ease-in-out !default;
+
+//
+// Component name: Accordion
+// Location: src/scss/components/_accordion.scss
+//
+
+// updated accordion variables
+
+$accordion-border-width-update: $token-accordion-border-width !default;
+$accordion-border-color-update: $token-accordion-border-color !default;
+
+// end of updated variables
+
+$accordion-body-background: $group-list-item-background !default;
+$accordion-border-width: $group-list-border-width !default;
+$accordion-border-color: $group-list-border-color !default;
+$accordion-icon-offset: 10px !default;
+$accordion-icon-transition: all $global-transition-duration ease !default;
+$accordion-icon-animation: rotate(0) !default;
+$accordion-active-icon-animation: rotate(-180deg) !default;
+$accordion-padding-y: $group-list-padding-y !default;
+$accordion-padding-x: $group-list-padding-x !default;
+
+//
+// Element name: Pagination
+// Location: src/scss/elements/_pagination.scss
+//
+
+// updated pagination variables
+
+$pagination-font-size-update: $token-table-font-size !default;
+$pagination-border-update: $token-table-pagination-active-div-border-width
+  $token-table-pagination-active-div-border-style
+  $token-table-pagination-active-div-border-color !default;
+$pagination-border-radius-update: $token-table-pagination-active-div-border-radius !default;
+$pagination-border-color-hover-update: $token-table-pagination-active-div-border-color !default;
+$pagination-dots-color-update: $global-text-color-update !default;
+$pagination-color-update: $token-table-pagination-color !default;
+$pagination-item-color-current-update: $token-table-pagination-active-color !default;
+$pagination-black-update: $token-color-base-1000 !default;
+$pagination-active-color-update: $token-table-pagination-active-color !default;
+$pagination-hover-background-color-update: $token-table-pagination-active-background-color !default;
+
+// end of updated variables
+
+$pagination-font-size: $global-font-size !default;
+$pagination-label-font-size: $global-font-size-small !default;
+$pagination-spacer: $global-spacer !default;
+$pagination-btn-background: $global-background !default;
+$pagination-btn-padding: $global-spacer-small $global-spacer-large !default;
+$pagination-border-color: $global-border-color !default;
+$pagination-border-color-hover: $neo-mid-grey !default;
+$pagination-border: 1px solid $pagination-border-color !default;
+$pagination-dots-color: $neo-mid-grey !default;
+$pagination-color: $neo-navy-black !default;
+$pagination-margin: $global-spacer !default;
+$pagination-transition: $global-transition-duration !default;
+$pagination-radius: $global-radius !default;
+$pagination-min-width-item: $global-font-size-large !default;
+$pagination-item-color-current: $neo-mid-blue !default;
+$pagination-dots-size: 20px !default;
+$pagination-disabled-bg: $neo-off-white !default;
+$pagination-disabled-color: rgba($neo-blue-grey-dark, $global-opacity) !default;
+
+//
+// Element name: Tooltip
+// Location: src/scss/elements/_tooltip.scss
+//
+
+// updated variables
+$tooltip-background-update: $token-tooltip-background-color !default;
+$tooltip-color-update: $token-tooltip-color !default;
+$tooltip-text-size-update: $token-tooltip-font-size !default;
+$tooltip-border-radius-update: 0 !default;
+$tooltip-padding-update: $token-tooltip-vertical-padding
+  $token-tooltip-horizontal-padding !default;
+$tooltip-font-size-update: $token-tooltip-font-size !default;
+$tooltip-width-update: $token-tooltip-width !default;
+$tooltip-height-update: $token-tooltip-height !default;
+// end of updated variables
+
+$tooltip-background: #fcf8d1 !default;
+$tooltip-color: #5b646e !default;
+$tooltip-width: 20em !default;
+$tooltip-offset: 8px !default;
+$tooltip-animation-duration: $global-transition-duration !default;
+$tooltip-text-size: 12px !default;
+$tooltip-border-radius: $global-radius !default;
+$tooltip-padding: $global-spacer-small $global-spacer !default;
+$tooltip-z: 999 !default;
+
+//--------------------------------------------//
+//                Components                  //
+//--------------------------------------------//
+
+//
+// Component name: Image
+// Location: src/scss/components/_image.scss
+//
+$image-thumbnail-padding: 3px !default;
+$image-thumbnail-border: 1px solid $global-border-color !default;
+$image-thumbnail-border-radius: $global-radius !default;
+
+//
+// Component name: Avatar
+// Location: src/scss/components/_avatar.scss
+//
+
+// updated variables
+$avatar-border-radius-update: $token-border-radius-100;
+$avatar-border-color-update: $token-avatar-avatar-border-color;
+$avatar-border-style-update: $token-avatar-avatar-border-style;
+$avatar-border-width-update: $token-avatar-avatar-border-width;
+$avatar-size-update: $token-avatar-default-width !default;
+$avatar-background-update: $token-avatar-background-color !default;
+$avatar-font-color-update: $token-avatar-color !default;
+$avatar-font-size-update: $token-avatar-initials-regular-font-size !default;
+$avatar-font-weight-update: $token-avatar-initials-regular-font-weight !default;
+$avatar-line-height-update: $token-avatar-initials-regular-line-height !default;
+// end of updated variables
+
+$avatar-size: 48px !default;
+$avatar-background: $neo-primary-color !default;
+$avatar-font-color: $global-text-inverse-color !default;
+$avatar-font-size: $global-font-size-large !default;
+$avatar-font-weight: 300 !default;
+$avatar-initials-selector: data-initials !default;
+//
+// Component name: Card
+// Location: src/scss/components/_card.scss
+//
+
+$card-background: $global-background !default;
+$card-font-color: $global-text-color !default;
+$card-divider-background: $neo-light-grey !default;
+$card-border: 1px solid $neo-light-grey !default;
+$card-shadow: none !default;
+$card-border-radius: $global-radius !default;
+$card-padding: $global-spacer !default;
+$card-margin-bottom: $global-spacer !default;
+
+//
+// Component name: Switch
+// Location: src/scss/components/_switch.scss
+//
+
+// updated variables
+
+$switch-inactive-color-update: $token-switch-off-background-color !default;
+$switch-active-color-update: $token-switch-on-background-color !default;
+
+// end of updated variables
+
+$switch-inactive-color: $neo-mid-grey !default;
+$switch-active-color: $neo-active-green !default;
+$switch-height: 20px !default;
+$switch-width: $switch-height * 2 !default;
+$switch-knob-indent: 2px !default;
+$switch-knob-size: $switch-height - $switch-knob-indent * 2 !default;
+$switch-translate-distance: $switch-width/2 !default;
+$switch-outline: 0 !default;
+$switch-border-radius: $switch-height / 2 !default;
+$switch-transition: all 0.25s ease-in-out !default;
+$switch-disabled-opacity: $global-opacity !default;
+
+// Component name: Chip
+// Location: src/scss/components/_chips.scss
+//
+
+// updated variables
+
+$chip-color-dark-update: $token-chip-default-color !default;
+$chip-color-light-update: $token-chip-stateful-color !default;
+$chip-font-size-update: $token-chip-font-size !default;
+$chip-border-radius-update: $token-chip-border-radius !default;
+$chip-padding-x-update: $token-chip-padding-horizontal !default;
+$chip-padding-y-update: $token-chip-padding-vertical !default;
+$chip-height-update: $token-chip-editable-height !default;
+$chip-width-update: $token-chip-editable-width !default;
+$chip-offset-update: ($input-height-update - $chip-height-update) / 2 - 1 !default;
+$chip-line-height-update: $token-chip-line-height;
+
+// end of updated variables
+
+$chips-border-color: $input-border-color !default;
+$chips-border-radius: $input-border-radius !default;
+$chip-transition: background-color $global-transition-duration ease-in-out !default;
+$chip-bg-color-lightness-scale: 60 !default;
+$chip-bg-color: var-color-name(button-secondary-bg) !default;
+$chip-color-dark: $input-font-color !default;
+$chip-color-light: $neo-white !default;
+$chip-bg-color-selected: darken-var($chip-bg-color, 10%) !default;
+$chip-height: $label-height !default;
+$chip-offset: ($input-height - $chip-height) / 2 - 1 !default;
+$chip-font-size: $label-font-size !default;
+$chip-border-radius: $global-radius !default;
+$chip-line-height: $label-line-height !default;
+$chip-padding-x: $label-padding-x !default;
+$chip-padding-y: $label-padding-y !default;
+$chip-btn-margin-left: $global-spacer !default;
+$chip-btn-opacity: 0.4 !default;
+$chip-disabled-bg: $neo-light-grey !default;
+$chip-disabled-color: $neo-mid-grey !default;
+
+// Component name: Tab
+// Location: src/scss/components/_tabs.scss
+//
+
+// updated variables
+
+$tab-border-bottom-color-upodate: $token-tabs-border-bottom-color !default;
+$tab-action-border-bottom-width-update: $token-tabs-border-bottom-width !default;
+$tab-action-active-color-update: $token-tabs-color !default;
+$tab-action-active-border-color-update: $token-tabs-color !default;
+$tab-action-line-height-update: $token-tabs-line-height !default;
+$tab-disabled-bg-color-update: $token-tabs-disabled-background-color !default;
+$tab-border-bottom-color-update: $global-background !default;
+$tab-bordered-active-border-bottom-color-update: $token-tabs-color !default;
+$tab-action-disabled-color-update: $token-color-disabled-background !default;
+
+// end of updated variables
+
+$tab-offset: $global-spacer !default;
+$tab-container-margin: 0 6px !default;
+$tab-border-bottom-color: $global-border-color;
+$tab-transition: transform 0.5s ease !default;
+$tab-padding-default: 15px 30px !default;
+$tab-padding-small: 6px 25px !default;
+$tab-padding-medium: 10px 30px !default;
+$tab-padding-large: 15px 45px !default;
+$tab-min-height-default: 54px !default;
+$tab-min-height-small: 35px !default;
+$tab-min-height-medium: 44px !default;
+$tab-min-height-large: $tab-min-height-default !default;
+$tab-action-color: rgba($neo-blue-grey-dark, 0.6) !default;
+$tab-action-border-bottom-width: 2px !default;
+$tab-action-active-color: $neo-blue-grey-dark !default;
+$tab-action-active-border-color: $neo-presence-yellow !default;
+$tab-action-disabled-color: $neo-light-grey !default;
+$tab-action-line-height: 14px !default;
+$tab-action-padding-default: 15px 15px !default;
+$tab-action-padding-small: 6px 15px !default;
+$tab-action-padding-medium: 10px 15px !default;
+$tab-action-padding-large: 15px 15px !default;
+$tab-bordered-border-width: 1px !default;
+$tab-bordered-border: $tab-bordered-border-width solid
+  $global-border-color-darker !default;
+$tab-bordered-border-radius: $global-radius !default;
+$tab-bordered-bg-color: $neo-off-white !default;
+$tab-bordered-active-bg-color: transparent !default;
+$tab-bordered-active-border-color: $global-border-color-darker !default;
+$tab-bordered-active-border-bottom-color: $neo-white !default;
+$tab-bordered-disabled-bg-color: rgba(
+  $tab-bordered-bg-color,
+  $global-opacity
+) !default;
+$tab-close-btn-offset-x: $global-spacer !default;
+$tab-vertical-border-right: 2px solid $neo-light-grey !default;
+$tab-vertical-item-width: 120px !default;
+$tab-vertical-item-max-height: 42px !default;
+$tab-vertical-line-height: 22px !default;
+$tab-vertical-item-padding: $global-spacer !default;
+$tab-disabled-color: rgba($tab-action-color, 0.2) !default;
+$tab-disabled-bg-color: transparent !default;
+
+@function tab-vertical-marker($color) {
+  $result: $color !default;
+  @return 2px solid $result;
+}
+
+// Component name: Dropdown
+// Location: src/scss/components/_dropdown.scss
+//
+
+// updated dropdown variables
+
+$dropdown-color-update: $token-menu-font-color !default;
+$dropdown-content-border-width-update: $token-menu-separator-border-bottom-width !default;
+$dropdown-content-border-update: $token-menu-separator-border-bottom-width
+  $token-menu-separator-border-bottom-style $token-color-base-400 !default;
+$dropdown-content-background-color-update: $token-menu-default-background-color !default;
+$dropdown-content-arrow-color-update: $token-menu-icon-color !default;
+$dropdown-subcontent-arrow-color-update: $dropdown-content-arrow-color-update !default;
+$dropdown-item-color-update: $token-menu-font-color !default;
+$dropdown-item-hover-color-update: $token-menu-hover !default;
+$dropdown-item-hover-background-color-update: $token-menu-default-active-color !default;
+$dropdown-box-shadow-update: $token-menu-box-shadow-x-offset
+  $token-menu-box-shadow-y-offset $token-menu-box-shadow-radius
+  $token-menu-box-shadow-color !default;
+
+// end of updated dropdown variables
+
+$dropdown-color: var-color-name(dropdown-text) !default;
+$dropdown-padding-x: 16px !default;
+$dropdown-padding-y: $global-spacer-large !default;
+$dropdown-line-height: $input-line-height !default;
+$dropdown-font-size: $input-font-size !default;
+$dropdown-animation-duration: $global-transition-duration !default;
+$dropdown-radius: $global-radius !default;
+$dropdown-min-width: 150px !default;
+$dropdown-content-border-width: 1px !default;
+$dropdown-content-border: $dropdown-content-border-width solid
+  $input-border-color !default;
+$dropdown-content-padding: $global-spacer !default;
+$dropdown-content-shadow: none !default;
+$dropdown-content-z: 20 !default;
+$dropdown-content-background-color: var-color-name(
+  dropdown-background
+) !default;
+$dropdown-content-arrow-color: $dropdown-color !default;
+$dropdown-subcontent-arrow-color: $dropdown-color !default;
+$dropdown-item-color: $dropdown-color !default;
+$dropdown-item-hover-color: $dropdown-item-color !default;
+$dropdown-item-hover-background-color: var-color-name(
+  dropdown-item-hover-background
+) !default;
+$dropdown-icon-margin-x: $global-spacer !default;
+$dropdown-icon-margin-y: $global-spacer-small !default;
+$dropdown-avatar-sm-margin-x: $global-spacer !default;
+$dropdown-divider-border: 1px solid var-color-name(dropdown-divider) !default;
+$dropdown-input-offset: 6px !default;
+$dropdown-input-border: 2px solid var-color-name(dropdown-input-border) !default;
+$dropdown-input-bg: transparent !default;
+$dropdown-input-icon-color: $dropdown-item-color !default;
+
+// Component name: Popover
+// Location: src/scss/components/_popover.scss
+//
+
+// updated popover variables
+
+$popover-background-color-update: $token-popover-title-background-color !default;
+$popover-text-color-update: $global-text-color !default;
+$popover-border-color-update: $token-popover-title-border-bottom-color !default;
+$popover-content-background-color-update: $token-popover-body-background-color !default;
+$popover-border-width-update: $token-popover-border-width !default;
+$popover-border-style-update: $token-popover-border-style !default;
+$popover-content-border-update: $popover-border-width-update
+  $popover-border-style-update $popover-border-color-update !default;
+$popover-radius-update: 0 !default;
+$popover-header-height-update: $token-popover-header-height !default;
+$popover-line-height-update: $token-web-typography-web-body-semibold-line-height !default;
+$popover-letter-spacing-update: $token-web-typography-web-body-semibold-letter-spacing !default;
+$popover-font-size-update: $token-web-typography-web-body-semibold-font-size !default;
+$popover-font-weight-update: $token-web-typography-fontweight-semibold !default;
+
+// end of updated variables
+
+$popover-background-color: var-color-name(popover-background);
+$popover-text-color: var-color-name(popover-text);
+$popover-border-color: $popover-background-color;
+$popover-header-padding: 5px 10px !default;
+$popover-animation-duration: $global-transition-duration !default;
+$popover-content-background-color: $global-background !default;
+$popover-content-border: 1px solid $input-border-color !default;
+$popover-radius: $global-radius !default;
+$popover-content-shadow: none !default;
+$popover-content-padding: 0 !default;
+$popover-content-z: 20 !default;
+$popover-min-width: 150px !default;
+$popover-offset: $arrow-width !default;
+$popover-btn-offset: $global-spacer !default;
+
+// Component name: Timeline
+// Location: src/scss/coponents/_timeline.scss
+//
+
+$timeline-line-color: $neo-mid-grey !default;
+$timeline-primary-color: $neo-primary-color !default;
+$timeline-point-bg-color: $neo-primary-color !default;
+$timeline-background-color: $global-background !default;
+
+// Component name: Widget
+// Location: src/scss/coponents/_widget.scss
+//
+
+$widget-border-color: $global-border-color-darker !default;
+$widget-box-shadow: 2px 2px 2px $widget-border-color;
+$widget-heading-color: #616161 !default;
+$widget-border-radius: $global-radius !default;
+$widget-heading-padding: $global-spacer-x-large !default;
+$widget-heading-height: 40px !default;
+$widget-heading-font-weight: 400 !default;
+$widget-heading-font-size: $global-font-size-large !default;
+$widget-content-padding: $global-spacer-x-large !default;
+$widget-content-min-height: 17vh !default;
+$widget-footer-padding: $global-spacer $global-spacer $global-spacer
+  $global-spacer-x-large !default;
+$widget-disabled-opacity: $global-opacity !default;
+
+// Component name: Empty state
+// Location: src/scss/coponents/_empty-state.scss
+//
+
+$empty-state-color: $neo-mid-grey !default;
+$empty-state-font-size: $global-font-size-large !default;
+$empty-state-font-weight: 400 !default;
+$empty-state-icon-size: $global-font-size * 3.5 !default;
+
+// Component name: Spinner
+// Location: src/scss/components/_spinner.scss
+//
+
+// updated spinner variables
+
+$spinner-ring-color-update: $token-spinner-color;
+$spinner-animation-duration-update: 500ms;
+
+$spinner-ring-sizes-update: () !default;
+$spinner-ring-sizes-update: map-merge(
+  (
+    default: (
+      size: $token-spinner-width,
+      border-width: 1px,
+    ),
+    large: (
+      size: $token-spinner-width * 1.3,
+      border-width: 2px,
+    ),
+    x-large: (
+      size: $token-spinner-width * 1.7,
+      border-width: 3px,
+    ),
+  ),
+  $spinner-ring-sizes-update
+);
+
+// end of updated variables
+
+$spinner-ring-sizes: () !default;
+$spinner-ring-sizes: map-merge(
+  (
+    default: (
+      size: 20px,
+      border-width: 1px,
+    ),
+    large: (
+      size: 26px,
+      border-width: 2px,
+    ),
+    x-large: (
+      size: 34px,
+      border-width: 3px,
+    ),
+  ),
+  $spinner-ring-sizes
+);
+
+$spinner-ring-color: $neo-dark-grey !default;
+$spinner-button-size: 14px !default;
+$spinner-timing-0: 0.55, 0.055, 0.675, 0.19 !default;
+$spinner-timing-50: 0.215, 0.61, 0.355, 1 !default;
+$spinner-animation-duration: 500ms !default;
+
+// Component name: Modal
+// Location: src/scss/components/_modal.scss
+//
+
+// updated modal variables
+
+$modal-scrim-color-update: $token-modal-scrim-color !default;
+$modal-shadow-color-update: $token-modal-box-shadow-color !default;
+$modal-shadow-update: $token-modal-box-shadow-x-offset
+  $token-modal-box-shadow-y-offset $token-modal-box-shadow-radius 0
+  $modal-shadow-color-update !default;
+$modal-background-update: $global-background-update !default;
+$modal-element-background-update: $modal-background-update !default;
+$modal-border-color-update: $modal-background-update !default;
+$modal-border-update: $token-border-solid-1-px-border-width
+  $token-border-solid-1-px-border-style $token-color-base-400 !default;
+$modal-menu-width-update: $token-modal-menu-modal-width !default;
+$modal-menu-active-border-update: 4px $token-border-solid-1-px-border-style
+  $token-color-accent-500 !default;
+$modal-menu-active-border-color-update: $token-color-accent-500 !default;
+$modal-padding-update: $global-spacer-large 17px $global-spacer-large 0 !default;
+
+// end of updated variables
+
+$modal-z: 999 !default;
+$modal-color: $neo-dark-grey !default;
+$modal-content-z: 1000 !default;
+$modal-width: 550px !default;
+$modal-shadow-color: $neo-navy-black !default;
+$modal-padding-y: 20px !default;
+$modal-margin: $global-spacer-large !default;
+$modal-shadow: 0 5px 10px 0 rgba($modal-shadow-color, 0.2),
+  0 5px 20px 0 rgba($modal-shadow-color, 0.2) !default;
+$modal-radius: $global-radius !default;
+$modal-border-width: 1px !default;
+$modal-message-font-size: $global-font-size-medium !default;
+$modal-message-margin-bottom: $global-spacer-large;
+$modal-body-color: $modal-color !default;
+$modal-body-background: $global-background !default;
+$modal-body-height: 200px !default;
+$modal-background: rgba($neo-blue-grey, 0.8) !default;
+$modal-element-background: $modal-body-background !default;
+$modal-border-color: $neo-light-grey !default;
+$modal-border: $modal-border-width solid darken($modal-border-color, 5%) !default;
+$modal-divider: $global-divider-thickness solid darken($modal-border-color, 5%) !default;
+$modal-padding: $global-spacer-large 0 !default;
+$modal-header-padding: $global-spacer-x-large 0 $global-spacer-large 0 !default;
+$modal-animation-time: 0.4s !default;
+
+// Component name: Badge
+// Location: src/scss/elements/_badge.scss
+//
+
+// udpated variables
+
+$badge-font-size-update: $token-badge-font-size !default;
+$badge-background-color-update: $token-badge-background-color !default;
+$badge-color-update: $token-badge-color !default;
+$badge-padding-update: $token-badge-padding !default;
+
+// end of updated variables
+
+$badge-font-size: $global-font-size-small !default;
+$badge-background-color: $neo-alert-color !default;
+$badge-color: $global-text-inverse-color !default;
+$badge-offset: 65% !default;
+$badge-padding: 0 2px !default;

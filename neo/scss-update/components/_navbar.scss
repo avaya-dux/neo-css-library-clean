@@ -1,0 +1,374 @@
+@mixin navbar-default-color {
+  .neo-btn {
+    background-color: $navbar-background-color;
+    color: $navbar-text-color;
+
+    &:hover {
+      background-color: lighten-var($navbar-background-color, 5%);
+    }
+  }
+
+  .neo-form--inline .neo-btn {
+    background-color: lighten-var($navbar-background-color, 10%);
+
+    &:hover {
+      background-color: lighten-var($navbar-background-color, 15%);
+    }
+  }
+}
+
+@mixin navbar-states {
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $navbar-item-hover-background-color;
+    color: $navbar-item-hover-color;
+  }
+
+  &:empty {
+    font-size: $navbar-item-icon-font-size;
+  }
+
+  .neo-nav__item--active & {
+    background-color: $navbar-item-active-background-color;
+    color: $navbar-item-active-color;
+    font-weight: bold;
+  }
+
+  .neo-nav__item--disabled & {
+    color: $navbar-item-disabled-color;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+@mixin navbar-form {
+  .neo-form--inline {
+    margin-left: $navbar-padding-x;
+
+    @include rtl-selector {
+      margin: {
+        right: $navbar-padding-x;
+      }
+    }
+
+    .neo-input {
+      border: 0;
+    }
+  }
+
+  @include navbar-button;
+}
+
+@mixin navbar-button {
+  .neo-btn:empty {
+    font-size: $navbar-button-font-size;
+  }
+}
+
+.neo-navbar {
+  align-items: center;
+  background-color: $navbar-background-color;
+  display: flex;
+  flex: 1;
+  min-height: $navbar-height;
+  padding: 0 $navbar-padding-x 0 0;
+  position: relative;
+  z-index: $navbar-z;
+
+  @include rtl-selector {
+    padding: 0 0 0 $navbar-padding-x;
+  }
+
+  @include navbar-default-color;
+  @include navbar-form;
+}
+
+.neo-navbar__brand {
+  align-items: center;
+  color: $navbar-brand-color;
+  display: flex;
+  font-size: $navbar-brand-font-size;
+  margin-right: $navbar-brand-offset-x;
+  min-height: $navbar-height;
+  padding: 0;
+  text-decoration: none;
+  text-indent: $navbar-brand-offset-x;
+  white-space: nowrap;
+
+  @include rtl-selector {
+    margin: {
+      left: $navbar-brand-offset-x;
+      right: 0;
+    }
+  }
+
+  &:hover {
+    color: $navbar-brand-color;
+  }
+}
+
+.neo-navbar__logo {
+  max-height: $navbar-brand-height;
+}
+
+.neo-navbar__heading {
+  color: $navbar-brand-color;
+}
+
+.neo-nav {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: {
+    bottom: 0;
+    left: $navbar-padding-x;
+  }
+}
+
+.neo-nav__link {
+  border-radius: $navbar-item-border-radius;
+  color: $navbar-item-color;
+  cursor: pointer;
+  display: block;
+  line-height: $navbar-item-line-height;
+  padding: $navbar-item-padding;
+  text-decoration: none;
+
+  @include navbar-states;
+}
+
+.neo-navbar--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.neo-navbar--spacer {
+  margin-right: auto;
+}
+
+// updated navbar styles
+
+@mixin navbar-default-color-update {
+  .neo-btn-update {
+    background-color: $navbar-background-color-update;
+    color: $global-text-color-update;
+
+    &:hover {
+      background-color: $navbar-background-color-hover-update;
+      box-shadow: none;
+    }
+
+    .neo-form-update--inline .neo-btn-update {
+      background-color: $navbar-background-color-update;
+
+      &:hover {
+        background-color: $navbar-background-color-hover-update;
+      }
+    }
+  }
+}
+
+@mixin navbar-states-update {
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $navbar-background-color-hover-update;
+    color: $global-text-color-update;
+  }
+
+  &:empty {
+    font-size: $navbar-item-icon-font-size;
+  }
+
+  .neo-nav-update__item--active & {
+    background-color: $navbar-item-active-background-color;
+    color: $navbar-item-active-color;
+    font-weight: bold;
+  }
+
+  .neo-nav-update__item--disabled & {
+    color: $navbar-item-disabled-color;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+@mixin navbar-form-update {
+  .neo-form-update--inline {
+    margin-left: $navbar-padding-x;
+
+    @include rtl-selector {
+      margin: {
+        right: $navbar-padding-x;
+      }
+    }
+
+    .neo-input-update {
+      border: 0;
+    }
+  }
+
+  @include navbar-button-update;
+}
+
+@mixin navbar-button-update {
+  .neo-btn-update:empty {
+    font-size: $navbar-button-font-size;
+  }
+}
+
+.neo-navbar-update {
+  height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $navbar-background-color-update;
+  display: flex;
+  flex: 1;
+  min-height: $navbar-height;
+  padding: 0 $navbar-padding-x 0 0;
+  position: relative;
+  z-index: $navbar-z;
+  max-width: 100vw;
+
+  @include rtl-selector {
+    padding: 0 0 0 $navbar-padding-x;
+  }
+
+  @include navbar-default-color-update;
+  @include navbar-form-update;
+}
+
+.neo-navbar-update__brand {
+  align-items: center;
+  color: $global-text-color-update;
+  display: flex;
+  font-size: $navbar-brand-font-size;
+  margin-right: $navbar-brand-offset-x;
+  min-height: $navbar-height;
+  padding: 0;
+  text-decoration: none;
+  text-indent: $navbar-brand-offset-x;
+  white-space: nowrap;
+
+  @include rtl-selector {
+    margin: {
+      left: $navbar-brand-offset-x;
+      right: 0;
+    }
+  }
+
+  &:hover {
+    color: $navbar-brand-color;
+  }
+}
+
+.neo-navbar-update__logo {
+  max-height: $navbar-brand-height;
+}
+
+.neo-navbar-update__heading {
+  color: $navbar-brand-color;
+}
+
+.neo-nav-update {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  height: 100%;
+  margin: {
+    bottom: 0;
+    left: $navbar-padding-x;
+  }
+  & .neo-btn-icon-badge {
+    height: 100%;
+    width: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: $button-transition;
+    transition-property: background-color;
+    &:hover {
+      background-color: $navbar-background-color-hover-update;
+      & button {
+        background-color: $navbar-background-color-hover-update;
+      }
+    }
+    .neo-badge-update-icon::after {
+      font-family: 'noto-sans', sans-serif;
+      background: #db3232;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: #ffffff;
+      content: attr(data-badge);
+      display: flex;
+      font-size: 10px;
+      height: 16px;
+      justify-content: center;
+      line-height: 16px;
+      min-width: 16px;
+      padding: 0px 4px;
+      position: absolute;
+      right: 19px;
+      top: 21px;
+      transform: translate(65%, -65%);
+      z-index: 999;
+    }
+  }
+  & button {
+    transition: $button-transition;
+    transition-property: background-color;
+    &:hover {
+      background-color: $navbar-background-color-hover-update;
+    }
+    &::before {
+      font-size: 24px;
+    }
+  }
+  & [class*='neo-icon-'].neo-btn-update:empty::before {
+    font-size: 24px;
+  }
+  & .neo-btn-sign-on {
+    & button {
+      &:hover {
+        background-color: white;
+      }
+    }
+    height: 100%;
+    width: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & [class*='neo-icon-'].neo-btn-update:empty::before {
+      font-size: 12px;
+    }
+  }
+}
+
+.neo-nav-update__link {
+  border-radius: $navbar-item-border-radius;
+  color: $navbar-item-color;
+  cursor: pointer;
+  display: block;
+  line-height: $navbar-item-line-height;
+  padding: $navbar-item-padding;
+  text-decoration: none;
+
+  @include navbar-states-update;
+}
+
+.neo-navbar-update--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.neo-navbar-update--spacer {
+  margin-right: auto;
+}

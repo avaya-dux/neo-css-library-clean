@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<resources>
+    <item name="tokenAndroidTypographyFontFamily">"Noto Sans"</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle1LineHeight">18.75px</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle1LetterSpacing">0.024000000953674317px</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle1FontSize">16px</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle1FontWeight">400</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline6LineHeight">23.4375px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline6LetterSpacing">0.030000001192092896px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline6FontSize">20px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline6FontWeight">500</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle2LineHeight">16.40625px</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle2LetterSpacing">0.014000000208616258px</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle2FontSize">14px</item>
+    <item name="tokenAndroidTypographyAndroidMobileSubtitle2FontWeight">500</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline5LineHeight">28.125px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline5LetterSpacing">0px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline5FontSize">24px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline5FontWeight">400</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody1LineHeight">18.75px</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody1LetterSpacing">0.08px</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody1FontSize">16px</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody1FontWeight">400</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline3LineHeight">56.25px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline3LetterSpacing">0px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline3FontSize">48px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline3FontWeight">400</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline1LineHeight">112.5px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline1LetterSpacing">-1.44px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline1FontSize">96px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline1FontWeight">300</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody2LineHeight">16.40625px</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody2LetterSpacing">0.035px</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody2FontSize">14px</item>
+    <item name="tokenAndroidTypographyAndroidMobileBody2FontWeight">400</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline2LineHeight">70.3125px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline2LetterSpacing">-0.3px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline2FontSize">60px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline2FontWeight">300</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline4LineHeight">39.84375px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline4LetterSpacing">0.085px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline4FontSize">34px</item>
+    <item name="tokenAndroidTypographyAndroidMobileHeadline4FontWeight">400</item>
+    <item name="tokenAndroidTypographyAndroidMobileButtonLineHeight">16.40625px</item>
+    <item name="tokenAndroidTypographyAndroidMobileButtonLetterSpacing">0.17500000000000002px</item>
+    <item name="tokenAndroidTypographyAndroidMobileButtonFontSize">14px</item>
+    <item name="tokenAndroidTypographyAndroidMobileButtonFontWeight">500</item>
+    <item name="tokenAndroidTypographyAndroidMobileCaptionLineHeight">14.0625px</item>
+    <item name="tokenAndroidTypographyAndroidMobileCaptionLetterSpacing">0.048000000715255745px</item>
+    <item name="tokenAndroidTypographyAndroidMobileCaptionFontSize">12px</item>
+    <item name="tokenAndroidTypographyAndroidMobileCaptionFontWeight">400</item>
+    <item name="tokenAndroidTypographyAndroidMobileOverlineLineHeight">11.71875px</item>
+    <item name="tokenAndroidTypographyAndroidMobileOverlineLetterSpacing">0.15px</item>
+    <item name="tokenAndroidTypographyAndroidMobileOverlineFontSize">10px</item>
+    <item name="tokenAndroidTypographyAndroidMobileOverlineFontWeight">400</item>
+    
+</resources>

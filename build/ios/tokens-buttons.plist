@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<dict>
+    <key>tokenButtonPrimaryDefaultwidth</key><string>78pt</string>
+    <key>tokenButtonPrimaryDefaultheight</key><string>35pt</string>
+    <key>tokenButtonPrimaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonPrimaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonPrimaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonPrimaryDefaultpadding</key><string>8px 16px</string>
+    <key>tokenButtonPrimaryDefaultfontWeight</key><string>400</string>
+    <key>tokenButtonPrimaryDefaultfontSize</key><string>14pt</string>
+    <key>tokenButtonPrimaryDefaultletterSpacing</key><string>0pt</string>
+    <key>tokenButtonPrimaryDefaultlineHeight</key><string>16.40625pt</string>
+    <key>tokenButtonPrimaryDefaultcolor</key><string>#ffffff</string>
+    <key>tokenButtonPrimaryDefaultwarningBgColor</key><string>#b06112</string>
+    <key>tokenButtonPrimaryDefaultwarningBgColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonPrimaryDefaultsuccessBgColor</key><string>#088a08</string>
+    <key>tokenButtonPrimaryDefaultsuccessBgColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonPrimaryDefaultinfoBgColor</key><string>#1473e6</string>
+    <key>tokenButtonPrimaryDefaultinfoBgColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonPrimaryDefaultalertBgColor</key><string>#db3232</string>
+    <key>tokenButtonPrimaryDefaultalertBgColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonPrimaryDefaulthoverShadowGOffset</key><string>0px </string>
+    <key>tokenButtonPrimaryDefaulthoverShadowVOffset</key><string>4pt</string>
+    <key>tokenButtonPrimaryDefaulthoverShadowBlur</key><string>8pt</string>
+    <key>tokenButtonPrimaryDefaulthoverShadowColor</key><string>rgba(0, 0, 0, 0.25)</string>
+    <key>tokenButtonTertiaryDefaultwidth</key><string>78pt</string>
+    <key>tokenButtonTertiaryDefaultheight</key><string>35pt</string>
+    <key>tokenButtonTertiaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonTertiaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonTertiaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonTertiaryDefaultpadding</key><string>8px 16px</string>
+    <key>tokenButtonTertiaryDefaultfontWeight</key><string>400</string>
+    <key>tokenButtonTertiaryDefaultfontSize</key><string>14pt</string>
+    <key>tokenButtonTertiaryDefaultletterSpacing</key><string>0pt</string>
+    <key>tokenButtonTertiaryDefaultlineHeight</key><string>16.40625pt</string>
+    <key>tokenButtonTertiaryDefaultwarningColor</key><string>#b06112</string>
+    <key>tokenButtonTertiaryDefaultwarningColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonTertiaryDefaultsuccessColor</key><string>#088a08</string>
+    <key>tokenButtonTertiaryDefaultsuccessColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonTertiaryDefaultinfoColor</key><string>#1473e6</string>
+    <key>tokenButtonTertiaryDefaultinfoColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonTertiaryDefaultalertColor</key><string>#db3232</string>
+    <key>tokenButtonTertiaryDefaultalertColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonDisabledDefaultwidth</key><string>78pt</string>
+    <key>tokenButtonDisabledDefaultheight</key><string>35pt</string>
+    <key>tokenButtonDisabledDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonDisabledDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonDisabledDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonDisabledDefaultpadding</key><string>8px 16px</string>
+    <key>tokenButtonDisabledDefaultfontWeight</key><string>400</string>
+    <key>tokenButtonDisabledDefaultfontSize</key><string>14pt</string>
+    <key>tokenButtonDisabledDefaultletterSpacing</key><string>0pt</string>
+    <key>tokenButtonDisabledDefaultlineHeight</key><string>16.40625pt</string>
+    <key>tokenButtonDisabledDefaultcolor</key><string>#ffffff</string>
+    <key>tokenButtonDisabledDefaultbgColor</key><string>#c0c0cc</string>
+    <key>tokenButtonDisabledDefaultcolorOnHover</key><string>#c0c0cc</string>
+    <key>tokenButtonDisabledDefaultbgColorOnHover</key><string>#ffffff</string>
+    <key>tokenButtonSecondaryDefaultwidth</key><string>78pt</string>
+    <key>tokenButtonSecondaryDefaultheight</key><string>35pt</string>
+    <key>tokenButtonSecondaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonSecondaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonSecondaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonSecondaryDefaultborderWeight</key><string>1pt</string>
+    <key>tokenButtonSecondaryDefaultborderStyle</key><string>solid</string>
+    <key>tokenButtonSecondaryDefaultpadding</key><string>8px 16px</string>
+    <key>tokenButtonSecondaryDefaultfontWeight</key><string>400</string>
+    <key>tokenButtonSecondaryDefaultfontSize</key><string>14pt</string>
+    <key>tokenButtonSecondaryDefaultletterSpacing</key><string>0pt</string>
+    <key>tokenButtonSecondaryDefaultlineHeight</key><string>16.40625pt</string>
+    <key>tokenButtonSecondaryDefaultwarningColor</key><string>#b06112</string>
+    <key>tokenButtonSecondaryDefaultwarningColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonSecondaryDefaultsuccessColor</key><string>#088a08</string>
+    <key>tokenButtonSecondaryDefaultsuccessColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonSecondaryDefaultinfoColor</key><string>#1473e6</string>
+    <key>tokenButtonSecondaryDefaultinfoColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonSecondaryDefaultalertColor</key><string>#db3232</string>
+    <key>tokenButtonSecondaryDefaultalertColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonSecondaryDefaulthoverShadowGOffset</key><string>0px </string>
+    <key>tokenButtonSecondaryDefaulthoverShadowVOffset</key><string>4pt</string>
+    <key>tokenButtonSecondaryDefaulthoverShadowBlur</key><string>8pt</string>
+    <key>tokenButtonSecondaryDefaulthoverShadowColor</key><string>rgba(0, 0, 0, 0.25)</string>
+    <key>tokenButtonSquareSecondaryDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonSquareSecondaryDefaultheight</key><string>36pt</string>
+    <key>tokenButtonSquareSecondaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonSquareSecondaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonSquareSecondaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonSquareSecondaryDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonSquareSecondaryDefaultwarningColor</key><string>#b06112</string>
+    <key>tokenButtonSquareSecondaryDefaultwarningColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonSquareSecondaryDefaultsuccessColor</key><string>#088a08</string>
+    <key>tokenButtonSquareSecondaryDefaultsuccessColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonSquareSecondaryDefaultinfoColor</key><string>#1473e6</string>
+    <key>tokenButtonSquareSecondaryDefaultinfoColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonSquareSecondaryDefaultalertColor</key><string>#db3232</string>
+    <key>tokenButtonSquareSecondaryDefaultalertColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonSquareDisabledDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonSquareDisabledDefaultheight</key><string>36pt</string>
+    <key>tokenButtonSquareDisabledDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonSquareDisabledDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonSquareDisabledDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonSquareDisabledDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonSquareDisabledDefaultcolor</key><string>#ffffff</string>
+    <key>tokenButtonSquareDisabledDefaultbgColor</key><string>#c0c0cc</string>
+    <key>tokenButtonSquareDisabledDefaultcolorOnHover</key><string>#c0c0cc</string>
+    <key>tokenButtonSquareDisabledDefaultbgColorOnHover</key><string>#ffffff</string>
+    <key>tokenButtonSquareTertiaryDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonSquareTertiaryDefaultheight</key><string>36pt</string>
+    <key>tokenButtonSquareTertiaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonSquareTertiaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonSquareTertiaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonSquareTertiaryDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonSquareTertiaryDefaultwarningColor</key><string>#b06112</string>
+    <key>tokenButtonSquareTertiaryDefaultwarningColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonSquareTertiaryDefaultsuccessColor</key><string>#088a08</string>
+    <key>tokenButtonSquareTertiaryDefaultsuccessColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonSquareTertiaryDefaultinfoColor</key><string>#1473e6</string>
+    <key>tokenButtonSquareTertiaryDefaultinfoColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonSquareTertiaryDefaultalertColor</key><string>#db3232</string>
+    <key>tokenButtonSquareTertiaryDefaultalertColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonSquarePrimaryDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonSquarePrimaryDefaultheight</key><string>36pt</string>
+    <key>tokenButtonSquarePrimaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonSquarePrimaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonSquarePrimaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonSquarePrimaryDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonSquarePrimaryDefaultcolor</key><string>#ffffff</string>
+    <key>tokenButtonSquarePrimaryDefaultwarningBgColor</key><string>#b06112</string>
+    <key>tokenButtonSquarePrimaryDefaultwarningBgColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonSquarePrimaryDefaultsuccessBgColor</key><string>#088a08</string>
+    <key>tokenButtonSquarePrimaryDefaultsuccessBgColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonSquarePrimaryDefaultinfoBgColor</key><string>#1473e6</string>
+    <key>tokenButtonSquarePrimaryDefaultinfoBgColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonSquarePrimaryDefaultalertBgColor</key><string>#db3232</string>
+    <key>tokenButtonSquarePrimaryDefaultalertBgColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonCircularPrimaryDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonCircularPrimaryDefaultheight</key><string>36pt</string>
+    <key>tokenButtonCircularPrimaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonCircularPrimaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonCircularPrimaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonCircularPrimaryDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonCircularPrimaryDefaultborderRadius</key><string>100%</string>
+    <key>tokenButtonCircularPrimaryDefaultcolor</key><string>#ffffff</string>
+    <key>tokenButtonCircularPrimaryDefaultwarningBgColor</key><string>#b06112</string>
+    <key>tokenButtonCircularPrimaryDefaultwarningBgColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonCircularPrimaryDefaultsuccessBgColor</key><string>#088a08</string>
+    <key>tokenButtonCircularPrimaryDefaultsuccessBgColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonCircularPrimaryDefaultinfoBgColor</key><string>#1473e6</string>
+    <key>tokenButtonCircularPrimaryDefaultinfoBgColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonCircularPrimaryDefaultalertBgColor</key><string>#db3232</string>
+    <key>tokenButtonCircularPrimaryDefaultalertBgColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonCircularDisabledDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonCircularDisabledDefaultheight</key><string>36pt</string>
+    <key>tokenButtonCircularDisabledDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonCircularDisabledDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonCircularDisabledDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonCircularDisabledDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonCircularDisabledDefaultborderRadius</key><string>100%</string>
+    <key>tokenButtonCircularDisabledDefaultcolor</key><string>#ffffff</string>
+    <key>tokenButtonCircularDisabledDefaultbgColor</key><string>#c0c0cc</string>
+    <key>tokenButtonCircularDisabledDefaultcolorOnHover</key><string>#c0c0cc</string>
+    <key>tokenButtonCircularDisabledDefaultbgColorOnHover</key><string>#ffffff</string>
+    <key>tokenButtonCircularTertiaryDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonCircularTertiaryDefaultheight</key><string>36pt</string>
+    <key>tokenButtonCircularTertiaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonCircularTertiaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonCircularTertiaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonCircularTertiaryDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonCircularTertiaryDefaultborderRadius</key><string>100%</string>
+    <key>tokenButtonCircularTertiaryDefaultwarningColor</key><string>#b06112</string>
+    <key>tokenButtonCircularTertiaryDefaultwarningColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonCircularTertiaryDefaultsuccessColor</key><string>#088a08</string>
+    <key>tokenButtonCircularTertiaryDefaultsuccessColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonCircularTertiaryDefaultinfoColor</key><string>#1473e6</string>
+    <key>tokenButtonCircularTertiaryDefaultinfoColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonCircularTertiaryDefaultalertColor</key><string>#db3232</string>
+    <key>tokenButtonCircularTertiaryDefaultalertColorOnHover</key><string>#ab2c2c</string>
+    <key>tokenButtonCircularSecondaryDefaultwidth</key><string>36pt</string>
+    <key>tokenButtonCircularSecondaryDefaultheight</key><string>36pt</string>
+    <key>tokenButtonCircularSecondaryDefaultdisplay</key><string>flex</string>
+    <key>tokenButtonCircularSecondaryDefaultflexDirection</key><string>row</string>
+    <key>tokenButtonCircularSecondaryDefaultjustifyContent</key><string>center</string>
+    <key>tokenButtonCircularSecondaryDefaultpadding</key><string>8px 8px</string>
+    <key>tokenButtonCircularSecondaryDefaultborderRadius</key><string>100%</string>
+    <key>tokenButtonCircularSecondaryDefaultwarningColor</key><string>#b06112</string>
+    <key>tokenButtonCircularSecondaryDefaultwarningColorOnHover</key><string>#8a4c0f</string>
+    <key>tokenButtonCircularSecondaryDefaultsuccessColor</key><string>#088a08</string>
+    <key>tokenButtonCircularSecondaryDefaultsuccessColorOnHover</key><string>#2b6b2b</string>
+    <key>tokenButtonCircularSecondaryDefaultinfoColor</key><string>#1473e6</string>
+    <key>tokenButtonCircularSecondaryDefaultinfoColorOnHover</key><string>#125ab3</string>
+    <key>tokenButtonCircularSecondaryDefaultalertColor</key><string>#db3232</string>
+    <key>tokenButtonCircularSecondaryDefaultalertColorOnHover</key><string>#ab2c2c</string>
+    
+</dict>
+</plist>

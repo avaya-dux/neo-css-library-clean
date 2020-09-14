@@ -1,0 +1,307 @@
+@mixin modal-element($value, $border-position: false) {
+  background-color: $modal-element-background;
+  padding: $value;
+
+  @if ($border-position) {
+    border-#{$border-position}: $modal-divider;
+  }
+}
+
+.neo-modal {
+  display: none;
+  position: absolute;
+
+  &--active {
+    animation: $modal-animation-time;
+    display: flex;
+
+    .neo-modal__background {
+      animation: show-element $modal-animation-time;
+      background-color: $modal-background;
+      height: 100%;
+      width: 100%;
+      z-index: $modal-z;
+
+      @include position(fixed, 0, 0, 0, 0);
+    }
+  }
+}
+
+.neo-modal__content {
+  animation: animation-modal-content $modal-animation-time;
+  background-color: $modal-body-background;
+  border: $modal-border;
+  border-radius: $modal-radius;
+  box-shadow: $modal-shadow;
+  display: flex;
+  flex-direction: column;
+  max-width: $modal-width;
+  overflow: auto;
+  padding: 0 $modal-padding-y;
+  position: relative;
+  width: $modal-width;
+  z-index: $modal-content-z;
+
+  .neo-modal__header {
+    @include modal-element($modal-header-padding);
+  }
+
+  .neo-modal__body {
+    min-height: $modal-body-height;
+
+    @include modal-element($modal-padding, 'top');
+  }
+
+  .neo-modal__message {
+    font-size: $modal-message-font-size;
+    margin-bottom: $modal-message-margin-bottom;
+  }
+
+  .neo-modal__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .neo-btn {
+      margin-bottom: 0;
+
+      /* stylelint-disable max-nesting-depth */
+      &:not(:last-child) {
+        margin-right: $modal-margin;
+
+        @include rtl-selector {
+          margin: {
+            left: $modal-margin;
+            right: initial;
+          }
+        }
+      }
+    }
+
+    @include modal-element($modal-padding, 'top');
+  }
+}
+
+// updated modal classes
+
+@mixin modal-element-update($value, $border-position: false) {
+  background-color: $modal-element-background-update;
+  padding: $value;
+
+  // @if ($border-position) {
+  //   border-#{$border-position}: $modal-divider;
+  // }
+}
+
+.neo-modal-update {
+  display: none;
+  position: absolute;
+
+  &--active {
+    animation: $modal-animation-time;
+    display: flex;
+
+    .neo-modal-update__background {
+      animation: show-element $modal-animation-time;
+      background-color: $modal-background-update;
+      height: 100%;
+      width: 100%;
+      z-index: $modal-z;
+
+      @include position(fixed, 0, 0, 0, 0);
+    }
+  }
+}
+
+.neo-modal-update__content {
+  animation: animation-modal-content $modal-animation-time;
+  background-color: $modal-background-update;
+  border: $modal-border-update;
+  border-radius: $modal-radius;
+  box-shadow: $modal-shadow-update;
+  display: flex;
+  flex-direction: column;
+  max-width: $modal-width;
+  overflow: auto;
+  padding: 0 $modal-padding-y;
+  position: relative;
+  width: $modal-width;
+  z-index: $modal-content-z;
+
+  .neo-modal-update__header {
+    @include modal-element-update($modal-header-padding);
+    text-align: center;
+    vertical-align: center;
+  }
+
+  .neo-modal-update__body {
+    min-height: $modal-body-height;
+
+    @include modal-element-update($modal-padding, 'top');
+  }
+
+  .neo-modal-update__message {
+    font-size: $modal-message-font-size;
+    margin-bottom: $modal-message-margin-bottom;
+  }
+
+  .neo-modal-update__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .neo-btn-update {
+      margin-bottom: 0;
+
+      /* stylelint-disable max-nesting-depth */
+      &:not(:last-child) {
+        margin-right: $modal-margin;
+
+        @include rtl-selector {
+          margin: {
+            left: $modal-margin;
+            right: initial;
+          }
+        }
+      }
+    }
+
+    @include modal-element-update($modal-padding, 'top');
+  }
+}
+
+// new menu modal class - all hard-coded for now
+
+// filter button styles
+
+.neo-modal-menu-update {
+  box-shadow: $modal-shadow-update;
+  // width: $modal-menu-width-update;
+  display: grid;
+  grid-template-areas:
+    'header header header'
+    'menu   content content'
+    'menu   content content'
+    'menu footer footer';
+}
+
+.neo-modal-menu-header-update {
+  grid-area: header;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: $modal-border-update;
+  padding: 11px 0;
+  .neo-modal-update__header {
+    // @include modal-element-update($modal-header-padding);
+    // text-align: center;
+    // vertical-align: center;
+    padding-left: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  & > .neo-input-group-update {
+    padding-right: 17px;
+    width: auto;
+    & .neo-filter-update {
+      width: 116px;
+
+      padding-left: $select-padding-left-update;
+      & ~ button {
+        color: $global-text-color-update;
+        background-color: $table-filter-button-color-update;
+        // hard-coded padding and height for now
+        padding: 12px 0;
+        height: 100%;
+        &:hover {
+          box-shadow: none;
+        }
+      }
+
+      // may not work on all browsers
+
+      &::-webkit-input-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &::-moz-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &:-ms-input-placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+      &::placeholder {
+        font-style: $input-placeholder-font-style-update;
+      }
+    }
+  }
+}
+
+.neo-modal-menu-side-update {
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  border-right: $modal-border-update;
+  & .neo-group-list-update__item {
+    height: 48px;
+    padding-left: 0;
+    border: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    &-active {
+      background: $token-color-base-150;
+    }
+    // vertical-align: center;
+    & .neo-modal-menu-side-item {
+      // background: tomato;
+      position: relative;
+      // margin: 0 auto;
+
+      &-active {
+        &:before {
+          content: '';
+          height: 100%;
+          width: 50%;
+          position: absolute;
+          background: $modal-menu-active-border-color-update;
+          // border-radius: 50%;
+          clip-path: ellipse(3% 35% at 0% 52%);
+
+          left: 0;
+          // transition: all 0.8s;
+        }
+      }
+
+      padding-left: 12px;
+    }
+  }
+}
+
+.neo-modal-menu-footer-update {
+  grid-area: footer;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  border-top: $modal-border-update;
+  .neo-modal-update__footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .neo-btn-update {
+      margin-bottom: 0;
+
+      /* stylelint-disable max-nesting-depth */
+      &:not(:last-child) {
+        margin-right: $modal-margin;
+
+        @include rtl-selector {
+          margin: {
+            left: $modal-margin;
+            right: initial;
+          }
+        }
+      }
+    }
+
+    @include modal-element-update($modal-padding-update, 'top');
+  }
+}

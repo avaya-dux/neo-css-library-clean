@@ -1,0 +1,74 @@
+%neo-new-tooltip {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  background-color: red;
+  width: $tooltip-width;
+  font-size: $token-tooltip-font-size;
+  padding: $tooltip-padding;
+}
+
+// @mixin neo-popover-header {
+//   &__header {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     height: $token-popover-header-height;
+//     padding: $popover-header-padding;
+//     line-height: $token-web-typography-web-body-semibold-line-height;
+//     letter-spacing: $token-web-typography-web-body-semibold-letter-spacing;
+//     font-size: $token-web-typography-web-body-semibold-font-size;
+//     font-weight: $token-web-typography-web-body-semibold-font-weight;
+//   }
+// }
+
+// @mixin neo-popover-colors() {
+//   $self: &;
+
+//   &__content {
+//     border-color: $popover-border-color;
+
+//     #{$self}__header {
+//       background-color: $popover-background-color;
+//       color: $popover-text-color;
+//     }
+//   }
+
+//   @each $name, $color in $neo-state-colors {
+//     &__content--#{$name} {
+//       border-color: $color;
+
+//       #{$self}__header {
+//         background-color: $color;
+//         color: $neo-white;
+//       }
+//     }
+//   }
+// }
+
+.neo-new-tooltip {
+  @extend %neo-popover;
+
+  // .neo-btn {
+  //   margin-bottom: 0;
+  // }
+
+  // .neo-close {
+  //   @include rtl-selector {
+  //     @include position(
+  //       absolute,
+  //       $popover-btn-offset,
+  //       auto,
+  //       auto,
+  //       $popover-btn-offset
+  //     );
+  //   }
+  //   @include position(absolute, $popover-btn-offset, $popover-btn-offset);
+  // }
+
+  // @include neo-popover-header;
+  @include neo-new-tooltip-content;
+  @include neo-new-tooltip-states;
+  // @include neo-popover-colors;
+  @include neo-position(&);
+}

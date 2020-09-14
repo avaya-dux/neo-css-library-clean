@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+
+<dict>
+    <key>tokenChipPaddingHorizontal</key><string>8pt</string>
+    <key>tokenChipPaddingVertical</key><string>6pt</string>
+    <key>tokenChipDefaultColor</key><string>#000000</string>
+    <key>tokenChipStatefulColor</key><string>#ffffff</string>
+    <key>tokenChipFontWeight</key><string>400</string>
+    <key>tokenChipFontSize</key><string>12pt</string>
+    <key>tokenChipLineHeight</key><string>14.0625pt</string>
+    <key>tokenChipBorderRadius</key><string>4pt</string>
+    <key>tokenChipDefaultBackground</key><string>#dfdfe5</string>
+    <key>tokenChipDefaultBackgroundHover</key><string>#c0c0cc</string>
+    <key>tokenChipDefaultCloseButtonColor</key><string>#828294</string>
+    <key>tokenChipAlertBackground</key><string>#db3232</string>
+    <key>tokenChipAlertBackgroundHover</key><string>#ab2c2c</string>
+    <key>tokenChipAlertCloseButtonColor</key><string>#5e1c1c</string>
+    <key>tokenChipWarningBackground</key><string>#b06112</string>
+    <key>tokenChipWarningBackgroundHover</key><string>#8a4c0f</string>
+    <key>tokenChipWarningCloseButtonColor</key><string>#4a2a0a</string>
+    <key>tokenChipSuccessBackground</key><string>#088a08</string>
+    <key>tokenChipSuccessBackgroundHover</key><string>#2b6b2b</string>
+    <key>tokenChipSuccessCloseButtonColor</key><string>#173b17</string>
+    <key>tokenChipInfoBackground</key><string>#1473e6</string>
+    <key>tokenChipInfoBackgroundHover</key><string>#125ab3</string>
+    <key>tokenChipInfoCloseButtonColor</key><string>#0b3363</string>
+    
+</dict>
+</plist>
