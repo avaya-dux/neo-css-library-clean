@@ -37,7 +37,7 @@ h6 {
 // specific header styles
 
 h1 {
-  &-jumbo-token {
+  &.jumbo-token {
     font-size: $heading-1-jumbo-font-size;
     line-height: $heading-1-jumbo-line-height;
   }

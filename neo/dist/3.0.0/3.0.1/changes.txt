@@ -1,0 +1,11 @@
+# Fix H1 Jumbo tokens
+
+# Changed icon in Accordion
+
+# Icon fixes:
+
+- Fixed custom06-alerting icon class name
+- Fixed custom06-inbound icon class name
+- Fixed custom06-outbound icon class name
+- Fixed custom06-missed icon class name
+- Fixed deletion of "social" keyword
