@@ -27,6 +27,7 @@ async function convertIconFontToBase64() {
   const base64FileBuffer = await fs.readFile(
     '../properties/neo-icon-font.woff'
   );
+  s;
 
   const contents_in_base64 = await base64FileBuffer.toString('base64');
 
