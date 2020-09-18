@@ -1,4 +1,6 @@
-# Fix H1 Jumbo tokens
+## Bugs
+
+# Fixed H1 Jumbo tokens
 
 # Changed icon in Accordion
 
@@ -9,3 +11,7 @@
 - Fixed custom06-outbound icon class name
 - Fixed custom06-missed icon class name
 - Fixed deletion of "social" keyword
+
+## Features
+
+# Removed support for previous version of NEO/namespaces in 3.0
