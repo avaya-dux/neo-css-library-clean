@@ -203,17 +203,17 @@
 }
 
 @mixin widget-element-update($value, $border-position: false) {
-  background-color: $modal-element-background-update;
+  background-color: white;
   padding: $value;
 
-  @if ($border-position) {
-    border-#{$border-position}: $modal-divider;
-  }
+  // @if ($border-position) {
+  //   border-#{$border-position}: $modal-divider;
+  // }
 }
 
 .neo-widget-update__content {
   // animation: animation-modal-content $modal-animation-time;
-  background-color: $modal-background-update;
+  background-color: white;
   border: $modal-border-update;
   // border-radius: $modal-radius;
   // box-shadow: $modal-shadow-update;
@@ -234,6 +234,7 @@
     flex-direction: row;
     & h4 {
       margin-left: 8px;
+      color: black !important;
     }
     &-disabled {
       background-color: $global-disabled-background-update;
@@ -274,6 +275,9 @@
 
     .neo-btn-update {
       margin-bottom: 0;
+      &-secondary[disabled] {
+        border: none;
+      }
 
       /* stylelint-disable max-nesting-depth */
       &:not(:last-child) {

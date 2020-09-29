@@ -258,7 +258,7 @@
 // Use on `li`s or `div`s within the `.neo-group-list` parent element.
 //
 %list-item-update {
-  background-color: $group-list-item-background-update;
+  background-color: transparent;
   border: $group-list-border-width-update solid $group-list-border-color-update;
   border-bottom: 0; /* Remove border-bottom for better stylization */
   color: $group-list-item-color-update;

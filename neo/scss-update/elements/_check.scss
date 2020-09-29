@@ -100,6 +100,7 @@ $checkbox-disabled-background-update: $token-checkbox-disabled-background-color 
       margin-right: $checkbox-label-indent;
       vertical-align: text-top;
       width: $checkbox-size;
+      border-radius: 4px;
 
       /* stylelint-disable max-nesting-depth */
       @include rtl-selector {

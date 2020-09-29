@@ -176,7 +176,7 @@
 %button-update {
   align-items: center;
   border: 0;
-  // border-radius: $button-border-radius;
+  border-radius: 2px;
   cursor: pointer;
   display: inline-flex;
   font-weight: $button-font-weight;
@@ -193,9 +193,9 @@
 
   // custom selector for right-hand icon spacing
 
-  &[class^='right'],
-  &[class*='right']:not(:empty)::after {
+  &[dir='rtl']:not(:empty)::before {
     margin-left: 10px;
+    margin-right: 0 !important;
   }
 
   @include button-colors-update(map_get($button-types-update, 'default'));
@@ -256,8 +256,8 @@
     }
   }
   &[disabled] {
-    background-color: $global-disabled-text-color-update;
-    // color: $global-disabled-text-color-update;
+    background-color: $global-disabled-background-update;
+    color: $global-disabled-text-color-update;
     // border-color: $global-disabled-text-color-update;
     &:hover {
       box-shadow: none;
@@ -267,7 +267,7 @@
 
 .neo-btn-update-secondary {
   @extend %button-update;
-  background-color: $global-background-update;
+  background-color: transparent;
   border-width: $button-secondary-border-width-update;
   border-style: $button-secondary-border-style-update;
   @each $name, $color in $neo-state-colors-update {
@@ -277,13 +277,20 @@
       color: $color;
     }
   }
+  @each $name, $color in $neo-hover-colors-update {
+    &--#{$name}:hover {
+      color: $color;
+      // box-shadow: $button-box-shadow-update;
+      cursor: pointer;
+    }
+  }
   &:hover {
-    background-color: $global-background-update;
+    background-color: white;
   }
   &[disabled] {
     background-color: $global-disabled-background-update;
     color: $global-disabled-text-color-update;
-    border-color: $global-disabled-text-color-update;
+    border: none;
     &:hover {
       box-shadow: none;
     }
@@ -301,7 +308,8 @@
     }
   }
   &:hover {
-    background-color: $button-tertiary-hover-bg-color;
+    background-color: #f1f1f1;
+    box-shadow: none;
   }
 }
 
@@ -361,7 +369,7 @@
         cursor: not-allowed;
       }
     }
-    border-width: 1px;
+    border: 1px solid;
     @each $name, $color in $neo-state-colors-update {
       &--#{$name} {
         background-color: transparent;
@@ -370,6 +378,7 @@
       }
       @each $name, $color in $neo-hover-colors-update {
         &--#{$name}:hover {
+          background-color: white;
           box-shadow: $button-box-shadow-update;
           border-color: $color;
           color: $color;
@@ -404,8 +413,9 @@
         background-color: transparent;
         color: $color;
         &:hover {
+          background-color: white;
           box-shadow: $button-box-shadow-update;
-          background-color: $button-tertiary-hover-bg-color;
+          // background-color: $button-tertiary-hover-bg-color;
           cursor: pointer;
         }
       }
@@ -427,6 +437,7 @@
   width: $button-circular-width-update;
   transition: $button-transition;
   transition-property: background-color, color, box-shadow;
+  border-radius: 2px;
   &::before {
     font-size: 21px;
   }
@@ -521,7 +532,7 @@
         color: $color;
         &:hover {
           box-shadow: $button-box-shadow-update;
-          background-color: $button-tertiary-hover-bg-color;
+          background-color: white;
           cursor: pointer;
         }
       }

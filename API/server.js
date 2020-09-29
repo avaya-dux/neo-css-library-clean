@@ -190,31 +190,31 @@ async function getButtonStyles(components) {
 
       if (componentName.includes('primary')) {
         buttonsJSONObject.button[componentName + 'color'] = {
-          value: '{color.base/100.value}',
+          value: '{color.base/0.value}',
         };
         buttonsJSONObject.button[componentName + 'warningBgColor'] = {
-          value: '{color.functional - orange/500.value}',
+          value: '{color.orange/500.value}',
         };
         buttonsJSONObject.button[componentName + 'warningBgColorOnHover'] = {
-          value: '{color.functional - orange/600.value}',
+          value: '{color.orange/600.value}',
         };
         buttonsJSONObject.button[componentName + 'successBgColor'] = {
-          value: '{color.functional - green/500.value}',
+          value: '{color.green/500.value}',
         };
         buttonsJSONObject.button[componentName + 'successBgColorOnHover'] = {
-          value: '{color.functional - green/600.value}',
+          value: '{color.green/600.value}',
         };
         buttonsJSONObject.button[componentName + 'infoBgColor'] = {
-          value: '{color.functional - blue/500.value}',
+          value: '{color.blue/500.value}',
         };
         buttonsJSONObject.button[componentName + 'infoBgColorOnHover'] = {
-          value: '{color.functional - blue/600.value}',
+          value: '{color.blue/600.value}',
         };
         buttonsJSONObject.button[componentName + 'alertBgColor'] = {
-          value: '{color.functional - red/500.value}',
+          value: '{color.red/500.value}',
         };
         buttonsJSONObject.button[componentName + 'alertBgColorOnHover'] = {
-          value: '{color.functional - red/600.value}',
+          value: '{color.red/600.value}',
         };
       }
 
@@ -223,28 +223,28 @@ async function getButtonStyles(components) {
         componentName.includes('tertiary')
       ) {
         buttonsJSONObject.button[componentName + 'warningColor'] = {
-          value: '{color.functional - orange/500.value}',
+          value: '{color.orange/500.value}',
         };
         buttonsJSONObject.button[componentName + 'warningColorOnHover'] = {
-          value: '{color.functional - orange/600.value}',
+          value: '{color.orange/600.value}',
         };
         buttonsJSONObject.button[componentName + 'successColor'] = {
-          value: '{color.functional - green/500.value}',
+          value: '{color.green/500.value}',
         };
         buttonsJSONObject.button[componentName + 'successColorOnHover'] = {
-          value: '{color.functional - green/600.value}',
+          value: '{color.green/600.value}',
         };
         buttonsJSONObject.button[componentName + 'infoColor'] = {
-          value: '{color.functional - blue/500.value}',
+          value: '{color.blue/500.value}',
         };
         buttonsJSONObject.button[componentName + 'infoColorOnHover'] = {
-          value: '{color.functional - blue/600.value}',
+          value: '{color.blue/600.value}',
         };
         buttonsJSONObject.button[componentName + 'alertColor'] = {
-          value: '{color.functional - red/500.value}',
+          value: '{color.red/500.value}',
         };
         buttonsJSONObject.button[componentName + 'alertColorOnHover'] = {
-          value: '{color.functional - red/600.value}',
+          value: '{color.red/600.value}',
         };
       }
 
@@ -314,7 +314,7 @@ async function getAvatarStyles(components) {
   // adding common Avatar styles
 
   avatarJSONObject.avatar['backgroundColor'] = {
-    value: '{color.accent/800.value}',
+    value: '{color.blue/800.value}',
   };
 
   avatarJSONObject.avatar['borderRadius'] = {
@@ -328,49 +328,56 @@ async function getAvatarStyles(components) {
 
     // grabbing sizes for each avatar size from one instance of each
 
-    if (componentName == 'avatar/image/xsmall') {
-      avatarJSONObject.avatar['x-small-height'] = {
-        value: `${avatarComp.absoluteBoundingBox.height}px`,
-      };
-      avatarJSONObject.avatar['x-small-width'] = {
-        value: `${avatarComp.absoluteBoundingBox.width}px`,
-      };
-    } else if (componentName == 'avatar/image/small') {
+    // if (componentName == 'avatar/image/xsmall') {
+    //   avatarJSONObject.avatar['x-small-height'] = {
+    //     value: `${avatarComp.absoluteBoundingBox.height}px`,
+    //   };
+    //   avatarJSONObject.avatar['x-small-width'] = {
+    //     value: `${avatarComp.absoluteBoundingBox.width}px`,
+    //   };
+    // } else
+    if (componentName == 'avatar/image/small') {
       avatarJSONObject.avatar['small-height'] = {
-        value: `${avatarComp.absoluteBoundingBox.height}px`,
+        // value: `${avatarComp.absoluteBoundingBox.height}px`,
+        value: '28px',
       };
       avatarJSONObject.avatar['small-width'] = {
-        value: `${avatarComp.absoluteBoundingBox.width}px`,
+        // value: `${avatarComp.absoluteBoundingBox.width}px`,
+        value: '28px',
       };
-    } else if (componentName == 'avatar/image/default') {
+    } else if (componentName == 'avatar/image/medium') {
       avatarJSONObject.avatar['default-height'] = {
-        value: `${avatarComp.absoluteBoundingBox.height}px`,
+        // value: `${avatarComp.absoluteBoundingBox.height}px`,
+        value: '36px',
       };
       avatarJSONObject.avatar['default-width'] = {
-        value: `${avatarComp.absoluteBoundingBox.width}px`,
+        // value: `${avatarComp.absoluteBoundingBox.width}px`,
+        value: '36px',
       };
     } else if (componentName == 'avatar/image/large') {
       avatarJSONObject.avatar['large-height'] = {
-        value: `${avatarComp.absoluteBoundingBox.height}px`,
+        // value: `${avatarComp.absoluteBoundingBox.height}px`,
+        value: '48px',
       };
       avatarJSONObject.avatar['large-width'] = {
-        value: `${avatarComp.absoluteBoundingBox.width}px`,
+        // value: `${avatarComp.absoluteBoundingBox.width}px`,
+        value: '48px',
       };
     }
   });
 
-  avatarJSONObject.avatar['initials-xsmall'] = {
-    'font-weight': {
-      value: '{Web-typography.fontweight-regular.value}',
-    },
-    'font-size': { value: '{Web-typography.web/tiny body.fontSize.value}' },
-    'letter-spacing': {
-      value: '{Web-typography.web/tiny body.letterSpacing.value}',
-    },
-    'line-height': {
-      value: '{Web-typography.web/tiny body.lineHeight.value}',
-    },
-  };
+  // avatarJSONObject.avatar['initials-xsmall'] = {
+  //   'font-weight': {
+  //     value: '{Web-typography.fontweight-regular.value}',
+  //   },
+  //   'font-size': { value: '{Web-typography.web/tiny body.fontSize.value}' },
+  //   'letter-spacing': {
+  //     value: '{Web-typography.web/tiny body.letterSpacing.value}',
+  //   },
+  //   'line-height': {
+  //     value: '{Web-typography.web/tiny body.lineHeight.value}',
+  //   },
+  // };
 
   avatarJSONObject.avatar['initials-small'] = {
     'font-weight': {
@@ -418,30 +425,30 @@ async function getAvatarStyles(components) {
   avatarJSONObject.avatar[`avatar-border`] = {
     width: { value: `{border.solid-2px.borderWidth.value}` },
     style: { value: `{border.solid-2px.borderStyle.value}` },
-    color: { value: `{color.accent/500.value}` },
+    color: { value: `{color.blue/500.value}` },
   };
 
-  const states = ['success', 'warning', 'alert', 'info'];
+  // const states = ['success', 'warning', 'alert', 'info'];
 
-  states.forEach((state) => {
-    if (state == 'success') {
-      avatarJSONObject.avatar[
-        `avatar-${state}-border`
-      ] = `{color.functional - green/500.value}`;
-    } else if (state == 'warning') {
-      avatarJSONObject.avatar[
-        `avatar-${state}-border`
-      ] = `{color.functional - orange/500.value}`;
-    } else if (state == 'alert') {
-      avatarJSONObject.avatar[
-        `avatar-${state}-border`
-      ] = `{color.functional - red/500.value}`;
-    } else if (state == 'info') {
-      avatarJSONObject.avatar[
-        `avatar-${state}-border`
-      ] = `{color.functional - blue/500.value}`;
-    }
-  });
+  // states.forEach((state) => {
+  //   if (state == 'success') {
+  //     avatarJSONObject.avatar[
+  //       `avatar-${state}-border`
+  //     ] = `{color.green/500.value}`;
+  //   } else if (state == 'warning') {
+  //     avatarJSONObject.avatar[
+  //       `avatar-${state}-border`
+  //     ] = `{color.orange/500.value}`;
+  //   } else if (state == 'alert') {
+  //     avatarJSONObject.avatar[
+  //       `avatar-${state}-border`
+  //     ] = `{color.red/500.value}`;
+  //   } else if (state == 'info') {
+  //     avatarJSONObject.avatar[
+  //       `avatar-${state}-border`
+  //     ] = `{color.blue/500.value}`;
+  //   }
+  // });
 
   // console.log(avatarJSONObject);
 
@@ -473,7 +480,7 @@ async function getBadgeStyles(components) {
   };
 
   badgeJSONObject.badge[`background-color`] = {
-    value: `{color.functional - red/500.value}`,
+    value: `{color.red/500.value}`,
   };
 
   badgeJSONObject.badge[`border-radius`] = {
@@ -493,7 +500,7 @@ async function getBadgeStyles(components) {
   };
 
   badgeJSONObject.badge[`padding`] = {
-    value: `0px 2px`,
+    value: `0px 4px`,
   };
 
   // height and width are equal, but not in Figma, so we base the width value on the height
@@ -602,7 +609,7 @@ async function getChipStyles(components) {
   // color for default chips
 
   chipJSONObject.chip[`default-background`] = {
-    value: `{color.old_base/300.value}`,
+    value: `{color.base/100.value}`,
   };
 
   chipJSONObject.chip[`default-background-hover`] = {
@@ -610,63 +617,63 @@ async function getChipStyles(components) {
   };
 
   chipJSONObject.chip[`default-closeButton-color`] = {
-    value: `{color.base/900.value}`,
+    value: `{color.base/600.value}`,
   };
 
   // color for alert chips
 
   chipJSONObject.chip[`alert-background`] = {
-    value: `{color.functional - red/500.value}`,
+    value: `{color.red/100.value}`,
   };
 
   chipJSONObject.chip[`alert-background-hover`] = {
-    value: `{color.functional - red/600.value}`,
+    value: `{color.red/200.value}`,
   };
 
   chipJSONObject.chip[`alert-closeButton-color`] = {
-    value: `{color.functional - red/900.value}`,
+    value: `{color.red/600.value}`,
   };
 
   // color for warning chips
 
   chipJSONObject.chip[`warning-background`] = {
-    value: `{color.functional - orange/500.value}`,
+    value: `{color.orange/100.value}`,
   };
 
   chipJSONObject.chip[`warning-background-hover`] = {
-    value: `{color.functional - orange/600.value}`,
+    value: `{color.orange/200.value}`,
   };
 
   chipJSONObject.chip[`warning-closeButton-color`] = {
-    value: `{color.functional - orange/900.value}`,
+    value: `{color.orange/600.value}`,
   };
 
   // color for success chips
 
   chipJSONObject.chip[`success-background`] = {
-    value: `{color.functional - green/500.value}`,
+    value: `{color.green/100.value}`,
   };
 
   chipJSONObject.chip[`success-background-hover`] = {
-    value: `{color.functional - green/600.value}`,
+    value: `{color.green/200.value}`,
   };
 
   chipJSONObject.chip[`success-closeButton-color`] = {
-    value: `{color.functional - green/900.value}`,
+    value: `{color.green/600.value}`,
   };
 
   // color for info chips
 
   chipJSONObject.chip[`info-background`] = {
-    value: `{color.functional - blue/500.value}`,
+    value: `{color.blue/100.value}`,
   };
 
   chipJSONObject.chip[`info-background-hover`] = {
-    value: `{color.functional - blue/600.value}`,
+    value: `{color.blue/200.value}`,
   };
 
   chipJSONObject.chip[`info-closeButton-color`] = {
-    value: `{color.functional - blue/900.value}`,
+    value: `{color.blue/600.value}`,
   };
 
   // console.log(chipJSONObject);
@@ -742,7 +749,7 @@ async function getLabelStyles(components) {
   // color for default labels
 
   labelJSONObject.label[`default-background`] = {
-    value: `{color.old_base/300.value}`,
+    value: `{color.base/100.value}`,
   };
 
   labelJSONObject.label[`default-background-hover`] = {
@@ -752,41 +759,41 @@ async function getLabelStyles(components) {
   // color for alert labels
 
   labelJSONObject.label[`alert-background`] = {
-    value: `{color.functional - red/500.value}`,
+    value: `{color.red/500.value}`,
   };
 
   labelJSONObject.label[`alert-background-hover`] = {
-    value: `{color.functional - red/600.value}`,
+    value: `{color.red/600.value}`,
   };
 
   // color for warning labels
 
   labelJSONObject.label[`warning-background`] = {
-    value: `{color.functional - orange/500.value}`,
+    value: `{color.orange/500.value}`,
   };
 
   labelJSONObject.label[`warning-background-hover`] = {
-    value: `{color.functional - orange/600.value}`,
+    value: `{color.orange/600.value}`,
   };
 
   // color for success labels
 
   labelJSONObject.label[`success-background`] = {
-    value: `{color.functional - green/500.value}`,
+    value: `{color.green/500.value}`,
   };
 
   labelJSONObject.label[`success-background-hover`] = {
-    value: `{color.functional - green/600.value}`,
+    value: `{color.green/600.value}`,
   };
 
   // color for info labels
 
   labelJSONObject.label[`info-background`] = {
-    value: `{color.functional - blue/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   labelJSONObject.label[`info-background-hover`] = {
-    value: `{color.functional - blue/600.value}`,
+    value: `{color.blue/600.value}`,
   };
 
   // color for label icons
@@ -966,13 +973,13 @@ async function getCheckboxStyles(components) {
   };
 
   checkboxJSONObject.checkbox[`unselected-border-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   // styles for selected checkbox
 
   checkboxJSONObject.checkbox[`selected-background-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   // this unicode needs to be taken directly from generated icons.css file
@@ -984,11 +991,11 @@ async function getCheckboxStyles(components) {
   // styles for disabled checkboxes
 
   checkboxJSONObject.checkbox[`disabled-background-color`] = {
-    value: `{color.accent/200.value}`,
+    value: `{color.base/100.value}`,
   };
 
   checkboxJSONObject.checkbox[`disabled-border-color`] = {
-    value: `{color.disabled/accent.value}`,
+    value: `{color.blue/200.value}`,
   };
 
   // styles for checkbox labels
@@ -1008,7 +1015,7 @@ async function getCheckboxStyles(components) {
   // styles for disabled checkbox labels
 
   checkboxJSONObject.checkbox[`disabled-label-font-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/500.value}`,
   };
 
   await fs
@@ -1051,13 +1058,13 @@ async function getRadioStyles(components) {
   };
 
   radioJSONObject.radio[`border-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   // disabled radio button border style
 
   radioJSONObject.radio[`disabled-border-color`] = {
-    value: `{color.disabled/accent.value}`,
+    value: `{color.blue/200.value}`,
   };
 
   // styles for radio button color
@@ -1069,13 +1076,13 @@ async function getRadioStyles(components) {
   // styles for custom selected radio button target
 
   radioJSONObject.radio[`selected-target-background`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   // disabled radio button target colour
 
   radioJSONObject.radio[`disabled-target-background`] = {
-    value: `{color.accent/200.value}`,
+    value: `{color.blue/200.value}`,
   };
 
   radioJSONObject.radio[`selected-borderRadius`] = {
@@ -1117,7 +1124,7 @@ async function getRadioStyles(components) {
   // styles for disabled checkbox labels
 
   radioJSONObject.radio[`disabled-label-font-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/500.value}`,
   };
 
   await fs
@@ -1150,25 +1157,25 @@ async function getSwitchStyles(components) {
   // switch 'on' background colour
 
   switchJSONObject.switch[`on-background-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   // switch 'off' background color
 
   switchJSONObject.switch[`off-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   // switch 'on' disabled colour
 
   switchJSONObject.switch[`on-disabled-background-color`] = {
-    value: `{color.accent/200.value}`,
+    value: `{color.blue/200.value}`,
   };
 
   // switch 'off' disabled color
 
   switchJSONObject.switch[`off-disabled-background-color`] = {
-    value: `{color.old_base/300.value}`,
+    value: `{color.base/200.value}`,
   };
 
   // slider box shadow style
@@ -1206,7 +1213,7 @@ async function getSwitchStyles(components) {
   // styles for disabled switch labels
 
   switchJSONObject.switch[`disabled-label-font-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/100.value}`,
   };
 
   await fs
@@ -1242,7 +1249,7 @@ async function getInputGroupStyles(components) {
   // add-on styles
 
   inputGroupJSONObject.inputGroup[`addon-text-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   inputGroupJSONObject.inputGroup[`addon-icon-color`] = {
@@ -1316,7 +1323,7 @@ async function getInputGroupStyles(components) {
   inputGroupJSONObject.inputGroup[
     `input-addon-button-icon-background-color`
   ] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   inputGroupJSONObject.inputGroup[`input-addon-button-icon-borderRadius`] = {
@@ -1398,7 +1405,7 @@ async function getInputStyles(components) {
   };
 
   inputJSONObject.input[`label-required-asterix-color`] = {
-    value: `{color.functional - red/500.value}`,
+    value: `{color.red/500.value}`,
   };
 
   // read-only input styles
@@ -1418,11 +1425,11 @@ async function getInputStyles(components) {
   };
 
   inputJSONObject.input[`disabled-filled-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/400.value}`,
   };
 
   inputJSONObject.input[`filled-closeButton-color`] = {
-    value: `{color.base/600.value}`,
+    value: `{color.base/1000.value}`,
   };
 
   inputJSONObject.input[`filled-closeButton-icon`] = {
@@ -1430,13 +1437,13 @@ async function getInputStyles(components) {
   };
 
   inputJSONObject.input[`disabled-filled-closeButton-color`] = {
-    value: `{color.base/400.value}`,
+    value: `{color.base/1000.value}`,
   };
 
   // input placeholder text styles
 
   inputJSONObject.input[`placeholder-color`] = {
-    value: `{color.base/600.value}`,
+    value: `{color.base/500.value}`,
   };
 
   inputJSONObject.input[`placeholder-fontSize`] = {
@@ -1468,7 +1475,7 @@ async function getInputStyles(components) {
   // disabled input background color
 
   inputJSONObject.input[`disabled-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   // helper text styles
@@ -1482,13 +1489,13 @@ async function getInputStyles(components) {
   };
 
   inputJSONObject.input[`helper-color`] = {
-    value: `{color.base/600.value}`,
+    value: `{color.base/500.value}`,
   };
 
   // error validation styles
 
   inputJSONObject.input[`errorText-color`] = {
-    value: `{color.functional - red/500.value}`,
+    value: `{color.red/500.value}`,
   };
 
   inputJSONObject.input[`error-border-color`] = {
@@ -1500,7 +1507,7 @@ async function getInputStyles(components) {
   };
 
   inputJSONObject.input[`error-icon-color`] = {
-    value: `{color.base/400.value}`,
+    value: `{color.red/500.value}`,
   };
 
   await fs
@@ -1607,11 +1614,11 @@ async function getDropdownStyles(components) {
   };
 
   dropdownJSONObject.dropdown[`disabled-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   dropdownJSONObject.dropdown[`disabled-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/500.value}`,
   };
 
   // use checkbox styles for checkboxes
@@ -1687,7 +1694,7 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`header-default-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   tableJSONObject.table[`sort-default-icon`] = {
@@ -1709,7 +1716,7 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`row-clickable-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   tableJSONObject.table[`row-more-icon`] = {
@@ -1717,19 +1724,19 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`row-hover-color`] = {
-    value: `{color.accent/100.value}`,
+    value: `{color.blue/100.value}`,
   };
 
   tableJSONObject.table[`row-disabled-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   tableJSONObject.table[`row-disabled-default-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/500.value}`,
   };
 
   tableJSONObject.table[`row-disabled-clickable-color`] = {
-    value: `{color.disabled/accent.value}`,
+    value: `{color.base/100.value}`,
   };
 
   // use input group styles for filter
@@ -1755,7 +1762,7 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`pagination-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   tableJSONObject.table[`pagination-active-color`] = {
@@ -1763,7 +1770,7 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`pagination-active-background-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   // tableJSONObject.table[`pagination-disabled-color`] = {
@@ -1779,7 +1786,7 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`pagination-active-div-borderColor`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   tableJSONObject.table[`pagination-active-div-borderRadius`] = {
@@ -1793,7 +1800,7 @@ async function getTableStyles(components) {
   // date range picker
 
   tableJSONObject.table[`datepicker-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   tableJSONObject.table[`datepicker-fontStyle`] = {
@@ -1801,7 +1808,7 @@ async function getTableStyles(components) {
   };
 
   tableJSONObject.table[`datepicker-font-color`] = {
-    value: `{color.old_base/700.value}`,
+    value: `{color.base/500.value}`,
   };
 
   await fs
@@ -1860,15 +1867,15 @@ async function getAccordionStyles(components) {
   };
 
   accordionJSONObject.accordion[`hover-background-color`] = {
-    value: `{color.accent/100.value}`,
+    value: `{color.blue/100.value}`,
   };
 
   accordionJSONObject.accordion[`hover-disabled-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/500.value}`,
   };
 
   accordionJSONObject.accordion[`hover-disabled-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   await fs
@@ -1917,11 +1924,11 @@ async function getMenuStyles(components) {
   };
 
   menuJSONObject.menu[`default-background-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   menuJSONObject.menu[`default-active-color`] = {
-    value: `{color.accent/600.value}`,
+    value: `{color.blue/600.value}`,
   };
 
   // icons
@@ -1947,7 +1954,7 @@ async function getMenuStyles(components) {
   // hover styles
 
   menuJSONObject.menu[`hover`] = {
-    value: `{color.accent/100.value}`,
+    value: `{color.blue/100.value}`,
   };
 
   // separator bottom border
@@ -2028,15 +2035,15 @@ async function getListGroupStyles(components) {
   };
 
   listJSONObject.list[`hover`] = {
-    value: `{color.hover/background.value}`,
+    value: `{color.blue/100.value}`,
   };
 
   listJSONObject.list[`disabled-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   listJSONObject.list[`disabled-color`] = {
-    value: `{color.disabled/text.value}`,
+    value: `{color.base/500.value}`,
   };
 
   await fs
@@ -2232,11 +2239,11 @@ async function getNotificationStyles(components) {
   // error
 
   notificationJSONObject.notification[`error-background-color`] = {
-    value: `{color.functional - red/100.value}`,
+    value: `{color.red/100.value}`,
   };
 
   notificationJSONObject.notification[`error-button-color`] = {
-    value: `{color.functional - red/800.value}`,
+    value: `{color.red/800.value}`,
   };
 
   notificationJSONObject.notification[`error-icon`] = {
@@ -2244,17 +2251,17 @@ async function getNotificationStyles(components) {
   };
 
   notificationJSONObject.notification[`error-icon-color`] = {
-    value: `{color.functional - red/600.value}`,
+    value: `{color.red/600.value}`,
   };
 
   // warning
 
   notificationJSONObject.notification[`warning-background-color`] = {
-    value: `{color.functional - orange/100.value}`,
+    value: `{color.orange/100.value}`,
   };
 
   notificationJSONObject.notification[`warning-button-color`] = {
-    value: `{color.functional - orange/800.value}`,
+    value: `{color.orange/800.value}`,
   };
 
   notificationJSONObject.notification[`warning-icon`] = {
@@ -2262,17 +2269,17 @@ async function getNotificationStyles(components) {
   };
 
   notificationJSONObject.notification[`warning-icon-color`] = {
-    value: `{color.functional - orange/600.value}`,
+    value: `{color.orange/600.value}`,
   };
 
   // info
 
   notificationJSONObject.notification[`info-background-color`] = {
-    value: `{color.functional - blue/100.value}`,
+    value: `{color.blue/100.value}`,
   };
 
   notificationJSONObject.notification[`info-button-color`] = {
-    value: `{color.functional - blue/800.value}`,
+    value: `{color.blue/800.value}`,
   };
 
   notificationJSONObject.notification[`info-icon`] = {
@@ -2280,17 +2287,17 @@ async function getNotificationStyles(components) {
   };
 
   notificationJSONObject.notification[`info-icon-color`] = {
-    value: `{color.functional - blue/600.value}`,
+    value: `{color.blue/600.value}`,
   };
 
   // success
 
   notificationJSONObject.notification[`success-background-color`] = {
-    value: `{color.functional - green/100.value}`,
+    value: `{color.green/100.value}`,
   };
 
   notificationJSONObject.notification[`success-button-color`] = {
-    value: `{color.functional - green/800.value}`,
+    value: `{color.green/800.value}`,
   };
 
   notificationJSONObject.notification[`success-icon`] = {
@@ -2298,7 +2305,7 @@ async function getNotificationStyles(components) {
   };
 
   notificationJSONObject.notification[`success-icon-color`] = {
-    value: `{color.functional - green/600.value}`,
+    value: `{color.green/600.value}`,
   };
 
   await fs
@@ -2368,7 +2375,7 @@ async function getPopoverStyles(components) {
   };
 
   popoverJSONObject.popover[`title-background-color`] = {
-    value: `{color.old_base/150.value}`,
+    value: `{color.base/100.value}`,
   };
 
   popoverJSONObject.popover[`title-border-bottom-width`] = {
@@ -2439,7 +2446,7 @@ async function getTabStyles(components) {
   };
 
   tabJSONObject.tabs[`color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   tabJSONObject.tabs[`border-bottom-width`] = {
@@ -2451,7 +2458,7 @@ async function getTabStyles(components) {
   };
 
   tabJSONObject.tabs[`border-bottom-color`] = {
-    value: `{color.accent/500.value}`,
+    value: `{color.blue/500.value}`,
   };
 
   tabJSONObject.tabs[`unselected-background-color`] = {
@@ -2459,11 +2466,11 @@ async function getTabStyles(components) {
   };
 
   tabJSONObject.tabs[`unselected--color`] = {
-    value: `{color.old_base/700.value}`,
+    value: `{color.base/500.value}`,
   };
 
   tabJSONObject.tabs[`disabled-background-color`] = {
-    value: `{color.disabled/background.value}`,
+    value: `{color.base/100.value}`,
   };
 
   await fs

@@ -221,14 +221,16 @@
 }
 
 @mixin neo-dropdown-arrow-update(
-  $arrow-icon: '\25BE',
+  $arrow-icon: '\f21d',
   $color: white,
   $padding-left: $dropdown-padding-x
 ) {
   &::after {
+    font-family: 'updated-neo-icons';
     color: $color;
     content: $arrow-icon;
     padding: 0 0 0 $padding-left;
+    vertical-align: middle;
 
     @include rtl-selector {
       padding: {
@@ -252,9 +254,10 @@
       color: $global-text-color-update;
       // box-shadow: $dropdown-box-shadow-update;
 
-      @include neo-dropdown-arrow-update($arrow-icon: '\25B8');
+      @include neo-dropdown-arrow-update($arrow-icon: '\f21f');
       &::after {
         color: $global-text-color-update;
+        vertical-align: middle;
       }
     }
   }
@@ -320,11 +323,11 @@
 
   @include neo-popover-content-update(
     $dropdown-animation-duration,
-    $global-background-update,
+    white,
     $dropdown-content-border-update,
     $dropdown-radius,
     // $dropdown-content-shadow,
-      $dropdown-content-padding,
+    $dropdown-content-padding,
     $dropdown-content-z,
     $dropdown-min-width
   );

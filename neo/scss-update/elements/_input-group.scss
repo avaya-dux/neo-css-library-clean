@@ -199,7 +199,7 @@
 
 @mixin neo-input-group-icon-update {
   &__icon {
-    color: $token-color-functional-red-500;
+    color: $token-color-red-500;
     display: flex;
     font-size: $input-icon-size;
     position: absolute;

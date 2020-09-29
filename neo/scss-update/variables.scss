@@ -65,12 +65,12 @@ $neo-state-colors-update: () !default;
 
 $neo-state-colors-update: map-merge(
   (
-    default: $token-color-base-300,
-    primary: $token-color-accent-500,
-    success: $token-color-functional-green-500,
-    warning: $token-color-functional-orange-500,
-    alert: $token-color-functional-red-500,
-    info: $token-color-functional-blue-500,
+    default: $token-color-base-100,
+    primary: $token-color-blue-500,
+    success: $token-color-green-500,
+    warning: $token-color-orange-500,
+    alert: $token-color-red-500,
+    info: $token-color-blue-500,
   ),
   $neo-state-colors-update
 );
@@ -81,12 +81,12 @@ $neo-hover-colors-update: () !default;
 
 $neo-hover-colors-update: map-merge(
   (
-    default: $token-color-base-400,
-    primary: $token-color-accent-600,
-    success: $token-color-functional-green-600,
-    warning: $token-color-functional-orange-600,
-    alert: $token-color-functional-red-600,
-    info: $token-color-functional-blue-600,
+    default: $token-color-base-200,
+    primary: $token-color-blue-600,
+    success: $token-color-green-600,
+    warning: $token-color-orange-600,
+    alert: $token-color-red-600,
+    info: $token-color-blue-600,
   ),
   $neo-hover-colors-update
 );
@@ -97,11 +97,11 @@ $neo-close-colors-update: () !default;
 
 $neo-close-colors-update: map-merge(
   (
-    primary: $token-color-accent-900,
-    success: $token-color-functional-green-900,
-    warning: $token-color-functional-orange-900,
-    alert: $token-color-functional-red-900,
-    info: $token-color-functional-blue-900,
+    primary: $token-color-blue-600,
+    success: $token-color-green-600,
+    warning: $token-color-orange-600,
+    alert: $token-color-red-600,
+    info: $token-color-blue-600,
   ),
   $neo-close-colors-update
 );
@@ -112,10 +112,10 @@ $neo-notification-colors-update: () !default;
 
 $neo-notification-colors-update: map-merge(
   (
-    success: $token-color-functional-green-100,
-    warning: $token-color-functional-orange-100,
-    alert: $token-color-functional-red-100,
-    info: $token-color-functional-blue-100,
+    success: $token-color-green-100,
+    warning: $token-color-orange-100,
+    alert: $token-color-red-100,
+    info: $token-color-blue-100,
   ),
   $neo-notification-colors-update
 );
@@ -126,12 +126,78 @@ $neo-notification-icon-colors-update: () !default;
 
 $neo-notification-icon-colors-update: map-merge(
   (
-    success: $token-color-functional-green-600,
-    warning: $token-color-functional-orange-600,
-    alert: $token-color-functional-red-600,
-    info: $token-color-functional-blue-600,
+    success: $token-color-green-600,
+    warning: $token-color-orange-600,
+    alert: $token-color-red-600,
+    info: $token-color-blue-600,
   ),
   $neo-notification-icon-colors-update
+);
+
+// updated token state colors
+
+$neo-token-colors-update: () !default;
+
+$neo-token-colors-update: map-merge(
+  (
+    default: $token-color-base-100,
+    primary: $token-color-blue-100,
+    success: $token-color-green-100,
+    warning: $token-color-orange-100,
+    alert: $token-color-red-100,
+    info: $token-color-blue-100,
+  ),
+  $neo-token-colors-update
+);
+
+$neo-token-colors-hover-update: () !default;
+
+$neo-token-colors-hover-update: map-merge(
+  (
+    default: $token-color-base-200,
+    primary: $token-color-blue-200,
+    success: $token-color-green-200,
+    warning: $token-color-orange-200,
+    alert: $token-color-red-200,
+    info: $token-color-blue-200,
+  ),
+  $neo-token-colors-hover-update
+);
+
+$neo-border-colors-update: () !default;
+
+$neo-border-colors-update: map-merge(
+  (
+    default: $token-color-base-400,
+    primary: $token-color-blue-400,
+    success: $token-color-green-400,
+    warning: $token-color-orange-400,
+    alert: $token-color-red-400,
+    info: $token-color-blue-400,
+  ),
+  $neo-border-colors-update
+);
+
+$neo-navbar-colors-update: () !default;
+
+$neo-navbar-colors-update: map-merge(
+  (
+    ready: $token-color-green-100,
+    not-ready: $token-color-orange-100,
+    connected: $token-color-base-100,
+  ),
+  $neo-navbar-colors-update
+);
+
+$neo-navbar-pill-update: () !default;
+
+$neo-navbar-pill-update: map-merge(
+  (
+    ready: $token-color-green-600,
+    not-ready: $token-color-orange-600,
+    connected: $token-color-base-600,
+  ),
+  $neo-navbar-pill-update
 );
 
 // Link colors
@@ -150,9 +216,9 @@ $global-font-size-update: $token-web-typography-web-body-regular-font-size;
 $global-font-size-x-small-update: $token-web-typography-web-tiny-body-font-size;
 $global-font-size-small-update: $token-web-typography-web-small-body-font-size;
 $global-font-size-large-update: $token-web-typography-web-large-body-font-size;
-$global-disabled-background-update: $token-color-disabled-background;
-$global-disabled-text-color-update: $token-color-disabled-text;
-$global-disabled-accent: $token-color-disabled-accent;
+$global-disabled-background-update: $token-color-base-100;
+$global-disabled-text-color-update: $token-color-base-500;
+$global-disabled-accent: $token-color-blue-200;
 
 $global-background: var-color-name(global-background) !default;
 // Global text styles
@@ -196,7 +262,7 @@ $heading-font-sizes-update: map-merge(
     h3: $token-web-typography-web-heading-3-font-size,
     h4: $token-web-typography-web-heading-4-font-size,
     // we only go up to h4
-      h5: $global-font-size,
+    h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes-update
@@ -501,46 +567,46 @@ $button-types-update: () !default;
 $button-types-update: map-merge(
   (
     default: (
-      bg-color: $token-color-accent-500,
+      bg-color: $token-color-blue-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-accent-600,
-      active-bg-color: $token-color-accent-600,
+      hover-bg-color: $token-color-blue-600,
+      active-bg-color: $token-color-blue-600,
       active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
       disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     success: (
-      bg-color: $token-color-functional-green-500,
+      bg-color: $token-color-green-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-functional-green-600,
-      focus-bg-color: $token-color-functional-green-600,
-      active-bg-color: $token-color-functional-green-600,
+      hover-bg-color: $token-color-green-600,
+      focus-bg-color: $token-color-green-600,
+      active-bg-color: $token-color-green-600,
       active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
       disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     warning: (
-      bg-color: $token-color-functional-orange-500,
+      bg-color: $token-color-orange-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-functional-orange-600,
-      focus-bg-color: $token-color-functional-orange-600,
-      active-bg-color: $token-color-functional-orange-600,
+      hover-bg-color: $token-color-orange-600,
+      focus-bg-color: $token-color-orange-600,
+      active-bg-color: $token-color-orange-600,
       active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
       disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     alert: (
-      bg-color: $token-color-functional-red-500,
+      bg-color: $token-color-red-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-functional-red-600,
-      focus-bg-color: $token-color-functional-red-600,
-      active-bg-color: $token-color-functional-red-600,
+      hover-bg-color: $token-color-red-600,
+      focus-bg-color: $token-color-red-600,
+      active-bg-color: $token-color-red-600,
       active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
       disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
     info: (
-      bg-color: $token-color-functional-blue-500,
+      bg-color: $token-color-blue-500,
       text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-functional-blue-600,
-      focus-bg-color: $token-color-functional-blue-600,
-      active-bg-color: $token-color-functional-blue-600,
+      hover-bg-color: $token-color-blue-600,
+      focus-bg-color: $token-color-blue-600,
+      active-bg-color: $token-color-blue-600,
       active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
       disabled-bg-color: $token-button-disabled-defaultbg-color,
     ),
@@ -775,7 +841,7 @@ $close-sizes: map-merge(
 // udpated navbar variables
 
 $navbar-background-color-update: $global-background-update !default;
-$navbar-background-color-hover-update: $token-color-hover-background !default;
+$navbar-background-color-hover-update: $token-color-blue-100 !default;
 
 // end of updated variables
 
@@ -1097,7 +1163,7 @@ $tab-action-line-height-update: $token-tabs-line-height !default;
 $tab-disabled-bg-color-update: $token-tabs-disabled-background-color !default;
 $tab-border-bottom-color-update: $global-background !default;
 $tab-bordered-active-border-bottom-color-update: $token-tabs-color !default;
-$tab-action-disabled-color-update: $token-color-disabled-background !default;
+$tab-action-disabled-color-update: $token-color-base-100 !default;
 
 // end of updated variables
 
@@ -1351,8 +1417,8 @@ $modal-border-update: $token-border-solid-1-px-border-width
   $token-border-solid-1-px-border-style $token-color-base-400 !default;
 $modal-menu-width-update: $token-modal-menu-modal-width !default;
 $modal-menu-active-border-update: 4px $token-border-solid-1-px-border-style
-  $token-color-accent-500 !default;
-$modal-menu-active-border-color-update: $token-color-accent-500 !default;
+  $token-color-blue-500 !default;
+$modal-menu-active-border-color-update: $token-color-blue-500 !default;
 $modal-padding-update: $global-spacer-large 17px $global-spacer-large 0 !default;
 
 // end of updated variables

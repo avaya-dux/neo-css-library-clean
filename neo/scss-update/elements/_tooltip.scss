@@ -129,71 +129,90 @@
     background-color: $tooltip-background-update;
     color: $tooltip-color-update;
     border: $content-border;
-    border-radius: $radius;
+    border-radius: 2px;
     box-shadow: $content-shadow;
     display: none;
     left: 0;
     margin: 0;
-    min-width: $content-min-width;
+    min-width: 20px;
     padding: $tooltip-padding-update;
     position: absolute;
     top: 100%;
     z-index: $content-z;
     text-align: center;
 
+    .neo-tooltip-update--right & .neo-arrow-update {
+      left: -15px;
+      bottom: 51%;
+    }
+
     .neo-tooltip-update--right & .neo-arrow-update::before {
       border-right-color: $tooltip-background-update !important;
       // hard-coded arrow styles
       border-width: $arrow-border-width-update;
-      bottom: -8px;
-      right: 31px;
     }
 
     .neo-tooltip-update--right & .neo-arrow-update::after {
       border-color: transparent !important;
-      border-right-color: $tooltip-background-update !important;
+      // border-right-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--up & .neo-arrow-update {
+      bottom: -15px;
+      right: 42%;
+      transform: rotate(180deg);
     }
 
     .neo-tooltip-update--up & .neo-arrow-update::before {
       border-bottom-color: $tooltip-background-update !important;
       // hard-coded arrow styles
       border-width: $arrow-border-width-update;
-      bottom: -32px;
-      right: -50px;
-      transform: rotate(180deg);
+      // bottom: -32px;
+      // right: -50px;
+      // transform: rotate(180deg);
     }
 
     .neo-tooltip-update--up & .neo-arrow-update::after {
       border-color: transparent !important;
-      border-top-color: $tooltip-background-update !important;
+      // border-top-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--left & .neo-arrow-update {
+      right: -14px;
+      bottom: 51%;
     }
 
     .neo-tooltip-update--left & .neo-arrow-update::before {
       border-left-color: $tooltip-background-update !important;
       // hard-coded arrow styles
       border-width: $arrow-border-width-update;
-      bottom: -9px;
-      right: -133px;
+      // bottom: -9px;
+      // right: -133px;
       transform: rotate(0deg);
     }
 
     .neo-tooltip-update--left & .neo-arrow-update::after {
       border-color: transparent !important;
-      border-left-color: $tooltip-background-update !important;
+      // border-left-color: $tooltip-background-update !important;
+    }
+
+    .neo-tooltip-update--down & .neo-arrow-update {
+      top: -15px;
+      right: 42%;
     }
 
     .neo-tooltip-update--down & .neo-arrow-update::before {
       border-top-color: $tooltip-background-update !important;
       // hard-coded arrow styles
       border-width: $arrow-border-width-update;
-      bottom: 14px;
-      right: -51px;
+      // bottom: 14px;
+      // right: -51px;
       transform: rotate(180deg);
     }
 
     .neo-tooltip-update--down & .neo-arrow-update::after {
       border-color: transparent !important;
-      border-bottom-color: $tooltip-background-update !important;
+      // border-bottom-color: $tooltip-background-update !important;
     }
 
     @include rtl-selector {

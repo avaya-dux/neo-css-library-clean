@@ -80,7 +80,7 @@
   &__header {
     @extend %list-item-update;
 
-    border: 0;
+    border: none;
     cursor: pointer;
     position: relative;
 
@@ -122,12 +122,13 @@
   &__item {
     @extend %list-radius-update;
 
-    border: $accordion-border-width solid $accordion-border-color;
+    border: 1px solid #939393;
     border-bottom: 0;
     display: flex;
     flex-direction: column;
     list-style: none;
     overflow-y: hidden;
+    border-radius: 4px;
 
     @include accordion--disabled-update;
   }

@@ -245,12 +245,12 @@
 // updated table styles
 
 @mixin neo-table-children-update {
-  thead,
-  tbody,
-  tfoot {
-    background-color: $table-background-update;
-    // border: $table-border-update;
-  }
+  // thead,
+  // tbody,
+  // tfoot {
+  //   background-color: $table-background-update;
+  //   // border: $table-border-update;
+  // }
 
   // styles to center checkbox in head
 
@@ -266,6 +266,7 @@
     text-align: left;
     vertical-align: middle;
     text-align: center;
+    font-weight: 400 !important;
     @include rtl-selector {
       text-align: right;
     }
@@ -521,9 +522,12 @@
       padding-left: $select-padding-left-update;
       & ~ button {
         color: $global-text-color-update;
-        background-color: $table-filter-button-color-update;
+        background-color: #c9c9c9;
         // hard-coded padding for now
         padding: 12px 0;
+        &::before {
+          font-size: 24px;
+        }
         &:hover {
           box-shadow: none;
         }

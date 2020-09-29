@@ -235,7 +235,7 @@
 
   @include chip-states-update($chip-bg-color, $self);
 
-  @each $name, $background-color in $neo-state-colors-update {
+  @each $name, $background-color in $neo-token-colors-update {
     @if ($name == 'default') {
       &--#{$name} {
         color: $global-text-color-update;
@@ -244,16 +244,23 @@
       }
     } @else {
       &--#{$name} {
-        color: $global-text-inverse-color;
+        color: $global-text-color-update;
         // @include chip-states-update($background-color, $self);
         background-color: $background-color;
       }
     }
   }
 
-  @each $name, $color in $neo-hover-colors-update {
+  @each $name, $color in $neo-token-colors-hover-update {
     &--#{$name}:hover {
       background-color: $color;
+    }
+  }
+
+  @each $name, $color in $neo-border-colors-update {
+    &--#{$name} {
+      border: 1px solid $color;
+      border-radius: 4px;
     }
   }
 

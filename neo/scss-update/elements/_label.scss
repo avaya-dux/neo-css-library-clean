@@ -48,20 +48,36 @@
   }
 
   @include neo-icons;
+
+  &[dir='rtl']:not(:empty)::before {
+    margin-left: 10px;
+    margin-right: 0 !important;
+  }
 }
 
 @mixin label-colors-update {
-  @each $name, $color in $neo-state-colors-update {
+  @each $name, $color in $neo-token-colors-update {
     @if $name == 'default' {
       &--#{$name} {
-        background-color: $global-background-update !important;
+        background-color: transparent !important;
         color: $global-text-color-update !important;
       }
     } @else {
       &--#{$name} {
         background-color: $color !important;
-        color: $global-text-inverse-color !important;
+        color: $global-text-color-update !important;
       }
+    }
+  }
+  @each $name, $color in $neo-border-colors-update {
+    &--#{$name} {
+      border: 1px solid $color;
+      border-radius: 4px;
+    }
+  }
+  @each $name, $color in $neo-notification-icon-colors-update {
+    &--#{$name}::before {
+      color: $color;
     }
   }
 }
@@ -76,4 +92,5 @@
 .neo-label-update--input {
   margin-bottom: $label-margin-bottom-update;
   padding: 0;
+  border: none !important;
 }

@@ -84,7 +84,7 @@
 // updated modal classes
 
 @mixin modal-element-update($value, $border-position: false) {
-  background-color: $modal-element-background-update;
+  background-color: white;
   padding: $value;
 
   // @if ($border-position) {
@@ -95,6 +95,7 @@
 .neo-modal-update {
   display: none;
   position: absolute;
+  border-radius: 16px;
 
   &--active {
     animation: $modal-animation-time;
@@ -102,7 +103,7 @@
 
     .neo-modal-update__background {
       animation: show-element $modal-animation-time;
-      background-color: $modal-background-update;
+      background-color: white;
       height: 100%;
       width: 100%;
       z-index: $modal-z;
@@ -114,9 +115,9 @@
 
 .neo-modal-update__content {
   animation: animation-modal-content $modal-animation-time;
-  background-color: $modal-background-update;
+  background-color: white;
   border: $modal-border-update;
-  border-radius: $modal-radius;
+  border-radius: 16px;
   box-shadow: $modal-shadow-update;
   display: flex;
   flex-direction: column;
@@ -131,6 +132,9 @@
     @include modal-element-update($modal-header-padding);
     text-align: center;
     vertical-align: center;
+    & h2 {
+      color: black !important;
+    }
   }
 
   .neo-modal-update__body {
@@ -174,6 +178,7 @@
 
 .neo-modal-menu-update {
   box-shadow: $modal-shadow-update;
+  border-radius: 16px;
   // width: $modal-menu-width-update;
   display: grid;
   grid-template-areas:
@@ -208,7 +213,7 @@
       padding-left: $select-padding-left-update;
       & ~ button {
         color: $global-text-color-update;
-        background-color: $table-filter-button-color-update;
+        background-color: #c9c9c9;
         // hard-coded padding and height for now
         padding: 12px 0;
         height: 100%;
@@ -248,7 +253,7 @@
     flex-direction: column;
     justify-content: center;
     &-active {
-      background: $token-color-base-150;
+      background: $token-color-base-100;
     }
     // vertical-align: center;
     & .neo-modal-menu-side-item {

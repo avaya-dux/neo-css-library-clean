@@ -125,11 +125,11 @@
 }
 
 .neo-input-update {
-  background-color: $input-background-color-update;
+  // background-color: $input-background-color-update;
   background-image: none;
   border: $input-border-width-update $input-border-style-update
     $input-border-color-update;
-  border-radius: $input-border-radius-update;
+  border-radius: 4px;
   box-shadow: $input-box-shadow;
   box-sizing: border-box;
   color: $input-font-color-update;
@@ -186,8 +186,9 @@
   flex-direction: row;
   border: $input-border-style-update $input-border-width-update
     $input-asterix-required-color-update;
-  width: $input-width-update + 30px;
+  width: $input-width-update;
   min-height: $input-height-update;
+  border-radius: 2px;
   & input,
   & textarea {
     border: none;
@@ -239,9 +240,12 @@
     background-color: $global-background-update;
     color: $input-clear-button-color;
     // hard-coded for now
-    padding-right: 11px;
+    padding: 11px;
     &:hover {
       cursor: pointer;
+    }
+    &::before {
+      font-size: 16px;
     }
     &-disabled {
       background-color: $input-disabled-bg-update;
