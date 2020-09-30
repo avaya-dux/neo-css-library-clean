@@ -1,120 +1,4 @@
-%tooltip {
-  animation: show-element $tooltip-animation-duration;
-  background: $tooltip-background;
-  border-radius: $tooltip-border-radius;
-  color: $tooltip-color;
-  content: attr(data-tooltip);
-  display: none;
-  font-size: $tooltip-text-size;
-  font-weight: normal;
-  line-height: normal;
-  max-width: $tooltip-width;
-  overflow: hidden;
-  padding: $tooltip-padding;
-  pointer-events: none;
-  text-align: center;
-  text-indent: 0;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  word-break: keep-all;
-  z-index: $tooltip-z;
-}
-
-@mixin tooltip {
-  &::after {
-    @extend %tooltip;
-    margin-bottom: auto;
-    margin-top: -$tooltip-offset;
-    transform: translate(-50%, -100%);
-    @include position(absolute, 0, auto, auto, 50%);
-  }
-}
-
-@mixin tooltip-wrapper {
-  .neo-tooltip {
-    line-height: 0;
-    position: static;
-
-    &::after {
-      display: block;
-    }
-  }
-}
-
-@mixin tooltip-multiline {
-  &.neo-tooltip--multiline {
-    &::after {
-      text-overflow: clip;
-      white-space: pre-line;
-      width: max-content;
-      word-break: keep-all;
-      word-wrap: normal;
-    }
-  }
-}
-
-@mixin tooltip-color {
-  @each $name, $color in $neo-state-colors {
-    &.neo-tooltip--#{$name} {
-      &::after {
-        background: $color;
-        color: $neo-white;
-      }
-    }
-  }
-}
-
-@mixin tooltip-right-position {
-  &.neo-tooltip--right::after {
-    transform: translate(100%, 50%);
-    @include position(absolute, auto, -$tooltip-offset, 50%, auto);
-  }
-}
-@mixin tooltip-bottom-position {
-  &.neo-tooltip--bottom::after {
-    transform: translate(-50%, 100%);
-    @include position(absolute, auto, auto, -$tooltip-offset, 50%);
-  }
-}
-@mixin tooltip-left-position {
-  &.neo-tooltip--left::after {
-    transform: translate(-100%, 50%);
-    @include position(absolute, auto, auto, 50%, -$tooltip-offset);
-  }
-}
-
-// Uses for normal elements (that doesn’t have styles on after and before)
-.neo-tooltip[data-tooltip]:not([data-tooltip='']) {
-  position: relative;
-
-  &:hover::after {
-    display: block;
-  }
-
-  @include tooltip;
-  // Makes tooltip multilined
-  @include tooltip-multiline;
-
-  // Changes color of tooltip
-  @include tooltip-color;
-  @include tooltip-right-position;
-  @include tooltip-bottom-position;
-  @include tooltip-left-position;
-}
-
-.neo-tooltip-wrapper {
-  position: relative;
-
-  &:hover {
-    @include tooltip-wrapper;
-  }
-}
-
-// new tooltip-class
-
-// New tooltip mixins
-
-@mixin neo-tooltip-update-content(
+@mixin neo-tooltip-content(
   $animation-duration: $popover-animation-duration,
   $content-background-color: $popover-content-background-color,
   $content-border: $popover-content-border,
@@ -126,8 +10,8 @@
 ) {
   &__content {
     animation: show-element $animation-duration;
-    background-color: $tooltip-background-update;
-    color: $tooltip-color-update;
+    background-color: $tooltip-background;
+    color: $tooltip-color;
     border: $content-border;
     border-radius: 2px;
     box-shadow: $content-shadow;
@@ -135,84 +19,69 @@
     left: 0;
     margin: 0;
     min-width: 20px;
-    padding: $tooltip-padding-update;
+    padding: $tooltip-padding;
     position: absolute;
     top: 100%;
     z-index: $content-z;
     text-align: center;
 
-    .neo-tooltip-update--right & .neo-arrow-update {
-      left: -15px;
+    .neo-tooltip--right & .neo-arrow {
+      left: -7.5px;
       bottom: 51%;
     }
 
-    .neo-tooltip-update--right & .neo-arrow-update::before {
-      border-right-color: $tooltip-background-update !important;
-      // hard-coded arrow styles
-      border-width: $arrow-border-width-update;
+    .neo-tooltip--right & .neo-arrow::before {
+      border-right-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
     }
 
-    .neo-tooltip-update--right & .neo-arrow-update::after {
+    .neo-tooltip--right & .neo-arrow::after {
       border-color: transparent !important;
-      // border-right-color: $tooltip-background-update !important;
     }
 
-    .neo-tooltip-update--up & .neo-arrow-update {
-      bottom: -15px;
+    .neo-tooltip--up & .neo-arrow {
+      bottom: -7.5px;
       right: 42%;
       transform: rotate(180deg);
     }
 
-    .neo-tooltip-update--up & .neo-arrow-update::before {
-      border-bottom-color: $tooltip-background-update !important;
-      // hard-coded arrow styles
-      border-width: $arrow-border-width-update;
-      // bottom: -32px;
-      // right: -50px;
-      // transform: rotate(180deg);
+    .neo-tooltip--up & .neo-arrow::before {
+      border-bottom-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
     }
 
-    .neo-tooltip-update--up & .neo-arrow-update::after {
+    .neo-tooltip--up & .neo-arrow::after {
       border-color: transparent !important;
-      // border-top-color: $tooltip-background-update !important;
     }
 
-    .neo-tooltip-update--left & .neo-arrow-update {
-      right: -14px;
+    .neo-tooltip--left & .neo-arrow {
+      right: -7.5px;
       bottom: 51%;
     }
 
-    .neo-tooltip-update--left & .neo-arrow-update::before {
-      border-left-color: $tooltip-background-update !important;
-      // hard-coded arrow styles
-      border-width: $arrow-border-width-update;
-      // bottom: -9px;
-      // right: -133px;
+    .neo-tooltip--left & .neo-arrow::before {
+      border-left-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
       transform: rotate(0deg);
     }
 
-    .neo-tooltip-update--left & .neo-arrow-update::after {
+    .neo-tooltip--left & .neo-arrow::after {
       border-color: transparent !important;
-      // border-left-color: $tooltip-background-update !important;
     }
 
-    .neo-tooltip-update--down & .neo-arrow-update {
-      top: -15px;
+    .neo-tooltip--down & .neo-arrow {
+      top: -7.5px;
       right: 42%;
     }
 
-    .neo-tooltip-update--down & .neo-arrow-update::before {
-      border-top-color: $tooltip-background-update !important;
-      // hard-coded arrow styles
-      border-width: $arrow-border-width-update;
-      // bottom: 14px;
-      // right: -51px;
-      transform: rotate(180deg);
+    .neo-tooltip--down & .neo-arrow::before {
+      border-top-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
+      // transform: rotate(180deg);
     }
 
-    .neo-tooltip-update--down & .neo-arrow-update::after {
+    .neo-tooltip--down & .neo-arrow::after {
       border-color: transparent !important;
-      // border-bottom-color: $tooltip-background-update !important;
     }
 
     @include rtl-selector {
@@ -222,7 +91,7 @@
   }
 }
 
-@mixin neo-tooltip-update-states {
+@mixin neo-tooltip-states {
   &--onhover:hover > &__content,
   &--active > &__content {
     display: block;
@@ -230,20 +99,20 @@
   }
 }
 
-%neo-tooltip-update {
+%neo-tooltip {
   box-sizing: border-box;
   display: inline-block;
   position: relative;
   background-color: red;
-  width: $tooltip-width-update;
-  font-size: $tooltip-font-size-update;
-  padding: $tooltip-padding-update;
+  width: $tooltip-width;
+  font-size: $tooltip-font-size;
+  padding: $tooltip-padding;
 }
 
-.neo-tooltip-update {
-  @extend %neo-popover-update;
+.neo-tooltip {
+  @extend %neo-popover;
 
-  @include neo-tooltip-update-content;
-  @include neo-tooltip-update-states;
+  @include neo-tooltip-content;
+  @include neo-tooltip-states;
   @include neo-position(&);
 }

@@ -1,7 +1,9 @@
-// // Borderless group list
-// //
-// // Remove all borders and border-radius.
-// //
+// updated list styles
+
+// Borderless group list
+//
+// Remove all borders and border-radius.
+//
 @mixin list--borderless {
   $self: &;
 
@@ -21,6 +23,8 @@
   &--disabled {
     cursor: not-allowed;
     opacity: $group-list-item-opacity;
+    background-color: $group-list-disabled-bg-color;
+    color: $group-list-disabled-hover-color;
   }
 }
 
@@ -34,12 +38,12 @@
     cursor: pointer;
   }
 
-  @each $name, $color in $neo-state-colors {
-    &--hover
-      &__#{$child-element}--#{$name}:hover:not(&__#{$child-element}--disabled) {
-      background-color: darken-var($color, 5%);
-    }
-  }
+  // @each $name, $color in $neo-state-colors {
+  //   &--hover
+  //     &__#{$child-element}--#{$name}:hover:not(&__#{$child-element}--disabled) {
+  //     // background-color: darken-var($color, 5%);
+  //   }
+  // }
 }
 
 // Group list with action buttons
@@ -84,7 +88,7 @@
   @each $name, $color in $neo-state-colors {
     &--#{$name} {
       background-color: $color;
-      color: $neo-white;
+      color: $group-list-white;
     }
   }
 }
@@ -115,7 +119,7 @@
 // Use on `li`s or `div`s within the `.neo-group-list` parent element.
 //
 %list-item {
-  background-color: $group-list-item-background;
+  background-color: transparent;
   border: $group-list-border-width solid $group-list-border-color;
   border-bottom: 0; /* Remove border-bottom for better stylization */
   color: $group-list-item-color;
@@ -133,150 +137,6 @@
 
   &:last-child {
     border-bottom: $group-list-border-width solid $group-list-border-color;
-    @include neo-border-bottom-radius($group-list-radius);
-  }
-}
-
-// updated list styles
-
-// Borderless group list
-//
-// Remove all borders and border-radius.
-//
-@mixin list-update--borderless {
-  $self: &;
-
-  &--borderless {
-    #{$self}__item {
-      border: $group-list-borderless;
-      @include neo-border-bottom-radius($group-list-borderless);
-    }
-  }
-}
-
-// Disabled item in group list
-//
-// Add disabled state
-//
-@mixin list-item--disabled-update {
-  &--disabled {
-    cursor: not-allowed;
-    opacity: $group-list-item-opacity;
-    background-color: $group-list-disabled-bg-color-update;
-    color: $group-list-disabled-hover-color-update;
-  }
-}
-
-// Hover state on item in group list
-//
-// Add hover state on item
-//
-@mixin list-update--hover($child-element) {
-  &--hover &__#{$child-element}:hover:not(&__#{$child-element}--disabled) {
-    background-color: $group-list-item-hover-update;
-    cursor: pointer;
-  }
-
-  // @each $name, $color in $neo-state-colors {
-  //   &--hover
-  //     &__#{$child-element}--#{$name}:hover:not(&__#{$child-element}--disabled) {
-  //     // background-color: darken-var($color, 5%);
-  //   }
-  // }
-}
-
-// Group list with action buttons
-//
-// Group List with inline action buttons aligned to the right of the row.
-//
-@mixin list-item-button-update {
-  > .neo-btn-update {
-    margin-bottom: 0;
-
-    // Indent between buttons inside group list item
-    &:not(:last-child) {
-      margin-right: $group-list-spacer;
-
-      @include rtl-selector {
-        margin: {
-          left: $group-list-spacer;
-          right: initial;
-        }
-      }
-    }
-  }
-
-  & > &-text {
-    align-self: center;
-    margin-right: auto;
-
-    @include rtl-selector {
-      margin: {
-        left: auto;
-        right: initial;
-      }
-    }
-  }
-}
-
-// Colorized group list
-//
-// Add modifier classes to change background color and text color on individual items.
-//
-@mixin list-item-colors-update {
-  @each $name, $color in $neo-state-colors-update {
-    &--#{$name} {
-      background-color: $color;
-      color: $group-list-white-update;
-    }
-  }
-}
-
-// Basic class
-//
-// Easily usable on <ul>, <ol>.
-%list-update {
-  display: flex;
-  flex-direction: column;
-  margin-left: 0; /* Left indent in IE and Opera */
-  padding-left: 0; /* Left indent in Firefox, Safari, Chrome */
-
-  @include rtl-selector {
-    margin: {
-      left: initial;
-      right: 0;
-    }
-    padding: {
-      left: initial;
-      right: 0;
-    }
-  }
-}
-
-// Individual list items
-//
-// Use on `li`s or `div`s within the `.neo-group-list` parent element.
-//
-%list-item-update {
-  background-color: transparent;
-  border: $group-list-border-width-update solid $group-list-border-color-update;
-  border-bottom: 0; /* Remove border-bottom for better stylization */
-  color: $group-list-item-color-update;
-  display: flex;
-  font-size: $group-list-font-size-update;
-  list-style-type: none;
-  padding: $group-list-padding-y $group-list-padding-x;
-  transition: $group-list-transition;
-}
-
-%list-radius-update {
-  &:first-child {
-    @include neo-border-top-radius($group-list-radius);
-  }
-
-  &:last-child {
-    border-bottom: $group-list-border-width-update solid
-      $group-list-border-color-update;
     @include neo-border-bottom-radius($group-list-radius);
   }
 }

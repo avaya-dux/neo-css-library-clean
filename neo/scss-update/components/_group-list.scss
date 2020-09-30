@@ -1,3 +1,5 @@
+// updated group list styles
+
 .neo-group-list {
   @extend %list;
 
@@ -12,22 +14,4 @@
 
   @include list--hover('item');
   @include list--borderless;
-}
-
-// updated group list styles
-
-.neo-group-list-update {
-  @extend %list-update;
-
-  &__item {
-    @extend %list-item-update;
-    @extend %list-radius-update;
-
-    @include list-item-colors-update;
-    @include list-item-button-update;
-    @include list-item--disabled-update;
-  }
-
-  @include list-update--hover('item');
-  @include list-update--borderless;
 }

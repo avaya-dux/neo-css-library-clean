@@ -1,3 +1,5 @@
+// updated pagination styles
+
 %pagination {
   align-content: space-between;
   align-items: center;
@@ -12,6 +14,22 @@
     @extend %button;
     background-color: $pagination-btn-background;
     border: $pagination-border;
+    // border-radius: $pagination-border-radius;
+    color: $pagination-color;
+    margin: 0 $pagination-margin;
+    min-width: $pagination-min-width-item;
+    text-decoration: none;
+    border-radius: 2px;
+
+    @include pagination-item--hover;
+    @include pagination-item--disabled;
+    @include pagination-item--active;
+  }
+  &__item-arrow {
+    @extend %button;
+    background-color: $pagination-btn-background;
+    // border: $pagination-border;
+    // border-radius: $pagination-border-radius;
     color: $pagination-color;
     margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
@@ -53,9 +71,9 @@
 
 @mixin pagination-item--hover {
   &:hover {
-    background-color: $pagination-btn-background;
+    background-color: $pagination-hover-background-color;
     border-color: $pagination-border-color-hover;
-    color: $neo-black;
+    color: $pagination-active-color;
     transition: $pagination-transition;
   }
 }
@@ -75,15 +93,16 @@
 
 @mixin pagination-item--active {
   &--active {
-    background-color: $pagination-item-color-current;
-    border-color: darken($pagination-item-color-current, 20%);
-    color: $neo-white;
-    font-weight: bold;
+    background-color: $pagination-hover-background-color;
+    border-color: $pagination-border-color-hover;
+    color: $pagination-active-color;
+    // font-weight: bold;
 
     &:hover {
-      background-color: lighten($pagination-item-color-current, 5%);
-      border-color: darken($pagination-item-color-current, 5%);
-      color: $neo-white;
+      // background-color: lighten($pagination-item-color-current, 5%);
+      // border-color: darken($pagination-item-color-current, 5%);
+      // color: $neo-white;
+      cursor: default;
     }
   }
 }
@@ -98,6 +117,7 @@
 
 @mixin pagination-dots {
   &__dots {
+    padding: 0 $button-padding-y;
     color: $pagination-dots-color;
     font-size: $pagination-dots-size;
     pointer-events: none;
@@ -135,163 +155,4 @@
   @include pagination-dots;
   @include pagination-list-position;
   @include pagination-label;
-}
-
-// updated pagination styles
-
-%pagination-update {
-  align-content: space-between;
-  align-items: center;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  text-align: center;
-}
-
-@mixin pagination-item-update {
-  &__item {
-    @extend %button-update;
-    background-color: $pagination-btn-background;
-    border: $pagination-border-update;
-    // border-radius: $pagination-border-radius-update;
-    color: $pagination-color-update;
-    margin: 0 $pagination-margin;
-    min-width: $pagination-min-width-item;
-    text-decoration: none;
-    border-radius: 2px;
-
-    @include pagination-item-update--hover;
-    @include pagination-item-update--disabled;
-    @include pagination-item-update--active;
-  }
-  &__item-arrow {
-    @extend %button-update;
-    background-color: $pagination-btn-background;
-    // border: $pagination-border;
-    // border-radius: $pagination-border-radius-update;
-    color: $pagination-color-update;
-    margin: 0 $pagination-margin;
-    min-width: $pagination-min-width-item;
-    text-decoration: none;
-
-    @include pagination-item-update--hover;
-    @include pagination-item-update--disabled;
-    @include pagination-item-update--active;
-  }
-}
-
-@mixin pagination-list-position-update {
-  &--is-right {
-    .neo-pagination-update__list {
-      margin-left: auto;
-
-      @include rtl-selector {
-        margin: {
-          left: initial;
-          right: auto;
-        }
-      }
-    }
-  }
-
-  &--is-left {
-    .neo-pagination-update__list {
-      margin-right: auto;
-
-      @include rtl-selector {
-        margin: {
-          left: auto;
-          right: initial;
-        }
-      }
-    }
-  }
-}
-
-@mixin pagination-item-update--hover {
-  &:hover {
-    background-color: $pagination-hover-background-color-update;
-    border-color: $pagination-border-color-hover-update;
-    color: $pagination-active-color-update;
-    transition: $pagination-transition;
-  }
-}
-
-@mixin pagination-item-update--disabled {
-  &--disabled,
-  &--disabled:hover,
-  &--disabled:active,
-  &[disabled] {
-    background-color: $pagination-disabled-bg;
-    border: 0;
-    box-shadow: none;
-    color: $pagination-disabled-color;
-    cursor: not-allowed;
-  }
-}
-
-@mixin pagination-item-update--active {
-  &--active {
-    background-color: $pagination-hover-background-color-update;
-    border-color: $pagination-border-color-hover-update;
-    color: $pagination-active-color-update;
-    // font-weight: bold;
-
-    &:hover {
-      // background-color: lighten($pagination-item-color-current, 5%);
-      // border-color: darken($pagination-item-color-current, 5%);
-      // color: $neo-white;
-      cursor: default;
-    }
-  }
-}
-
-@mixin pagination-list-update {
-  &__list {
-    @extend %pagination-update;
-    list-style-type: none;
-    margin: $pagination-margin;
-  }
-}
-
-@mixin pagination-dots-update {
-  &__dots {
-    padding: 0 $button-padding-y-update;
-    color: $pagination-dots-color-update;
-    font-size: $pagination-dots-size;
-    pointer-events: none;
-  }
-}
-
-@mixin pagination-label-update {
-  &__label {
-    font-size: $pagination-label-font-size;
-    margin-right: $pagination-spacer;
-
-    @include rtl-selector {
-      margin: {
-        left: $pagination-spacer;
-        right: initial;
-      }
-    }
-  }
-}
-
-// Basic class
-//
-// Easily usable on <nav>.
-
-.neo-pagination-update {
-  @extend %pagination-update;
-  font-size: $pagination-font-size;
-
-  > .neo-pagination__select {
-    width: auto;
-  }
-
-  @include pagination-list-update;
-  @include pagination-item-update;
-  @include pagination-dots-update;
-  @include pagination-list-position-update;
-  @include pagination-label-update;
 }

@@ -1,3 +1,5 @@
+// updated input styles
+
 @mixin input--editable {
   &--editable {
     display: flex;
@@ -24,13 +26,6 @@
   }
 }
 
-@mixin input--rounded {
-  &--rounded {
-    border: 1px solid $input-border-color;
-    border-radius: $input-rounded-border-radius;
-  }
-}
-
 @mixin input--states {
   @each $state-color-name, $state-color-value in $input-state-color-map {
     &--#{$state-color-name} {
@@ -44,10 +39,10 @@
 }
 
 .neo-input {
-  background-color: $input-background-color;
+  // background-color: $input-background-color;
   background-image: none;
-  border: 1px solid $input-border-color;
-  border-radius: $input-border-radius;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: 4px;
   box-shadow: $input-box-shadow;
   box-sizing: border-box;
   color: $input-font-color;
@@ -57,10 +52,11 @@
   line-height: $input-line-height;
   min-height: $input-height;
   padding: $input-padding-y $input-padding-x;
+  min-width: $input-width;
   width: 100%;
 
   &[readonly] {
-    background-color: $input-disabled-bg;
+    background-color: transparent;
   }
 
   &[disabled] {
@@ -79,165 +75,80 @@
     outline: none;
   }
 
-  @include input--rounded;
+  &::-webkit-input-placeholder {
+    font-style: $input-placeholder-font-style;
+  }
+  &::-moz-placeholder {
+    font-style: $input-placeholder-font-style;
+  }
+  &:-ms-input-placeholder {
+    font-style: $input-placeholder-font-style;
+  }
+  &::placeholder {
+    font-style: $input-placeholder-font-style;
+  }
+
   @include input--editable;
   @include input--states;
 }
 
-// updated input styles
-
-@mixin input--editable-update {
-  &--editable {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: $input-height-update - 2 * $input-padding-y;
-
-    > * {
-      margin-bottom: 0 !important;
-    }
-
-    .neo-chip-update {
-      line-height: $input-line-height-update;
-      padding-bottom: 0;
-      padding-top: 0;
-    }
-
-    .neo-input-update {
-      border: 0;
-      box-shadow: none;
-      flex-grow: 1;
-      padding: 0;
-      width: auto;
-    }
-  }
-}
-
-@mixin input--states-update {
-  @each $state-color-name, $state-color-value in $input-state-color-map-update {
-    &--#{$state-color-name} {
-      border-color: $state-color-value;
-
-      &:focus {
-        border-color: $state-color-value;
-      }
-    }
-  }
-}
-
-.neo-input-update {
-  // background-color: $input-background-color-update;
-  background-image: none;
-  border: $input-border-width-update $input-border-style-update
-    $input-border-color-update;
-  border-radius: 4px;
-  box-shadow: $input-box-shadow;
-  box-sizing: border-box;
-  color: $input-font-color-update;
-  display: block;
-  font-family: inherit;
-  font-size: $input-font-size-update;
-  line-height: $input-line-height-update;
-  min-height: $input-height-update;
-  padding: $input-padding-y $input-padding-x;
-  min-width: $input-width-update;
-  width: 100%;
-
-  &[readonly] {
-    background-color: transparent;
-  }
-
-  &[disabled] {
-    background-color: $input-disabled-bg-update;
-    color: $input-disabled-color-update;
-    cursor: not-allowed;
-  }
-
-  label > &,
-  label + & {
-    margin-top: $input-in-label-margin-top;
-  }
-
-  &:focus {
-    box-shadow: $input-focus-shadow;
-    outline: none;
-  }
-
-  &::-webkit-input-placeholder {
-    font-style: $input-placeholder-font-style-update;
-  }
-  &::-moz-placeholder {
-    font-style: $input-placeholder-font-style-update;
-  }
-  &:-ms-input-placeholder {
-    font-style: $input-placeholder-font-style-update;
-  }
-  &::placeholder {
-    font-style: $input-placeholder-font-style-update;
-  }
-
-  @include input--editable-update;
-  @include input--states-update;
-}
-
 //  input error validation wrapper and input
 
-.neo-input-error-wrapper-update {
+.neo-input-error-wrapper {
   display: flex;
   flex-direction: row;
-  border: $input-border-style-update $input-border-width-update
-    $input-asterix-required-color-update;
-  width: $input-width-update;
-  min-height: $input-height-update;
+  border: $input-border-style $input-border-width $input-asterix-required-color;
+  width: $input-width;
+  min-height: $input-height;
   border-radius: 2px;
   & input,
   & textarea {
     border: none;
   }
-  & .neo-input-error-icon-update {
+  & .neo-input-error-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: $input-asterix-required-color-update;
+    color: $input-asterix-required-color;
     //hard-coded for now
     padding-right: 11px;
   }
 }
 
-.neo-input-hint-error-update {
+.neo-input-hint-error {
   // hard-coded margin for now
   margin-top: 4px;
-  color: $input-asterix-required-color-update;
+  color: $input-asterix-required-color;
 }
 
 // input placeholder wrapper
 
-.neo-input-readonly-update {
+.neo-input-readonly {
   border: none;
-  padding-left: $input-readonly-padding-update;
+  padding-left: $input-readonly-padding;
 }
 
 // editable input style
 
-.neo-input-editable-wrapper-update {
+.neo-input-editable-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: $input-border-style-update $input-border-width-update
-    $input-border-color-update;
-  min-height: $input-height-update;
-  min-width: $input-width-update;
+  border: $input-border-style $input-border-width $input-border-color;
+  min-height: $input-height;
+  min-width: $input-width;
   & input,
   & textarea {
     flex-grow: 1;
     border: none;
     min-width: 0;
   }
-  & .neo-input-edit-icon-update {
+  & .neo-input-edit-icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
     border: none;
-    background-color: $global-background-update;
+    background-color: $global-background;
     color: $input-clear-button-color;
     // hard-coded for now
     padding: 11px;
@@ -248,14 +159,14 @@
       font-size: 16px;
     }
     &-disabled {
-      background-color: $input-disabled-bg-update;
+      background-color: $input-disabled-bg;
     }
   }
 }
 
 // disabled input style
 
-// .neo-input-disabled-update {
-//   background-color: $input-disabled-bg-update;
-//   color: $input-disabled-color-update;
+// .neo-input-disabled {
+//   background-color: $input-disabled-bg;
+//   color: $input-disabled-color;
 // }
