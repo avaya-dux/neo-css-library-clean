@@ -180,7 +180,7 @@ $neo-border-colors: map-merge(
 
 $neo-navbar-colors: () !default;
 
-$neo-navbar-colorse: map-merge(
+$neo-navbar-colors: map-merge(
   (
     ready: $token-color-green-100,
     not-ready: $token-color-orange-100,

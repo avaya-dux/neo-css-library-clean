@@ -194,7 +194,7 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: $chip-offset 0 0 $chip-offset;
+  padding: 4px;
 
   @include rtl-selector {
     padding: {
@@ -214,7 +214,7 @@
 
 .neo-chips__item {
   @extend %neo-chip;
-  margin: 0 $chip-offset $chip-offset 0;
+  margin: 0 4px 0 0;
 
   @include rtl-selector {
     margin: {

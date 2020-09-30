@@ -191,7 +191,7 @@
   & [class*='neo-icon-'].neo-btn:empty::before {
     font-size: 32px;
   }
-  & .neo-btn-sign-on {
+  & .neo-nav-status {
     padding: 11px 16px;
     @each $name, $color in $neo-navbar-colors {
       &--#{$name} {
@@ -199,9 +199,13 @@
       }
     }
 
-    & .neo-btn-sign-on-info {
+    & .neo-nav-status-info {
       display: flex;
       flex-direction: column;
+
+      & p {
+        margin: 0;
+      }
     }
 
     & .neo-label {
@@ -256,17 +260,7 @@
 
 .neo-navbar--left {
   display: flex;
-  & .neo-navbar-search {
-    & input {
-      border: none;
-      margin-left: 4px;
-    }
-    &::before {
-      font-size: 24px;
-    }
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  & [class*='neo-icon-'].neo-btn:empty::before {
+    font-size: 32px;
   }
 }

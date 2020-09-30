@@ -278,11 +278,11 @@
 }
 
 .neo-tabs {
-  display: flex;
+  // display: flex;
   min-height: $tab-min-height-default;
 
   &:not(.neo-tabs--vertical) {
-    border-bottom: 1px solid $tab-border-bottom-color;
+    // border-bottom: 1px solid $tab-border-bottom-color;
   }
 
   @include tab-container;

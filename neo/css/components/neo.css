@@ -2462,151 +2462,147 @@ hr {
   position: relative;
   width: 100%; }
 
-.neo-select select {
+.neo-select {
   border-radius: 4px; }
-
-.neo-select > select {
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -webkit-appearance: none;
-  /* stylelint-disable-next-line property-no-vendor-prefix */
-  -moz-appearance: none;
-  background-color: #ffffff;
-  border: 1px solid #939393;
-  box-shadow: none;
-  color: #000000;
-  cursor: pointer;
-  display: block;
-  font-size: 14px;
-  line-height: 19.1px;
-  min-height: 35px;
-  padding: 6px 32px 6px 8px;
-  min-width: 163px;
-  width: 100%; }
-  [dir='rtl'] .neo-select > select {
-    padding-left: 32px;
-    padding-right: 8px; }
-  .neo-select > select:disabled {
-    background-color: #f1f1f1;
-    color: #757474;
-    cursor: not-allowed; }
-  .neo-select > select:focus {
-    box-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5);
-    outline: 0; }
-
-.neo-select [multiple] {
-  padding: 0; }
-  [dir='rtl'] .neo-select [multiple] {
-    padding: 0; }
-  .neo-select [multiple] option {
-    padding: 6px 32px 6px 8px; }
-    .neo-select [multiple] option::before {
-      font-family: 'AOC-Icons';
-      content: '\e911';
-      width: 1.3em;
-      text-align: center;
-      display: inline-block; }
-    .neo-select [multiple] option:checked::before {
-      font-family: 'AOC-Icons';
-      content: '\e914'; }
-    [dir='rtl'] .neo-select [multiple] option {
+  .neo-select select {
+    border-radius: 4px; }
+  .neo-select > select {
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -webkit-appearance: none;
+    /* stylelint-disable-next-line property-no-vendor-prefix */
+    -moz-appearance: none;
+    background-color: #ffffff;
+    border: 1px solid #939393;
+    box-shadow: none;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 19.1px;
+    min-height: 35px;
+    padding: 6px 32px 6px 8px;
+    min-width: 163px;
+    width: 100%; }
+    [dir='rtl'] .neo-select > select {
       padding-left: 32px;
       padding-right: 8px; }
-
-.neo-select:not(.neo-select--multiple)::after {
-  align-items: center;
-  font-family: 'AOC-Icons';
-  content: '\e9a1';
-  display: inline-flex;
-  justify-content: center;
-  pointer-events: none;
-  position: absolute;
-  right: 8px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: 0.25s all ease;
-  width: 16px; }
-  .neo-select:not(.neo-select--multiple)::after:hover {
-    background-color: #c9c9c9; }
-  .neo-select:not(.neo-select--multiple)::after[disabled] {
-    color: #757474; }
-  [dir='rtl'] .neo-select:not(.neo-select--multiple)::after {
-    left: 8px;
-    right: auto; }
-
-.neo-select__spinner {
-  color: #5a646e;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  animation: spinner-animation 500ms infinite;
-  height: 20px;
-  width: 20px;
-  animation: none;
-  height: auto;
-  width: 100%; }
-  .neo-select__spinner::after {
-    background: center center no-repeat;
-    background-size: cover;
-    border-color: currentColor currentColor currentColor transparent;
-    border-radius: 50%;
-    border-style: solid;
-    box-sizing: border-box;
-    content: ' ';
-    display: inline-block;
-    height: 100%;
-    margin: auto;
-    width: 100%;
-    bottom: 0;
-    left: 0;
+    .neo-select > select:disabled {
+      background-color: #f1f1f1;
+      color: #757474;
+      cursor: not-allowed; }
+    .neo-select > select:focus {
+      box-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5);
+      outline: 0; }
+  .neo-select [multiple] {
+    padding: 0; }
+    [dir='rtl'] .neo-select [multiple] {
+      padding: 0; }
+    .neo-select [multiple] option {
+      padding: 6px 32px 6px 8px; }
+      .neo-select [multiple] option::before {
+        font-family: 'AOC-Icons';
+        content: '\e911';
+        width: 1.3em;
+        text-align: center;
+        display: inline-block; }
+      .neo-select [multiple] option:checked::before {
+        font-family: 'AOC-Icons';
+        content: '\e914'; }
+      [dir='rtl'] .neo-select [multiple] option {
+        padding-left: 32px;
+        padding-right: 8px; }
+  .neo-select:not(.neo-select--multiple)::after {
+    align-items: center;
+    font-family: 'AOC-Icons';
+    content: '\e9a1';
+    display: inline-flex;
+    justify-content: center;
+    pointer-events: none;
     position: absolute;
-    right: 0;
-    top: 0; }
-  .neo-btn > .neo-select__spinner {
-    color: inherit;
-    margin-right: 6px;
-    height: 14px;
-    width: 14px; }
-    [dir='rtl'] .neo-btn > .neo-select__spinner {
-      margin-left: 6px;
-      margin-right: initial; }
-  .neo-select__spinner::after {
-    border-width: 1px; }
-  .neo-select__spinner--large {
-    height: 26px;
-    width: 26px; }
-    .neo-select__spinner--large::after {
-      border-width: 2px; }
-  .neo-select__spinner--x-large {
-    height: 34px;
-    width: 34px; }
-    .neo-select__spinner--x-large::after {
-      border-width: 3px; }
-  .neo-select__spinner:not(.neo-select--multiple)::after {
-    height: 16px;
-    left: auto;
-    margin: 0;
-    top: 8px;
-    width: 16px;
-    content: '';
-    animation: spinner-animation 500ms infinite; }
-
-.neo-select__icon {
-  align-items: center;
-  display: inline-flex;
-  height: 35px;
-  justify-content: center;
-  left: 8px;
-  position: absolute; }
-  [dir='rtl'] .neo-select__icon {
-    left: auto;
-    right: 8px; }
-  .neo-select__icon + select {
-    padding-left: 32px; }
-    [dir='rtl'] .neo-select__icon + select {
-      padding-right: 32px; }
-
-.neo-select-disabled {
-  color: #757474; }
+    right: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.25s all ease;
+    width: 16px; }
+    .neo-select:not(.neo-select--multiple)::after:hover {
+      background-color: #c9c9c9; }
+    .neo-select:not(.neo-select--multiple)::after[disabled] {
+      color: #757474; }
+    [dir='rtl'] .neo-select:not(.neo-select--multiple)::after {
+      left: 8px;
+      right: auto; }
+  .neo-select__spinner {
+    color: #5a646e;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    animation: spinner-animation 500ms infinite;
+    height: 20px;
+    width: 20px;
+    animation: none;
+    height: auto;
+    width: 100%; }
+    .neo-select__spinner::after {
+      background: center center no-repeat;
+      background-size: cover;
+      border-color: currentColor currentColor currentColor transparent;
+      border-radius: 50%;
+      border-style: solid;
+      box-sizing: border-box;
+      content: ' ';
+      display: inline-block;
+      height: 100%;
+      margin: auto;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0; }
+    .neo-btn > .neo-select__spinner {
+      color: inherit;
+      margin-right: 6px;
+      height: 14px;
+      width: 14px; }
+      [dir='rtl'] .neo-btn > .neo-select__spinner {
+        margin-left: 6px;
+        margin-right: initial; }
+    .neo-select__spinner::after {
+      border-width: 1px; }
+    .neo-select__spinner--large {
+      height: 26px;
+      width: 26px; }
+      .neo-select__spinner--large::after {
+        border-width: 2px; }
+    .neo-select__spinner--x-large {
+      height: 34px;
+      width: 34px; }
+      .neo-select__spinner--x-large::after {
+        border-width: 3px; }
+    .neo-select__spinner:not(.neo-select--multiple)::after {
+      height: 16px;
+      left: auto;
+      margin: 0;
+      top: 8px;
+      width: 16px;
+      content: '';
+      animation: spinner-animation 500ms infinite; }
+  .neo-select__icon {
+    align-items: center;
+    display: inline-flex;
+    height: 35px;
+    justify-content: center;
+    left: 8px;
+    position: absolute; }
+    [dir='rtl'] .neo-select__icon {
+      left: auto;
+      right: 8px; }
+    .neo-select__icon + select {
+      padding-left: 32px; }
+      [dir='rtl'] .neo-select__icon + select {
+        padding-right: 32px; }
+  .neo-select-disabled {
+    color: #757474; }
 
 .neo-badge {
   position: relative; }
@@ -3401,10 +3397,7 @@ hr {
     margin-right: 0; }
 
 .neo-tabs {
-  display: flex;
   min-height: 54px; }
-  .neo-tabs:not(.neo-tabs--vertical) {
-    border-bottom: 1px solid #1473e6; }
   .neo-tabs__container {
     display: none;
     padding-top: 10px; }
@@ -4498,30 +4491,38 @@ hr {
       font-size: 32px; }
   .neo-nav [class*='neo-icon-'].neo-btn:empty::before {
     font-size: 32px; }
-  .neo-nav .neo-btn-sign-on {
+  .neo-nav .neo-nav-status {
     padding: 11px 16px;
     height: 100%;
     width: 215px;
     display: flex;
     align-items: center;
     justify-content: space-between; }
-    .neo-nav .neo-btn-sign-on .neo-btn-sign-on-info {
+    .neo-nav .neo-nav-status--ready {
+      background-color: #e4f7e4 !important; }
+    .neo-nav .neo-nav-status--not-ready {
+      background-color: #fceee8 !important; }
+    .neo-nav .neo-nav-status--connected {
+      background-color: #f1f1f1 !important; }
+    .neo-nav .neo-nav-status .neo-nav-status-info {
       display: flex;
       flex-direction: column; }
-    .neo-nav .neo-btn-sign-on .neo-label {
+      .neo-nav .neo-nav-status .neo-nav-status-info p {
+        margin: 0; }
+    .neo-nav .neo-nav-status .neo-label {
       border-radius: 16px !important;
       color: #ffffff; }
-      .neo-nav .neo-btn-sign-on .neo-label--ready {
+      .neo-nav .neo-nav-status .neo-label--ready {
         background-color: #2b6b2b !important; }
-      .neo-nav .neo-btn-sign-on .neo-label--not-ready {
+      .neo-nav .neo-nav-status .neo-label--not-ready {
         background-color: #a63b11 !important; }
-      .neo-nav .neo-btn-sign-on .neo-label--connected {
+      .neo-nav .neo-nav-status .neo-label--connected {
         background-color: #5e5e5e !important; }
-    .neo-nav .neo-btn-sign-on button:hover {
+    .neo-nav .neo-nav-status button:hover {
       background-color: white; }
-    .neo-nav .neo-btn-sign-on .neo-avatar {
+    .neo-nav .neo-nav-status .neo-avatar {
       border: 2px solid white !important; }
-    .neo-nav .neo-btn-sign-on [class*='neo-icon-'].neo-btn:empty::before {
+    .neo-nav .neo-nav-status [class*='neo-icon-'].neo-btn:empty::before {
       font-size: 12px; }
 
 .neo-nav__link {
@@ -4555,16 +4556,8 @@ hr {
 
 .neo-navbar--left {
   display: flex; }
-  .neo-navbar--left .neo-navbar-search {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center; }
-    .neo-navbar--left .neo-navbar-search input {
-      border: none;
-      margin-left: 4px; }
-    .neo-navbar--left .neo-navbar-search::before {
-      font-size: 24px; }
+  .neo-navbar--left [class*='neo-icon-'].neo-btn:empty::before {
+    font-size: 32px; }
 
 .neo-group-list__item--default {
   background-color: #f1f1f1;
