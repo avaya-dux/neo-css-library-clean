@@ -45,10 +45,12 @@
         background-color: $background-color;
       }
     } @else {
-      &--#{$name} {
-        color: $global-text-color;
-        // @include chip-states($background-color, $self);
-        background-color: $background-color;
+      @if ($name != 'secondary') {
+        &--#{$name} {
+          color: $global-text-color;
+          // @include chip-states($background-color, $self);
+          background-color: $background-color;
+        }
       }
     }
   }

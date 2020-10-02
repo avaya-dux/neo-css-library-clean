@@ -76,32 +76,32 @@
   }
 }
 
-@mixin neo-table--bordered {
-  &--bordered {
-    th,
-    td {
-      border: $table-border;
-    }
-  }
-}
+// @mixin neo-table--bordered {
+//   &--bordered {
+//     th,
+//     td {
+//       border: $table-border;
+//     }
+//   }
+// }
 
-@mixin neo-table--striped {
-  &--striped {
-    tbody tr:nth-of-type(#{$table-stripe}) {
-      background-color: $table-striped-background;
+// @mixin neo-table--striped {
+//   &--striped {
+//     tbody tr:nth-of-type(#{$table-stripe}) {
+//       background-color: $table-striped-background;
 
-      @if $table-stripe == even {
-        border-bottom: 0;
-      }
-    }
+//       @if $table-stripe == even {
+//         border-bottom: 0;
+//       }
+//     }
 
-    @if $table-stripe == odd {
-      thead th {
-        background: $table-background;
-      }
-    }
-  }
-}
+//     @if $table-stripe == odd {
+//       thead th {
+//         background: $table-background;
+//       }
+//     }
+//   }
+// }
 
 @mixin neo-table--hover {
   &--hover {
@@ -129,14 +129,14 @@
   }
 }
 
-@mixin neo-table--responsive {
-  &--responsive {
-    display: block;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    overflow-x: auto;
-    width: 100%;
-  }
-}
+// @mixin neo-table--responsive {
+//   &--responsive {
+//     display: block;
+//     -ms-overflow-style: -ms-autohiding-scrollbar;
+//     overflow-x: auto;
+//     width: 100%;
+//   }
+// }
 
 @mixin neo-table--sticky($axis, $position) {
   th {
@@ -186,33 +186,33 @@
   /* stylelint-enable selector-no-qualifying-type */
 }
 
-@mixin neo-table--editable {
-  &--editable {
-    background-color: $token-color-base-0;
+// @mixin neo-table--editable {
+//   &--editable {
+//     background-color: $token-color-base-0;
 
-    > td {
-      @include neo-table--editable-border;
-    }
-  }
-}
+//     > td {
+//       @include neo-table--editable-border;
+//     }
+//   }
+// }
 
-@mixin neo-table--editable-border {
-  &:first-child {
-    position: relative;
+// @mixin neo-table--editable-border {
+//   &:first-child {
+//     position: relative;
 
-    &::before {
-      border-left: $token-color-base-0;
-      content: '';
-      height: 100%;
+//     &::before {
+//       border-left: $token-color-base-0;
+//       content: '';
+//       height: 100%;
 
-      @include rtl-selector {
-        left: auto;
-        right: 0;
-      }
-      @include position(absolute, 0, null, null, 0);
-    }
-  }
-}
+//       @include rtl-selector {
+//         left: auto;
+//         right: 0;
+//       }
+//       @include position(absolute, 0, null, null, 0);
+//     }
+//   }
+// }
 
 @mixin neo-table-buttons {
   :not(.neo-button-group) > .neo-btn {
@@ -239,9 +239,9 @@
   @include neo-table--sticky(x, top);
 }
 
-.neo-table__container--vsticky {
-  @include neo-table--sticky(y, left);
-}
+// .neo-table__container--vsticky {
+//   @include neo-table--sticky(y, left);
+// }
 
 .neo-table {
   background-color: transparent;
@@ -314,13 +314,13 @@
   }
 
   @include neo-table-children;
-  @include neo-table--bordered;
-  @include neo-table--striped;
+  // @include neo-table--bordered;
+  // @include neo-table--striped;
   @include neo-table--hover;
   @include neo-table--condensed;
-  @include neo-table--responsive;
+  // @include neo-table--responsive;
   @include neo-table--sortable;
-  @include neo-table--editable;
+  // @include neo-table--editable;
   @include neo-table-buttons;
 }
 

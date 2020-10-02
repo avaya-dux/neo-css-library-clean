@@ -1,4 +1,219 @@
 @charset "UTF-8";
+@import url("https://use.typekit.net/jyd4rjy.css");
+:root {
+  --neo-Data Visualization Categorial Green-color: hsl(163.46154, 97.5%, 31.37255%);
+  --neo-Data Visualization Categorial Green-color-h: 163.46154;
+  --neo-Data Visualization Categorial Green-color-s: 97.5%;
+  --neo-Data Visualization Categorial Green-color-l: 31.37255%;
+  --neo-Data Visualization Categorial Purple Light-color: hsl(244.10256, 87.96992%, 73.92157%);
+  --neo-Data Visualization Categorial Purple Light-color-h: 244.10256;
+  --neo-Data Visualization Categorial Purple Light-color-s: 87.96992%;
+  --neo-Data Visualization Categorial Purple Light-color-l: 73.92157%;
+  --neo-Data Visualization Categorial Pink-color: hsl(311.42857, 45.16129%, 63.52941%);
+  --neo-Data Visualization Categorial Pink-color-h: 311.42857;
+  --neo-Data Visualization Categorial Pink-color-s: 45.16129%;
+  --neo-Data Visualization Categorial Pink-color-l: 63.52941%;
+  --neo-Data Visualization Categorial Red-color: hsl(359.40299, 79.44664%, 49.60784%);
+  --neo-Data Visualization Categorial Red-color-h: 359.40299;
+  --neo-Data Visualization Categorial Red-color-s: 79.44664%;
+  --neo-Data Visualization Categorial Red-color-l: 49.60784%;
+  --neo-Data Visualization Categorial Teal-color: hsl(184.10256, 52%, 44.11765%);
+  --neo-Data Visualization Categorial Teal-color-h: 184.10256;
+  --neo-Data Visualization Categorial Teal-color-s: 52%;
+  --neo-Data Visualization Categorial Teal-color-l: 44.11765%;
+  --neo-Data Visualization Categorial Orange-color: hsl(30, 100%, 45.09804%);
+  --neo-Data Visualization Categorial Orange-color-h: 30;
+  --neo-Data Visualization Categorial Orange-color-s: 100%;
+  --neo-Data Visualization Categorial Orange-color-l: 45.09804%;
+  --neo-Data Visualization Categorial Blue Mid-color: hsl(201.35593, 98.88268%, 35.09804%);
+  --neo-Data Visualization Categorial Blue Mid-color-h: 201.35593;
+  --neo-Data Visualization Categorial Blue Mid-color-s: 98.88268%;
+  --neo-Data Visualization Categorial Blue Mid-color-l: 35.09804%;
+  --neo-Data Visualization Categorial Blue Dark-color: hsl(230.13158, 61.78862%, 51.76471%);
+  --neo-Data Visualization Categorial Blue Dark-color-h: 230.13158;
+  --neo-Data Visualization Categorial Blue Dark-color-s: 61.78862%;
+  --neo-Data Visualization Categorial Blue Dark-color-l: 51.76471%;
+  --neo-Data Visualization Categorial Purple-color: hsl(305.37313, 30.87558%, 42.54902%);
+  --neo-Data Visualization Categorial Purple-color-h: 305.37313;
+  --neo-Data Visualization Categorial Purple-color-s: 30.87558%;
+  --neo-Data Visualization Categorial Purple-color-l: 42.54902%;
+  --neo-Base 0-color: hsl(0, 0%, 100%);
+  --neo-Base 0-color-h: 0;
+  --neo-Base 0-color-s: 0%;
+  --neo-Base 0-color-l: 100%;
+  --neo-Base 100-color: hsl(0, 0%, 94.5098%);
+  --neo-Base 100-color-h: 0;
+  --neo-Base 100-color-s: 0%;
+  --neo-Base 100-color-l: 94.5098%;
+  --neo-Base 200-color: hsl(0, 0%, 78.82353%);
+  --neo-Base 200-color-h: 0;
+  --neo-Base 200-color-s: 0%;
+  --neo-Base 200-color-l: 78.82353%;
+  --neo-Base 400-color: hsl(0, 0%, 57.64706%);
+  --neo-Base 400-color-h: 0;
+  --neo-Base 400-color-s: 0%;
+  --neo-Base 400-color-l: 57.64706%;
+  --neo-Base 500-color: hsl(0, 0.42918%, 45.68627%);
+  --neo-Base 500-color-h: 0;
+  --neo-Base 500-color-s: 0.42918%;
+  --neo-Base 500-color-l: 45.68627%;
+  --neo-Base 600-color: hsl(0, 0%, 36.86275%);
+  --neo-Base 600-color-h: 0;
+  --neo-Base 600-color-s: 0%;
+  --neo-Base 600-color-l: 36.86275%;
+  --neo-Base 800-color: hsl(0, 0%, 19.60784%);
+  --neo-Base 800-color-h: 0;
+  --neo-Base 800-color-s: 0%;
+  --neo-Base 800-color-l: 19.60784%;
+  --neo-Base 900-color: hsl(0, 0%, 14.11765%);
+  --neo-Base 900-color-h: 0;
+  --neo-Base 900-color-s: 0%;
+  --neo-Base 900-color-l: 14.11765%;
+  --neo-Base 1000-color: hsl(0, 0%, 0%);
+  --neo-Base 1000-color-h: 0;
+  --neo-Base 1000-color-s: 0%;
+  --neo-Base 1000-color-l: 0%;
+  --neo-Blue 100-color: hsl(213, 76.92308%, 94.90196%);
+  --neo-Blue 100-color-h: 213;
+  --neo-Blue 100-color-s: 76.92308%;
+  --neo-Blue 100-color-l: 94.90196%;
+  --neo-Blue 200-color: hsl(213.24324, 78.7234%, 81.56863%);
+  --neo-Blue 200-color-h: 213.24324;
+  --neo-Blue 200-color-s: 78.7234%;
+  --neo-Blue 200-color-l: 81.56863%;
+  --neo-Blue 400-color: hsl(213.1677, 81.72589%, 61.37255%);
+  --neo-Blue 400-color-h: 213.1677;
+  --neo-Blue 400-color-s: 81.72589%;
+  --neo-Blue 400-color-l: 61.37255%;
+  --neo-Blue 500-color: hsl(212.85714, 84%, 49.01961%);
+  --neo-Blue 500-color-h: 212.85714;
+  --neo-Blue 500-color-s: 84%;
+  --neo-Blue 500-color-l: 49.01961%;
+  --neo-Blue 600-color: hsl(213.1677, 81.72589%, 38.62745%);
+  --neo-Blue 600-color-h: 213.1677;
+  --neo-Blue 600-color-s: 81.72589%;
+  --neo-Blue 600-color-l: 38.62745%;
+  --neo-Blue 800-color: hsl(212.72727, 80%, 21.56863%);
+  --neo-Blue 800-color-h: 212.72727;
+  --neo-Blue 800-color-s: 80%;
+  --neo-Blue 800-color-l: 21.56863%;
+  --neo-Blue 900-color: hsl(212.90323, 77.5%, 15.68627%);
+  --neo-Blue 900-color-h: 212.90323;
+  --neo-Blue 900-color-s: 77.5%;
+  --neo-Blue 900-color-l: 15.68627%;
+  --neo-Red 100-color: hsl(3.52941, 73.91304%, 95.4902%);
+  --neo-Red 100-color-h: 3.52941;
+  --neo-Red 100-color-s: 73.91304%;
+  --neo-Red 100-color-l: 95.4902%;
+  --neo-Red 200-color: hsl(4.8, 58.13953%, 83.13725%);
+  --neo-Red 200-color-h: 4.8;
+  --neo-Red 200-color-s: 58.13953%;
+  --neo-Red 200-color-l: 83.13725%;
+  --neo-Red 400-color: hsl(4.06015, 71.89189%, 63.72549%);
+  --neo-Red 400-color-h: 4.06015;
+  --neo-Red 400-color-s: 71.89189%;
+  --neo-Red 400-color-l: 63.72549%;
+  --neo-Red 500-color: hsl(3.9521, 68.72428%, 52.35294%);
+  --neo-Red 500-color-h: 3.9521;
+  --neo-Red 500-color-s: 68.72428%;
+  --neo-Red 500-color-l: 52.35294%;
+  --neo-Red 600-color: hsl(0, 59.06977%, 42.15686%);
+  --neo-Red 600-color-h: 0;
+  --neo-Red 600-color-s: 59.06977%;
+  --neo-Red 600-color-l: 42.15686%;
+  --neo-Red 800-color: hsl(3.87097, 53.44828%, 22.7451%);
+  --neo-Red 800-color-h: 3.87097;
+  --neo-Red 800-color-s: 53.44828%;
+  --neo-Red 800-color-l: 22.7451%;
+  --neo-Red 900-color: hsl(4.5, 48.78049%, 16.07843%);
+  --neo-Red 900-color-h: 4.5;
+  --neo-Red 900-color-s: 48.78049%;
+  --neo-Red 900-color-l: 16.07843%;
+  --neo-Green 100-color: hsl(120, 54.28571%, 93.13725%);
+  --neo-Green 100-color-h: 120;
+  --neo-Green 100-color-s: 54.28571%;
+  --neo-Green 100-color-l: 93.13725%;
+  --neo-Green 200-color: hsl(120, 44.52555%, 73.13725%);
+  --neo-Green 200-color-h: 120;
+  --neo-Green 200-color-s: 44.52555%;
+  --neo-Green 200-color-l: 73.13725%;
+  --neo-Green 400-color: hsl(120, 34.41296%, 48.43137%);
+  --neo-Green 400-color-h: 120;
+  --neo-Green 400-color-s: 34.41296%;
+  --neo-Green 400-color-l: 48.43137%;
+  --neo-Green 500-color: hsl(120, 89.0411%, 28.62745%);
+  --neo-Green 500-color-h: 120;
+  --neo-Green 500-color-s: 89.0411%;
+  --neo-Green 500-color-l: 28.62745%;
+  --neo-Green 600-color: hsl(120, 42.66667%, 29.41176%);
+  --neo-Green 600-color-h: 120;
+  --neo-Green 600-color-s: 42.66667%;
+  --neo-Green 600-color-l: 29.41176%;
+  --neo-Green 800-color: hsl(120, 43.90244%, 16.07843%);
+  --neo-Green 800-color-h: 120;
+  --neo-Green 800-color-s: 43.90244%;
+  --neo-Green 800-color-l: 16.07843%;
+  --neo-Green 900-color: hsl(120, 43.85965%, 11.17647%);
+  --neo-Green 900-color-h: 120;
+  --neo-Green 900-color-s: 43.85965%;
+  --neo-Green 900-color-l: 11.17647%;
+  --neo-Purple 100-color: hsl(280, 71.42857%, 95.88235%);
+  --neo-Purple 100-color-h: 280;
+  --neo-Purple 100-color-s: 71.42857%;
+  --neo-Purple 100-color-l: 95.88235%;
+  --neo-Purple 200-color: hsl(280.36364, 67.90123%, 84.11765%);
+  --neo-Purple 200-color-h: 280.36364;
+  --neo-Purple 200-color-s: 67.90123%;
+  --neo-Purple 200-color-l: 84.11765%;
+  --neo-Purple 400-color: hsl(280, 68.6747%, 67.45098%);
+  --neo-Purple 400-color-h: 280;
+  --neo-Purple 400-color-s: 68.6747%;
+  --neo-Purple 400-color-l: 67.45098%;
+  --neo-Purple 500-color: hsl(280.24845, 72.19731%, 56.27451%);
+  --neo-Purple 500-color-h: 280.24845;
+  --neo-Purple 500-color-s: 72.19731%;
+  --neo-Purple 500-color-l: 56.27451%;
+  --neo-Purple 600-color: hsl(280, 56.33188%, 44.90196%);
+  --neo-Purple 600-color-h: 280;
+  --neo-Purple 600-color-s: 56.33188%;
+  --neo-Purple 600-color-l: 44.90196%;
+  --neo-Purple 800-color: hsl(280.28571, 54.6875%, 25.09804%);
+  --neo-Purple 800-color-h: 280.28571;
+  --neo-Purple 800-color-s: 54.6875%;
+  --neo-Purple 800-color-l: 25.09804%;
+  --neo-Purple 900-color: hsl(280.8, 54.34783%, 18.03922%);
+  --neo-Purple 900-color-h: 280.8;
+  --neo-Purple 900-color-s: 54.34783%;
+  --neo-Purple 900-color-l: 18.03922%;
+  --neo-Orange 100-color: hsl(18, 76.92308%, 94.90196%);
+  --neo-Orange 100-color-h: 18;
+  --neo-Orange 100-color-s: 76.92308%;
+  --neo-Orange 100-color-l: 94.90196%;
+  --neo-Orange 200-color: hsl(17.14286, 84%, 80.39216%);
+  --neo-Orange 200-color-h: 17.14286;
+  --neo-Orange 200-color-s: 84%;
+  --neo-Orange 200-color-l: 80.39216%;
+  --neo-Orange 400-color: hsl(17.14286, 92.92035%, 55.68627%);
+  --neo-Orange 400-color-h: 17.14286;
+  --neo-Orange 400-color-s: 92.92035%;
+  --neo-Orange 400-color-l: 55.68627%;
+  --neo-Orange 500-color: hsl(16.94915, 76.62338%, 45.29412%);
+  --neo-Orange 500-color-h: 16.94915;
+  --neo-Orange 500-color-s: 76.62338%;
+  --neo-Orange 500-color-l: 45.29412%;
+  --neo-Orange 600-color: hsl(16.91275, 81.42077%, 35.88235%);
+  --neo-Orange 600-color-h: 16.91275;
+  --neo-Orange 600-color-s: 81.42077%;
+  --neo-Orange 600-color-l: 35.88235%;
+  --neo-Orange 800-color: hsl(17.36842, 74.5098%, 20%);
+  --neo-Orange 800-color-h: 17.36842;
+  --neo-Orange 800-color-s: 74.5098%;
+  --neo-Orange 800-color-l: 20%;
+  --neo-Orange 900-color: hsl(17.30769, 74.28571%, 13.72549%);
+  --neo-Orange 900-color-h: 17.30769;
+  --neo-Orange 900-color-s: 74.28571%;
+  --neo-Orange 900-color-l: 13.72549%; }
+
 /*! normalize.css v6.0.0 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -8,7 +223,6 @@
  *    IE on Windows Phone and in iOS.
  */
 /* stylelint-disable */
-@import url("https://use.typekit.net/jyd4rjy.css");
 body {
   line-height: 1.15;
   /* 1 */
@@ -603,11 +817,11 @@ hr {
   .neo-form-control--success > .neo-check ~ label,
   .neo-form-control--success > .neo-switch,
   .neo-form-control--success .neo-input-hint {
-    color: #000000; }
+    color: #939393; }
   .neo-form-control--success .neo-input,
   .neo-form-control--success .neo-chips,
   .neo-form-control--success .neo-select select {
-    border-color: #000000; }
+    border-color: #939393; }
   .neo-form-control--error > .neo-input-group ~ label,
   .neo-form-control--error > .neo-input ~ label,
   .neo-form-control--error > .neo-select ~ label,
@@ -683,25 +897,25 @@ hr {
       padding: 0;
       width: auto; }
   .neo-input--success {
-    border-color: #000000; }
+    border-color: #939393; }
     .neo-input--success:focus {
-      border-color: #000000; }
+      border-color: #939393; }
   .neo-input--error {
     border-color: #d93d32; }
     .neo-input--error:focus {
       border-color: #d93d32; }
 
-.neo-input-error-wrapper {
+.neo-input-error__wrapper {
   display: flex;
   flex-direction: row;
   border: solid 1px #d93d32;
   width: auto;
   min-height: 32px;
   border-radius: 2px; }
-  .neo-input-error-wrapper input,
-  .neo-input-error-wrapper textarea {
+  .neo-input-error__wrapper input,
+  .neo-input-error__wrapper textarea {
     border: none; }
-  .neo-input-error-wrapper .neo-input-error-icon {
+  .neo-input-error__wrapper .neo-input-error__icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -716,19 +930,20 @@ hr {
   border: none;
   padding-left: 0px; }
 
-.neo-input-editable-wrapper {
+.neo-input-editable__wrapper {
+  border-radius: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border: solid 1px #939393;
   min-height: 32px;
   min-width: auto; }
-  .neo-input-editable-wrapper input,
-  .neo-input-editable-wrapper textarea {
+  .neo-input-editable__wrapper input,
+  .neo-input-editable__wrapper textarea {
     flex-grow: 1;
     border: none;
     min-width: 0; }
-  .neo-input-editable-wrapper .neo-input-edit-icon {
+  .neo-input-editable__wrapper .neo-input-edit__icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -736,11 +951,11 @@ hr {
     background-color: #ffffff;
     color: #000000;
     padding: 11px; }
-    .neo-input-editable-wrapper .neo-input-edit-icon:hover {
+    .neo-input-editable__wrapper .neo-input-edit__icon:hover {
       cursor: pointer; }
-    .neo-input-editable-wrapper .neo-input-edit-icon::before {
+    .neo-input-editable__wrapper .neo-input-edit__icon::before {
       font-size: 16px; }
-    .neo-input-editable-wrapper .neo-input-edit-icon-disabled {
+    .neo-input-editable__wrapper .neo-input-edit__icon-disabled {
       background-color: #f1f1f1; }
 
 .neo-input-group {
@@ -831,7 +1046,7 @@ hr {
     color: #757474; }
   .neo-input--success + .neo-input-hint,
   .neo-input-group--success + .neo-input-hint {
-    color: #000000; }
+    color: #939393; }
   .neo-input--error + .neo-input-hint,
   .neo-input-group--error + .neo-input-hint {
     color: #d93d32; }
@@ -1090,7 +1305,7 @@ hr {
     background-color: #f1f1f1;
     box-shadow: none; }
 
-.neo-btn--circle {
+.neo-btn-circle {
   justify-content: center;
   border-radius: 100%;
   height: 35px;
@@ -1098,729 +1313,701 @@ hr {
   transition: background-color 0.4s ease-in-out;
   transition-property: background-color, color, box-shadow;
   font-size: 14px; }
-  .neo-btn--circle::before {
+  .neo-btn-circle::before {
     font-size: 19px; }
-  .neo-btn--circle-primary {
+  .neo-btn-circle-primary {
     border: 0; }
-    .neo-btn--circle-primary[disabled] {
+    .neo-btn-circle-primary[disabled] {
       background-color: #f1f1f1;
       color: #757474; }
-      .neo-btn--circle-primary[disabled]:hover {
+      .neo-btn-circle-primary[disabled]:hover {
         background-color: #f1f1f1;
         color: #757474;
         box-shadow: none;
         cursor: not-allowed; }
-    .neo-btn--circle-primary--default {
+    .neo-btn-circle-primary--default {
       background-color: #f1f1f1;
       color: #ffffff; }
-    .neo-btn--circle-primary--primary {
+    .neo-btn-circle-primary--primary {
       background-color: #1473e6;
       color: #ffffff; }
-    .neo-btn--circle-primary--success {
+    .neo-btn-circle-primary--success {
       background-color: #088a08;
       color: #ffffff; }
-    .neo-btn--circle-primary--warning {
+    .neo-btn-circle-primary--warning {
       background-color: #cc4d1b;
       color: #ffffff; }
-    .neo-btn--circle-primary--alert {
+    .neo-btn-circle-primary--alert {
       background-color: #d93d32;
       color: #ffffff; }
-    .neo-btn--circle-primary--info {
+    .neo-btn-circle-primary--info {
       background-color: #1473e6;
       color: #ffffff; }
-    .neo-btn--circle-primary--default:hover {
+    .neo-btn-circle-primary--default:hover {
       background-color: #c9c9c9;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--circle-primary--primary:hover {
+    .neo-btn-circle-primary--primary:hover {
       background-color: #125ab3;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--circle-primary--success:hover {
+    .neo-btn-circle-primary--success:hover {
       background-color: #2b6b2b;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--circle-primary--warning:hover {
+    .neo-btn-circle-primary--warning:hover {
       background-color: #a63b11;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--circle-primary--alert:hover {
+    .neo-btn-circle-primary--alert:hover {
       background-color: #ab2c2c;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--circle-primary--info:hover {
+    .neo-btn-circle-primary--info:hover {
       background-color: #125ab3;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-  .neo-btn--circle-secondary {
+  .neo-btn-circle-secondary {
     border: 1px solid; }
-    .neo-btn--circle-secondary[disabled] {
+    .neo-btn-circle-secondary[disabled] {
       background-color: #f1f1f1;
       color: #757474; }
-      .neo-btn--circle-secondary[disabled]:hover {
+      .neo-btn-circle-secondary[disabled]:hover {
         background-color: #f1f1f1;
         color: #757474;
         box-shadow: none;
         cursor: not-allowed; }
-    .neo-btn--circle-secondary--default {
+    .neo-btn-circle-secondary--default {
       background-color: transparent;
       border-color: #f1f1f1;
       color: #f1f1f1; }
-    .neo-btn--circle-secondary--default:hover {
+    .neo-btn-circle-secondary--default:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #c9c9c9;
       color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--circle-secondary--primary:hover {
+    .neo-btn-circle-secondary--primary:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--success:hover {
+    .neo-btn-circle-secondary--success:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #2b6b2b;
       color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--circle-secondary--warning:hover {
+    .neo-btn-circle-secondary--warning:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #a63b11;
       color: #a63b11;
       cursor: pointer; }
-    .neo-btn--circle-secondary--alert:hover {
+    .neo-btn-circle-secondary--alert:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #ab2c2c;
       color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--circle-secondary--info:hover {
+    .neo-btn-circle-secondary--info:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--primary {
+    .neo-btn-circle-secondary--primary {
       background-color: transparent;
       border-color: #1473e6;
       color: #1473e6; }
-    .neo-btn--circle-secondary--default:hover {
+    .neo-btn-circle-secondary--default:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #c9c9c9;
       color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--circle-secondary--primary:hover {
+    .neo-btn-circle-secondary--primary:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--success:hover {
+    .neo-btn-circle-secondary--success:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #2b6b2b;
       color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--circle-secondary--warning:hover {
+    .neo-btn-circle-secondary--warning:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #a63b11;
       color: #a63b11;
       cursor: pointer; }
-    .neo-btn--circle-secondary--alert:hover {
+    .neo-btn-circle-secondary--alert:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #ab2c2c;
       color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--circle-secondary--info:hover {
+    .neo-btn-circle-secondary--info:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--success {
+    .neo-btn-circle-secondary--success {
       background-color: transparent;
       border-color: #088a08;
       color: #088a08; }
-    .neo-btn--circle-secondary--default:hover {
+    .neo-btn-circle-secondary--default:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #c9c9c9;
       color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--circle-secondary--primary:hover {
+    .neo-btn-circle-secondary--primary:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--success:hover {
+    .neo-btn-circle-secondary--success:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #2b6b2b;
       color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--circle-secondary--warning:hover {
+    .neo-btn-circle-secondary--warning:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #a63b11;
       color: #a63b11;
       cursor: pointer; }
-    .neo-btn--circle-secondary--alert:hover {
+    .neo-btn-circle-secondary--alert:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #ab2c2c;
       color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--circle-secondary--info:hover {
+    .neo-btn-circle-secondary--info:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--warning {
+    .neo-btn-circle-secondary--warning {
       background-color: transparent;
       border-color: #cc4d1b;
       color: #cc4d1b; }
-    .neo-btn--circle-secondary--default:hover {
+    .neo-btn-circle-secondary--default:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #c9c9c9;
       color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--circle-secondary--primary:hover {
+    .neo-btn-circle-secondary--primary:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--success:hover {
+    .neo-btn-circle-secondary--success:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #2b6b2b;
       color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--circle-secondary--warning:hover {
+    .neo-btn-circle-secondary--warning:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #a63b11;
       color: #a63b11;
       cursor: pointer; }
-    .neo-btn--circle-secondary--alert:hover {
+    .neo-btn-circle-secondary--alert:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #ab2c2c;
       color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--circle-secondary--info:hover {
+    .neo-btn-circle-secondary--info:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--alert {
+    .neo-btn-circle-secondary--alert {
       background-color: transparent;
       border-color: #d93d32;
       color: #d93d32; }
-    .neo-btn--circle-secondary--default:hover {
+    .neo-btn-circle-secondary--default:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #c9c9c9;
       color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--circle-secondary--primary:hover {
+    .neo-btn-circle-secondary--primary:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--success:hover {
+    .neo-btn-circle-secondary--success:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #2b6b2b;
       color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--circle-secondary--warning:hover {
+    .neo-btn-circle-secondary--warning:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #a63b11;
       color: #a63b11;
       cursor: pointer; }
-    .neo-btn--circle-secondary--alert:hover {
+    .neo-btn-circle-secondary--alert:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #ab2c2c;
       color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--circle-secondary--info:hover {
+    .neo-btn-circle-secondary--info:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--info {
+    .neo-btn-circle-secondary--info {
       background-color: transparent;
       border-color: #1473e6;
       color: #1473e6; }
-    .neo-btn--circle-secondary--default:hover {
+    .neo-btn-circle-secondary--default:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #c9c9c9;
       color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--circle-secondary--primary:hover {
+    .neo-btn-circle-secondary--primary:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-    .neo-btn--circle-secondary--success:hover {
+    .neo-btn-circle-secondary--success:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #2b6b2b;
       color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--circle-secondary--warning:hover {
+    .neo-btn-circle-secondary--warning:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #a63b11;
       color: #a63b11;
       cursor: pointer; }
-    .neo-btn--circle-secondary--alert:hover {
+    .neo-btn-circle-secondary--alert:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #ab2c2c;
       color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--circle-secondary--info:hover {
+    .neo-btn-circle-secondary--info:hover {
       background-color: white;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       border-color: #125ab3;
       color: #125ab3;
       cursor: pointer; }
-  .neo-btn--circle-tertiary {
+  .neo-btn-circle-tertiary {
     border: 0; }
-    .neo-btn--circle-tertiary[disabled] {
+    .neo-btn-circle-tertiary[disabled] {
       background-color: #f1f1f1;
       color: #757474; }
-      .neo-btn--circle-tertiary[disabled]:hover {
+      .neo-btn-circle-tertiary[disabled]:hover {
         background-color: #f1f1f1;
         color: #757474;
         box-shadow: none;
         cursor: not-allowed; }
-    .neo-btn--circle-tertiary--default {
+    .neo-btn-circle-tertiary--default {
       border: none;
       background-color: transparent;
       color: #f1f1f1; }
-      .neo-btn--circle-tertiary--default:hover {
+      .neo-btn-circle-tertiary--default:hover {
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         cursor: pointer; }
-    .neo-btn--circle-tertiary--primary {
+    .neo-btn-circle-tertiary--primary {
       border: none;
       background-color: transparent;
       color: #1473e6; }
-      .neo-btn--circle-tertiary--primary:hover {
+      .neo-btn-circle-tertiary--primary:hover {
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         cursor: pointer; }
-    .neo-btn--circle-tertiary--success {
+    .neo-btn-circle-tertiary--success {
       border: none;
       background-color: transparent;
       color: #088a08; }
-      .neo-btn--circle-tertiary--success:hover {
+      .neo-btn-circle-tertiary--success:hover {
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         cursor: pointer; }
-    .neo-btn--circle-tertiary--warning {
+    .neo-btn-circle-tertiary--warning {
       border: none;
       background-color: transparent;
       color: #cc4d1b; }
-      .neo-btn--circle-tertiary--warning:hover {
+      .neo-btn-circle-tertiary--warning:hover {
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         cursor: pointer; }
-    .neo-btn--circle-tertiary--alert {
+    .neo-btn-circle-tertiary--alert {
       border: none;
       background-color: transparent;
       color: #d93d32; }
-      .neo-btn--circle-tertiary--alert:hover {
+      .neo-btn-circle-tertiary--alert:hover {
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         cursor: pointer; }
-    .neo-btn--circle-tertiary--info {
+    .neo-btn-circle-tertiary--info {
       border: none;
       background-color: transparent;
       color: #1473e6; }
-      .neo-btn--circle-tertiary--info:hover {
+      .neo-btn-circle-tertiary--info:hover {
         background-color: white;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         cursor: pointer; }
 
-.neo-btn--square {
+.neo-btn-square {
   justify-content: center;
   height: 35px;
   width: 35px;
   transition: background-color 0.4s ease-in-out;
   transition-property: background-color, color, box-shadow;
   border-radius: 2px; }
-  .neo-btn--square::before {
+  .neo-btn-square::before {
     font-size: 21px; }
-  .neo-btn--square-primary {
+  .neo-btn-square-primary {
     border: 0; }
-    .neo-btn--square-primary[disabled] {
+    .neo-btn-square-primary[disabled] {
       background-color: #f1f1f1;
       color: #757474; }
-      .neo-btn--square-primary[disabled]:hover {
+      .neo-btn-square-primary[disabled]:hover {
         background-color: #f1f1f1;
         box-shadow: none;
         cursor: not-allowed; }
-    .neo-btn--square-primary--default {
+    .neo-btn-square-primary--default {
       background-color: #f1f1f1;
       color: #ffffff; }
-    .neo-btn--square-primary--primary {
+    .neo-btn-square-primary--primary {
       background-color: #1473e6;
       color: #ffffff; }
-    .neo-btn--square-primary--success {
+    .neo-btn-square-primary--success {
       background-color: #088a08;
       color: #ffffff; }
-    .neo-btn--square-primary--warning {
+    .neo-btn-square-primary--warning {
       background-color: #cc4d1b;
       color: #ffffff; }
-    .neo-btn--square-primary--alert {
+    .neo-btn-square-primary--alert {
       background-color: #d93d32;
       color: #ffffff; }
-    .neo-btn--square-primary--info {
+    .neo-btn-square-primary--info {
       background-color: #1473e6;
       color: #ffffff; }
-    .neo-btn--square-primary--default:hover {
+    .neo-btn-square-primary--default:hover {
       background-color: #c9c9c9;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--square-primary--primary:hover {
+    .neo-btn-square-primary--primary:hover {
       background-color: #125ab3;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--square-primary--success:hover {
+    .neo-btn-square-primary--success:hover {
       background-color: #2b6b2b;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--square-primary--warning:hover {
+    .neo-btn-square-primary--warning:hover {
       background-color: #a63b11;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--square-primary--alert:hover {
+    .neo-btn-square-primary--alert:hover {
       background-color: #ab2c2c;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-    .neo-btn--square-primary--info:hover {
+    .neo-btn-square-primary--info:hover {
       background-color: #125ab3;
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       cursor: pointer; }
-  .neo-btn--square-secondary {
-    border-width: 1px; }
-    .neo-btn--square-secondary[disabled] {
+  .neo-btn-square-secondary {
+    border: 1px solid; }
+    .neo-btn-square-secondary[disabled] {
       background-color: #f1f1f1;
       color: #757474; }
-      .neo-btn--square-secondary[disabled]:hover {
+      .neo-btn-square-secondary[disabled]:hover {
         background-color: #f1f1f1;
         color: #757474;
         box-shadow: none;
         cursor: not-allowed; }
-    .neo-btn--square-secondary--default {
+    .neo-btn-square-secondary--default {
       background-color: transparent;
       border-color: #f1f1f1;
       color: #f1f1f1; }
-    .neo-btn--square-secondary--default:hover {
+    .neo-btn-square-secondary--default:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #c9c9c9;
       border-color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--square-secondary--primary:hover {
+    .neo-btn-square-secondary--primary:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--success:hover {
+    .neo-btn-square-secondary--success:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #2b6b2b;
       border-color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--square-secondary--warning:hover {
+    .neo-btn-square-secondary--warning:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #a63b11;
       border-color: #a63b11;
       cursor: pointer; }
-    .neo-btn--square-secondary--alert:hover {
+    .neo-btn-square-secondary--alert:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #ab2c2c;
       border-color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--square-secondary--info:hover {
+    .neo-btn-square-secondary--info:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--primary {
+    .neo-btn-square-secondary--primary {
       background-color: transparent;
       border-color: #1473e6;
       color: #1473e6; }
-    .neo-btn--square-secondary--default:hover {
+    .neo-btn-square-secondary--default:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #c9c9c9;
       border-color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--square-secondary--primary:hover {
+    .neo-btn-square-secondary--primary:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--success:hover {
+    .neo-btn-square-secondary--success:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #2b6b2b;
       border-color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--square-secondary--warning:hover {
+    .neo-btn-square-secondary--warning:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #a63b11;
       border-color: #a63b11;
       cursor: pointer; }
-    .neo-btn--square-secondary--alert:hover {
+    .neo-btn-square-secondary--alert:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #ab2c2c;
       border-color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--square-secondary--info:hover {
+    .neo-btn-square-secondary--info:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--success {
+    .neo-btn-square-secondary--success {
       background-color: transparent;
       border-color: #088a08;
       color: #088a08; }
-    .neo-btn--square-secondary--default:hover {
+    .neo-btn-square-secondary--default:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #c9c9c9;
       border-color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--square-secondary--primary:hover {
+    .neo-btn-square-secondary--primary:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--success:hover {
+    .neo-btn-square-secondary--success:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #2b6b2b;
       border-color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--square-secondary--warning:hover {
+    .neo-btn-square-secondary--warning:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #a63b11;
       border-color: #a63b11;
       cursor: pointer; }
-    .neo-btn--square-secondary--alert:hover {
+    .neo-btn-square-secondary--alert:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #ab2c2c;
       border-color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--square-secondary--info:hover {
+    .neo-btn-square-secondary--info:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--warning {
+    .neo-btn-square-secondary--warning {
       background-color: transparent;
       border-color: #cc4d1b;
       color: #cc4d1b; }
-    .neo-btn--square-secondary--default:hover {
+    .neo-btn-square-secondary--default:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #c9c9c9;
       border-color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--square-secondary--primary:hover {
+    .neo-btn-square-secondary--primary:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--success:hover {
+    .neo-btn-square-secondary--success:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #2b6b2b;
       border-color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--square-secondary--warning:hover {
+    .neo-btn-square-secondary--warning:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #a63b11;
       border-color: #a63b11;
       cursor: pointer; }
-    .neo-btn--square-secondary--alert:hover {
+    .neo-btn-square-secondary--alert:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #ab2c2c;
       border-color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--square-secondary--info:hover {
+    .neo-btn-square-secondary--info:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--alert {
+    .neo-btn-square-secondary--alert {
       background-color: transparent;
       border-color: #d93d32;
       color: #d93d32; }
-    .neo-btn--square-secondary--default:hover {
+    .neo-btn-square-secondary--default:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #c9c9c9;
       border-color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--square-secondary--primary:hover {
+    .neo-btn-square-secondary--primary:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--success:hover {
+    .neo-btn-square-secondary--success:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #2b6b2b;
       border-color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--square-secondary--warning:hover {
+    .neo-btn-square-secondary--warning:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #a63b11;
       border-color: #a63b11;
       cursor: pointer; }
-    .neo-btn--square-secondary--alert:hover {
+    .neo-btn-square-secondary--alert:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #ab2c2c;
       border-color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--square-secondary--info:hover {
+    .neo-btn-square-secondary--info:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--info {
+    .neo-btn-square-secondary--info {
       background-color: transparent;
       border-color: #1473e6;
       color: #1473e6; }
-    .neo-btn--square-secondary--default:hover {
+    .neo-btn-square-secondary--default:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #c9c9c9;
       border-color: #c9c9c9;
       cursor: pointer; }
-    .neo-btn--square-secondary--primary:hover {
+    .neo-btn-square-secondary--primary:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-    .neo-btn--square-secondary--success:hover {
+    .neo-btn-square-secondary--success:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #2b6b2b;
       border-color: #2b6b2b;
       cursor: pointer; }
-    .neo-btn--square-secondary--warning:hover {
+    .neo-btn-square-secondary--warning:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #a63b11;
       border-color: #a63b11;
       cursor: pointer; }
-    .neo-btn--square-secondary--alert:hover {
+    .neo-btn-square-secondary--alert:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #ab2c2c;
       border-color: #ab2c2c;
       cursor: pointer; }
-    .neo-btn--square-secondary--info:hover {
+    .neo-btn-square-secondary--info:hover {
       box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
       color: #125ab3;
       border-color: #125ab3;
       cursor: pointer; }
-  .neo-btn--square-tertiary {
+  .neo-btn-square-tertiary {
     border: 0; }
-    .neo-btn--square-tertiary[disabled] {
+    .neo-btn-square-tertiary[disabled] {
       background-color: #f1f1f1;
       color: #757474; }
-      .neo-btn--square-tertiary[disabled]:hover {
+      .neo-btn-square-tertiary[disabled]:hover {
         background-color: #f1f1f1;
         color: #757474;
         box-shadow: none;
         cursor: not-allowed; }
-    .neo-btn--square-tertiary--default {
+    .neo-btn-square-tertiary--default {
       border: none;
       background-color: transparent;
       color: #f1f1f1; }
-      .neo-btn--square-tertiary--default:hover {
+      .neo-btn-square-tertiary--default:hover {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         background-color: white;
         cursor: pointer; }
-    .neo-btn--square-tertiary--primary {
+    .neo-btn-square-tertiary--primary {
       border: none;
       background-color: transparent;
       color: #1473e6; }
-      .neo-btn--square-tertiary--primary:hover {
+      .neo-btn-square-tertiary--primary:hover {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         background-color: white;
         cursor: pointer; }
-    .neo-btn--square-tertiary--success {
+    .neo-btn-square-tertiary--success {
       border: none;
       background-color: transparent;
       color: #088a08; }
-      .neo-btn--square-tertiary--success:hover {
+      .neo-btn-square-tertiary--success:hover {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         background-color: white;
         cursor: pointer; }
-    .neo-btn--square-tertiary--warning {
+    .neo-btn-square-tertiary--warning {
       border: none;
       background-color: transparent;
       color: #cc4d1b; }
-      .neo-btn--square-tertiary--warning:hover {
+      .neo-btn-square-tertiary--warning:hover {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         background-color: white;
         cursor: pointer; }
-    .neo-btn--square-tertiary--alert {
+    .neo-btn-square-tertiary--alert {
       border: none;
       background-color: transparent;
       color: #d93d32; }
-      .neo-btn--square-tertiary--alert:hover {
+      .neo-btn-square-tertiary--alert:hover {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         background-color: white;
         cursor: pointer; }
-    .neo-btn--square-tertiary--info {
+    .neo-btn-square-tertiary--info {
       border: none;
       background-color: transparent;
       color: #1473e6; }
-      .neo-btn--square-tertiary--info:hover {
+      .neo-btn-square-tertiary--info:hover {
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
         background-color: white;
         cursor: pointer; }
-
-.neo-button-group {
-  display: flex; }
-  .neo-button-group .neo-btn {
-    border-radius: 0;
-    flex: none;
-    margin: 0; }
-    .neo-button-group .neo-btn + .neo-btn {
-      margin-left: 1px; }
-      [dir='rtl'] .neo-button-group .neo-btn + .neo-btn {
-        margin-left: 0;
-        margin-right: 1px; }
-  .neo-button-group :first-child {
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px; }
-    [dir='rtl'] .neo-button-group :first-child {
-      border-bottom-left-radius: 0;
-      border-bottom-right-radius: 3px;
-      border-top-left-radius: 0;
-      border-top-right-radius: 3px; }
-  .neo-button-group :last-child {
-    border-bottom-right-radius: 3px;
-    border-top-right-radius: 3px; }
-    [dir='rtl'] .neo-button-group :last-child {
-      border-bottom-left-radius: 3px;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: 3px;
-      border-top-right-radius: 0; }
 
 .neo-radio {
   display: none; }
@@ -1840,7 +2027,7 @@ hr {
       display: block;
       height: 14px;
       position: absolute;
-      top: 1px;
+      top: 3px;
       width: 14px; }
   .neo-radio:checked + label::after {
     background: #1473e6;
@@ -1850,7 +2037,7 @@ hr {
     height: 6px;
     left: 4px;
     position: absolute;
-    top: 5px;
+    top: 7px;
     width: 6px; }
     [dir='rtl'] .neo-radio:checked + label::after {
       left: auto;
@@ -1867,7 +2054,9 @@ hr {
     display: inline-block;
     line-height: 16px;
     padding: 0;
-    position: relative; }
+    position: relative;
+    display: flex;
+    align-items: center; }
     .neo-check + label::before {
       background: #ffffff;
       border: 1px solid #1473e6;
@@ -1896,7 +2085,7 @@ hr {
   .neo-check:disabled + label {
     color: #f1f1f1;
     cursor: not-allowed; }
-    .neo-check:disabled + label:checked {
+    .neo-check:disabled + label:checked:disabled {
       font-family: 'AOC-Icons' !important;
       content: '\e911';
       font-size: 10px;
@@ -1904,10 +2093,11 @@ hr {
       padding-left: 2px;
       padding-right: 2px; }
     .neo-check:disabled + label::before {
-      background: #f1f1f1;
-      border: 0;
+      border: 1px solid #abccf5;
       box-shadow: none;
       cursor: not-allowed; }
+    .neo-check:disabled + label.checked::before {
+      background-color: #abccf5; }
   .neo-check + label::after {
     border: solid #ffffff;
     border-width: 0 2px 2px 0;
@@ -2015,13 +2205,6 @@ hr {
     position: sticky;
     top: -1px; }
 
-.neo-table__container--vsticky {
-  overflow-y: auto;
-  padding-left: 0; }
-  .neo-table__container--vsticky th {
-    position: sticky;
-    left: -1px; }
-
 .neo-table {
   background-color: transparent;
   border-collapse: collapse;
@@ -2045,24 +2228,24 @@ hr {
       padding-left: 16px; }
     .neo-table-page-select > .neo-select:not(.neo-select--multiple)::after {
       right: 16px; }
-  .neo-table ~ .neo-form-control .neo-filter {
+  .neo-table ~ .neo-form-control .neo-table-filter {
     width: 116px;
     padding-left: 16px; }
-    .neo-table ~ .neo-form-control .neo-filter ~ button {
+    .neo-table ~ .neo-form-control .neo-table-filter ~ button {
       color: #000000;
       background-color: #c9c9c9;
       padding: 12px 0; }
-      .neo-table ~ .neo-form-control .neo-filter ~ button::before {
+      .neo-table ~ .neo-form-control .neo-table-filter ~ button::before {
         font-size: 24px; }
-      .neo-table ~ .neo-form-control .neo-filter ~ button:hover {
+      .neo-table ~ .neo-form-control .neo-table-filter ~ button:hover {
         box-shadow: none; }
-    .neo-table ~ .neo-form-control .neo-filter::-webkit-input-placeholder {
+    .neo-table ~ .neo-form-control .neo-table-filter::-webkit-input-placeholder {
       font-style: italic; }
-    .neo-table ~ .neo-form-control .neo-filter::-moz-placeholder {
+    .neo-table ~ .neo-form-control .neo-table-filter::-moz-placeholder {
       font-style: italic; }
-    .neo-table ~ .neo-form-control .neo-filter:-ms-input-placeholder {
+    .neo-table ~ .neo-form-control .neo-table-filter:-ms-input-placeholder {
       font-style: italic; }
-    .neo-table ~ .neo-form-control .neo-filter::placeholder {
+    .neo-table ~ .neo-form-control .neo-table-filter::placeholder {
       font-style: italic; }
   .neo-table th label {
     display: flex;
@@ -2073,8 +2256,7 @@ hr {
     padding: 16px;
     text-align: left;
     vertical-align: middle;
-    text-align: center;
-    font-weight: 400 !important; }
+    text-align: center; }
     [dir='rtl'] .neo-table td, [dir='rtl']
     .neo-table th {
       text-align: right; }
@@ -2086,6 +2268,7 @@ hr {
     .neo-table td .neo-chip,
     .neo-table td .neo-switch,
     .neo-table td .neo-group-list,
+    .neo-table td .neo-form-control,
     .neo-table th .neo-input,
     .neo-table th .neo-input-group,
     .neo-table th .neo-btn,
@@ -2093,7 +2276,8 @@ hr {
     .neo-table th .neo-label,
     .neo-table th .neo-chip,
     .neo-table th .neo-switch,
-    .neo-table th .neo-group-list {
+    .neo-table th .neo-group-list,
+    .neo-table th .neo-form-control {
       margin-bottom: 0; }
   .neo-table .neo-table--disabled {
     cursor: not-allowed;
@@ -2105,20 +2289,19 @@ hr {
       cursor: not-allowed; }
   .neo-table th {
     background-color: #f1f1f1;
-    color: #000000; }
+    color: #000000;
+    font-weight: 400 !important; }
   .neo-table td {
-    border-top: 1px solid #939393; }
+    border-top: 1px solid #c9c9c9; }
+    .neo-table td.neo-icon-more:before {
+      font-size: 24px; }
+    .neo-table td .neo-form-control .neo-check + label {
+      display: block; }
   .neo-table thead th {
     vertical-align: bottom; }
   .neo-table tfoot {
     background-color: #f1f1f1;
     color: #000000; }
-  .neo-table--bordered th,
-  .neo-table--bordered td {
-    border: 1px solid #939393; }
-  .neo-table--striped tbody tr:nth-of-type(even) {
-    background-color: white;
-    border-bottom: 0; }
   .neo-table--hover thead tr:hover {
     background-color: #f1f1f1; }
   .neo-table--hover tbody tr:hover {
@@ -2129,11 +2312,6 @@ hr {
   .neo-table--condensed th,
   .neo-table--condensed td {
     padding: 8px; }
-  .neo-table--responsive {
-    display: block;
-    -ms-overflow-style: -ms-autohiding-scrollbar;
-    overflow-x: auto;
-    width: 100%; }
   .neo-table--sortable th {
     cursor: pointer;
     padding-right: 30px;
@@ -2154,20 +2332,6 @@ hr {
       background-color: #e4e4e4; }
       .neo-table--sortable th.neo-table--descending::after {
         content: ""; }
-  .neo-table--editable {
-    background-color: #ffffff; }
-    .neo-table--editable > td:first-child {
-      position: relative; }
-      .neo-table--editable > td:first-child::before {
-        border-left: #ffffff;
-        content: '';
-        height: 100%;
-        left: 0;
-        position: absolute;
-        top: 0; }
-        [dir='rtl'] .neo-table--editable > td:first-child::before {
-          left: auto;
-          right: 0; }
   .neo-table :not(.neo-button-group) > .neo-btn {
     margin-right: 6px; }
     [dir='rtl'] .neo-table :not(.neo-button-group) > .neo-btn {
@@ -2179,6 +2343,8 @@ hr {
         margin-left: 0; }
 
 .neo-date-picker {
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2186,7 +2352,7 @@ hr {
   height: 34px;
   font-size: 14px;
   font-style: italic;
-  color: #757474;
+  color: #5e5e5e;
   background-color: #f1f1f1; }
   .neo-date-picker::before {
     padding-right: 8px;
@@ -2195,9 +2361,20 @@ hr {
     padding-left: 8px;
     content: 'MM DD YYYY'; }
 
-.sortable {
+.neo-table-sortable {
   display: flex;
   justify-content: space-between; }
+
+.neo-table-filter__wrapper {
+  display: flex;
+  justify-content: flex-end; }
+  .neo-table-filter__wrapper .neo-form-control .neo-icon-filter {
+    color: #000000;
+    background-color: #c9c9c9; }
+    .neo-table-filter__wrapper .neo-form-control .neo-icon-filter::before {
+      font-size: 24px; }
+    .neo-table-filter__wrapper .neo-form-control .neo-icon-filter:hover {
+      box-shadow: none; }
 
 .neo-label, .neo-chip, .neo-chips__item {
   background: #ffffff;
@@ -2285,7 +2462,7 @@ hr {
 .neo-label--info::before {
   color: #125ab3; }
 
-.neo-label--input {
+.neo-label-input {
   margin-bottom: 4px;
   padding: 0;
   border: none !important; }
@@ -2332,17 +2509,24 @@ hr {
     font-size: 14px;
     margin-top: 10px; }
   .neo-notification__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 24px;
     line-height: 1;
     margin-right: 10px; }
     [dir='rtl'] .neo-notification__icon {
       margin-left: 10px;
       margin-right: initial; }
-  .neo-notification > .neo-close {
+  .neo-notification > .neo-icon-end {
+    background: none;
+    border: none;
     position: absolute;
     right: 6px;
-    top: 6px; }
-    [dir='rtl'] .neo-notification > .neo-close {
+    top: 35%; }
+    .neo-notification > .neo-icon-end:before {
+      font-size: 16px; }
+    [dir='rtl'] .neo-notification > .neo-icon-end {
       left: 6px;
       right: initial; }
   .neo-notification__counter {
@@ -2418,10 +2602,7 @@ hr {
     min-width: 16px;
     text-decoration: none; }
     .neo-pagination__item-arrow:hover {
-      background-color: #1473e6;
-      border-color: #1473e6;
-      color: #f1f1f1;
-      transition: 0.4s; }
+      background-color: #f1f1f1; }
     .neo-pagination__item-arrow--disabled, .neo-pagination__item-arrow--disabled:hover, .neo-pagination__item-arrow--disabled:active, .neo-pagination__item-arrow[disabled] {
       background-color: #f1f1f1;
       border: 0;
@@ -2439,16 +2620,6 @@ hr {
     color: #000000;
     font-size: 20px;
     pointer-events: none; }
-  .neo-pagination--is-right .neo-pagination__list {
-    margin-left: auto; }
-    [dir='rtl'] .neo-pagination--is-right .neo-pagination__list {
-      margin-left: initial;
-      margin-right: auto; }
-  .neo-pagination--is-left .neo-pagination__list {
-    margin-right: auto; }
-    [dir='rtl'] .neo-pagination--is-left .neo-pagination__list {
-      margin-left: auto;
-      margin-right: initial; }
   .neo-pagination__label {
     font-size: 12px;
     margin-right: 6px; }
@@ -2587,22 +2758,6 @@ hr {
       width: 16px;
       content: '';
       animation: spinner-animation 500ms infinite; }
-  .neo-select__icon {
-    align-items: center;
-    display: inline-flex;
-    height: 35px;
-    justify-content: center;
-    left: 8px;
-    position: absolute; }
-    [dir='rtl'] .neo-select__icon {
-      left: auto;
-      right: 8px; }
-    .neo-select__icon + select {
-      padding-left: 32px; }
-      [dir='rtl'] .neo-select__icon + select {
-        padding-right: 32px; }
-  .neo-select-disabled {
-    color: #757474; }
 
 .neo-badge {
   position: relative; }
@@ -2628,7 +2783,7 @@ hr {
       left: 0;
       right: auto;
       transform: translate(-65%, -65%); }
-  .neo-badge-icon::after {
+  .neo-badge__icon::after {
     font-family: "noto-sans", sans-serif;
     background: #d93d32;
     border-radius: 8px;
@@ -2646,12 +2801,12 @@ hr {
     right: 0;
     top: 0;
     transform: translate(65%, -65%); }
-    [dir='rtl'] .neo-badge-icon::after {
+    [dir='rtl'] .neo-badge__icon::after {
       left: 0;
       right: auto;
       transform: translate(-65%, -65%); }
 
-.neo-btn-icon-badge {
+.neo-badge__navbutton {
   display: inline-block;
   position: relative; }
 
@@ -2659,7 +2814,6 @@ hr {
   animation: show-element 0.4s;
   background-color: #242424;
   color: #f1f1f1;
-  border: 1px solid #939393;
   border-radius: 2px;
   box-shadow: none;
   display: none;
@@ -2672,7 +2826,7 @@ hr {
   z-index: 20;
   text-align: center; }
   .neo-tooltip--right .neo-tooltip__content .neo-arrow {
-    left: -7.5px;
+    left: -6.5px;
     bottom: 51%; }
   .neo-tooltip--right .neo-tooltip__content .neo-arrow::before {
     border-right-color: #242424 !important;
@@ -2680,7 +2834,7 @@ hr {
   .neo-tooltip--right .neo-tooltip__content .neo-arrow::after {
     border-color: transparent !important; }
   .neo-tooltip--up .neo-tooltip__content .neo-arrow {
-    bottom: -7.5px;
+    bottom: -6.5px;
     right: 42%;
     transform: rotate(180deg); }
   .neo-tooltip--up .neo-tooltip__content .neo-arrow::before {
@@ -2689,7 +2843,7 @@ hr {
   .neo-tooltip--up .neo-tooltip__content .neo-arrow::after {
     border-color: transparent !important; }
   .neo-tooltip--left .neo-tooltip__content .neo-arrow {
-    right: -7.5px;
+    right: -6.5px;
     bottom: 51%; }
   .neo-tooltip--left .neo-tooltip__content .neo-arrow::before {
     border-left-color: #242424 !important;
@@ -2698,7 +2852,7 @@ hr {
   .neo-tooltip--left .neo-tooltip__content .neo-arrow::after {
     border-color: transparent !important; }
   .neo-tooltip--down .neo-tooltip__content .neo-arrow {
-    top: -7.5px;
+    top: -6.5px;
     right: 42%; }
   .neo-tooltip--down .neo-tooltip__content .neo-arrow::before {
     border-top-color: #242424 !important;
@@ -2708,11 +2862,6 @@ hr {
   [dir='rtl'] .neo-tooltip__content {
     left: initial;
     right: 0; }
-
-.neo-tooltip--onhover:hover > .neo-tooltip__content,
-.neo-tooltip--active > .neo-tooltip__content {
-  display: block;
-  position: absolute; }
 
 .neo-tooltip--down .neo-tooltip__content, .neo-tooltip--down-right .neo-tooltip__content, .neo-tooltip--down-left .neo-tooltip__content {
   margin-top: 15px; }
@@ -3096,7 +3245,7 @@ hr {
     transform: translate(-50%, -50%);
     z-index: 1; }
   .neo-avatar--default {
-    border-color: #1473e6;
+    border-color: #f1f1f1;
     border-style: solid;
     border-width: 2px; }
   .neo-avatar--primary {
@@ -3104,15 +3253,15 @@ hr {
     border-style: solid;
     border-width: 2px; }
   .neo-avatar--success {
-    border-color: #1473e6;
+    border-color: #088a08;
     border-style: solid;
     border-width: 2px; }
   .neo-avatar--warning {
-    border-color: #1473e6;
+    border-color: #cc4d1b;
     border-style: solid;
     border-width: 2px; }
   .neo-avatar--alert {
-    border-color: #1473e6;
+    border-color: #d93d32;
     border-style: solid;
     border-width: 2px; }
   .neo-avatar--info {
@@ -3134,7 +3283,7 @@ hr {
     padding-left: 0;
     padding-right: 50px; }
   .neo-switch:focus .neo-switch__icon::before {
-    box-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5); }
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
   .neo-switch input {
     display: none; }
   .neo-switch input + .neo-switch__icon {
@@ -3156,7 +3305,7 @@ hr {
       width: 40px; }
     .neo-switch input + .neo-switch__icon::after {
       background-color: #ffffff;
-      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       height: 16px;
       left: 2px;
       top: 2px;
@@ -3185,7 +3334,7 @@ hr {
   display: inline-flex;
   font-size: 12px;
   line-height: 16.3px;
-  padding: undefinedpx undefinedpx;
+  padding: 4px 8px;
   transition: background-color 0.4s ease-in-out; }
   .neo-chip:focus, .neo-chips__item:focus {
     outline: none; }
@@ -3203,12 +3352,12 @@ hr {
     padding: 0;
     transform: translateY(1px);
     width: 14px;
-    margin-bottom: -undefinedpx;
+    margin-bottom: -4px;
     margin-left: 3px;
-    margin-right: -undefinedpx/2;
-    margin-top: -undefinedpx; }
+    margin-right: -4px;
+    margin-top: -4px; }
     [dir='rtl'] .neo-chip .neo-btn:empty, [dir='rtl'] .neo-chips__item .neo-btn:empty {
-      margin-left: -undefinedpx/2;
+      margin-left: -4px;
       margin-right: 3px; }
     .neo-chip .neo-btn:empty:hover, .neo-chips__item .neo-btn:empty:hover {
       opacity: 1; }
@@ -3224,14 +3373,14 @@ hr {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  padding: 0.5px 0 0 0.5px; }
+  padding: 4px; }
   [dir='rtl'] .neo-chips {
     padding-left: 0;
-    padding-right: 0.5px; }
+    padding-right: 2.5px; }
   .neo-chips .neo-input--editable {
     border: 0;
-    margin: 0 0.5px 0.5px 0.5px;
-    min-height: 29px;
+    margin: 0 2.5px 2.5px 2.5px;
+    min-height: 25px;
     min-width: auto;
     padding: 0; }
   .neo-chips:focus {
@@ -3287,6 +3436,8 @@ hr {
   .neo-chip--info {
     border: 1px solid #4c94ed;
     border-radius: 4px; }
+  .neo-chip--default .neo-close {
+    background-color: #5e5e5e; }
   .neo-chip--primary .neo-close {
     background-color: #125ab3; }
   .neo-chip--success .neo-close {
@@ -3305,12 +3456,28 @@ hr {
     cursor: not-allowed; }
   .neo-chip .neo-close:focus {
     box-shadow: none; }
+  .neo-chip.neo-chip--expandable::after {
+    font-family: 'updated-neo-icons';
+    margin-left: 6px;
+    content: ""; }
+  .neo-chip.neo-chip--expandable--default::after {
+    color: #5e5e5e; }
+  .neo-chip.neo-chip--expandable--primary::after {
+    color: #125ab3; }
+  .neo-chip.neo-chip--expandable--success::after {
+    color: #2b6b2b; }
+  .neo-chip.neo-chip--expandable--warning::after {
+    color: #a63b11; }
+  .neo-chip.neo-chip--expandable--alert::after {
+    color: #ab2c2c; }
+  .neo-chip.neo-chip--expandable--info::after {
+    color: #125ab3; }
 
 .neo-chips__item {
-  margin: 0 0.5px 0.5px 0;
+  margin: 0 4px 0 0;
   background-color: var(--neo-button-secondary-bg-color); }
   [dir='rtl'] .neo-chips__item {
-    margin-left: 0.5px;
+    margin-left: 2.5px;
     margin-right: 0; }
   .neo-chips__item--edit {
     background-color: transparent;
@@ -3366,6 +3533,8 @@ hr {
   .neo-chips__item--info {
     border: 1px solid #4c94ed;
     border-radius: 4px; }
+  .neo-chips__item--default .neo-close {
+    background-color: #5e5e5e; }
   .neo-chips__item--primary .neo-close {
     background-color: #125ab3; }
   .neo-chips__item--success .neo-close {
@@ -3422,7 +3591,7 @@ hr {
       border: 0;
       margin-bottom: 0; }
   .neo-tabs__item {
-    margin-right: 6px;
+    background-color: #f1f1f1;
     position: relative;
     text-overflow: ellipsis;
     white-space: nowrap; }
@@ -3435,7 +3604,7 @@ hr {
         margin-left: 0; }
     .neo-tabs__item a {
       border-bottom: 1px solid transparent;
-      color: black;
+      color: #242424;
       cursor: pointer;
       display: block;
       margin: 0;
@@ -3445,19 +3614,28 @@ hr {
       .neo-tabs__item a:focus {
         box-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5);
         outline: none; }
+      .neo-tabs__item a:before {
+        margin-right: 5px; }
+      .neo-tabs__item a[dir='rtl']:before {
+        margin-left: 5px; }
     .neo-tabs__item:hover a {
       color: #1473e6; }
-    .neo-tabs__item--active a {
-      border-bottom-color: #1473e6;
-      color: #1473e6; }
+    .neo-tabs__item--active {
+      background-color: white; }
+      .neo-tabs__item--active a {
+        border-width: 2px;
+        border-bottom-color: #1473e6;
+        color: #1473e6; }
     .neo-tabs__item--disabled,
     .neo-tabs__item--disabled > a {
-      background-color: transparent;
+      background-color: #f1f1f1;
       box-shadow: none;
-      color: #f1f1f1;
+      color: #939393;
       cursor: not-allowed; }
-      .neo-tabs__item--disabled:hover, .neo-tabs__item--disabled:focus,
-      .neo-tabs__item--disabled > a:hover,
+      .neo-tabs__item--disabled:hover,
+      .neo-tabs__item--disabled > a:hover {
+        color: #939393; }
+      .neo-tabs__item--disabled:focus,
       .neo-tabs__item--disabled > a:focus {
         background-color: transparent;
         box-shadow: none;
@@ -3465,94 +3643,25 @@ hr {
       .neo-tabs__item--disabled .neo-close,
       .neo-tabs__item--disabled > a .neo-close {
         display: none; }
-  .neo-tabs--bordered {
-    border-bottom: 1px solid var(--neo-global-border-color);
-    /* stylelint-disable-next-line selector-class-pattern */ }
-    .neo-tabs--bordered .neo-tabs__item {
-      margin-bottom: -1px; }
-      .neo-tabs--bordered .neo-tabs__item a {
-        background-color: #f1f1f1;
-        border: 1px solid var(--neo-global-border-color);
-        border-top-left-radius: 3px;
-        border-top-right-radius: 3px; }
-      .neo-tabs--bordered .neo-tabs__item--active a {
-        background-color: transparent;
-        border-bottom-color: #1473e6; }
-      .neo-tabs--bordered .neo-tabs__item--disabled > a {
-        background-color: rgba(241, 241, 241, 0.5);
-        border-left-color: rgba(241, 241, 241, 0.5);
-        border-right-color: transparent;
-        border-top-color: transparent; }
-    .neo-tabs--bordered .neo-tabs__nav-scroll {
-      margin-bottom: -1px; }
-      .neo-tabs--bordered .neo-tabs__nav-scroll .neo-tabs__item {
-        margin-bottom: 0; }
-    .neo-tabs--bordered .neo-close {
-      right: 6px; }
-      [dir='rtl'] .neo-tabs--bordered .neo-close {
-        left: 6px;
-        right: auto; }
-  .neo-tabs .neo-tabs__nav-scroll {
-    display: flex;
-    flex-grow: 1;
-    overflow: hidden; }
-  .neo-tabs .neo-tabs__action {
-    align-items: center;
-    color: #1473e6;
-    cursor: pointer;
-    display: flex;
-    margin: 0;
-    padding: 15px 15px; }
-    [dir='rtl'] .neo-tabs .neo-tabs__action.neo-tabs__action--prev::after {
-      content: ""; }
-    [dir='rtl'] .neo-tabs .neo-tabs__action.neo-tabs__action--next::after {
-      content: ""; }
-    .neo-tabs .neo-tabs__action::after {
-      font-family: 'AOC-Icons';
-      line-height: 19.1px; }
-    .neo-tabs .neo-tabs__action:not(.neo-tabs__action--hidden) + .neo-tabs__nav-scroll ul {
-      margin: 0 6px; }
-    .neo-tabs .neo-tabs__action--hidden {
-      display: none; }
-    .neo-tabs .neo-tabs__action--disabled {
-      color: #f1f1f1;
-      cursor: default; }
-    .neo-tabs .neo-tabs__action.neo-tabs__action--prev::after {
-      content: ""; }
-    .neo-tabs .neo-tabs__action.neo-tabs__action--next::after {
-      content: ""; }
-  .neo-tabs--small {
-    min-height: 35px; }
-    .neo-tabs--small a {
-      padding: 6px 25px; }
-    .neo-tabs--small .neo-tabs__action {
-      padding: 6px 15px; }
-  .neo-tabs--medium {
-    min-height: 44px; }
-    .neo-tabs--medium a {
-      padding: 10px 30px; }
-    .neo-tabs--medium .neo-tabs__action {
-      padding: 10px 15px; }
-  .neo-tabs--large {
-    min-height: 54px; }
-    .neo-tabs--large a {
-      padding: 15px 45px; }
-    .neo-tabs--large .neo-tabs__action {
-      padding: 15px 15px; }
 
-[class^='aoc-'].neo-dropdown__link::before,
-[class*='aoc-'].neo-dropdown__link::before,
-[class^='neo-icon-'].neo-dropdown__link::before,
-[class*='neo-icon-'].neo-dropdown__link::before {
-  font-size: 14px;
-  margin-bottom: 3px;
-  margin-right: 6px; }
-  [dir='rtl'] [class^='aoc-'].neo-dropdown__link::before, [dir='rtl']
-  [class*='aoc-'].neo-dropdown__link::before, [dir='rtl']
-  [class^='neo-icon-'].neo-dropdown__link::before, [dir='rtl']
+[class^='aoc-'].neo-dropdown__link,
+[class*='aoc-'].neo-dropdown__link,
+[class^='neo-icon-'].neo-dropdown__link,
+[class*='neo-icon-'].neo-dropdown__link {
+  color: #939393; }
+  [class^='aoc-'].neo-dropdown__link::before,
+  [class*='aoc-'].neo-dropdown__link::before,
+  [class^='neo-icon-'].neo-dropdown__link::before,
   [class*='neo-icon-'].neo-dropdown__link::before {
-    margin-left: 6px;
-    margin-right: initial; }
+    font-size: 14px;
+    margin-bottom: 3px;
+    margin-right: 6px; }
+    [dir='rtl'] [class^='aoc-'].neo-dropdown__link::before, [dir='rtl']
+    [class*='aoc-'].neo-dropdown__link::before, [dir='rtl']
+    [class^='neo-icon-'].neo-dropdown__link::before, [dir='rtl']
+    [class*='neo-icon-'].neo-dropdown__link::before {
+      margin-left: 6px;
+      margin-right: initial; }
 
 .neo-dropdown {
   box-sizing: border-box;
@@ -3575,6 +3684,7 @@ hr {
           padding-left: initial;
           padding-right: 16px; }
       .neo-dropdown__item > .neo-dropdown__link::after {
+        font-size: 16px;
         color: #000000;
         vertical-align: middle; }
   .neo-dropdown > .neo-dropdown__link {
@@ -3623,7 +3733,7 @@ hr {
         margin-right: 0; }
   .neo-dropdown__content,
   .neo-dropdown__content .neo-dropdown__content {
-    left: 106%;
+    left: 100%;
     top: -1px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
     [dir='rtl'] .neo-dropdown__content, [dir='rtl']
@@ -3633,7 +3743,7 @@ hr {
   .neo-dropdown__content {
     animation: show-element 0.4s;
     background-color: white;
-    border: 1px solid #939393;
+    border: none;
     border-radius: 3px;
     box-shadow: 6px;
     display: none;
@@ -4136,7 +4246,8 @@ hr {
 
 .neo-widget__content {
   background-color: white;
-  border: 1px solid #939393;
+  border: 1px solid #c9c9c9;
+  border-radius: 4px;
   display: flex;
   flex-direction: column;
   max-width: 550px;
@@ -4146,15 +4257,34 @@ hr {
   .neo-widget__content .neo-widget__header {
     background-color: white;
     padding: 16px;
+    width: 100%;
     vertical-align: center;
     display: flex;
-    flex-direction: row; }
-    .neo-widget__content .neo-widget__header h4 {
-      margin-left: 8px;
-      color: black !important; }
+    flex-direction: row;
+    justify-content: space-between; }
+    .neo-widget__content .neo-widget__header .neo-widget__header-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .neo-widget__content .neo-widget__header .neo-widget__header-left [class^='neo-icon-']:before,
+      .neo-widget__content .neo-widget__header .neo-widget__header-left [class*='neo-icon-']:before {
+        font-size: 24px; }
+      .neo-widget__content .neo-widget__header .neo-widget__header-left h4 {
+        align-self: center;
+        margin-left: 8px;
+        color: black; }
+    .neo-widget__content .neo-widget__header .neo-widget__header-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between; }
+      .neo-widget__content .neo-widget__header .neo-widget__header-right [class^='neo-icon-']:before,
+      .neo-widget__content .neo-widget__header .neo-widget__header-right [class*='neo-icon-']:before {
+        font-size: 24px; }
     .neo-widget__content .neo-widget__header-disabled {
       background-color: #f1f1f1;
       color: #757474; }
+      .neo-widget__content .neo-widget__header-disabled h4 {
+        color: #757474 !important; }
       .neo-widget__content .neo-widget__header-disabled > * {
         color: #757474; }
   .neo-widget__content .neo-widget__body {
@@ -4223,6 +4353,8 @@ hr {
   text-align: center;
   top: 50%;
   transform: translateY(-50%); }
+  .neo-empty-state p {
+    font-size: 19px; }
   .neo-empty-state [class^='aoc-']::before,
   .neo-empty-state [class*='aoc-']::before,
   .neo-empty-state [class^='neo-icon-']::before,
@@ -4239,7 +4371,7 @@ hr {
 .neo-modal {
   display: none;
   position: absolute;
-  border-radius: 16px; }
+  border-radius: 4px; }
   .neo-modal--active {
     animation: 0.4s;
     display: flex; }
@@ -4258,14 +4390,13 @@ hr {
 .neo-modal__content {
   animation: animation-modal-content 0.4s;
   background-color: white;
-  border: 1px solid #939393;
-  border-radius: 16px;
+  border-radius: 4px;
   box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.25);
   display: flex;
   flex-direction: column;
   max-width: 550px;
   overflow: auto;
-  padding: 0 20px;
+  padding: 24px;
   position: relative;
   width: 550px;
   z-index: 1000; }
@@ -4275,13 +4406,14 @@ hr {
     text-align: center;
     vertical-align: center; }
     .neo-modal__content .neo-modal__header h2 {
-      color: black !important; }
+      color: black !important;
+      font-size: 19px !important; }
   .neo-modal__content .neo-modal__body {
     min-height: 200px;
     background-color: white;
     padding: 10px 17px 10px 0; }
   .neo-modal__content .neo-modal__message {
-    font-size: 16px;
+    font-size: 14px;
     margin-bottom: 10px; }
   .neo-modal__content .neo-modal__footer {
     display: flex;
@@ -4297,91 +4429,13 @@ hr {
           margin-left: 10px;
           margin-right: initial; }
 
-.neo-modal-menu {
-  box-shadow: 0px 8px 16px 0 rgba(0, 0, 0, 0.25);
-  border-radius: 16px;
-  display: grid;
-  grid-template-areas: 'header header header' 'menu   content content' 'menu   content content' 'menu footer footer'; }
-
-.neo-modal-menu-header {
-  grid-area: header;
+.neo-modal__info-close {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  border-bottom: 1px solid #939393;
-  padding: 11px 0; }
-  .neo-modal-menu-header .neo-modal__header {
-    padding-left: 24px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-  .neo-modal-menu-header > .neo-input-group {
-    padding-right: 17px;
-    width: auto; }
-    .neo-modal-menu-header > .neo-input-group .neo-filter {
-      width: 116px;
-      padding-left: 16px; }
-      .neo-modal-menu-header > .neo-input-group .neo-filter ~ button {
-        color: #000000;
-        background-color: #c9c9c9;
-        padding: 12px 0;
-        height: 100%; }
-        .neo-modal-menu-header > .neo-input-group .neo-filter ~ button:hover {
-          box-shadow: none; }
-      .neo-modal-menu-header > .neo-input-group .neo-filter::-webkit-input-placeholder {
-        font-style: italic; }
-      .neo-modal-menu-header > .neo-input-group .neo-filter::-moz-placeholder {
-        font-style: italic; }
-      .neo-modal-menu-header > .neo-input-group .neo-filter:-ms-input-placeholder {
-        font-style: italic; }
-      .neo-modal-menu-header > .neo-input-group .neo-filter::placeholder {
-        font-style: italic; }
-
-.neo-modal-menu-side {
-  grid-area: menu;
-  display: flex;
-  flex-direction: column;
-  border-right: 1px solid #939393; }
-  .neo-modal-menu-side .neo-group-list__item {
-    height: 48px;
-    padding-left: 0;
-    border: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; }
-    .neo-modal-menu-side .neo-group-list__item-active {
-      background: #f1f1f1; }
-    .neo-modal-menu-side .neo-group-list__item .neo-modal-menu-side-item {
-      position: relative;
-      padding-left: 12px; }
-      .neo-modal-menu-side .neo-group-list__item .neo-modal-menu-side-item-active:before {
-        content: '';
-        height: 100%;
-        width: 50%;
-        position: absolute;
-        background: #1473e6;
-        clip-path: ellipse(3% 35% at 0% 52%);
-        left: 0; }
-
-.neo-modal-menu-footer {
-  grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  border-top: 1px solid #939393; }
-  .neo-modal-menu-footer .neo-modal__footer {
-    display: flex;
-    justify-content: flex-end;
-    background-color: white;
-    padding: 10px 17px 10px 0; }
-    .neo-modal-menu-footer .neo-modal__footer .neo-btn {
-      margin-bottom: 0;
-      /* stylelint-disable max-nesting-depth */ }
-      .neo-modal-menu-footer .neo-modal__footer .neo-btn:not(:last-child) {
-        margin-right: 10px; }
-        [dir='rtl'] .neo-modal-menu-footer .neo-modal__footer .neo-btn:not(:last-child) {
-          margin-left: 10px;
-          margin-right: initial; }
+  justify-content: flex-end; }
+  .neo-modal__info-close .neo-close {
+    background-color: transparent; }
+    .neo-modal__info-close .neo-close::before {
+      background-color: #000000; }
 
 .neo-navbar {
   height: 64px;
@@ -4448,7 +4502,7 @@ hr {
   height: 100%;
   margin-bottom: 0;
   margin-left: 15px; }
-  .neo-nav .neo-btn-icon-badge {
+  .neo-nav .neo-badge__navbutton {
     height: 100%;
     width: 64px;
     display: flex;
@@ -4457,13 +4511,13 @@ hr {
     align-items: center;
     transition: background-color 0.4s ease-in-out;
     transition-property: background-color; }
-    .neo-nav .neo-btn-icon-badge button::before {
+    .neo-nav .neo-badge__navbutton button::before {
       color: #1473e6; }
-    .neo-nav .neo-btn-icon-badge:hover {
+    .neo-nav .neo-badge__navbutton:hover {
       background-color: #e8f1fc; }
-      .neo-nav .neo-btn-icon-badge:hover button {
+      .neo-nav .neo-badge__navbutton:hover button {
         background-color: #e8f1fc !important; }
-    .neo-nav .neo-btn-icon-badge .neo-badge-icon::after {
+    .neo-nav .neo-badge__navbutton .neo-badge__icon::after {
       font-family: 'noto-sans', sans-serif;
       background: #db3232;
       border-radius: 8px;
@@ -4510,6 +4564,7 @@ hr {
       .neo-nav .neo-nav-status .neo-nav-status-info p {
         margin: 0; }
     .neo-nav .neo-nav-status .neo-label {
+      padding: 2px 8px;
       border-radius: 16px !important;
       color: #ffffff; }
       .neo-nav .neo-nav-status .neo-label--ready {
@@ -4554,34 +4609,10 @@ hr {
 .neo-navbar--spacer {
   margin-right: auto; }
 
-.neo-navbar--left {
+.neo-nav--left {
   display: flex; }
-  .neo-navbar--left [class*='neo-icon-'].neo-btn:empty::before {
+  .neo-nav--left [class*='neo-icon-'].neo-btn:empty::before {
     font-size: 32px; }
-
-.neo-group-list__item--default {
-  background-color: #f1f1f1;
-  color: #f1f1f1; }
-
-.neo-group-list__item--primary {
-  background-color: #1473e6;
-  color: #f1f1f1; }
-
-.neo-group-list__item--success {
-  background-color: #088a08;
-  color: #f1f1f1; }
-
-.neo-group-list__item--warning {
-  background-color: #cc4d1b;
-  color: #f1f1f1; }
-
-.neo-group-list__item--alert {
-  background-color: #d93d32;
-  color: #f1f1f1; }
-
-.neo-group-list__item--info {
-  background-color: #1473e6;
-  color: #f1f1f1; }
 
 .neo-group-list__item > .neo-btn {
   margin-bottom: 0; }
@@ -4590,6 +4621,9 @@ hr {
     [dir='rtl'] .neo-group-list__item > .neo-btn:not(:last-child) {
       margin-left: 6px;
       margin-right: initial; }
+
+.neo-group-list__item > .neo-accordion__header-text {
+  font-size: 16px; }
 
 .neo-group-list__item > .neo-group-list__item-text {
   align-self: center;
@@ -4608,11 +4642,6 @@ hr {
   background-color: #e8f1fc;
   cursor: pointer; }
 
-.neo-group-list--borderless .neo-group-list__item {
-  border: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; }
-
 .neo-accordion__item {
   border: 1px solid #939393;
   border-bottom: 0;
@@ -4629,7 +4658,9 @@ hr {
   list-style-type: none; }
 
 .neo-accordion__content {
-  padding: 10px 15px; }
+  padding: 16px 16px; }
+  .neo-accordion__content * {
+    font-size: 14px; }
 
 .neo-accordion__item--active .neo-accordion__header::after {
   transform: translate(0, -50%) rotate(-180deg); }
@@ -4656,24 +4687,6 @@ hr {
     [dir='rtl'] .neo-accordion__header::after {
       left: 10px;
       right: auto; }
-  .neo-accordion__header--default {
-    background-color: #f1f1f1;
-    color: #f1f1f1; }
-  .neo-accordion__header--primary {
-    background-color: #1473e6;
-    color: #f1f1f1; }
-  .neo-accordion__header--success {
-    background-color: #088a08;
-    color: #f1f1f1; }
-  .neo-accordion__header--warning {
-    background-color: #cc4d1b;
-    color: #f1f1f1; }
-  .neo-accordion__header--alert {
-    background-color: #d93d32;
-    color: #f1f1f1; }
-  .neo-accordion__header--info {
-    background-color: #1473e6;
-    color: #f1f1f1; }
   .neo-accordion__header > .neo-btn {
     margin-bottom: 0; }
     .neo-accordion__header > .neo-btn:not(:last-child) {
@@ -4681,6 +4694,8 @@ hr {
       [dir='rtl'] .neo-accordion__header > .neo-btn:not(:last-child) {
         margin-left: 6px;
         margin-right: initial; }
+  .neo-accordion__header > .neo-accordion__header-text {
+    font-size: 16px; }
   .neo-accordion__header > .neo-accordion__header-text {
     align-self: center;
     margin-right: auto; }
@@ -4692,11 +4707,6 @@ hr {
     opacity: 0.5;
     background-color: #f1f1f1;
     color: #757474; }
-
-.neo-accordion--borderless .neo-accordion__item {
-  border: 0;
-  border-bottom-left-radius: 0;
-  border-bottom-right-radius: 0; }
 
 .neo-slide {
   animation-duration: 0.4s;

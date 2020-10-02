@@ -91,28 +91,28 @@
   }
 }
 
-@mixin neo-tooltip-states {
-  &--onhover:hover > &__content,
-  &--active > &__content {
-    display: block;
-    position: absolute;
-  }
-}
+// @mixin neo-tooltip-states {
+//   &--onhover:hover > &__content,
+//   &--active > &__content {
+//     display: block;
+//     position: absolute;
+//   }
+// }
 
-%neo-tooltip {
-  box-sizing: border-box;
-  display: inline-block;
-  position: relative;
-  background-color: red;
-  width: $tooltip-width;
-  font-size: $tooltip-font-size;
-  padding: $tooltip-padding;
-}
+// %neo-tooltip {
+//   box-sizing: border-box;
+//   display: inline-block;
+//   position: relative;
+//   background-color: red;
+//   width: $tooltip-width;
+//   font-size: $tooltip-font-size;
+//   padding: $tooltip-padding;
+// }
 
 .neo-tooltip {
   @extend %neo-popover;
 
   @include neo-tooltip-content;
-  @include neo-tooltip-states;
+  // @include neo-tooltip-states;
   @include neo-position(&);
 }

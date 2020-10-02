@@ -4,16 +4,16 @@
 //
 // Remove all borders and border-radius.
 //
-@mixin list--borderless {
-  $self: &;
+// @mixin list--borderless {
+//   $self: &;
 
-  &--borderless {
-    #{$self}__item {
-      border: $group-list-borderless;
-      @include neo-border-bottom-radius($group-list-borderless);
-    }
-  }
-}
+//   &--borderless {
+//     #{$self}__item {
+//       border: $group-list-borderless;
+//       @include neo-border-bottom-radius($group-list-borderless);
+//     }
+//   }
+// }
 
 // Disabled item in group list
 //
@@ -87,14 +87,14 @@
 //
 // Add modifier classes to change background color and text color on individual items.
 //
-@mixin list-item-colors {
-  @each $name, $color in $neo-state-colors {
-    &--#{$name} {
-      background-color: $color;
-      color: $group-list-white;
-    }
-  }
-}
+// @mixin list-item-colors {
+//   @each $name, $color in $neo-state-colors {
+//     &--#{$name} {
+//       background-color: $color;
+//       color: $group-list-white;
+//     }
+//   }
+// }
 
 // Basic class
 //

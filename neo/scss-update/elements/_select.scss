@@ -138,31 +138,31 @@
   }
 }
 
-@mixin neo-select-icon {
-  &__icon {
-    align-items: center;
-    display: inline-flex;
-    height: $select-height;
-    justify-content: center;
-    left: $select-padding-x;
-    position: absolute;
+// @mixin neo-select-icon {
+//   &__icon {
+//     align-items: center;
+//     display: inline-flex;
+//     height: $select-height;
+//     justify-content: center;
+//     left: $select-padding-x;
+//     position: absolute;
 
-    @include rtl-selector {
-      left: auto;
-      right: $select-padding-x;
-    }
+//     @include rtl-selector {
+//       left: auto;
+//       right: $select-padding-x;
+//     }
 
-    + select {
-      padding-left: $select-offset-x;
+//     + select {
+//       padding-left: $select-offset-x;
 
-      @include rtl-selector {
-        padding: {
-          right: $select-offset-x;
-        }
-      }
-    }
-  }
-}
+//       @include rtl-selector {
+//         padding: {
+//           right: $select-offset-x;
+//         }
+//       }
+//     }
+//   }
+// }
 
 .neo-select {
   border-radius: 4px;
@@ -175,9 +175,5 @@
   @include neo-select-multiple;
   @include neo-select-arrow;
   @include neo-select-spinner;
-  @include neo-select-icon;
-  // disabled color for arrow
-  &-disabled {
-    color: $select-disabled-color;
-  }
+  // @include neo-select-icon;
 }

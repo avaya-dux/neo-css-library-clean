@@ -27,7 +27,7 @@
       }
     }
 
-    @include list-item-colors;
+    // @include list-item-colors;
     @include list-item-button;
     @include list-item--disabled;
   }
@@ -76,5 +76,5 @@
 
   @include list--hover('header');
   @include accordion-header;
-  @include list--borderless;
+  // @include list--borderless;
 }

@@ -45,33 +45,33 @@
   }
 }
 
-@mixin pagination-list-position {
-  &--is-right {
-    .neo-pagination__list {
-      margin-left: auto;
+// @mixin pagination-list-position {
+//   &--is-right {
+//     .neo-pagination__list {
+//       margin-left: auto;
 
-      @include rtl-selector {
-        margin: {
-          left: initial;
-          right: auto;
-        }
-      }
-    }
-  }
+//       @include rtl-selector {
+//         margin: {
+//           left: initial;
+//           right: auto;
+//         }
+//       }
+//     }
+//   }
 
-  &--is-left {
-    .neo-pagination__list {
-      margin-right: auto;
+//   &--is-left {
+//     .neo-pagination__list {
+//       margin-right: auto;
 
-      @include rtl-selector {
-        margin: {
-          left: auto;
-          right: initial;
-        }
-      }
-    }
-  }
-}
+//       @include rtl-selector {
+//         margin: {
+//           left: auto;
+//           right: initial;
+//         }
+//       }
+//     }
+//   }
+// }
 
 @mixin pagination-item--hover {
   &:hover {
@@ -157,6 +157,6 @@
   @include pagination-list;
   @include pagination-item;
   @include pagination-dots;
-  @include pagination-list-position;
+  // @include pagination-list-position;
   @include pagination-label;
 }

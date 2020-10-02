@@ -79,7 +79,7 @@
     @include tab--disabled;
   }
 
-  @include tab--bordered;
+  // @include tab--bordered;
 }
 
 @mixin tab--active {
@@ -117,18 +117,18 @@
   }
 }
 
-@mixin neo-tab-bordered--disabled {
-  &--disabled {
-    > a {
-      background-color: $tab-bordered-disabled-bg-color;
-      border: {
-        left-color: $tab-bordered-disabled-bg-color;
-        right-color: $tab-disabled-bg-color;
-        top-color: $tab-disabled-bg-color;
-      }
-    }
-  }
-}
+// @mixin neo-tab-bordered--disabled {
+//   &--disabled {
+//     > a {
+//       background-color: $tab-bordered-disabled-bg-color;
+//       border: {
+//         left-color: $tab-bordered-disabled-bg-color;
+//         right-color: $tab-disabled-bg-color;
+//         top-color: $tab-disabled-bg-color;
+//       }
+//     }
+//   }
+// }
 
 @mixin tab-container {
   &__container {
@@ -142,64 +142,64 @@
   }
 }
 
-@mixin tab--bordered {
-  &--bordered {
-    border-bottom: $tab-bordered-border;
+// @mixin tab--bordered {
+//   &--bordered {
+//     border-bottom: $tab-bordered-border;
 
-    /* stylelint-disable-next-line selector-class-pattern */
-    .neo-tabs__item {
-      // Hides the bottom border of an active tab
-      margin-bottom: -$tab-bordered-border-width;
+//     /* stylelint-disable-next-line selector-class-pattern */
+//     .neo-tabs__item {
+//       // Hides the bottom border of an active tab
+//       margin-bottom: -$tab-bordered-border-width;
 
-      a {
-        background-color: $tab-bordered-bg-color;
-        border: $tab-bordered-border;
-        border-top: {
-          left-radius: $tab-bordered-border-radius;
-          right-radius: $tab-bordered-border-radius;
-        }
-      }
+//       a {
+//         background-color: $tab-bordered-bg-color;
+//         border: $tab-bordered-border;
+//         border-top: {
+//           left-radius: $tab-bordered-border-radius;
+//           right-radius: $tab-bordered-border-radius;
+//         }
+//       }
 
-      &--active a {
-        background-color: $tab-bordered-active-bg-color;
-        border-bottom-color: $tab-bordered-active-border-bottom-color;
-      }
+//       &--active a {
+//         background-color: $tab-bordered-active-bg-color;
+//         border-bottom-color: $tab-bordered-active-border-bottom-color;
+//       }
 
-      @include neo-tab-bordered--disabled;
-    }
+//       @include neo-tab-bordered--disabled;
+//     }
 
-    .neo-tabs__nav-scroll {
-      margin-bottom: -$tab-bordered-border-width;
+//     .neo-tabs__nav-scroll {
+//       margin-bottom: -$tab-bordered-border-width;
 
-      .neo-tabs__item {
-        margin-bottom: 0;
-      }
-    }
+//       .neo-tabs__item {
+//         margin-bottom: 0;
+//       }
+//     }
 
-    .neo-close {
-      right: $tab-close-btn-offset-x;
+//     .neo-close {
+//       right: $tab-close-btn-offset-x;
 
-      @include rtl-selector {
-        left: $tab-close-btn-offset-x;
-        right: auto;
-      }
-    }
-  }
-}
+//       @include rtl-selector {
+//         left: $tab-close-btn-offset-x;
+//         right: auto;
+//       }
+//     }
+//   }
+// }
 
-@mixin tab-size($tab-size, $tab-min-height, $tab-padding, $tab-action-padding) {
-  &--#{$tab-size} {
-    min-height: $tab-min-height;
+// @mixin tab-size($tab-size, $tab-min-height, $tab-padding, $tab-action-padding) {
+//   &--#{$tab-size} {
+//     min-height: $tab-min-height;
 
-    a {
-      padding: $tab-padding;
-    }
+//     a {
+//       padding: $tab-padding;
+//     }
 
-    .neo-tabs__action {
-      padding: $tab-action-padding;
-    }
-  }
-}
+//     .neo-tabs__action {
+//       padding: $tab-action-padding;
+//     }
+//   }
+// }
 
 @mixin tab-slider() {
   .neo-tabs__nav-scroll {
@@ -209,52 +209,52 @@
   }
 }
 
-@mixin tab-slider-action-content($directionName, $directionIcon) {
-  &.neo-tabs__action--#{$directionName} {
-    &::after {
-      content: $directionIcon;
-    }
-  }
-}
+// @mixin tab-slider-action-content($directionName, $directionIcon) {
+//   &.neo-tabs__action--#{$directionName} {
+//     &::after {
+//       content: $directionIcon;
+//     }
+//   }
+// }
 
-@mixin tab-slider-action() {
-  .neo-tabs__action {
-    align-items: center;
-    color: $tab-action-color;
-    cursor: pointer;
-    display: flex;
-    margin: 0;
-    padding: $tab-action-padding-default;
+// @mixin tab-slider-action() {
+//   .neo-tabs__action {
+//     align-items: center;
+//     color: $tab-action-color;
+//     cursor: pointer;
+//     display: flex;
+//     margin: 0;
+//     padding: $tab-action-padding-default;
 
-    @include rtl-selector {
-      @include tab-slider-action-content(prev, '\e99f');
-      @include tab-slider-action-content(next, '\e99e');
-    }
+//     @include rtl-selector {
+//       @include tab-slider-action-content(prev, '\e99f');
+//       @include tab-slider-action-content(next, '\e99e');
+//     }
 
-    &::after {
-      font-family: 'AOC-Icons';
-      line-height: $tab-action-line-height;
-    }
+//     &::after {
+//       font-family: 'AOC-Icons';
+//       line-height: $tab-action-line-height;
+//     }
 
-    &:not(.neo-tabs__action--hidden) + .neo-tabs__nav-scroll {
-      ul {
-        margin: $tab-container-margin;
-      }
-    }
+//     &:not(.neo-tabs__action--hidden) + .neo-tabs__nav-scroll {
+//       ul {
+//         margin: $tab-container-margin;
+//       }
+//     }
 
-    &--hidden {
-      display: none;
-    }
+//     &--hidden {
+//       display: none;
+//     }
 
-    &--disabled {
-      color: $tab-action-disabled-color;
-      cursor: default;
-    }
+//     &--disabled {
+//       color: $tab-action-disabled-color;
+//       cursor: default;
+//     }
 
-    @include tab-slider-action-content(prev, '\e99e');
-    @include tab-slider-action-content(next, '\e99f');
-  }
-}
+//     @include tab-slider-action-content(prev, '\e99e');
+//     @include tab-slider-action-content(next, '\e99f');
+//   }
+// }
 
 @mixin tab-close-btn {
   .neo-close {
@@ -304,24 +304,24 @@
   @include tab-close-btn;
   @include extra-content;
   @include tab-item;
-  @include tab-slider;
-  @include tab-slider-action;
-  @include tab-size(
-    small,
-    $tab-min-height-small,
-    $tab-padding-small,
-    $tab-action-padding-small
-  );
-  @include tab-size(
-    medium,
-    $tab-min-height-medium,
-    $tab-padding-medium,
-    $tab-action-padding-medium
-  );
-  @include tab-size(
-    large,
-    $tab-min-height-large,
-    $tab-padding-large,
-    $tab-action-padding-large
-  );
+  // @include tab-slider;
+  // @include tab-slider-action;
+  // @include tab-size(
+  //   small,
+  //   $tab-min-height-small,
+  //   $tab-padding-small,
+  //   $tab-action-padding-small
+  // );
+  // @include tab-size(
+  //   medium,
+  //   $tab-min-height-medium,
+  //   $tab-padding-medium,
+  //   $tab-action-padding-medium
+  // );
+  // @include tab-size(
+  //   large,
+  //   $tab-min-height-large,
+  //   $tab-padding-large,
+  //   $tab-action-padding-large
+  // );
 }

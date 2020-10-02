@@ -1,82 +1,82 @@
 :root {
   @include define-color-hsl(
-    'Data Visualization Categorial Green',
+    'data-visualization-categorial-green',
     hex-to-hsl($token-color-data-viz-categorial-green)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Purple Light',
+    'data-visualization-categorial-purple-Light',
     hex-to-hsl($token-color-data-viz-categorial-purple-light)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Pink',
+    'data-visualization-categorial-pink',
     hex-to-hsl($token-color-data-viz-categorial-pink)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Red',
+    'data-visualization-categorial-red',
     hex-to-hsl($token-color-data-viz-categorial-red)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Teal',
+    'data-visualization-categorial-real',
     hex-to-hsl($token-color-data-viz-categorial-teal)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Orange',
+    'data-visualization-categorial-orange',
     hex-to-hsl($token-color-data-viz-categorial-orange)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Blue',
-    hex-to-hsl($token-color-data-viz-categorial-blue)
+    'data-visualization-categorial-blue-mid',
+    hex-to-hsl($token-color-data-viz-categorial-blue-mid)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Blue Dark',
+    'data-visualization-categorial-blue-dark',
     hex-to-hsl($token-color-data-viz-categorial-blue-dark)
   );
   @include define-color-hsl(
-    'Data Visualization Categorial Purple',
+    'data-visualization-categorial-purple',
     hex-to-hsl($token-color-data-viz-categorial-purple)
   );
-  @include define-color-hsl('Base 0', hex-to-hsl($token-color-base-0));
-  @include define-color-hsl('Base 100', hex-to-hsl($token-color-base-100));
-  @include define-color-hsl('Base 200', hex-to-hsl($token-color-base-200));
-  @include define-color-hsl('Base 400', hex-to-hsl($token-color-base-400));
-  @include define-color-hsl('Base 500', hex-to-hsl($token-color-base-500));
-  @include define-color-hsl('Base 600', hex-to-hsl($token-color-base-600));
-  @include define-color-hsl('Base 800', hex-to-hsl($token-color-base-800));
-  @include define-color-hsl('Base 900', hex-to-hsl($token-color-base-900));
-  @include define-color-hsl('Base 1000', hex-to-hsl($token-color-base-1000));
-  @include define-color-hsl('Blue 100', hex-to-hsl($token-color-blue-100));
-  @include define-color-hsl('Blue 200', hex-to-hsl($token-color-blue-200));
-  @include define-color-hsl('Blue 400', hex-to-hsl($token-color-blue-400));
-  @include define-color-hsl('Blue 500', hex-to-hsl($token-color-blue-500));
-  @include define-color-hsl('Blue 600', hex-to-hsl($token-color-blue-600));
-  @include define-color-hsl('Blue 800', hex-to-hsl($token-color-blue-800));
-  @include define-color-hsl('Blue 900', hex-to-hsl($token-color-blue-900));
-  @include define-color-hsl('Red 100', hex-to-hsl($token-color-red-100));
-  @include define-color-hsl('Red 200', hex-to-hsl($token-color-red-200));
-  @include define-color-hsl('Red 400', hex-to-hsl($token-color-red-400));
-  @include define-color-hsl('Red 500', hex-to-hsl($token-color-red-500));
-  @include define-color-hsl('Red 600', hex-to-hsl($token-color-red-600));
-  @include define-color-hsl('Red 800', hex-to-hsl($token-color-red-800));
-  @include define-color-hsl('Red 900', hex-to-hsl($token-color-red-900));
-  @include define-color-hsl('Green 100', hex-to-hsl($token-color-green-100));
-  @include define-color-hsl('Green 200', hex-to-hsl($token-color-green-200));
-  @include define-color-hsl('Green 400', hex-to-hsl($token-color-green-400));
-  @include define-color-hsl('Green 500', hex-to-hsl($token-color-green-500));
-  @include define-color-hsl('Green 600', hex-to-hsl($token-color-green-600));
-  @include define-color-hsl('Green 800', hex-to-hsl($token-color-green-800));
-  @include define-color-hsl('Green 900', hex-to-hsl($token-color-green-900));
-  @include define-color-hsl('Purple 100', hex-to-hsl($token-color-purple-100));
-  @include define-color-hsl('Purple 200', hex-to-hsl($token-color-purple-200));
-  @include define-color-hsl('Purple 400', hex-to-hsl($token-color-purple-400));
-  @include define-color-hsl('Purple 500', hex-to-hsl($token-color-purple-500));
-  @include define-color-hsl('Purple 600', hex-to-hsl($token-color-purple-600));
-  @include define-color-hsl('Purple 800', hex-to-hsl($token-color-purple-800));
-  @include define-color-hsl('Purple 900', hex-to-hsl($token-color-purple-900));
-  @include define-color-hsl('Orange 100', hex-to-hsl($token-color-orange-100));
-  @include define-color-hsl('Orange 200', hex-to-hsl($token-color-orange-200));
-  @include define-color-hsl('Orange 400', hex-to-hsl($token-color-orange-400));
-  @include define-color-hsl('Orange 500', hex-to-hsl($token-color-orange-500));
-  @include define-color-hsl('Orange 600', hex-to-hsl($token-color-orange-600));
-  @include define-color-hsl('Orange 800', hex-to-hsl($token-color-orange-800));
-  @include define-color-hsl('Orange 900', hex-to-hsl($token-color-orange-900));
+  @include define-color-hsl('base-0', hex-to-hsl($token-color-base-0));
+  @include define-color-hsl('base-100', hex-to-hsl($token-color-base-100));
+  @include define-color-hsl('base-200', hex-to-hsl($token-color-base-200));
+  @include define-color-hsl('base-400', hex-to-hsl($token-color-base-400));
+  @include define-color-hsl('base-500', hex-to-hsl($token-color-base-500));
+  @include define-color-hsl('base-600', hex-to-hsl($token-color-base-600));
+  @include define-color-hsl('base-800', hex-to-hsl($token-color-base-800));
+  @include define-color-hsl('base-900', hex-to-hsl($token-color-base-900));
+  @include define-color-hsl('base-1000', hex-to-hsl($token-color-base-1000));
+  @include define-color-hsl('blue-100', hex-to-hsl($token-color-blue-100));
+  @include define-color-hsl('blue-200', hex-to-hsl($token-color-blue-200));
+  @include define-color-hsl('blue-400', hex-to-hsl($token-color-blue-400));
+  @include define-color-hsl('blue-500', hex-to-hsl($token-color-blue-500));
+  @include define-color-hsl('blue-600', hex-to-hsl($token-color-blue-600));
+  @include define-color-hsl('blue-800', hex-to-hsl($token-color-blue-800));
+  @include define-color-hsl('blue-900', hex-to-hsl($token-color-blue-900));
+  @include define-color-hsl('red-100', hex-to-hsl($token-color-red-100));
+  @include define-color-hsl('red-200', hex-to-hsl($token-color-red-200));
+  @include define-color-hsl('red-400', hex-to-hsl($token-color-red-400));
+  @include define-color-hsl('red-500', hex-to-hsl($token-color-red-500));
+  @include define-color-hsl('red-600', hex-to-hsl($token-color-red-600));
+  @include define-color-hsl('red-800', hex-to-hsl($token-color-red-800));
+  @include define-color-hsl('red-900', hex-to-hsl($token-color-red-900));
+  @include define-color-hsl('green-100', hex-to-hsl($token-color-green-100));
+  @include define-color-hsl('green-200', hex-to-hsl($token-color-green-200));
+  @include define-color-hsl('green-400', hex-to-hsl($token-color-green-400));
+  @include define-color-hsl('green-500', hex-to-hsl($token-color-green-500));
+  @include define-color-hsl('green-600', hex-to-hsl($token-color-green-600));
+  @include define-color-hsl('green-800', hex-to-hsl($token-color-green-800));
+  @include define-color-hsl('green-900', hex-to-hsl($token-color-green-900));
+  @include define-color-hsl('purple-100', hex-to-hsl($token-color-purple-100));
+  @include define-color-hsl('purple-200', hex-to-hsl($token-color-purple-200));
+  @include define-color-hsl('purple-400', hex-to-hsl($token-color-purple-400));
+  @include define-color-hsl('purple-500', hex-to-hsl($token-color-purple-500));
+  @include define-color-hsl('purple-600', hex-to-hsl($token-color-purple-600));
+  @include define-color-hsl('purple-800', hex-to-hsl($token-color-purple-800));
+  @include define-color-hsl('purple-900', hex-to-hsl($token-color-purple-900));
+  @include define-color-hsl('orange-100', hex-to-hsl($token-color-orange-100));
+  @include define-color-hsl('orange-200', hex-to-hsl($token-color-orange-200));
+  @include define-color-hsl('orange-400', hex-to-hsl($token-color-orange-400));
+  @include define-color-hsl('orange-500', hex-to-hsl($token-color-orange-500));
+  @include define-color-hsl('orange-600', hex-to-hsl($token-color-orange-600));
+  @include define-color-hsl('orange-800', hex-to-hsl($token-color-orange-800));
+  @include define-color-hsl('orange-900', hex-to-hsl($token-color-orange-900));
 }
