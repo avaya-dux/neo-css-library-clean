@@ -66,6 +66,9 @@
       }
     }
   }
+  & > .neo-accordion__header-text {
+    font-size: 16px;
+  }
 
   & > &-text {
     align-self: center;

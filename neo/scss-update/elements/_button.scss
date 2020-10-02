@@ -187,7 +187,7 @@
   }
 }
 
-.neo-btn--circle {
+.neo-btn-circle {
   // display: flex;
   // border: 0;
   justify-content: center;
@@ -303,7 +303,7 @@
   // }
 }
 
-.neo-btn--square {
+.neo-btn-square {
   // display: flex;
 
   justify-content: center;
@@ -362,7 +362,7 @@
         cursor: not-allowed;
       }
     }
-    border-width: 1px;
+    border: 1px solid;
     @each $name, $color in $neo-state-colors {
       &--#{$name} {
         background-color: transparent;

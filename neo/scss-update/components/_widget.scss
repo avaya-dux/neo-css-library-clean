@@ -96,8 +96,8 @@
 .neo-widget__content {
   // animation: animation-modal-content $modal-animation-time;
   background-color: white;
-  border: $modal-border;
-  // border-radius: $modal-radius;
+  border: 1px solid $token-color-base-200;
+  border-radius: 4px;
   // box-shadow: $modal-shadow;
   display: flex;
   flex-direction: column;
@@ -111,16 +111,44 @@
   .neo-widget__header {
     @include widget-element(16px);
     // text-align: center;
+    width: 100%;
     vertical-align: center;
     display: flex;
     flex-direction: row;
-    & h4 {
-      margin-left: 8px;
-      color: black !important;
+    justify-content: space-between;
+    & .neo-widget__header-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      & [class^='neo-icon-']:before,
+      & [class*='neo-icon-']:before {
+        font-size: 24px;
+      }
+      & h4 {
+        align-self: center;
+        margin-left: 8px;
+        color: black;
+      }
     }
+
+    & .neo-widget__header-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      & [class^='neo-icon-']:before,
+      & [class*='neo-icon-']:before {
+        font-size: 24px;
+      }
+    }
+
     &-disabled {
       background-color: $global-disabled-bg;
       color: $global-disabled-color;
+
+      & h4 {
+        color: $global-disabled-color !important;
+      }
+
       & > * {
         color: $global-disabled-color;
       }

@@ -80,7 +80,6 @@
   display: flex;
   flex: 1;
   min-height: $navbar-height;
-  // padding: 0 $navbar-padding-x 0 0;
   position: relative;
   z-index: $navbar-z;
   max-width: 100vw;
@@ -137,7 +136,7 @@
     bottom: 0;
     left: $navbar-padding-x;
   }
-  & .neo-btn-icon-badge {
+  & .neo-badge__navbutton {
     height: 100%;
     width: 64px;
     display: flex;
@@ -157,7 +156,7 @@
         background-color: $navbar-background-color-hover !important;
       }
     }
-    .neo-badge-icon::after {
+    .neo-badge__icon::after {
       font-family: 'noto-sans', sans-serif;
       background: #db3232;
       border-radius: 8px;
@@ -209,6 +208,7 @@
     }
 
     & .neo-label {
+      padding: 2px 8px;
       border-radius: 16px !important;
       color: $button-inverse-text-color;
       @each $name, $color in $neo-navbar-pill-colors {
@@ -258,7 +258,7 @@
   margin-right: auto;
 }
 
-.neo-navbar--left {
+.neo-nav--left {
   display: flex;
   & [class*='neo-icon-'].neo-btn:empty::before {
     font-size: 32px;

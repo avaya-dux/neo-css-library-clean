@@ -97,6 +97,7 @@ $neo-close-colors: () !default;
 
 $neo-close-colors: map-merge(
   (
+    default: $token-color-base-600,
     primary: $token-color-blue-600,
     success: $token-color-green-600,
     warning: $token-color-orange-600,
@@ -333,7 +334,7 @@ $input-background-color: $global-background !default;
 $input-required-background: $global-background !default;
 $input-border-width: $token-input-border-width !default;
 $input-border-style: $token-input-border-style !default;
-$input-border-color: $token-input-border-color !default;
+$input-border-color: $token-color-base-400 !default;
 $input-focus-border-color: rgba(0, 102, 255, 0.5) !default;
 $input-focus-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5) !default;
 $input-border-radius: 0 !default;
@@ -361,7 +362,7 @@ $input-disabled-color: $token-input-disabled-filled-color !default;
 $input-state-color-map: () !default;
 $input-state-color-map: map-merge(
   (
-    success: $global-text-color,
+    success: #939393,
     error: $token-input-error-text-color,
   ),
   $input-state-color-map
@@ -426,8 +427,7 @@ $table-head-hover: $table-head-background !default;
 $table-row-hover: $token-table-row-hover-color !default;
 $table-head-font-color: $global-text-color !default;
 $table-border-width: $token-table-row-border-bottom-width !default;
-$table-border: $table-border-width $token-table-row-border-bottom-style
-  $token-table-row-border-bottom-color !default;
+$table-border: $table-border-width $token-table-row-border-bottom-style #c9c9c9 !default;
 $table-striped-background: lighten($table-row-hover, 20%) !default;
 $table-stripe: even !default;
 $table-foot-background: $table-head-background !default;
@@ -450,7 +450,7 @@ $table-page-select-height: $token-table-pagination-count-height !default;
 $table-page-select-width: $token-table-pagination-count-width !default;
 $table-filter-button-color: $token-table-filter-button-color !default;
 $table-date-picker-background-color: $token-table-datepicker-background-color !default;
-$table-date-picker-font-color: $token-table-datepicker-font-color !default;
+$table-date-picker-font-color: $token-color-base-600 !default;
 
 //
 // Component name: Buttons
@@ -864,12 +864,13 @@ $chip-offset: ($input-height - $chip-height) / 2 - 1 !default;
 $chip-font-size: $token-chip-font-size !default;
 $chip-border-radius: $global-radius !default;
 $chip-line-height: $token-chip-line-height !default;
-$chip-padding-x: $token-chip-padding-horizontal !default;
-$chip-padding-y: $token-chip-padding-vertical !default;
+$chip-padding-x: 8px !default;
+$chip-padding-y: 4px !default;
 $chip-btn-margin-left: $global-spacer !default;
 $chip-btn-opacity: 0.4 !default;
 $chip-disabled-bg: $global-disabled-bg !default;
 $chip-disabled-color: $global-disabled-color !default;
+$chip-expandable-icon: '\f21d' !default;
 
 // Component name: Tab
 // Location: src/scss/components/_tabs.scss

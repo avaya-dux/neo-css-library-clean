@@ -35,7 +35,11 @@
     min-width: $pagination-min-width-item;
     text-decoration: none;
 
-    @include pagination-item--hover;
+    &:hover {
+      background-color: #f1f1f1;
+    }
+
+    // @include pagination-item--hover;
     @include pagination-item--disabled;
     @include pagination-item--active;
   }

@@ -12,7 +12,7 @@
     animation: show-element $animation-duration;
     background-color: $tooltip-background;
     color: $tooltip-color;
-    border: $content-border;
+    // border: $content-border;
     border-radius: 2px;
     box-shadow: $content-shadow;
     display: none;
@@ -26,7 +26,7 @@
     text-align: center;
 
     .neo-tooltip--right & .neo-arrow {
-      left: -7.5px;
+      left: -6.5px;
       bottom: 51%;
     }
 
@@ -40,7 +40,7 @@
     }
 
     .neo-tooltip--up & .neo-arrow {
-      bottom: -7.5px;
+      bottom: -6.5px;
       right: 42%;
       transform: rotate(180deg);
     }
@@ -55,7 +55,7 @@
     }
 
     .neo-tooltip--left & .neo-arrow {
-      right: -7.5px;
+      right: -6.5px;
       bottom: 51%;
     }
 
@@ -70,7 +70,7 @@
     }
 
     .neo-tooltip--down & .neo-arrow {
-      top: -7.5px;
+      top: -6.5px;
       right: 42%;
     }
 

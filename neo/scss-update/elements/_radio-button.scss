@@ -34,7 +34,7 @@
       display: block;
       height: 14px;
       position: absolute;
-      top: 1px;
+      top: 3px;
       width: 14px;
     }
   }
@@ -47,7 +47,7 @@
     height: 6px;
     left: 4px;
     position: absolute;
-    top: 5px;
+    top: 7px;
     width: 6px;
 
     @include rtl-selector {

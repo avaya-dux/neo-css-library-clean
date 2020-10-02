@@ -13,6 +13,8 @@ $checkbox-disabled-background: $token-checkbox-disabled-background-color !defaul
     line-height: $checkbox-size;
     padding: 0;
     position: relative;
+    display: flex;
+    align-items: center;
 
     &::before {
       background: $checkbox-icon-color;
@@ -56,7 +58,7 @@ $checkbox-disabled-background: $token-checkbox-disabled-background-color !defaul
     color: $checkbox-disabled-background;
     cursor: not-allowed;
 
-    &:checked {
+    &:checked:disabled {
       font-family: 'AOC-Icons' !important;
       content: '\e911';
       font-size: $checkbox-font-size;
@@ -66,10 +68,12 @@ $checkbox-disabled-background: $token-checkbox-disabled-background-color !defaul
     }
 
     &::before {
-      background: $checkbox-disabled-background;
-      border: 0;
+      border: 1px solid $token-color-blue-200;
       box-shadow: none;
       cursor: not-allowed;
+    }
+    &.checked::before {
+      background-color: $token-color-blue-200;
     }
   }
 

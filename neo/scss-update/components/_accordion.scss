@@ -3,7 +3,6 @@
 @mixin accordion-header {
   &__header {
     @extend %list-item;
-
     border: none;
     cursor: pointer;
     position: relative;
@@ -63,7 +62,10 @@
   }
 
   &__content {
-    padding: $accordion-padding-y $accordion-padding-x;
+    padding: 16px 16px;
+    & * {
+      font-size: 14px;
+    }
   }
 
   &__item--active {

@@ -22,7 +22,6 @@
     text-align: left;
     vertical-align: middle;
     text-align: center;
-    font-weight: 400 !important;
     @include rtl-selector {
       text-align: right;
     }
@@ -34,7 +33,8 @@
     .neo-label,
     .neo-chip,
     .neo-switch,
-    .neo-group-list {
+    .neo-group-list,
+    .neo-form-control {
       margin-bottom: 0;
     }
   }
@@ -53,10 +53,17 @@
   th {
     background-color: $table-head-background;
     color: $table-head-font-color;
+    font-weight: 400 !important;
   }
 
   td {
     border-top: $table-border;
+    &.neo-icon-more:before {
+      font-size: 24px;
+    }
+    & .neo-form-control .neo-check + label {
+      display: block;
+    }
   }
 
   thead th {
@@ -272,7 +279,7 @@
   // new filter select styles
 
   & ~ .neo-form-control {
-    & .neo-filter {
+    & .neo-table-filter {
       width: 116px;
 
       padding-left: $select-padding-left;
@@ -322,6 +329,8 @@
 // placeholder date picker styles - hard-coded for now
 
 .neo-date-picker {
+  padding: 4px 8px 4px 8px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -345,11 +354,30 @@
 
 // styles for sortable table heads
 
-.sortable {
+.neo-table-sortable {
   display: flex;
   justify-content: space-between;
   &::after {
     // padding-left: 12px;
+  }
+}
+
+.neo-table-filter__wrapper {
+  display: flex;
+  justify-content: flex-end;
+  & .neo-form-control {
+    & .neo-icon-filter {
+      color: $global-text-color;
+      background-color: #c9c9c9;
+      // hard-coded padding for now
+      // padding: 12px 0;
+      &::before {
+        font-size: 24px;
+      }
+      &:hover {
+        box-shadow: none;
+      }
+    }
   }
 }
 

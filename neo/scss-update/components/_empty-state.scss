@@ -12,6 +12,10 @@
   top: 50%;
   transform: translateY(-50%);
 
+  & p {
+    font-size: 19px;
+  }
+
   @include neo-icon {
     color: inherit;
     font-size: $empty-state-icon-size;

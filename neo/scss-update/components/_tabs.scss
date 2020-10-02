@@ -24,7 +24,8 @@
 
 @mixin tab-item {
   &__item {
-    margin-right: $tab-offset;
+    background-color: $token-color-base-100;
+    // margin-right: $tab-offset;
     position: relative;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -46,7 +47,7 @@
 
     a {
       border-bottom: $tab-action-border-bottom-width solid transparent;
-      color: black;
+      color: $token-color-base-900;
       cursor: pointer;
       display: block;
       margin: 0;
@@ -57,6 +58,14 @@
       &:focus {
         box-shadow: $input-focus-shadow;
         outline: none;
+      }
+
+      &:before {
+        margin-right: 5px;
+      }
+
+      &[dir='rtl']:before {
+        margin-left: 5px;
       }
     }
 
@@ -75,7 +84,9 @@
 
 @mixin tab--active {
   &--active {
+    background-color: white;
     a {
+      border-width: 2px;
       border-bottom-color: $tab-action-active-border-color;
       color: $tab-action-active-color;
     }
@@ -85,12 +96,15 @@
 @mixin tab--disabled {
   &--disabled,
   &--disabled > a {
-    background-color: $tab-disabled-bg-color;
+    background-color: $token-color-base-100;
     box-shadow: none;
-    color: $tab-disabled-color;
+    color: $token-color-base-400;
     cursor: not-allowed;
 
-    &:hover,
+    &:hover {
+      color: $token-color-base-400;
+    }
+
     &:focus {
       background-color: $tab-disabled-bg-color;
       box-shadow: none;

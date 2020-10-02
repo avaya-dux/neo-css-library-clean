@@ -94,7 +94,7 @@
 
 //  input error validation wrapper and input
 
-.neo-input-error-wrapper {
+.neo-input-error__wrapper {
   display: flex;
   flex-direction: row;
   border: $input-border-style $input-border-width $input-asterix-required-color;
@@ -105,7 +105,7 @@
   & textarea {
     border: none;
   }
-  & .neo-input-error-icon {
+  & .neo-input-error__icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,7 +130,8 @@
 
 // editable input style
 
-.neo-input-editable-wrapper {
+.neo-input-editable__wrapper {
+  border-radius: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -143,7 +144,7 @@
     border: none;
     min-width: 0;
   }
-  & .neo-input-edit-icon {
+  & .neo-input-edit__icon {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -163,10 +164,3 @@
     }
   }
 }
-
-// disabled input style
-
-// .neo-input-disabled {
-//   background-color: $input-disabled-bg;
-//   color: $input-disabled-color;
-// }

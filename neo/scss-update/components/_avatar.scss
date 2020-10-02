@@ -44,7 +44,7 @@
 @mixin avatar-border-color() {
   @each $name, $color in $neo-state-colors {
     &--#{$name} {
-      border-color: $avatar-border-color;
+      border-color: $color;
       border-style: $avatar-border-style;
       border-width: $avatar-border-width;
     }

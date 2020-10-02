@@ -2,16 +2,17 @@
 
 @mixin notification-close-btn {
   /* stylelint-disable-next-line selector-class-pattern */
-  > .neo-close {
+  > .neo-icon-end {
+    background: none;
+    border: none;
+    &:before {
+      font-size: 16px;
+    }
     @include rtl-selector {
       left: $notification-btn-offset;
       right: initial;
     }
-    @include position(
-      absolute,
-      $notification-btn-offset,
-      $notification-btn-offset
-    );
+    @include position(absolute, 35%, $notification-btn-offset);
   }
 }
 
@@ -40,6 +41,9 @@
 
 @mixin notification-icon {
   &__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     font-size: 24px;
     line-height: 1;
     margin-right: $global-spacer-large;

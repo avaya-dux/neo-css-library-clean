@@ -2,6 +2,7 @@
 
 @include neo-icon-context {
   &.neo-dropdown__link {
+    color: $token-color-base-400;
     &::before {
       font-size: $global-font-size;
       margin-bottom: $dropdown-icon-margin-y;
@@ -49,10 +50,10 @@
 
     > #{$self}__link {
       color: $global-text-color;
-      // box-shadow: $dropdown-box-shadow;
 
       @include neo-dropdown-arrow($arrow-icon: '\f21f');
       &::after {
+        font-size: 16px;
         color: $global-text-color;
         vertical-align: middle;
       }
@@ -64,14 +65,12 @@
   $self: &;
 
   & > &__link {
-    // border-radius: $dropdown-radius;
     display: inline-block;
 
     @include neo-dropdown-arrow;
   }
 
   &__link {
-    // background: $dropdown-content-background-color;
     color: $global-text-color;
     cursor: pointer;
     display: block;
@@ -107,8 +106,7 @@
 @mixin neo-dropdown-content {
   &__content,
   &__content &__content {
-    // hard-coded for now
-    left: 106%;
+    left: 100%;
     top: -1px;
     box-shadow: $dropdown-box-shadow;
 
@@ -121,9 +119,8 @@
   @include neo-popover-content(
     $dropdown-animation-duration,
     white,
-    $dropdown-content-border,
+    none,
     $dropdown-radius,
-    // $dropdown-content-shadow,
     $dropdown-content-padding,
     $dropdown-content-z,
     $dropdown-min-width
@@ -171,7 +168,7 @@
 @mixin neo-dropdown-position {
   &--right &__content {
     left: auto;
-    right: 106%;
+    right: 100%;
   }
 
   &--right > &__content {
@@ -186,15 +183,9 @@
 
 @mixin neo-dropdown-input {
   .neo-input {
-    // background-color: $dropdown-input-bg;
     border: $dropdown-input-border;
-    // color: $dropdown-color;
     margin: $dropdown-input-offset;
     width: calc(100% - #{$dropdown-input-offset} * 2);
-
-    &::placeholder {
-      // color: $dropdown-color;
-    }
   }
 
   .neo-input-icon {
@@ -203,11 +194,6 @@
     .neo-input {
       margin: 0;
       width: 100%;
-    }
-
-    [class*='aoc-'],
-    [class*='neo-icon'] {
-      // color: $dropdown-input-icon-color;
     }
   }
 }

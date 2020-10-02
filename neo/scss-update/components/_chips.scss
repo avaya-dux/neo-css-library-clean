@@ -75,20 +75,6 @@
 
 @mixin chip-states($backgroundColor, $selector: '') {
   background-color: $backgroundColor;
-
-  //color: if(
-  //  lightness($backgroundColor) > $chip-bg-color-lightness-scale,
-  //  $chip-color-dark,
-  //  $chip-color-light
-  //);
-
-  // &:hover {
-  //   background-color: darken-var($backgroundColor, 5%);
-  // }
-
-  // &#{$selector}--selected {
-  //   background-color: darken-var($backgroundColor, 10%);
-  // }
 }
 
 @mixin chip-avatar {
@@ -124,13 +110,11 @@
   > .neo-close {
     @include rtl-selector {
       margin: {
-        // left: -$global-spacer;
         right: $global-spacer;
       }
     }
     margin: {
       left: $global-spacer;
-      // right: -$global-spacer;
     }
   }
 }
@@ -210,6 +194,19 @@
   @extend %neo-chip;
   @include chip-colors();
   @include chip--disabled;
+
+  &.neo-chip--expandable {
+    &::after {
+      font-family: 'updated-neo-icons';
+      margin-left: 6px;
+      content: $chip-expandable-icon;
+    }
+    @each $name, $color in $neo-close-colors {
+      &--#{$name}::after {
+        color: $color;
+      }
+    }
+  }
 }
 
 .neo-chips__item {

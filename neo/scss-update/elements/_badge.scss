@@ -34,7 +34,7 @@
   // new class for round or square icon buttons - to be used with a div and span
   // <div><button></button><span></span></div>
 
-  &-icon::after {
+  &__icon::after {
     font-family: $body-font-family;
     background: $badge-background-color;
     border-radius: $badge-size / 2;
@@ -61,7 +61,7 @@
   }
 }
 
-.neo-btn-icon-badge {
+.neo-badge__navbutton {
   display: inline-block;
   position: relative;
 }

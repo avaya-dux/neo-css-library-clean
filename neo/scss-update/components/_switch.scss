@@ -35,7 +35,9 @@
 
     &::after {
       background-color: $token-color-base-0;
-      box-shadow: $button-box-shadow;
+      box-shadow: $token-shadows-elevation-100-x-offset
+        $token-shadows-elevation-100-y-offset
+        $token-shadows-elevation-100-radius rgba(0, 0, 0, 0.25);
       height: $switch-knob-size;
       left: $switch-knob-indent;
       top: $switch-knob-indent;
@@ -97,7 +99,9 @@
 
   &:focus .neo-switch__icon {
     &::before {
-      box-shadow: $input-focus-shadow;
+      box-shadow: $token-shadows-elevation-100-x-offset
+        $token-shadows-elevation-100-y-offset
+        $token-shadows-elevation-100-radius rgba(0, 0, 0, 0.25);
     }
   }
 
