@@ -91,13 +91,13 @@
   }
 }
 
-// @mixin neo-tooltip-states {
-//   &--onhover:hover > &__content,
-//   &--active > &__content {
-//     display: block;
-//     position: absolute;
-//   }
-// }
+@mixin neo-tooltip-states {
+  &--onhover:hover > &__content,
+  &--active > &__content {
+    display: block;
+    position: absolute;
+  }
+}
 
 // %neo-tooltip {
 //   box-sizing: border-box;
@@ -113,6 +113,6 @@
   @extend %neo-popover;
 
   @include neo-tooltip-content;
-  // @include neo-tooltip-states;
+  @include neo-tooltip-states;
   @include neo-position(&);
 }

@@ -44,9 +44,9 @@
 
   &__item {
     @extend %list-radius;
-
+    margin-bottom: 24px;
     border: 1px solid #939393;
-    border-bottom: 0;
+    // border-bottom: 0;
     display: flex;
     flex-direction: column;
     list-style: none;

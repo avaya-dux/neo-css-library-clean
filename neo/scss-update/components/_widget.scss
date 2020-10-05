@@ -10,24 +10,24 @@
       linear,
       left top,
       right top,
-      from(#c0c0cc),
-      to(#c0c0cc),
+      from(#f1f1f1),
+      to(#f1f1f1),
       color-stop(0.5, #fff)
     );
     background: -moz-gradient(
       linear,
       left top,
       right top,
-      from(#c0c0cc),
-      to(#c0c0cc),
+      from(#f1f1f1),
+      to(#f1f1f1),
       color-stop(0.5, #fff)
     );
     background: gradient(
       linear,
       left top,
       right top,
-      from(#c0c0cc),
-      to(#c0c0cc),
+      from(#f1f1f1),
+      to(#f1f1f1),
       color-stop(0.5, #fff)
     );
     -webkit-background-size: 125px 100%;
@@ -47,7 +47,7 @@
     animation-iteration-count: infinite;
     background-repeat: no-repeat;
     background-position: 0 0;
-    background-color: #c0c0cc;
+    background-color: #f1f1f1;
     // height: 50px;
   }
 }

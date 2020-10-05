@@ -203,6 +203,9 @@
     &::before {
       background-color: $token-color-base-1000;
     }
+    &::after {
+      background-color: $token-color-base-1000;
+    }
   }
 }
 
