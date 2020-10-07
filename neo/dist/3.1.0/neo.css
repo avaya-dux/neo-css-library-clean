@@ -3598,6 +3598,12 @@ label + .neo-input-group {
   right: 0;
 }
 
+.neo-tooltip--onhover:hover > .neo-tooltip__content,
+.neo-tooltip--active > .neo-tooltip__content {
+  display: block;
+  position: absolute;
+}
+
 .neo-tooltip--down .neo-tooltip__content,
 .neo-tooltip--down-right .neo-tooltip__content,
 .neo-tooltip--down-left .neo-tooltip__content {
@@ -5933,24 +5939,24 @@ input:disabled + .neo-switch__icon {
     linear,
     left top,
     right top,
-    from(#c0c0cc),
-    to(#c0c0cc),
+    from(#f1f1f1),
+    to(#f1f1f1),
     color-stop(0.5, #fff)
   );
   background: -moz-gradient(
     linear,
     left top,
     right top,
-    from(#c0c0cc),
-    to(#c0c0cc),
+    from(#f1f1f1),
+    to(#f1f1f1),
     color-stop(0.5, #fff)
   );
   background: gradient(
     linear,
     left top,
     right top,
-    from(#c0c0cc),
-    to(#c0c0cc),
+    from(#f1f1f1),
+    to(#f1f1f1),
     color-stop(0.5, #fff)
   );
   -webkit-background-size: 125px 100%;
@@ -5970,7 +5976,7 @@ input:disabled + .neo-switch__icon {
   animation-iteration-count: infinite;
   background-repeat: no-repeat;
   background-position: 0 0;
-  background-color: #c0c0cc;
+  background-color: #f1f1f1;
 }
 .neo-widget__content .neo-widget__body-disabled {
   background-color: #f1f1f1;
@@ -6120,6 +6126,9 @@ input:disabled + .neo-switch__icon {
   background-color: transparent;
 }
 .neo-modal__info-close .neo-close::before {
+  background-color: #000000;
+}
+.neo-modal__info-close .neo-close::after {
   background-color: #000000;
 }
 
@@ -6392,8 +6401,8 @@ input:disabled + .neo-switch__icon {
 }
 
 .neo-accordion__item {
+  margin-bottom: 24px;
   border: 1px solid #939393;
-  border-bottom: 0;
   display: flex;
   flex-direction: column;
   list-style: none;
@@ -6507,8 +6516,6 @@ input:disabled + .neo-switch__icon {
     transform: translateX(30px);
   }
 }
-
-/* Updated Neo icons */
 
 @font-face {
   font-family: 'updated-neo-icons';
