@@ -313,11 +313,11 @@ async function getAvatarStyles(components) {
 
   // adding common Avatar styles
 
-  avatarJSONObject.avatar['backgroundColor'] = {
+  avatarJSONObject.avatar['background-color'] = {
     value: '{color.blue/800.value}',
   };
 
-  avatarJSONObject.avatar['borderRadius'] = {
+  avatarJSONObject.avatar['border-radius'] = {
     value: '{borderRadius.100%.value}',
   };
 
@@ -328,14 +328,6 @@ async function getAvatarStyles(components) {
 
     // grabbing sizes for each avatar size from one instance of each
 
-    // if (componentName == 'avatar/image/xsmall') {
-    //   avatarJSONObject.avatar['x-small-height'] = {
-    //     value: `${avatarComp.absoluteBoundingBox.height}px`,
-    //   };
-    //   avatarJSONObject.avatar['x-small-width'] = {
-    //     value: `${avatarComp.absoluteBoundingBox.width}px`,
-    //   };
-    // } else
     if (componentName == 'avatar/image/small') {
       avatarJSONObject.avatar['small-height'] = {
         // value: `${avatarComp.absoluteBoundingBox.height}px`,
@@ -399,9 +391,6 @@ async function getAvatarStyles(components) {
       value: '{Web-typography.fontweight-regular.value}',
     },
     'font-size': { value: '{Web-typography.web/heading 4.fontSize.value}' },
-    'letter-spacing': {
-      value: '{Web-typography.web/heading 4.letterSpacing.value}',
-    },
     'line-height': {
       value: '{Web-typography.web/heading 4.lineHeight.value}',
     },
@@ -413,9 +402,6 @@ async function getAvatarStyles(components) {
     },
     'font-size': {
       value: '{Web-typography.web/heading 2 - regular.fontSize.value}',
-    },
-    'letter-spacing': {
-      value: '{Web-typography.web/heading 2 - regular.letterSpacing.value}',
     },
     'line-height': {
       value: '{Web-typography.web/heading 2 - regular.lineHeight.value}',

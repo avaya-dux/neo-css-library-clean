@@ -21,7 +21,7 @@ async function saveIconsToStorage() {
   await fs.readdir('../../properties/assets/icons/pngs').then((files) => {
     files.forEach(async (file) => {
       var stringsToReplace = new RegExp(
-        /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
+        /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-|file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
         'g'
       );
       var amendedFileName = file.replace(stringsToReplace, '');
@@ -43,7 +43,7 @@ async function saveIconsToStorage() {
   await fs.readdir('../../properties/assets/icons/svgs').then((files) => {
     files.forEach(async (file) => {
       var stringsToReplace = new RegExp(
-        /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
+        /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-|file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
         'g'
       );
       var amendedFileName = file.replace(stringsToReplace, '');

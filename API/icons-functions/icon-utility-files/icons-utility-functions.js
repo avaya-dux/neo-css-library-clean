@@ -15,7 +15,7 @@ async function createCopyableSVG(files) {
       .readFile(`../properties/assets/icons/svgs/${file}`)
       .then(async (code) => {
         var stringsToReplace = new RegExp(
-          /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|social(?!-active)|logo|other/,
+          /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
           'g'
         );
         var iconName = file.replace(stringsToReplace, '').replace(/-/g, '');

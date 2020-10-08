@@ -10,7 +10,7 @@ const Handlebars = require('handlebars');
 
 Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
   var stringsToReplace = new RegExp(
-    /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
+    /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
     'g'
   );
 
@@ -27,7 +27,6 @@ async function convertIconFontToBase64() {
   const base64FileBuffer = await fs.readFile(
     '../properties/neo-icon-font.woff'
   );
-  s;
 
   const contents_in_base64 = await base64FileBuffer.toString('base64');
 
