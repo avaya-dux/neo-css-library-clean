@@ -19,7 +19,7 @@
 }
 
 @mixin neo-dropdown-arrow(
-  $arrow-icon: '\f21d',
+  $arrow-icon: '\f21a',
   $color: white,
   $padding-left: $dropdown-padding-x
 ) {
@@ -51,7 +51,7 @@
     > #{$self}__link {
       color: $global-text-color;
 
-      @include neo-dropdown-arrow($arrow-icon: '\f21f');
+      @include neo-dropdown-arrow($arrow-icon: '\f21c');
       &::after {
         font-size: 16px;
         color: $global-text-color;

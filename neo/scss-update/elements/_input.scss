@@ -131,12 +131,16 @@
 // editable input style
 
 .neo-input-editable__wrapper {
+  label + & {
+    margin-top: 3px;
+  }
+
   border-radius: 4px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   border: $input-border-style $input-border-width $input-border-color;
-  min-height: $input-height;
+  max-height: $input-height;
   min-width: $input-width;
   & input,
   & textarea {
@@ -145,6 +149,7 @@
     min-width: 0;
   }
   & .neo-input-edit__icon {
+    border-radius: 4px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -152,14 +157,14 @@
     background-color: $global-background;
     color: $input-clear-button-color;
     // hard-coded for now
-    padding: 11px;
+    padding: 7px;
     &:hover {
       cursor: pointer;
     }
     &::before {
       font-size: 16px;
     }
-    &-disabled {
+    &--disabled {
       background-color: $input-disabled-bg;
     }
   }

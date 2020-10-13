@@ -53,15 +53,15 @@
         $select-padding-x;
 
       &::before {
-        font-family: 'AOC-Icons';
-        content: '\e911';
+        font-family: 'updated-neo-icons';
+        content: '\f1b0';
         width: 1.3em;
         text-align: center;
         display: inline-block;
       }
       &:checked::before {
-        font-family: 'AOC-Icons';
-        content: '\e914';
+        font-family: 'updated-neo-icons';
+        content: '\f1c8';
       }
       @include rtl-selector {
         padding: {
@@ -89,10 +89,14 @@
 }
 
 @mixin neo-select-arrow {
+  &--disabled:not(.neo-select--multiple)::after {
+    color: $select-disabled-color;
+  }
+
   &:not(.neo-select--multiple)::after {
     align-items: center;
-    font-family: 'AOC-Icons';
-    content: '\e9a1';
+    font-family: 'updated-neo-icons';
+    content: '\f21a';
     display: inline-flex;
     justify-content: center;
     pointer-events: none;

@@ -71,6 +71,10 @@
   transition-property: background-color, box-shadow;
   width: auto;
 
+  &:not(:empty) {
+    vertical-align: super;
+  }
+
   &[type='button'] {
     line-height: 1;
   }

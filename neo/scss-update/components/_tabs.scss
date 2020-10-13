@@ -106,9 +106,12 @@
     }
 
     &:focus {
-      background-color: $tab-disabled-bg-color;
       box-shadow: none;
-      color: $tab-disabled-color;
+      // bug fix for disbaled tab color
+      // color: $tab-disabled-color;
+      // background-color: $tab-disabled-bg-color;
+      color: $token-color-base-400;
+      background-color: $token-color-base-100;
     }
 
     .neo-close {
