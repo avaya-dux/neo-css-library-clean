@@ -90,6 +90,11 @@
 }
 
 .neo-btn {
+  &--wide {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
   @extend %button;
   @include neo-icons;
 }

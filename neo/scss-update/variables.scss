@@ -756,6 +756,11 @@ $group-list-transition: background-color $global-transition-duration ease-in-out
 $group-list-white: $token-color-base-100 !default;
 $group-list-disabled-bg-color: $token-accordion-hover-disabled-background-color !default;
 $group-list-disabled-hover-color: $token-accordion-hover-disabled-color !default;
+// new variables for Neo 3.2.0 Components
+$group-list-section-width: $token-list-section-width !default;
+$group-list-section-padding: $token-list-section-padding !default;
+$group-list-section-background: $token-color-base-100;
+$group-list-section-action-padding: $token-list-section-action-padding !default;
 
 //
 // Component name: Accordion
@@ -771,6 +776,17 @@ $accordion-icon-animation: rotate(0) !default;
 $accordion-active-icon-animation: rotate(-180deg) !default;
 $accordion-padding-y: $group-list-padding-y !default;
 $accordion-padding-x: $group-list-padding-x !default;
+
+//
+// Component name: Sheet
+// Location: src/scss/components/_sheet.scss
+//
+
+$sheet-width: $token-sheet-width !default;
+$sheet-padding: $token-sheet-padding !default;
+$sheet-transition: $token-interactivity-motion-fade-slow
+  $token-interactivity-motion-ease-in !default;
+$sheet-background: $token-color-base-0 !default;
 
 //
 // Element name: Pagination

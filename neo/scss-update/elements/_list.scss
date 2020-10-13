@@ -147,26 +147,55 @@
 // Neo 3.2.0 list sections w/ actions
 
 %list-action-item {
-  background-color: transparent;
-  border: $group-list-border-width solid $group-list-border-color;
-  border-bottom: 0; /* Remove border-bottom for better stylization */
+  background-color: $group-list-section-background;
+  border-radius: $group-list-radius;
   color: $group-list-item-color;
+  width: $group-list-section-width;
   display: flex;
   justify-content: space-between;
   font-size: $group-list-font-size;
   list-style-type: none;
-  padding: $group-list-padding-y $group-list-padding-x;
+  padding: $group-list-section-padding;
   transition: $group-list-transition;
+
+  &:not(:last-child) {
+    margin-bottom: 15px;
+  }
 }
 
 @mixin list-actions {
   & .neo-group-list__actions--left {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    padding: $group-list-section-action-padding;
+    & p {
+      margin-bottom: 0;
+    }
+    & span {
+      margin-right: 5px;
+      &:before {
+        font-size: 21px;
+      }
+    }
   }
 
   & .neo-group-list__actions--right {
     display: flex;
     justify-content: space-around;
+    align-items: center;
+    padding: $group-list-section-action-padding;
+    & button:before {
+      font-size: 21px;
+    }
+    & .neo-form-control {
+      margin-bottom: 0;
+      & .neo-switch {
+        padding: 0;
+      }
+    }
+    & span::before {
+      font-size: 19px;
+    }
   }
 }

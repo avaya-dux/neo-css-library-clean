@@ -174,11 +174,29 @@
           }
         },
         {
+          "destination": "_sheet.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "sheet"
+            }
+          }
+        },
+        {
           "destination": "_modal.scss",
           "format": "scss/variables",
           "filter": {
             "attributes": {
               "category": "modal"
+            }
+          }
+        },
+        {
+          "destination": "_listSection.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "listSection"
             }
           }
         },

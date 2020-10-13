@@ -23,7 +23,6 @@
 
   &__item {
     @extend %list-action-item;
-    @extend %list-radius;
 
     @include list-actions;
   }

@@ -2331,6 +2331,63 @@ async function getNotificationStyles(components) {
   // console.log(notificationComponents);
 }
 
+// #region getListSectionStyles
+
+async function getListSectionStyles(components) {
+  const listSectionJSONObject = {
+    listSection: {},
+  };
+
+  listSectionJSONObject.listSection[`width`] = {
+    value: `304px`,
+  };
+
+  listSectionJSONObject.listSection[`padding`] = {
+    value: `12px`,
+  };
+
+  listSectionJSONObject.listSection[`action-padding`] = {
+    value: `0px`,
+  };
+
+  await fs
+    .writeFile(
+      '../properties/components/listSection.json',
+      JSON.stringify(listSectionJSONObject)
+    )
+    .then(function () {
+      console.log('listSection.json created');
+    });
+}
+
+// //#endregion
+
+// #endregion
+
+// #region
+
+async function getSheetStyles(components) {
+  const sheetJSONObject = {
+    sheet: {},
+  };
+
+  sheetJSONObject.sheet[`width`] = {
+    value: `352px`,
+  };
+  sheetJSONObject.sheet[`padding`] = {
+    value: `24px`,
+  };
+
+  await fs
+    .writeFile(
+      '../properties/components/sheet.json',
+      JSON.stringify(sheetJSONObject)
+    )
+    .then(function () {
+      console.log('sheet.json created');
+    });
+}
+
 // #endregion
 
 // #region getPopoverStyles
@@ -2344,20 +2401,26 @@ async function getPopoverStyles(components) {
     popover: {},
   };
 
-  components.Overlay.children.forEach((child) => {
-    if (child.name.includes('popover') && child.type !== 'TEXT') {
-      // if (child.name.includes('scrim')) {
-      //   modalComponents.push({
-      //     'scrim-color': `rgba(0, 0, 0, ${child.opacity})`,
-      //   });
-      // }
-      popoverJSONObject.popover['header-height'] = {
-        value: `${child.children[0].absoluteBoundingBox.height}px`,
-      };
+  // components.Overlay.children.forEach((child) => {
+  //   if (child.name.includes('popover') && child.type !== 'TEXT') {
+  //     // if (child.name.includes('scrim')) {
+  //     //   modalComponents.push({
+  //     //     'scrim-color': `rgba(0, 0, 0, ${child.opacity})`,
+  //     //   });
+  //     // }
+  //     popoverJSONObject.popover['header-height'] = {
+  //       value: `${child.children[0].absoluteBoundingBox.height}px`,
+  //     };
 
-      popoverComponents.push(child);
-    }
-  });
+  //     popoverComponents.push(child);
+  //   }
+  // });
+
+  // popover header height
+
+  popoverJSONObject.popover[`headerHeight`] = {
+    value: `35px`,
+  };
 
   // border
 
@@ -2556,6 +2619,8 @@ coreFigmaFunctions
     getPopoverStyles(value);
     getTabStyles(value);
     getWidgetStyles(value);
+    getListSectionStyles(value);
+    getSheetStyles(value);
   });
 
 // #endregion
