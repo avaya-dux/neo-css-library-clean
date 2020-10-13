@@ -108,6 +108,15 @@ async function getButtonStyles(components) {
         value: `${component.absoluteBoundingBox.height}px`,
       };
 
+      if (component.strokes.length > 0) {
+        buttonsJSONObject.button[componentName + 'borderWeight'] = {
+          value: `${component.strokeWeight}px`,
+        };
+        buttonsJSONObject.button[componentName + 'borderStyle'] = {
+          value: `${component.strokes[0].type.toLowerCase()}`,
+        };
+      }
+
       // one level deep - flexbox styles, padding, border styles
 
       if (component.children[0].layoutMode === 'HORIZONTAL') {
@@ -124,23 +133,39 @@ async function getButtonStyles(components) {
         };
       }
 
-      if (component.children[0].strokes.length > 0) {
-        buttonsJSONObject.button[componentName + 'borderWeight'] = {
-          value: `${component.strokeWeight}px`,
+      // temporary fix for updated properties in Figma for Neo 3.2.0
+
+      if (
+        componentName === 'square-secondary-default' ||
+        componentName === 'square-primary-default' ||
+        componentName === 'square-tertiary-default' ||
+        componentName === 'square-disabled-default'
+      ) {
+        buttonsJSONObject.button[componentName + '-padding-x'] = {
+          value: `7px`,
         };
-        buttonsJSONObject.button[componentName + 'borderStyle'] = {
-          value: `${component.children[0].strokes[0].type.toLowerCase()}`,
+        buttonsJSONObject.button[componentName + '-padding-y'] = {
+          value: `7px`,
+        };
+      } else if (
+        componentName === 'circular-primary-default' ||
+        componentName === 'circular-secondary-default' ||
+        componentName === 'circular-disabled-default'
+      ) {
+        buttonsJSONObject.button[componentName + '-padding-x'] = {
+          value: `7px`,
+        };
+        buttonsJSONObject.button[componentName + '-padding-y'] = {
+          value: `7px`,
+        };
+      } else {
+        buttonsJSONObject.button[componentName + '-padding-x'] = {
+          value: `${component.children[0].horizontalPadding}px`,
+        };
+        buttonsJSONObject.button[componentName + '-padding-y'] = {
+          value: `${component.children[0].verticalPadding}px`,
         };
       }
-
-      buttonsJSONObject.button[componentName + 'padding-x'] = {
-        value: `${component.children[0].horizontalPadding}px`,
-      };
-
-      buttonsJSONObject.button[componentName + 'padding-y'] = {
-        value: `${component.children[0].verticalPadding}px`,
-      };
-
       // two levels deep - text styles
 
       component.children[0].children.forEach((child) => {
@@ -2309,6 +2334,8 @@ async function getNotificationStyles(components) {
 // #endregion
 
 // #region getPopoverStyles
+
+// popovers no longer supported in Figma but we need them in the code
 
 async function getPopoverStyles(components) {
   const popoverComponents = [];

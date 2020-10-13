@@ -143,3 +143,30 @@
     @include neo-border-bottom-radius($group-list-radius);
   }
 }
+
+// Neo 3.2.0 list sections w/ actions
+
+%list-action-item {
+  background-color: transparent;
+  border: $group-list-border-width solid $group-list-border-color;
+  border-bottom: 0; /* Remove border-bottom for better stylization */
+  color: $group-list-item-color;
+  display: flex;
+  justify-content: space-between;
+  font-size: $group-list-font-size;
+  list-style-type: none;
+  padding: $group-list-padding-y $group-list-padding-x;
+  transition: $group-list-transition;
+}
+
+@mixin list-actions {
+  & .neo-group-list__actions--left {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  & .neo-group-list__actions--right {
+    display: flex;
+    justify-content: space-around;
+  }
+}

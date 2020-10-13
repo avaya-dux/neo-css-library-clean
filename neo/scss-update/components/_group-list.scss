@@ -15,3 +15,16 @@
   @include list--hover('item');
   // @include list--borderless;
 }
+
+// Neo 3.2.0 list sections w/ actions
+
+.neo-group-list--actions {
+  @extend %list;
+
+  &__item {
+    @extend %list-action-item;
+    @extend %list-radius;
+
+    @include list-actions;
+  }
+}

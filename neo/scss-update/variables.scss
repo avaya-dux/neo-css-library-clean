@@ -492,7 +492,7 @@ $button-bg-color-lightness-scale: 60 !default;
 $button-transition: background-color $global-transition-duration ease-in-out !default;
 $button-font-weight: $token-button-primary-defaultfont-weight !default;
 $button-height: $token-button-primary-defaultheight !default;
-$button-padding-x: $token-button-primary-defaultpadding-x !default;
+$button-padding-x: $token-button-primary-default-padding-x !default;
 $button-min-width: $token-button-primary-defaultwidth !default;
 $button-border-width: $token-button-secondary-defaultborder-weight !default;
 $button-border-radius: $token-button-circular-primary-defaultborder-radius !default;
@@ -513,7 +513,7 @@ $button-secondary-border-style: $token-button-secondary-defaultborder-style !def
 $button-tertiary-hover-bg-color: $token-color-base-200 !default;
 $button-circular-height: $token-button-circular-height !default;
 $button-circular-width: $token-button-circular-width !default;
-$button-padding-y: $token-button-primary-defaultpadding-y !default;
+$button-padding-y: $token-button-primary-default-padding-y !default;
 $button-icon-font-size: $token-button-icon-font-size !default;
 
 $button-types: () !default;
