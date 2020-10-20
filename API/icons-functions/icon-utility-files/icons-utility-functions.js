@@ -1,5 +1,5 @@
 const fs = require('fs').promises;
-
+const replace = require('./icon-replacement-string');
 // test functions for recording information on icons for inclusion in Design Portal site
 
 // test function to generate a .js file with exportable SVG code so users can copy it on our portal
@@ -14,11 +14,9 @@ async function createCopyableSVG(files) {
     await fs
       .readFile(`../properties/assets/icons/svgs/${file}`)
       .then(async (code) => {
-        var stringsToReplace = new RegExp(
-          /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
-          'g'
-        );
-        var iconName = file.replace(stringsToReplace, '').replace(/-/g, '');
+        var iconName = file
+          .replace(replace.stringsToReplace, '')
+          .replace(/-/g, '');
         var codeString = await code
           .toString()
           .replace(/xlink:href/g, 'xlinkHref')
@@ -42,10 +40,6 @@ async function getIconInformation(string) {
   // get the full icon name ex. outline/content/worklog
 
   var fullIconName = string.toLowerCase().replace(/\-|\/|\s+/g, '');
-
-  // this line logs the icon names to console for inclusion in the Design Portal
-  // TO-DO - create a seperate file to hold this information
-  // console.log(`"${fullIconName}",`);
 
   // get the icon type ex. outline
 
@@ -72,7 +66,8 @@ async function getIconInformation(string) {
   );
 
   // functionality to log icon names to console
-  // TO-DO: separate out into function
+  // this line logs the icon names to console for inclusion in the Design Portal
+  // TO-DO - create a seperate file to hold this information
 
   if (iconOutlineType != 'fill') {
     // console.log(`"${iconName.replace(/-/g, '')}",`);

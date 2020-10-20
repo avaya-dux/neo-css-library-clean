@@ -757,7 +757,10 @@ $group-list-white: $token-color-base-100 !default;
 $group-list-disabled-bg-color: $token-accordion-hover-disabled-background-color !default;
 $group-list-disabled-hover-color: $token-accordion-hover-disabled-color !default;
 // new variables for Neo 3.2.0 Components
-$group-list-section-width: $token-list-section-width !default;
+// hard-coded for now
+$group-list-section-width: 100% !default;
+$group-list-section-height: 44px !default;
+// end of hard-coding
 $group-list-section-padding: $token-list-section-padding !default;
 $group-list-section-background: $token-color-base-100;
 $group-list-section-action-padding: $token-list-section-action-padding !default;
@@ -783,10 +786,14 @@ $accordion-padding-x: $group-list-padding-x !default;
 //
 
 $sheet-width: $token-sheet-width !default;
+$sheet-min-height: $token-sheet-min-height !default;
 $sheet-padding: $token-sheet-padding !default;
 $sheet-transition: $token-interactivity-motion-fade-slow
   $token-interactivity-motion-ease-in !default;
 $sheet-background: $token-color-base-0 !default;
+$sheet-shadow: $token-shadows-elevation-300-x-offset
+  $token-shadows-elevation-300-y-offset $token-shadows-elevation-300-radius
+  $token-shadows-elevation-300-color !default;
 
 //
 // Element name: Pagination
@@ -917,7 +924,7 @@ $chip-btn-margin-left: $global-spacer !default;
 $chip-btn-opacity: 0.4 !default;
 $chip-disabled-bg: $global-disabled-bg !default;
 $chip-disabled-color: $global-disabled-color !default;
-$chip-expandable-icon: '\f21d' !default;
+$chip-expandable-icon: '\f234' !default;
 
 // Component name: Tab
 // Location: src/scss/components/_tabs.scss

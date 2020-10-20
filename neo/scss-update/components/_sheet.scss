@@ -1,15 +1,45 @@
 %sheet {
   width: $sheet-width;
+  min-height: $sheet-min-height;
   padding: $sheet-padding;
   transition: $sheet-transition;
   display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  box-shadow: $sheet-shadow;
 }
 
 @mixin sheet-header {
   &__header {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &--left {
+      & h4 {
+        margin-bottom: 0;
+        &::before {
+          margin-right: 16px;
+        }
+      }
+    }
+
+    &--right {
+      & button:not(:last-child) {
+        margin-right: 8px;
+      }
+    }
+
+    &--left,
+    &--right {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 }
 
 .neo-sheet {
+  @extend %sheet;
+
+  @include sheet-header;
 }

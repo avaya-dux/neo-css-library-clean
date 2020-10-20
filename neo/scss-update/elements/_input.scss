@@ -166,6 +166,9 @@
     }
     &--disabled {
       background-color: $input-disabled-bg;
+      &:hover {
+        cursor: not-allowed;
+      }
     }
   }
 }

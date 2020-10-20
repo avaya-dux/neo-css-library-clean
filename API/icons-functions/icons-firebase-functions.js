@@ -4,6 +4,8 @@
 
 const fs = require('fs').promises;
 
+const replace = require('./icon-utility-files/icon-replacement-string');
+
 // importing Firebase in order to upload icons to database
 
 var admin = require('firebase-admin');
@@ -20,11 +22,7 @@ async function saveIconsToStorage() {
   var bucket = admin.storage().bucket();
   await fs.readdir('../../properties/assets/icons/pngs').then((files) => {
     files.forEach(async (file) => {
-      var stringsToReplace = new RegExp(
-        /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-|file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
-        'g'
-      );
-      var amendedFileName = file.replace(stringsToReplace, '');
+      var amendedFileName = file.replace(replace.stringsToReplace, '');
       await bucket
         .upload(`../../properties/assets/icons/pngs/${file}`, {
           destination: `PNGs/${amendedFileName}`,
@@ -42,11 +40,7 @@ async function saveIconsToStorage() {
 
   await fs.readdir('../../properties/assets/icons/svgs').then((files) => {
     files.forEach(async (file) => {
-      var stringsToReplace = new RegExp(
-        /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-|file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
-        'g'
-      );
-      var amendedFileName = file.replace(stringsToReplace, '');
+      var amendedFileName = file.replace(replace.stringsToReplace, '');
       await bucket
         .upload(`../../properties/assets/icons/svgs/${file}`, {
           // need to rename file here

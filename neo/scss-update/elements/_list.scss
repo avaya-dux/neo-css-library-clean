@@ -151,6 +151,8 @@
   border-radius: $group-list-radius;
   color: $group-list-item-color;
   width: $group-list-section-width;
+
+  height: $group-list-section-height;
   display: flex;
   justify-content: space-between;
   font-size: $group-list-font-size;
@@ -195,7 +197,7 @@
       }
     }
     & span::before {
-      font-size: 19px;
+      font-size: 24px;
     }
   }
 }

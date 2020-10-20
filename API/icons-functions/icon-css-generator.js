@@ -8,13 +8,10 @@ const { includes } = require('lodash');
 
 const Handlebars = require('handlebars');
 
-Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
-  var stringsToReplace = new RegExp(
-    /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
-    'g'
-  );
+const replace = require('./icon-utility-files/icon-replacement-string');
 
-  var amendedArg = arg1.replace(stringsToReplace, '');
+Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
+  var amendedArg = arg1.replace(replace.stringsToReplace, '');
 
   return amendedArg === arg2 ? options.fn(this) : options.inverse(this);
 });
@@ -48,7 +45,11 @@ convertIconFontToBase64().then(async (result) => {
       // we temporarily filter out 'fill' type icons
 
       var unfilteredArray = files.map((file) => {
-        if (file.includes('fill') && !file.includes('star')) {
+        if (
+          file.includes('fill') &&
+          !file.includes('star') &&
+          !file.includes('arrow')
+        ) {
           return;
         } else {
           return `../properties/assets/icons/svgs/${file}`;
@@ -59,6 +60,16 @@ convertIconFontToBase64().then(async (result) => {
         return icon != undefined;
       });
     });
+
+  /*// NOTE:
+
+    -- Icon unicode needs to be manually updated when specified in Neo code. This is the case for the following components:
+    * Accordions
+    * Checkboxes
+    * Dropdown
+    * Selectbox
+    * Expandable Chip
+    //*/
 
   // We pass both the above array and the base64 String into the webfontsGenerator function
 

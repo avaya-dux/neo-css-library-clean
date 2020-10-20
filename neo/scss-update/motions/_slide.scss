@@ -1,18 +1,29 @@
 .neo-slide {
   animation-duration: $global-transition-duration;
   animation-fill-mode: both;
-  animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-  &--in {
-    animation-name: slideIn;
+  &--in-left {
+    animation-name: slideInLeft;
+    animation-timing-function: $token-interactivity-motion-ease-in;
   }
 
-  &--out {
-    animation-name: slideOut;
+  &--out-left {
+    animation-name: slideOutLeft;
+    animation-timing-function: $token-interactivity-motion-ease-out;
+  }
+
+  &--in-right {
+    animation-name: slideInRight;
+    animation-timing-function: $token-interactivity-motion-ease-out;
+  }
+
+  &--out-right {
+    animation-name: slideOutRight;
+    animation-timing-function: $token-interactivity-motion-ease-out;
   }
 }
 
-@keyframes slideIn {
+@keyframes slideInLeft {
   0% {
     opacity: 0;
     transform: translateX(-30px);
@@ -22,7 +33,27 @@
   }
 }
 
-@keyframes slideOut {
+@keyframes slideOutLeft {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
   0% {
     opacity: 1;
   }

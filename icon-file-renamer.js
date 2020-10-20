@@ -1,13 +1,10 @@
 const fs = require('fs');
 
-const PNG1 = fs.readdirSync('./resized-icons/@1PNGs');
+const pngs = fs.readdirSync('./resized-icons/pngs');
 
-const PNG2 = fs.readdirSync('./resized-icons/@3PNGs');
+const svgs = fs.readdirSync('./resized-icons/svgs');
 
-var stringsToReplace = new RegExp(
-  /(?<!email-|info-|error-|warning-|star-)outline|status|communication|(?<!file)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|social(?!-active)|logo|other/,
-  'g'
-);
+const replace = require('./API/icons-functions/icon-utility-files/icon-replacement-string');
 
 // for (const file of PNG1) {
 //   fs.rename(
@@ -19,12 +16,32 @@ var stringsToReplace = new RegExp(
 //   );
 // }
 
-for (const file of PNG2) {
+// for (const file of PNG2) {
+//   fs.rename(
+//     `./resized-icons/@3PNGs/${file}`,
+//     `./resized-icons/@3PNGs/${file.replace(stringsToReplace, '')}`,
+//     (err) => {
+//       console.log(err);
+//     }
+//   );
+// }
+
+for (const file of pngs) {
   fs.rename(
-    `./resized-icons/@3PNGs/${file}`,
-    `./resized-icons/@3PNGs/${file.replace(stringsToReplace, '')}`,
+    `./resized-icons/pngs/${file}`,
+    `./resized-icons/pngs/${file.replace(replace.stringsToReplace, '')}`,
     (err) => {
       console.log(err);
     }
   );
 }
+
+// for (const file of svgs) {
+//   fs.rename(
+//     `./resized-icons/svgs/${file}`,
+//     `./resized-icons/svgs/${file.replace(replace.stringsToReplace, '')}`,
+//     (err) => {
+//       console.log(err);
+//     }
+//   );
+// }

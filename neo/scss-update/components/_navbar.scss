@@ -51,6 +51,10 @@
   .neo-form--inline {
     margin-left: $navbar-padding-x;
 
+    & .neo-form-control {
+      margin-bottom: 0px;
+    }
+
     @include rtl-selector {
       margin: {
         right: $navbar-padding-x;
@@ -58,7 +62,7 @@
     }
 
     .neo-input {
-      border: 0;
+      // border: 0;
     }
   }
 
@@ -208,6 +212,7 @@
     }
 
     & .neo-label {
+      width: auto;
       padding: 2px 8px;
       border-radius: 16px !important;
       color: $button-inverse-text-color;

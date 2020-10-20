@@ -2377,6 +2377,9 @@ async function getSheetStyles(components) {
   sheetJSONObject.sheet[`padding`] = {
     value: `24px`,
   };
+  sheetJSONObject.sheet[`min-height`] = {
+    value: `744px`,
+  };
 
   await fs
     .writeFile(

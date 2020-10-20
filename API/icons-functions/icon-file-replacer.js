@@ -1,5 +1,7 @@
 const replace = require('replace-in-file');
 
+const replaceString = require('./icon-utility-files/icon-replacement-string');
+
 // code to format icon name for .css file
 // hard-coded for now in the interest of time
 // TO-DO: need to add RegEx for:
@@ -25,14 +27,10 @@ const replace = require('replace-in-file');
 */
 
 // this is also used in icons-utility-functions to create copyable SVGs, and in our Firebase Functiosn file to change the file name as necessary
-var stringsToReplace = new RegExp(
-  /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file-)file(?!type|:|-xls|-json|-zip)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|content(?!\:)|editor|(?<!icon-)social(?!-active)|logo|other/,
-  'g'
-);
 
 const iconReplace = {
   files: '../build/css/updated-neo-icons.css',
-  from: stringsToReplace,
+  from: replaceString.stringsToReplace,
   to: '',
 };
 

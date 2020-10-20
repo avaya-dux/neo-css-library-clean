@@ -90,6 +90,7 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
   // we initialize variables to hold the information required to make the API calls
 
   let iconsArrays = {
+    totalIcons: 0,
     figmaIconTags: [],
     figmaFileNodes: [],
     figmaIconNames: [],
@@ -97,6 +98,8 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
 
   iconsOnAll.forEach(async (component) => {
     // we create an object to associate particular icon names with their node id
+
+    iconsArrays.totalIcons++;
 
     var compName = component.name.toLowerCase();
     // we skip over the template icon
@@ -111,7 +114,11 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
     // temporarily skip over 'fill' icons
     // TO-DO: separate this out
 
-    if (iconName.includes('fill') && !iconName.includes('star')) {
+    if (
+      iconName.includes('fill') &&
+      !iconName.includes('star') &&
+      !iconName.includes('arrow')
+    ) {
       return;
     }
 
@@ -150,6 +157,8 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
         console.log(error);
       });
   });
+
+  console.log(`Total number of icons is: ${iconsArrays.totalIcons}`);
 
   return iconsArrays;
 }
