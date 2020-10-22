@@ -130,3 +130,51 @@ hr {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
+
+// utility classes to apply tokens
+
+.neo-underline {
+  text-decoration: underline;
+}
+
+.neo-italic {
+  text-decoration: italic;
+}
+
+.neo-light {
+  font-weight: 300;
+}
+
+.neo-regular {
+  font-weight: 400;
+}
+
+.neo-semibold {
+  font-weight: 600;
+}
+
+.neo-bold {
+  font-weight: 700;
+}
+
+// typography utility classes
+
+.neo-body-tiny {
+  font-size: $token-web-typography-web-tiny-body-font-size;
+  line-height: $token-web-typography-web-tiny-body-line-height;
+}
+
+.neo-body-small {
+  font-size: $token-web-typography-web-small-body-font-size;
+  line-height: $token-web-typography-web-small-body-line-height;
+}
+
+.neo-body-regular {
+  font-size: $token-web-typography-web-body-regular-font-size;
+  line-height: $token-web-typography-web-body-regular-line-height;
+}
+
+.neo-body-large {
+  font-size: $token-web-typography-web-large-body-font-size;
+  line-height: $token-web-typography-web-large-body-line-height;
+}

@@ -1,0 +1,43 @@
+// regular body
+
+@include print-token-as-css-vars(
+  'body-regular-font-size',
+  $token-web-typography-web-body-regular-font-size
+);
+@include print-token-as-css-vars(
+  'body-regular-line-height',
+  $token-web-typography-web-body-regular-line-height
+);
+
+// tiny body
+
+@include print-token-as-css-vars(
+  'body-tiny-font-size',
+  $token-web-typography-web-tiny-body-font-size
+);
+@include print-token-as-css-vars(
+  'body-tiny-line-height',
+  $token-web-typography-web-tiny-body-line-height
+);
+
+// small body
+
+@include print-token-as-css-vars(
+  'body-small-font-size',
+  $token-web-typography-web-small-body-font-size
+);
+@include print-token-as-css-vars(
+  'body-small-line-height',
+  $token-web-typography-web-small-body-line-height
+);
+
+// large body
+
+@include print-token-as-css-vars(
+  'body-large-font-size',
+  $token-web-typography-web-large-body-font-size
+);
+@include print-token-as-css-vars(
+  'body-large-line-height',
+  $token-web-typography-web-large-body-line-height
+);

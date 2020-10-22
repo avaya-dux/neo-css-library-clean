@@ -30,6 +30,12 @@
   --neo-#{$color}-color-l: #{$lightness};
 }
 
+// token helpers
+
+@mixin print-token-as-css-vars($name, $value) {
+  --neo-#{$name}: #{$value};
+}
+
 // Media query to apply styles to all screens that are greater than given 'min-width' value
 @mixin from-screen-size($min-width) {
   @media only screen and (min-width: $min-width) {
