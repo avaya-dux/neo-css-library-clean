@@ -24,6 +24,9 @@
     @include pagination-item--hover;
     @include pagination-item--disabled;
     @include pagination-item--active;
+    &--more {
+      align-self: flex-end;
+    }
   }
   &__item-arrow {
     @extend %button;
