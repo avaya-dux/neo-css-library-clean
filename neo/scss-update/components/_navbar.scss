@@ -149,15 +149,34 @@
     align-items: center;
     transition: $button-transition;
     transition-property: background-color;
-    & button {
-      &::before {
-        color: #1473e6;
+    &--active {
+      border-bottom: 2px solid $navbar-icon-selected-color;
+      &:hover {
+        background-color: white !important;
+        border-bottom-color: $navbar-icon-hover-color !important;
+        & button {
+          background-color: white !important;
+          &::before {
+            color: $navbar-icon-hover-color !important;
+          }
+        }
+      }
+      & button::before {
+        color: $navbar-icon-selected-color !important;
       }
     }
-    &:hover {
+    & button {
+      &::before {
+        color: $navbar-default-icon-color;
+      }
+    }
+    &:not(.neo-badge__navbutton--active):hover {
       background-color: $navbar-background-color-hover;
       & button {
         background-color: $navbar-background-color-hover !important;
+        &::before {
+          color: $navbar-icon-hover-color !important;
+        }
       }
     }
     .neo-badge__icon::after {
@@ -195,6 +214,10 @@
     font-size: 32px;
   }
   & .neo-nav-status {
+    & span {
+      font-size: 12px !important;
+    }
+
     padding: 11px 16px;
     @each $name, $color in $neo-navbar-colors {
       &--#{$name} {
@@ -205,9 +228,12 @@
     & .neo-nav-status-info {
       display: flex;
       flex-direction: column;
-
+      max-width: 77%;
       & p {
         margin: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
       }
     }
 

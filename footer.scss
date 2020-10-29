@@ -1,0 +1,203 @@
+.av-footer {
+  width: 100%;
+  bottom: 0;
+  font-size: 13px;
+  color: #4b4b4b;
+  background-color: #004e6c;
+  a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #4b4b4b;
+    font-size: 13px;
+    &:hover {
+      color: #da291c;
+    }
+  }
+  .footer-pattern-bg {
+    img {
+      width: 100%;
+      height: 25px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      font-family: 'object-fit: cover; object-position: 50% 50%;';
+      opacity: 0.5;
+    }
+  }
+  .footer {
+    font-size: 13px;
+    padding: 80px 100px 60px;
+    color: #fff;
+    .inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+      padding: 0px 30px;
+      .col {
+        flex: 1;
+        h4 {
+          font-size: 14px;
+          text-transform: uppercase;
+          color: #fff;
+          font-weight: 100;
+          padding-bottom: 10px;
+        }
+        p {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 22px;
+          color: #fff;
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+    .social-share {
+      width: 100%;
+      text-align: right;
+      padding: 12px 0px;
+      max-width: 1440px;
+      width: 100%;
+      padding-right: 30px;
+      p.stay-connnected {
+        padding: 12px 12px 0px 0px;
+        font-size: 14px;
+        line-height: 26px;
+        color: #fff;
+        font-weight: 100;
+        margin-right: 78px;
+      }
+      .social-icons {
+        padding: 0px;
+        max-width: 100%;
+        width: 100%;
+        border-bottom: none;
+        height: 60px;
+        .icons {
+          justify-content: flex-end;
+          a {
+            margin: 0px 5px;
+            background: #1b77a0;
+            transition: background 0.2s, color 0.2s;
+
+            i {
+              font-size: 16px;
+              color: #fff;
+            }
+            &:hover {
+              i {
+                color: #fff;
+              }
+            }
+          }
+          .social-icon-wrap:hover {
+            border: 2px solid white;
+            border-radius: 50%;
+            a {
+              width: 28px;
+              height: 28px;
+              margin: 5px;
+              background: #fff;
+              i {
+                font-size: 14px;
+                color: #004e6c;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .av-sub-footer {
+    background: #fff;
+    height: 100px;
+    padding-bottom: 215px;
+    .inner {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 25px 100px;
+      max-width: 1440px;
+      margin: 0 auto;
+      width: 100%;
+      .av-logo {
+        padding: 8px 20px 15px 0px;
+        img {
+          width: 100%;
+        }
+      }
+      .policy {
+        flex: 1;
+        padding: 10px;
+        text-align: center;
+        p {
+          display: inline-block;
+          padding: 0px 15px;
+          border-right: 1px solid #b9b9b9;
+        }
+        p:last-child {
+          border-right: none;
+          margin-left: 0px;
+        }
+        p {
+          .optanon-show-settings-popup-wrapper {
+            height: auto;
+            .optanon-show-settings-button {
+              .optanon-show-settings-middle {
+                border-right: none;
+                padding-right: 0px;
+              }
+            }
+          }
+        }
+      }
+      .end-tag {
+        padding: 14px 20px 14px 20px;
+      }
+    }
+  }
+  @media (min-width: 767px) and (max-width: 1024px) {
+    .footer {
+      padding: 40px 20px;
+      .inner {
+        .col {
+          padding: 10px;
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .footer {
+      padding: 20px;
+      .inner {
+        flex-direction: column;
+        .col {
+          padding-bottom: 10px;
+        }
+      }
+    }
+    .av-sub-footer {
+      .inner {
+        flex-direction: column;
+        padding: 20px;
+        .av-logo {
+          width: 120px;
+          margin: 0 auto;
+        }
+        .policy {
+          padding: 5px;
+        }
+        .end-tag {
+          padding: 10px;
+          text-align: center;
+        }
+      }
+    }
+  }
+  .toggleOpacityFooter {
+    opacity: 0.6;
+  }
+}

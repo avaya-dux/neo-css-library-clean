@@ -101,21 +101,25 @@
   // box-shadow: $modal-shadow;
   display: flex;
   flex-direction: column;
-  max-width: $modal-width;
+  max-width: 100%;
   overflow: auto;
   // padding: 0 $modal-padding-y;
   position: relative;
-  width: $modal-width;
+  width: auto;
   // z-index: $modal-content-z;
 
   .neo-widget__header {
     @include widget-element(16px);
     // text-align: center;
     width: 100%;
-    vertical-align: center;
+    // vertical-align: middle;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-items: center;
+    &::before {
+      margin-right: 10px;
+    }
     & .neo-widget__header-left {
       display: flex;
       flex-direction: row;
@@ -134,7 +138,8 @@
     & .neo-widget__header-right {
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: flex-end;
+      flex: auto;
       & [class^='neo-icon-']:before,
       & [class*='neo-icon-']:before {
         font-size: 24px;

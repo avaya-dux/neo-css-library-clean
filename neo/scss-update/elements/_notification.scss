@@ -35,7 +35,9 @@
 @mixin notification-description {
   &__description {
     font-size: $notification-description-font-size;
-    margin-top: $global-spacer-large;
+    &:not(:first-child) {
+      margin-top: $global-spacer-large;
+    }
   }
 }
 

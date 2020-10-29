@@ -689,6 +689,9 @@ $navbar-item-disabled-color: darken-var($navbar-text-color, 30%) !default;
 $navbar-item-hover-background-color: transparent !default;
 $navbar-item-active-background-color: transparent !default;
 $navbar-background-color-hover: $token-color-blue-100 !default;
+$navbar-default-icon-color: $token-color-base-800 !default;
+$navbar-icon-hover-color: $token-color-blue-600 !default;
+$navbar-icon-selected-color: $token-color-blue-500 !default;
 
 // //
 // // Component name: Footer
@@ -935,7 +938,7 @@ $tab-offset: $global-spacer !default;
 $tab-container-margin: 0 6px !default;
 $tab-border-bottom-color: $token-tabs-border-bottom-color !default;
 $tab-transition: transform 0.5s ease !default;
-$tab-padding-default: 15px 30px !default;
+$tab-padding-default: 8px 46px 0px 46px !default;
 $tab-padding-small: 6px 25px !default;
 $tab-padding-medium: 10px 30px !default;
 $tab-padding-large: 15px 45px !default;
@@ -974,6 +977,10 @@ $tab-vertical-line-height: 22px !default;
 $tab-vertical-item-padding: $global-spacer !default;
 $tab-disabled-color: $token-tabs-disabled-background-color !default;
 $tab-disabled-bg-color: transparent !default;
+$tab-item-hover-color: $token-color-blue-600;
+$tab-item-max-height: 35px;
+$tab-hover-font-weight: $token-web-typography-fontweight-semibold;
+$tab-default-color: $token-color-base-800;
 
 @function tab-vertical-marker($color) {
   $result: $color !default;
@@ -1054,7 +1061,7 @@ $popover-font-weight: $token-web-typography-fontweight-semibold !default;
 // $timeline-background-color: $global-background !default;
 
 // Component name: Widget
-// Location: src/scss/coponents/_widget.scss
+// Location: src/scss/components/_widget.scss
 //
 
 $widget-border-color: $global-border-color-darker !default;
@@ -1072,7 +1079,7 @@ $widget-footer-padding: $global-spacer $global-spacer $global-spacer
 $widget-disabled-opacity: $global-opacity !default;
 
 // Component name: Empty state
-// Location: src/scss/coponents/_empty-state.scss
+// Location: src/scss/components/_empty-state.scss
 //
 
 $empty-state-color: $token-color-base-500 !default;

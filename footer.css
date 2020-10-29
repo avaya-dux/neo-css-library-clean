@@ -1,0 +1,216 @@
+.av-footer {
+  width: 100%;
+  bottom: 0;
+  font-size: 13px;
+  color: #4b4b4b;
+  background-color: #004e6c;
+}
+.av-footer a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #4b4b4b;
+  font-size: 13px;
+}
+.av-footer a:hover {
+  color: #da291c;
+}
+.av-footer .footer-pattern-bg img {
+  width: 100%;
+  height: 25px;
+  object-fit: cover;
+  object-position: 50% 50%;
+  font-family: 'object-fit: cover; object-position: 50% 50%;';
+  opacity: 0.5;
+}
+.av-footer .footer {
+  font-size: 13px;
+  padding: 80px 100px 60px;
+  color: #fff;
+}
+.av-footer .footer .inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0px 30px;
+}
+.av-footer .footer .inner .col {
+  flex: 1;
+}
+.av-footer .footer .inner .col h4 {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 100;
+  padding-bottom: 10px;
+}
+.av-footer .footer .inner .col p {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 22px;
+  color: #fff;
+}
+.av-footer .footer .inner .col p a {
+  color: #fff;
+}
+.av-footer .footer .social-share {
+  width: 100%;
+  text-align: right;
+  padding: 12px 0px;
+  max-width: 1440px;
+  width: 100%;
+  padding-right: 30px;
+}
+.av-footer .footer .social-share p.stay-connnected {
+  padding: 12px 12px 0px 0px;
+  font-size: 14px;
+  line-height: 26px;
+  color: #fff;
+  font-weight: 100;
+  margin-right: 78px;
+}
+.av-footer .footer .social-share .social-icons {
+  padding: 0px;
+  max-width: 100%;
+  width: 100%;
+  border-bottom: none;
+  height: 60px;
+}
+.av-footer .footer .social-share .social-icons .icons {
+  display: flex;
+  justify-content: flex-end;
+}
+.av-footer .footer .social-share .social-icons .icons a {
+  margin: 0px 5px;
+  background: #1b77a0;
+  transition: background 0.2s, color 0.2s;
+}
+.av-footer .footer .social-share .social-icons .icons a i {
+  font-size: 16px;
+  color: #fff;
+}
+.av-footer .footer .social-share .social-icons .icons a:hover i {
+  color: #fff;
+}
+.av-footer .footer .social-share .social-icons .icons .social-icon-wrap:hover {
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.av-footer
+  .footer
+  .social-share
+  .social-icons
+  .icons
+  .social-icon-wrap:hover
+  a {
+  width: 28px;
+  height: 28px;
+  margin: 5px;
+  background: #fff;
+}
+.av-footer
+  .footer
+  .social-share
+  .social-icons
+  .icons
+  .social-icon-wrap:hover
+  a
+  i {
+  font-size: 14px;
+  color: #004e6c;
+}
+.av-footer .av-sub-footer {
+  background: #fff;
+  height: 100px;
+  padding-bottom: 215px;
+}
+.av-footer .av-sub-footer .inner {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 25px 100px;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
+}
+.av-footer .av-sub-footer .inner .av-logo {
+  padding: 8px 20px 15px 0px;
+}
+.av-footer .av-sub-footer .inner .av-logo img {
+  width: 100%;
+}
+.av-footer .av-sub-footer .inner .policy {
+  flex: 1;
+  padding: 10px;
+  text-align: center;
+}
+.av-footer .av-sub-footer .inner .policy p {
+  display: inline-block;
+  padding: 0px 15px;
+  border-right: 1px solid #b9b9b9;
+}
+.av-footer .av-sub-footer .inner .policy p:last-child {
+  border-right: none;
+  margin-left: 0px;
+}
+.av-footer
+  .av-sub-footer
+  .inner
+  .policy
+  p
+  .optanon-show-settings-popup-wrapper {
+  height: auto;
+}
+.av-footer
+  .av-sub-footer
+  .inner
+  .policy
+  p
+  .optanon-show-settings-popup-wrapper
+  .optanon-show-settings-button
+  .optanon-show-settings-middle {
+  border-right: none;
+  padding-right: 0px;
+}
+.av-footer .av-sub-footer .inner .end-tag {
+  padding: 14px 20px 14px 20px;
+}
+@media (min-width: 767px) and (max-width: 1024px) {
+  .av-footer .footer {
+    padding: 40px 20px;
+  }
+  .av-footer .footer .inner .col {
+    padding: 10px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .av-footer .footer {
+    padding: 20px;
+  }
+  .av-footer .footer .inner {
+    flex-direction: column;
+  }
+  .av-footer .footer .inner .col {
+    padding-bottom: 10px;
+  }
+  .av-footer .av-sub-footer .inner {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .av-footer .av-sub-footer .inner .av-logo {
+    width: 120px;
+    margin: 0 auto;
+  }
+  .av-footer .av-sub-footer .inner .policy {
+    padding: 5px;
+  }
+  .av-footer .av-sub-footer .inner .end-tag {
+    padding: 10px;
+    text-align: center;
+  }
+}
+.av-footer .toggleOpacityFooter {
+  opacity: 0.6;
+}

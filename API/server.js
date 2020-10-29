@@ -2529,7 +2529,7 @@ async function getTabStyles(components) {
   };
 
   tabJSONObject.tabs[`border-bottom-width`] = {
-    value: `{border.solid-1px.borderWidth.value}`,
+    value: `{border.solid-2px.borderWidth.value}`,
   };
 
   tabJSONObject.tabs[`border-bottom-style`] = {
