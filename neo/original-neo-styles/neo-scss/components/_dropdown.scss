@@ -16,7 +16,7 @@
 }
 
 @mixin neo-dropdown-arrow(
-  $arrow-icon: "\25BE",
+  $arrow-icon: '\25BE',
   $color: $dropdown-subcontent-arrow-color,
   $padding-left: $dropdown-padding-x
 ) {
@@ -44,7 +44,7 @@
     width: 100%;
 
     > #{$self}__link {
-      @include neo-dropdown-arrow($arrow-icon: "\25B8");
+      @include neo-dropdown-arrow($arrow-icon: '\25B8');
     }
   }
 }
@@ -178,8 +178,8 @@
       width: 100%;
     }
 
-    [class*="aoc-"],
-    [class*="neo-icon"] {
+    [class*='aoc-'],
+    [class*='neo-icon'] {
       color: $dropdown-input-icon-color;
     }
   }

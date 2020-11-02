@@ -247,10 +247,10 @@
       right: auto;
     }
   }
-  &--right &__link,
-  &--right &__link-right {
-    text-align: right;
-  }
+  // &--right &__link,
+  // &--right &__link-right {
+  //   text-align: right;
+  // }
 }
 
 @mixin neo-dropdown-input {
@@ -277,7 +277,7 @@
 
   @include neo-dropdown-item;
   @include neo-dropdown-link;
-  @include neo-dropdown-link-right;
+  // @include neo-dropdown-link-right;
   @include neo-dropdown-content;
   @include neo-dropdown-separator;
   @include neo-dropdown-disabled;

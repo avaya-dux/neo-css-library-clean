@@ -84,7 +84,7 @@
 }
 
 // Uses for normal elements (that doesn’t have styles on after and before)
-.neo-tooltip[data-tooltip]:not([data-tooltip=""]) {
+.neo-tooltip[data-tooltip]:not([data-tooltip='']) {
   position: relative;
 
   &:hover::after {
