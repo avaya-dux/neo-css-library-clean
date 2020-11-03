@@ -2590,40 +2590,50 @@ async function getWidgetStyles(components) {
 
 // #region this is where we pull component styles
 
+// coreFigmaFunctions
+//   .getComponentPages(
+//     coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+//     coreFigmaFunctions.figmaCredentials.coreComponentsFileID
+//   )
+//   .then(async (value) => {
+//     await fs.mkdir('../properties/components/', {
+//       recursive: true,
+//     });
+//     getButtonStyles(value);
+//     getAvatarStyles(value);
+//     getBadgeStyles(value);
+//     getChipStyles(value);
+//     getLabelStyles(value);
+//     getSpinnerStyles();
+//     getTooltipStyles(value);
+//     getCheckboxStyles(value);
+//     getRadioStyles(value);
+//     getSwitchStyles(value);
+//     getInputGroupStyles(value);
+//     getInputStyles(value);
+//     getDropdownStyles(value);
+//     getTableStyles(value);
+//     getAccordionStyles(value);
+//     getListGroupStyles(value);
+//     getModalStyles(value);
+//     getMenuStyles(value);
+//     getNavbarStyles(value);
+//     getNotificationStyles(value);
+//     getPopoverStyles(value);
+//     getTabStyles(value);
+//     getWidgetStyles(value);
+//     getListSectionStyles(value);
+//     getSheetStyles(value);
+//   });
+
 coreFigmaFunctions
   .getComponentPages(
     coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-    coreFigmaFunctions.figmaCredentials.coreComponentsFileID
+    coreFigmaFunctions.figmaCredentials.variantsComponentsFileID
   )
   .then(async (value) => {
-    await fs.mkdir('../properties/components/', {
-      recursive: true,
-    });
-    getButtonStyles(value);
-    getAvatarStyles(value);
-    getBadgeStyles(value);
-    getChipStyles(value);
-    getLabelStyles(value);
-    getSpinnerStyles();
-    getTooltipStyles(value);
-    getCheckboxStyles(value);
-    getRadioStyles(value);
-    getSwitchStyles(value);
-    getInputGroupStyles(value);
-    getInputStyles(value);
-    getDropdownStyles(value);
-    getTableStyles(value);
-    getAccordionStyles(value);
-    getListGroupStyles(value);
-    getModalStyles(value);
-    getMenuStyles(value);
-    getNavbarStyles(value);
-    getNotificationStyles(value);
-    getPopoverStyles(value);
-    getTabStyles(value);
-    getWidgetStyles(value);
-    getListSectionStyles(value);
-    getSheetStyles(value);
+    // console.log(value.Button.children[1]);
+    console.log(value.Button.children[1].children[0]);
   });
 
 // #endregion

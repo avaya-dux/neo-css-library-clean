@@ -19,11 +19,20 @@
     left: 0;
     margin: 0;
     min-width: 20px;
+    text-overflow: clip;
+    white-space: pre-line;
+    width: max-content;
+    word-break: keep-all;
+    word-wrap: normal;
     padding: $tooltip-padding;
     position: absolute;
     top: 100%;
     z-index: $content-z;
     text-align: center;
+
+    &--multiline {
+      max-width: 300px;
+    }
 
     .neo-tooltip--right & .neo-arrow {
       left: -6.5px;
