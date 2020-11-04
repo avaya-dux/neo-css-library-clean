@@ -152,15 +152,15 @@
       }
 
       &::after {
-        font-family: "AOC-Icons";
+        font-family: 'AOC-Icons';
         font-size: $table-sortable-icon-size;
         line-height: $table-sortable-icon-line-height;
         position: absolute;
         right: $table-sortable-icon-margin-x;
       }
 
-      @include table-sort-order(ascending, "\e9a1");
-      @include table-sort-order(descending, "\e9a0");
+      @include table-sort-order(ascending, '\e9a1');
+      @include table-sort-order(descending, '\e9a0');
     }
   }
   /* stylelint-enable selector-no-qualifying-type */
@@ -182,7 +182,7 @@
 
     &::before {
       border-left: $table-editable-border;
-      content: "";
+      content: '';
       height: 100%;
 
       @include rtl-selector {
