@@ -47,7 +47,7 @@ $checkbox-disabled-background: $token-checkbox-disabled-background-color !defaul
   &:checked + label::before {
     background: $checkbox-checked-background;
     font-family: 'updated-neo-icons' !important;
-    content: '\f1c1';
+    content: '\f1c3';
     font-size: $checkbox-font-size;
     color: $checkbox-color;
     padding-left: 2px;
@@ -60,7 +60,7 @@ $checkbox-disabled-background: $token-checkbox-disabled-background-color !defaul
 
     &:checked:disabled {
       font-family: 'updated-neo-icons' !important;
-      content: '\f1b0';
+      content: '\f1c3';
       font-size: $checkbox-font-size;
       color: $checkbox-color;
       padding-left: 2px;

@@ -20,10 +20,24 @@ async function getIconsComponents(figmaId, figmaApiKey) {
       method: 'GET',
       headers: {
         'X-Figma-Token': figmaApiKey,
+        pragma: 'no-cache',
+        'cache-control': 'no-store, no-cache, must-revalidate',
       },
     }
   );
   let figmaFileComponents = await result.json();
+
+  figmaFileComponents.meta.components.forEach((component) => {
+    // if (component.name === 'outline/content/billboard-chart') {
+    //   console.log(component);
+    // }
+    // if (component.name === 'outline/content/chart-billboard') {
+    //   console.log(component);
+    // }
+    if (component.node_id === '849:87') {
+      console.log(component);
+    }
+  });
 
   const iconsOnAll = figmaFileComponents.meta.components.filter((component) => {
     return component.containing_frame.pageName === 'Icons';
@@ -282,3 +296,5 @@ async function pullIcons(figmaApiKey, figmaId) {
 }
 
 exports.pullIcons = pullIcons;
+
+exports.getIconsComponents = getIconsComponents;

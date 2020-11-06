@@ -1,12 +1,12 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.1 3.00828H14.7V6.40828H18.1V3.00828Z" fill="black"/>
-<path d="M10.4 3.00828H7V6.40828H10.4V3.00828Z" fill="black"/>
-<path d="M22.4028 6.39988H25.8028V2.99988L22.4028 2.99988V6.39988Z" fill="black"/>
-<path d="M18.1 10.7083H14.7V14.1083H18.1V10.7083Z" fill="black"/>
-<path d="M10.4 10.7083H7V14.1083H10.4V10.7083Z" fill="black"/>
-<path d="M22.4028 14.1055H25.8028V10.7055H22.4028V14.1055Z" fill="black"/>
-<path d="M18.1 18.4083H14.7V21.8083H18.1V18.4083Z" fill="black"/>
-<path d="M10.4 18.4083H7V21.8083H10.4V18.4083Z" fill="black"/>
-<path d="M22.4028 21.8111H25.8028V18.4111H22.4028V21.8111Z" fill="black"/>
-<path d="M18.1 26.1083H14.7V29.5083H18.1V26.1083Z" fill="black"/>
+<path d="M18.1 3.0084H14.7V6.4084H18.1V3.0084Z" fill="black"/>
+<path d="M10.4 3.0084H7V6.4084H10.4V3.0084Z" fill="black"/>
+<path d="M22.4028 6.4H25.8028V3L22.4028 3V6.4Z" fill="black"/>
+<path d="M18.1 10.7084H14.7V14.1084H18.1V10.7084Z" fill="black"/>
+<path d="M10.4 10.7084H7V14.1084H10.4V10.7084Z" fill="black"/>
+<path d="M22.4028 14.1056H25.8028V10.7056H22.4028V14.1056Z" fill="black"/>
+<path d="M18.1 18.4084H14.7V21.8084H18.1V18.4084Z" fill="black"/>
+<path d="M10.4 18.4084H7V21.8084H10.4V18.4084Z" fill="black"/>
+<path d="M22.4028 21.8112H25.8028V18.4112H22.4028V21.8112Z" fill="black"/>
+<path d="M18.1 26.1084H14.7V29.5084H18.1V26.1084Z" fill="black"/>
 </svg>

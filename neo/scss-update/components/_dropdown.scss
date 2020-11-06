@@ -19,7 +19,7 @@
 }
 
 @mixin neo-dropdown-arrow(
-  $arrow-icon: '\f234',
+  $arrow-icon: '\f23f',
   $color: white,
   $padding-left: $dropdown-padding-x
 ) {
@@ -42,7 +42,7 @@
 // flip icon for right-aligned dropdowns
 
 @mixin neo-dropdown-arrow-left(
-  $arrow-icon: '\f235',
+  $arrow-icon: '\f241',
   $color: $global-text-color,
   $padding-right: $dropdown-padding-x
 ) {
@@ -68,7 +68,7 @@
     > #{$self}__link {
       color: $global-text-color;
 
-      @include neo-dropdown-arrow($arrow-icon: '\f236');
+      @include neo-dropdown-arrow($arrow-icon: '\f241');
       &::after {
         font-size: 16px;
         color: $global-text-color;
