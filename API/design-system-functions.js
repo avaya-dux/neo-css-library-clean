@@ -36,16 +36,18 @@ async function pullAllDesignTokens() {
 //   )
 //   .catch((error) => console.log(error));
 
-iconFunctions.getIconsComponents(
-  coreFigmaFunctions.figmaCredentials.iconsFileID,
-  coreFigmaFunctions.figmaCredentials.figmaAPIKey
-);
+// code to debug stale data from API
 
-coreFigmaFunctions.getFigmaNodeStyleByID(
-  coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-  coreFigmaFunctions.figmaCredentials.iconsFileID,
-  '849:87'
-);
+// iconFunctions.getIconsComponents(
+//   coreFigmaFunctions.figmaCredentials.iconsFileID,
+//   coreFigmaFunctions.figmaCredentials.figmaAPIKey
+// );
+
+// coreFigmaFunctions.getFigmaNodeStyleByID(
+//   coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+//   coreFigmaFunctions.figmaCredentials.iconsFileID,
+//   '849:87'
+// );
 
 // exports.createAllStyles = createAllStyles;
 
