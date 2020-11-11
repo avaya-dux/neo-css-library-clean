@@ -1,10 +1,12 @@
 // updated radio button styles
 
 @mixin radio--disabled {
-  &[disabled] {
-    + label {
-      cursor: not-allowed;
-      opacity: $radio-disabled-opacity;
+  &[disabled] + label {
+    cursor: not-allowed;
+    color: $global-disabled-color;
+
+    &::before {
+      border: $radio-disabled-border;
     }
   }
 }
@@ -14,45 +16,45 @@
 
   + label {
     cursor: pointer;
-    margin-right: $radio-label-offset-x;
+    // margin-right: $radio-label-offset-x;
     padding: 0 !important;
     position: relative;
     text-indent: $radio-text-offset;
 
     @include rtl-selector {
       margin: {
-        left: $radio-label-offset-x;
+        // left: $radio-label-offset-x;
         right: 0;
       }
     }
 
     &::before {
-      // background-color: $radio-background;
+      background-color: $radio-background;
       border: $radio-border;
-      border-radius: 50%;
+      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
       content: '';
       display: block;
-      height: 14px;
+      height: $radio-size;
+      width: $radio-size;
       position: absolute;
-      top: 3px;
-      width: 14px;
+      top: $radio-position-top;
     }
   }
 
   &:checked + label::after {
     background: $radio-background-active-color;
-    border-radius: 50%;
+    border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
     content: '';
     display: block;
-    height: 6px;
-    left: 4px;
+    height: $radio-active-ellipse-size;
+    width: $radio-active-ellipse-size;
+    left: $radio-ellipse-position-left;
+    top: $radio-ellipse-position-top;
     position: absolute;
-    top: 7px;
-    width: 6px;
 
     @include rtl-selector {
       left: auto;
-      right: 4px;
+      right: $radio-ellipse-position-left;
     }
   }
 

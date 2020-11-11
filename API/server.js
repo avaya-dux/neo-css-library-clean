@@ -3,6 +3,8 @@ const fetch = require('node-fetch');
 const _ = require('lodash');
 
 const coreFigmaFunctions = require('./figma-functions/core-figma-functions.js');
+const switchStyles = require('./components-functions/switch_variants.js');
+const radioStyles = require('./components-functions/radio_variants.js');
 
 // #region utilityFunctions
 
@@ -1036,204 +1038,6 @@ async function getCheckboxStyles(components) {
     )
     .then(function () {
       console.log('checkbox.json created');
-    });
-}
-
-// #endregion
-
-// #region getRadioStyles
-
-async function getRadioStyles(components) {
-  const radioComponents = [];
-
-  components.Form.children.forEach((child) => {
-    if (child.name.includes('radio') && child.type !== 'TEXT') {
-      radioComponents.push(child);
-    }
-  });
-
-  const radioJSONObject = {
-    radio: {},
-  };
-
-  // need to confirm that this code will work across browsers, etc.
-
-  // styles for radio button border
-
-  radioJSONObject.radio[`border-width`] = {
-    value: `{border.solid-1px.borderWidth.value}`,
-  };
-
-  radioJSONObject.radio[`border-style`] = {
-    value: `{border.solid-1px.borderStyle.value}`,
-  };
-
-  radioJSONObject.radio[`border-color`] = {
-    value: `{color.blue/500.value}`,
-  };
-
-  // disabled radio button border style
-
-  radioJSONObject.radio[`disabled-border-color`] = {
-    value: `{color.blue/200.value}`,
-  };
-
-  // styles for radio button color
-
-  radioJSONObject.radio[`background-color`] = {
-    value: `{color.base/100.value}`,
-  };
-
-  // styles for custom selected radio button target
-
-  radioJSONObject.radio[`selected-target-background`] = {
-    value: `{color.blue/500.value}`,
-  };
-
-  // disabled radio button target colour
-
-  radioJSONObject.radio[`disabled-target-background`] = {
-    value: `{color.blue/200.value}`,
-  };
-
-  radioJSONObject.radio[`selected-borderRadius`] = {
-    value: `{borderRadius.100%.value}`,
-  };
-
-  // double check the positioning of this element
-
-  radioJSONObject.radio[`selected-target-left`] = {
-    value: '18.75%',
-  };
-
-  radioJSONObject.radio[`selected-target-right`] = {
-    value: '18.75%',
-  };
-
-  radioJSONObject.radio[`selected-target-top`] = {
-    value: '18.75%',
-  };
-
-  radioJSONObject.radio[`selected-target-bottom`] = {
-    value: '18.75%',
-  };
-
-  // styles for radio labels
-
-  radioJSONObject.radio[`label-font-color`] = {
-    value: `{color.base/1000.value}`,
-  };
-
-  radioJSONObject.radio[`label-font-size`] = {
-    value: `{Web-typography.web/body - regular.fontSize.value}`,
-  };
-
-  radioJSONObject.radio[`label-lineHeight`] = {
-    value: `{Web-typography.web/body - regular.lineHeight.value}`,
-  };
-
-  // styles for disabled checkbox labels
-
-  radioJSONObject.radio[`disabled-label-font-color`] = {
-    value: `{color.base/500.value}`,
-  };
-
-  await fs
-    .writeFile(
-      '../properties/components/radio.json',
-      JSON.stringify(radioJSONObject)
-    )
-    .then(function () {
-      console.log('radio.json created');
-    });
-}
-
-// #endregion
-
-// #region getSwitchStyles
-
-async function getSwitchStyles(components) {
-  const switchComponents = [];
-
-  components.Form.children.forEach((child) => {
-    if (child.name.includes('switch') && child.type !== 'TEXT') {
-      switchComponents.push(child);
-    }
-  });
-
-  const switchJSONObject = {
-    switch: {},
-  };
-
-  // switch 'on' background colour
-
-  switchJSONObject.switch[`on-background-color`] = {
-    value: `{color.blue/500.value}`,
-  };
-
-  // switch 'off' background color
-
-  switchJSONObject.switch[`off-background-color`] = {
-    value: `{color.base/100.value}`,
-  };
-
-  // switch 'on' disabled colour
-
-  switchJSONObject.switch[`on-disabled-background-color`] = {
-    value: `{color.blue/200.value}`,
-  };
-
-  // switch 'off' disabled color
-
-  switchJSONObject.switch[`off-disabled-background-color`] = {
-    value: `{color.base/200.value}`,
-  };
-
-  // slider box shadow style
-
-  switchJSONObject.switch[`box-shadow-xOffset`] = {
-    value: `{shadows.elevation100.xOffset.value}`,
-  };
-
-  switchJSONObject.switch[`box-shadow-yOffset`] = {
-    value: `{shadows.elevation100.yOffset.value}`,
-  };
-
-  switchJSONObject.switch[`box-shadow-radius`] = {
-    value: `{shadows.elevation100.radius.value}`,
-  };
-
-  switchJSONObject.switch[`box-shadow-color`] = {
-    value: `{shadows.elevation100.color.value}`,
-  };
-
-  // styles for switch labels
-
-  switchJSONObject.switch[`label-font-color`] = {
-    value: `{color.base/1000.value}`,
-  };
-
-  switchJSONObject.switch[`label-font-size`] = {
-    value: `{Web-typography.web/body - regular.fontSize.value}`,
-  };
-
-  switchJSONObject.switch[`label-lineHeight`] = {
-    value: `{Web-typography.web/body - regular.lineHeight.value}`,
-  };
-
-  // styles for disabled switch labels
-
-  switchJSONObject.switch[`disabled-label-font-color`] = {
-    value: `{color.base/100.value}`,
-  };
-
-  await fs
-    .writeFile(
-      '../properties/components/switch.json',
-      JSON.stringify(switchJSONObject)
-    )
-    .then(function () {
-      console.log('switch.json created');
     });
 }
 
@@ -2607,8 +2411,8 @@ coreFigmaFunctions
     getSpinnerStyles();
     getTooltipStyles(value);
     getCheckboxStyles(value);
-    getRadioStyles(value);
-    getSwitchStyles(value);
+    // radioStyles.radioStyles(value);
+    // switchStyles.switchStyles(value);
     getInputGroupStyles(value);
     getInputStyles(value);
     getDropdownStyles(value);

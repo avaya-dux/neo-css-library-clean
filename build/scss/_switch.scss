@@ -1,16 +1,17 @@
 
 // Do not edit directly
-// Generated on Wed, 04 Nov 2020 22:17:55 GMT
+// Generated on Wed, 11 Nov 2020 19:38:51 GMT
 
+$token-switch-label-height: 20px;
+$token-switch-height: 16px;
+$token-switch-width: 32px;
+$token-switch-ellipse-color: #ffffff;
+$token-switch-ellipse-box-shadow: $token-shadows-elevation-100-x-offset $token-shadows-elevation-100-y-offset $token-shadows-elevation-100-radius $token-shadows-elevation-100-color;
+$token-switch-knob-indent-top: 1px;
+$token-switch-knob-indent-left: 1px;
+$token-switch-knob-size: 14px;
+$token-switch-border-radius: 28px;
+$token-switch-off-background-color: #939393;
+$token-switch-disabled-off-background-color: #c9c9c9;
 $token-switch-on-background-color: #1473e6;
-$token-switch-off-background-color: #f1f1f1;
-$token-switch-on-disabled-background-color: #abccf5;
-$token-switch-off-disabled-background-color: #c9c9c9;
-$token-switch-box-shadow-x-offset: 0px;
-$token-switch-box-shadow-y-offset: 4px;
-$token-switch-box-shadow-radius: 4px;
-$token-switch-box-shadow-color: rgba(0,0,0,0.25);
-$token-switch-label-font-color: #000000;
-$token-switch-label-font-size: 14px;
-$token-switch-label-line-height: 19.100000381469727px;
-$token-switch-disabled-label-font-color: #f1f1f1;
+$token-switch-disabled-on-background-color: #abccf5;

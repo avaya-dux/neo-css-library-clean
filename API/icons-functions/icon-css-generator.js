@@ -3,7 +3,7 @@ const webfontsGenerator = require('webfonts-generator');
 
 const iconUtilityFunctions = require('./icon-utility-files/icons-utility-functions.js');
 
-const iconInfo = require('./icon-utility-files/iconInfo.js');
+// const iconInfo = require('./icon-utility-files/iconInfo.js');
 const { includes } = require('lodash');
 
 const Handlebars = require('handlebars');
@@ -91,10 +91,11 @@ convertIconFontToBase64().then(async (result) => {
       normalize: true,
       fontHeight: 1000,
     },
-    function (error) {
+    function (error, result) {
       if (error) {
         console.log('Fail!', error);
       } else {
+        // console.log(result);
         console.log('updated-neo-icons.css generated in build/ folder');
       }
     }

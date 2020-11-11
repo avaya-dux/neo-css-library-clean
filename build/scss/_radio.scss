@@ -1,20 +1,14 @@
 
 // Do not edit directly
-// Generated on Wed, 04 Nov 2020 22:17:55 GMT
+// Generated on Wed, 11 Nov 2020 19:38:51 GMT
 
-$token-radio-border-width: 1px;
-$token-radio-border-style: solid;
-$token-radio-border-color: #1473e6;
-$token-radio-disabled-border-color: #abccf5;
-$token-radio-background-color: #f1f1f1;
-$token-radio-selected-target-background: #1473e6;
-$token-radio-disabled-target-background: #abccf5;
-$token-radio-selected-border-radius: 100%;
-$token-radio-selected-target-left: 18.75%;
-$token-radio-selected-target-right: 18.75%;
-$token-radio-selected-target-top: 18.75%;
-$token-radio-selected-target-bottom: 18.75%;
-$token-radio-label-font-color: #000000;
-$token-radio-label-font-size: 14px;
-$token-radio-label-line-height: 19.100000381469727px;
-$token-radio-disabled-label-font-color: #757474;
+$token-radio-size: 16px;
+$token-radio-active-ellipse-size: 10px;
+$token-radio-position-top: 2px;
+$token-radio-ellipse-position-top: 5px;
+$token-radio-ellipse-position-left: 3px;
+$token-radio-background-color: #ffffff;
+$token-radio-active-color: #1473e6;
+$token-radio-disabled-border: 1px solid #abccf5;
+$token-radio-border: 1px solid #1473e6;
+$token-radio-text-offset: 24px;

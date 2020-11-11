@@ -436,13 +436,18 @@ $select-table-page-show-width: $token-table-pagination-count-select-width !defau
 // Location: src/scss/elements/_radio-button.scss
 //
 
-$radio-background: $global-background !default;
-$radio-background-active-color: $token-radio-selected-target-background !default;
-$radio-border: $token-radio-border-width $token-radio-border-style
-  $token-radio-border-color !default;
-$radio-text-offset: 22px !default;
-$radio-label-offset-x: $global-spacer-x-large !default;
-$radio-disabled-opacity: $global-opacity !default;
+$radio-background: $token-radio-background-color !default;
+$radio-background-active-color: $token-radio-active-color !default;
+$radio-border: $token-radio-border !default;
+$radio-disabled-border: $token-radio-disabled-border !default;
+$radio-text-offset: $token-radio-text-offset !default;
+// $radio-label-offset-x: $global-spacer-x-large !default;
+// $radio-disabled-opacity: $global-opacity !default;
+$radio-size: $token-radio-size !default;
+$radio-active-ellipse-size: $token-radio-active-ellipse-size !default;
+$radio-position-top: $token-radio-position-top !default;
+$radio-ellipse-position-top: $token-radio-ellipse-position-top !default;
+$radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
 
 //
 // Component name: Table
@@ -489,20 +494,13 @@ $table-date-picker-font-color: $token-color-base-600 !default;
 // Location: src/scss/elements/_button.scss
 //
 
-$button-bg-color-lightness-scale: 60 !default;
-$button-transition: background-color $global-transition-duration ease-in-out !default;
 $button-font-weight: $token-button-primary-defaultfont-weight !default;
 $button-height: $token-button-primary-defaultheight !default;
 $button-padding-x: $token-button-primary-default-padding-x !default;
 $button-min-width: $token-button-primary-defaultwidth !default;
-$button-border-width: $token-button-secondary-defaultborder-weight !default;
 $button-border-radius: $token-button-circular-primary-defaultborder-radius !default;
-$button-icon-size: $button-height !default;
-$button-icon-size-ratio: 2/3 !default;
 $button-icon-padding: $global-spacer-small !default;
 $button-circle-icon-size: 22px !default;
-// $button-color-dark: $neo-blue-grey-dark !default;
-$button-color-light: var-color-name(global-text-inverse) !default;
 $button-transition: all $global-transition-duration ease-in-out !default;
 $button-box-shadow: $token-button-primary-defaulthover-shadow-g-offset
   $token-button-primary-defaulthover-shadow-v-offset
@@ -511,7 +509,6 @@ $button-box-shadow: $token-button-primary-defaulthover-shadow-g-offset
 $button-inverse-text-color: $token-button-primary-defaultcolor !default;
 $button-secondary-border-width: $token-button-secondary-defaultborder-weight !default;
 $button-secondary-border-style: $token-button-secondary-defaultborder-style !default;
-$button-tertiary-hover-bg-color: $token-color-base-200 !default;
 $button-circular-height: $token-button-circular-height !default;
 $button-circular-width: $token-button-circular-width !default;
 $button-padding-y: $token-button-primary-default-padding-y !default;
@@ -892,17 +889,24 @@ $avatar-line-height: $token-avatar-initials-regular-line-height !default;
 // Location: src/scss/components/_switch.scss
 //
 
-$switch-inactive-color: $token-switch-off-background-color !default;
+$switch-off-color: $token-switch-off-background-color !default;
 $switch-active-color: $token-switch-on-background-color !default;
-$switch-height: 20px !default;
-$switch-width: $switch-height * 2 !default;
-$switch-knob-indent: 2px !default;
-$switch-knob-size: $switch-height - $switch-knob-indent * 2 !default;
+$switch-label-height: $token-switch-label-height !default;
+$switch-height: $token-switch-height !default;
+$switch-width: $token-switch-width !default;
+$switch-knob-indent-top: $token-switch-knob-indent-top !default;
+$switch-knob-indent-left: $token-switch-knob-indent-left !default;
+$switch-knob-size: $token-switch-knob-size !default;
 $switch-translate-distance: $switch-width/2 !default;
-$switch-outline: 0 !default;
-$switch-border-radius: $switch-height / 2 !default;
-$switch-transition: all 0.25s ease-in-out !default;
-$switch-disabled-opacity: $global-opacity !default;
+$switch-outline: 0 !default; // remove?
+$switch-border-radius: $token-switch-border-radius !default;
+$switch-transition: $token-interactivity-motion-fade-fast
+  $token-interactivity-motion-ease-out !default;
+// $switch-transition: all 0.25s ease-in-out !default; // need to replace with token
+$switch-disabled-on-background-color: $token-switch-disabled-on-background-color !default;
+$switch-disabled-off-background-color: $token-switch-disabled-off-background-color !default;
+$switch-ellipse-color: $token-switch-ellipse-color !default;
+$switch-ellipse-box-shadow: $token-switch-ellipse-box-shadow !default;
 
 // Component name: Chip
 // Location: src/scss/components/_chips.scss

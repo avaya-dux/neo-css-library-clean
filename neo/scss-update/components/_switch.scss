@@ -12,6 +12,8 @@
     cursor: pointer;
     display: block;
     left: 0;
+    // hard-coded to center switch
+    top: 2px;
     position: absolute;
 
     @include rtl-selector {
@@ -28,25 +30,23 @@
     }
 
     &::before {
-      background-color: #939393;
+      background-color: $switch-off-color;
       height: $switch-height;
       width: $switch-width;
     }
 
     &::after {
-      background-color: $token-color-base-0;
-      box-shadow: $token-shadows-elevation-100-x-offset
-        $token-shadows-elevation-100-y-offset
-        $token-shadows-elevation-100-radius rgba(0, 0, 0, 0.25);
+      background-color: $switch-ellipse-color;
+      box-shadow: $switch-ellipse-box-shadow;
       height: $switch-knob-size;
-      left: $switch-knob-indent;
-      top: $switch-knob-indent;
+      left: $switch-knob-indent-left;
+      top: $switch-knob-indent-top;
       transform: translate(0, 0);
       width: $switch-knob-size;
 
       @include rtl-selector {
         left: auto;
-        right: $switch-knob-indent;
+        right: $switch-knob-indent-left;
       }
     }
   }
@@ -70,13 +70,30 @@
 }
 
 @mixin neo-switch--disabled {
+  // &--disabled,
+  // input:disabled + &__icon {
+  //   cursor: not-allowed;
+  //   opacity: $switch-disabled-opacity; //
+  // }
   &--disabled,
-  input:disabled + &__icon {
+  &--disabled input + &__icon {
     cursor: not-allowed;
-    opacity: $switch-disabled-opacity;
   }
 
-  &:focus input:disabled + &__icon {
+  &--disabled {
+    color: $global-disabled-color; // should be disabled text color
+  }
+
+  &--disabled input:disabled + &__icon::before {
+    background-color: $switch-disabled-off-background-color;
+  }
+
+  &--disabled input:checked:disabled + &__icon::before {
+    background-color: $switch-disabled-on-background-color;
+  }
+
+  &:focus input:disabled + &__icon,
+  &:focus input:checked + &__icon {
     &::before {
       box-shadow: none;
     }
@@ -85,16 +102,20 @@
 
 .neo-switch {
   display: inline-block;
-  height: $switch-height;
-  line-height: 1.5;
+  height: $switch-label-height;
+  line-height: $body-line-height;
   min-width: $switch-width;
-  outline: $switch-outline;
+
   padding-left: $switch-width + $input-padding-x;
   position: relative;
 
   @include rtl-selector {
     padding-left: 0;
     padding-right: $switch-width + $input-padding-x;
+  }
+  &:focus {
+    // outline-offset: 15px;
+    // outline: 0;
   }
 
   &:focus .neo-switch__icon {

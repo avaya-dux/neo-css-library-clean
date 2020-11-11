@@ -27,17 +27,19 @@ async function getIconsComponents(figmaId, figmaApiKey) {
   );
   let figmaFileComponents = await result.json();
 
-  figmaFileComponents.meta.components.forEach((component) => {
-    // if (component.name === 'outline/content/billboard-chart') {
-    //   console.log(component);
-    // }
-    // if (component.name === 'outline/content/chart-billboard') {
-    //   console.log(component);
-    // }
-    if (component.node_id === '849:87') {
-      console.log(component);
-    }
-  });
+  // code to help debug stale API data
+
+  // figmaFileComponents.meta.components.forEach((component) => {
+  //   if (component.name === 'outline/content/billboard-chart') {
+  //     console.log(component);
+  //   }
+  //   if (component.name === 'outline/content/chart-billboard') {
+  //     console.log(component);
+  //   }
+  //   if (component.node_id === '849:87') {
+  //     console.log(component);
+  //   }
+  // });
 
   const iconsOnAll = figmaFileComponents.meta.components.filter((component) => {
     return component.containing_frame.pageName === 'Icons';

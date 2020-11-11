@@ -27,14 +27,14 @@ async function pullAllDesignTokens() {
   await spacerTokens.pullSpacerTokens();
 }
 
-// pullAllDesignTokens()
-//   .then(() =>
-//     iconFunctions.pullIcons(
-//       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-//       coreFigmaFunctions.figmaCredentials.iconsFileID
-//     )
-//   )
-//   .catch((error) => console.log(error));
+pullAllDesignTokens()
+  .then(() =>
+    iconFunctions.pullIcons(
+      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+      coreFigmaFunctions.figmaCredentials.iconsFileID
+    )
+  )
+  .catch((error) => console.log(error));
 
 // code to debug stale data from API
 

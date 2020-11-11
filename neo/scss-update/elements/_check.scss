@@ -1,8 +1,5 @@
 // updated checkbox styles
 
-$checkbox-checked-background: $token-checkbox-selected-background-color !default;
-$checkbox-disabled-background: $token-checkbox-disabled-background-color !default;
-
 .neo-check {
   opacity: 0;
   position: absolute;
@@ -41,7 +38,7 @@ $checkbox-disabled-background: $token-checkbox-disabled-background-color !defaul
 
   &:focus + label::before {
     background: $checkbox-background;
-    box-shadow: $input-focus-shadow;
+    box-shadow: $input-focus-shadow; // need to specify style for this in Figma?
   }
 
   &:checked + label::before {
