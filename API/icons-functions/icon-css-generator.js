@@ -45,15 +45,15 @@ convertIconFontToBase64().then(async (result) => {
       // we temporarily filter out 'fill' type icons
 
       var unfilteredArray = files.map((file) => {
-        if (
-          file.includes('fill') &&
-          !file.includes('star') &&
-          !file.includes('arrow')
-        ) {
-          return;
-        } else {
-          return `../properties/assets/icons/svgs/${file}`;
-        }
+        // if (
+        //   file.includes('fill') &&
+        //   !file.includes('star') &&
+        //   !file.includes('arrow')
+        // ) {
+        //   return;
+        // } else {
+        return `../properties/assets/icons/svgs/${file}`;
+        // }
       });
 
       return unfilteredArray.filter((icon) => {

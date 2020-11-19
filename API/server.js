@@ -2147,7 +2147,7 @@ async function getListSectionStyles(components) {
   };
 
   listSectionJSONObject.listSection[`padding`] = {
-    value: `12px`,
+    value: `8px`,
   };
 
   listSectionJSONObject.listSection[`action-padding`] = {

@@ -3,16 +3,21 @@
 .neo-group-list {
   @extend %list;
 
-  &__item {
-    @extend %list-item;
-    @extend %list-radius;
-
-    // @include list-item-colors;
-    @include list-item-button;
-    @include list-item--disabled;
+  // new 3.6.0 style
+  &__wrapper {
+    @extend %list-item-wrapper;
   }
 
-  @include list--hover('item');
+  &__item {
+    @extend %list-item;
+    // @extend %list-radius;
+
+    // @include list-item-colors;
+    // @include list-item-button;
+    // @include list-item--disabled;
+  }
+
+  @include list--hover('wrapper');
   // @include list--borderless;
 }
 

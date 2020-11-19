@@ -666,7 +666,7 @@ $close-sizes: map-merge(
 
 $navbar-background-color: $global-background !default;
 $navbar-text-color: var-color-name(navbar-text) !default;
-$navbar-height: 48px !default;
+$navbar-height: 58px !default;
 $navbar-padding-x: $global-spacer-x-large !default;
 $navbar-z: 30 !default;
 $navbar-button-font-size: $global-font-size-x-large !default;
@@ -689,6 +689,9 @@ $navbar-background-color-hover: $token-color-blue-100 !default;
 $navbar-default-icon-color: $token-color-base-800 !default;
 $navbar-icon-hover-color: $token-color-blue-600 !default;
 $navbar-icon-selected-color: $token-color-blue-500 !default;
+
+$navbar-icon-button-width: $token-navbar-button-width !default;
+$navbar-icon-size: $token-navbar-icon-size !default;
 
 // //
 // // Component name: Footer
@@ -765,6 +768,13 @@ $group-list-section-height: 44px !default;
 $group-list-section-padding: $token-list-section-padding !default;
 $group-list-section-background: $token-color-base-100;
 $group-list-section-action-padding: $token-list-section-action-padding !default;
+
+$list-vertical-padding: $token-list-vertical-padding !default;
+$list-horizontal-padding: $token-list-horizontal-padding !default;
+$list-margin-right: $token-list-margin-right !default;
+$list-min-width: $token-list-min-width !default;
+$list-min-height: $token-list-min-height !default;
+$list-divider: $token-list-divider !default;
 
 //
 // Component name: Accordion
@@ -932,7 +942,8 @@ $chip-btn-margin-left: $global-spacer !default;
 $chip-btn-opacity: 0.4 !default;
 $chip-disabled-bg: $global-disabled-bg !default;
 $chip-disabled-color: $global-disabled-color !default;
-$chip-expandable-icon: '\f23f' !default;
+// chevron-down
+$chip-expandable-icon: '\f244' !default;
 
 // Component name: Tab
 // Location: src/scss/components/_tabs.scss
@@ -985,6 +996,8 @@ $tab-item-hover-color: $token-color-blue-600;
 $tab-item-max-height: 35px;
 $tab-hover-font-weight: $token-web-typography-fontweight-semibold;
 $tab-default-color: $token-color-base-800;
+$tab-carousel-button-color: $token-tabs-carousel-button-color;
+$tab-background-color: $token-tabs-background-color;
 
 @function tab-vertical-marker($color) {
   $result: $color !default;

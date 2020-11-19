@@ -77,7 +77,8 @@
 }
 
 .neo-navbar {
-  height: 64px;
+  // hard-coded for now
+  height: 58px;
   align-items: center;
   justify-content: space-between;
   background-color: white;
@@ -116,6 +117,10 @@
     }
   }
 
+  & img {
+    max-height: $navbar-height;
+  }
+
   &:hover {
     color: $navbar-brand-color;
   }
@@ -142,7 +147,8 @@
   }
   & .neo-badge__navbutton {
     height: 100%;
-    width: 64px;
+    // hard-coded for now
+    width: 58px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -166,6 +172,8 @@
       }
     }
     & button {
+      height: 100% !important;
+      width: $navbar-icon-button-width !important;
       &::before {
         color: $navbar-default-icon-color;
       }
@@ -207,11 +215,11 @@
       background-color: $navbar-background-color-hover;
     }
     &::before {
-      font-size: 32px;
+      font-size: $navbar-icon-size;
     }
   }
   & [class*='neo-icon-'].neo-btn:empty::before {
-    font-size: 32px;
+    font-size: $navbar-icon-size;
   }
   & .neo-nav-status {
     & span {
@@ -228,9 +236,10 @@
     & .neo-nav-status-info {
       display: flex;
       flex-direction: column;
-      max-width: 77%;
+      // max-width: 77%;
+      margin-right: 16px;
       & p {
-        margin: 0;
+        margin-bottom: 4px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
@@ -258,7 +267,8 @@
       border: 2px solid white !important;
     }
     height: 100%;
-    width: 215px;
+    min-width: 215px;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;

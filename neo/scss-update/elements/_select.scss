@@ -54,14 +54,16 @@
 
       &::before {
         font-family: 'updated-neo-icons';
-        content: '\f1dd';
+        // neo-end
+        content: '\f1e2';
         width: 1.3em;
         text-align: center;
         display: inline-block;
       }
       &:checked::before {
         font-family: 'updated-neo-icons';
-        content: '\f1c3';
+        // neo-accept
+        content: '\f1c8';
       }
       @include rtl-selector {
         padding: {
@@ -96,7 +98,8 @@
   &:not(.neo-select--multiple)::after {
     align-items: center;
     font-family: 'updated-neo-icons';
-    content: '\f23f';
+    // chevron-down
+    content: '\f244';
     display: inline-flex;
     justify-content: center;
     pointer-events: none;

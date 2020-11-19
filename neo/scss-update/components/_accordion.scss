@@ -3,16 +3,22 @@
 @mixin accordion-header {
   &__header {
     @extend %list-item;
+    padding: 10px 15px !important;
+    margin-right: 0 !important;
     border: none;
     cursor: pointer;
     position: relative;
+    transition: $group-list-transition;
+    min-height: auto !important;
+    min-width: auto !important;
 
     &:focus {
       outline: none;
     }
 
     &::after {
-      content: '\f242';
+      // chevron-up
+      content: '\f247';
       font-family: 'updated-neo-icons';
       position: absolute;
       right: $accordion-icon-offset;

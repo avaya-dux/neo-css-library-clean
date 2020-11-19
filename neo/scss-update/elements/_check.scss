@@ -44,7 +44,8 @@
   &:checked + label::before {
     background: $checkbox-checked-background;
     font-family: 'updated-neo-icons' !important;
-    content: '\f1c3';
+    // neo-accept
+    content: '\f1c8';
     font-size: $checkbox-font-size;
     color: $checkbox-color;
     padding-left: 2px;
@@ -57,7 +58,7 @@
 
     &:checked:disabled {
       font-family: 'updated-neo-icons' !important;
-      content: '\f1c3';
+      content: '\f1c8';
       font-size: $checkbox-font-size;
       color: $checkbox-color;
       padding-left: 2px;

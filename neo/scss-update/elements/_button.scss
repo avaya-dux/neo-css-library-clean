@@ -130,6 +130,7 @@
     &--#{$name} {
       background-color: $color;
       color: $button-inverse-text-color;
+      @include pulse('button', $name, $color);
     }
   }
   @each $name, $color in $neo-hover-colors {
@@ -158,6 +159,7 @@
       // background-color: $color !important;
       border-color: $color;
       color: $color;
+      @include pulse('button', $name, $color);
     }
   }
   @each $name, $color in $neo-hover-colors {
@@ -188,6 +190,7 @@
       // background-color: $color !important;
       border-color: $color;
       color: $color;
+      @include pulse('button', $name, $color);
     }
   }
   &:hover {
@@ -207,7 +210,8 @@
   transition-property: background-color, color, box-shadow;
   font-size: $button-icon-font-size;
   &::before {
-    font-size: 19px;
+    // hard-coded for now
+    font-size: 21px;
   }
 
   &-primary {
@@ -229,6 +233,9 @@
         background-color: $color;
         // border-color: $color;
         color: $global-background;
+        // code for pulsing animation
+        // transform: scale(1);
+        @include pulse('button', $name, $color);
       }
     }
     @each $name, $color in $neo-hover-colors {
@@ -258,6 +265,7 @@
         background-color: transparent;
         border-color: $color;
         color: $color;
+        @include pulse('button', $name, $color);
       }
       @each $name, $color in $neo-hover-colors {
         &--#{$name}:hover {
@@ -295,6 +303,8 @@
         border: none;
         background-color: transparent;
         color: $color;
+        @include pulse('button', $name, $color);
+
         &:hover {
           background-color: white;
           box-shadow: $button-box-shadow;
@@ -342,6 +352,7 @@
         background-color: $color;
         // border-color: $color;
         color: $global-background;
+        @include pulse('button', $name, $color);
       }
     }
     @each $name, $color in $neo-hover-colors {
@@ -377,6 +388,7 @@
         background-color: transparent;
         border-color: $color;
         color: $color;
+        @include pulse('button', $name, $color);
       }
       @each $name, $color in $neo-hover-colors {
         &--#{$name}:hover {
@@ -413,6 +425,7 @@
         border: none;
         background-color: transparent;
         color: $color;
+        @include pulse('button', $name, $color);
         &:hover {
           box-shadow: $button-box-shadow;
           background-color: white;

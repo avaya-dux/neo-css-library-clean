@@ -27,27 +27,27 @@ async function pullAllDesignTokens() {
   await spacerTokens.pullSpacerTokens();
 }
 
-pullAllDesignTokens()
-  .then(() =>
-    iconFunctions.pullIcons(
-      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-      coreFigmaFunctions.figmaCredentials.iconsFileID
-    )
-  )
-  .catch((error) => console.log(error));
+// pullAllDesignTokens()
+//   .then(() =>
+//     iconFunctions.pullIcons(
+//       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+//       coreFigmaFunctions.figmaCredentials.iconsFileID
+//     )
+//   )
+//   .catch((error) => console.log(error));
 
 // code to debug stale data from API
 
-// iconFunctions.getIconsComponents(
-//   coreFigmaFunctions.figmaCredentials.iconsFileID,
-//   coreFigmaFunctions.figmaCredentials.figmaAPIKey
-// );
+iconFunctions.getIconsComponents(
+  coreFigmaFunctions.figmaCredentials.iconsFileID,
+  coreFigmaFunctions.figmaCredentials.figmaAPIKey
+);
 
-// coreFigmaFunctions.getFigmaNodeStyleByID(
-//   coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-//   coreFigmaFunctions.figmaCredentials.iconsFileID,
-//   '849:87'
-// );
+coreFigmaFunctions.getFigmaNodeStyleByID(
+  coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+  coreFigmaFunctions.figmaCredentials.iconsFileID,
+  '849:87'
+);
 
 // exports.createAllStyles = createAllStyles;
 

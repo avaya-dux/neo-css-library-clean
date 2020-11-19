@@ -117,20 +117,79 @@
   }
 }
 
+// List item wrapper
+// New as of Neo 3.6.0
+
+%list-item-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: $group-list-transition;
+  // hard-coded
+  padding: 12px 8px;
+  &.neo-divider {
+    border-bottom: $list-divider;
+  }
+}
+
 // Individual list items
 //
 // Use on `li`s or `div`s within the `.neo-group-list` parent element.
+// Updated for new list style as at Neo 3.6.0
 //
 %list-item {
   background-color: transparent;
-  border: $group-list-border-width solid $group-list-border-color;
-  border-bottom: 0; /* Remove border-bottom for better stylization */
-  color: $group-list-item-color;
+  // border: $group-list-border-width solid $group-list-border-color;
+  // border-bottom: 0; /* Remove border-bottom for better stylization */
+  // color: $group-list-item-color;
   display: flex;
-  font-size: $group-list-font-size;
+  align-items: center;
+  // font-size: $group-list-font-size;
   list-style-type: none;
-  padding: $group-list-padding-y $group-list-padding-x;
-  transition: $group-list-transition;
+  // hard-coded for now
+  // min-width: $list-min-width;
+  min-width: 24px;
+  min-height: $list-min-height;
+  // padding: $list-vertical-padding $list-horizontal-padding;
+  &:not(:last-child) {
+    // hard-coded for now
+    margin-right: 16px;
+  }
+  &.neo-group-list__item--middle {
+    flex-grow: 1;
+  }
+  // &:nth-child(2) {
+  //   flex-grow: 1;
+  // }
+  // testing re-alignment of list items
+  & * {
+    margin-bottom: 0;
+  }
+  & .vertical {
+    flex-direction: column;
+    align-items: center;
+    align-self: flex-end;
+    & * {
+      // hard-coded to test
+      margin-right: 0 !important;
+    }
+    & span {
+      margin: auto;
+    }
+    & *:not(:last-child) {
+      // hard-coded for now
+      margin-bottom: 4px;
+    }
+    & p.neo-body-small {
+      color: $token-color-base-800;
+    }
+  }
+  & *:not(:last-child) {
+    margin-right: $list-margin-right;
+  }
+
+  // padding: $group-list-padding-y $group-list-padding-x;
+  // transition: $group-list-transition;
 }
 
 %list-radius {

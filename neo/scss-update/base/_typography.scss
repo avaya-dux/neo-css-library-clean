@@ -45,6 +45,10 @@ p {
   margin-bottom: $global-spacer;
   margin-top: 0;
   text-rendering: optimizeLEgibility;
+  // hard-coded for now
+  &:before {
+    margin-right: 4px;
+  }
 }
 
 a {
