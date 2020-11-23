@@ -596,6 +596,7 @@
 }
 
 .neo-tabs {
+  display: flex;
   &--wrapper {
     height: inherit;
     overflow: auto;

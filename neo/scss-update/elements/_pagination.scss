@@ -39,7 +39,7 @@
     text-decoration: none;
 
     &:hover {
-      background-color: #f1f1f1;
+      background-color: #ffffff;
     }
 
     // @include pagination-item--hover;
@@ -109,7 +109,7 @@
       // background-color: lighten($pagination-item-color-current, 5%);
       // border-color: darken($pagination-item-color-current, 5%);
       // color: $neo-white;
-      cursor: default;
+      cursor: pointer;
     }
   }
 }

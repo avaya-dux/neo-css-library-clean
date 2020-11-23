@@ -96,6 +96,10 @@
 
   @include navbar-default-color;
   @include navbar-form;
+
+  & button::before {
+    font-size: $navbar-icon-size !important;
+  }
 }
 
 .neo-navbar__brand {
@@ -135,7 +139,7 @@
 }
 
 .neo-nav {
-  align-items: center;
+  // align-items: center;
   display: flex;
   list-style: none;
   padding: 0;
@@ -172,8 +176,12 @@
       }
     }
     & button {
+      // problem area
       height: 100% !important;
       width: $navbar-icon-button-width !important;
+      &:focus {
+        box-shadow: none;
+      }
       &::before {
         color: $navbar-default-icon-color;
       }
