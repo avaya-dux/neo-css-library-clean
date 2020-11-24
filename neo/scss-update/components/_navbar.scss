@@ -91,7 +91,7 @@
   border-bottom: 1px solid #c9c9c9;
 
   @include rtl-selector {
-    padding: 0 0 0 $navbar-padding-x;
+    // padding: 0 0 0 $navbar-padding-x;
   }
 
   @include navbar-default-color;
@@ -148,6 +148,14 @@
   margin: {
     bottom: 0;
     left: $navbar-padding-x;
+    right: 0;
+  }
+  @include rtl-selector {
+    margin: {
+      left: 0;
+      right: $navbar-brand-offset-x;
+      bottom: 0;
+    }
   }
   & .neo-badge__navbutton {
     height: 100%;
@@ -246,11 +254,18 @@
       flex-direction: column;
       // max-width: 77%;
       margin-right: 16px;
+      margin-left: 0;
       & p {
         margin-bottom: 4px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+      }
+      @include rtl-selector {
+        margin: {
+          left: 16px;
+          right: 0;
+        }
       }
     }
 

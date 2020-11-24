@@ -132,7 +132,12 @@
       & h4 {
         align-self: center;
         margin-left: 8px;
+        margin-right: 0;
         color: black;
+        @include rtl-selector {
+          margin-left: 0;
+          margin-right: 8px;
+        }
       }
     }
 

@@ -209,6 +209,8 @@
   transition: $button-transition;
   transition-property: background-color, color, box-shadow;
   font-size: $button-icon-font-size;
+  // removing outline focus state
+  outline: 0;
   &::before {
     // hard-coded for now
     font-size: 21px;
@@ -331,6 +333,8 @@
   transition: $button-transition;
   transition-property: background-color, color, box-shadow;
   border-radius: 2px;
+  // removing outline focus state
+  outline: 0;
   &::before {
     font-size: 21px;
   }

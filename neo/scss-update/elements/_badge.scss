@@ -56,8 +56,8 @@
     z-index: 50;
 
     @include rtl-selector {
-      left: 0;
-      right: auto;
+      left: auto;
+      right: 0;
       transform: translate(-$badge-offset, -$badge-offset);
     }
   }

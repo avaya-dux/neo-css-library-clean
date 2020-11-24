@@ -365,7 +365,7 @@ Navbar styles
   justify-content: space-between;
 }
 ul#header-nav-left {
-  height: 58px;
+  /* height: 58px; */
   display: flex;
   align-items: center;
 }
@@ -376,7 +376,6 @@ ul#header-nav-right {
   align-items: center;
 }
 ul#header-nav-right li:last-child {
-  height: 58px;
   display: flex !important;
   justify-content: center;
 }
@@ -385,8 +384,8 @@ ul {
 }
 header#hub-header #header-top #header-logo {
   height: 58px;
-  width: 205px !important;
-  background-size: 100% 100%;
+  width: 220px !important;
+  background-size: 220px 58px;
   background-position: bottom;
 }
 #hub-search .searchbox-button,
@@ -598,7 +597,10 @@ Landing hero images
 ///////////////////////////
 */
 .theme-solid header#hub-header #header-top {
-  background-color: #ffffff !important;
+  background-color: #1b77a0 !important;
+}
+.theme-solid header#hub-header div#header-top.cpaas-header {
+  background-color: white !important;
 }
 header#hub-header #header-top {
   padding: 0 !important;
@@ -611,6 +613,8 @@ header#hub-header #header-top {
 }
 #header-top p {
   font-size: 19px;
+  line-height: 25.9px !important;
+  margin-right: 10%;
 }
 #hub-landing-top {
   display: flex !important;
@@ -619,8 +623,28 @@ header#hub-header #header-top {
   max-width: 60%;
   padding: 60px 0 16px 55px !important;
 }
+#hub-landing-top h2 {
+  font-weight: 700 !important;
+  font-size: 44px !important;
+  line-height: 50.6px !important;
+  margin-bottom: 12px !important;
+}
 .header-custom.header-bg-size-contain header#hub-header #header-top {
-  background-size: cover;
+  /* background-size: cover; */
+  background-size: 1440px;
+  background-position: center;
+}
+div#header-top .hub-container div:nth-child(2) {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+#hub-landing-top .hub-landing-description {
+  margin: 0 !important;
+}
+.theme-solid.header-custom header#hub-header #header-top {
+  background-size: 1440px;
+  background-position: center;
 }
 
 /*
@@ -634,6 +658,8 @@ Content under hero image
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .custom-header__sub {
@@ -770,11 +796,19 @@ body#enterprise header#hub-header div#hub-subheader-parent div#hub-subheader {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.global-landing__header h2 {
+.global-landing__header h1 {
   color: white;
   margin-top: 72px;
+  font-weight: 700 !important;
 }
-.global-landing__header > p {
+.global-landing__header--wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.global-landing__header--wrapper > h4 {
   margin-bottom: 69px;
   color: white !important;
 }
@@ -810,12 +844,17 @@ body#enterprise header#hub-header div#hub-subheader-parent div#hub-subheader {
   margin-bottom: 16px;
 }
 .global-landing__sub-header {
+  background-color: white !important;
   min-width: 100%;
+}
+.global-landing__sub-header--wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-.global-landing__sub-header h3 {
+.global-landing__sub-header--wrapper h3 {
   margin-top: 34px;
   margin-bottom: 32px;
 }
@@ -863,6 +902,8 @@ Media queries
   .global-landing__header-links--box {
     width: 300px !important;
     margin-bottom: 16px;
+    padding: 12px 12px;
+    border: 1px solid #f1f1f1f1;
   }
   .global-landing__header-links--box:last-child {
     margin-bottom: 22px;
@@ -881,8 +922,17 @@ Media queries
     background-image: url('https://files.readme.io/24b6913-global-landing-mobile.png');
   }
 
-  .global-landing__header h2 {
+  .global-landing__header h1 {
     padding: 0px 5px;
+  }
+
+  .global-landing__header--wrapper h1 {
+    padding: 0 12px;
+  }
+
+  .global-landing__header--wrapper > h4 {
+    text-align: center;
+    padding: 0 12px;
   }
 
   .global-landing__header-links {
@@ -913,7 +963,7 @@ Media queries
   .global-landing__sub-header h3 {
     text-align: center;
   }
-  .global-landing__header h2 {
+  .global-landing__header h1 {
     text-align: center;
   }
   .hub-landing-category-columns {
@@ -924,6 +974,13 @@ Media queries
   }
   #hub-container {
     padding-top: 62px !important;
+  }
+  header#hub-header #header-top #header-nav-left li a,
+  header#hub-header #header-top #header-nav-right li a {
+    height: auto;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
   }
 }
 
@@ -1134,6 +1191,7 @@ section#hub-content header h2 {
   text-indent: initial;
   max-height: initial;
   top: 10px !important;
+  text-transform: uppercase;
 }
 
 span.type-delete {
@@ -2488,7 +2546,7 @@ h6 {
   margin-top: 0;
 }
 h1 {
-  font-size: 44px;
+  font-size: 44px !important;
   margin-bottom: 17.6px;
 }
 h1:last-child {
