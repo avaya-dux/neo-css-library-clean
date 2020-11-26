@@ -54,16 +54,16 @@
 
       &::before {
         font-family: 'updated-neo-icons';
-        // neo-end
-        content: '\f1e2';
+        // neo-close
+        content: '\F1D9';
         width: 1.3em;
         text-align: center;
         display: inline-block;
       }
       &:checked::before {
         font-family: 'updated-neo-icons';
-        // neo-accept
-        content: '\f1c8';
+        // neo-check
+        content: '\F1D7';
       }
       @include rtl-selector {
         padding: {

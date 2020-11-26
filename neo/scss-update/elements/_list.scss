@@ -173,8 +173,18 @@
       // hard-coded to test
       margin-right: 0 !important;
     }
+    & div {
+      display: flex;
+    }
     & span {
       margin: auto;
+    }
+    & .neo-badge {
+      margin-top: 4px;
+      &:after {
+        top: 4px;
+        right: 10px;
+      }
     }
     & *:not(:last-child) {
       // hard-coded for now

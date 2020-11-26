@@ -498,6 +498,11 @@
 }
 
 @mixin tab-carousel() {
+  &__carousel {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
   &__carousel--button {
     border: 0;
     background-color: $tab-background-color;
@@ -596,7 +601,6 @@
 }
 
 .neo-tabs {
-  display: flex;
   &--wrapper {
     height: inherit;
     overflow: auto;

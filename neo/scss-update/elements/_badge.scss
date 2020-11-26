@@ -11,7 +11,7 @@
     border-radius: $badge-size / 2;
     box-sizing: border-box;
     color: $badge-color;
-    content: attr(bind-data-badge);
+    content: attr(data-badge);
     display: flex;
     font-size: $badge-font-size;
     height: $badge-size;
@@ -41,7 +41,7 @@
     border-radius: $badge-size / 2;
     box-sizing: border-box;
     color: $badge-color;
-    content: attr(bind-data-badge);
+    content: attr(data-badge);
     display: flex;
     font-size: $badge-font-size;
     height: $badge-size;

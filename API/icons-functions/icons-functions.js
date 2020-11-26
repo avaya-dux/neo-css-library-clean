@@ -29,17 +29,17 @@ async function getIconsComponents(figmaId, figmaApiKey) {
 
   // code to help debug stale API data
 
-  figmaFileComponents.meta.components.forEach((component) => {
-    if (component.name === 'outline/content/billboard-chart') {
-      console.log(component);
-    }
-    if (component.name === 'outline/content/chart-billboard') {
-      console.log(component);
-    }
-    if (component.node_id === '849:87') {
-      console.log(component);
-    }
-  });
+  // figmaFileComponents.meta.components.forEach((component) => {
+  //   if (component.name === 'outline/content/billboard-chart') {
+  //     console.log(component);
+  //   }
+  //   if (component.name === 'outline/content/chart-billboard') {
+  //     console.log(component);
+  //   }
+  //   if (component.node_id === '849:87') {
+  //     console.log(component);
+  //   }
+  // });
 
   const iconsOnAll = figmaFileComponents.meta.components.filter((component) => {
     return component.containing_frame.pageName === 'Icons';
@@ -130,13 +130,13 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
     // temporarily skip over 'fill' icons
     // TO-DO: separate this out
 
-    if (
-      iconName.includes('fill') &&
-      !iconName.includes('star') &&
-      !iconName.includes('arrow')
-    ) {
-      return;
-    }
+    // if (
+    //   iconName.includes('fill') &&
+    //   !iconName.includes('star') &&
+    //   !iconName.includes('arrow')
+    // ) {
+    //   return;
+    // }
 
     // we check to see whether any names in the Figma file are duplicated
 

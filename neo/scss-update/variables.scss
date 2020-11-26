@@ -513,6 +513,8 @@ $button-circular-height: $token-button-circular-height !default;
 $button-circular-width: $token-button-circular-width !default;
 $button-padding-y: $token-button-primary-default-padding-y !default;
 $button-icon-font-size: $token-button-icon-font-size !default;
+// this is a test to shift focus state from
+$button-outline: 1px solid rgba(0, 102, 255, 0.5) !default;
 
 $button-types: () !default;
 $button-types: map-merge(

@@ -1,5 +1,5 @@
 const stringsToReplace = new RegExp(
-  /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file)file(?!type|:|-xls|-json|-zip|-rtl)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|(?<!icon-)social(?!-active|-integrations)|logo|other/,
+  /(?<!email-|info-|error-|warning-|star-)outline|status|weather|communication|(?<!file)file(?!type|:|-xls|-json|-zip|-rtl)|alert(?!ing)|navigation|(?<!defer-inter|inter)action|(?<!sub-)account|(?<!suggested-)content(?!\:)|editor|(?<!social)social(?!-active|-integrations)|logo|other/,
   'g'
 );
 
