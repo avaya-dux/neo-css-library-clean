@@ -4,10 +4,7 @@ src: {{{ src }}};
 }
 
 
-
-
-[class^="{{classPrefix}}"]:before, [class*="{{classPrefix}}"]:before, [class^='aoc-']::before,
-[class*='aoc-']::before {
+[class^="{{classPrefix}}"]:before, [class*="{{classPrefix}}"]:before {
 font-family: {{ fontName }} !important;
 -webkit-font-feature-settings: "liga";
 -moz-font-feature-settings: "liga=1";
@@ -34,415 +31,956 @@ text-transform: none;
 vertical-align: middle;
 }
 
-[dir="rtl"][class^="{{classPrefix}}"]:before, [dir="rtl"][class^="{{classPrefix}}"]:before,
-[dir="rtl"][class^='aoc-']::before,
-[dir="rtl"][class*='aoc-']::before
+[dir="rtl"][class^="{{classPrefix}}"]:before, [dir="rtl"][class^="{{classPrefix}}"]:before
 {
 transform: scaleX(-1) !important;
 }
 
 {{# each codepoints }}
-.{{ ../classPrefix }}{{ @key }}:before, .aoc-icon-{{ @key}}:before {
+.{{ ../classPrefix }}{{ @key }}:before {
 content: "\\{{ this }}";
 }
 
+{{!-- conditional logic to maintain Neo 3.6.2 icon naming --}}
+
+{{#ifEquals @key 'user-add'}}
+.{{ ../classPrefix }}add-member:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'user-conference'}}
+.{{ ../classPrefix }}conference:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'user-details'}}
+.{{ ../classPrefix }}customer-details:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'user-details-rtl'}}
+.{{ ../classPrefix }}customer-details-rtl:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'user-waiting'}}
+.{{ ../classPrefix }}waiting:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'user-details-rtl'}}
+.{{ ../classPrefix }}customer-details-rtl:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'camera'}}
+.{{ ../classPrefix }}capture:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'camera-flip'}}
+.{{ ../classPrefix }}flip:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'fullscreen-on'}}
+.{{ ../classPrefix }}fullscreen:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'history'}}
+.{{ ../classPrefix }}customer-history:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'screen-max'}}
+.{{ ../classPrefix }}maximize:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'screen-min'}}
+.{{ ../classPrefix }}minimize:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'screen-swap'}}
+.{{ ../classPrefix }}swap-screen:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'screenpop-off'}}
+.{{ ../classPrefix }}close-screenpop:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'screenpop-on'}}
+.{{ ../classPrefix }}screenpop:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'work-start'}}
+.{{ ../classPrefix }}start-work:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'work-end'}}
+.{{ ../classPrefix }}end-work:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'send'}}
+.{{ ../classPrefix }}send-chat:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'preferences'}}
+.{{ ../classPrefix }}adding-columns:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'time-extend'}}
+.{{ ../classPrefix }}defer-interaction:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'error'}}
+.{{ ../classPrefix }}error-outline:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'info'}}
+.{{ ../classPrefix }}info-outline:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'notifications-on'}}
+.{{ ../classPrefix }}notifications:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'warning'}}
+.{{ ../classPrefix }}warning-outline:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'audio-on'}}
+.{{ ../classPrefix }}audio:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'bot'}}
+.{{ ../classPrefix }}bot-avatar:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-add'}}
+.{{ ../classPrefix }}add-call:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-end'}}
+.{{ ../classPrefix }}end-call:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-make'}}
+.{{ ../classPrefix }}make-call:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-mute'}}
+.{{ ../classPrefix }}phone-mute:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-logs'}}
+.{{ ../classPrefix }}phone-call-logs:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-logs-rtl'}}
+.{{ ../classPrefix }}phone-call-logs-rtl:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-dial-in'}}
+.{{ ../classPrefix }}phone-dial-in:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-split'}}
+.{{ ../classPrefix }}split-call:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-alerting'}}
+.{{ ../classPrefix }}voice-alerting:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-inbound'}}
+.{{ ../classPrefix }}voice-inbound:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-missed'}}
+.{{ ../classPrefix }}voice-missed:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-not-ready'}}
+.{{ ../classPrefix }}voice-not-ready:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-outbound'}}
+.{{ ../classPrefix }}voice-outbound:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call-pending'}}
+.{{ ../classPrefix }}voice-pending:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'call'}}
+.{{ ../classPrefix }}voice:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'control-request'}}
+.{{ ../classPrefix }}request-control:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'control-release'}}
+.{{ ../classPrefix }}release-control:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'queue-send-to'}}
+.{{ ../classPrefix }}send-to-queue:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+
+{{#ifEquals @key 'speaker-high'}}
+.{{ ../classPrefix }}sound:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'video-on'}}
+.{{ ../classPrefix }}video:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'hold-on'}}
+.{{ ../classPrefix }}hold:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'video-in-video'}}
+.{{ ../classPrefix }}picture-in-picture:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'email'}}
+.{{ ../classPrefix }}email-outline:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'check'}}
+.{{ ../classPrefix }}accept:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'clipboard'}}
+.{{ ../classPrefix }}worklog:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'layout-custom'}}
+.{{ ../classPrefix }}custom-layout:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'view-on'}}
+.{{ ../classPrefix }}observe:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'view-off'}}
+.{{ ../classPrefix }}stop-observing:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'reply-all'}}
+.{{ ../classPrefix }}reply-all-to-chat:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'reply'}}
+.{{ ../classPrefix }}reply-to-chat:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'history-reports'}}
+.{{ ../classPrefix }}historical-reports:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'star'}}
+.{{ ../classPrefix }}star-outline:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'suggested'}}
+.{{ ../classPrefix }}suggested-content:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'close'}}
+.{{ ../classPrefix }}end:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'billboard-chart'}}
+.{{ ../classPrefix }}chart-billboard:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'alignment-center'}}
+.{{ ../classPrefix }}center-alignment:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'alignment-left'}}
+.{{ ../classPrefix }}left-alignment:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'alignment-right'}}
+.{{ ../classPrefix }}right-alignment:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'list-bullet'}}
+.{{ ../classPrefix }}bullet-list:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'list-number-rtl'}}
+.{{ ../classPrefix }}rtl-num-list:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'list-number'}}
+.{{ ../classPrefix }}numbered-list:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'format-expand'}}
+.{{ ../classPrefix }}rich-text-expanded:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'format-collapse'}}
+.{{ ../classPrefix }}email-format:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'image-broken'}}
+.{{ ../classPrefix }}broken-image:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-avi'}}
+.{{ ../classPrefix }}filetype-avi:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-doc'}}
+.{{ ../classPrefix }}filetype-doc:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-html'}}
+.{{ ../classPrefix }}filetype-html:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-jpg'}}
+.{{ ../classPrefix }}filetype-jpg:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-json'}}
+.{{ ../classPrefix }}filetype-json:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-mp4'}}
+.{{ ../classPrefix }}filetype-mp4:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-pdf'}}
+.{{ ../classPrefix }}filetype-pdf:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-png'}}
+.{{ ../classPrefix }}filetype-png:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-ppt'}}
+.{{ ../classPrefix }}filetype-ppt:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-txt'}}
+.{{ ../classPrefix }}filetype-txt:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-xls'}}
+.{{ ../classPrefix }}filetype-xls:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'file-zip'}}
+.{{ ../classPrefix }}filetype-zip:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'ellipses-horizontal'}}
+.{{ ../classPrefix }}more:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'page-last'}}
+.{{ ../classPrefix }}last-page:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'page-first'}}
+.{{ ../classPrefix }}first-page:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'social'}}
+.{{ ../classPrefix }}social-active:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'away'}}
+.{{ ../classPrefix }}clock:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'busy'}}
+.{{ ../classPrefix }}go-not-ready:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'available'}}
+.{{ ../classPrefix }}go-ready:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'cloudy-scattered'}}
+.{{ ../classPrefix }}scattered-clouds:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key 'cloudy-few'}}
+.{{ ../classPrefix }}few-clouds:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{!-- conditional logic to maintain Neo v.2x icon naming --}}
+
 {{#ifEquals @key "address-book"}}
-.{{ ../classPrefix }}address-book-inverted:before, .aoc-icon-address-book-inverted:before,
-.{{ ../classPrefix }}address-folder:before, .aoc-icon-address-folder:before {
+.{{ ../classPrefix }}address-book-inverted:before,
+.{{ ../classPrefix }}address-folder:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "agents"}}
-.{{ ../classPrefix }}agents-inverted:before, .aoc-icon-agents-inverted:before,
-.{{ ../classPrefix }}my-agents:before, .aoc-icon-my-agents:before, .{{ ../classPrefix }}customer-consult:before,
-.aoc-icon-customer-consult:before {
+.{{ ../classPrefix }}agents-inverted:before,
+.{{ ../classPrefix }}my-agents:before, .{{ ../classPrefix }}customer-consult:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "arrow-down"}}
-.{{ ../classPrefix }}inbound:before, .aoc-icon-inbound:before {
+.{{ ../classPrefix }}inbound:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "arrow-up"}}
-.{{ ../classPrefix }}outbound:before, .aoc-icon-outbound:before, .{{ ../classPrefix }}outbound-channel:before,
-.aoc-icon-outbound-channel:before {
+.{{ ../classPrefix }}outbound:before, .{{ ../classPrefix }}outbound-channel:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "awfos"}}
-.{{ ../classPrefix }}awfos-portal:before, .aoc-icon-awfos-portal:before, .{{ ../classPrefix }}rtl-awfos:before,
-.aoc-icon-rtl-awfos:before, .{{ ../classPrefix }}rtl-evaluation:before, .aoc-icon-rtl-evaluation:before, {
+.{{ ../classPrefix }}awfos-portal:before, .{{ ../classPrefix }}rtl-awfos:before,
+.{{ ../classPrefix }}rtl-evaluation:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "bot-avatar"}}
-.{{ ../classPrefix }}robot:before, .aoc-icon-robot:before {
+.{{ ../classPrefix }}robot:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "bullet-list"}}
-.{{ ../classPrefix }}list:before, .aoc-icon-list:before, .{{ ../classPrefix }}list-closed:before,
-.aoc-icon-list-closed:before, .{{ ../classPrefix }}list-clock:before, .aoc-icon-list-clock:before,
-.{{ ../classPrefix }}list-file:before, .aoc-icon-list-file:before {
+.{{ ../classPrefix }}list:before, .{{ ../classPrefix }}list-closed:before, .{{ ../classPrefix }}list-clock:before,
+.{{ ../classPrefix }}list-file:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "chat"}}
-.{{ ../classPrefix }}chat-channel:before, .aoc-icon-chat-channel:before, .{{ ../classPrefix }}messaging:before,
-.aoc-icon-messaging:before {
+.{{ ../classPrefix }}chat-channel:before, .{{ ../classPrefix }}messaging:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "chat-alerting"}}
-.{{ ../classPrefix }}messaging-alerting:before, .aoc-icon-messaging-alerting:before {
+.{{ ../classPrefix }}messaging-alerting:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "chat-missed"}}
-.{{ ../classPrefix }}messaging-missed:before, .aoc-icon-messaging-missed:before {
+.{{ ../classPrefix }}messaging-missed:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "chat-not-ready"}}
-.{{ ../classPrefix }}messaging-not-ready:before, .aoc-icon-messaging-not-ready:before {
+.{{ ../classPrefix }}messaging-not-ready:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "chat-outbound"}}
-.{{ ../classPrefix }}messaging-outbound:before, .aoc-icon-messaging-outbound:before {
+.{{ ../classPrefix }}messaging-outbound:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "chat-pending"}}
-.{{ ../classPrefix }}messaging-pending:before, .aoc-icon-messaging-pending:before {
+.{{ ../classPrefix }}messaging-pending:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "chevron-down"}}
-.{{ ../classPrefix }}collapse:before, .aoc-icon-collapse:before {
+.{{ ../classPrefix }}collapse:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "conference"}}
-.{{ ../classPrefix }}customers:before, .aoc-icon-customers:before {
+.{{ ../classPrefix }}customers:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "configure"}}
-.{{ ../classPrefix }}chart-configure:before, .aoc-icon-chart-configure:before {
+.{{ ../classPrefix }}chart-configure:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "contact"}}
-.{{ ../classPrefix }}customer:before, .aoc-icon-customer:before {
+.{{ ../classPrefix }}customer:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "custom"}}
-.{{ ../classPrefix }}custom01:before, .aoc-icon-custom01:before, .{{ ../classPrefix }}custom02:before,
-.aoc-icon-custom02:before, .{{ ../classPrefix }}custom03:before, .aoc-icon-custom03:before,
-.{{ ../classPrefix }}custom04:before, .aoc-icon-custom04:before, .{{ ../classPrefix }}custom05:before,
-.aoc-icon-custom05:before, .{{ ../classPrefix }}custom06:before, .aoc-icon-custom06:before,
-.{{ ../classPrefix }}custom08:before, .aoc-icon-custom08:before, .{{ ../classPrefix }}custom09:before,
-.aoc-icon-custom09:before, .{{ ../classPrefix }}custom10:before, .aoc-icon-custom10:before {
+.{{ ../classPrefix }}custom01:before .{{ ../classPrefix }}custom02:before,
+.{{ ../classPrefix }}custom03:before,
+.{{ ../classPrefix }}custom04:before, .{{ ../classPrefix }}custom05:before,
+.{{ ../classPrefix }}custom06:before,
+.{{ ../classPrefix }}custom08:before, .{{ ../classPrefix }}custom09:before,
+.{{ ../classPrefix }}custom10:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "custom-alerting"}}
-.{{ ../classPrefix }}custom01-alerting:before, .aoc-icon-custom01-alerting:before,
+.{{ ../classPrefix }}custom01-alerting:before,
 .{{ ../classPrefix }}custom02-alerting:before,
-.aoc-icon-custom02-alerting:before, .{{ ../classPrefix }}custom03-alerting:before, .aoc-icon-custom03-alerting:before,
-.{{ ../classPrefix }}custom04-alerting:before, .aoc-icon-custom04-alerting:before,
+.{{ ../classPrefix }}custom03-alerting:before,
+.{{ ../classPrefix }}custom04-alerting:before,
 .{{ ../classPrefix }}custom05-alerting:before,
-.aoc-icon-custom05-alerting:before, .{{ ../classPrefix }}custom06-alerting:before, .aoc-icon-custom06-alerting:before,
-.{{ ../classPrefix }}custom08-alerting:before, .aoc-icon-custom08-alerting:before,
+.{{ ../classPrefix }}custom06-alerting:before,
+.{{ ../classPrefix }}custom08-alerting:before,
 .{{ ../classPrefix }}custom09-alerting:before,
-.aoc-icon-custom09-alerting:before, .{{ ../classPrefix }}custom10-alerting:before, .aoc-icon-custom10-alerting:before
+.{{ ../classPrefix }}custom10-alerting:before,
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "custom-inbound"}}
-.{{ ../classPrefix }}custom01-inbound:before, .aoc-icon-custom01-inbound:before,
+.{{ ../classPrefix }}custom01-inbound:before,
 .{{ ../classPrefix }}custom02-inbound:before,
-.aoc-icon-custom02-inbound:before, .{{ ../classPrefix }}custom03-inbound:before, .aoc-icon-custom03-inbound:before,
-.{{ ../classPrefix }}custom04-inbound:before, .aoc-icon-custom04-inbound:before,
+.{{ ../classPrefix }}custom03-inbound:before,
+.{{ ../classPrefix }}custom04-inbound:before,
 .{{ ../classPrefix }}custom05-inbound:before,
-.aoc-icon-custom05-inbound:before, .{{ ../classPrefix }}custom06-inbound:before, .aoc-icon-custom06-inbound:before,
-.{{ ../classPrefix }}custom08-inbound:before, .aoc-icon-custom08-inbound:before,
+.{{ ../classPrefix }}custom06-inbound:before,
+.{{ ../classPrefix }}custom08-inbound:before,
 .{{ ../classPrefix }}custom09-inbound:before,
-.aoc-icon-custom09-inbound:before, .{{ ../classPrefix }}custom10-inbound:before, .aoc-icon-custom10-inbound:before
+.{{ ../classPrefix }}custom10-inbound:before,
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "custom-missed"}}
-.{{ ../classPrefix }}custom01-missed:before, .aoc-icon-custom01-missed:before,
+.{{ ../classPrefix }}custom01-missed:before,
 .{{ ../classPrefix }}custom02-missed:before,
-.aoc-icon-custom02-missed:before, .{{ ../classPrefix }}custom03-missed:before, .aoc-icon-custom03-missed:before,
-.{{ ../classPrefix }}custom04-missed:before, .aoc-icon-custom04-missed:before,
+.{{ ../classPrefix }}custom03-missed:before,
+.{{ ../classPrefix }}custom04-missed:before,
 .{{ ../classPrefix }}custom05-missed:before,
-.aoc-icon-custom05-missed:before, .{{ ../classPrefix }}custom06-missed:before, .aoc-icon-custom06-missed:before,
-.{{ ../classPrefix }}custom08-missed:before, .aoc-icon-custom08-missed:before,
+.{{ ../classPrefix }}custom06-missed:before,
+.{{ ../classPrefix }}custom08-missed:before,
 .{{ ../classPrefix }}custom09-missed:before,
-.aoc-icon-custom09-missed:before, .{{ ../classPrefix }}custom10-missed:before, .aoc-icon-custom10-missed:before
+.{{ ../classPrefix }}custom10-missed:before,
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "custom-outbound"}}
-.{{ ../classPrefix }}custom01-outbound:before, .aoc-icon-custom01-outbound:before,
+.{{ ../classPrefix }}custom01-outbound:before,
 .{{ ../classPrefix }}custom02-outbound:before,
-.aoc-icon-custom02-missed:before, .{{ ../classPrefix }}custom03-outbound:before, .aoc-icon-custom03-outbound:before,
-.{{ ../classPrefix }}custom04-outbound:before, .aoc-icon-custom04-outbound:before,
+.{{ ../classPrefix }}custom03-outbound:before,
+.{{ ../classPrefix }}custom04-outbound:before,
 .{{ ../classPrefix }}custom05-outbound:before,
-.aoc-icon-custom05-outbound:before, .{{ ../classPrefix }}custom06-outbound:before, .aoc-icon-custom06-outbound:before,
-.{{ ../classPrefix }}custom08-outbound:before, .aoc-icon-custom08-outbound:before,
+.{{ ../classPrefix }}custom06-outbound:before,
+.{{ ../classPrefix }}custom08-outbound:before,
 .{{ ../classPrefix }}custom09-outbound:before,
-.aoc-icon-custom09-outbound:before, .{{ ../classPrefix }}custom10-outbound:before, .aoc-icon-custom10-outbound:before
+.{{ ../classPrefix }}custom10-outbound:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "customer-details"}}
-.{{ ../classPrefix }}list-contact:before, .aoc-icon-list-contact:before
+.{{ ../classPrefix }}list-contact:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "customer-journey"}}
-.{{ ../classPrefix }}journey-information:before, .aoc-icon-journey-information:before
+.{{ ../classPrefix }}journey-information:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "defer-interaction"}}
-.{{ ../classPrefix }}acw-extend:before, .aoc-icon-acw-extend:before
+.{{ ../classPrefix }}acw-extend:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "dialpad"}}
-.{{ ../classPrefix }}dialpad-inverted:before, .aoc-icon-dialpad-inverted:before
+.{{ ../classPrefix }}dialpad-inverted:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "email-alerting"}}
-.{{ ../classPrefix }}custom07-alerting:before, .aoc-icon-custom07-alerting:before
+.{{ ../classPrefix }}custom07-alerting:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "email-inbound"}}
-.{{ ../classPrefix }}custom07-inbound:before, .aoc-icon-custom07-inbound:before
+.{{ ../classPrefix }}custom07-inbound:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "email-missed"}}
-.{{ ../classPrefix }}custom07-missed:before, .aoc-icon-custom07-missed:before
+.{{ ../classPrefix }}custom07-missed:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "email-outbound"}}
-.{{ ../classPrefix }}custom07-outbound:before, .aoc-icon-custom07-outbound:before,
-.{{ ../classPrefix }}email-outbound-inverted:before, .aoc-icon-email-outbound-inverted:before
+.{{ ../classPrefix }}custom07-outbound:before,
+.{{ ../classPrefix }}email-outbound-inverted:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "email-outline"}}
-.{{ ../classPrefix }}email-active:before, .aoc-icon-email-active:before,
-.{{ ../classPrefix }}email-channel:before, .aoc-icon-email-channel:before,
-.{{ ../classPrefix }}email:before, .aoc-icon-email:before
+.{{ ../classPrefix }}email-active:before,
+.{{ ../classPrefix }}email-channel:before,
+.{{ ../classPrefix }}email:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "email-pending"}}
-.{{ ../classPrefix }}email-defer:before, .aoc-icon-email-defer:before,
-.{{ ../classPrefix }}defer-email:before, .aoc-icon-defer-email:before
+.{{ ../classPrefix }}email-defer:before,
+.{{ ../classPrefix }}defer-email:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "end"}}
-.{{ ../classPrefix }}clear-all:before, .aoc-icon-clear-all:before
+.{{ ../classPrefix }}clear-all:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "end-call"}}
-.{{ ../classPrefix }}acw:before, .aoc-icon-acw:before
+.{{ ../classPrefix }}acw:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "error-outline"}}
-.{{ ../classPrefix }}agent-issue:before, .aoc-icon-agent-issue:before, .{{ ../classPrefix }}error-filled:before,
-.aoc-icon-error-filled:before
+.{{ ../classPrefix }}agent-issue:before, .{{ ../classPrefix }}error-filled:before
+
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "exit-left"}}
-.{{ ../classPrefix }}exit:before, .aoc-icon-exit:before
+.{{ ../classPrefix }}exit:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "fb"}}
-.{{ ../classPrefix }}fb_direction_left:before, .aoc-icon-fb_direction_left:before,
-.{{ ../classPrefix }}fb_direction_right:before, .aoc-icon-fb_direction_right:before, .{{ ../classPrefix }}fb_key:before,
-.aoc-icon-fb_key:before, .{{ ../classPrefix }}fb_outbound:before, .aoc-icon-fb_outbound:before,
+.{{ ../classPrefix }}fb_direction_left:before,
+.{{ ../classPrefix }}fb_direction_right:before, .{{ ../classPrefix }}fb_key:before,
+.{{ ../classPrefix }}fb_outbound:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "fbm"}}
-.{{ ../classPrefix }}fbm_left:before, .aoc-icon-fbm_left:before,
-.{{ ../classPrefix }}fbm_right:before, .aoc-icon-fbm_right:before, .{{ ../classPrefix }}fbm_key:before,
-.aoc-icon-fbm_key:before, .{{ ../classPrefix }}fbm_outbound:before, .aoc-icon-fbm_outbound:before,
+.{{ ../classPrefix }}fbm_left:before,
+.{{ ../classPrefix }}fbm_right:before, .{{ ../classPrefix }}fbm_key:before,
+.{{ ../classPrefix }}fbm_outbound:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "filetype-json"}}
-.{{ ../classPrefix }}rtl-json:before, .aoc-icon-rtl-json:before, .{{ ../classPrefix }}file-json:before,
-.aoc-icon-file-json:before,
+.{{ ../classPrefix }}rtl-json:before, .{{ ../classPrefix }}file-json:before,
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "filter"}}
-.{{ ../classPrefix }}filter-cancel:before, .aoc-icon-filter-cancel:before
+.{{ ../classPrefix }}filter-cancel:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "global"}}
-.{{ ../classPrefix }}item-public:before, .aoc-icon-item-public:before
+.{{ ../classPrefix }}item-public:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "history-search"}}
-.{{ ../classPrefix }}customer-history-search:before, .aoc-icon-customer-history-search:before
+.{{ ../classPrefix }}customer-history-search:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "image"}}
-.{{ ../classPrefix }}screen-captures:before, .aoc-icon-screen-captures:before
+.{{ ../classPrefix }}screen-captures:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "info-outline"}}
-.{{ ../classPrefix }}info-filled:before, .aoc-icon-info-filled:before
+.{{ ../classPrefix }}info-filled:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "instagram"}}
-.{{ ../classPrefix }}instagram_left:before, .aoc-icon-instagram_left:before,
-.{{ ../classPrefix }}instagram_right:before, .aoc-icon-instagram_right:before,
-.{{ ../classPrefix }}instagram_key:before,
-.aoc-icon-instagram_key:before, .{{ ../classPrefix }}instagram_outbound:before, .aoc-icon-instagram_outbound:before,
+.{{ ../classPrefix }}instagram_left:before
+.{{ ../classPrefix }}instagram_right:before
+.{{ ../classPrefix }}instagram_key:before, .{{ ../classPrefix }}instagram_outbound:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "lock"}}
-.{{ ../classPrefix }}item-private:before, .aoc-icon-item-private:before
+.{{ ../classPrefix }}item-private:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "not-available"}}
-.{{ ../classPrefix }}fa_direction_left:before, .aoc-icon-fa_direction_left:before,
-.{{ ../classPrefix }}fa_directrion_right:before, .aoc-icon-fa_directrion_right:before,
-.{{ ../classPrefix }}fa_key:before,
-.aoc-icon-fa_key:before, .{{ ../classPrefix }}fa_outbound:before, .aoc-icon-fa_outbound:before,
+.{{ ../classPrefix }}fa_direction_left:before,
+.{{ ../classPrefix }}fa_directrion_right:before,
+.{{ ../classPrefix }}fa_key:before, .{{ ../classPrefix }}fa_outbound:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "notifications"}}
-.{{ ../classPrefix }}notifications-inverted:before, .aoc-icon-notifications-inverted:before
+.{{ ../classPrefix }}notifications-inverted:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "observe"}}
-.{{ ../classPrefix }}awfos-observe:before, .aoc-icon-awfos-observe:before, .{{ ../classPrefix }}preview:before,
-.aoc-icon-preview:before, .{{ ../classPrefix }}item-show:before, .aoc-icon-item-show:before
+.{{ ../classPrefix }}awfos-observe:before, .{{ ../classPrefix }}preview:before,
+.{{ ../classPrefix }}item-show:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "pie-chart"}}
-.{{ ../classPrefix }}charts:before, .aoc-icon-charts:before, .{{ ../classPrefix }}view-manager:before,
-.aoc-icon-view-manager:before
+.{{ ../classPrefix }}charts:before, .{{ ../classPrefix }}view-manager:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "pom"}}
-.{{ ../classPrefix }}outreach:before, .aoc-icon-outreach:before
+.{{ ../classPrefix }}outreach:before
 {
 content: "\\{{ this }}";
 }
@@ -463,125 +1001,124 @@ content: "\\{{ this }}";
 {{/ifEquals}}
 
 {{#ifEquals @key "reply-to-chat"}}
-.{{ ../classPrefix }}reply-to-email:before, .aoc-icon-reply-to-email:before
+.{{ ../classPrefix }}reply-to-email:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "screenpop"}}
-.{{ ../classPrefix }}open-in-new-tab:before, .aoc-icon-open-in-new-tab:before,
-.{{ ../classPrefix }}open-in-new-window:before, .aoc-icon-open-in-new-window:before
+.{{ ../classPrefix }}open-in-new-tab:before,
+.{{ ../classPrefix }}open-in-new-window:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "sms"}}
-.{{ ../classPrefix }}sms-active:before, .aoc-icon-sms-active:before,
-.{{ ../classPrefix }}sms-channel:before, .aoc-icon-sms-channel:before
+.{{ ../classPrefix }}sms-active:before,
+.{{ ../classPrefix }}sms-channel:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "social-active"}}
-.{{ ../classPrefix }}social:before, .aoc-icon-social:before,
-.{{ ../classPrefix }}social-channel:before, .aoc-icon-social-channel:before,
-.{{ ../classPrefix }}social-missed:before, .aoc-icon-social-missed:before,
-.{{ ../classPrefix }}social-outbound:before, .aoc-icon-social-outbound:before,
-.{{ ../classPrefix }}social-alerting:before, .aoc-icon-social-alerting:before,
-.{{ ../classPrefix }}social-pending:before, .aoc-icon-social-pending:before,
-.{{ ../classPrefix }}social-not-ready:before, .aoc-icon-social-not-ready:before
+.{{ ../classPrefix }}social:before,
+.{{ ../classPrefix }}social-channel:before,
+.{{ ../classPrefix }}social-missed:before,
+.{{ ../classPrefix }}social-outbound:before,
+.{{ ../classPrefix }}social-alerting:before,
+.{{ ../classPrefix }}social-pending:before,
+.{{ ../classPrefix }}social-not-ready:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "star-filled"}}
-.{{ ../classPrefix }}item-default:before, .aoc-icon-item-default:before
+.{{ ../classPrefix }}item-default:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "stop-observing"}}
-.{{ ../classPrefix }}item-hide:before, .aoc-icon-item-hide:before
+.{{ ../classPrefix }}item-hide:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "supervisor"}}
-.{{ ../classPrefix }}call-supervisor:before, .aoc-icon-call-supervisor:before,
-.{{ ../classPrefix }}call-supervisor-inverted:before, .aoc-icon-call-supervisor-inverted:before
+.{{ ../classPrefix }}call-supervisor:before
+.{{ ../classPrefix }}call-supervisor-inverted:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "twitter"}}
-.{{ ../classPrefix }}twitter_direction_left:before, .aoc-icon-twitter_direction_left:before,
-.{{ ../classPrefix }}twitter_direction_right:before, .aoc-icon-twitter_direction_right:before,
+.{{ ../classPrefix }}twitter_direction_left:before,
+.{{ ../classPrefix }}twitter_direction_right:before,
 .{{ ../classPrefix }}twitter_key:before,
-.aoc-icon-twitter_key:before, .{{ ../classPrefix }}twitter_outbound:before, .aoc-icon-twitter_outbound:before,
+.{{ ../classPrefix }}twitter_outbound:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "voice"}}
-.{{ ../classPrefix }}accept-call:before, .aoc-icon-accept-call:before,
-.{{ ../classPrefix }}voice-channel:before, .aoc-icon-voice-channel:before,
-.{{ ../classPrefix }}voice-active:before,
-.aoc-icon-voice-active:before
+.{{ ../classPrefix }}accept-call:before,
+.{{ ../classPrefix }}voice-channel:before,
+.{{ ../classPrefix }}voice-active:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "voicemail"}}
-.{{ ../classPrefix }}voicemail-priority:before, .aoc-icon-voicemail-priority:before,
-.{{ ../classPrefix }}voice-mailbox:before, .aoc-icon-mailbox:before
+.{{ ../classPrefix }}voicemail-priority:before,
+.{{ ../classPrefix }}voice-mailbox:before,
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "voicemail-private"}}
-.{{ ../classPrefix }}voicemail_private:before, .aoc-icon-voicemail_private:before
+.{{ ../classPrefix }}voicemail_private:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "warning-outline"}}
-.{{ ../classPrefix }}warning-filled:before, .aoc-icon-warning-filled:before
+.{{ ../classPrefix }}warning-filled:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "widget-overview"}}
-.{{ ../classPrefix }}widgets:before, .aoc-icon-widgets:before,
-.{{ ../classPrefix }}widget-list:before, .aoc-icon-widget-list:before
+.{{ ../classPrefix }}widgets:before,
+.{{ ../classPrefix }}widget-list:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "worklog"}}
-.{{ ../classPrefix }}worklog-inverted:before, .aoc-icon-worklog-inverted:before
+.{{ ../classPrefix }}worklog-inverted:before
 {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
 
 {{#ifEquals @key "youtube"}}
-.{{ ../classPrefix }}youtube_direction_left:before, .aoc-icon-youtube_direction_left:before,
-.{{ ../classPrefix }}youtube_direction_right:before, .aoc-icon-youtube_direction_right:before,
+.{{ ../classPrefix }}youtube_direction_left:before,
+.{{ ../classPrefix }}youtube_direction_right:before,
 .{{ ../classPrefix }}youtube_key:before,
-.aoc-icon-youtube_key:before, .{{ ../classPrefix }}youtube_outbound:before, .aoc-icon-youtube_outbound:before,
+.{{ ../classPrefix }}youtube_outbound:before
 {
 content: "\\{{ this }}";
 }

@@ -154,6 +154,14 @@
   &:not(:last-child) {
     // hard-coded for now
     margin-right: 16px;
+    margin-left: 0;
+    @include rtl-selector {
+      margin-left: 16px;
+      margin-right: 0;
+    }
+  }
+  & span {
+    margin: 0 auto;
   }
   &.neo-group-list__item--middle {
     flex-grow: 1;
@@ -181,9 +189,13 @@
     }
     & .neo-badge {
       margin-top: 4px;
+      margin-bottom: 12px;
       &:after {
         top: 4px;
         right: 10px;
+        @include rtl-selector {
+          right: 20px;
+        }
       }
     }
     & *:not(:last-child) {
@@ -196,6 +208,11 @@
   }
   & *:not(:last-child) {
     margin-right: $list-margin-right;
+    margin-left: 0;
+    @include rtl-selector {
+      margin-left: $list-margin-right;
+      margin-right: 0;
+    }
   }
 
   // padding: $group-list-padding-y $group-list-padding-x;

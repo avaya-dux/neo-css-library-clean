@@ -119,6 +119,22 @@
     border-left-color: $tab-action-active-border-color;
     &:hover {
       border-left-color: $tab-item-hover-color;
+      cursor: pointer;
+      & a {
+        color: $tab-item-hover-color;
+        font-weight: $tab-hover-font-weight;
+        &:before {
+          color: $tab-item-hover-color;
+          font-weight: $tab-hover-font-weight;
+        }
+      }
+    }
+    @include rtl-selector {
+      border-left: none;
+      border-right: 2px solid $tab-action-active-border-color;
+      &:hover {
+        border-right: 2px solid $tab-item-hover-color;
+      }
     }
     a {
       // border-width: 2px;
@@ -365,6 +381,13 @@
   &--vertical-active-disabled {
     // border-width: 2px;
     border-left: 2px solid $token-color-blue-200;
+    @include rtl-selector {
+      border-left: none;
+      border-right: 2px solid $token-color-blue-200;
+      &:hover {
+        border-right: 2px solid $token-color-blue-200;
+      }
+    }
   }
   &--vertical-active-disabled,
   &--vertical-active-disabled > a {

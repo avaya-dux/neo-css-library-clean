@@ -23,7 +23,7 @@
     vertical-align: middle;
     text-align: center;
     @include rtl-selector {
-      text-align: right;
+      // text-align: right;
     }
 
     .neo-input,
@@ -45,7 +45,8 @@
     background-color: $table-disabled-bg-color;
     color: $table-disabled-text-color;
     & a {
-      color: $table-disabled-clickable-color;
+      // color: $table-disabled-clickable-color;
+      color: #757474;
       cursor: not-allowed;
     }
   }
@@ -62,7 +63,10 @@
       font-size: 24px;
     }
     & .neo-form-control .neo-check + label {
-      display: block;
+      // display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
@@ -158,33 +162,33 @@
   }
 }
 
-@mixin neo-table--sortable {
-  /* stylelint-disable selector-no-qualifying-type */
-  &--sortable {
-    th {
-      cursor: pointer;
-      padding-right: $table-sortable-icon-margin-x * 2 +
-        $table-sortable-icon-size;
-      position: relative;
+// @mixin neo-table--sortable {
+//   /* stylelint-disable selector-no-qualifying-type */
+//   &--sortable {
+//     th {
+//       cursor: pointer;
+//       padding-right: $table-sortable-icon-margin-x * 2 +
+//         $table-sortable-icon-size;
+//       position: relative;
 
-      &:hover {
-        background-color: $table-sortable-background-hover;
-      }
+//       &:hover {
+//         background-color: $table-sortable-background-hover;
+//       }
 
-      &::after {
-        font-family: 'AOC-Icons';
-        font-size: $table-sortable-icon-size;
-        line-height: $table-sortable-icon-line-height;
-        position: absolute;
-        right: $table-sortable-icon-margin-x;
-      }
+//       &::after {
+//         font-family: 'AOC-Icons';
+//         font-size: $table-sortable-icon-size;
+//         line-height: $table-sortable-icon-line-height;
+//         position: absolute;
+//         right: $table-sortable-icon-margin-x;
+//       }
 
-      @include table-sort-order(ascending, '\e9a1');
-      @include table-sort-order(descending, '\e9a0');
-    }
-  }
-  /* stylelint-enable selector-no-qualifying-type */
-}
+//       @include table-sort-order(ascending, '\e9a1');
+//       @include table-sort-order(descending, '\e9a0');
+//     }
+//   }
+//   /* stylelint-enable selector-no-qualifying-type */
+// }
 
 // @mixin neo-table--editable {
 //   &--editable {
@@ -262,6 +266,11 @@
 
     & > label {
       margin-right: 8px;
+      margin-left: auto;
+      @include rtl-selector {
+        margin-left: 8px;
+        margin-right: auto;
+      }
     }
     & > .neo-select {
       & > select {
@@ -271,7 +280,8 @@
         padding-left: $select-padding-left;
       }
       &:not(.neo-select--multiple)::after {
-        right: $select-padding-right;
+        // right: $select-padding-right;
+        right: 8px;
       }
     }
   }
@@ -281,8 +291,12 @@
   & ~ .neo-form-control {
     & .neo-table-filter {
       width: 116px;
-
       padding-left: $select-padding-left;
+      // padding-right: auto;
+      @include rtl-selector {
+        // padding-left: auto;
+        padding-right: $select-padding-left;
+      }
       & ~ button {
         color: $global-text-color;
         background-color: #c9c9c9;
@@ -319,7 +333,7 @@
   @include neo-table--hover;
   @include neo-table--condensed;
   // @include neo-table--responsive;
-  @include neo-table--sortable;
+  // @include neo-table--sortable;
   // @include neo-table--editable;
   @include neo-table-buttons;
 }
@@ -352,13 +366,42 @@
   }
 }
 
-// styles for sortable table heads
+// styles for sortable table heads -- WIP
 
-.neo-table-sortable {
-  display: flex;
-  justify-content: space-between;
-  &::after {
-    // padding-left: 12px;
+.neo-table--sortable {
+  & thead tr th.sort-asc {
+    &::after {
+      font-family: 'updated-neo-icons';
+      content: '\f247';
+      vertical-align: middle;
+    }
+    @include rtl-selector {
+      &::after {
+        content: '';
+      }
+      &::before {
+        font-family: 'updated-neo-icons';
+        content: '\f247';
+        vertical-align: middle;
+      }
+    }
+  }
+  & thead tr th.sort-dsc {
+    &::after {
+      font-family: 'updated-neo-icons';
+      content: '\f244';
+      vertical-align: middle;
+    }
+    @include rtl-selector {
+      &::after {
+        content: '';
+      }
+      &::before {
+        font-family: 'updated-neo-icons';
+        content: '\f244';
+        vertical-align: middle;
+      }
+    }
   }
 }
 

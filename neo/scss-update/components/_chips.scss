@@ -79,20 +79,20 @@
   background-color: $backgroundColor;
 }
 
-@mixin chip-avatar {
-  .neo-avatar {
-    @include rtl-selector {
-      margin: {
-        left: $chip-btn-margin-left;
-        right: -$global-spacer-small;
-      }
-    }
-    margin: {
-      left: -$chip-btn-margin-left;
-      right: $global-spacer-small;
-    }
-  }
-}
+// @mixin chip-avatar {
+//   .neo-avatar {
+//     @include rtl-selector {
+//       margin: {
+//         left: $chip-btn-margin-left;
+//         right: -$global-spacer-small;
+//       }
+//     }
+//     margin: {
+//       left: -$chip-btn-margin-left;
+//       right: $global-spacer-small;
+//     }
+//   }
+// }
 
 @mixin chips-editable {
   .neo-input--editable {
@@ -113,10 +113,12 @@
     @include rtl-selector {
       margin: {
         right: $global-spacer;
+        left: auto;
       }
     }
     margin: {
       left: $global-spacer;
+      right: auto;
     }
   }
 }
@@ -166,7 +168,7 @@
     outline: none;
   }
 
-  @include chip-avatar;
+  // @include chip-avatar;
   @include chip-button;
   @include close;
 }
@@ -201,7 +203,12 @@
     &::after {
       font-family: 'updated-neo-icons';
       margin-left: 6px;
+      margin-right: auto;
       content: $chip-expandable-icon;
+      @include rtl-selector {
+        margin-right: 6px;
+        margin-left: auto;
+      }
     }
     @each $name, $color in $neo-close-colors {
       &--#{$name}::after {

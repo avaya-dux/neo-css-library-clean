@@ -37,7 +37,9 @@
     margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
     text-decoration: none;
-
+    @include rtl-selector {
+      transform: rotate(180deg);
+    }
     &:hover {
       background-color: #ffffff;
     }

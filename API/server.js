@@ -96,6 +96,7 @@ async function getButtonStyles(components) {
       !component.name.includes('hover')
     ) {
       // top level - name, width/height
+      console.log(component);
 
       var componentName = component.name
         .toLowerCase()

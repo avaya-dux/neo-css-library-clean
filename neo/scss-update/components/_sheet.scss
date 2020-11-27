@@ -20,6 +20,11 @@
         margin-bottom: 0;
         &::before {
           margin-right: 16px;
+          margin-left: auto;
+          @include rtl-selector {
+            margin-left: 16px;
+            margin-right: auto;
+          }
         }
       }
     }
@@ -27,6 +32,11 @@
     &--right {
       & button:not(:last-child) {
         margin-right: 8px;
+        margin-left: auto;
+        @include rtl-selector {
+          margin-left: 8px;
+          margin-right: auto;
+        }
       }
     }
 

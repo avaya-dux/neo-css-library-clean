@@ -120,9 +120,9 @@
       margin-left: -$popover-offset;
 
       @include rtl-selector {
-        left: auto;
-        margin-right: -$popover-offset;
-        right: 0;
+        left: 0;
+        margin-left: -$popover-offset;
+        right: auto;
 
         @include neo-arrow-left;
       }
@@ -137,7 +137,7 @@
       transform: translate(-100%, -50%);
 
       @include rtl-selector {
-        transform: translate(100%, -50%);
+        // transform: translate(100%, -50%);
       }
     }
   }
@@ -182,9 +182,9 @@
       margin-left: $popover-offset;
 
       @include rtl-selector {
-        left: auto;
-        margin-right: $popover-offset;
-        right: 100%;
+        left: 100%;
+        // margin-right: $popover-offset;
+        right: auto;
 
         @include neo-arrow-right;
       }

@@ -37,21 +37,37 @@
     .neo-tooltip--right & .neo-arrow {
       left: -6.5px;
       bottom: 51%;
+      @include rtl-selector {
+        // left: -6.5px;
+        // bottom: 51%;
+        transform: translateY(-50%) rotate(180deg) !important;
+      }
     }
 
     .neo-tooltip--right & .neo-arrow::before {
       border-right-color: $tooltip-background !important;
       border-width: $arrow-border-width;
+      // @include rtl-selector {
+      //   border-right-color: $tooltip-background !important;
+      //   border-width: $arrow-border-width;
+      // }
     }
 
     .neo-tooltip--right & .neo-arrow::after {
       border-color: transparent !important;
+      // @include rtl-selector {
+      //   border-color: transparent !important;
+      // }
     }
 
     .neo-tooltip--up & .neo-arrow {
       bottom: -6.5px;
       right: 42%;
       transform: rotate(180deg);
+      @include rtl-selector {
+        left: 50%;
+        right: auto;
+      }
     }
 
     .neo-tooltip--up & .neo-arrow::before {
@@ -66,6 +82,10 @@
     .neo-tooltip--left & .neo-arrow {
       right: -6.5px;
       bottom: 51%;
+      @include rtl-selector {
+        right: -6.5px !important;
+        transform: translateY(-50%) rotate(180deg) !important;
+      }
     }
 
     .neo-tooltip--left & .neo-arrow::before {
@@ -81,6 +101,10 @@
     .neo-tooltip--down & .neo-arrow {
       top: -6.5px;
       right: 42%;
+      @include rtl-selector {
+        left: 50%;
+        right: auto;
+      }
     }
 
     .neo-tooltip--down & .neo-arrow::before {
