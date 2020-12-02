@@ -1,0 +1,32 @@
+/*Light*/
+@font-face {
+  font-family: 'noto-sans-jp';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans_JP/NotoSansCJKjp-Light.otf')
+    format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+/*Regular*/
+@font-face {
+  font-family: 'noto-sans-jp';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans_JP/NotoSansCJKjp-Regular.otf')
+    format('opentype');
+  font-weight: 400;
+  font-style: normal;
+}
+/*Medium*/
+@font-face {
+  font-family: 'noto-sans-jp';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans_JP/NotoSansCJKjp-Medium.otf')
+    format('opentype');
+  font-weight: 500;
+  font-style: normal;
+}
+/*Bold*/
+@font-face {
+  font-family: 'noto-sans-jp';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans_JP/NotoSansCJKjp-Bold.otf')
+    format('opentype');
+  font-weight: 700;
+  font-style: normal;
+}

@@ -1,0 +1,68 @@
+<div class="neo-tabs__carousel">
+  <button
+    class="neo-btn-square neo-icon-chevron-left neo-tabs__carousel--button"
+    role="button"
+    title="Primary Button"
+  ></button>
+  <div class="neo-tabs__carousel--scroll">
+    <ul class="neo-tabs__nav" role="menu">
+      <li class="neo-tabs__item neo-tabs__item--active">
+        <a aria-label="one" role="menuitem" tabindex="0" title="Tab 1">
+          Tab 1
+        </a>
+      </li>
+      <li class="neo-tabs__item neo-tabs__item--active-disabled">
+        <a aria-label="two" role="menuitem" tabindex="0" title="Tab 2">
+          Tab 2
+        </a>
+      </li>
+      <li class="neo-tabs__item neo-tabs__item--disabled">
+        <a aria-label="two" role="menuitem" tabindex="0" title="Tab 2">
+          Tab 3
+        </a>
+      </li>
+      <li class="neo-tabs__item">
+        <a aria-label="three" role="menuitem" tabindex="0" title="Tab 3">
+          Tab 4
+        </a>
+      </li>
+    </ul>
+  </div>
+  <button
+    class="neo-btn-square neo-icon-chevron-right neo-tabs__carousel--button"
+    role="button"
+    title="Primary Button"
+  ></button>
+  <div class="neo-dropdown neo-dropdown--active">
+    <button
+      class="neo-btn-square neo-icon-ellipses-horizontal neo-tabs__carousel--button"
+    ></button>
+    <div class="neo-dropdown__content">
+      <div class="neo-dropdown__item neo-dropdown--active">
+        <a class="neo-dropdown__link">Something else</a>
+        <div class="neo-dropdown__content">
+          <a class="neo-dropdown__link">Action</a>
+          <a class="neo-dropdown__link neo-icon-error"> Another action </a>
+          <div class="neo-dropdown__item neo-dropdown--active">
+            <a class="neo-dropdown__link">Action</a>
+            <div class="neo-dropdown__content">
+              <a class="neo-dropdown__link">Separator link</a>
+              <hr class="neo-dropdown__separator" />
+              <a class="neo-dropdown__link">Action</a>
+              <a class="neo-dropdown__link">Something else</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="neo-dropdown__link neo-dropdown--disabled"> Disabled action </a>
+      <a class="neo-dropdown__link">Separator link</a>
+      <hr class="neo-dropdown__separator" />
+      <a class="neo-dropdown__link">
+        <figure class="neo-avatar neo-avatar--small" data-initials="SM">
+          <img class="neo-img" src="/images/owl.png" alt="Small avatar" />
+        </figure>
+        Another action
+      </a>
+    </div>
+  </div>
+</div>

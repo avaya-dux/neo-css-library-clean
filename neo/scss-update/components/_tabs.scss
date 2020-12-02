@@ -523,7 +523,12 @@
 @mixin tab-carousel() {
   &__carousel {
     display: flex;
-    flex-grow: 1;
+    // flex-grow: 1;
+    // overflow: hidden;
+  }
+  &__carousel--scroll {
+    display: flex;
+    // flex-grow: 1;
     overflow: hidden;
   }
   &__carousel--button {
