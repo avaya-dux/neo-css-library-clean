@@ -539,6 +539,11 @@
       }
     }
   }
+  &__carousel--more {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 }
 
 // @mixin tab-slider-action-content($directionName, $directionIcon) {
