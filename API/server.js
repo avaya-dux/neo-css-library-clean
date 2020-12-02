@@ -162,11 +162,12 @@ async function getButtonStyles(components) {
           value: `7px`,
         };
       } else {
+        // console.log(component);
         buttonsJSONObject.button[componentName + '-padding-x'] = {
-          value: `${component.children[0].horizontalPadding}px`,
+          value: `${component.children[0].paddingLeft}px`,
         };
         buttonsJSONObject.button[componentName + '-padding-y'] = {
-          value: `${component.children[0].verticalPadding}px`,
+          value: `${component.children[0].paddingTop}px`,
         };
       }
       // two levels deep - text styles
@@ -575,8 +576,8 @@ async function getChipStyles(components) {
     if (chip.name === 'chip/view/default') {
       // console.log(chip);
       chipJSONObject.chip[`padding`] = {
-        horizontal: { value: `${chip.horizontalPadding}px` },
-        vertical: { value: `${chip.verticalPadding}px` },
+        horizontal: { value: `${chip.paddingLeft}px` },
+        vertical: { value: `${chip.paddingTop}px` },
       };
     }
     if (chip.name === 'chip/editable/success') {
@@ -724,8 +725,8 @@ async function getLabelStyles(components) {
   labelComponents.forEach((label) => {
     if (label.name == 'chip/view') {
       labelJSONObject.label[`padding`] = {
-        horizontal: { value: `${label.horizontalPadding}px` },
-        vertical: { value: `${label.verticalPadding}px` },
+        horizontal: { value: `${label.paddingLeft}px` },
+        vertical: { value: `${label.paddingTop}px` },
       };
     }
   });
@@ -934,11 +935,11 @@ async function getTooltipStyles(components) {
   // };
 
   toolTipJSONObject.tooltip[`horizontal-padding`] = {
-    value: `${tooltipComponents[0].horizontalPadding}px`,
+    value: `${tooltipComponents[0].paddingLeft}px`,
   };
 
   toolTipJSONObject.tooltip[`vertical-padding`] = {
-    value: `${tooltipComponents[0].verticalPadding}px`,
+    value: `${tooltipComponents[0].paddingTop}px`,
   };
 
   await fs
@@ -1469,7 +1470,7 @@ async function getTableStyles(components) {
     }
     if (child.name === 'row/default/default') {
       tableJSONObject.table['padding'] = {
-        value: `${child.horizontalPadding}px`,
+        value: `${child.paddingLeft}px`,
       };
     }
     if (child.name === 'pagination-count') {
@@ -2412,8 +2413,8 @@ coreFigmaFunctions
     getSpinnerStyles();
     getTooltipStyles(value);
     getCheckboxStyles(value);
-    // radioStyles.radioStyles(value);
-    // switchStyles.switchStyles(value);
+    radioStyles.radioStyles(value);
+    switchStyles.switchStyles(value);
     getInputGroupStyles(value);
     getInputStyles(value);
     getDropdownStyles(value);

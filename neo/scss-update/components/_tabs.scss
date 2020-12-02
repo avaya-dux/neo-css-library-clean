@@ -523,7 +523,12 @@
 @mixin tab-carousel() {
   &__carousel {
     display: flex;
-    flex-grow: 1;
+    // flex-grow: 1;
+    // overflow: hidden;
+  }
+  &__carousel--scroll {
+    display: flex;
+    // flex-grow: 1;
     overflow: hidden;
   }
   &__carousel--button {
@@ -538,6 +543,11 @@
         color: $tab-item-hover-color;
       }
     }
+  }
+  &__carousel--more {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 }
 

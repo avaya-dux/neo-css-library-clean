@@ -1,0 +1,64 @@
+/*Regular*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-regular.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+/*Regular Italic*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-italic.woff')
+    format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+/*Light*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-light.woff')
+    format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+/*Light Italic*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-lightitalic.woff')
+    format('woff');
+  font-weight: 300;
+  font-style: italic;
+}
+/*SemiBold*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-semibold.woff')
+    format('woff');
+  font-weight: 600;
+  font-style: normal;
+}
+/*SemiBold Italic*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-semibolditalic.woff')
+    format('woff');
+  font-weight: 600;
+  font-style: italic;
+}
+/*Bold*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-bold.woff')
+    format('woff');
+  font-weight: 700;
+  font-style: normal;
+}
+/*Bold Italic*/
+@font-face {
+  font-family: 'noto-sans';
+  src: url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/Noto_Sans/notosans-bolditalic.woff')
+    format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
