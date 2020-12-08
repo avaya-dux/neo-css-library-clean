@@ -172,19 +172,41 @@
       &:hover {
         background-color: white !important;
         border-bottom-color: $navbar-icon-hover-color !important;
-        & button {
+        // & button {
+        //   background-color: white !important;
+        //   &::before {
+        //     color: $navbar-icon-hover-color !important;
+        //   }
+        // }
+        // testing new class for higher specificity
+        & .neo-badge__navbutton--content {
           background-color: white !important;
           &::before {
             color: $navbar-icon-hover-color !important;
           }
         }
       }
-      & button::before {
+      // & button::before {
+      //   color: $navbar-icon-selected-color !important;
+      // }
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
         color: $navbar-icon-selected-color !important;
       }
     }
-    & button {
-      // problem area
+    // & button {
+    //   // problem area
+    //   height: 100% !important;
+    //   width: $navbar-icon-button-width !important;
+    //   &:focus {
+    //     box-shadow: none;
+    //   }
+    //   &::before {
+    //     color: $navbar-default-icon-color;
+    //   }
+    // }
+    // testing new class for higher specificity
+    & .neo-badge__navbutton--content {
       height: 100% !important;
       width: $navbar-icon-button-width !important;
       &:focus {
@@ -196,7 +218,13 @@
     }
     &:not(.neo-badge__navbutton--active):hover {
       background-color: $navbar-background-color-hover;
-      & button {
+      // & button {
+      //   background-color: $navbar-background-color-hover !important;
+      //   &::before {
+      //     color: $navbar-icon-hover-color !important;
+      //   }
+      // }
+      & .neo-badge__navbutton--content {
         background-color: $navbar-background-color-hover !important;
         &::before {
           color: $navbar-icon-hover-color !important;
@@ -224,7 +252,8 @@
       z-index: 999;
     }
   }
-  & button {
+  // testing new class for higher specificity
+  & .neo-badge__navbutton--content {
     transition: $button-transition;
     transition-property: background-color;
     &:hover {
@@ -234,6 +263,16 @@
       font-size: $navbar-icon-size;
     }
   }
+  // & button {
+  //   transition: $button-transition;
+  //   transition-property: background-color;
+  //   &:hover {
+  //     background-color: $navbar-background-color-hover;
+  //   }
+  //   &::before {
+  //     font-size: $navbar-icon-size;
+  //   }
+  // }
   & [class*='neo-icon-'].neo-btn:empty::before {
     font-size: $navbar-icon-size;
   }
@@ -273,7 +312,7 @@
       width: fit-content;
       padding: 2px 8px;
       border-radius: 16px !important;
-      color: $button-inverse-text-color;
+      color: #ffffff;
       @each $name, $color in $neo-navbar-pill-colors {
         &--#{$name} {
           background-color: $color !important;

@@ -5,6 +5,7 @@ const _ = require('lodash');
 const coreFigmaFunctions = require('./figma-functions/core-figma-functions.js');
 const switchStyles = require('./components-functions/switch_variants.js');
 const radioStyles = require('./components-functions/radio_variants.js');
+const buttonStyles = require('./components-functions/buttons_variants.js');
 
 // #region utilityFunctions
 
@@ -96,7 +97,7 @@ async function getButtonStyles(components) {
       !component.name.includes('hover')
     ) {
       // top level - name, width/height
-      console.log(component);
+      // console.log(component);
 
       var componentName = component.name
         .toLowerCase()
@@ -1391,8 +1392,8 @@ async function getDropdownStyles(components) {
         dropdownJSONObject.dropdown['padding-right'] = {
           value: `${paddingRight}px`,
         };
-        console.log(child.children[0].relativeTransform);
-        console.log(child.children[1].relativeTransform);
+        // console.log(child.children[0].relativeTransform);
+        // console.log(child.children[1].relativeTransform);
       }
       dropdownComponents.push(child);
     }
@@ -2405,7 +2406,8 @@ coreFigmaFunctions
     await fs.mkdir('../properties/components/', {
       recursive: true,
     });
-    getButtonStyles(value);
+    // getButtonStyles(value);
+    // buttonStyles.buttonStyles(value);
     getAvatarStyles(value);
     getBadgeStyles(value);
     getChipStyles(value);
@@ -2413,8 +2415,8 @@ coreFigmaFunctions
     getSpinnerStyles();
     getTooltipStyles(value);
     getCheckboxStyles(value);
-    radioStyles.radioStyles(value);
-    switchStyles.switchStyles(value);
+    // radioStyles.radioStyles(value);
+    // switchStyles.switchStyles(value);
     getInputGroupStyles(value);
     getInputStyles(value);
     getDropdownStyles(value);

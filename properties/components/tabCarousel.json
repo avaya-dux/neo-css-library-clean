@@ -1,1 +1,6 @@
-{"tabs":{"carousel-button-color":{"value":"{color.blue/500.value}"},"background-color":{"value":"{color.base/0.value}"}}}
+{
+  "tabs": {
+    "carousel-button-color": { "value": "{color.blue/500.value}" },
+    "background-color": { "value": "{color.base/0.value}" }
+  }
+}

@@ -1,93 +1,36 @@
-// updated button styles
-
-@mixin button-colors($button-type-colors) {
-  // &:focus {
-  //   @if (map_has_key($button-type-colors, focus-bg-color)) {
-  //     background-color: map_get($button-type-colors, focus-bg-color);
-  //   }
-  // }
-
-  // &:hover {
-  //   @if (map_has_key($button-type-colors, hover-bg-color)) {
-  //     background-color: map_get($button-type-colors, hover-bg-color);
-  //     box-shadow: $button-box-shadow;
-  //   }
-  // }
-
-  // &:focus {
-  //   outline: $button-outline;
-  // }
-
-  // &:active {
-  //   @if (map_has_key($button-type-colors, active-bg-color)) {
-  //     background-color: map_get($button-type-colors, active-bg-color);
-  //   }
-
-  //   @if (map_has_key($button-type-colors, active-box-shadow-color)) {
-  //     @if (
-  //       map_get($button-type-colors, active-box-shadow-color) != transparent
-  //     ) {
-  //       box-shadow: 0
-  //         1px
-  //         3px
-  //         3px
-  //         rgba(map_get($button-type-colors, active-box-shadow-color), 0.2);
-  //     } @else {
-  //       box-shadow: none;
-  //     }
-  //   }
-  // }
-
-  &[disabled],
-  &--disabled {
-    @if (map_has_key($button-type-colors, disabled-bg-color)) {
-      background-color: map_get($button-type-colors, disabled-bg-color);
-      cursor: not-allowed;
-      border-color: transparent;
-    }
-  }
-
-  @if (map_has_key($button-type-colors, bg-color)) {
-    background-color: map_get($button-type-colors, bg-color);
-    color: map_get($button-type-colors, text-color);
-
-    @if (map_has_key($button-type-colors, border-color)) {
-      border: 1px solid map_get($button-type-colors, border-color);
-    }
-  }
-}
+// basic button styles
 
 %button {
   align-items: center;
+  justify-content: center;
   border: 0;
-  border-radius: 2px;
+  border-radius: $button-border-radius;
   cursor: pointer;
   display: inline-flex;
   font-weight: $button-font-weight;
   height: $button-height;
   outline: 0;
-  padding: 0 $button-padding-x;
+  padding: $button-padding;
   transition: $button-transition;
-  transition-property: background-color, box-shadow;
+  transition-property: background-color, color, box-shadow;
   width: auto;
+  // min-width: $button-min-width;
+  line-height: $button-line-height;
+  letter-spacing: $button-letter-spacing;
+  font-size: $button-font-size;
+  color: $button-text-color;
 
-  &:not(:empty) {
-    vertical-align: super;
+  &:not(:empty)::before {
+    margin-right: $token-button-icon-margin;
+    margin-left: 0;
   }
-
-  &[type='button'] {
-    line-height: 1;
-  }
-
-  // custom selector for right-hand icon spacing
-
   &[dir='rtl']:not(:empty)::before {
-    margin-left: 10px;
-    margin-right: 0 !important;
+    margin-left: $token-button-icon-margin;
+    margin-right: 0;
   }
-
-  @include button-colors(map_get($button-types, 'default'));
 }
+
+// wide button styles
 
 .neo-btn {
   &--wide {
@@ -96,453 +39,287 @@
     justify-content: center;
   }
   @extend %button;
-  @include neo-icons;
 }
 
-@include neo-icon-context {
-  &.neo-btn:empty {
-    display: inline-flex;
-    font-size: $button-icon-font-size;
-    height: $button-circular-height;
-    justify-content: center;
-    padding: 0;
-    width: $button-circular-width;
-
-    &::before {
-      font-size: $button-icon-font-size;
-    }
-  }
-}
-
-@each $button-type-name, $button-type-colors in $button-types {
-  @if ($button-type-name != 'default') {
-    .neo-btn--#{$button-type-name} {
-      @include button-colors($button-type-colors);
-    }
-  }
-}
-
-// new button classes
+// primary class
 
 .neo-btn-primary {
   @extend %button;
-  @each $name, $color in $neo-state-colors {
+  @each $name, $value in $button-states {
     &--#{$name} {
-      background-color: $color;
-      color: $button-inverse-text-color;
-      @include pulse('button', $name, $color);
+      background-color: map-get($value, color);
+      @include pulse('button', $name, map-get($value, color));
     }
-  }
-  @each $name, $color in $neo-hover-colors {
-    &--#{$name}:hover {
-      background-color: $color;
-      box-shadow: $button-box-shadow;
-      // color: $global-text-inverse-color;
-    }
-    &--#{$name}:focus {
-      background-color: $color;
-      box-shadow: $button-box-shadow;
-      // color: $global-text-inverse-color;
-    }
+    &--#{$name}:hover,
+    &--#{$name}:focus,
     &--#{$name}:active {
-      background-color: $color;
+      background-color: map-get($value, hover-color);
       box-shadow: $button-box-shadow;
-      // color: $global-text-inverse-color;
     }
-  }
-  &[disabled] {
-    background-color: $global-disabled-bg;
-    color: $global-disabled-color;
-    // border-color: $global-disabled-color;
-    &:hover {
-      box-shadow: none;
+
+    &--#{$name}[disabled] {
+      background-color: map-get($value, disabled-color);
+      &:hover {
+        cursor: not-allowed;
+        box-shadow: none;
+      }
     }
   }
 }
 
+// secondary class
+
 .neo-btn-secondary {
   @extend %button;
-  background-color: transparent;
+  background-color: $button-secondary-background-color;
   border-width: $button-secondary-border-width;
   border-style: $button-secondary-border-style;
-  @each $name, $color in $neo-state-colors {
+  @each $name, $value in $button-states {
     &--#{$name} {
-      // background-color: $color !important;
-      border-color: $color;
-      color: $color;
-      @include pulse('button', $name, $color);
+      border-color: map-get($value, color);
+      color: map-get($value, color);
+      @include pulse('button', $name, map-get($value, color));
     }
-  }
-  @each $name, $color in $neo-hover-colors {
-    &--#{$name}:hover {
-      color: $color;
-      // box-shadow: $button-box-shadow;
-      cursor: pointer;
-      box-shadow: $button-box-shadow;
-    }
-    &--#{$name}:active {
-      color: $color;
-      // box-shadow: $button-box-shadow;
-      // cursor: pointer;
-      box-shadow: $button-box-shadow;
-    }
+    &--#{$name}:hover,
+    &--#{$name}:active,
     &--#{$name}:focus {
-      color: $color;
-      // box-shadow: $button-box-shadow;
-      // cursor: pointer;
+      border-color: map-get($value, hover-color);
+      color: map-get($value, hover-color);
       box-shadow: $button-box-shadow;
     }
-  }
-  &:hover {
-    background-color: white;
-  }
-  &[disabled] {
-    background-color: $global-disabled-bg;
-    color: $global-disabled-color;
-    border: none;
-    &:hover {
-      box-shadow: none;
-      cursor: not-allowed;
+    &--#{$name}[disabled] {
+      border-color: map-get($value, disabled-color);
+      color: map-get($value, disabled-color);
+      &:hover {
+        cursor: not-allowed;
+        box-shadow: none;
+      }
     }
   }
 }
+
+// tertiary class
 
 .neo-btn-tertiary {
   @extend %button;
   background-color: transparent;
-  @each $name, $color in $neo-state-colors {
+  @each $name, $value in $button-states {
     &--#{$name} {
-      // background-color: $color !important;
-      border-color: $color;
-      color: $color;
-      @include pulse('button', $name, $color);
+      color: map-get($value, color);
+      @include pulse('button', $name, map-get($value, color));
     }
-  }
-  @each $name, $color in $neo-hover-colors {
-    &--#{$name}:hover {
-      color: $color;
-      background-color: #f1f1f1;
-      box-shadow: none;
-      cursor: pointer;
-    }
-    &--#{$name}:active {
-      color: $color;
-      background-color: #f1f1f1;
-      box-shadow: none;
-    }
+    &--#{$name}:hover,
+    &--#{$name}:active,
     &--#{$name}:focus {
-      color: $color;
-      background-color: #f1f1f1;
-      box-shadow: none;
+      color: map-get($value, hover-color);
+      background-color: $button-tertiary-hover-background-color;
+    }
+    &--#{$name}[disabled] {
+      color: map-get($value, disabled-color);
+      &:hover {
+        cursor: not-allowed;
+        box-shadow: none;
+      }
     }
   }
 }
+
+// circle buttons
 
 .neo-btn-circle {
-  // display: flex;
-  // border: 0;
-  // @extend %button;
   justify-content: center;
-  border-radius: $button-border-radius;
-  height: $button-circular-height;
-  width: $button-circular-width;
+  border-radius: 100%;
+  height: $button-circular-size;
+  width: $button-circular-size;
   transition: $button-transition;
   transition-property: background-color, color, box-shadow;
-  font-size: $button-icon-font-size;
-  // removing outline on focus and active state
-  &:active,
-  &:focus {
-    outline: 0;
-  }
+  outline: 0;
+  color: $button-text-color;
+  cursor: pointer;
   &::before {
-    // hard-coded for now
-    font-size: 21px;
+    font-size: $button-circle-icon-size;
   }
+
+  // primary class
 
   &-primary {
+    // remove extra colored circle from buttons
     border: 0;
-    &[disabled] {
-      background-color: $global-disabled-bg;
-      color: $global-disabled-color;
-      // border-color: $global-disabled-color;
-      &:hover {
-        background-color: $global-disabled-bg;
-        color: $global-disabled-color;
-        box-shadow: none;
-        cursor: not-allowed;
-      }
-    }
-
-    @each $name, $color in $neo-state-colors {
+    @each $name, $value in $button-states {
       &--#{$name} {
-        background-color: $color;
-        // border-color: $color;
-        color: $global-background;
-        // code for pulsing animation
-        // transform: scale(1);
-        @include pulse('button', $name, $color);
+        background-color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color));
       }
-    }
-    @each $name, $color in $neo-hover-colors {
-      &--#{$name}:hover {
-        background-color: $color;
-        box-shadow: $button-box-shadow;
-        cursor: pointer;
-      }
-      &--#{$name}:active {
-        background-color: $color;
-        box-shadow: $button-box-shadow;
-        cursor: pointer;
-      }
+      &--#{$name}:hover,
+      &--#{$name}:active,
       &--#{$name}:focus {
-        background-color: $color;
+        background-color: map-get($value, hover-color);
         box-shadow: $button-box-shadow;
-        cursor: pointer;
+      }
+      &--#{$name}[disabled] {
+        background-color: map-get($value, disabled-color);
+        &:hover {
+          cursor: not-allowed;
+          box-shadow: none;
+        }
       }
     }
   }
+
+  // secondary class
 
   &-secondary {
-    &[disabled] {
-      background-color: $global-disabled-bg;
-      color: $global-disabled-color;
-      // border-color: $global-disabled-color;
-      &:hover {
-        background-color: $global-disabled-bg;
-        color: $global-disabled-color;
-        box-shadow: none;
-        cursor: not-allowed;
-      }
-    }
-    border: 1px solid;
-    @each $name, $color in $neo-state-colors {
+    border-width: $button-secondary-border-width;
+    border-style: $button-secondary-border-style;
+    background-color: $button-secondary-background-color;
+    @each $name, $value in $button-states {
       &--#{$name} {
-        background-color: transparent;
-        border-color: $color;
-        color: $color;
-        @include pulse('button', $name, $color);
+        border-color: map-get($value, color);
+        color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color));
       }
-      @each $name, $color in $neo-hover-colors {
-        &--#{$name}:hover {
-          background-color: white;
-          box-shadow: $button-box-shadow;
-          border-color: $color;
-          color: $color;
-          cursor: pointer;
-        }
-        &--#{$name}:active {
-          background-color: white;
-          box-shadow: $button-box-shadow;
-          border-color: $color;
-          color: $color;
-          cursor: pointer;
-        }
-        &--#{$name}:focus {
-          background-color: white;
-          box-shadow: $button-box-shadow;
-          border-color: $color;
-          color: $color;
-          cursor: pointer;
+      &--#{$name}:hover,
+      &--#{$name}:active,
+      &--#{$name}:focus {
+        border-color: map-get($value, hover-color);
+        color: map-get($value, hover-color);
+        box-shadow: $button-box-shadow;
+      }
+      &--#{$name}[disabled] {
+        border-color: map-get($value, disabled-color);
+        color: map-get($value, disabled-color);
+        &:hover {
+          cursor: not-allowed;
+          box-shadow: none;
         }
       }
     }
   }
-  // &-secondary:empty {
-  //   background-color: $global-background;
-  //   &::before {
-  //     // margin-left: 12px;
-  //     font-size: $button-icon-font-size;
-  //   }
-  // }
+
+  // tertiary class
+
   &-tertiary {
-    &[disabled] {
-      background-color: $global-disabled-bg;
-      color: $global-disabled-color;
-      // border-color: $global-disabled-color;
-      &:hover {
-        background-color: $global-disabled-bg;
-        color: $global-disabled-color;
-        box-shadow: none;
-        cursor: not-allowed;
-      }
-    }
     border: 0;
-    @each $name, $color in $neo-state-colors {
+    background-color: transparent;
+    @each $name, $value in $button-states {
       &--#{$name} {
-        border: none;
-        background-color: transparent;
-        color: $color;
-        @include pulse('button', $name, $color);
+        color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color));
       }
-    }
-    @each $name, $color in $neo-hover-colors {
-      &--#{$name}:hover {
-        background-color: white;
-        box-shadow: $button-box-shadow;
-        color: $color;
-        cursor: pointer;
-      }
-      &--#{$name}:active {
-        background-color: white;
-        box-shadow: $button-box-shadow;
-        color: $color;
-        cursor: pointer;
-      }
+      &--#{$name}:hover,
+      &--#{$name}:active,
       &--#{$name}:focus {
-        background-color: white;
-        box-shadow: $button-box-shadow;
-        color: $color;
-        cursor: pointer;
+        color: map-get($value, hover-color);
+        background-color: $button-tertiary-hover-background-color;
+      }
+      &--#{$name}[disabled] {
+        color: map-get($value, disabled-color);
+        background-color: transparent;
+        &:hover {
+          cursor: not-allowed;
+          box-shadow: none;
+        }
       }
     }
   }
 }
+
+// square buttons
 
 .neo-btn-square {
-  // display: flex;
   justify-content: center;
-  height: $button-circular-height;
-  width: $button-circular-width;
+  height: $button-square-size;
+  width: $button-square-size;
   transition: $button-transition;
   transition-property: background-color, color, box-shadow;
-  border-radius: 2px;
-  // removing outline on focus & active state
-  &:active,
-  &:focus {
-    outline: 0;
-  }
+  border-radius: $button-border-radius;
+  outline: 0;
+  color: $button-text-color;
+  cursor: pointer;
   &::before {
-    font-size: 21px;
+    font-size: $button-square-icon-size;
   }
 
+  // primary class
+
   &-primary {
+    // remove extra colored circle from buttons
     border: 0;
-    &[disabled] {
-      background-color: $global-disabled-bg;
-      color: $global-disabled-color;
-      // border-color: $global-disabled-color;
-      &:hover {
-        background-color: $global-disabled-bg;
-        box-shadow: none;
-        cursor: not-allowed;
-      }
-    }
-    @each $name, $color in $neo-state-colors {
+    @each $name, $value in $button-states {
       &--#{$name} {
-        background-color: $color;
-        // border-color: $color;
-        color: $global-background;
-        @include pulse('button', $name, $color);
+        background-color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color));
       }
-    }
-    @each $name, $color in $neo-hover-colors {
-      &--#{$name}:hover {
-        background-color: $color;
-        box-shadow: $button-box-shadow;
-        cursor: pointer;
-      }
-      &--#{$name}:active {
-        background-color: $color;
-        box-shadow: $button-box-shadow;
-        cursor: pointer;
-      }
+      &--#{$name}:hover,
+      &--#{$name}:active,
       &--#{$name}:focus {
-        background-color: $color;
+        background-color: map-get($value, hover-color);
         box-shadow: $button-box-shadow;
-        cursor: pointer;
       }
-    }
-  }
-  &-secondary {
-    &[disabled] {
-      background-color: $global-disabled-bg;
-      color: $global-disabled-color;
-      // border-color: $global-disabled-color;
-      &:hover {
-        background-color: $global-disabled-bg;
-        color: $global-disabled-color;
-        box-shadow: none;
-        cursor: not-allowed;
-      }
-    }
-    border: 1px solid;
-    @each $name, $color in $neo-state-colors {
-      &--#{$name} {
-        background-color: transparent;
-        border-color: $color;
-        color: $color;
-        @include pulse('button', $name, $color);
-      }
-      @each $name, $color in $neo-hover-colors {
-        &--#{$name}:hover {
-          box-shadow: $button-box-shadow;
-          color: $color;
-          border-color: $color;
-          cursor: pointer;
-        }
-        &--#{$name}:active {
-          box-shadow: $button-box-shadow;
-          color: $color;
-          border-color: $color;
-          cursor: pointer;
-        }
-        &--#{$name}:focus {
-          box-shadow: $button-box-shadow;
-          color: $color;
-          border-color: $color;
-          cursor: pointer;
-        }
-      }
-    }
-  }
-  &-tertiary {
-    border: 0;
-    &[disabled] {
-      background-color: $global-disabled-bg;
-      color: $global-disabled-color;
-      // border-color: $global-disabled-color;
-      &:hover {
-        background-color: $global-disabled-bg;
-        color: $global-disabled-color;
-        box-shadow: none;
-        cursor: not-allowed;
-      }
-    }
-    @each $name, $color in $neo-state-colors {
-      &--#{$name} {
-        border: none;
-        background-color: transparent;
-        color: $color;
-        @include pulse('button', $name, $color);
+      &--#{$name}[disabled] {
+        background-color: map-get($value, disabled-color);
         &:hover {
-          color: $color;
-          box-shadow: $button-box-shadow;
-          background-color: white;
-          cursor: pointer;
+          cursor: not-allowed;
+          box-shadow: none;
         }
       }
     }
-    @each $name, $color in $neo-hover-colors {
-      &--#{$name}:hover {
-        background-color: white;
-        box-shadow: $button-box-shadow;
-        color: $color;
-        cursor: pointer;
+  }
+
+  // secondary class
+
+  &-secondary {
+    border-width: $button-secondary-border-width;
+    border-style: $button-secondary-border-style;
+    background-color: $button-secondary-background-color;
+    @each $name, $value in $button-states {
+      &--#{$name} {
+        border-color: map-get($value, color);
+        color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color));
       }
-      &--#{$name}:active {
-        background-color: white;
-        box-shadow: $button-box-shadow;
-        color: $color;
-        cursor: pointer;
-      }
+      &--#{$name}:hover,
+      &--#{$name}:active,
       &--#{$name}:focus {
-        background-color: white;
+        border-color: map-get($value, hover-color);
+        color: map-get($value, hover-color);
         box-shadow: $button-box-shadow;
-        color: $color;
-        cursor: pointer;
+      }
+      &--#{$name}[disabled] {
+        border-color: map-get($value, disabled-color);
+        color: map-get($value, disabled-color);
+        &:hover {
+          cursor: not-allowed;
+          box-shadow: none;
+        }
+      }
+    }
+  }
+
+  // tertiary class
+
+  &-tertiary {
+    background-color: transparent;
+    border: 0;
+    @each $name, $value in $button-states {
+      &--#{$name} {
+        color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color));
+      }
+      &--#{$name}:hover,
+      &--#{$name}:active,
+      &--#{$name}:focus {
+        color: map-get($value, hover-color);
+        background-color: $button-tertiary-hover-background-color;
+      }
+      &--#{$name}[disabled] {
+        color: map-get($value, disabled-color);
+        background-color: transparent;
+        &:hover {
+          cursor: not-allowed;
+          box-shadow: none;
+        }
       }
     }
   }
 }
-
-// button group

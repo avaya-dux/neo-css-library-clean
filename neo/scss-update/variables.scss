@@ -494,77 +494,63 @@ $table-date-picker-font-color: $token-color-base-600 !default;
 // Location: src/scss/elements/_button.scss
 //
 
-$button-font-weight: $token-button-primary-defaultfont-weight !default;
-$button-height: $token-button-primary-defaultheight !default;
-$button-padding-x: $token-button-primary-default-padding-x !default;
-$button-min-width: $token-button-primary-defaultwidth !default;
-$button-border-radius: $token-button-circular-primary-defaultborder-radius !default;
-$button-icon-padding: $global-spacer-small !default;
-$button-circle-icon-size: 22px !default;
+$button-font-weight: $token-button-font-weight !default;
+// need to re-format to ensure grabbing proper styles for token
+$button-font-size: $token-web-typography-web-body-regular-font-size !default;
+$button-line-height: $token-web-typography-web-body-regular-line-height !default;
+$button-letter-spacing: $token-web-typography-web-body-regular-letter-spacing !default;
+//
+$button-height: $token-button-button-height !default;
+$button-padding: $token-button-padding !default;
+$button-min-width: $token-button-min-width !default;
+$button-border-radius: $token-button-border-radius !default;
+$button-icon-padding: $token-button-icon-margin !default;
 $button-transition: all $global-transition-duration ease-in-out !default;
-$button-box-shadow: $token-button-primary-defaulthover-shadow-g-offset
-  $token-button-primary-defaulthover-shadow-v-offset
-  $token-button-primary-defaulthover-shadow-blur
-  $token-button-primary-defaulthover-shadow-color !default;
-$button-inverse-text-color: $token-button-primary-defaultcolor !default;
-$button-secondary-border-width: $token-button-secondary-defaultborder-weight !default;
-$button-secondary-border-style: $token-button-secondary-defaultborder-style !default;
-$button-circular-height: $token-button-circular-height !default;
-$button-circular-width: $token-button-circular-width !default;
-$button-padding-y: $token-button-primary-default-padding-y !default;
-$button-icon-font-size: $token-button-icon-font-size !default;
-// this is a test to shift focus state from
-$button-outline: 1px solid rgba(0, 102, 255, 0.5) !default;
+// need to re-format to ensure grabbing proper styles for token
+$button-box-shadow: $token-shadows-elevation-200-x-offset
+  $token-shadows-elevation-200-y-offset $token-shadows-elevation-200-radius
+  $token-shadows-elevation-200-color !default;
+//
+$button-text-color: $token-button-font-color !default;
+$button-secondary-border-width: $token-button-border-width !default;
+$button-secondary-border-style: $token-button-border-style !default;
+$button-secondary-background-color: $token-button-secondary-background-color !default;
+$button-tertiary-hover-background-color: $token-button-tertiary-hover-background-color !default;
+$button-circular-size: $token-button-circle-button-size !default;
+$button-circle-icon-size: $token-button-circle-icon-size !default;
+$button-square-size: $token-button-square-button-size !default;
+$button-square-icon-size: $token-button-square-icon-size !default;
 
-$button-types: () !default;
-$button-types: map-merge(
+$button-states: () !default;
+$button-states: map-merge(
   (
-    default: (
-      bg-color: $token-color-blue-500,
-      text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-blue-600,
-      active-bg-color: $token-color-blue-600,
-      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+    primary: (
+      color: $token-button-primary-info-color,
+      hover-color: $token-button-primary-info-hover-color,
+      disabled-color: $token-button-primary-info-disabled-color,
     ),
     success: (
-      bg-color: $token-color-green-500,
-      text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-green-600,
-      focus-bg-color: $token-color-green-600,
-      active-bg-color: $token-color-green-600,
-      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      color: $token-button-success-color,
+      hover-color: $token-button-success-hover-color,
+      disabled-color: $token-button-success-disabled-color,
     ),
     warning: (
-      bg-color: $token-color-orange-500,
-      text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-orange-600,
-      focus-bg-color: $token-color-orange-600,
-      active-bg-color: $token-color-orange-600,
-      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      color: $token-button-warning-color,
+      hover-color: $token-button-warning-hover-color,
+      disabled-color: $token-button-warning-disabled-color,
     ),
     alert: (
-      bg-color: $token-color-red-500,
-      text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-red-600,
-      focus-bg-color: $token-color-red-600,
-      active-bg-color: $token-color-red-600,
-      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      color: $token-button-alert-color,
+      hover-color: $token-button-alert-hover-color,
+      disabled-color: $token-button-alert-disabled-color,
     ),
     info: (
-      bg-color: $token-color-blue-500,
-      text-color: $global-text-inverse-color,
-      hover-bg-color: $token-color-blue-600,
-      focus-bg-color: $token-color-blue-600,
-      active-bg-color: $token-color-blue-600,
-      active-box-shadow-color: $token-button-primary-defaulthover-shadow-color,
-      disabled-bg-color: $token-button-disabled-defaultbg-color,
+      color: $token-button-primary-info-color,
+      hover-color: $token-button-primary-info-hover-color,
+      disabled-color: $token-button-primary-info-disabled-color,
     ),
   ),
-  $button-types
+  $button-states
 );
 $neo-button-group-offset: 1px;
 
@@ -1061,7 +1047,7 @@ $popover-content-border: 1px solid $input-border-color !default;
 $popover-radius: 0 !default;
 $popover-content-shadow: none !default;
 $popover-content-padding: 0 !default;
-$popover-content-z: 20 !default;
+$popover-content-z: 50 !default;
 $popover-min-width: 150px !default;
 $popover-offset: $arrow-width !default;
 $popover-btn-offset: $global-spacer !default;
