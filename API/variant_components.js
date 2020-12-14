@@ -7,6 +7,8 @@ const tabStyles = require('./components-functions/tabs_variants.js');
 const navbarStyles = require('./components-functions/navbar_variants.js');
 const buttonStyles = require('./components-functions/buttons_variants.js');
 const avatarStyles = require('./components-functions/avatar_variants.js');
+const checkboxStyles = require('./components-functions/checkbox_variants.js');
+const leftnavStyles = require('./components-functions/leftnav_variants.js');
 
 coreFigmaFunctions
   .getComponentPages(
@@ -19,6 +21,7 @@ coreFigmaFunctions
     //   radioStyles.radioStyles,
     //   navbarStyles.navbarStyles,
     //   buttonStyles.buttonStyles,
+    // avatarStyles.avatarStyles(value),
     // ];
     // for (const functions of varFunctions) {
     //   await functions(value);
@@ -28,7 +31,9 @@ coreFigmaFunctions
     // await tabStyles.tabStyles(value);
     // await navbarStyles.navbarStyles(value);
     // await buttonStyles.buttonStyles(value);
-    await avatarStyles.avatarStyles(value);
+    // await avatarStyles.avatarStyles(value);
+    // await checkboxStyles.checkBoxStyles(value);
+    await leftnavStyles.leftnavStyles(value);
   });
 
 // coreFigmaFunctions

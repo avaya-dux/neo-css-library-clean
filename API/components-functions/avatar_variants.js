@@ -30,7 +30,7 @@ status styles:
 
  - colors - DONE
  - sizes - DONE
- - icons
+ - icons - TOKENS
 
 */
 
@@ -88,7 +88,7 @@ async function avatarStyles(value) {
           avatarJSONObject.avatar['background-color'] = {
             value: `{color.${value.nodes[
               backgroundColorID
-            ].document.name.toLowerCase()}.value`,
+            ].document.name.toLowerCase()}.value}`,
           };
         });
       // font-color
@@ -105,7 +105,7 @@ async function avatarStyles(value) {
           avatarJSONObject.avatar['font-color'] = {
             value: `{color.${value.nodes[
               fontColorID
-            ].document.name.toLowerCase()}.value`,
+            ].document.name.toLowerCase()}.value}`,
           };
         });
       // font-size
@@ -124,15 +124,20 @@ async function avatarStyles(value) {
               fontTokenID
             ].document.name.toLowerCase()}.fontSize.value}`,
           };
-          avatarJSONObject.avatar['small-font-weight'] = {
-            value: `{Web-typography.${value.nodes[
-              fontTokenID
-            ].document.name.toLowerCase()}.fontWeight.value}`,
-          };
+          // avatarJSONObject.avatar['small-font-weight'] = {
+          //   value: `{Web-typography.${value.nodes[
+          //     fontTokenID
+          //   ].document.name.toLowerCase()}.fontWeight.value}`,
+          // };
           avatarJSONObject.avatar['small-letter-spacing'] = {
             value: `{Web-typography.${value.nodes[
               fontTokenID
             ].document.name.toLowerCase()}.letterSpacing.value}`,
+          };
+          avatarJSONObject.avatar['small-line-height'] = {
+            value: `{Web-typography.${value.nodes[
+              fontTokenID
+            ].document.name.toLowerCase()}.lineHeight.value}`,
           };
         });
     }
@@ -156,15 +161,20 @@ async function avatarStyles(value) {
               fontTokenID
             ].document.name.toLowerCase()}.fontSize.value}`,
           };
-          avatarJSONObject.avatar['medium-font-weight'] = {
-            value: `{Web-typography.${value.nodes[
-              fontTokenID
-            ].document.name.toLowerCase()}.fontWeight.value}`,
-          };
+          // avatarJSONObject.avatar['medium-font-weight'] = {
+          //   value: `{Web-typography.${value.nodes[
+          //     fontTokenID
+          //   ].document.name.toLowerCase()}.fontWeight.value}`,
+          // };
           avatarJSONObject.avatar['medium-letter-spacing'] = {
             value: `{Web-typography.${value.nodes[
               fontTokenID
             ].document.name.toLowerCase()}.letterSpacing.value}`,
+          };
+          avatarJSONObject.avatar['medium-line-height'] = {
+            value: `{Web-typography.${value.nodes[
+              fontTokenID
+            ].document.name.toLowerCase()}.lineHeight.value}`,
           };
         });
     }
@@ -188,19 +198,27 @@ async function avatarStyles(value) {
               fontTokenID
             ].document.name.toLowerCase()}.fontSize.value}`,
           };
-          avatarJSONObject.avatar['large-font-weight'] = {
-            value: `{Web-typography.${value.nodes[
-              fontTokenID
-            ].document.name.toLowerCase()}.fontWeight.value}`,
-          };
+          // avatarJSONObject.avatar['large-font-weight'] = {
+          //   value: `{Web-typography.${value.nodes[
+          //     fontTokenID
+          //   ].document.name.toLowerCase()}.fontWeight.value}`,
+          // };
           avatarJSONObject.avatar['large-letter-spacing'] = {
             value: `{Web-typography.${value.nodes[
               fontTokenID
             ].document.name.toLowerCase()}.letterSpacing.value}`,
           };
+          avatarJSONObject.avatar['large-line-height'] = {
+            value: `{Web-typography.${value.nodes[
+              fontTokenID
+            ].document.name.toLowerCase()}.lineHeight.value}`,
+          };
         });
     }
-    if (comp.name === 'Content=image, Size=small, Border=blue, status=none') {
+    if (
+      comp.name ===
+      'Content=image, Size=small, Border=primary-info, status=none'
+    ) {
       avatarJSONObject.avatar['border-width'] = {
         value: `${
           comp.children[0].children.filter(
@@ -237,7 +255,7 @@ async function avatarStyles(value) {
           avatarJSONObject.avatar[`border-${borderColor}`] = {
             value: `{color.${value.nodes[
               colorTokenID
-            ].document.name.toLowerCase()}.value`,
+            ].document.name.toLowerCase()}.value}`,
           };
         });
     }
@@ -263,7 +281,7 @@ async function avatarStyles(value) {
             avatarJSONObject.avatar[`status-${status}-color`] = {
               value: `{color.${value.nodes[
                 statusColorID
-              ].document.name.toLowerCase()}.value`,
+              ].document.name.toLowerCase()}.value}`,
             };
           });
       }
@@ -273,11 +291,18 @@ async function avatarStyles(value) {
         comp.name.includes('Size=small') &&
         comp.name.includes('status=available')
       ) {
+        console.log(comp.children[1].children[1].relativeTransform);
         avatarJSONObject.avatar['status-size-small'] = {
           value: `${
             comp.children.filter((child) => child.name.includes('status'))[0]
               .size.x
           }px`,
+        };
+        avatarJSONObject.avatar['status-small-top'] = {
+          value: `${comp.children[1].children[1].children[0].relativeTransform[0][2]}px`,
+        };
+        avatarJSONObject.avatar['status-small-right'] = {
+          value: `${comp.children[1].children[1].children[0].relativeTransform[1][2]}px`,
         };
       }
       // medium
@@ -291,6 +316,12 @@ async function avatarStyles(value) {
               .size.x
           }px`,
         };
+        avatarJSONObject.avatar['status-medium-top'] = {
+          value: `${comp.children[1].children[1].children[0].relativeTransform[0][2]}px`,
+        };
+        avatarJSONObject.avatar['status-medium-right'] = {
+          value: `${comp.children[1].children[1].children[0].relativeTransform[1][2]}px`,
+        };
       }
       // large
       if (
@@ -303,10 +334,24 @@ async function avatarStyles(value) {
               .size.x
           }px`,
         };
+        avatarJSONObject.avatar['status-large-top'] = {
+          value: `${comp.children[1].children[1].children[0].relativeTransform[0][2]}px`,
+        };
+        avatarJSONObject.avatar['status-large-right'] = {
+          value: `${comp.children[1].children[1].children[0].relativeTransform[1][2]}px`,
+        };
       }
     }
   }
-  console.log(avatarJSONObject);
+  // console.log(avatarJSONObject);
+  // await fs
+  //   .writeFile(
+  //     '../properties/components/avatar.json',
+  //     JSON.stringify(avatarJSONObject)
+  //   )
+  //   .then(function () {
+  //     console.log('avatar.json created');
+  //   });
 }
 
 exports.avatarStyles = avatarStyles;

@@ -2408,7 +2408,7 @@ coreFigmaFunctions
     });
     // getButtonStyles(value);
     // buttonStyles.buttonStyles(value);
-    getAvatarStyles(value);
+    // getAvatarStyles(value);
     getBadgeStyles(value);
     getChipStyles(value);
     getLabelStyles(value);
