@@ -553,16 +553,16 @@ async function leftnavStyles(value) {
     }
   }
 
-  console.log(leftnavJSONObject);
+  // console.log(leftnavJSONObject);
 
-  // await fs
-  //   .writeFile(
-  //     '../properties/components/checkbox.json',
-  //     JSON.stringify(checkboxJSONObject)
-  //   )
-  //   .then(function () {
-  //     console.log('checkbox.json created');
-  //   });
+  await fs
+    .writeFile(
+      '../properties/components/leftnav.json',
+      JSON.stringify(leftnavJSONObject)
+    )
+    .then(function () {
+      console.log('leftnav.json created');
+    });
 }
 
 exports.leftnavStyles = leftnavStyles;
