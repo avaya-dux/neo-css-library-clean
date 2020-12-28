@@ -75,6 +75,15 @@
           }
         },
         {
+          "destination": "_leftnav.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "leftnav"
+            }
+          }
+        },
+        {
           "destination": "_accordion.scss",
           "format": "scss/variables",
           "filter": {
@@ -89,6 +98,15 @@
           "filter": {
             "attributes": {
               "category": "avatar"
+            }
+          }
+        },
+        {
+          "destination": "_icons.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "icons"
             }
           }
         },

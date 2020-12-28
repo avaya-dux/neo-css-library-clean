@@ -1,5 +1,6 @@
 {
   "projects": {
-    "default": "test-ds-portal-db"
+    "default": "global-ux-ui",
+    "esna": "test-ds-portal-db"
   }
 }

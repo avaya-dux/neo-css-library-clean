@@ -15,14 +15,15 @@
 
     &::before {
       background: $checkbox-icon-color;
-      border: 1px solid $checkbox-checked-background;
+      border: $checkbox-border-width $checkbox-border-style
+        $checkbox-border-color;
       content: '';
       display: inline-block;
       height: $checkbox-size;
       margin-right: $checkbox-label-indent;
       vertical-align: text-top;
       width: $checkbox-size;
-      border-radius: 4px;
+      border-radius: $checkbox-border-radius;
 
       /* stylelint-disable max-nesting-depth */
       @include rtl-selector {
@@ -45,35 +46,59 @@
     background: $checkbox-checked-background;
     font-family: 'updated-neo-icons' !important;
     // neo-check
-    content: '\F1D7';
-    font-size: $checkbox-font-size;
+    content: $checkbox-checked-icon;
+    font-size: $checkbox-icon-font-size;
     color: $checkbox-color;
     padding-left: 2px;
     padding-right: 2px;
   }
 
+  &--indeterminate:checked + label::before {
+    background: $checkbox-checked-background;
+    font-family: 'updated-neo-icons' !important;
+    // neo-check
+    content: $checkbox-indeterminate-icon;
+    color: $checkbox-color;
+    // hard-coded for now
+    font-size: 12px;
+    padding-left: 1px;
+    padding-right: 0px;
+  }
+
   &:disabled + label {
-    color: $checkbox-disabled-background;
+    color: $checkbox-label-disabled-font-color;
     cursor: not-allowed;
 
     &:checked:disabled {
       font-family: 'updated-neo-icons' !important;
-      content: '\F1D7';
-      font-size: $checkbox-font-size;
+      content: $checkbox-checked-icon;
+      font-size: $checkbox-icon-font-size;
       color: $checkbox-color;
       padding-left: 2px;
       padding-right: 2px;
     }
+    &--indeterminate:checked:disabled {
+      font-family: 'updated-neo-icons' !important;
+      content: $checkbox-indeterminate-icon;
+      color: $checkbox-color;
+      // hard-coded for now
+      font-size: 12px;
+      padding-left: 1px;
+      padding-right: 0px;
+    }
 
     &::before {
-      border: 1px solid $token-color-blue-200;
+      border: $checkbox-border-width $checkbox-border-style
+        $checkbox-disabled-border-color;
       box-shadow: none;
       cursor: not-allowed;
     }
     &.checked::before {
-      background-color: $token-color-blue-200;
+      background-color: $checkbox-disabled-background;
     }
   }
+
+  // useless code?
 
   + label::after {
     border: solid $token-color-base-0;

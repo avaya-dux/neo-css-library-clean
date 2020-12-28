@@ -217,7 +217,7 @@ async function avatarStyles(value) {
     }
     if (
       comp.name ===
-      'Content=image, Size=small, Border=primary-info, status=none'
+      'Content=image, Size=small, Border=default-info, status=none'
     ) {
       avatarJSONObject.avatar['border-width'] = {
         value: `${

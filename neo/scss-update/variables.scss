@@ -139,34 +139,6 @@ $neo-close-colors: map-merge(
   $neo-close-colors
 );
 
-// updated notification colors
-
-$neo-notification-colors: () !default;
-
-$neo-notification-colors: map-merge(
-  (
-    success: $token-color-green-100,
-    warning: $token-color-orange-100,
-    alert: $token-color-red-100,
-    info: $token-color-blue-100,
-  ),
-  $neo-notification-colors
-);
-
-// updated icon colors
-
-$neo-icon-colors: () !default;
-
-$neo-icon-colors: map-merge(
-  (
-    success: $token-color-green-600,
-    warning: $token-color-orange-600,
-    alert: $token-color-red-600,
-    info: $token-color-blue-600,
-  ),
-  $neo-icon-colors
-);
-
 // updated lighter state colors
 
 $neo-state-colors-light: () !default;
@@ -430,7 +402,9 @@ $select-disabled-color: $token-dropdown-disabled-color !default;
 $select-disabled-bg: $token-dropdown-disabled-background-color !default;
 $select-hover-bg: $token-dropdown-hover !default;
 $select-table-page-show-width: $token-table-pagination-count-select-width !default;
-
+$select-expand-icon: $token-icons-neo-icon-chevron-down !default;
+$select-multiple-selected-icon: $token-icons-neo-icon-accept !default;
+$select-multiple-unselected-icon: $token-icons-neo-icon-close !default;
 //
 // Element name: Radio
 // Location: src/scss/elements/_radio-button.scss
@@ -488,6 +462,8 @@ $table-page-select-width: $token-table-pagination-count-width !default;
 $table-filter-button-color: $token-table-filter-button-color !default;
 $table-date-picker-background-color: $token-table-datepicker-background-color !default;
 $table-date-picker-font-color: $token-color-base-600 !default;
+$table-sortable-ascending-icon: $token-icons-neo-icon-chevron-up !default;
+$table-sortable-descending-icon: $token-icons-neo-icon-chevron-down !default;
 
 //
 // Component name: Buttons
@@ -525,9 +501,14 @@ $button-states: () !default;
 $button-states: map-merge(
   (
     primary: (
-      color: $token-button-primary-info-color,
-      hover-color: $token-button-primary-info-hover-color,
-      disabled-color: $token-button-primary-info-disabled-color,
+      color: $token-button-default-info-color,
+      hover-color: $token-button-default-info-hover-color,
+      disabled-color: $token-button-default-info-disabled-color,
+    ),
+    default: (
+      color: $token-button-default-info-color,
+      hover-color: $token-button-default-info-hover-color,
+      disabled-color: $token-button-default-info-disabled-color,
     ),
     success: (
       color: $token-button-success-color,
@@ -545,9 +526,9 @@ $button-states: map-merge(
       disabled-color: $token-button-alert-disabled-color,
     ),
     info: (
-      color: $token-button-primary-info-color,
-      hover-color: $token-button-primary-info-hover-color,
-      disabled-color: $token-button-primary-info-disabled-color,
+      color: $token-button-default-info-color,
+      hover-color: $token-button-default-info-hover-color,
+      disabled-color: $token-button-default-info-disabled-color,
     ),
   ),
   $button-states
@@ -571,16 +552,29 @@ $arrow-color: $global-background;
 // Location: src/scss/elements/_check.scss
 //
 
-$checkbox-size: 16px !default;
-$checkbox-background: $global-background !default;
-$checkbox-checked-background: $token-checkbox-selected-background-color !default;
-$checkbox-disabled-background: $token-checkbox-disabled-background-color !default;
+$checkbox-size: $token-checkbox-size !default;
+$checkbox-background: $token-checkbox-unchecked-bg-color !default;
+$checkbox-checked-background: $token-checkbox-checked-bg-color !default;
+$checkbox-disabled-background: $token-checkbox-disabled-bg-color !default;
+$checkbox-icon-font-size: $token-checkbox-icon-font-size !default;
 $checkbox-icon-width: 6px !default;
 $checkbox-icon-height: 9px !default;
-$checkbox-icon-color: $global-background !default;
-$checkbox-label-indent: $global-spacer-large !default;
-$checkbox-font-size: $token-web-typography-web-tiny-body-font-size !default;
-$checkbox-color: $token-color-base-100 !default;
+$checkbox-icon-color: $token-checkbox-icon-color !default;
+$checkbox-label-indent: $token-checkbox-label-indent !default;
+$checkbox-font-size: $token-checkbox-font-size !default;
+$checkbox-color: $token-checkbox-icon-color !default;
+$checkbox-checked-icon: $token-icons-neo-icon-accept !default;
+$checkbox-indeterminate-icon: $token-icons-neo-icon-minus !default;
+$checkbox-border-radius: $token-checkbox-border-radius !default;
+$checkbox-label-font-weight: $token-checkbox-font-weight !default;
+$checkbox-label-line-height: $token-checkbox-line-height !default;
+$checkbox-label-font-color: $token-checkbox-label-font-color !default;
+$checkbox-label-letter-spacing: $token-checkbox-letter-spacing !default;
+$checkbox-label-disabled-font-color: $token-checkbox-label-disabled-font-color !default;
+$checkbox-border-color: $token-checkbox-border-color !default;
+$checkbox-disabled-border-color: $token-checkbox-disabled-border-color !default;
+$checkbox-border-style: $token-checkbox-border-style !default;
+$checkbox-border-width: $token-checkbox-border-width !default;
 
 //
 // Component name: Label
@@ -604,19 +598,93 @@ $label-margin-bottom: $token-input-label-spacing !default;
 // Location: src/scss/elements/_notification.scss
 //
 
-$notification-background: $global-background !default;
-$notification-color: $global-text-color !default;
-$notification-radius: 0 !default;
-$notification-font-size: $token-web-typography-web-heading-4-font-size !default;
-$notification-padding-y: $global-spacer * 2 !default;
-$notification-padding-x: $global-spacer-large * 2 !default;
-$notification-margin-bottom: $global-spacer !default;
-$notification-btn-offset: $global-spacer !default;
-$notification-icon-offset-y: $global-spacer-small !default;
-$notification-icon-offset-x: $global-spacer-large !default;
-$notification-description-font-size: $global-font-size !default;
-$notification-counter-font-size: $global-font-size !default;
-$notification-opacity: 0.8 !default;
+$notification-option-spacing: $token-notification-option-spacing !default;
+$notification-text-spacing: $token-notification-text-spacing-y !default;
+$notification-icon-offset: $token-notification-icon-offset !default;
+$notification-font-color: $token-notification-font-color !default;
+$notification-close-icon-size: $token-notification-close-icon-size !default;
+$notification-margin-bottom: $token-notification-margin-bottom !default;
+$notification-min-width: $token-notification-min-width !default;
+$notification-min-height: $token-notification-min-height !default;
+$notification-padding-x: $token-notification-padding-x !default;
+$notification-padding-y: $token-notification-padding-y !default;
+$notification-border-radius: $token-notification-border-radius !default;
+// fonts
+$notification-header-font-size: $token-notification-header-font-size !default;
+$notification-header-line-height: $token-notification-header-line-height !default;
+$notification-header-letter-spacing: $token-notification-header-letter-spacing !default;
+$notification-header-font-weight: $token-notification-header-font-weight !default;
+$notification-description-font-size: $token-notification-description-font-size !default;
+$notification-description-line-height: $token-notification-description-line-height !default;
+$notification-description-letter-spacing: $token-notification-description-letter-spacing !default;
+$notification-description-font-weight: $token-notification-description-font-weight !default;
+$notification-counter-font-size: $token-notification-counter-font-size !default;
+$notification-counter-line-height: $token-notification-counter-line-height !default;
+$notification-counter-letter-spacing: $token-notification-counter-letter-spacing !default;
+$notification-counter-font-weight: $token-notification-counter-font-weight !default;
+$notification-large-icon-size: $token-notification-large-icon-size !default;
+$notification-elevation-x-offset: $token-notification-elevation-x-offset !default;
+$notification-elevation-y-offset: $token-notification-elevation-y-offset !default;
+$notification-elevation-radius: $token-notification-elevation-radius !default;
+$notification-elevation-color: $token-notification-elevation-color !default;
+
+// updated notification colors
+
+$neo-notification-colors: () !default;
+
+$neo-notification-colors: map-merge(
+  (
+    success: $token-notification-success-color,
+    warning: $token-notification-warning-color,
+    alert: $token-notification-alert-color,
+    info: $token-notification-info-color,
+    event: $token-notification-event-color,
+  ),
+  $neo-notification-colors
+);
+
+// updated icons
+
+$neo-notification-icons: () !default;
+
+$neo-notification-icons: map-merge(
+  (
+    success: $token-icons-neo-icon-available,
+    warning: $token-icons-neo-icon-warning,
+    alert: $token-icons-neo-icon-error,
+    info: $token-icons-neo-icon-info,
+  ),
+  $neo-notification-icons
+);
+
+// updated icon colors
+
+$neo-icon-colors: () !default;
+
+$neo-icon-colors: map-merge(
+  (
+    success: $token-notification-success-icon-color,
+    warning: $token-notification-warning-icon-color,
+    alert: $token-notification-alert-icon-color,
+    info: $token-notification-info-icon-color,
+    event: $token-notification-event-icon-color,
+  ),
+  $neo-icon-colors
+);
+
+// $notification-background: $global-background !default;
+// $notification-color: $global-text-color !default;
+// $notification-radius: 0 !default;
+// $notification-font-size: $token-web-typography-web-heading-4-font-size !default;
+// $notification-padding-y: $global-spacer * 2 !default;
+// $notification-padding-x: $global-spacer-large * 2 !default;
+// $notification-margin-bottom: $global-spacer !default;
+// $notification-btn-offset: $global-spacer !default;
+// $notification-icon-offset-y: $global-spacer-small !default;
+// $notification-icon-offset-x: $global-spacer-large !default;
+// $notification-description-font-size: $global-font-size !default;
+// $notification-counter-font-size: $global-font-size !default;
+// $notification-opacity: 0.8 !default;
 
 $close-types: () !default;
 $close-types: map-merge(
@@ -778,6 +846,8 @@ $accordion-icon-animation: rotate(0) !default;
 $accordion-active-icon-animation: rotate(-180deg) !default;
 $accordion-padding-y: $group-list-padding-y !default;
 $accordion-padding-x: $group-list-padding-x !default;
+$accordion-expanded-icon: $token-icons-neo-icon-chevron-down !default;
+$accordion-contracted-icon: $token-icons-neo-icon-chevron-up !default;
 
 //
 // Component name: Sheet
@@ -857,17 +927,86 @@ $image-thumbnail-border-radius: $global-radius !default;
 // Location: src/scss/components/_avatar.scss
 //
 
-$avatar-size: $token-avatar-default-width !default;
-$avatar-background: $token-avatar-background-color !default;
-$avatar-font-color: $token-avatar-color !default;
-$avatar-font-size: $token-avatar-initials-regular-font-size !default;
-$avatar-font-weight: $token-avatar-initials-regular-font-weight !default;
+//sizes
+$avatar-medium-size: $token-avatar-medium-size !default;
+$avatar-small-size: $token-avatar-small-size !default;
+$avatar-large-size: $token-avatar-large-size !default;
+// background color
+$avatar-background-color: $token-avatar-background-color !default;
+//fonts
+$avatar-font-color: $token-avatar-font-color !default;
+$avatar-small-font-size: $token-avatar-small-font-size !default;
+$avatar-medium-font-size: $token-avatar-medium-font-size !default;
+$avatar-large-font-size: $token-avatar-large-font-size !default;
+$avatar-medium-line-height: $token-avatar-medium-line-height !default;
+$avatar-large-line-height: $token-avatar-large-line-height !default;
+$avatar-small-line-height: $token-avatar-small-line-height !default;
+$avatar-small-letter-spacing: $token-avatar-small-letter-spacing !default;
+$avatar-medium-letter-spacing: $token-avatar-medium-letter-spacing !default;
+$avatar-large-letter-spacing: $token-avatar-large-letter-spacing !default;
+$avatar-font-weight: $token-web-typography-fontweight-regular !default;
 $avatar-initials-selector: data-initials !default;
-$avatar-border-radius: $token-border-radius-100;
-$avatar-border-color: $token-avatar-avatar-border-color;
-$avatar-border-style: $token-avatar-avatar-border-style;
-$avatar-border-width: $token-avatar-avatar-border-width;
-$avatar-line-height: $token-avatar-initials-regular-line-height !default;
+// border
+$avatar-border-radius: $token-border-radius-100 !default;
+$avatar-border-style: $token-avatar-border-style !default;
+$avatar-border-width: $token-avatar-border-width !default;
+// status-sizes
+$avatar-status-size-small: $token-avatar-status-size-small !default;
+$avatar-status-size-large: $token-avatar-status-size-large !default;
+$avatar-status-size-medium: $token-avatar-status-size-medium !default;
+// status positions
+$avatar-status-small-top: $token-avatar-status-small-top !default;
+$avatar-status-small-right: $token-avatar-status-small-right !default;
+$avatar-status-medium-top: $token-avatar-status-medium-top !default;
+$avatar-status-medium-right: $token-avatar-status-medium-right !default;
+$avatar-status-large-top: $token-avatar-status-large-top !default;
+$avatar-status-large-right: $token-avatar-status-large-right !default;
+// status icons
+$avatar-status-available: $token-icons-neo-icon-available-filled !default;
+$avatar-status-away: $token-icons-neo-icon-away-filled !default;
+$avatar-status-busy: $token-icons-neo-icon-busy-filled !default;
+$avatar-status-do-not-disturb: $token-icons-neo-icon-do-not-disturb-filled !default;
+$avatar-status-offline: $token-icons-neo-icon-offline-filled !default;
+// colors
+$neo-avatar-colors: () !default;
+$neo-avatar-colors: map-merge(
+  (
+    primary: $token-avatar-border-primary-info,
+    default: $token-avatar-border-primary-info,
+    success: $token-avatar-border-success,
+    warning: $token-avatar-border-warning,
+    alert: $token-avatar-border-alert,
+    info: $token-avatar-border-primary-info,
+  ),
+  $neo-avatar-colors
+);
+$neo-avatar-status: () !default;
+$neo-avatar-status: map-merge(
+  (
+    available: (
+      color: $token-avatar-status-available-color,
+      icon: $token-icons-neo-icon-available-filled,
+    ),
+    away: (
+      color: $token-avatar-status-away-color,
+      icon: $token-icons-neo-icon-away-filled,
+    ),
+    busy: (
+      color: $token-avatar-status-away-color,
+      icon: $token-icons-neo-icon-busy-filled,
+    ),
+    do-not-disturb: (
+      color: $token-avatar-status-do-not-disturb-color,
+      icon: $token-icons-neo-icon-do-not-disturb-filled,
+    ),
+    offline: (
+      color: $token-avatar-status-offline-color,
+      icon: $token-icons-neo-icon-offline-filled,
+    ),
+  ),
+  $neo-avatar-status
+);
+
 // //
 // // Component name: Card
 // // Location: src/scss/components/_card.scss
@@ -931,7 +1070,7 @@ $chip-btn-opacity: 0.4 !default;
 $chip-disabled-bg: $global-disabled-bg !default;
 $chip-disabled-color: $global-disabled-color !default;
 // chevron-down
-$chip-expandable-icon: '\f244' !default;
+$chip-expandable-icon: $token-icons-neo-icon-chevron-down !default;
 
 // Component name: Tab
 // Location: src/scss/components/_tabs.scss
@@ -992,10 +1131,79 @@ $tab-background-color: $token-tabs-background-color;
   @return 2px solid $result;
 }
 
+// Component name: Left Nav
+// Location: src/scss/components/_leftnav.scss
+
+// animation?
+
+//hover color
+$leftnav-hover-background-color: $token-leftnav-leftnav-hover-bg-color !default;
+//title
+$leftnav-title-height: $token-leftnav-title-height !default;
+$leftnav-title-padding-horizontal: $token-leftnav-title-padding-horizontal !default;
+$leftnav-title-padding-vertical: $token-leftnav-title-padding-vertical !default;
+$leftnav-title-font-size: $token-leftnav-title-font-size !default;
+$leftnav-title-font-weight: $token-leftnav-title-font-weight !default;
+$leftnav-title-font-line-height: $token-leftnav-title-line-height !default;
+$leftnav-title-font-letter-spacing: $token-leftnav-title-letter-spacing !default;
+$leftnav-title-font-color: $token-leftnav-title-font-color !default;
+//link
+$leftnav-link-height: $token-leftnav-link-height !default;
+$leftnav-link-padding-horizontal: $token-leftnav-link-padding-horizontal !default;
+$leftnav-link-font-size: $token-leftnav-link-font-size !default;
+$leftnav-link-font-weight: $token-leftnav-link-font-weight !default;
+$leftnav-link-font-line-height: $token-leftnav-link-line-height !default;
+$leftnav-link-font-letter-spacing: $token-leftnav-link-letter-spacing !default;
+//main
+$leftnav-collapse-icon-font-size: $token-leftnav-collapse-icon-font-size !default;
+$leftnav-icon-spacing: $token-leftnav-icon-spacing !default;
+$leftnav-background-color: $token-leftnav-background-color !default;
+$leftnav-main-max-width: $token-leftnav-max-width !default;
+$leftnav-main-max-height: $token-leftnav-main-max-height !default;
+$leftnav-main-padding-horizontal: $token-leftnav-main-padding-horizontal !default;
+$leftnav-main-icon-font-size: $token-leftnav-main-icon-font-size !default;
+$leftnav-main-active-border-width: $token-leftnav-main-active-border-width !default;
+$leftnav-main-active-border-style: $token-leftnav-main-active-border-style !default;
+$leftnav-main-active-color: $token-leftnav-main-active-color !default;
+$leftnav-main-active-disabled-color: $token-leftnav-main-active-disabled-color !default;
+$leftnav-main-active-font-size: $token-leftnav-active-font-size !default;
+$leftnav-main-active-font-weight: $token-leftnav-active-font-weight !default;
+$leftnav-main-active-font-line-height: $token-leftnav-active-line-height !default;
+$leftnav-main-active-font-letter-spacing: $token-leftnav-active-letter-spacing !default;
+$leftnav-main-hover-color: $token-leftnav-main-hover-color !default;
+$leftnav-main-default-color: $token-leftnav-default-color !default;
+$leftnav-main-default-font-size: $token-leftnav-default-font-size !default;
+$leftnav-main-default-font-weight: $token-leftnav-default-font-weight !default;
+$leftnav-main-default-font-line-height: $token-leftnav-default-line-height !default;
+$leftnav-main-default-font-letter-spacing: $token-leftnav-default-letter-spacing !default;
+$leftnav-main-default-disabled-color: $token-leftnav-main-default-disabled-color !default;
+$leftnav-main-chevron-icon: $token-icons-neo-icon-chevron-left !default;
+$leftnav-main-chevron-icon-reverse: $token-icons-neo-icon-chevron-right !default;
+//sub
+$leftnav-sub-max-height: $token-leftnav-sub-max-height !default;
+$leftnav-sub-padding-horizontal: $token-leftnav-sub-padding-horizontal !default;
+$leftnav-sub-active-border-width: $token-leftnav-sub-active-border-width !default;
+$leftnav-sub-active-border-style: $token-leftnav-sub-active-border-style !default;
+$leftnav-sub-active-color: $token-leftnav-sub-active-color !default;
+$leftnav-sub-active-hover-color: $token-leftnav-sub-hover-color !default;
+$leftnav-sub-active-disabled-color: $token-leftnav-sub-active-disabled-color !default;
+$leftnav-sub-active-font-size: $token-leftnav-sub-active-font-size !default;
+$leftnav-sub-active-font-weight: $token-leftnav-sub-active-font-weight !default;
+$leftnav-sub-active-font-line-height: $token-leftnav-sub-active-line-height !default;
+$leftnav-sub-active-font-letter-spacing: $token-leftnav-sub-active-letter-spacing !default;
+$leftnav-sub-default-color: $token-leftnav-sub-default-color !default;
+$leftnav-sub-default-font-size: $token-leftnav-sub-default-font-size !default;
+$leftnav-sub-default-font-weight: $token-leftnav-sub-default-font-weight !default;
+$leftnav-sub-default-font-line-height: $token-leftnav-sub-default-line-height !default;
+$leftnav-sub-default-font-letter-spacing: $token-leftnav-sub-default-letter-spacing !default;
+$leftnav-sub-default-disabled-color: $token-leftnav-sub-default-disabled-color !default;
+
 // Component name: Dropdown
 // Location: src/scss/components/_dropdown.scss
 //
-
+$dropdown-expand-icon: $token-icons-neo-icon-chevron-down !default;
+$dropdown-expand-left-icon: $token-icons-neo-icon-chevron-left !default;
+$dropdown-expand-right-icon: $token-icons-neo-icon-chevron-right !default;
 $dropdown-color: $token-menu-font-color !default;
 $dropdown-padding-x: 16px !default;
 $dropdown-padding-y: $global-spacer-large !default;
@@ -1096,6 +1304,7 @@ $empty-state-icon-size: $global-font-size * 3.5 !default;
 // Location: src/scss/components/_spinner.scss
 //
 
+$spinner-icon: $token-icons-neo-icon-spinner !default;
 $spinner-ring-sizes: () !default;
 $spinner-ring-sizes: map-merge(
   (
@@ -1148,9 +1357,10 @@ $modal-body-background: $global-background !default;
 $modal-body-height: 200px !default;
 $modal-background: $global-background !default;
 $modal-element-background: $modal-background !default;
-$modal-border-color: $modal-background !default;
+// hard-coded for now
+$modal-border-color: rgba(0, 0, 0, 0.15) !default;
 $modal-border: $token-border-solid-1-px-border-width
-  $token-border-solid-1-px-border-style $token-color-base-400 !default;
+  $token-border-solid-1-px-border-style $modal-border-color !default;
 $modal-divider: $global-divider-thickness solid darken($modal-border-color, 5%) !default;
 $modal-padding: $global-spacer-large 17px $global-spacer-large 0 !default;
 $modal-header-padding: $global-spacer-x-large 0 $global-spacer-large 0 !default;

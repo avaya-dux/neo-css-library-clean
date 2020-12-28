@@ -200,7 +200,7 @@ async function buttonStyles(value) {
         if (
           variant.name.includes('Type=primary') &&
           variant.name.includes('Icon=none') &&
-          variant.name.includes('Function=primary-info') &&
+          variant.name.includes('Function=default-info') &&
           variant.name.includes('State=hover')
         ) {
           // button-min-width
@@ -254,7 +254,7 @@ async function buttonStyles(value) {
         if (
           variant.name.includes('Type=secondary') &&
           variant.name.includes('Icon=none') &&
-          variant.name.includes('Function=primary-info') &&
+          variant.name.includes('Function=default-info') &&
           variant.name.includes('State=default')
         ) {
           // console.log(variant);
@@ -287,7 +287,7 @@ async function buttonStyles(value) {
         if (
           variant.name.includes('Type=secondary') &&
           variant.name.includes('Icon=none') &&
-          variant.name.includes('Function=primary-info') &&
+          variant.name.includes('Function=default-info') &&
           variant.name.includes('State=hover')
         ) {
           var elevationID = variant.styles.effect;
@@ -307,7 +307,7 @@ async function buttonStyles(value) {
         if (
           variant.name.includes('Type=tertiary') &&
           variant.name.includes('Icon=none') &&
-          variant.name.includes('Function=primary-info') &&
+          variant.name.includes('Function=default-info') &&
           variant.name.includes('State=hover')
         ) {
           var colorID = variant.styles.fills;

@@ -55,7 +55,7 @@
       &::before {
         font-family: 'updated-neo-icons';
         // neo-close
-        content: '\F1D9';
+        content: $select-multiple-unselected-icon;
         width: 1.3em;
         text-align: center;
         display: inline-block;
@@ -63,7 +63,7 @@
       &:checked::before {
         font-family: 'updated-neo-icons';
         // neo-check
-        content: '\F1D7';
+        content: $select-multiple-selected-icon;
       }
       @include rtl-selector {
         padding: {
@@ -99,7 +99,7 @@
     align-items: center;
     font-family: 'updated-neo-icons';
     // chevron-down
-    content: '\f244';
+    content: $select-expand-icon;
     display: inline-flex;
     justify-content: center;
     pointer-events: none;

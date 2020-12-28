@@ -3,6 +3,7 @@
 @mixin accordion-header {
   &__header {
     @extend %list-item;
+    // display: block !important;
     padding: 10px 15px !important;
     margin-right: 0 !important;
     border: none;
@@ -12,13 +13,17 @@
     min-height: auto !important;
     min-width: auto !important;
 
+    & span {
+      margin: initial !important;
+    }
+
     &:focus {
       outline: none;
     }
 
     &::after {
       // chevron-up
-      content: '\f247';
+      content: $accordion-contracted-icon;
       font-family: 'updated-neo-icons';
       position: absolute;
       right: $accordion-icon-offset;

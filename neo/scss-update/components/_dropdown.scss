@@ -20,7 +20,7 @@
 
 @mixin neo-dropdown-arrow(
   // chevron-down
-  $arrow-icon: '\f244',
+  $arrow-icon: $dropdown-expand-icon,
   $color: white,
   $padding-left: $dropdown-padding-x
 ) {
@@ -38,25 +38,55 @@
       }
     }
   }
+  @include rtl-selector {
+    &::after {
+      display: none;
+    }
+    &::before {
+      font-family: 'updated-neo-icons';
+      color: $color;
+      content: $arrow-icon;
+      padding: 0 $padding-left 0 0;
+      vertical-align: middle;
+    }
+    &:not(.neo-dropdown__link-header)::before {
+      position: absolute;
+      left: 0px;
+      padding: 0 0 0 8px;
+      vertical-align: middle;
+    }
+  }
+  &:not(.neo-dropdown__link-header)::after {
+    position: absolute;
+    right: 0px;
+    padding: 0 8px 0 0;
+    vertical-align: middle;
+    @include rtl-selector {
+      padding: {
+        left: 8px;
+        right: initial;
+      }
+    }
+  }
 }
 
 // flip icon for right-aligned dropdowns
 
-@mixin neo-dropdown-arrow-left(
-  // chevron-left
-  $arrow-icon: '\f245',
-  $color: $global-text-color,
-  $padding-right: $dropdown-padding-x
-) {
-  &::before {
-    font-family: 'updated-neo-icons';
-    color: $color;
-    content: $arrow-icon;
-    padding: 0 $padding-right 0 0;
-    vertical-align: middle;
-    font-size: 16px;
-  }
-}
+// @mixin neo-dropdown-arrow-left(
+//   // chevron-left
+//   $arrow-icon: $dropdown-expand-left-icon,
+//   $color: $global-text-color,
+//   $padding-right: $dropdown-padding-x
+// ) {
+//   &::before {
+//     font-family: 'updated-neo-icons';
+//     color: $color;
+//     content: $arrow-icon;
+//     padding: 0 $padding-right 0 0;
+//     vertical-align: middle;
+//     font-size: 16px;
+//   }
+// }
 
 @mixin neo-dropdown-item {
   $self: &;
@@ -71,58 +101,61 @@
       color: $global-text-color;
 
       // chevron-right
-      @include neo-dropdown-arrow($arrow-icon: '\f246');
+      @include neo-dropdown-arrow(
+        $arrow-icon: $dropdown-expand-right-icon,
+        $color: $global-text-color
+      );
       &::after {
         font-size: 16px;
-        color: $global-text-color;
+        // color: $global-text-color;
         vertical-align: middle;
       }
     }
   }
 }
 
-@mixin neo-dropdown-link-right {
-  $self: &;
+// @mixin neo-dropdown-link-right {
+//   $self: &;
 
-  & > &__link-right,
-  & &__link-right {
-    // display: inline-block;
+//   & > &__link-right,
+//   & &__link-right {
+//     // display: inline-block;
 
-    @include neo-dropdown-arrow-left;
-  }
+//     @include neo-dropdown-arrow-left;
+//   }
 
-  &__link-right {
-    color: $global-text-color;
-    cursor: pointer;
-    display: block;
-    font-size: $dropdown-font-size;
-    line-height: $dropdown-line-height;
-    padding: $dropdown-padding-y $dropdown-padding-x;
-    text-decoration: none;
-    white-space: nowrap;
-    transition: $button-transition;
-    transition-property: background-color;
+//   &__link-right {
+//     color: $global-text-color;
+//     cursor: pointer;
+//     display: block;
+//     font-size: $dropdown-font-size;
+//     line-height: $dropdown-line-height;
+//     padding: $dropdown-padding-y $dropdown-padding-x;
+//     text-decoration: none;
+//     white-space: nowrap;
+//     transition: $button-transition;
+//     transition-property: background-color;
 
-    &:hover {
-      background-color: $dropdown-item-hover-color;
-      color: $global-text-color;
-    }
-    &-header {
-      background: $dropdown-content-background-color;
-      color: $dropdown-item-color;
-      &:hover {
-        background-color: $dropdown-item-hover-background-color;
-        color: $dropdown-item-hover-color;
-      }
-    }
-    &-active {
-      background-color: $dropdown-item-hover-background-color;
-      color: $dropdown-item-hover-color;
-    }
+//     &:hover {
+//       background-color: $dropdown-item-hover-color;
+//       color: $global-text-color;
+//     }
+//     &-header {
+//       background: $dropdown-content-background-color;
+//       color: $dropdown-item-color;
+//       &:hover {
+//         background-color: $dropdown-item-hover-background-color;
+//         color: $dropdown-item-hover-color;
+//       }
+//     }
+//     &-active {
+//       background-color: $dropdown-item-hover-background-color;
+//       color: $dropdown-item-hover-color;
+//     }
 
-    // @include neo-icons;
-  }
-}
+//     // @include neo-icons;
+//   }
+// }
 
 @mixin neo-dropdown-link {
   $self: &;
@@ -130,7 +163,7 @@
   & > &__link {
     display: inline-block;
 
-    @include neo-dropdown-arrow;
+    @include neo-dropdown-arrow();
   }
 
   // & > &__link-right {
@@ -186,10 +219,11 @@
     }
   }
 
+  //hard-coded border for now
   @include neo-popover-content(
     $dropdown-animation-duration,
     white,
-    none,
+    $modal-border,
     $dropdown-radius,
     none,
     $dropdown-content-padding,
@@ -240,6 +274,11 @@
   &--right &__content {
     left: auto;
     right: 100%;
+
+    @include rtl-selector {
+      left: 100%;
+      right: auto;
+    }
   }
 
   &--right > &__content {
@@ -248,6 +287,19 @@
     @include rtl-selector {
       left: 0;
       right: auto;
+    }
+  }
+  &--left &__content {
+    left: 100%;
+    right: auto;
+  }
+
+  &--left > &__content {
+    left: 0;
+
+    @include rtl-selector {
+      left: auto;
+      right: 0;
     }
   }
   // &--right &__link,

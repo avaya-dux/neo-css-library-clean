@@ -20,6 +20,15 @@ fs.readFile('../../build/css/updated-neo-icons.css', function (err, data) {
     '.neo-icon-busy-filled:before ',
     '.neo-icon-do-not-disturb-filled:before ',
     '.neo-icon-offline-filled:before ',
+    // notification icons
+    '.neo-icon-error:before ',
+    '.neo-icon-warning:before ',
+    '.neo-icon-available:before ',
+    '.neo-icon-info:before ',
+    // indeterminate checkbox
+    '.neo-icon-minus:before ',
+    // spinner
+    '.neo-icon-spinner:before ',
   ];
 
   var iconJSONObject = {

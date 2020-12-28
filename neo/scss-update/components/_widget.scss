@@ -97,6 +97,7 @@
   // animation: animation-modal-content $modal-animation-time;
   background-color: white;
   border: 1px solid $token-color-base-200;
+  border: $modal-border;
   border-radius: 4px;
   // box-shadow: $modal-shadow;
   display: flex;

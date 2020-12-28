@@ -372,7 +372,7 @@
   & thead tr th.sort-asc {
     &::after {
       font-family: 'updated-neo-icons';
-      content: '\f247';
+      content: $table-sortable-ascending-icon;
       vertical-align: middle;
     }
     @include rtl-selector {
@@ -381,7 +381,7 @@
       }
       &::before {
         font-family: 'updated-neo-icons';
-        content: '\f247';
+        content: $table-sortable-ascending-icon;
         vertical-align: middle;
       }
     }
@@ -389,7 +389,7 @@
   & thead tr th.sort-dsc {
     &::after {
       font-family: 'updated-neo-icons';
-      content: '\f244';
+      content: $table-sortable-descending-icon;
       vertical-align: middle;
     }
     @include rtl-selector {
@@ -398,7 +398,7 @@
       }
       &::before {
         font-family: 'updated-neo-icons';
-        content: '\f244';
+        content: $table-sortable-descending-icon;
         vertical-align: middle;
       }
     }

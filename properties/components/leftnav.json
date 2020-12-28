@@ -1,0 +1,106 @@
+{
+  "leftnav": {
+    "title-height": { "value": "48px" },
+    "title-padding-horizontal": { "value": "16px" },
+    "title-padding-vertical": { "value": "19px" },
+    "title-font-size": {
+      "value": "{Web-typography.web/small body.fontSize.value}"
+    },
+    "title-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "title-line-height": {
+      "value": "{Web-typography.web/small body.lineHeight.value}"
+    },
+    "title-letter-spacing": {
+      "value": "{Web-typography.web/small body.letterSpacing.value}"
+    },
+    "title-font-color": { "value": "{color.base/500.value}" },
+    "link-height": { "value": "22px" },
+    "link-padding-horizontal": { "value": "16px" },
+    "link-font-size": {
+      "value": "{Web-typography.web/tiny body.fontSize.value}"
+    },
+    "link-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "link-line-height": {
+      "value": "{Web-typography.web/tiny body.lineHeight.value}"
+    },
+    "link-letter-spacing": {
+      "value": "{Web-typography.web/tiny body.letterSpacing.value}"
+    },
+    "collapse-icon-font-size": { "value": "16px" },
+    "background-color": { "value": "{color.base/0.value}" },
+    "max-width": { "value": "240px" },
+    "main-max-height": { "value": "48px" },
+    "icon-spacing": { "value": "12px" },
+    "main-padding-horizontal": { "value": "16px" },
+    "main-icon-font-size": { "value": "21px" },
+    "main-active-border-width": { "value": "2px" },
+    "main-active-border-style": { "value": "solid" },
+    "main-active-color": { "value": "{color.blue/500.value}" },
+    "main-active-disabled-color": { "value": "{color.blue/200.value}" },
+    "active-font-size": {
+      "value": "{Web-typography.web/body - semibold.fontSize.value}"
+    },
+    "active-font-weight": {
+      "value": "{Web-typography.fontweight-semibold.value}"
+    },
+    "active-line-height": {
+      "value": "{Web-typography.web/body - semibold.lineHeight.value}"
+    },
+    "active-letter-spacing": {
+      "value": "{Web-typography.web/body - semibold.letterSpacing.value}"
+    },
+    "leftnav-hover-bg-color": { "value": "{color.base/100.value}" },
+    "main-hover-color": { "value": "{color.blue/600.value}" },
+    "default-color": { "value": "{color.base/800.value}" },
+    "default-font-size": {
+      "value": "{Web-typography.web/body - regular.fontSize.value}"
+    },
+    "default-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "default-line-height": {
+      "value": "{Web-typography.web/body - regular.lineHeight.value}"
+    },
+    "default-letter-spacing": {
+      "value": "{Web-typography.web/body - regular.letterSpacing.value}"
+    },
+    "main-default-disabled-color": { "value": "{color.base/400.value}" },
+    "sub-max-height": { "value": "36px" },
+    "sub-padding-horizontal": { "value": "52px" },
+    "sub-active-border-width": { "value": "2px" },
+    "sub-active-border-style": { "value": "solid" },
+    "sub-active-color": { "value": "{color.blue/500.value}" },
+    "sub-hover-color": { "value": "{color.blue/600.value}" },
+    "sub-active-disabled-color": { "value": "{color.blue/200.value}" },
+    "sub-active-font-size": {
+      "value": "{Web-typography.web/body - semibold.fontSize.value}"
+    },
+    "sub-active-font-weight": {
+      "value": "{Web-typography.fontweight-semibold.value}"
+    },
+    "sub-active-line-height": {
+      "value": "{Web-typography.web/body - semibold.lineHeight.value}"
+    },
+    "sub-active-letter-spacing": {
+      "value": "{Web-typography.web/body - semibold.letterSpacing.value}"
+    },
+    "sub-default-color": { "value": "{color.base/800.value}" },
+    "sub-default-font-size": {
+      "value": "{Web-typography.web/body - regular.fontSize.value}"
+    },
+    "sub-default-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "sub-default-line-height": {
+      "value": "{Web-typography.web/body - regular.lineHeight.value}"
+    },
+    "sub-default-letter-spacing": {
+      "value": "{Web-typography.web/body - regular.letterSpacing.value}"
+    },
+    "sub-default-disabled-color": { "value": "{color.base/400.value}" }
+  }
+}

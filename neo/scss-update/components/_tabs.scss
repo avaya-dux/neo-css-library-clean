@@ -10,7 +10,7 @@
 
   @include rtl-selector {
     margin: {
-      left: auto;
+      left: initial;
       right: 0;
     }
   }
@@ -219,6 +219,12 @@
       &:before {
         margin-right: 5px;
         color: $tab-default-color;
+        @include rtl-selector {
+          margin: {
+            left: 5px;
+            right: 0;
+          }
+        }
       }
 
       &[dir='rtl']:before {

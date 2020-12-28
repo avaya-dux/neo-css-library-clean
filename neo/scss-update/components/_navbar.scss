@@ -85,7 +85,7 @@
   display: flex;
   flex: 1;
   min-height: $navbar-height;
-  position: relative;
+  // position: relative;
   z-index: $navbar-z;
   max-width: 100vw;
   border-bottom: 1px solid #c9c9c9;
@@ -249,7 +249,12 @@
       right: 19px;
       top: 21px;
       transform: translate(65%, -65%);
-      z-index: 999;
+      z-index: 49;
+      @include rtl-selector {
+        left: 0;
+        right: auto;
+        transform: translate(35%, -65%);
+      }
     }
   }
   // testing new class for higher specificity

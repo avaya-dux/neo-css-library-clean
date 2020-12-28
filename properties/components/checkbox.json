@@ -1,1 +1,28 @@
-{"checkbox":{"unselected-background-color":{"value":"{color.base/100.value}"},"unselected-border-width":{"value":"{border.solid-1px.borderWidth.value}"},"unselected-border-style":{"value":"{border.solid-1px.borderStyle.value}"},"unselected-border-color":{"value":"{color.blue/500.value}"},"selected-background-color":{"value":"{color.blue/500.value}"},"selected-icon":{"value":"\f1bc"},"disabled-background-color":{"value":"{color.base/100.value}"},"disabled-border-color":{"value":"{color.blue/200.value}"},"label-font-color":{"value":"{color.base/1000.value}"},"label-font-size":{"value":"{Web-typography.web/body - regular.fontSize.value}"},"label-lineHeight":{"value":"{Web-typography.web/body - regular.lineHeight.value}"},"disabled-label-font-color":{"value":"{color.base/500.value}"}}}
+{
+  "checkbox": {
+    "size": { "value": "16px" },
+    "border-radius": { "value": "4px" },
+    "icon-font-size": { "value": "11px" },
+    "icon-color": { "value": "{color.base/0.value}" },
+    "checked-bg-color": { "value": "{color.blue/500.value}" },
+    "disabled-bg-color": { "value": "{color.blue/200.value}" },
+    "label-font-color": { "value": "{color.base/1000.value}" },
+    "font-size": {
+      "value": "{Web-typography.web/body - regular.fontSize.value}"
+    },
+    "font-weight": { "value": "{Web-typography.fontweight-regular.value}" },
+    "line-height": {
+      "value": "{Web-typography.web/body - regular.lineHeight.value}"
+    },
+    "letter-spacing": {
+      "value": "{Web-typography.web/body - regular.letterSpacing.value}"
+    },
+    "label-indent": { "value": "8px" },
+    "label-disabled-font-color": { "value": "{color.base/400.value}" },
+    "unchecked-bg-color": { "value": "{color.base/0.value}" },
+    "border-color": { "value": "{color.blue/500.value}" },
+    "border-width": { "value": "1px" },
+    "border-style": { "value": "solid" },
+    "disabled-border-color": { "value": "{color.blue/200.value}" }
+  }
+}

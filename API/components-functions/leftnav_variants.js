@@ -24,7 +24,7 @@ Text styles - regular/active - DONE
 - line-height
 - letter-spacing
 
-Colors - text, icon, border:
+Colors - text, icon, border, background:
 Default color - DONE
 Active color - DONE
 Hover state colors - DONE
@@ -88,94 +88,104 @@ async function leftnavStyles(value) {
     (comps) => comps.name === 'left-nav/title'
   );
 
-  //title height
-  leftnavJSONObject.leftnav['title-height'] = {
-    value: `${leftnavTitle[0].size.y}px`,
-  };
-  // title padding
-  leftnavJSONObject.leftnav['title-padding-horizontal'] = {
-    value: `${leftnavTitle[0].children[0].relativeTransform[0][2]}px`,
-  };
-  // title font style
-  var titlefontStyleTokenID = leftnavTitle[0].children[0].styles.text;
-  await coreFigmaFunctions
-    .getFigmaTokenNameByID(
-      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-      coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-      titlefontStyleTokenID
-    )
-    .then((value) => {
-      var fontTokenName = value.nodes[
+  for (const titleComp of leftnavTitle) {
+    //title height
+    leftnavJSONObject.leftnav['title-height'] = {
+      value: `${titleComp.size.y}px`,
+    };
+    // title padding
+    leftnavJSONObject.leftnav['title-padding-horizontal'] = {
+      value: `${titleComp.children[0].relativeTransform[0][2]}px`,
+    };
+    leftnavJSONObject.leftnav['title-padding-vertical'] = {
+      value: `${titleComp.children[0].relativeTransform[1][2]}px`,
+    };
+    // title font style
+    var titlefontStyleTokenID = titleComp.children[0].styles.text;
+    await coreFigmaFunctions
+      .getFigmaTokenNameByID(
+        coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+        coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
         titlefontStyleTokenID
-      ].document.name.toLowerCase();
-      // font-size
-      leftnavJSONObject.leftnav['title-font-size'] = {
-        value: `{Web-typography.${fontTokenName}.fontSize.value}`,
-      };
-      // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-      leftnavJSONObject.leftnav['title-font-weight'] = {
-        value: `{Web-typography.fontweight-regular.value}`,
-      };
-      // line-height
-      leftnavJSONObject.leftnav['title-line-height'] = {
-        value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
-      };
-      // letter-spacing
-      leftnavJSONObject.leftnav['title-letter-spacing'] = {
-        value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
-      };
-    });
-  // title font color
-  var titlefontColorTokenID = leftnavTitle[0].children[0].styles.fill;
-  await coreFigmaFunctions
-    .getFigmaTokenNameByID(
-      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-      coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-      titlefontColorTokenID
-    )
-    .then((value) => {
-      `{color.${value.nodes[
-        titlefontColorTokenID
-      ].document.name.toLowerCase()}.value}`;
-    });
+      )
+      .then((value) => {
+        var fontTokenName = value.nodes[
+          titlefontStyleTokenID
+        ].document.name.toLowerCase();
+        // font-size
+        leftnavJSONObject.leftnav['title-font-size'] = {
+          value: `{Web-typography.${fontTokenName}.fontSize.value}`,
+        };
+        // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
+        leftnavJSONObject.leftnav['title-font-weight'] = {
+          value: `{Web-typography.fontweight-regular.value}`,
+        };
+        // line-height
+        leftnavJSONObject.leftnav['title-line-height'] = {
+          value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
+        };
+        // letter-spacing
+        leftnavJSONObject.leftnav['title-letter-spacing'] = {
+          value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
+        };
+      });
+    // title font color
+    var titlefontColorTokenID = titleComp.children[0].styles.fill;
 
-  // links height
-  leftnavJSONObject.leftnav['link-height'] = {
-    value: `${leftnavLink[0].size.y}px`,
-  };
-  // links padding
-  leftnavJSONObject.leftnav['link-padding-horizontal'] = {
-    value: `${leftnavLink[0].children[0].relativeTransform[0][2]}px`,
-  };
-  // links font style
-  var linkfontStyleTokenID = leftnavLink[0].children[0].styles.text;
-  await coreFigmaFunctions
-    .getFigmaTokenNameByID(
-      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-      coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-      linkfontStyleTokenID
-    )
-    .then((value) => {
-      var fontTokenName = value.nodes[
+    await coreFigmaFunctions
+      .getFigmaTokenNameByID(
+        coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+        coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+        titlefontColorTokenID
+      )
+      .then((value) => {
+        leftnavJSONObject.leftnav['title-font-color'] = {
+          value: `{color.${value.nodes[
+            titlefontColorTokenID
+          ].document.name.toLowerCase()}.value}`,
+        };
+      });
+  }
+
+  for (const linkComp of leftnavLink) {
+    // links height
+    leftnavJSONObject.leftnav['link-height'] = {
+      value: `${linkComp.size.y}px`,
+    };
+    // links padding
+    leftnavJSONObject.leftnav['link-padding-horizontal'] = {
+      value: `${linkComp.children[0].relativeTransform[0][2]}px`,
+    };
+    // links font style
+    var linkfontStyleTokenID = linkComp.children[0].styles.text;
+    await coreFigmaFunctions
+      .getFigmaTokenNameByID(
+        coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+        coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
         linkfontStyleTokenID
-      ].document.name.toLowerCase();
-      // font-size
-      leftnavJSONObject.leftnav['link-font-size'] = {
-        value: `{Web-typography.${fontTokenName}.fontSize.value}`,
-      };
-      // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-      leftnavJSONObject.leftnav['link-font-weight'] = {
-        value: `{Web-typography.fontweight-regular.value}`,
-      };
-      // line-height
-      leftnavJSONObject.leftnav['link-line-height'] = {
-        value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
-      };
-      // letter-spacing
-      leftnavJSONObject.leftnav['link-letter-spacing'] = {
-        value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
-      };
-    });
+      )
+      .then((value) => {
+        var fontTokenName = value.nodes[
+          linkfontStyleTokenID
+        ].document.name.toLowerCase();
+        // font-size
+        leftnavJSONObject.leftnav['link-font-size'] = {
+          value: `{Web-typography.${fontTokenName}.fontSize.value}`,
+        };
+        // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
+        leftnavJSONObject.leftnav['link-font-weight'] = {
+          value: `{Web-typography.fontweight-regular.value}`,
+        };
+        // line-height
+        leftnavJSONObject.leftnav['link-line-height'] = {
+          value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
+        };
+        // letter-spacing
+        leftnavJSONObject.leftnav['link-letter-spacing'] = {
+          value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
+        };
+      });
+  }
 
   for (const mainVariant of leftnavMainVariants) {
     // console.log(mainVariant);
@@ -183,8 +193,26 @@ async function leftnavStyles(value) {
       mainVariant.name ===
       'active=TRUE, expandable=TRUE, icon=TRUE, state=default'
     ) {
-      //   console.log(mainVariant);
-      //   console.log(mainVariant.children[0].children[2]);
+      // collapse icon size
+      leftnavJSONObject.leftnav['collapse-icon-font-size'] = {
+        value: `${mainVariant.children[0].children[1].size.x}px`,
+      };
+      // background-color
+      var backgroundColorTokenID = mainVariant.children[0].styles.fills;
+      leftnavJSONObject.leftnav['background-color'] = {
+        value: await coreFigmaFunctions
+          .getFigmaTokenNameByID(
+            coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+            coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+            backgroundColorTokenID
+          )
+          .then(
+            (value) =>
+              `{color.${value.nodes[
+                backgroundColorTokenID
+              ].document.name.toLowerCase()}.value}`
+          ),
+      };
       // leftnav max-width
       leftnavJSONObject.leftnav['max-width'] = {
         value: `${mainVariant.size.x}px`,
@@ -195,7 +223,7 @@ async function leftnavStyles(value) {
       };
       // leftnav Main icon-spacing
       leftnavJSONObject.leftnav['icon-spacing'] = {
-        vale: `${mainVariant.children[0].children[0].itemSpacing}px`,
+        value: `${mainVariant.children[0].children[0].itemSpacing}px`,
       };
       // leftnav Main padding
       leftnavJSONObject.leftnav['main-padding-horizontal'] = {
@@ -234,6 +262,22 @@ async function leftnavStyles(value) {
       mainVariant.name ===
       'active=TRUE, expandable=TRUE, icon=TRUE, state=hover'
     ) {
+      // leftnav hover background color
+      var hoverBGColorTokenID = mainVariant.children[0].styles.fills;
+      leftnavJSONObject.leftnav['leftnav-hover-bg-color'] = {
+        value: await coreFigmaFunctions
+          .getFigmaTokenNameByID(
+            coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+            coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+            hoverBGColorTokenID
+          )
+          .then(
+            (value) =>
+              `{color.${value.nodes[
+                hoverBGColorTokenID
+              ].document.name.toLowerCase()}.value}`
+          ),
+      };
       // leftnav hover color
       var hoverColorTokenID = mainVariant.children[0].children[2].styles.fill;
       leftnavJSONObject.leftnav['main-hover-color'] = {

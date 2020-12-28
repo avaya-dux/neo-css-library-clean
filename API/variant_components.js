@@ -9,6 +9,7 @@ const buttonStyles = require('./components-functions/buttons_variants.js');
 const avatarStyles = require('./components-functions/avatar_variants.js');
 const checkboxStyles = require('./components-functions/checkbox_variants.js');
 const leftnavStyles = require('./components-functions/leftnav_variants.js');
+const notificationStyles = require('./components-functions/notifications.js');
 
 coreFigmaFunctions
   .getComponentPages(
@@ -31,9 +32,10 @@ coreFigmaFunctions
     // await tabStyles.tabStyles(value);
     // await navbarStyles.navbarStyles(value);
     // await buttonStyles.buttonStyles(value);
-    // await avatarStyles.avatarStyles(value);
+    await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
-    await leftnavStyles.leftnavStyles(value);
+    // await leftnavStyles.leftnavStyles(value);
+    // await notificationStyles.notificationStyles(value);
   });
 
 // coreFigmaFunctions

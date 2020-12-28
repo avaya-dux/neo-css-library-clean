@@ -2414,7 +2414,7 @@ coreFigmaFunctions
     getLabelStyles(value);
     getSpinnerStyles();
     getTooltipStyles(value);
-    getCheckboxStyles(value);
+    // getCheckboxStyles(value);
     // radioStyles.radioStyles(value);
     // switchStyles.switchStyles(value);
     getInputGroupStyles(value);
@@ -2425,7 +2425,7 @@ coreFigmaFunctions
     getListGroupStyles(value);
     getModalStyles(value);
     getMenuStyles(value);
-    getNavbarStyles(value);
+    // getNavbarStyles(value);
     getNotificationStyles(value);
     getPopoverStyles(value);
     getTabStyles(value);
