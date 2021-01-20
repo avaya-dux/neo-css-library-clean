@@ -41,6 +41,7 @@ small {
 
 // Paragraphs
 p {
+  // color: $global-text-color;
   font-weight: normal;
   letter-spacing: 0.05px;
   margin-bottom: $global-spacer;
@@ -189,3 +190,9 @@ hr {
   font-size: $token-web-typography-web-large-body-font-size;
   line-height: $token-web-typography-web-large-body-line-height;
 }
+
+// element based text
+
+// #text {
+//   color: $global-text-color;
+// }

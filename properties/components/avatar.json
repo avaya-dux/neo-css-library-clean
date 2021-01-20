@@ -1,1 +1,64 @@
-{"avatar":{"small-size":{"value":"28px"},"background-color":{"value":"{color.blue/800.value}"},"font-color":{"value":"{color.base/0.value}"},"small-font-size":{"value":"{Web-typography.web/tiny body.fontSize.value}"},"small-letter-spacing":{"value":"{Web-typography.web/tiny body.letterSpacing.value}"},"small-line-height":{"value":"{Web-typography.web/tiny body.lineHeight.value}"},"medium-size":{"value":"36px"},"medium-font-size":{"value":"{Web-typography.web/body - regular.fontSize.value}"},"medium-letter-spacing":{"value":"{Web-typography.web/body - regular.letterSpacing.value}"},"medium-line-height":{"value":"{Web-typography.web/body - regular.lineHeight.value}"},"large-size":{"value":"48px"},"large-font-size":{"value":"{Web-typography.web/heading 4.fontSize.value}"},"large-letter-spacing":{"value":"{Web-typography.web/heading 4.letterSpacing.value}"},"large-line-height":{"value":"{Web-typography.web/heading 4.lineHeight.value}"},"border-width":{"value":"2px"},"border-style":{"value":"solid"},"border-primary-info":{"value":"{color.blue/500.value}"},"border-alert":{"value":"{color.red/500.value}"},"border-success":{"value":"{color.green/500.value}"},"border-warning":{"value":"{color.orange/500.value}"},"status-size-large":{"value":"20px"},"status-large-top":{"value":"1.25px"},"status-large-right":{"value":"1.25px"},"status-available-color":{"value":"{color.data viz/categorial/green.value}"},"status-size-small":{"value":"12px"},"status-small-top":{"value":"0.75px"},"status-small-right":{"value":"0.75px"},"status-away-color":{"value":"{color.data viz/categorial/orange.value}"},"status-busy-color":{"value":"{color.data viz/categorial/orange.value}"},"status-do not disturb-color":{"value":"{color.data viz/categorial/red.value}"},"status-offline-color":{"value":"{color.base/400.value}"},"status-size-medium":{"value":"16px"},"status-medium-top":{"value":"1px"},"status-medium-right":{"value":"1px"}}}
+{
+  "avatar": {
+    "small-size": { "value": "28px" },
+    "background-color": { "value": "{color.blue/800.value}" },
+    "font-color": { "value": "{color.base/0.value}" },
+    "small-font-size": {
+      "value": "{Web-typography.web/tiny body.fontSize.value}"
+    },
+    "small-letter-spacing": {
+      "value": "{Web-typography.web/tiny body.letterSpacing.value}"
+    },
+    "small-line-height": {
+      "value": "{Web-typography.web/tiny body.lineHeight.value}"
+    },
+    "medium-size": { "value": "36px" },
+    "medium-font-size": {
+      "value": "{Web-typography.web/body - regular.fontSize.value}"
+    },
+    "medium-letter-spacing": {
+      "value": "{Web-typography.web/body - regular.letterSpacing.value}"
+    },
+    "medium-line-height": {
+      "value": "{Web-typography.web/body - regular.lineHeight.value}"
+    },
+    "large-size": { "value": "48px" },
+    "large-font-size": {
+      "value": "{Web-typography.web/heading 4.fontSize.value}"
+    },
+    "large-letter-spacing": {
+      "value": "{Web-typography.web/heading 4.letterSpacing.value}"
+    },
+    "large-line-height": {
+      "value": "{Web-typography.web/heading 4.lineHeight.value}"
+    },
+    "border-width": { "value": "2px" },
+    "border-style": { "value": "solid" },
+    "border-primary-info": { "value": "{color.blue/500.value}" },
+    "border-alert": { "value": "{color.red/500.value}" },
+    "border-success": { "value": "{color.green/500.value}" },
+    "border-warning": { "value": "{color.orange/500.value}" },
+    "status-size-large": { "value": "20px" },
+    "status-large-top": { "value": "1.25px" },
+    "status-large-right": { "value": "1.25px" },
+    "status-available-color": {
+      "value": "{color.data viz/categorial/green.value}"
+    },
+    "status-size-small": { "value": "12px" },
+    "status-small-top": { "value": "0.75px" },
+    "status-small-right": { "value": "0.75px" },
+    "status-away-color": {
+      "value": "{color.data viz/categorial/orange.value}"
+    },
+    "status-busy-color": {
+      "value": "{color.data viz/categorial/orange.value}"
+    },
+    "status-do not disturb-color": {
+      "value": "{color.data viz/categorial/red.value}"
+    },
+    "status-offline-color": { "value": "{color.base/400.value}" },
+    "status-size-medium": { "value": "16px" },
+    "status-medium-top": { "value": "1px" },
+    "status-medium-right": { "value": "1px" }
+  }
+}

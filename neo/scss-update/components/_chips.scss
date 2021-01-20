@@ -1,127 +1,149 @@
 // // updated chip stylse
 
-@mixin chip-button {
-  .neo-btn:empty {
-    $chip-button-size: $chip-padding-y + $chip-line-height;
+// @mixin chip-button {
+//   .neo-btn:empty {
+//     $chip-button-size: $chip-padding-y + $chip-line-height;
 
-    color: inherit;
-    font-size: $global-font-size;
-    height: $global-font-size;
-    opacity: $chip-btn-opacity;
-    padding: 0;
-    transform: translateY(1px);
-    width: $global-font-size;
+//     color: inherit;
+//     font-size: $global-font-size;
+//     height: $global-font-size;
+//     opacity: $chip-btn-opacity;
+//     padding: 0;
+//     transform: translateY(1px);
+//     width: $global-font-size;
 
-    @include rtl-selector {
-      margin: {
-        left: -$chip-padding-x / 2;
-        right: $global-spacer-small;
-      }
-    }
-    margin: {
-      bottom: -$chip-padding-y;
-      left: $global-spacer-small;
-      right: -$chip-padding-x / 2;
-      top: -$chip-padding-y;
-    }
+//     @include rtl-selector {
+//       margin: {
+//         left: -$chip-padding-x / 2;
+//         right: $global-spacer-small;
+//       }
+//     }
+//     margin: {
+//       bottom: -$chip-padding-y;
+//       left: $global-spacer-small;
+//       right: -$chip-padding-x / 2;
+//       top: -$chip-padding-y;
+//     }
 
-    &:hover {
-      opacity: 1;
-    }
-  }
-}
+//     &:hover {
+//       opacity: 1;
+//     }
+//   }
+// }
 
 @mixin chip-colors() {
   // Add parent scope as argument
   $self: &;
 
-  @include chip-states($chip-bg-color, $self);
+  // @include chip-states($chip-bg-color, $self);
 
-  @each $name, $background-color in $neo-state-colors-light {
-    @if ($name == 'default') {
-      &--#{$name} {
-        color: $global-text-color;
-        // @include chip-states($background-color, $self);
-        background-color: $background-color;
-      }
-    } @else {
-      @if ($name != 'secondary') {
-        &--#{$name} {
-          color: $global-text-color;
-          // @include chip-states($background-color, $self);
-          background-color: $background-color;
-        }
-      }
-    }
-  }
-
-  @each $name, $color in $neo-hover-colors-light {
-    &--#{$name}:hover {
-      background-color: $color;
-    }
-  }
-
-  @each $name, $color in $neo-border-colors {
+  @each $name, $color in $neo-chip-colors {
     &--#{$name} {
-      border: 1px solid $color;
-      border-radius: 4px;
-    }
-  }
-
-  @each $name, $color in $neo-close-colors {
-    &--#{$name} .neo-close {
+      color: $chip-font-color;
+      // @include chip-states($background-color, $self);
       background-color: $color;
     }
   }
+
+  @each $name, $color in $neo-chip-hover-colors {
+    &--#{$name}:not(.neo-chip--static):hover,
+    &--#{$name}--selected {
+      transition: $chip-transition;
+      cursor: pointer;
+      background-color: $color;
+    }
+  }
+
+  @each $name, $color in $neo-chip-border-colors {
+    &--#{$name} {
+      border: $chip-border-width $chip-border-style $color;
+      border-radius: $chip-border-radius;
+    }
+  }
+
+  @each $name, $color in $neo-chip-icon-colors {
+    &--#{$name}::before,
+    &--#{$name}::after {
+      color: $color;
+      font-size: $chip-icon-size;
+    }
+    // &--#{$name} .neo-close {
+    //   background-color: $color;
+    // }
+  }
+
+  @each $name, $color in $neo-chip-disabled-colors {
+    &--#{$name}--disabled,
+    &--#{$name}--disabled:hover {
+      cursor: not-allowed !important;
+      color: $chip-disabled-font-color !important;
+      background-color: $color !important;
+    }
+  }
+
+  @each $name, $color in $neo-chip-disabled-icon-colors {
+    &--#{$name}--disabled::before,
+    &--#{$name}--disabled::after,
+    &--#{$name}--disabled:hover::before,
+    &--#{$name}--disabled:hover::after {
+      color: $color !important;
+    }
+  }
+
+  // &.neo-chip--disabled {
+  //   background: $chip-disabled-bg;
+  //   color: $chip-disabled-color;
+  //   cursor: not-allowed;
+  // }
 }
 
-@mixin chip-states($backgroundColor, $selector: '') {
-  background-color: $backgroundColor;
-}
-
-// @mixin chip-avatar {
-//   .neo-avatar {
-//     @include rtl-selector {
-//       margin: {
-//         left: $chip-btn-margin-left;
-//         right: -$global-spacer-small;
-//       }
-//     }
-//     margin: {
-//       left: -$chip-btn-margin-left;
-//       right: $global-spacer-small;
-//     }
-//   }
+// @mixin chip-states($backgroundColor, $selector: '') {
+//   background-color: $backgroundColor;
 // }
 
-@mixin chips-editable {
-  .neo-input--editable {
-    border: 0;
-    margin: 0 $chip-offset $chip-offset $chip-offset;
-    min-height: $chip-height;
-    min-width: auto;
-    padding: 0;
-  }
-
-  &:focus {
-    outline: none;
-  }
-}
-
-@mixin close {
-  > .neo-close {
+@mixin chip-avatar {
+  .neo-avatar {
     @include rtl-selector {
       margin: {
-        right: $global-spacer;
-        left: auto;
+        left: $chip-offset;
+        right: auto;
       }
     }
     margin: {
-      left: $global-spacer;
-      right: auto;
+      left: auto;
+      right: $chip-offset;
     }
   }
 }
+
+// @mixin chips-editable {
+//   .neo-input--editable {
+//     border: 0;
+//     margin: 0 $chip-offset $chip-offset $chip-offset;
+//     min-height: $chip-height;
+//     min-width: auto;
+//     padding: 0;
+//   }
+
+//   &:focus {
+//     outline: none;
+//   }
+// }
+
+// @mixin close {
+//   > .neo-close {
+//     @include rtl-selector {
+//       margin: {
+//         right: $global-spacer;
+//         left: auto;
+//       }
+//     }
+//     margin: {
+//       left: $global-spacer;
+//       right: auto;
+//     }
+//   }
+// }
 
 @mixin neo-chip-edit {
   &--edit {
@@ -135,48 +157,73 @@
   }
 }
 
-@mixin chip--disabled {
-  &--disabled {
-    &,
-    &:hover,
-    .neo-close,
-    .neo-close:hover {
-      background: $chip-disabled-bg;
-      color: $chip-disabled-color;
-      cursor: not-allowed;
-    }
-  }
+// @mixin chip--disabled {
+//   &--disabled {
+//     &,
+//     &:hover,
+//     .neo-close,
+//     .neo-close:hover {
+//       background: $chip-disabled-bg;
+//       color: $chip-disabled-color;
+//       cursor: not-allowed;
+//     }
+//   }
 
-  .neo-close:focus {
-    box-shadow: none;
-  }
-}
+//   .neo-close:focus {
+//     box-shadow: none;
+//   }
+// }
 
 %neo-chip {
-  @extend %label;
+  // @extend %label;
+
+  // min-width: $chip-width;
+  min-height: $chip-height;
 
   align-items: center;
-  border-radius: $chip-border-radius;
-  cursor: pointer;
+  // border-radius: $chip-border-radius;
   display: inline-flex;
   font-size: $chip-font-size;
+  font-weight: $chip-font-weight;
   line-height: $chip-line-height;
+  letter-spacing: $chip-letter-spacing;
   padding: $chip-padding-y $chip-padding-x;
-  transition: $chip-transition;
 
   &:focus {
     outline: none;
   }
+  &::before {
+    margin-right: $chip-offset;
+    margin-left: auto;
+    @include rtl-selector {
+      margin-right: auto;
+      margin-left: $chip-offset;
+    }
+  }
+  @include rtl-selector-element {
+    &::before {
+      margin-right: auto;
+      margin-left: $chip-offset;
+    }
+  }
+  &::after {
+    margin-left: $chip-offset;
+    margin-right: auto;
+    @include rtl-selector {
+      margin-left: auto;
+      margin-right: $chip-offset;
+    }
+  }
 
-  // @include chip-avatar;
-  @include chip-button;
-  @include close;
+  @include chip-avatar;
+  // @include chip-button;
+  // @include close;
 }
 
 // updated chips classes
 
 .neo-chips {
-  align-items: start;
+  align-items: center;
   border: 1px solid $chips-border-color;
   border-radius: $chips-border-radius;
   display: flex;
@@ -191,45 +238,62 @@
     }
   }
 
-  @include chips-editable;
+  // @include chips-editable;
 }
 
 .neo-chip {
   @extend %neo-chip;
   @include chip-colors();
-  @include chip--disabled;
+  // @include chip--disabled;
 
   &.neo-chip--expandable {
     &::after {
       font-family: 'updated-neo-icons';
-      margin-left: 6px;
-      margin-right: auto;
+      // margin-left: $chip-offset;
+      // margin-right: auto;
       content: $chip-expandable-icon;
-      @include rtl-selector {
-        margin-right: 6px;
-        margin-left: auto;
-      }
+      // @include rtl-selector {
+      //   margin-right: $chip-offset;
+      //   margin-left: auto;
+      // }
     }
-    @each $name, $color in $neo-close-colors {
-      &--#{$name}::after {
-        color: $color;
-      }
+    // @each $name, $color in $neo-close-colors {
+    //   &--#{$name}::after {
+    //     color: $color;
+    //   }
+    // }
+  }
+  &.neo-chip--close {
+    &::after {
+      font-family: 'updated-neo-icons';
+      // margin-left: $chip-offset;
+      // margin-right: auto;
+      content: $chip-close-icon;
+      // @include rtl-selector {
+      //   margin-right: $chip-offset;
+      //   margin-left: auto;
+      // }
     }
+    // @each $name, $color in $neo-close-colors {
+    //   &--#{$name}::after {
+    //     color: $color;
+    //   }
+    // }
   }
 }
 
 .neo-chips__item {
   @extend %neo-chip;
-  margin: 0 4px 0 0;
-
-  @include rtl-selector {
-    margin: {
-      left: $chip-offset;
-      right: 0;
+  margin: 0 0 0 0;
+  &:not(:last-child) {
+    margin-right: 4px;
+    @include rtl-selector {
+      margin-right: 0px;
+      margin-left: 4px;
     }
   }
 
   @include neo-chip-edit;
   @include chip-colors();
-  @include chip--disabled;
+  // @include chip--disabled;
 }

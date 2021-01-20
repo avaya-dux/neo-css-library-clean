@@ -1,4 +1,6 @@
 @mixin pulse($element, $name, $color: $token-color-base-500) {
+  // @debug $color;
+
   &.neo-pulse {
     animation: pulse--#{$element}-#{$name} 2s
       $token-interactivity-motion-ease-out infinite;

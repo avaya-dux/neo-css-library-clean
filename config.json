@@ -138,6 +138,15 @@
           }
         },
         {
+          "destination": "_chipVariants.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "chips"
+            }
+          }
+        },
+        {
           "destination": "_dropdown.scss",
           "format": "scss/variables",
           "filter": {
@@ -147,20 +156,11 @@
           }
         },
         {
-          "destination": "_input.scss",
+          "destination": "_inputs.scss",
           "format": "scss/variables",
           "filter": {
             "attributes": {
               "category": "input"
-            }
-          }
-        },
-        {
-          "destination": "_inputGroup.scss",
-          "format": "scss/variables",
-          "filter": {
-            "attributes": {
-              "category": "inputGroup"
             }
           }
         },
@@ -224,6 +224,15 @@
           "filter": {
             "attributes": {
               "category": "listSection"
+            }
+          }
+        },
+        {
+          "destination": "_listItems.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "listItems"
             }
           }
         },

@@ -2,6 +2,8 @@
 @import 'helpers';
 @import '../../build/scss/tokens.scss';
 
+/* Neo version 3.14.0   */
+
 // Variables
 //
 // Variables should follow the `$component-state-property` formula for consistent naming,
@@ -214,8 +216,19 @@ $link-hover-decoration: none !default;
 // Global
 //
 
+// global color variables
+
+:root {
+  --icon-color: #{$token-color-base-1000};
+  --global-font-color: #{$token-color-base-1000};
+}
+.dark {
+  --icon-color: #{$token-color-base-100};
+  --global-font-color: #{$token-color-base-100};
+}
+
 $global-background: $token-color-base-0 !default;
-$global-text-color: $token-color-base-1000 !default;
+$global-text-color: var(--global-font-color) !default;
 $global-text-inverse-color: $token-color-base-0 !default;
 $global-font-size: $token-web-typography-web-body-regular-font-size !default;
 $global-font-size-x-small: $token-web-typography-web-tiny-body-font-size !default;
@@ -223,6 +236,7 @@ $global-font-size-small: $token-web-typography-web-small-body-font-size !default
 $global-font-size-medium: 16px !default;
 $global-font-size-large: $token-web-typography-web-large-body-font-size !default;
 $global-font-size-x-large: 24px !default;
+$global-icon-color: var(--icon-color) !default;
 $global-spacer: 6px !default;
 $global-spacer-small: 3px !default;
 $global-spacer-large: 10px !default;
@@ -244,9 +258,18 @@ $global-disabled-bg: $token-color-base-100;
 
 // new typography variables
 
+// typography color variables
+
+:root {
+  --heading-color: #{$token-color-base-1000};
+}
+.dark {
+  --heading-color: #{$token-color-base-100};
+}
+
 $body-font-family: $token-web-typography-font-family !default;
 $body-line-height: $token-web-typography-web-body-regular-line-height !default;
-$heading-color: $token-color-base-1000;
+$heading-color: var(--heading-color);
 $heading-font-sizes: () !default;
 $heading-font-sizes: map-merge(
   (
@@ -330,77 +353,101 @@ $form-control-margin-bottom: $global-spacer-x-large !default;
 //           src/scss/elements/_input-hint.scss
 //
 
-$input-color-scale: 15% !default;
-$input-asterix-required-color: $token-input-label-required-asterix-color !default;
-$input-icon-size: 20px !default;
-$input-space-right: 30px !default;
+$input-asterix-color: $token-input-error-helper-color !default;
+// color-red-500
+@at-root [theme='dark'] {
+  $input-asterix-color: $token-color-red-400 !default;
+}
+
+// Input color variables
+$input-asterix-required-color: $input-asterix-color !default;
 $input-background-color: $global-background !default;
 $input-required-background: $global-background !default;
-$input-border-width: $token-input-border-width !default;
-$input-border-style: $token-input-border-style !default;
-$input-border-color: $token-color-base-400 !default;
-$input-focus-border-color: rgba(0, 102, 255, 0.5) !default;
+$input-border-color: $token-input-border-color !default;
+$input-focus-border-color: $token-input-border-active-color !default;
 $input-focus-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5) !default;
-$input-border-radius: 0 !default;
-$input-box-shadow: none !default;
-$input-height: 32px !default;
-$input-width: auto !default;
-$input-font-size: $token-input-filled-input-font-size !default;
-$input-font-color: $global-text-color !default;
-$input-line-height: $token-input-placeholder-line-height !default;
-$input-in-label-margin-top: $global-spacer-small !default;
-$input-placeholder-font-style: $token-input-placeholder-font-style !default;
-$input-padding-x: $global-spacer-large !default;
-$input-padding-y: $global-spacer !default;
-$input-rounded-border-radius: 0 !default;
-$input-group-addon-background-color: $token-input-group-addon-text-background-color !default;
-$input-group-icon-height: $input-height !default;
-$input-group-icon-padding: 30px !default;
-$input-group-icon-offset: 0 8px !default;
-$input-hint-font-size: $token-input-helper-font-size !default;
-$input-readonly-padding: $token-input-readonly-padding !default;
-$input-hint-margin-top: $global-spacer-small !default;
-$input-hint-muted-color: $token-input-helper-color !default;
-$input-disabled-bg: $token-input-disabled-background-color !default;
-$input-disabled-color: $token-input-disabled-filled-color !default;
+$input-font-color: $token-input-filled-color !default;
+$input-placeholder-font-color: $token-input-placeholder-color !default;
+$input-hint-color: $token-input-helper-color !default;
+$input-disabled-bg: $token-input-disabled-bg-color !default;
+$input-disabled-color: $token-input-disabled-text-color !default;
+$input-clear-button-color: $input-font-color !default;
 $input-state-color-map: () !default;
 $input-state-color-map: map-merge(
   (
     success: #939393,
-    error: $token-input-error-text-color,
+    error: $token-input-border-error-color,
   ),
   $input-state-color-map
 );
-$input-clear-button-color: $token-input-filled-close-button-color !default;
+
+$input-icon-size: $token-input-label-icon-size !default;
+$input-space-right: 30px !default;
+$input-border-width: $token-input-border-width !default;
+$input-border-style: $token-input-border-style !default;
+$input-border-radius: $token-input-border-radius !default;
+$input-box-shadow: none !default;
+$input-height: $token-input-min-height !default;
+$input-width: auto !default;
+$input-font-size: $token-input-filled-font-size !default;
+$input-line-height: $token-input-filled-line-height !default;
+$input-letter-spacing: $token-input-filled-letter-spacing !default;
+$input-in-label-margin-top: $token-input-vertical-margin !default;
+$input-hint-margin-top: $global-spacer-small !default;
+$input-placeholder-font-style: $token-input-placeholder-font-style !default;
+$input-placeholder-font-size: $token-input-placeholder-font-size !default;
+$input-placeholder-letter-spacing: $token-input-placeholder-letter-spacing !default;
+$input-placeholder-line-height: $token-input-placeholder-line-height !default;
+$input-padding-x: $token-input-padding-x !default;
+$input-padding-y: $token-input-padding-y !default;
+$input-rounded-border-radius: 0 !default;
+$input-group-icon-height: $input-height !default;
+$input-group-icon-padding: 30px !default;
+$input-group-icon-offset: 0 8px !default;
+$input-hint-font-size: $token-input-helper-font-size !default;
+$input-hint-font-weight: $token-input-helper-font-weight !default;
+$input-hint-line-height: $token-input-helper-line-height !default;
+$input-hint-letter-spacing: $token-input-helper-letter-spacing !default;
 
 //
 // Element name: Select
 // Location: src/scss/elements/_select.scss
 //
 
+// Select color variables
+// --
+// --
+
 $select-transition: 0.25s all ease !default;
-$select-font-color: $input-font-color !default;
 $select-background-color: $input-background-color !default;
-$select-border-color: $token-dropdown-border-color !default;
-$select-border-style: $token-dropdown-border-style !default;
-$select-border-width: $token-dropdown-border-width !default;
+$select-border-color: $input-border-color !default;
+$select-border-style: $input-border-style !default;
+$select-border-width: $input-border-width !default;
 $select-border-radius: $input-border-radius !default;
 $select-box-shadow: $input-box-shadow !default;
-$select-font-size: $token-dropdown-text-font-size !default;
-$select-line-height: $token-dropdown-text-line-height !default;
-$select-height: $token-dropdown-height !default;
-$select-width: $token-dropdown-width !default;
-$select-arrow-icon: $token-dropdown-icon !default;
-$select-icon-height: 16px !default;
-$select-icon-width: $select-icon-height !default;
-$select-offset-x: $select-icon-height * 2 !default;
-$select-padding-x: $select-icon-height / 2 !default;
+//
+$select-font-color: $input-font-color !default;
+$select-font-size: $input-font-size !default;
+$select-line-height: $input-line-height !default;
+$select-letter-spacing: $input-letter-spacing !default;
+//
+$select-height: $token-input-min-height !default;
+$select-width: auto !default;
+// $select-arrow-icon: $token-dropdown-icon !default;
+// $select-icon-height: 16px !default;
+// $select-icon-width: $select-icon-height !default;
+$select-icon-font-size: $input-icon-size !default;
+$select-offset-x: $select-icon-font-size * 2 !default;
+//
+$select-padding-x: $input-padding-x !default;
 $select-padding-y: $input-padding-y !default;
 $select-padding-right: $token-dropdown-padding-right !default;
-$select-padding-left: $token-dropdown-padding-left !default;
-$select-disabled-color: $token-dropdown-disabled-color !default;
-$select-disabled-bg: $token-dropdown-disabled-background-color !default;
-$select-hover-bg: $token-dropdown-hover !default;
+$select-padding-left: $input-padding-x !default;
+$select-vertical-margin: $token-input-vertical-margin !default;
+//
+$select-disabled-color: $input-disabled-color !default;
+$select-disabled-bg: $input-disabled-bg !default;
+// $select-hover-bg: $token-dropdown-hover !default;
 $select-table-page-show-width: $token-table-pagination-count-select-width !default;
 $select-expand-icon: $token-icons-neo-icon-chevron-down !default;
 $select-multiple-selected-icon: $token-icons-neo-icon-accept !default;
@@ -487,48 +534,133 @@ $button-box-shadow: $token-shadows-elevation-200-x-offset
   $token-shadows-elevation-200-y-offset $token-shadows-elevation-200-radius
   $token-shadows-elevation-200-color !default;
 //
-$button-text-color: $token-button-font-color !default;
+$button-text-color: var(--button-text-color) !default;
 $button-secondary-border-width: $token-button-border-width !default;
 $button-secondary-border-style: $token-button-border-style !default;
-$button-secondary-background-color: $token-button-secondary-background-color !default;
-$button-tertiary-hover-background-color: $token-button-tertiary-hover-background-color !default;
+$button-secondary-background-color: var(
+  --button-secondary-background-color
+) !default;
+$button-tertiary-hover-background-color: var(
+  --button-tertiary-hover-background-color
+) !default;
 $button-circular-size: $token-button-circle-button-size !default;
 $button-circle-icon-size: $token-button-circle-icon-size !default;
 $button-square-size: $token-button-square-button-size !default;
 $button-square-icon-size: $token-button-square-icon-size !default;
 
+// pseudo code here
+
+// $button-primary-color: $token-button-default-info-color
+// *[theme="dark"] {
+//  $button-primary-color: <<the dark color>>
+// }
+
+// Button color variables
+
+$button-color-primary-rgb-light: 20, 115, 230;
+$button-color-primary-rgb-dark: 76, 148, 237;
+$button-color-success-rgb-light: 8, 138, 8;
+$button-color-success-rgb-dark: 81, 166, 81;
+$button-color-warning-rgb-light: 204, 77, 27;
+$button-color-warning-rgb-dark: 247, 97, 37;
+$button-color-alert-rgb-light: 217, 61, 50;
+$button-color-alert-rgb-dark: 229, 105, 96;
+
+:root {
+  --button-text-color: #{$token-button-font-color};
+  --button-color-primary: #{$token-button-default-info-color};
+  --button-color-primary-rgb: #{$button-color-primary-rgb-light};
+  --button-hover-color-default-info: #{$token-color-blue-600};
+  --button-pressed-color-default-info: #{$token-button-default-info-pressed-color};
+  --button-disabled-color-default-info: #{$token-button-default-info-disabled-color};
+  --button-color-success: #{$token-button-success-color};
+  --button-color-success-rgb: #{$button-color-success-rgb-light};
+  --button-hover-color-success: #{$token-color-green-600};
+  --button-pressed-color-success: #{$token-button-success-pressed-color};
+  --button-disabled-color-success: #{$token-button-success-disabled-color};
+  --button-color-warning: #{$token-button-warning-color};
+  --button-color-warning-rgb: #{$button-color-warning-rgb-light};
+  --button-hover-color-warning: #{$token-color-orange-600};
+  --button-pressed-color-warning: #{$token-button-warning-pressed-color};
+  --button-disabled-color-warning: #{$token-button-warning-disabled-color};
+  --button-color-alert: #{$token-button-alert-color};
+  --button-color-alert-rgb: #{$button-color-alert-rgb-light};
+  --button-hover-color-alert: #{$token-color-red-600};
+  --button-pressed-color-alert: #{$token-button-alert-pressed-color};
+  --button-disabled-color-alert: #{$token-button-alert-disabled-color};
+  --button-secondary-background-color: #{$token-button-secondary-background-color};
+  --button-tertiary-hover-background-color: #{$token-color-base-100};
+}
+.dark {
+  --button-text-color: #{$token-color-base-900};
+  --button-color-primary: #{$token-color-blue-400};
+  --button-color-primary-rgb: #{$button-color-primary-rgb-dark};
+  --button-hover-color-default-info: #{$token-color-blue-200};
+  --button-pressed-color-default-info: #{$token-color-blue-100};
+  --button-disabled-color-default-info: #{$token-color-blue-600};
+  --button-color-success: #{$token-color-green-400};
+  --button-color-success-rgb: #{$button-color-success-rgb-dark};
+  --button-hover-color-success: #{$token-color-green-200};
+  --button-pressed-color-success: #{$token-color-green-100};
+  --button-disabled-color-success: #{$token-color-green-600};
+  --button-color-warning: #{$token-color-orange-400};
+  --button-color-warning-rgb: #{$button-color-warning-rgb-dark};
+  --button-hover-color-warning: #{$token-color-orange-200};
+  --button-pressed-color-warning: #{$token-color-orange-100};
+  --button-disabled-color-warning: #{$token-color-orange-600};
+  --button-color-alert: #{$token-color-red-400};
+  --button-color-alert-rgb: #{$button-color-alert-rgb-dark};
+  --button-hover-color-alert: #{$token-color-red-200};
+  --button-pressed-color-alert: #{$token-color-red-100};
+  --button-disabled-color-alert: #{$token-color-red-600};
+  --button-secondary-background-color: #{$token-color-base-900};
+  --button-tertiary-hover-background-color: #{$token-color-base-800};
+}
+
 $button-states: () !default;
 $button-states: map-merge(
   (
     primary: (
-      color: $token-button-default-info-color,
-      hover-color: $token-button-default-info-hover-color,
-      disabled-color: $token-button-default-info-disabled-color,
+      color: var(--button-color-primary),
+      color-rgb: var(--button-color-primary-rgb),
+      hover-color: var(--button-hover-color-default-info),
+      pressed-color: var(--button-pressed-color-default-info),
+      disabled-color: var(--button-disabled-color-default-info),
     ),
     default: (
-      color: $token-button-default-info-color,
-      hover-color: $token-button-default-info-hover-color,
-      disabled-color: $token-button-default-info-disabled-color,
+      color: var(--button-color-primary),
+      color-rgb: var(--button-color-primary-rgb),
+      hover-color: var(--button-hover-color-default-info),
+      pressed-color: var(--button-pressed-color-default-info),
+      disabled-color: var(--button-disabled-color-default-info),
     ),
     success: (
-      color: $token-button-success-color,
-      hover-color: $token-button-success-hover-color,
-      disabled-color: $token-button-success-disabled-color,
+      color: var(--button-color-success),
+      color-rgb: var(--button-color-success-rgb),
+      hover-color: var(--button-hover-color-success),
+      pressed-color: var(--button-pressed-color-success),
+      disabled-color: var(--button-disabled-color-success),
     ),
     warning: (
-      color: $token-button-warning-color,
-      hover-color: $token-button-warning-hover-color,
-      disabled-color: $token-button-warning-disabled-color,
+      color: var(--button-color-warning),
+      color-rgb: var(--button-color-warning-rgb),
+      hover-color: var(--button-hover-color-warning),
+      pressed-color: var(--button-pressed-color-warning),
+      disabled-color: var(--button-disabled-color-warning),
     ),
     alert: (
-      color: $token-button-alert-color,
-      hover-color: $token-button-alert-hover-color,
-      disabled-color: $token-button-alert-disabled-color,
+      color: var(--button-color-alert),
+      color-rgb: var(--button-color-alert-rgb),
+      hover-color: var(--button-hover-color-alert),
+      pressed-color: var(--button-pressed-color-alert),
+      disabled-color: var(--button-disabled-color-alert),
     ),
     info: (
-      color: $token-button-default-info-color,
-      hover-color: $token-button-default-info-hover-color,
-      disabled-color: $token-button-default-info-disabled-color,
+      color: var(--button-color-primary),
+      color-rgb: var(--button-color-primary-rgb),
+      hover-color: var(--button-hover-color-default-info),
+      pressed-color: var(--button-pressed-color-default-info),
+      disabled-color: var(--button-disabled-color-default-info),
     ),
   ),
   $button-states
@@ -552,27 +684,54 @@ $arrow-color: $global-background;
 // Location: src/scss/elements/_check.scss
 //
 
+// Checkbox color variables
+
+:root {
+  --checkbox-background-color: #{$token-checkbox-unchecked-bg-color};
+  --checkbox-checked-background-color: #{$token-checkbox-checked-bg-color};
+  --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
+  --checkbox-icon-color: #{$token-checkbox-icon-color};
+  --checkbox-font-color: #{$token-checkbox-label-font-color};
+  --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+  --checkbox-border-color: #{$token-checkbox-border-color};
+  --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
+}
+.dark {
+  --checkbox-background-color: #{$token-color-base-900};
+  --checkbox-checked-background-color: #{$token-color-blue-400};
+  --checkbox-disabled-background-color: #{$token-color-blue-600};
+  --checkbox-icon-color: #{$token-color-base-900};
+  --checkbox-font-color: #{$token-color-base-100};
+  --checkbox-disabled-font-color: #{$token-color-base-500};
+  --checkbox-border-color: #{$token-color-blue-400};
+  --checkbox-disabled-border-color: #{$token-color-blue-600};
+}
+
 $checkbox-size: $token-checkbox-size !default;
-$checkbox-background: $token-checkbox-unchecked-bg-color !default;
-$checkbox-checked-background: $token-checkbox-checked-bg-color !default;
-$checkbox-disabled-background: $token-checkbox-disabled-bg-color !default;
+$checkbox-background: var(--checkbox-background-color) !default;
+$checkbox-checked-background: var(--checkbox-checked-background-color) !default;
+$checkbox-disabled-background: var(
+  --checkbox-disabled-background-color
+) !default;
 $checkbox-icon-font-size: $token-checkbox-icon-font-size !default;
 $checkbox-icon-width: 6px !default;
 $checkbox-icon-height: 9px !default;
-$checkbox-icon-color: $token-checkbox-icon-color !default;
+$checkbox-icon-color: var(--checkbox-icon-color) !default;
 $checkbox-label-indent: $token-checkbox-label-indent !default;
 $checkbox-font-size: $token-checkbox-font-size !default;
-$checkbox-color: $token-checkbox-icon-color !default;
+$checkbox-color: var(--checkbox-icon-color) !default;
 $checkbox-checked-icon: $token-icons-neo-icon-accept !default;
 $checkbox-indeterminate-icon: $token-icons-neo-icon-minus !default;
 $checkbox-border-radius: $token-checkbox-border-radius !default;
 $checkbox-label-font-weight: $token-checkbox-font-weight !default;
 $checkbox-label-line-height: $token-checkbox-line-height !default;
-$checkbox-label-font-color: $token-checkbox-label-font-color !default;
+$checkbox-label-font-color: var(--checkbox-font-color) !default;
 $checkbox-label-letter-spacing: $token-checkbox-letter-spacing !default;
-$checkbox-label-disabled-font-color: $token-checkbox-label-disabled-font-color !default;
-$checkbox-border-color: $token-checkbox-border-color !default;
-$checkbox-disabled-border-color: $token-checkbox-disabled-border-color !default;
+$checkbox-label-disabled-font-color: var(
+  --checkbox-disabled-font-color
+) !default;
+$checkbox-border-color: var(--checkbox-border-color) !default;
+$checkbox-disabled-border-color: var(--checkbox-disabled-border-color) !default;
 $checkbox-border-style: $token-checkbox-border-style !default;
 $checkbox-border-width: $token-checkbox-border-width !default;
 
@@ -591,7 +750,7 @@ $label-padding-y: $global-spacer !default;
 $label-padding-x: $global-spacer-large !default;
 $label-spacing: 0 !default;
 $label-radius: $global-radius !default;
-$label-margin-bottom: $token-input-label-spacing !default;
+$label-margin-bottom: $input-in-label-margin-top !default;
 
 //
 // Element name: Notification
@@ -686,6 +845,17 @@ $neo-icon-colors: map-merge(
 // $notification-counter-font-size: $global-font-size !default;
 // $notification-opacity: 0.8 !default;
 
+// close color variables
+
+:root {
+  --clear-close-color: #{$token-color-base-500};
+  --clear-close-hover-color: #{$token-color-base-1000};
+}
+.dark {
+  --clear-close-color: #{$token-color-base-400};
+  --clear-close-hover-color: #{$token-color-base-100};
+}
+
 $close-types: () !default;
 $close-types: map-merge(
   (
@@ -697,8 +867,8 @@ $close-types: map-merge(
     clear: (
       background-color: transparent,
       hover-background-color: transparent,
-      color: $token-color-base-500,
-      hover-color: black,
+      color: var(--clear-close-color),
+      hover-color: var(--clear-close-hover-color),
     ),
   ),
   $close-types
@@ -825,12 +995,21 @@ $group-list-section-padding: $token-list-section-padding !default;
 $group-list-section-background: $token-color-base-100;
 $group-list-section-action-padding: $token-list-section-action-padding !default;
 
-$list-vertical-padding: $token-list-vertical-padding !default;
-$list-horizontal-padding: $token-list-horizontal-padding !default;
-$list-margin-right: $token-list-margin-right !default;
-$list-min-width: $token-list-min-width !default;
-$list-min-height: $token-list-min-height !default;
-$list-divider: $token-list-divider !default;
+// $list-vertical-padding: $token-list-vertical-padding !default;
+// $list-horizontal-padding: $token-list-horizontal-padding !default;
+// $list-margin-right: $token-list-margin-right !default;
+// $list-min-width: $token-list-min-width !default;
+// $list-min-height: $token-list-min-height !default;
+// $list-divider: $token-list-divider !default;
+
+// list items
+
+$list-item-vertical-padding: $token-list-items-vertical-padding !default;
+$list-item-horizontal-padding: $token-list-items-horizontal-padding !default;
+$list-item-margin-right: $token-list-items-margin-right !default;
+$list-item-min-width: $token-list-items-min-width !default;
+$list-item-min-height: $token-list-items-min-height !default;
+$list-item-divider: $token-list-items-divider !default;
 
 //
 // Component name: Accordion
@@ -854,12 +1033,21 @@ $accordion-contracted-icon: $token-icons-neo-icon-chevron-up !default;
 // Location: src/scss/components/_sheet.scss
 //
 
+// Sheet color variables
+
+:root {
+  --sheet-background: #{$token-color-base-0};
+}
+.dark {
+  --sheet-background: #{$token-color-base-900};
+}
+
 $sheet-width: $token-sheet-width !default;
 $sheet-min-height: $token-sheet-min-height !default;
 $sheet-padding: $token-sheet-padding !default;
-$sheet-transition: $token-interactivity-motion-fade-slow
-  $token-interactivity-motion-ease-in !default;
-$sheet-background: $token-color-base-0 !default;
+$sheet-transition-duration: $token-interactivity-motion-fade-slow !default;
+$sheet-transition-timing-function: $token-interactivity-motion-ease-in !default;
+$sheet-background: var(--sheet-background) !default;
 $sheet-shadow: $token-shadows-elevation-300-x-offset
   $token-shadows-elevation-300-y-offset $token-shadows-elevation-300-radius
   $token-shadows-elevation-300-color !default;
@@ -927,14 +1115,34 @@ $image-thumbnail-border-radius: $global-radius !default;
 // Location: src/scss/components/_avatar.scss
 //
 
+// Avatar color variables
+
+:root {
+  --avatar-background-color: #{$token-avatar-background-color};
+  --avatar-font-color: #{$token-avatar-font-color};
+  --avatar-primary-color: #{$token-avatar-border-primary-info};
+  --avatar-success-color: #{$token-avatar-border-success};
+  --avatar-warning-color: #{$token-avatar-border-warning};
+  --avatar-alert-color: #{$token-avatar-border-warning};
+  // --avatar-status-available-color: #{$token-avatar-status-available-color};
+}
+
+.dark {
+  --avatar-background-color: #{$token-color-blue-100};
+  --avatar-font-color: #{$token-color-base-900};
+  --avatar-primary-color: #{$token-color-blue-400};
+  --avatar-success-color: #{$token-color-green-400};
+  --avatar-warning-color: #{$token-color-orange-400};
+  --avatar-alert-color: #{$token-color-red-400};
+}
 //sizes
 $avatar-medium-size: $token-avatar-medium-size !default;
 $avatar-small-size: $token-avatar-small-size !default;
 $avatar-large-size: $token-avatar-large-size !default;
 // background color
-$avatar-background-color: $token-avatar-background-color !default;
+$avatar-background-color: var(--avatar-background-color) !default;
 //fonts
-$avatar-font-color: $token-avatar-font-color !default;
+$avatar-font-color: var(--avatar-font-color) !default;
 $avatar-small-font-size: $token-avatar-small-font-size !default;
 $avatar-medium-font-size: $token-avatar-medium-font-size !default;
 $avatar-large-font-size: $token-avatar-large-font-size !default;
@@ -1051,26 +1259,184 @@ $switch-ellipse-box-shadow: $token-switch-ellipse-box-shadow !default;
 
 $chips-border-color: $input-border-color !default;
 $chips-border-radius: $token-chip-border-radius !default;
+$chips-border-radius: $token-chips-border-radius !default;
 $chip-transition: background-color $global-transition-duration ease-in-out !default;
-$chip-bg-color-lightness-scale: 60 !default;
-$chip-bg-color: var-color-name(button-secondary-bg) !default;
-$chip-color-dark: $token-chip-default-color !default;
-$chip-color-light: $token-chip-stateful-color !default;
-$chip-bg-color-selected: darken-var($chip-bg-color, 10%) !default;
-$chip-height: $token-chip-editable-height !default;
-$chip-width: $token-chip-editable-width !default;
-$chip-offset: ($input-height - $chip-height) / 2 - 1 !default;
+// $chip-bg-color-lightness-scale: 60 !default;
+// $chip-bg-color: var-color-name(button-secondary-bg) !default;
+// $chip-color-dark: $token-chip-default-color !default;
+// $chip-color-light: $token-chip-stateful-color !default;
+// $chip-bg-color-selected: darken-var($chip-bg-color, 10%) !default;
+
+// $chip-height: $token-chip-editable-height !default;
+$chip-height: $token-chips-min-height !default;
+
+// $chip-width: $token-chip-editable-width !default;
+$chip-width: $token-chips-min-width !default;
+
+// $chip-offset: ($input-height - $chip-height) / 2 - 1 !default;
+$chip-offset: $token-chips-item-spacing !default;
+
+$chip-font-color: $token-chips-font-color !default;
+$chip-disabled-font-color: $token-chips-disabled-font-color !default;
+// $chip-font-size: $token-chip-font-size !default;
 $chip-font-size: $token-chip-font-size !default;
-$chip-border-radius: $global-radius !default;
-$chip-line-height: $token-chip-line-height !default;
-$chip-padding-x: 8px !default;
-$chip-padding-y: 4px !default;
+$chip-font-weight: $token-chips-font-weight !default;
+// $chip-line-height: $token-chip-line-height !default;
+$chip-line-height: $token-chips-line-height !default;
+$chip-letter-spacing: $token-chips-letter-spacing !default;
+
+$chip-icon-size: $token-chips-icon-size !default;
+
+// $chip-border-radius: $global-radius !default;
+$chip-border-radius: $token-chips-border-radius !default;
+
+// $chip-padding-x: 8px !default;
+$chip-padding-x: $token-chips-padding-x !default;
+// $chip-padding-y: 4px !default;
+$chip-padding-y: $token-chips-padding-y !default;
+
 $chip-btn-margin-left: $global-spacer !default;
 $chip-btn-opacity: 0.4 !default;
 $chip-disabled-bg: $global-disabled-bg !default;
 $chip-disabled-color: $global-disabled-color !default;
+
+$chip-border-width: $token-chips-border-width !default;
+$chip-border-style: $token-chips-border-style !default;
+
+// icon tokens
 // chevron-down
 $chip-expandable-icon: $token-icons-neo-icon-chevron-down !default;
+// close
+$chip-close-icon: $token-icons-neo-icon-close !default;
+
+// Chip color variables
+
+:root {
+  --chip-default-color: #{$token-chips-default-bg-color};
+  --chip-default-border-color: #{$token-chips-default-border-color};
+  --chip-default-hover-bg-color: #{$token-chips-default-hover-bg-color};
+  --chip-default-icon-color: #{$token-chips-default-icon-color};
+  --chip-default-disabled-color: #{$token-chips-default-disabled-bg-color};
+  --chip-default-disabled-icon-color: #{$token-chips-default-disabled-icon-color};
+  --chip-success-color: #{$token-chips-success-bg-color};
+  --chip-success-border-color: #{$token-chips-success-border-color};
+  --chip-success-hover-bg-color: #{$token-chips-success-hover-bg-color};
+  --chip-success-icon-color: #{$token-chips-success-icon-color};
+  --chip-success-disabled-color: #{$token-chips-success-disabled-bg-color};
+  --chip-success-disabled-icon-color: #{$token-chips-success-disabled-icon-color};
+  --chip-warning-color: #{$token-chips-warning-bg-color};
+  --chip-warning-border-color: #{$token-chips-warning-border-color};
+  --chip-warning-hover-bg-color: #{$token-chips-warning-hover-bg-color};
+  --chip-warning-icon-color: #{$token-chips-warning-icon-color};
+  --chip-warning-disabled-color: #{$token-chips-warning-disabled-bg-color};
+  --chip-warning-disabled-icon-color: #{$token-chips-warning-disabled-icon-color};
+  --chip-alert-color: #{$token-chips-alert-bg-color};
+  --chip-alert-border-color: #{$token-chips-alert-border-color};
+  --chip-alert-hover-bg-color: #{$token-chips-alert-hover-bg-color};
+  --chip-alert-icon-color: #{$token-chips-alert-icon-color};
+  --chip-alert-disabled-color: #{$token-chips-alert-disabled-bg-color};
+  --chip-alert-disabled-icon-color: #{$token-chips-alert-disabled-icon-color};
+}
+.dark {
+  --chip-default-color: #{$token-color-base-800};
+  --chip-default-border-color: #{$token-color-base-500};
+  --chip-default-hover-bg-color: #{$token-color-base-600};
+  --chip-default-icon-color: #{$token-color-base-200};
+  --chip-default-disabled-color: #{$token-color-base-800};
+  --chip-default-disabled-icon-color: #{$token-color-base-500};
+  --chip-success-color: #{$token-color-green-800};
+  --chip-success-border-color: #{$token-color-green-500};
+  --chip-success-hover-bg-color: #{$token-color-green-600};
+  --chip-success-icon-color: #{$token-color-green-200};
+  --chip-success-disabled-color: #{$token-color-green-800};
+  --chip-success-disabled-icon-color: #{$token-color-green-500};
+  --chip-warning-color: #{$token-color-orange-800};
+  --chip-warning-border-color: #{$token-color-orange-500};
+  --chip-warning-hover-bg-color: #{$token-color-orange-600};
+  --chip-warning-icon-color: #{$token-color-orange-200};
+  --chip-warning-disabled-color: #{$token-color-orange-800};
+  --chip-warning-disabled-icon-color: #{$token-color-orange-500};
+  --chip-alert-color: #{$token-color-red-800};
+  --chip-alert-border-color: #{$token-color-red-500};
+  --chip-alert-hover-bg-color: #{$token-color-red-600};
+  --chip-alert-icon-color: #{$token-color-red-200};
+  --chip-alert-disabled-color: #{$token-color-red-800};
+  --chip-alert-disabled-icon-color: #{$token-color-red-500};
+}
+
+// Figma Chip variant colour maps
+
+$neo-chip-colors: () !default;
+$neo-chip-colors: map-merge(
+  (
+    default: var(--chip-default-color),
+    success: var(--chip-success-color),
+    warning: var(--chip-warning-color),
+    alert: var(--chip-alert-color),
+    info: var(--chip-default-color),
+  ),
+  $neo-chip-colors
+);
+
+$neo-chip-border-colors: () !default;
+$neo-chip-border-colors: map-merge(
+  (
+    default: var(--chip-default-border-color),
+    success: var(--chip-success-border-color),
+    warning: var(--chip-warning-border-color),
+    alert: var(--chip-alert-border-color),
+    info: var(--chip-default-border-color),
+  ),
+  $neo-chip-border-colors
+);
+
+$neo-chip-hover-colors: () !default;
+$neo-chip-hover-colors: map-merge(
+  (
+    default: var(--chip-default-hover-bg-color),
+    success: var(--chip-success-hover-bg-color),
+    warning: var(--chip-warning-hover-bg-color),
+    alert: var(--chip-alert-hover-bg-color),
+    info: var(--chip-default-hover-bg-color),
+  ),
+  $neo-chip-hover-colors
+);
+
+$neo-chip-icon-colors: () !default;
+$neo-chip-icon-colors: map-merge(
+  (
+    default: var(--chip-default-icon-color),
+    success: var(--chip-success-icon-color),
+    warning: var(--chip-warning-icon-color),
+    alert: var(--chip-alert-icon-color),
+    info: var(--chip-default-icon-color),
+  ),
+  $neo-chip-icon-colors
+);
+
+$neo-chip-disabled-colors: () !default;
+$neo-chip-disabled-colors: map-merge(
+  (
+    default: var(--chip-default-disabled-color),
+    success: var(--chip-success-disabled-color),
+    warning: var(--chip-warning-disabled-color),
+    alert: var(--chip-alert-disabled-color),
+    info: var(--chip-default-disabled-color),
+  ),
+  $neo-chip-disabled-colors
+);
+
+$neo-chip-disabled-icon-colors: () !default;
+$neo-chip-disabled-icon-colors: map-merge(
+  (
+    default: var(--chip-default-disabled-icon-color),
+    success: var(--chip-success-disabled-icon-color),
+    warning: var(--chip-warning-disabled-icon-color),
+    alert: var(--chip-alert-disabled-icon-color),
+    info: var(--chip-default-disabled-icon-color),
+  ),
+  $neo-chip-disabled-icon-colors
+);
 
 // Component name: Tab
 // Location: src/scss/components/_tabs.scss
@@ -1078,20 +1444,20 @@ $chip-expandable-icon: $token-icons-neo-icon-chevron-down !default;
 
 $tab-offset: $global-spacer !default;
 $tab-container-margin: 0 6px !default;
-$tab-border-bottom-color: $token-tabs-border-bottom-color !default;
+// $tab-border-bottom-color: $token-tabs-border-bottom-color !default;
 $tab-transition: transform 0.5s ease !default;
 $tab-padding-default: 8px 16px 0px 16px !default;
-$tab-padding-small: 6px 25px !default;
-$tab-padding-medium: 10px 30px !default;
-$tab-padding-large: 15px 45px !default;
+// $tab-padding-small: 6px 25px !default;
+// $tab-padding-medium: 10px 30px !default;
+// $tab-padding-large: 15px 45px !default;
 $tab-min-height-default: 54px !default;
-$tab-min-height-small: 35px !default;
-$tab-min-height-medium: 44px !default;
-$tab-min-height-large: $tab-min-height-default !default;
-$tab-action-color: $token-tabs-color !default;
-$tab-action-border-bottom-width: $token-tabs-border-bottom-width !default;
-$tab-action-active-color: $token-tabs-color !default;
-$tab-action-active-border-color: $token-tabs-color !default;
+// $tab-min-height-small: 35px !default;
+// $tab-min-height-medium: 44px !default;
+// $tab-min-height-large: $tab-min-height-default !default;
+$tab-action-color: $token-tabs-active-color !default;
+$tab-action-border-bottom-width: $token-tabs-border-width !default;
+$tab-action-active-color: $token-tabs-active-color !default;
+$tab-action-active-border-color: $token-tabs-active-color !default;
 $tab-action-disabled-color: $token-color-base-100 !default;
 $tab-action-line-height: $token-tabs-line-height !default;
 $tab-action-padding-default: 15px 15px !default;
@@ -1106,7 +1472,7 @@ $tab-bordered-border-radius: $global-radius !default;
 $tab-bordered-bg-color: $global-disabled-bg !default;
 $tab-bordered-active-bg-color: transparent !default;
 $tab-bordered-active-border-color: $global-border-color-darker !default;
-$tab-bordered-active-border-bottom-color: $token-tabs-color !default;
+$tab-bordered-active-border-bottom-color: $token-tabs-active-color !default;
 $tab-bordered-disabled-bg-color: rgba(
   $tab-bordered-bg-color,
   $global-opacity
@@ -1117,7 +1483,7 @@ $tab-vertical-item-width: 120px !default;
 $tab-vertical-item-max-height: 42px !default;
 $tab-vertical-line-height: 22px !default;
 $tab-vertical-item-padding: $global-spacer !default;
-$tab-disabled-color: $token-tabs-disabled-background-color !default;
+$tab-disabled-color: $token-tabs-disabled-color !default;
 $tab-disabled-bg-color: transparent !default;
 $tab-item-hover-color: $token-color-blue-600;
 $tab-item-max-height: 35px;
@@ -1373,8 +1739,19 @@ $modal-menu-active-border-color: $token-color-blue-500 !default;
 // Location: src/scss/elements/_badge.scss
 //
 
+// badge color variables
+
+:root {
+  --badge-color: #{$token-badge-color};
+  --badge-background-color: #{$token-badge-background-color};
+}
+.dark {
+  --badge-background-color: #{$token-color-red-400};
+  --badge-color: #{$token-color-base-800};
+}
+
 $badge-font-size: $token-badge-font-size !default;
-$badge-background-color: $token-badge-background-color !default;
-$badge-color: $token-badge-color !default;
+$badge-background-color: var(--badge-background-color) !default;
+$badge-color: var(--badge-color) !default;
 $badge-offset: 65% !default;
 $badge-padding: $token-badge-padding !default;

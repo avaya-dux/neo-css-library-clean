@@ -219,6 +219,72 @@
     }
   }
 
+  &__content--left {
+    left: auto !important;
+    right: 0 !important;
+  }
+
+  &__content--right {
+    left: 0 !important;
+    right: auto !important;
+  }
+
+  // this doesn't work as we need the dropdowns to function independently of each other
+
+  &__content--left-nested {
+    left: auto !important;
+    right: 100% !important;
+  }
+
+  &__content--right-nested {
+    left: 100% !important;
+    right: auto !important;
+  }
+
+  // &__content--right {
+  //   // left: auto !important;
+  //   right: auto !important;
+  //   // top: -1px !important;
+  // }
+
+  // &__content--right > &__content--right {
+  //   left: 100% !important;
+  //   right: auto !important;
+  //   top: -1px !important;
+  // }
+
+  // &--left &__content {
+  //   left: auto;
+  //   right: 100%;
+
+  //   @include rtl-selector {
+  //     left: 100%;
+  //     right: auto;
+  //   }
+  // }
+
+  // &--left > &__content {
+  //   right: 0;
+
+  //   @include rtl-selector {
+  //     left: 0;
+  //     right: auto;
+  //   }
+  // }
+  // &--right &__content {
+  //   left: 100%;
+  //   right: auto;
+  // }
+
+  // &--right > &__content {
+  //   left: 0;
+
+  //   @include rtl-selector {
+  //     left: auto;
+  //     right: 0;
+  //   }
+  // }
+
   //hard-coded border for now
   @include neo-popover-content(
     $dropdown-animation-duration,
@@ -271,7 +337,7 @@
 }
 
 @mixin neo-dropdown-position {
-  &--right &__content {
+  &--left &__content {
     left: auto;
     right: 100%;
 
@@ -281,7 +347,7 @@
     }
   }
 
-  &--right > &__content {
+  &--left > &__content {
     right: 0;
 
     @include rtl-selector {
@@ -289,12 +355,12 @@
       right: auto;
     }
   }
-  &--left &__content {
+  &--right &__content {
     left: 100%;
     right: auto;
   }
 
-  &--left > &__content {
+  &--right > &__content {
     left: 0;
 
     @include rtl-selector {
@@ -302,6 +368,38 @@
       right: 0;
     }
   }
+  // &--right &__content {
+  //   left: auto;
+  //   right: 100%;
+
+  //   @include rtl-selector {
+  //     left: 100%;
+  //     right: auto;
+  //   }
+  // }
+
+  // &--right > &__content {
+  //   right: 0;
+
+  //   @include rtl-selector {
+  //     left: 0;
+  //     right: auto;
+  //   }
+  // }
+  // &--left &__content {
+  //   left: 100%;
+  //   right: auto;
+  // }
+
+  // &--left > &__content {
+  //   left: 0;
+
+  //   @include rtl-selector {
+  //     left: auto;
+  //     right: 0;
+  //   }
+  // }
+
   // &--right &__link,
   // &--right &__link-right {
   //   text-align: right;

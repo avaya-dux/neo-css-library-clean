@@ -41,27 +41,72 @@
   @extend %button;
 }
 
-// primary class
+// // primary class
+
+// .neo-btn-primary {
+//   @extend %button;
+//   @each $name, $value in $button-states {
+//     &--#{$name} {
+//       background-color: map-get($value, color);
+//       @include pulse('button', $name, map-get($value, color));
+//     }
+//     &--#{$name}:hover,
+//     &--#{$name}:focus,
+//     &--#{$name}:active {
+//       background-color: map-get($value, hover-color);
+//       box-shadow: $button-box-shadow;
+//     }
+
+//     &--#{$name}[disabled] {
+//       background-color: map-get($value, disabled-color);
+//       &:hover {
+//         cursor: not-allowed;
+//         box-shadow: none;
+//       }
+//     }
+//   }
+// }
 
 .neo-btn-primary {
   @extend %button;
   @each $name, $value in $button-states {
     &--#{$name} {
-      background-color: map-get($value, color);
-      @include pulse('button', $name, map-get($value, color));
+      color: $button-text-color;
+      //
+      background-image: linear-gradient(
+        50deg,
+        map-get($value, hover-color) 0%,
+        map-get($value, hover-color) 50%,
+        map-get($value, color) 50%,
+        map-get($value, color) 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 300%;
+      background-position: 100% 0%;
+      transition: background-position 0.6s $token-interactivity-motion-ease-out;
+      transition-delay: 0s, 0.15s;
+      //
+      @include pulse('button', $name, map-get($value, color-rgb));
     }
-    &--#{$name}:hover,
+    &--#{$name}:hover {
+      //
+      cursor: pointer;
+      background-position: 0% 100%;
+      //
+    }
     &--#{$name}:focus,
     &--#{$name}:active {
-      background-color: map-get($value, hover-color);
-      box-shadow: $button-box-shadow;
+      background-color: map-get($value, pressed-color);
+      // box-shadow: $button-box-shadow;
+      background-image: none;
     }
 
     &--#{$name}[disabled] {
       background-color: map-get($value, disabled-color);
+      background-image: none;
       &:hover {
         cursor: not-allowed;
-        box-shadow: none;
+        // box-shadow: none;
       }
     }
   }
@@ -69,30 +114,84 @@
 
 // secondary class
 
+// .neo-btn-secondary {
+//   @extend %button;
+//   background-color: $button-secondary-background-color;
+//   border-width: $button-secondary-border-width;
+//   border-style: $button-secondary-border-style;
+//   @each $name, $value in $button-states {
+//     &--#{$name} {
+//       border-color: map-get($value, color);
+//       color: map-get($value, color);
+//       @include pulse('button', $name, map-get($value, color));
+//     }
+//     &--#{$name}:hover,
+//     &--#{$name}:active,
+//     &--#{$name}:focus {
+//       border-color: map-get($value, hover-color);
+//       color: map-get($value, hover-color);
+//       box-shadow: $button-box-shadow;
+//     }
+//     &--#{$name}[disabled] {
+//       border-color: map-get($value, disabled-color);
+//       color: map-get($value, disabled-color);
+//       &:hover {
+//         cursor: not-allowed;
+//         box-shadow: none;
+//       }
+//     }
+//   }
+// }
+
 .neo-btn-secondary {
   @extend %button;
-  background-color: $button-secondary-background-color;
+  // background-color: $button-secondary-background-color;
   border-width: $button-secondary-border-width;
   border-style: $button-secondary-border-style;
   @each $name, $value in $button-states {
     &--#{$name} {
+      //
+      background-image: linear-gradient(
+        50deg,
+        $button-tertiary-hover-background-color 0%,
+        $button-tertiary-hover-background-color 50%,
+        $button-secondary-background-color 50%,
+        $button-secondary-background-color 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 300%;
+      background-position: 100% 0%;
+      transition: background-position 0.6s $token-interactivity-motion-ease-out;
+      transition-delay: 0s, 0.15s;
+      //
       border-color: map-get($value, color);
       color: map-get($value, color);
-      @include pulse('button', $name, map-get($value, color));
+      @include pulse('button', $name, map-get($value, color-rgb));
     }
-    &--#{$name}:hover,
-    &--#{$name}:active,
-    &--#{$name}:focus {
+    &--#{$name}:hover {
       border-color: map-get($value, hover-color);
       color: map-get($value, hover-color);
-      box-shadow: $button-box-shadow;
+      // box-shadow: $button-box-shadow;
+      //
+      cursor: pointer;
+      background-position: 0% 100%;
+      //
+    }
+    &--#{$name}:active,
+    &--#{$name}:focus {
+      border-color: map-get($value, pressed-color);
+      color: map-get($value, pressed-color);
+      // box-shadow: $button-box-shadow;
+      background-image: none;
     }
     &--#{$name}[disabled] {
       border-color: map-get($value, disabled-color);
       color: map-get($value, disabled-color);
+      background-color: $button-secondary-background-color;
+      background-image: none;
       &:hover {
         cursor: not-allowed;
-        box-shadow: none;
+        // box-shadow: none;
       }
     }
   }
@@ -100,22 +199,71 @@
 
 // tertiary class
 
+// .neo-btn-tertiary {
+//   @extend %button;
+//   background-color: transparent;
+//   @each $name, $value in $button-states {
+//     &--#{$name} {
+//       color: map-get($value, color);
+//       @include pulse('button', $name, map-get($value, color));
+//     }
+//     &--#{$name}:hover,
+//     &--#{$name}:active,
+//     &--#{$name}:focus {
+//       color: map-get($value, hover-color);
+//       background-color: $button-tertiary-hover-background-color;
+//     }
+//     &--#{$name}[disabled] {
+//       color: map-get($value, disabled-color);
+//       &:hover {
+//         cursor: not-allowed;
+//         box-shadow: none;
+//       }
+//     }
+//   }
+// }
+
 .neo-btn-tertiary {
   @extend %button;
-  background-color: transparent;
+  // background-color: transparent;
   @each $name, $value in $button-states {
     &--#{$name} {
+      //
+      background-image: linear-gradient(
+        50deg,
+        $button-tertiary-hover-background-color 0%,
+        $button-tertiary-hover-background-color 50%,
+        $button-secondary-background-color 50%,
+        $button-secondary-background-color 100%
+      );
+      background-repeat: no-repeat;
+      background-size: 300%;
+      background-position: 100% 0%;
+      transition: background-position 0.6s $token-interactivity-motion-ease-out;
+      transition-delay: 0s, 0.15s;
+      //
       color: map-get($value, color);
-      @include pulse('button', $name, map-get($value, color));
+      @include pulse('button', $name, map-get($value, color-rgb));
     }
-    &--#{$name}:hover,
-    &--#{$name}:active,
-    &--#{$name}:focus {
+    &--#{$name}:hover {
       color: map-get($value, hover-color);
       background-color: $button-tertiary-hover-background-color;
+      //
+      cursor: pointer;
+      background-position: 0% 100%;
+      //
+    }
+    &--#{$name}:active,
+    &--#{$name}:focus {
+      color: map-get($value, pressed-color);
+      background-color: $button-tertiary-hover-background-color;
+      background-image: none;
     }
     &--#{$name}[disabled] {
+      background-image: none;
       color: map-get($value, disabled-color);
+      // added to fix issue with disabled state
+      background-color: transparent;
       &:hover {
         cursor: not-allowed;
         box-shadow: none;
@@ -142,25 +290,73 @@
 
   // primary class
 
+  // &-primary {
+  //   // remove extra colored circle from buttons
+  //   border: 0;
+  //   @each $name, $value in $button-states {
+  //     &--#{$name} {
+  //       background-color: map-get($value, color);
+  //       @include pulse('button', $name, map-get($value, color));
+  //     }
+  //     &--#{$name}:hover,
+  //     &--#{$name}:active,
+  //     &--#{$name}:focus {
+  //       background-color: map-get($value, hover-color);
+  //       box-shadow: $button-box-shadow;
+  //     }
+  //     &--#{$name}[disabled] {
+  //       background-color: map-get($value, disabled-color);
+  //       &:hover {
+  //         cursor: not-allowed;
+  //         box-shadow: none;
+  //       }
+  //     }
+  //   }
+  // }
   &-primary {
     // remove extra colored circle from buttons
     border: 0;
     @each $name, $value in $button-states {
       &--#{$name} {
-        background-color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color));
+        //
+        background-image: linear-gradient(
+          50deg,
+          map-get($value, hover-color) 0%,
+          map-get($value, hover-color) 50%,
+          map-get($value, color) 50%,
+          map-get($value, color) 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position
+          0.6s
+          $token-interactivity-motion-ease-out;
+        transition-delay: 0s, 0.15s;
+        //
+        // background-color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover,
+      &--#{$name}:hover {
+        //
+        cursor: pointer;
+        background-position: 0% 100%;
+        //
+        // background-color: map-get($value, hover-color);
+        // box-shadow: $button-box-shadow;
+      }
       &--#{$name}:active,
       &--#{$name}:focus {
-        background-color: map-get($value, hover-color);
-        box-shadow: $button-box-shadow;
+        background-color: map-get($value, pressed-color);
+        // box-shadow: $button-box-shadow;
+        background-image: none;
       }
       &--#{$name}[disabled] {
+        background-image: none;
         background-color: map-get($value, disabled-color);
         &:hover {
           cursor: not-allowed;
-          box-shadow: none;
+          // box-shadow: none;
         }
       }
     }
@@ -168,29 +364,83 @@
 
   // secondary class
 
+  // &-secondary {
+  //   border-width: $button-secondary-border-width;
+  //   border-style: $button-secondary-border-style;
+  //   background-color: $button-secondary-background-color;
+  //   @each $name, $value in $button-states {
+  //     &--#{$name} {
+  //       border-color: map-get($value, color);
+  //       color: map-get($value, color);
+  //       @include pulse('button', $name, map-get($value, color));
+  //     }
+  //     &--#{$name}:hover,
+  //     &--#{$name}:active,
+  //     &--#{$name}:focus {
+  //       border-color: map-get($value, hover-color);
+  //       color: map-get($value, hover-color);
+  //       box-shadow: $button-box-shadow;
+  //     }
+  //     &--#{$name}[disabled] {
+  //       border-color: map-get($value, disabled-color);
+  //       color: map-get($value, disabled-color);
+  //       &:hover {
+  //         cursor: not-allowed;
+  //         box-shadow: none;
+  //       }
+  //     }
+  //   }
+  // }
+
   &-secondary {
     border-width: $button-secondary-border-width;
     border-style: $button-secondary-border-style;
-    background-color: $button-secondary-background-color;
+    // background-color: $button-secondary-background-color;
     @each $name, $value in $button-states {
       &--#{$name} {
+        //
+        background-image: linear-gradient(
+          50deg,
+          $button-tertiary-hover-background-color 0%,
+          $button-tertiary-hover-background-color 50%,
+          $button-secondary-background-color 50%,
+          $button-secondary-background-color 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position
+          0.6s
+          $token-interactivity-motion-ease-out;
+        transition-delay: 0s, 0.15s;
+        //
         border-color: map-get($value, color);
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color));
+        @include pulse('button', $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover,
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:hover {
+        //
+        cursor: pointer;
+        background-position: 0% 100%;
+        //
         border-color: map-get($value, hover-color);
         color: map-get($value, hover-color);
-        box-shadow: $button-box-shadow;
+        // box-shadow: $button-box-shadow;
+      }
+      &--#{$name}:active,
+      &--#{$name}:focus {
+        border-color: map-get($value, pressed-color);
+        color: map-get($value, pressed-color);
+        // box-shadow: $button-box-shadow;
+        background-image: none;
       }
       &--#{$name}[disabled] {
+        background-image: none;
         border-color: map-get($value, disabled-color);
         color: map-get($value, disabled-color);
         &:hover {
           cursor: not-allowed;
-          box-shadow: none;
+          // box-shadow: none;
         }
       }
     }
@@ -198,26 +448,75 @@
 
   // tertiary class
 
+  // &-tertiary {
+  //   border: 0;
+  //   background-color: transparent;
+  //   @each $name, $value in $button-states {
+  //     &--#{$name} {
+  //       color: map-get($value, color);
+  //       @include pulse('button', $name, map-get($value, color));
+  //     }
+  //     &--#{$name}:hover,
+  //     &--#{$name}:active,
+  //     &--#{$name}:focus {
+  //       color: map-get($value, hover-color);
+  //       background-color: $button-tertiary-hover-background-color;
+  //     }
+  //     &--#{$name}[disabled] {
+  //       color: map-get($value, disabled-color);
+  //       background-color: transparent;
+  //       &:hover {
+  //         cursor: not-allowed;
+  //         box-shadow: none;
+  //       }
+  //     }
+  //   }
+  // }
   &-tertiary {
     border: 0;
-    background-color: transparent;
+    // background-color: transparent;
     @each $name, $value in $button-states {
       &--#{$name} {
+        //
+        background-image: linear-gradient(
+          50deg,
+          $button-tertiary-hover-background-color 0%,
+          $button-tertiary-hover-background-color 50%,
+          $button-secondary-background-color 50%,
+          $button-secondary-background-color 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position
+          0.6s
+          $token-interactivity-motion-ease-out;
+        transition-delay: 0s, 0.15s;
+        //
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color));
+        @include pulse('button', $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover,
+      &--#{$name}:hover {
+        //
+        cursor: pointer;
+        background-position: 0% 100%;
+        //
+        color: map-get($value, hover-color);
+        // background-color: $button-tertiary-hover-background-color;
+      }
       &--#{$name}:active,
       &--#{$name}:focus {
-        color: map-get($value, hover-color);
+        background-image: none;
+        color: map-get($value, pressed-color);
         background-color: $button-tertiary-hover-background-color;
       }
       &--#{$name}[disabled] {
+        background-image: none;
         color: map-get($value, disabled-color);
         background-color: transparent;
         &:hover {
           cursor: not-allowed;
-          box-shadow: none;
+          // box-shadow: none;
         }
       }
     }
@@ -242,25 +541,73 @@
 
   // primary class
 
+  // &-primary {
+  //   // remove extra colored circle from buttons
+  //   border: 0;
+  //   @each $name, $value in $button-states {
+  //     &--#{$name} {
+  //       background-color: map-get($value, color);
+  //       @include pulse('button', $name, map-get($value, color));
+  //     }
+  //     &--#{$name}:hover,
+  //     &--#{$name}:active,
+  //     &--#{$name}:focus {
+  //       background-color: map-get($value, hover-color);
+  //       box-shadow: $button-box-shadow;
+  //     }
+  //     &--#{$name}[disabled] {
+  //       background-color: map-get($value, disabled-color);
+  //       &:hover {
+  //         cursor: not-allowed;
+  //         box-shadow: none;
+  //       }
+  //     }
+  //   }
+  // }
   &-primary {
     // remove extra colored circle from buttons
     border: 0;
     @each $name, $value in $button-states {
       &--#{$name} {
-        background-color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color));
+        //
+        background-image: linear-gradient(
+          50deg,
+          map-get($value, hover-color) 0%,
+          map-get($value, hover-color) 50%,
+          map-get($value, color) 50%,
+          map-get($value, color) 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position
+          0.6s
+          $token-interactivity-motion-ease-out;
+        transition-delay: 0s, 0.15s;
+        //
+        // background-color: map-get($value, color);
+        @include pulse('button', $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover,
+      &--#{$name}:hover {
+        //
+        cursor: pointer;
+        background-position: 0% 100%;
+        //
+        // background-color: map-get($value, hover-color);
+        // box-shadow: $button-box-shadow;
+      }
       &--#{$name}:active,
       &--#{$name}:focus {
-        background-color: map-get($value, hover-color);
-        box-shadow: $button-box-shadow;
+        background-color: map-get($value, pressed-color);
+        // box-shadow: $button-box-shadow;
+        background-image: none;
       }
       &--#{$name}[disabled] {
+        background-image: none;
         background-color: map-get($value, disabled-color);
         &:hover {
           cursor: not-allowed;
-          box-shadow: none;
+          // box-shadow: none;
         }
       }
     }
@@ -268,29 +615,82 @@
 
   // secondary class
 
+  // &-secondary {
+  //   border-width: $button-secondary-border-width;
+  //   border-style: $button-secondary-border-style;
+  //   background-color: $button-secondary-background-color;
+  //   @each $name, $value in $button-states {
+  //     &--#{$name} {
+  //       border-color: map-get($value, color);
+  //       color: map-get($value, color);
+  //       @include pulse('button', $name, map-get($value, color));
+  //     }
+  //     &--#{$name}:hover,
+  //     &--#{$name}:active,
+  //     &--#{$name}:focus {
+  //       border-color: map-get($value, hover-color);
+  //       color: map-get($value, hover-color);
+  //       box-shadow: $button-box-shadow;
+  //     }
+  //     &--#{$name}[disabled] {
+  //       border-color: map-get($value, disabled-color);
+  //       color: map-get($value, disabled-color);
+  //       &:hover {
+  //         cursor: not-allowed;
+  //         box-shadow: none;
+  //       }
+  //     }
+  //   }
+  // }
   &-secondary {
     border-width: $button-secondary-border-width;
     border-style: $button-secondary-border-style;
-    background-color: $button-secondary-background-color;
+    // background-color: $button-secondary-background-color;
     @each $name, $value in $button-states {
       &--#{$name} {
+        //
+        background-image: linear-gradient(
+          50deg,
+          $button-tertiary-hover-background-color 0%,
+          $button-tertiary-hover-background-color 50%,
+          $button-secondary-background-color 50%,
+          $button-secondary-background-color 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position
+          0.6s
+          $token-interactivity-motion-ease-out;
+        transition-delay: 0s, 0.15s;
+        //
         border-color: map-get($value, color);
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color));
+        @include pulse('button', $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover,
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:hover {
+        //
+        cursor: pointer;
+        background-position: 0% 100%;
+        //
         border-color: map-get($value, hover-color);
         color: map-get($value, hover-color);
-        box-shadow: $button-box-shadow;
+        // box-shadow: $button-box-shadow;
+      }
+      &--#{$name}:active,
+      &--#{$name}:focus {
+        background-image: none;
+        border-color: map-get($value, pressed-color);
+        color: map-get($value, pressed-color);
+        // box-shadow: $button-box-shadow;
       }
       &--#{$name}[disabled] {
+        background-image: none;
         border-color: map-get($value, disabled-color);
         color: map-get($value, disabled-color);
         &:hover {
           cursor: not-allowed;
-          box-shadow: none;
+          // box-shadow: none;
         }
       }
     }
@@ -298,26 +698,75 @@
 
   // tertiary class
 
+  // &-tertiary {
+  //   background-color: transparent;
+  //   border: 0;
+  //   @each $name, $value in $button-states {
+  //     &--#{$name} {
+  //       color: map-get($value, color);
+  //       @include pulse('button', $name, map-get($value, color));
+  //     }
+  //     &--#{$name}:hover,
+  //     &--#{$name}:active,
+  //     &--#{$name}:focus {
+  //       color: map-get($value, hover-color);
+  //       background-color: $button-tertiary-hover-background-color;
+  //     }
+  //     &--#{$name}[disabled] {
+  //       color: map-get($value, disabled-color);
+  //       background-color: transparent;
+  //       &:hover {
+  //         cursor: not-allowed;
+  //         box-shadow: none;
+  //       }
+  //     }
+  //   }
+  // }
   &-tertiary {
-    background-color: transparent;
+    // background-color: transparent;
     border: 0;
     @each $name, $value in $button-states {
       &--#{$name} {
+        //
+        background-image: linear-gradient(
+          50deg,
+          $button-tertiary-hover-background-color 0%,
+          $button-tertiary-hover-background-color 50%,
+          $button-secondary-background-color 50%,
+          $button-secondary-background-color 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position
+          0.6s
+          $token-interactivity-motion-ease-out;
+        transition-delay: 0s, 0.15s;
+        //
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color));
+        @include pulse('button', $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover,
+      &--#{$name}:hover {
+        //
+        cursor: pointer;
+        background-position: 0% 100%;
+        //
+        color: map-get($value, hover-color);
+        // background-color: $button-tertiary-hover-background-color;
+      }
       &--#{$name}:active,
       &--#{$name}:focus {
-        color: map-get($value, hover-color);
+        color: map-get($value, pressed-color);
         background-color: $button-tertiary-hover-background-color;
+        background-image: none;
       }
       &--#{$name}[disabled] {
+        background-image: none;
         color: map-get($value, disabled-color);
         background-color: transparent;
         &:hover {
           cursor: not-allowed;
-          box-shadow: none;
+          // box-shadow: none;
         }
       }
     }

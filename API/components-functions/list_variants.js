@@ -19,9 +19,9 @@ Lists
   - child margin-bottom
   
 */
-async function listStyles(value) {
+async function listItemStyles(value) {
   listJSONObject = {
-    list: {},
+    listItems: {},
   };
 
   await Promise.all(
@@ -29,9 +29,9 @@ async function listStyles(value) {
       if (child.name === '.base-list-item/left') {
         // console.log(child);
         // padding top/bottom
-        var listItemVerticalPadding = `${child.verticalPadding}px`;
+        var listItemVerticalPadding = `${child.paddingTop}px`;
         // padding left/right
-        var listItemHorizontalPadding = `${child.horizontalPadding}px`;
+        var listItemHorizontalPadding = `${child.paddingRight}px`;
         // margin-right
         var listItemMargin = `${child.itemSpacing}px`;
         return [
@@ -79,24 +79,28 @@ async function listStyles(value) {
     // console.log(values);
     var definedValues = values.filter((value) => value != undefined);
     // console.log(definedValues);
-    listJSONObject.list['vertical-padding'] = { value: definedValues[0][0] };
-    listJSONObject.list['horizontal-padding'] = {
+    listJSONObject.listItems['vertical-padding'] = {
+      value: definedValues[0][0],
+    };
+    listJSONObject.listItems['horizontal-padding'] = {
       value: definedValues[0][1],
     };
-    listJSONObject.list['margin-right'] = { value: definedValues[0][2] };
-    listJSONObject.list['min-width'] = { value: definedValues[1][0] };
-    listJSONObject.list['min-height'] = { value: definedValues[1][1] };
-    listJSONObject.list['divider'] = {
+    listJSONObject.listItems['margin-right'] = { value: definedValues[0][2] };
+    listJSONObject.listItems['min-width'] = { value: definedValues[1][0] };
+    listJSONObject.listItems['min-height'] = { value: definedValues[1][1] };
+    listJSONObject.listItems['divider'] = {
       value: `${definedValues[2][0]} ${definedValues[2][1]} ${definedValues[2][2]}`,
     };
   });
 
   await fs
     .writeFile(
-      '../properties/components/listVariants.json',
+      '../properties/components/listItems.json',
       JSON.stringify(listJSONObject)
     )
     .then(function () {
-      console.log('listVariants.json created');
+      console.log('listItems.json created');
     });
 }
+
+exports.listItemStyles = listItemStyles;

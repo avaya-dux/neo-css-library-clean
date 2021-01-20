@@ -93,6 +93,7 @@
   display: inline-block;
   position: relative;
   vertical-align: middle;
+  align-self: center;
 
   &::after {
     // background: center center no-repeat;

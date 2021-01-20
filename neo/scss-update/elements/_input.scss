@@ -1,30 +1,30 @@
 // updated input styles
 
-@mixin input--editable {
-  &--editable {
-    display: flex;
-    flex-wrap: wrap;
-    min-height: $input-height - 2 * $input-padding-y;
+// @mixin input--editable {
+//   &--editable {
+//     display: flex;
+//     flex-wrap: wrap;
+//     min-height: $input-height;
 
-    > * {
-      margin-bottom: 0 !important;
-    }
+//     > * {
+//       margin-bottom: 0 !important;
+//     }
 
-    .neo-chip {
-      line-height: $input-line-height;
-      padding-bottom: 0;
-      padding-top: 0;
-    }
+//     // .neo-chip {
+//     //   line-height: $input-line-height;
+//     //   padding-bottom: 0;
+//     //   padding-top: 0;
+//     // }
 
-    .neo-input {
-      border: 0;
-      box-shadow: none;
-      flex-grow: 1;
-      padding: 0;
-      width: auto;
-    }
-  }
-}
+//     .neo-input {
+//       border: 0;
+//       box-shadow: none;
+//       flex-grow: 1;
+//       padding: 0;
+//       width: auto;
+//     }
+//   }
+// }
 
 @mixin input--states {
   @each $state-color-name, $state-color-value in $input-state-color-map {
@@ -32,35 +32,52 @@
       border-color: $state-color-value;
 
       &:focus {
-        border-color: $state-color-value;
+        border-color: $input-focus-border-color;
       }
     }
   }
 }
 
 .neo-input {
-  // background-color: $input-background-color;
   background-image: none;
   border: $input-border-width $input-border-style $input-border-color;
-  border-radius: 4px;
-  box-shadow: $input-box-shadow;
+  border-radius: $input-border-radius;
+  // box-shadow: $input-box-shadow;
   box-sizing: border-box;
   color: $input-font-color;
   display: block;
   font-family: inherit;
   font-size: $input-font-size;
   line-height: $input-line-height;
+  letter-spacing: $input-letter-spacing;
   min-height: $input-height;
   padding: $input-padding-y $input-padding-x;
   min-width: $input-width;
-  width: 100%;
+  // width: 100%;
 
-  &[readonly] {
+  &:hover {
+    border-color: $token-input-border-hover-color;
+  }
+
+  &[readonly],
+  &-readonly {
     background-color: transparent;
+    border: none;
+    padding-left: 0;
+    @include rtl-selector {
+      padding-right: 0;
+      padding-left: auto;
+    }
+    &:active,
+    &:focus {
+      border: none;
+    }
+    // input placeholder wrapper
   }
 
   &[disabled] {
     background-color: $input-disabled-bg;
+    border-color: $token-input-border-disabled-color;
     color: $input-disabled-color;
     cursor: not-allowed;
   }
@@ -71,85 +88,113 @@
   }
 
   &:focus {
-    box-shadow: $input-focus-shadow;
+    border: $input-border-width $input-border-style $input-focus-border-color;
     outline: none;
   }
 
   &::-webkit-input-placeholder {
+    font-size: $input-placeholder-font-size;
     font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
   }
   &::-moz-placeholder {
+    font-size: $input-placeholder-font-size;
     font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
   }
   &:-ms-input-placeholder {
+    font-size: $input-placeholder-font-size;
     font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
   }
   &::placeholder {
+    font-size: $input-placeholder-font-size;
     font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
   }
 
-  @include input--editable;
+  // @include input--editable;
   @include input--states;
 }
 
 //  input error validation wrapper and input
 
-.neo-input-error__wrapper {
-  display: flex;
-  flex-direction: row;
-  border: $input-border-style $input-border-width $input-asterix-required-color;
-  width: $input-width;
-  min-height: $input-height;
-  border-radius: 2px;
-  & input,
-  & textarea {
-    border: none;
-  }
-  & .neo-input-error__icon {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    color: $input-asterix-required-color;
-    //hard-coded for now
-    padding-right: 11px;
-  }
-}
+// .neo-input-error__wrapper {
+//   display: flex;
+//   flex-direction: row;
+//   border: $input-border-style $input-border-width $input-asterix-required-color;
+//   width: $input-width;
+//   min-height: $input-height;
+//   border-radius: 2px;
+//   & input,
+//   & textarea {
+//     border: none;
+//   }
+//   & .neo-input-error__icon {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     color: $input-asterix-required-color;
+//     //hard-coded for now
+//     padding-right: 11px;
+//   }
+// }
 
-.neo-input-hint-error {
-  // hard-coded margin for now
-  margin-top: 4px;
-  color: $input-asterix-required-color;
-}
-
-// input placeholder wrapper
-
-.neo-input-readonly {
-  border: none;
-  padding-left: $input-readonly-padding;
-}
+// .neo-input-hint-error {
+//   // hard-coded margin for now
+//   margin-top: 4px;
+//   color: $input-asterix-required-color;
+// }
 
 // editable input style
 
 .neo-input-editable__wrapper {
   label + & {
-    margin-top: 3px;
+    margin-top: $input-in-label-margin-top;
+    margin-bottom: $input-in-label-margin-top;
   }
 
-  border-radius: 4px;
+  border-radius: $input-border-radius;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  border: $input-border-style $input-border-width $input-border-color;
-  max-height: $input-height;
-  min-width: $input-width;
+  // need to work on border styles for whole input wrapper
+  border: $input-border-width $input-border-style $input-border-color;
+  &:focus-within {
+    border-color: $input-focus-border-color;
+  }
+  .neo-form-control:not(.neo-form-control--disabled)
+    &:hover:not(:focus-within) {
+    border-color: $token-input-border-hover-color;
+  }
+  min-height: $input-height;
+  width: $input-width;
   & input,
   & textarea {
     flex-grow: 1;
     border: none;
     min-width: 0;
+    padding-right: 0px;
+    @include rtl-selector {
+      padding-left: 0px;
+      padding-right: $input-padding-x;
+    }
+    &:focus {
+      border: none;
+      // outline: none;
+    }
   }
-  & .neo-input-edit__icon {
-    border-radius: 4px;
+  & .neo-input-edit__icon,
+  & .neo-input-editable__close {
+    border-radius: $input-border-radius;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -157,18 +202,15 @@
     background-color: $global-background;
     color: $input-clear-button-color;
     // hard-coded for now
-    padding: 7px;
+    padding: $input-padding-y $input-padding-x;
     &:hover {
       cursor: pointer;
     }
-    &::before {
-      font-size: 16px;
+    &:focus {
+      outline: none;
     }
-    &--disabled {
-      background-color: $input-disabled-bg;
-      &:hover {
-        cursor: not-allowed;
-      }
+    &::before {
+      font-size: $token-input-input-close-button-size;
     }
   }
 }

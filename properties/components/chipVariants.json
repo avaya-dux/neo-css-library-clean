@@ -1,0 +1,53 @@
+{
+  "chips": {
+    "min-height": { "value": "25px" },
+    "min-width": { "value": "108px" },
+    "padding-x": { "value": "8px" },
+    "padding-y": { "value": "4px" },
+    "item-spacing": { "value": "4px" },
+    "border-radius": { "value": "4px" },
+    "border-style": { "value": "solid" },
+    "border-width": { "value": "1px" },
+    "font-size": { "value": "{Web-typography.web/small body.fontSize.value}" },
+    "font-weight": { "value": "{Web-typography.fontweight-regular.value}" },
+    "line-height": {
+      "value": "{Web-typography.web/small body.lineHeight.value}"
+    },
+    "letter-spacing": {
+      "value": "{Web-typography.web/small body.letterSpacing.value}"
+    },
+    "font-color": { "value": "{color.base/1000.value}" },
+    "default-bg-color": { "value": "{color.base/100.value}" },
+    "default-border-color": { "value": "{color.base/400.value}" },
+    "default-hover-bg-color": { "value": "{color.base/200.value}" },
+    "icon-size": { "value": "16px" },
+    "default-icon-color": { "value": "{color.base/600.value}" },
+    "disabled-font-color": { "value": "{color.base/400.value}" },
+    "default-disabled-bg-color": { "value": "{color.base/100.value}" },
+    "default-disabled-icon-color": { "value": "{color.base/400.value}" },
+    "success-bg-color": { "value": "{color.green/100.value}" },
+    "success-border-color": { "value": "{color.green/400.value}" },
+    "success-hover-bg-color": { "value": "{color.green/200.value}" },
+    "success-icon-color": { "value": "{color.green/600.value}" },
+    "success-disabled-bg-color": { "value": "{color.green/100.value}" },
+    "success-disabled-icon-color": { "value": "{color.green/400.value}" },
+    "alert-bg-color": { "value": "{color.red/100.value}" },
+    "alert-border-color": { "value": "{color.red/400.value}" },
+    "alert-hover-bg-color": { "value": "{color.red/200.value}" },
+    "alert-icon-color": { "value": "{color.red/600.value}" },
+    "alert-disabled-bg-color": { "value": "{color.red/100.value}" },
+    "alert-disabled-icon-color": { "value": "{color.red/400.value}" },
+    "info-bg-color": { "value": "{color.blue/100.value}" },
+    "info-border-color": { "value": "{color.blue/400.value}" },
+    "info-hover-bg-color": { "value": "{color.blue/200.value}" },
+    "info-icon-color": { "value": "{color.blue/600.value}" },
+    "info-disabled-bg-color": { "value": "{color.blue/100.value}" },
+    "info-disabled-icon-color": { "value": "{color.blue/400.value}" },
+    "warning-bg-color": { "value": "{color.orange/100.value}" },
+    "warning-border-color": { "value": "{color.orange/400.value}" },
+    "warning-hover-bg-color": { "value": "{color.orange/200.value}" },
+    "warning-icon-color": { "value": "{color.orange/600.value}" },
+    "warning-disabled-bg-color": { "value": "{color.orange/100.value}" },
+    "warning-disabled-icon-color": { "value": "{color.orange/400.value}" }
+  }
+}

@@ -179,21 +179,21 @@ async function buttonStyles(value) {
           );
           // getting color ID, then token name -- ASYNC function here
           // hover colors
-          var colorID = variant.styles.fills;
-          buttonsJSONObject.button[`${buttonState}-hover-color`] = {
-            value: await coreFigmaFunctions
-              .getFigmaTokenNameByID(
-                coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-                coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-                colorID
-              )
-              .then(
-                (value) =>
-                  `{color.${value.nodes[
-                    colorID
-                  ].document.name.toLowerCase()}.value}`
-              ),
-          };
+          // var colorID = variant.styles.fills;
+          // buttonsJSONObject.button[`${buttonState}-hover-color`] = {
+          //   value: await coreFigmaFunctions
+          //     .getFigmaTokenNameByID(
+          //       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          //       coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          //       colorID
+          //     )
+          //     .then(
+          //       (value) =>
+          //         `{color.${value.nodes[
+          //           colorID
+          //         ].document.name.toLowerCase()}.value}`
+          //     ),
+          // };
         }
         // primary hover box shadow
         // TO-DO: fetch all other styles associated with box shadow?
@@ -207,16 +207,46 @@ async function buttonStyles(value) {
           buttonsJSONObject.button['min-width'] = {
             value: `${variant.size.x}px`,
           };
-          var elevationID = variant.styles.effect;
-          buttonsJSONObject.button['primary-box-shadow'] = {
+          // var elevationID = variant.styles.effect;
+          // buttonsJSONObject.button['primary-box-shadow'] = {
+          //   value: await coreFigmaFunctions
+          //     .getFigmaTokenNameByID(
+          //       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          //       coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          //       elevationID
+          //     )
+          //     .then((value) =>
+          //       value.nodes[elevationID].document.name.toLowerCase()
+          //     ),
+          // };
+        }
+        if (
+          variant.name.includes('Type=primary') &&
+          variant.name.includes('Icon=none') &&
+          variant.name.includes('State=pressed')
+        ) {
+          var fullButtonState = variant.name.slice(
+            variant.name.indexOf(',') + 1,
+            variant.name.indexOf('I') - 2
+          );
+          var buttonState = fullButtonState.slice(
+            fullButtonState.indexOf('=') + 1
+          );
+          // getting color ID, then token name -- ASYNC function here
+          // hover colors
+          var colorID = variant.styles.fills;
+          buttonsJSONObject.button[`${buttonState}-pressed-color`] = {
             value: await coreFigmaFunctions
               .getFigmaTokenNameByID(
                 coreFigmaFunctions.figmaCredentials.figmaAPIKey,
                 coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-                elevationID
+                colorID
               )
-              .then((value) =>
-                value.nodes[elevationID].document.name.toLowerCase()
+              .then(
+                (value) =>
+                  `{color.${value.nodes[
+                    colorID
+                  ].document.name.toLowerCase()}.value}`
               ),
           };
         }
@@ -284,48 +314,48 @@ async function buttonStyles(value) {
           };
         }
         // secondary hover box shadow
-        if (
-          variant.name.includes('Type=secondary') &&
-          variant.name.includes('Icon=none') &&
-          variant.name.includes('Function=default-info') &&
-          variant.name.includes('State=hover')
-        ) {
-          var elevationID = variant.styles.effect;
-          buttonsJSONObject.button['secondary-box-shadow'] = {
-            value: await coreFigmaFunctions
-              .getFigmaTokenNameByID(
-                coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-                coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-                elevationID
-              )
-              .then((value) =>
-                value.nodes[elevationID].document.name.toLowerCase()
-              ),
-          };
-        }
+        // if (
+        //   variant.name.includes('Type=secondary') &&
+        //   variant.name.includes('Icon=none') &&
+        //   variant.name.includes('Function=default-info') &&
+        //   variant.name.includes('State=hover')
+        // ) {
+        //   var elevationID = variant.styles.effect;
+        //   buttonsJSONObject.button['secondary-box-shadow'] = {
+        //     value: await coreFigmaFunctions
+        //       .getFigmaTokenNameByID(
+        //         coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+        //         coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+        //         elevationID
+        //       )
+        //       .then((value) =>
+        //         value.nodes[elevationID].document.name.toLowerCase()
+        //       ),
+        //   };
+        // }
         // tertiary hover background color
-        if (
-          variant.name.includes('Type=tertiary') &&
-          variant.name.includes('Icon=none') &&
-          variant.name.includes('Function=default-info') &&
-          variant.name.includes('State=hover')
-        ) {
-          var colorID = variant.styles.fills;
-          buttonsJSONObject.button['tertiary-hover-background-color'] = {
-            value: await coreFigmaFunctions
-              .getFigmaTokenNameByID(
-                coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-                coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-                colorID
-              )
-              .then(
-                (value) =>
-                  `{color.${value.nodes[
-                    colorID
-                  ].document.name.toLowerCase()}.value}`
-              ),
-          };
-        }
+        // if (
+        //   variant.name.includes('Type=tertiary') &&
+        //   variant.name.includes('Icon=none') &&
+        //   variant.name.includes('Function=default-info') &&
+        //   variant.name.includes('State=hover')
+        // ) {
+        //   var colorID = variant.styles.fills;
+        //   buttonsJSONObject.button['tertiary-hover-background-color'] = {
+        //     value: await coreFigmaFunctions
+        //       .getFigmaTokenNameByID(
+        //         coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+        //         coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+        //         colorID
+        //       )
+        //       .then(
+        //         (value) =>
+        //           `{color.${value.nodes[
+        //             colorID
+        //           ].document.name.toLowerCase()}.value}`
+        //       ),
+        //   };
+        // }
       }
     }
     // circle buttons
@@ -353,7 +383,7 @@ async function buttonStyles(value) {
       };
     }
   }
-  // console.log(buttonsJSONObject);
+  console.log(buttonsJSONObject);
   await fs
     .writeFile(
       '../properties/components/button.json',

@@ -213,7 +213,12 @@
           $leftnav-sub-active-border-style transparent;
         padding: 0 $leftnav-sub-padding-horizontal 0 0;
       }
+      &:focus,
+      &:active {
+        outline: 0;
+      }
     }
+
     &:hover {
       cursor: pointer;
       background-color: $leftnav-hover-background-color;

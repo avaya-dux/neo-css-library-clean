@@ -25,7 +25,7 @@
   &--small {
     font-size: $avatar-small-font-size;
     line-height: $avatar-small-line-height;
-    letter-spacing: avatar-small-letter-spacing;
+    letter-spacing: $avatar-small-letter-spacing;
     height: $avatar-small-size;
     width: $avatar-small-size;
     // & .neo-avatar-status {

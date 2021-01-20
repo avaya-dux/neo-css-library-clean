@@ -3,12 +3,15 @@
 @mixin notification-close-btn {
   /* stylelint-disable-next-line selector-class-pattern */
   > .neo-icon-end {
+    &:hover {
+      cursor: pointer;
+    }
     background: none;
     border: none;
     &:before {
       font-size: $notification-close-icon-size;
     }
-    position: absolute;
+    // position: absolute;
     align-self: center;
     right: $notification-padding-x;
     @include rtl-selector {
@@ -25,6 +28,7 @@
     flex-direction: column;
     // font-size: $notification-font-size;
     justify-content: center;
+    flex-grow: 1;
   }
 }
 
@@ -35,6 +39,8 @@
     letter-spacing: $notification-header-letter-spacing;
     line-height: $notification-header-line-height;
     margin: 0;
+    white-space: pre-wrap;
+    word-break: break-word;
   }
 }
 
@@ -44,6 +50,8 @@
     line-height: $notification-description-line-height;
     letter-spacing: $notification-description-letter-spacing;
     font-weight: $notification-description-font-weight;
+    white-space: pre-wrap;
+    word-break: break-word;
     &:not(:first-child) {
       margin-top: $notification-text-spacing;
     }
@@ -74,10 +82,12 @@
     line-height: $notification-counter-line-height;
     letter-spacing: $notification-counter-letter-spacing;
     font-weight: $notification-counter-font-weight;
-    text-align: center;
-    position: absolute;
+    // text-align: center;
+    // position: absolute;
     align-self: center;
     right: $notification-padding-x;
+    white-space: pre-wrap;
+    word-break: break-word;
     @include rtl-selector {
       left: $notification-padding-x;
       right: initial;
@@ -127,7 +137,7 @@
   color: $notification-font-color;
   display: flex;
   min-height: $notification-min-height;
-  min-width: $notification-min-width;
+  // min-width: $notification-min-width;
   margin-bottom: $notification-margin-bottom;
   padding: $notification-padding-y $notification-padding-x;
   position: relative;

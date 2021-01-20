@@ -7,6 +7,33 @@ const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js')
   Tabs
   ///////
 
+  colours:
+
+  - background color - DONE
+
+  - default - DONE
+  - hover - DONE
+  - active - DONE
+  - active-disabled - DONE
+  - disabled - DONE
+
+  icon sizings - DONE
+  icon offset - DONE
+
+  font styles
+    - default - DONE
+    - active - DONE
+
+  padding - ASK SHAINA
+
+  max height - DONE
+
+  border styles:
+   - width - DONE
+   - style - NOT AVAILABLE IN FIGMA
+
+////////////
+
   Carousel:
   - button width -- DONE
   - butto height -- DONE
@@ -39,8 +66,196 @@ async function tabStyles(value) {
   tabsJSONObject = {
     tabs: {},
   };
+
+  const tabVariants = value.Navigation.children.filter(
+    (comp) => comp.name == 'tab-horizontal'
+  )[0];
+
+  // console.log(tabVariants);
+
+  for (horizontalTab of tabVariants.children) {
+    // console.log(horizontalTab);
+    if (horizontalTab.name === 'Icon=none, Active=FALSE, State=default') {
+      // console.log(horizontalTab);
+      // max-height
+      tabsJSONObject.tabs['max-height'] = {
+        value: `${horizontalTab.children[0].size.y}px`,
+      };
+      // font styles incl. active font-weight
+      var textTokenID =
+        horizontalTab.children[0].children[0].children[0].children[1].styles
+          .text;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          textTokenID
+        )
+        .then((value) => {
+          var fontTokenName = value.nodes[
+            textTokenID
+          ].document.name.toLowerCase();
+          // font-size
+          tabsJSONObject.tabs['font-size'] = {
+            value: `{Web-typography.${fontTokenName}.fontSize.value}`,
+          };
+          // default font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
+          tabsJSONObject.tabs['default-font-weight'] = {
+            value: `{Web-typography.fontweight-regular.value}`,
+          };
+          // active font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
+          tabsJSONObject.tabs['active-font-weight'] = {
+            value: `{Web-typography.fontweight-semibold.value}`,
+          };
+          // line-height
+          tabsJSONObject.tabs['line-height'] = {
+            value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
+          };
+          // letter-spacing
+          tabsJSONObject.tabs['letter-spacing'] = {
+            value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
+          };
+        });
+      // tab background color
+      var tabBackgroundColorTokenID = horizontalTab.children[0].styles.fills;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          tabBackgroundColorTokenID
+        )
+        .then(
+          (value) =>
+            (tabsJSONObject.tabs['background-color'] = {
+              value: `{color.${value.nodes[
+                tabBackgroundColorTokenID
+              ].document.name.toLowerCase()}.value}`,
+            })
+        );
+      // tab default color
+      var tabDefaultColorTokenID =
+        horizontalTab.children[0].children[0].children[0].children[1].styles
+          .fill;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          tabDefaultColorTokenID
+        )
+        .then(
+          (value) =>
+            (tabsJSONObject.tabs['default-color'] = {
+              value: `{color.${value.nodes[
+                tabDefaultColorTokenID
+              ].document.name.toLowerCase()}.value}`,
+            })
+        );
+    }
+    if (horizontalTab.name === 'Icon=none, Active=FALSE, State=hover') {
+      // tab hover color
+      var tabHoverColorTokenID =
+        horizontalTab.children[0].children[0].children[0].children[1].styles
+          .fill;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          tabHoverColorTokenID
+        )
+        .then(
+          (value) =>
+            (tabsJSONObject.tabs['hover-color'] = {
+              value: `{color.${value.nodes[
+                tabHoverColorTokenID
+              ].document.name.toLowerCase()}.value}`,
+            })
+        );
+    }
+    if (horizontalTab.name === 'Icon=none, Active=FALSE, State=disabled') {
+      // tab disabled color
+      var tabDisabledColorTokenID =
+        horizontalTab.children[0].children[0].children[0].children[1].styles
+          .fill;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          tabDisabledColorTokenID
+        )
+        .then(
+          (value) =>
+            (tabsJSONObject.tabs['disabled-color'] = {
+              value: `{color.${value.nodes[
+                tabDisabledColorTokenID
+              ].document.name.toLowerCase()}.value}`,
+            })
+        );
+    }
+    if (horizontalTab.name === 'Icon=right, Active=TRUE, State=default') {
+      // console.log(horizontalTab.children[0].children[0].children[0]);
+      // icon size
+      tabsJSONObject.tabs['icon-size'] = {
+        value: `${horizontalTab.children[0].children[0].children[0].children[2].size.y}px`,
+      };
+      // icon offset
+      tabsJSONObject.tabs['icon-offset'] = {
+        value: `${horizontalTab.children[0].children[0].children[0].itemSpacing}px`,
+      };
+      // tab active color
+      var tabActiveColorTokenID =
+        horizontalTab.children[0].children[0].children[0].children[1].styles
+          .fill;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          tabActiveColorTokenID
+        )
+        .then(
+          (value) =>
+            (tabsJSONObject.tabs['active-color'] = {
+              value: `{color.${value.nodes[
+                tabActiveColorTokenID
+              ].document.name.toLowerCase()}.value}`,
+            })
+        );
+      // tab active border width
+      tabsJSONObject.tabs['border-width'] = {
+        value: `${horizontalTab.children[0].children[0].children[1].size.y}px`,
+      };
+    }
+    if (horizontalTab.name === 'Icon=right, Active=TRUE, State=disabled') {
+      // tab active disabled color
+      var tabActiveDisabledColorTokenID =
+        horizontalTab.children[0].children[0].children[0].children[1].styles
+          .fill;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          tabActiveDisabledColorTokenID
+        )
+        .then(
+          (value) =>
+            (tabsJSONObject.tabs['active-disabled-color'] = {
+              value: `{color.${value.nodes[
+                tabActiveDisabledColorTokenID
+              ].document.name.toLowerCase()}.value}`,
+            })
+        );
+    }
+  }
+
+  // const tabCarouselVariants = value.Navigation.children.filter(
+  //   (comp) => comp.name == 'tab-carousel'
+  // )[0];
+
+  // for (carouselVariants of tabCarouselVariants) {
+  // }
+
   await Promise.all(
     value.Navigation.children.map(async (child) => {
+      // tab-carousel
       if (child.name === 'tab-carousel') {
         // tabs background color
         var tabBackgroundColorId = child.styles.fills;
@@ -59,8 +274,9 @@ async function tabStyles(value) {
         // tabs carousel button icon color
         var children = child.children;
         var buttons = children.filter((child) => child.name != 'tabs');
+        // console.log(buttons);
         var carouselButtonIconColorId =
-          buttons[0].children[0].children[0].children[0].styles.fill;
+          buttons[0].children[0].children[0].styles.fill;
         var buttonIconColorTokenName = await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -83,16 +299,17 @@ async function tabStyles(value) {
     tabsJSONObject.tabs['carousel-button-color'] = {
       value: definedValues[0][0],
     };
-    tabsJSONObject.tabs['background-color'] = {
+    tabsJSONObject.tabs['carousel-background-color'] = {
       value: definedValues[0][1],
     };
+    console.log(tabsJSONObject);
     await fs
       .writeFile(
-        '../properties/components/tabCarousel.json',
+        '../properties/components/tabs.json',
         JSON.stringify(tabsJSONObject)
       )
       .then(function () {
-        console.log('tabCarousel.json created');
+        console.log('tabs.json created');
       });
   });
 }

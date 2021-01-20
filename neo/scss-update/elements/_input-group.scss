@@ -20,6 +20,11 @@
     margin-top: 0;
   }
 
+  .neo-input {
+    flex-grow: 1;
+    border: none;
+  }
+
   .neo-btn {
     flex: none;
     padding-bottom: $input-padding-y;
@@ -34,27 +39,30 @@
   /* stylelint-disable-next-line selector-class-pattern */
   .neo-input-group__addon {
     align-items: center;
-    background: $input-group-addon-background-color;
-    border: $input-border-width $input-border-style $input-border-color;
+    background: $input-background-color;
+    // border-radius: $input-border-radius;
     display: flex;
     line-height: $input-line-height;
     padding: $input-padding-y $input-padding-x;
+    color: $token-input-addon-text-color;
+    cursor: default;
 
     &:first-child {
-      border-right-width: 0;
+      border-right: $input-border-width $input-border-style $input-border-color;
 
       @include rtl-selector {
-        border-left-width: 0;
-        border-right-width: $input-border-width;
+        border-right-width: 0;
+        border-left: $input-border-width $input-border-style $input-border-color;
       }
     }
 
     &:last-child {
-      border-left-width: 0;
+      border-left: $input-border-width $input-border-style $input-border-color;
 
       @include rtl-selector {
-        border-left-width: $input-border-width;
-        border-right-width: 0;
+        border-right: $input-border-width $input-border-style
+          $input-border-color;
+        border-left-width: 0;
       }
     }
   }
@@ -73,29 +81,71 @@
 //   }
 // }
 
-@mixin neo-input-group-icon {
-  &__icon {
-    color: $token-color-red-500;
-    display: flex;
-    font-size: $input-icon-size;
-    position: absolute;
-    right: $input-space-right;
-    z-index: 1;
-  }
-}
+// @mixin neo-input-group-icon {
+//   &__icon {
+//     color: $token-color-red-500;
+//     display: flex;
+//     font-size: $input-icon-size;
+//     position: absolute;
+//     right: $input-space-right;
+//     z-index: 1;
+//   }
+// }
 
 .neo-input-group {
   // border-radius: $input-border-radius;
   display: flex;
   vertical-align: middle;
   width: 100%;
-
+  border: $input-border-width $input-border-style $input-border-color;
+  & .neo-input-editable__wrapper {
+    flex-grow: 1;
+    border: none;
+  }
+  & > .neo-input-editable__wrapper,
+  & > .neo-input-icon__wrapper {
+    margin: 0 !important;
+  }
+  &:hover {
+    border-color: $token-input-border-hover-color;
+    & .neo-input-group__addon {
+      &:first-child {
+        border-right-color: $token-input-border-hover-color;
+        @include rtl-selector {
+          border-left-color: $token-input-border-hover-color;
+        }
+      }
+      &:last-child {
+        border-left-color: $token-input-border-hover-color;
+        @include rtl-selector {
+          border-right-color: $token-input-border-hover-color;
+        }
+      }
+    }
+  }
+  &:focus-within {
+    border-color: $input-focus-border-color;
+    & .neo-input-group__addon {
+      &:first-child {
+        border-right-color: $input-focus-border-color;
+        @include rtl-selector {
+          border-left-color: $input-focus-border-color;
+        }
+      }
+      &:last-child {
+        border-left-color: $input-focus-border-color;
+        @include rtl-selector {
+          border-right-color: $input-focus-border-color;
+        }
+      }
+    }
+  }
   .neo-input-hint + & {
     margin-bottom: 0;
   }
 
   @include neo-input-group-children;
-  @include neo-input-group-icon;
+  // @include neo-input-group-icon;
   @include neo-input-group-label-positioning;
   // @include neo-input-group--float-grid;
 }

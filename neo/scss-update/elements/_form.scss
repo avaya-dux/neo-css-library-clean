@@ -12,6 +12,9 @@
       .neo-input-hint {
         color: $state-color-value;
       }
+      .neo-input-textarea__counter {
+        color: $state-color-value;
+      }
 
       .neo-input,
       .neo-chips,
@@ -27,8 +30,8 @@
     > label {
       &::after {
         color: $input-asterix-required-color;
-        content: '*';
-        padding-left: 2px;
+        content: ' *';
+        // padding-left: $token-input-label-letter-spacing;
       }
     }
   }
@@ -37,9 +40,166 @@
 .neo-form {
   &-control {
     margin-bottom: $form-control-margin-bottom;
+    width: fit-content;
+    & > label {
+      font-size: $token-input-label-font-size;
+      line-height: $token-input-label-line-height;
+      letter-spacing: $token-input-label-letter-spacing;
+      font-weight: $token-input-label-font-weight;
+      color: $token-input-label-color;
+    }
 
     @include form--states;
     @include form--required;
+
+    &--textarea {
+      width: fit-content;
+      textarea {
+        margin-top: $input-in-label-margin-top;
+        margin-bottom: $input-in-label-margin-top;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    }
+
+    &--disabled {
+      // selectbox styles
+      .neo-select:after,
+      .neo-select:hover:after {
+        color: $select-disabled-color;
+      }
+
+      .neo-select select,
+      .neo-select:hover select {
+        border-color: $select-disabled-color;
+        background-color: $select-disabled-bg;
+        color: $select-disabled-color;
+        cursor: not-allowed;
+      }
+
+      .neo-input-editable__wrapper {
+        & .neo-input-edit__icon,
+        & .neo-input-editable__close {
+          background-color: $input-disabled-bg;
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+      }
+      &:hover {
+        .neo-input-editable__wrapper {
+          border-color: $token-input-border-disabled-color;
+        }
+      }
+      &[dir='rtl'] {
+        .neo-input-group .neo-input-group__addon,
+        .neo-input-group:hover .neo-input-group__addon {
+          &:first-child {
+            border-left-color: $token-input-border-disabled-color;
+            &:hover {
+              border-left-color: $token-input-border-disabled-color;
+            }
+          }
+          &:last-child {
+            border-right-color: $token-input-border-disabled-color;
+            &:hover {
+              border-right-color: $token-input-border-disabled-color;
+            }
+          }
+        }
+      }
+
+      .neo-input-group {
+        border-color: $token-input-border-disabled-color;
+        &:hover {
+          border-color: $token-input-border-disabled-color;
+        }
+      }
+      .neo-input-group .neo-input-group__addon,
+      .neo-input-group:hover .neo-input-group__addon {
+        &:first-child {
+          border-right-color: $token-input-border-disabled-color;
+          &:hover {
+            border-right-color: $token-input-border-disabled-color;
+          }
+        }
+        &:last-child {
+          border-left-color: $token-input-border-disabled-color;
+          &:hover {
+            border-left-color: $token-input-border-disabled-color;
+          }
+        }
+      }
+      .neo-input-group:hover .neo-input {
+        border-color: $token-input-border-disabled-color;
+      }
+      .neo-input-group .neo-input,
+      .neo-input-group .neo-input-group__addon {
+        background-color: $input-disabled-bg;
+        color: $input-disabled-color;
+        cursor: not-allowed;
+      }
+      .neo-input-icon__wrapper {
+        background-color: $input-disabled-bg;
+        color: $input-disabled-color;
+        cursor: not-allowed;
+        & .neo-input {
+          background-color: $input-disabled-bg;
+          border-color: $token-input-border-disabled-color;
+          color: $input-disabled-color;
+          cursor: not-allowed;
+        }
+      }
+      textarea {
+        border-color: $token-input-border-disabled-color;
+        background-color: $input-disabled-bg;
+        &:hover {
+          border-color: $token-input-border-disabled-color;
+          cursor: not-allowed;
+        }
+      }
+    }
+    &--error {
+      &[dir='rtl'] {
+        .neo-input-group .neo-input-group__addon {
+          &:first-child {
+            border-left-color: $token-input-border-error-color;
+          }
+          &:last-child {
+            border-right-color: $token-input-border-error-color;
+          }
+        }
+      }
+      .neo-input-group {
+        border-color: $token-input-border-error-color;
+        // &:hover {
+        //   border-color: $token-input-border-error-color;
+        // }
+      }
+      .neo-input-group .neo-input-group__addon {
+        &:first-child {
+          border-right-color: $token-input-border-error-color;
+          // &:hover {
+          //   border-right-color: $token-input-border-error-color;
+          // }
+        }
+        &:last-child {
+          border-left-color: $token-input-border-error-color;
+          // &:hover {
+          //   border-left-color: $token-input-border-error-color;
+          // }
+        }
+      }
+      .neo-input-group:hover .neo-input {
+        border-color: $token-input-border-disabled-color;
+      }
+      .neo-input-editable__wrapper {
+        border-color: $token-input-border-error-color;
+      }
+      textarea {
+        border-color: $token-input-border-error-color;
+      }
+    }
   }
 
   &--inline {

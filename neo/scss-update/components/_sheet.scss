@@ -1,12 +1,15 @@
 %sheet {
-  width: $sheet-width;
-  min-height: $sheet-min-height;
+  // width: $sheet-width;
+  width: auto;
+  // min-height: $sheet-min-height;
   padding: $sheet-padding;
-  transition: $sheet-transition;
+  transition-duration: $sheet-transition-duration;
+  transition-timing-function: $sheet-transition-timing-function;
   display: flex;
   flex-direction: column;
   z-index: 9999;
   box-shadow: $sheet-shadow;
+  background-color: $sheet-background;
 }
 
 @mixin sheet-header {
@@ -44,6 +47,32 @@
     &--right {
       display: flex;
       justify-content: space-between;
+      align-items: center;
+    }
+    &__action {
+      border: 0;
+      color: $global-icon-color;
+      //   border-radius: 100%;
+      cursor: pointer;
+      display: flex;
+      flex-grow: 0;
+      flex-shrink: 0;
+      //   font-size: 0;
+      background: transparent;
+      outline: none;
+      padding: 0;
+      pointer-events: auto;
+      position: relative;
+      text-align: center;
+      margin-right: 16px;
+      margin-left: auto;
+      @include rtl-selector {
+        margin-left: 16px;
+        margin-right: auto;
+      }
+      &:focus {
+        box-shadow: $input-focus-shadow;
+      }
     }
   }
 }

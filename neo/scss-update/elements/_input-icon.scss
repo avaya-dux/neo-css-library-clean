@@ -1,19 +1,35 @@
 // new input icon classes
 
+// icon wrapper
+
 .neo-input-icon {
   position: relative;
 
+  // new class name of div
+  .neo-input-icon__wrapper {
+    display: flex;
+    margin-top: $input-in-label-margin-top;
+    margin-bottom: $input-in-label-margin-top;
+    position: relative;
+  }
+
   .neo-input {
+    flex-grow: 1;
+
+    &:first-child {
+      padding-right: $input-padding-x + $input-icon-size;
+    }
+
     &:not(:first-child) {
-      padding-left: $input-group-icon-padding;
+      padding-left: $input-padding-x + $input-icon-size;
       @include rtl-selector {
         padding-left: 0;
-        padding-right: $input-group-icon-padding;
+        padding-right: $input-padding-x + $input-icon-size;
       }
     }
 
-    &:not(:last-child) {
-      padding-right: $input-group-icon-padding;
+    &:not(:last-child):not(:first-child) {
+      padding-right: $input-padding-x + $input-icon-size;
     }
 
     + [class*='aoc-'],
@@ -27,11 +43,36 @@
   [class*='neo-icon'] {
     align-items: center;
     display: inline-flex;
-    height: $input-group-icon-height;
+    height: $input-height;
     justify-content: center;
-    padding: $input-group-icon-offset;
+    padding: $input-padding-x $input-padding-y;
     @include position(absolute, auto, auto, 0, 0);
-    @include rtl-selector {
+  }
+
+  // rtl code
+
+  &[dir='rtl'] {
+    .neo-input {
+      &:first-child {
+        padding-right: $input-padding-x;
+        padding-left: $input-padding-x + $input-icon-size;
+      }
+      &:not(:first-child) {
+        padding-right: $input-padding-x + $input-icon-size;
+        padding-left: $input-padding-x;
+      }
+
+      &:not(:last-child):not(:first-child) {
+        padding-left: $input-padding-x + $input-icon-size;
+        padding-right: $input-padding-x + $input-icon-size;
+      }
+    }
+    .neo-input + [class*='neo-icon']:not(:first-child) {
+      left: 0;
+      right: auto;
+    }
+    [class*='aoc-'],
+    [class*='neo-icon'] {
       @include position(absolute, auto, 0, 0, auto);
     }
   }

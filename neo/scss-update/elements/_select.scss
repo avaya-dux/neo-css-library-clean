@@ -22,6 +22,7 @@
     display: block;
     font-size: $select-font-size;
     line-height: $select-line-height;
+    letter-spacing: $select-letter-spacing;
     min-height: $select-height;
     padding: $select-padding-y $select-offset-x $select-padding-y
       $select-padding-x;
@@ -59,6 +60,7 @@
         width: 1.3em;
         text-align: center;
         display: inline-block;
+        vertical-align: middle;
       }
       &:checked::before {
         font-family: 'updated-neo-icons';
@@ -85,8 +87,9 @@
 
 @mixin neo-select-focus {
   &:focus {
-    box-shadow: $input-focus-shadow;
+    // box-shadow: $input-focus-shadow;
     outline: 0;
+    border-color: $input-focus-border-color;
   }
 }
 
@@ -108,10 +111,11 @@
     top: 50%;
     transform: translateY(-50%);
     transition: $select-transition;
-    width: $select-icon-width;
-    &:hover {
-      background-color: $select-hover-bg;
-    }
+    font-size: $select-icon-font-size;
+    vertical-align: middle;
+    // &:hover {
+    //   background-color: $select-hover-bg;
+    // }
     &[disabled] {
       color: $select-disabled-color;
     }
@@ -124,8 +128,24 @@
 
 @mixin neo-select-spinner {
   &__spinner {
-    @include neo-spinner;
-    @include neo-select-spinner-override;
+    & select {
+      padding-left: $select-offset-x;
+    }
+
+    &::before {
+      font-family: 'updated-neo-icons';
+      content: $spinner-icon;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      left: $select-padding-x;
+      top: 25%;
+      transform: translateY(-50%);
+      // transition: $select-transition;
+      font-size: $select-icon-font-size;
+
+      @include spinner-animation;
+    }
   }
 }
 
@@ -135,11 +155,12 @@
   width: 100%;
 
   &:not(.neo-select--multiple)::after {
-    height: $select-icon-height;
+    // height: $select-icon-height;
     left: auto;
     margin: 0;
-    top: $select-icon-width / 2;
-    width: $select-icon-width;
+    top: $select-icon-font-size / 2;
+    // width: $select-icon-width;
+    font-size: $select-icon-font-size;
     content: '';
     @include spinner-animation;
   }
@@ -172,9 +193,22 @@
 // }
 
 .neo-select {
-  border-radius: 4px;
+  border-radius: $select-border-radius;
+  // margin: $select-vertical-margin 0px;
+  label > &,
+  label + & {
+    margin: $select-vertical-margin 0px;
+  }
+  &:hover {
+    &:after {
+      color: $token-input-border-hover-color;
+    }
+    select {
+      border-color: $token-input-border-hover-color;
+    }
+  }
   & select {
-    border-radius: 4px;
+    border-radius: $select-border-radius;
   }
   @extend %neo-select;
 

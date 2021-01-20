@@ -1,5 +1,11 @@
 // updated badge styles
 
+// color for spans with badge
+
+span.neo-badge {
+  color: $global-text-color;
+}
+
 .neo-badge {
   $badge-size: round($badge-font-size * 1.3);
 
