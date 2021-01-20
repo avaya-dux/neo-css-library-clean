@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
-<resources>
-    <item name="tokenBorderRadius4Px">4px</item>
-    <item name="tokenBorderRadius16Px">16px</item>
-    <item name="tokenBorderRadius100">100%</item>
-    
-</resources>
