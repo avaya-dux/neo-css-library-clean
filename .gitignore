@@ -120,12 +120,14 @@ dist
 
 # project-specific files and folders
 
+.vscode
 build/
 neo/combine/
 neo/css/
 neo/demo
 neo/scss
 neo/scss-update-tokens
+placeholders-notes/
 x-icon/
 x-icons/
 formatter.html
