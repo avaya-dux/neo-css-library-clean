@@ -185,51 +185,67 @@ $neo-border-colors: map-merge(
   $neo-border-colors
 );
 
-$neo-navbar-colors: () !default;
+// link color variables
 
-$neo-navbar-colors: map-merge(
-  (
-    ready: $token-color-green-100,
-    not-ready: $token-color-orange-100,
-    connected: $token-color-base-100,
-  ),
-  $neo-navbar-colors
-);
-
-$neo-navbar-pill-colors: () !default;
-
-$neo-navbar-pill-colors: map-merge(
-  (
-    ready: $token-color-green-600,
-    not-ready: $token-color-orange-600,
-    connected: $token-color-base-600,
-  ),
-  $neo-navbar-pill-colors
-);
+:root {
+  --link-color: #{$token-color-blue-500};
+}
+.dark {
+  --link-color: #{$token-color-blue-400};
+}
 
 // Link colors
-$link-color: $token-color-blue-500 !default;
-$link-hover-color: $token-color-blue-500 !default;
+$link-color: var(--link-color) !default;
+$link-hover-color: var(--link-color) !default;
 $link-hover-decoration: none !default;
 
 //
 // Global
 //
 
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --icon-color: #{$token-color-base-1000};
+//     --global-font-color: #{$token-color-base-1000};
+//     --global-background: #{$token-color-base-0};
+//     --global-text-inverse-color: #{$token-color-base-0};
+//     --global-disabled-color: #{$token-color-base-500};
+//     --global-disabled-background: #{$token-color-base-100};
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --icon-color: #{$token-color-base-100};
+//     --global-font-color: #{$token-color-base-100};
+//     --global-background: #{$token-color-base-900};
+//     --global-text-inverse-color: #{$token-color-base-900};
+//     --global-disabled-color: #{$token-color-base-400};
+//     --global-disabled-background: #{$token-color-base-800};
+//   }
+// }
+
 // global color variables
 
 :root {
   --icon-color: #{$token-color-base-1000};
   --global-font-color: #{$token-color-base-1000};
+  --global-background: #{$token-color-base-0};
+  --global-text-inverse-color: #{$token-color-base-0};
+  --global-disabled-color: #{$token-color-base-500};
+  --global-disabled-background: #{$token-color-base-100};
 }
 .dark {
   --icon-color: #{$token-color-base-100};
   --global-font-color: #{$token-color-base-100};
+  --global-background: #{$token-color-base-900};
+  --global-text-inverse-color: #{$token-color-base-900};
+  --global-disabled-color: #{$token-color-base-400};
+  --global-disabled-background: #{$token-color-base-800};
 }
 
-$global-background: $token-color-base-0 !default;
+$global-background: var(--global-background) !default;
 $global-text-color: var(--global-font-color) !default;
-$global-text-inverse-color: $token-color-base-0 !default;
+$global-text-inverse-color: var(--global-text-inverse-color) !default;
 $global-font-size: $token-web-typography-web-body-regular-font-size !default;
 $global-font-size-x-small: $token-web-typography-web-tiny-body-font-size !default;
 $global-font-size-small: $token-web-typography-web-small-body-font-size !default;
@@ -251,8 +267,8 @@ $global-icon-offset: $global-spacer-large !default;
 $global-left: if($global-text-direction == rtl, right, left) !default;
 $global-right: if($global-text-direction == rtl, left, right) !default;
 $global-opacity: 0.5;
-$global-disabled-color: $token-color-base-500;
-$global-disabled-bg: $token-color-base-100;
+$global-disabled-color: var(--global-disabled-color);
+$global-disabled-bg: var(--global-disabled-background);
 
 // Typography
 
@@ -353,30 +369,63 @@ $form-control-margin-bottom: $global-spacer-x-large !default;
 //           src/scss/elements/_input-hint.scss
 //
 
-$input-asterix-color: $token-input-error-helper-color !default;
-// color-red-500
-@at-root [theme='dark'] {
-  $input-asterix-color: $token-color-red-400 !default;
+// Input color variables
+
+:root {
+  --input-asterix-color: #{$token-input-error-helper-color};
+  --input-background-color: #{$token-color-base-0};
+  --input-border-color: #{$token-color-base-400};
+  --input-focus-border-color: #{$token-input-border-active-color};
+  --input-font-color: #{$token-input-filled-color};
+  --input-placeholder-font-color: #{$token-input-placeholder-color};
+  --input-hint-color: #{$token-input-helper-color};
+  --input-disabled-bg: #{$token-input-disabled-bg-color};
+  --input-disabled-color: #{$token-input-disabled-text-color};
+  --input-border-error-color: #{$token-input-border-error-color};
+  --input-label-color: #{$token-input-label-color};
+  --input-border-disabled-color: #{$token-color-base-400};
+  --input-border-hover-color: #{$token-input-border-hover-color};
+  --input-addon-font-color: #{$token-color-base-600};
+}
+.dark {
+  --input-asterix-color: #{$token-color-red-400};
+  --input-background-color: #{$token-color-base-900};
+  --input-border-color: #{$token-color-base-500};
+  --input-focus-border-color: #{$token-color-blue-400};
+  --input-font-color: #{$token-color-base-100};
+  --input-placeholder-font-color: #{$token-color-base-400};
+  --input-hint-color: #{$token-color-base-400};
+  --input-disabled-bg: #{$token-color-base-800};
+  --input-disabled-color: #{$token-color-base-500};
+  --input-border-error-color: #{$token-color-red-400};
+  --input-label-color: #{$token-color-base-100};
+  --input-border-disabled-color: #{$token-color-base-500};
+  --input-border-hover-color: #{$token-color-base-100};
+  --input-addon-font-color: #{$token-color-base-200};
 }
 
-// Input color variables
-$input-asterix-required-color: $input-asterix-color !default;
-$input-background-color: $global-background !default;
-$input-required-background: $global-background !default;
-$input-border-color: $token-input-border-color !default;
-$input-focus-border-color: $token-input-border-active-color !default;
-$input-focus-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5) !default;
-$input-font-color: $token-input-filled-color !default;
-$input-placeholder-font-color: $token-input-placeholder-color !default;
-$input-hint-color: $token-input-helper-color !default;
-$input-disabled-bg: $token-input-disabled-bg-color !default;
-$input-disabled-color: $token-input-disabled-text-color !default;
+$input-label-color: var(--input-label-color) !default;
+$input-asterix-required-color: var(--input-asterix-color) !default;
+$input-background-color: var(--input-background-color) !default;
+$input-required-background: $input-background-color !default;
+$input-border-color: var(--input-border-color) !default;
+$input-border-hover-color: var(--input-border-hover-color) !default;
+$input-border-disabled-color: var(--input-border-disabled-color) !default;
+$input-focus-border-color: var(--input-focus-border-color) !default;
+// $input-focus-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5) !default;
+$input-font-color: var(--input-font-color) !default;
+$input-placeholder-font-color: var(--input-placeholder-font-color) !default;
+$input-hint-color: var(--input-hint-color) !default;
+$input-disabled-bg: var(--input-disabled-bg) !default;
+$input-disabled-color: var(--input-disabled-color) !default;
 $input-clear-button-color: $input-font-color !default;
+$input-border-error-color: var(--input-border-error-color) !default;
+$input-addon-font-color: var(--input-addon-font-color) !default;
 $input-state-color-map: () !default;
 $input-state-color-map: map-merge(
   (
-    success: #939393,
-    error: $token-input-border-error-color,
+    // success: #939393,
+    error: var(--input-border-error-color)
   ),
   $input-state-color-map
 );
@@ -413,10 +462,6 @@ $input-hint-letter-spacing: $token-input-helper-letter-spacing !default;
 // Element name: Select
 // Location: src/scss/elements/_select.scss
 //
-
-// Select color variables
-// --
-// --
 
 $select-transition: 0.25s all ease !default;
 $select-background-color: $input-background-color !default;
@@ -457,10 +502,25 @@ $select-multiple-unselected-icon: $token-icons-neo-icon-close !default;
 // Location: src/scss/elements/_radio-button.scss
 //
 
-$radio-background: $token-radio-background-color !default;
-$radio-background-active-color: $token-radio-active-color !default;
-$radio-border: $token-radio-border !default;
-$radio-disabled-border: $token-radio-disabled-border !default;
+// radio colour variables
+
+:root {
+  --radio-background: #{$token-radio-background-color};
+  --radio-background-active-color: #{$token-radio-active-color};
+  --radio-border: #{$token-color-blue-500};
+  --radio-disabled-border: #{$token-radio-disabled-border};
+}
+.dark {
+  --radio-background: #{$token-color-base-900};
+  --radio-background-active-color: #{$token-color-blue-400};
+  --radio-border: #{$token-color-blue-400};
+  --radio-disabled-border: #{$token-color-blue-600};
+}
+
+$radio-background: var(--radio-background) !default;
+$radio-background-active-color: var(--radio-background-active-color) !default;
+$radio-border: var(--radio-border) !default;
+$radio-disabled-border: var(--radio-disabled-border) !default;
 $radio-text-offset: $token-radio-text-offset !default;
 // $radio-label-offset-x: $global-spacer-x-large !default;
 // $radio-disabled-opacity: $global-opacity !default;
@@ -532,7 +592,7 @@ $button-transition: all $global-transition-duration ease-in-out !default;
 // need to re-format to ensure grabbing proper styles for token
 $button-box-shadow: $token-shadows-elevation-200-x-offset
   $token-shadows-elevation-200-y-offset $token-shadows-elevation-200-radius
-  $token-shadows-elevation-200-color !default;
+  var(--button-shadow-color) !default;
 //
 $button-text-color: var(--button-text-color) !default;
 $button-secondary-border-width: $token-button-border-width !default;
@@ -567,6 +627,7 @@ $button-color-alert-rgb-light: 217, 61, 50;
 $button-color-alert-rgb-dark: 229, 105, 96;
 
 :root {
+  --button-shadow-color: #{$token-shadows-elevation-200-color};
   --button-text-color: #{$token-button-font-color};
   --button-color-primary: #{$token-button-default-info-color};
   --button-color-primary-rgb: #{$button-color-primary-rgb-light};
@@ -592,6 +653,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --button-tertiary-hover-background-color: #{$token-color-base-100};
 }
 .dark {
+  --button-shadow-color: #{$token-shadows-elevationdark-200-color};
   --button-text-color: #{$token-color-base-900};
   --button-color-primary: #{$token-color-blue-400};
   --button-color-primary-rgb: #{$button-color-primary-rgb-dark};
@@ -672,12 +734,23 @@ $neo-button-group-offset: 1px;
 // Location: src/scss/elements/_arrow.scss
 //
 
+// arrow colour variables
+
+:root {
+  --arrow-outer-color: #{$token-color-base-900};
+  --arrow-color: #{$token-color-base-0};
+}
+.dark {
+  --arrow-outer-color: #{$token-color-base-0};
+  --arrow-color: #{$token-color-base-900};
+}
+
 $arrow-width: $global-spacer-x-large !default;
 $arrow-offset: $global-spacer-x-large !default;
 $arrow-height: $arrow-width/2 !default;
 $arrow-border-width: 8px !default;
-$arrow-outer-color: $token-color-base-1000;
-$arrow-color: $global-background;
+$arrow-outer-color: var(--arrow-outer-color);
+$arrow-color: var(--arrow-color);
 
 //
 // Component name: Checkbox
@@ -785,19 +858,48 @@ $notification-large-icon-size: $token-notification-large-icon-size !default;
 $notification-elevation-x-offset: $token-notification-elevation-x-offset !default;
 $notification-elevation-y-offset: $token-notification-elevation-y-offset !default;
 $notification-elevation-radius: $token-notification-elevation-radius !default;
-$notification-elevation-color: $token-notification-elevation-color !default;
+$notification-elevation-color: var(--notification-elevation-color) !default;
 
 // updated notification colors
+
+// notification color variables
+
+:root {
+  --notification-elevation-color: #{$token-notification-elevation-color};
+  --notification-success-color: #{$token-notification-success-color};
+  --notification-success-icon-color: #{$token-notification-success-icon-color};
+  --notification-warning-color: #{$token-notification-warning-color};
+  --notification-warning-icon-color: #{$token-notification-warning-icon-color};
+  --notification-alert-color: #{$token-notification-alert-color};
+  --notification-alert-icon-color: #{$token-notification-alert-icon-color};
+  --notification-info-color: #{$token-notification-info-color};
+  --notification-info-icon-color: #{$token-notification-info-icon-color};
+  --notification-event-color: #{$token-notification-event-color};
+  --notification-event-icon-color: #{$token-notification-event-icon-color};
+}
+.dark {
+  --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
+  --notification-success-color: #{$token-color-green-800};
+  --notification-success-icon-color: #{$token-color-green-200};
+  --notification-warning-color: #{$token-color-orange-800};
+  --notification-warning-icon-color: #{$token-color-orange-200};
+  --notification-alert-color: #{$token-color-red-800};
+  --notification-alert-icon-color: #{$token-color-red-200};
+  --notification-info-color: #{$token-color-blue-800};
+  --notification-info-icon-color: #{$token-color-blue-200};
+  --notification-event-color: #{$token-color-base-800};
+  --notification-event-icon-color: #{$token-color-base-200};
+}
 
 $neo-notification-colors: () !default;
 
 $neo-notification-colors: map-merge(
   (
-    success: $token-notification-success-color,
-    warning: $token-notification-warning-color,
-    alert: $token-notification-alert-color,
-    info: $token-notification-info-color,
-    event: $token-notification-event-color,
+    success: var(--notification-success-color),
+    warning: var(--notification-warning-color),
+    alert: var(--notification-alert-color),
+    info: var(--notification-info-color),
+    event: var(--notification-event-color),
   ),
   $neo-notification-colors
 );
@@ -822,11 +924,11 @@ $neo-icon-colors: () !default;
 
 $neo-icon-colors: map-merge(
   (
-    success: $token-notification-success-icon-color,
-    warning: $token-notification-warning-icon-color,
-    alert: $token-notification-alert-icon-color,
-    info: $token-notification-info-icon-color,
-    event: $token-notification-event-icon-color,
+    success: var(--notification-success-icon-color),
+    warning: var(--notification-warning-icon-color),
+    alert: var(--notification-alert-icon-color),
+    info: var(--notification-info-icon-color),
+    event: var(--notification-event-icon-color),
   ),
   $neo-icon-colors
 );
@@ -890,8 +992,59 @@ $close-sizes: map-merge(
 // Location: src/scss/components/_navbar.scss
 //
 
+// navbar color variables:first
+:root {
+  --navbar-border-bottom-color: #{$token-color-base-200};
+  --navbar-ready-color: #{$token-color-green-100};
+  --navbar-not-ready-color: #{$token-color-orange-100};
+  --navbar-connected-color: #{$token-color-base-100};
+  --navbar-pill-ready-color: #{$token-color-green-600};
+  --navbar-pill-not-ready-color: #{$token-color-orange-600};
+  --navbar-pill-connected-color: #{$token-color-base-600};
+  --navbar-bg-color-hover: #{$token-color-blue-100};
+  --navbar-default-icon-color: #{$token-color-base-800};
+  --navbar-icon-hover-color: #{$token-color-blue-600};
+  --navbar-icon-selected-color: #{$token-color-blue-500};
+}
+.dark {
+  --navbar-border-bottom-color: #{$token-color-base-600};
+  --navbar-ready-color: #{$token-color-green-800};
+  --navbar-not-ready-color: #{$token-color-orange-800};
+  --navbar-connected-color: #{$token-color-base-800};
+  --navbar-pill-ready-color: #{$token-color-green-200};
+  --navbar-pill-not-ready-color: #{$token-color-orange-200};
+  --navbar-pill-connected-color: #{$token-color-base-200};
+  --navbar-bg-color-hover: #{$token-color-blue-800};
+  --navbar-default-icon-color: #{$token-color-base-100};
+  --navbar-icon-hover-color: #{$token-color-blue-200};
+  --navbar-icon-selected-color: #{$token-color-blue-400};
+}
+
+$neo-navbar-colors: () !default;
+
+$neo-navbar-colors: map-merge(
+  (
+    ready: var(--navbar-ready-color),
+    not-ready: var(--navbar-not-ready-color),
+    connected: var(--navbar-connected-color),
+  ),
+  $neo-navbar-colors
+);
+
+$neo-navbar-pill-colors: () !default;
+
+$neo-navbar-pill-colors: map-merge(
+  (
+    ready: var(--navbar-pill-ready-color),
+    not-ready: var(--navbar-pill-not-ready-color),
+    connected: var(--navbar-pill-connected-color),
+  ),
+  $neo-navbar-pill-colors
+);
+
 $navbar-background-color: $global-background !default;
-$navbar-text-color: var-color-name(navbar-text) !default;
+$navbar-text-color: $global-text-color !default;
+$navbar-border-bottom-color: var(--navbar-border-bottom-color) !default;
 $navbar-height: 58px !default;
 $navbar-padding-x: $global-spacer-x-large !default;
 $navbar-z: 30 !default;
@@ -911,10 +1064,10 @@ $navbar-item-active-color: $navbar-item-color !default;
 $navbar-item-disabled-color: darken-var($navbar-text-color, 30%) !default;
 $navbar-item-hover-background-color: transparent !default;
 $navbar-item-active-background-color: transparent !default;
-$navbar-background-color-hover: $token-color-blue-100 !default;
-$navbar-default-icon-color: $token-color-base-800 !default;
-$navbar-icon-hover-color: $token-color-blue-600 !default;
-$navbar-icon-selected-color: $token-color-blue-500 !default;
+$navbar-background-color-hover: var(--navbar-bg-color-hover) !default;
+$navbar-default-icon-color: var(--navbar-default-icon-color) !default;
+$navbar-icon-hover-color: var(--navbar-icon-hover-color) !default;
+$navbar-icon-selected-color: var(--navbar-icon-selected-color) !default;
 
 $navbar-icon-button-width: $token-navbar-button-width !default;
 $navbar-icon-size: $token-navbar-icon-size !default;
@@ -970,29 +1123,46 @@ $navbar-icon-size: $token-navbar-icon-size !default;
 // Location: src/scss/components/_group-list.scss
 //
 
+// group list colour variables
+
+:root {
+  --list-hover: #{$token-list-hover};
+  --list-white: #{$token-color-base-100};
+  --list-disabled-bg-color: #{$token-accordion-hover-disabled-background-color};
+  --list-disabled-hover-color: #{$token-accordion-hover-disabled-color};
+  --list-section-background: #{$token-color-base-100};
+}
+.dark {
+  --list-hover: #{$token-color-blue-800};
+  --list-white: #{$token-color-base-800};
+  --list-disabled-bg-color: #{$token-color-base-800};
+  --list-disabled-hover-color: #{$token-color-base-400};
+  --list-section-background: #{$token-color-base-800};
+}
+
 $group-list-item-background: $global-background !default;
 $group-list-item-color: $global-text-color !default;
 $group-list-item-opacity: $global-opacity !default;
-$group-list-item-hover: $token-list-hover !default;
+$group-list-item-hover: var(--list-hover) !default;
 $group-list-border-width: $token-list-border-bottom-width !default;
 $group-list-borderless: 0 !default;
-$group-list-border-color: $token-list-border-bottom-color !default;
+// $group-list-border-color: $token-list-border-bottom-color !default;
 $group-list-radius: $global-radius !default;
 $group-list-font-size: $token-list-font-size !default;
 $group-list-padding-y: $global-spacer-large !default;
 $group-list-padding-x: $global-spacer-x-large !default;
 $group-list-spacer: $global-spacer !default;
 $group-list-transition: background-color $global-transition-duration ease-in-out !default;
-$group-list-white: $token-color-base-100 !default;
-$group-list-disabled-bg-color: $token-accordion-hover-disabled-background-color !default;
-$group-list-disabled-hover-color: $token-accordion-hover-disabled-color !default;
+$group-list-white: var(--list-white) !default;
+$group-list-disabled-bg-color: var(--list-disabled-bg-color) !default;
+$group-list-disabled-hover-color: var(--list-disabled-hover-color) !default;
 // new variables for Neo 3.2.0 Components
 // hard-coded for now
 $group-list-section-width: 100% !default;
 $group-list-section-height: 44px !default;
 // end of hard-coding
 $group-list-section-padding: $token-list-section-padding !default;
-$group-list-section-background: $token-color-base-100;
+$group-list-section-background: var(--list-section-background);
 $group-list-section-action-padding: $token-list-section-action-padding !default;
 
 // $list-vertical-padding: $token-list-vertical-padding !default;
@@ -1004,21 +1174,42 @@ $group-list-section-action-padding: $token-list-section-action-padding !default;
 
 // list items
 
+// list item color variables
+
+:root {
+  --list-item-divider: #{$token-color-base-200};
+  --list-item-subtext: #{$token-color-base-800};
+}
+.dark {
+  --list-item-divider: #{$token-color-base-600};
+  --list-item-subtext: #{$token-color-base-100};
+}
+
+$list-item-subtext-color: var(--list-item-subtext) !default;
 $list-item-vertical-padding: $token-list-items-vertical-padding !default;
 $list-item-horizontal-padding: $token-list-items-horizontal-padding !default;
 $list-item-margin-right: $token-list-items-margin-right !default;
 $list-item-min-width: $token-list-items-min-width !default;
 $list-item-min-height: $token-list-items-min-height !default;
-$list-item-divider: $token-list-items-divider !default;
+$list-item-divider: 1px solid var(--list-item-divider) !default;
 
 //
 // Component name: Accordion
 // Location: src/scss/components/_accordion.scss
 //
 
+// accordion colour variables
+
+:root {
+  --accordion-border-color: #{$token-accordion-border-color};
+}
+.dark {
+  --accordion-border-color: #{$token-color-base-500};
+}
+
 $accordion-body-background: $group-list-item-background !default;
 $accordion-border-width: $token-accordion-border-width !default;
-$accordion-border-color: $token-accordion-border-color !default;
+$accordion-border-color: var(--accordion-border-color) !default;
 $accordion-icon-offset: 10px !default;
 $accordion-icon-transition: all $global-transition-duration ease !default;
 $accordion-icon-animation: rotate(0) !default;
@@ -1037,9 +1228,11 @@ $accordion-contracted-icon: $token-icons-neo-icon-chevron-up !default;
 
 :root {
   --sheet-background: #{$token-color-base-0};
+  --sheet-shadow: #{$token-shadows-elevation-300-color};
 }
 .dark {
   --sheet-background: #{$token-color-base-900};
+  --sheet-shadow: #{$token-shadows-elevationdark-300-color};
 }
 
 $sheet-width: $token-sheet-width !default;
@@ -1050,12 +1243,27 @@ $sheet-transition-timing-function: $token-interactivity-motion-ease-in !default;
 $sheet-background: var(--sheet-background) !default;
 $sheet-shadow: $token-shadows-elevation-300-x-offset
   $token-shadows-elevation-300-y-offset $token-shadows-elevation-300-radius
-  $token-shadows-elevation-300-color !default;
+  var(--sheet-shadow) !default;
 
 //
 // Element name: Pagination
 // Location: src/scss/elements/_pagination.scss
 //
+
+// pagination color variables:first
+
+:root {
+  --pagination-color: #{$token-table-pagination-color};
+  --pagination-border-color-hover: #{$token-table-pagination-active-div-border-color};
+  --pagination-active-background-color: #{$token-table-pagination-active-background-color};
+  --pagination-item-color-current: #{$token-table-pagination-active-color};
+}
+.dark {
+  --pagination-color: #{$token-color-blue-400};
+  --pagination-border-color-hover: #{$token-color-blue-400};
+  --pagination-active-background-color: #{$token-color-blue-400};
+  --pagination-item-color-current: #{$token-color-base-800};
+}
 
 $pagination-font-size: $token-table-font-size !default;
 $pagination-label-font-size: $global-font-size-small !default;
@@ -1063,31 +1271,58 @@ $pagination-spacer: $global-spacer !default;
 $pagination-btn-background: $global-background !default;
 $pagination-btn-padding: $global-spacer-small $global-spacer-large !default;
 $pagination-border-radius: $token-table-pagination-active-div-border-radius !default;
-$pagination-border-color-hover: $token-table-pagination-active-div-border-color !default;
+$pagination-border-color-hover: var(--pagination-border-color-hover) !default;
 $pagination-border: $token-table-pagination-active-div-border-width
   $token-table-pagination-active-div-border-style
-  $token-table-pagination-active-div-border-color !default;
+  var(--pagination-border-color-hover) !default;
 $pagination-dots-color: $global-text-color !default;
-$pagination-color: $token-table-pagination-color !default;
+$pagination-color: var(--pagination-color) !default;
 $pagination-margin: $global-spacer !default;
 $pagination-transition: $global-transition-duration !default;
 $pagination-radius: $global-radius !default;
 $pagination-min-width-item: $global-font-size-large !default;
-$pagination-item-color-current: $token-table-pagination-active-color !default;
+$pagination-item-color-current: var(--pagination-item-color-current) !default;
 $pagination-dots-size: 20px !default;
 $pagination-disabled-bg: $global-disabled-bg !default;
 $pagination-disabled-color: $global-disabled-color !default;
-$pagination-black: $token-color-base-1000 !default;
-$pagination-active-color: $token-table-pagination-active-color !default;
-$pagination-hover-background-color: $token-table-pagination-active-background-color !default;
+$pagination-black: $global-text-color !default;
+$pagination-active-color: var(--pagination-item-color-current) !default;
+$pagination-hover-background-color: var(
+  --pagination-active-background-color
+) !default;
 
 //
 // Element name: Tooltip
 // Location: src/scss/elements/_tooltip.scss
 //
 
-$tooltip-background: $token-tooltip-background-color !default;
-$tooltip-color: $token-tooltip-color !default;
+// Tooltip color variables
+
+:root {
+  --tooltip-background-color: #{$token-tooltip-background-color};
+  --tooltip-color: #{$token-tooltip-color};
+}
+.dark {
+  --tooltip-background-color: #{$token-color-base-0};
+  --tooltip-color: #{$token-color-base-800};
+}
+// @media (prefers-color-scheme: light) {
+//   :root {
+//     --tooltip-background-color: #{$token-tooltip-background-color};
+//     --tooltip-color: #{$token-tooltip-color};
+//   }
+// }
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     --tooltip-background-color: #{$token-color-base-0};
+//     --tooltip-color: #{$token-color-base-800};
+//   }
+// }
+
+// neo-theme-default, neo-theme-dark, neo-theme-<<custom>>-default, neo-theme-<<custom>>-dark
+
+$tooltip-background: var(--tooltip-background-color) !default;
+$tooltip-color: var(--tooltip-color) !default;
 $tooltip-width: $token-tooltip-width !default;
 $tooltip-offset: 8px !default;
 $tooltip-animation-duration: $global-transition-duration !default;
@@ -1124,7 +1359,11 @@ $image-thumbnail-border-radius: $global-radius !default;
   --avatar-success-color: #{$token-avatar-border-success};
   --avatar-warning-color: #{$token-avatar-border-warning};
   --avatar-alert-color: #{$token-avatar-border-warning};
-  // --avatar-status-available-color: #{$token-avatar-status-available-color};
+  --avatar-status-available-color: #{$token-avatar-status-available-color};
+  --avatar-status-away-color: #{$token-avatar-status-away-color};
+  --avatar-status-busy-color: #{$token-avatar-status-busy-color};
+  --avatar-status-dnd-color: #{$token-avatar-status-do-not-disturb-color};
+  --avatar-status-offline-color: #{$token-avatar-status-offline-color};
 }
 
 .dark {
@@ -1134,6 +1373,11 @@ $image-thumbnail-border-radius: $global-radius !default;
   --avatar-success-color: #{$token-color-green-400};
   --avatar-warning-color: #{$token-color-orange-400};
   --avatar-alert-color: #{$token-color-red-400};
+  --avatar-status-available-color: #{$token-color-data-viz-categorial-dark-green};
+  --avatar-status-away-color: #{$token-color-data-viz-categorial-dark-orange};
+  --avatar-status-busy-color: #{$token-color-data-viz-categorial-dark-orange};
+  --avatar-status-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+  --avatar-status-offline-color: #{$token-color-base-500};
 }
 //sizes
 $avatar-medium-size: $token-avatar-medium-size !default;
@@ -1179,12 +1423,12 @@ $avatar-status-offline: $token-icons-neo-icon-offline-filled !default;
 $neo-avatar-colors: () !default;
 $neo-avatar-colors: map-merge(
   (
-    primary: $token-avatar-border-primary-info,
-    default: $token-avatar-border-primary-info,
-    success: $token-avatar-border-success,
-    warning: $token-avatar-border-warning,
-    alert: $token-avatar-border-alert,
-    info: $token-avatar-border-primary-info,
+    primary: var(--avatar-primary-color),
+    default: var(--avatar-primary-color),
+    success: var(--avatar-success-color),
+    warning: var(--avatar-warning-color),
+    alert: var(--avatar-alert-color),
+    info: var(--avatar-primary-color),
   ),
   $neo-avatar-colors
 );
@@ -1192,23 +1436,23 @@ $neo-avatar-status: () !default;
 $neo-avatar-status: map-merge(
   (
     available: (
-      color: $token-avatar-status-available-color,
+      color: var(--avatar-status-available-color),
       icon: $token-icons-neo-icon-available-filled,
     ),
     away: (
-      color: $token-avatar-status-away-color,
+      color: var(--avatar-status-away-color),
       icon: $token-icons-neo-icon-away-filled,
     ),
     busy: (
-      color: $token-avatar-status-away-color,
+      color: var(--avatar-status-busy-color),
       icon: $token-icons-neo-icon-busy-filled,
     ),
     do-not-disturb: (
-      color: $token-avatar-status-do-not-disturb-color,
+      color: var(--avatar-status-dnd-color),
       icon: $token-icons-neo-icon-do-not-disturb-filled,
     ),
     offline: (
-      color: $token-avatar-status-offline-color,
+      color: var(--avatar-status-offline-color),
       icon: $token-icons-neo-icon-offline-filled,
     ),
   ),
@@ -1234,8 +1478,27 @@ $neo-avatar-status: map-merge(
 // Location: src/scss/components/_switch.scss
 //
 
-$switch-off-color: $token-switch-off-background-color !default;
-$switch-active-color: $token-switch-on-background-color !default;
+// Switch color variables
+:root {
+  --switch-off-color: #{$token-switch-off-background-color};
+  --switch-on-color: #{$token-switch-on-background-color};
+  --switch-disabled-on-color: #{$token-switch-disabled-on-background-color};
+  --switch-disabled-off-color: #{$token-switch-disabled-off-background-color};
+  --switch-ellipse-color: #{$token-switch-ellipse-color};
+  --switch-elevation-color: #{$token-shadows-elevation-100-color};
+}
+.dark {
+  --switch-off-color: #{$token-color-base-500};
+  --switch-on-color: #{$token-color-blue-400};
+  --switch-disabled-on-color: #{$token-color-blue-600};
+  --switch-disabled-off-color: #{$token-color-base-600};
+  --switch-ellipse-color: #{$token-color-base-900};
+  --switch-elevation-color: #{$token-shadows-elevationdark-100-color};
+}
+
+$switch-elevation-color: var(--switch-elevation-color) !default;
+$switch-off-color: var(--switch-off-color) !default;
+$switch-active-color: var(--switch-on-color) !default;
 $switch-label-height: $token-switch-label-height !default;
 $switch-height: $token-switch-height !default;
 $switch-width: $token-switch-width !default;
@@ -1248,9 +1511,11 @@ $switch-border-radius: $token-switch-border-radius !default;
 $switch-transition: $token-interactivity-motion-fade-fast
   $token-interactivity-motion-ease-out !default;
 // $switch-transition: all 0.25s ease-in-out !default; // need to replace with token
-$switch-disabled-on-background-color: $token-switch-disabled-on-background-color !default;
-$switch-disabled-off-background-color: $token-switch-disabled-off-background-color !default;
-$switch-ellipse-color: $token-switch-ellipse-color !default;
+$switch-disabled-on-background-color: var(--switch-disabled-on-color) !default;
+$switch-disabled-off-background-color: var(
+  --switch-disabled-off-color
+) !default;
+$switch-ellipse-color: var(--switch-ellipse-color) !default;
 $switch-ellipse-box-shadow: $token-switch-ellipse-box-shadow !default;
 
 // Component name: Chip
@@ -1276,8 +1541,8 @@ $chip-width: $token-chips-min-width !default;
 // $chip-offset: ($input-height - $chip-height) / 2 - 1 !default;
 $chip-offset: $token-chips-item-spacing !default;
 
-$chip-font-color: $token-chips-font-color !default;
-$chip-disabled-font-color: $token-chips-disabled-font-color !default;
+$chip-font-color: var(--chip-font-color) !default;
+$chip-disabled-font-color: var(--chip-disabled-font-color) !default;
 // $chip-font-size: $token-chip-font-size !default;
 $chip-font-size: $token-chip-font-size !default;
 $chip-font-weight: $token-chips-font-weight !default;
@@ -1312,6 +1577,8 @@ $chip-close-icon: $token-icons-neo-icon-close !default;
 // Chip color variables
 
 :root {
+  --chip-font-color: #{$token-chips-font-color};
+  --chip-disabled-font-color: #{$token-chips-disabled-font-color};
   --chip-default-color: #{$token-chips-default-bg-color};
   --chip-default-border-color: #{$token-chips-default-border-color};
   --chip-default-hover-bg-color: #{$token-chips-default-hover-bg-color};
@@ -1338,6 +1605,8 @@ $chip-close-icon: $token-icons-neo-icon-close !default;
   --chip-alert-disabled-icon-color: #{$token-chips-alert-disabled-icon-color};
 }
 .dark {
+  --chip-font-color: #{$token-color-base-100};
+  --chip-disabled-font-color: #{$token-color-base-500};
   --chip-default-color: #{$token-color-base-800};
   --chip-default-border-color: #{$token-color-base-500};
   --chip-default-hover-bg-color: #{$token-color-base-600};
@@ -1442,6 +1711,29 @@ $neo-chip-disabled-icon-colors: map-merge(
 // Location: src/scss/components/_tabs.scss
 //
 
+// tabs colour variables
+
+:root {
+  --tab-default-color: #{$token-color-base-800};
+  --tab-background-color: #{$token-tabs-background-color};
+  --tab-background-hover-color: #{$token-color-base-100};
+  --tab-disabled-color: #{$token-tabs-disabled-color};
+  --tab-item-hover-color: #{$token-color-blue-600};
+  --tab-action-color: #{$token-tabs-active-color};
+  --tab-action-disabled-color: #{$token-tabs-active-disabled-color};
+  --tab-carousel-button-color: #{$token-tabs-carousel-button-color};
+}
+.dark {
+  --tab-default-color: #{$token-color-base-100};
+  --tab-background-color: #{$token-color-base-900};
+  --tab-background-hover-color: #{$token-color-base-800};
+  --tab-disabled-color: #{$token-color-base-500};
+  --tab-item-hover-color: #{$token-color-blue-200};
+  --tab-action-color: #{$token-color-blue-400};
+  --tab-action-disabled-color: #{$token-color-blue-600};
+  --tab-carousel-button-color: #{$token-color-blue-400};
+}
+
 $tab-offset: $global-spacer !default;
 $tab-container-margin: 0 6px !default;
 // $tab-border-bottom-color: $token-tabs-border-bottom-color !default;
@@ -1454,11 +1746,12 @@ $tab-min-height-default: 54px !default;
 // $tab-min-height-small: 35px !default;
 // $tab-min-height-medium: 44px !default;
 // $tab-min-height-large: $tab-min-height-default !default;
-$tab-action-color: $token-tabs-active-color !default;
+$tab-hover-bg-color: var(--tab-background-hover-color) !default;
+$tab-action-color: var(--tab-action-color) !default;
 $tab-action-border-bottom-width: $token-tabs-border-width !default;
-$tab-action-active-color: $token-tabs-active-color !default;
-$tab-action-active-border-color: $token-tabs-active-color !default;
-$tab-action-disabled-color: $token-color-base-100 !default;
+$tab-action-active-color: var(--tab-action-color) !default;
+$tab-action-active-border-color: var(--tab-action-color) !default;
+$tab-action-disabled-color: var(--tab-action-disabled-color) !default;
 $tab-action-line-height: $token-tabs-line-height !default;
 $tab-action-padding-default: 15px 15px !default;
 $tab-action-padding-small: 6px 15px !default;
@@ -1472,7 +1765,7 @@ $tab-bordered-border-radius: $global-radius !default;
 $tab-bordered-bg-color: $global-disabled-bg !default;
 $tab-bordered-active-bg-color: transparent !default;
 $tab-bordered-active-border-color: $global-border-color-darker !default;
-$tab-bordered-active-border-bottom-color: $token-tabs-active-color !default;
+$tab-bordered-active-border-bottom-color: var(--tab-action-color) !default;
 $tab-bordered-disabled-bg-color: rgba(
   $tab-bordered-bg-color,
   $global-opacity
@@ -1483,14 +1776,14 @@ $tab-vertical-item-width: 120px !default;
 $tab-vertical-item-max-height: 42px !default;
 $tab-vertical-line-height: 22px !default;
 $tab-vertical-item-padding: $global-spacer !default;
-$tab-disabled-color: $token-tabs-disabled-color !default;
+$tab-disabled-color: var(--tab-disabled-color) !default;
 $tab-disabled-bg-color: transparent !default;
-$tab-item-hover-color: $token-color-blue-600;
+$tab-item-hover-color: var(--tab-item-hover-color);
 $tab-item-max-height: 35px;
 $tab-hover-font-weight: $token-web-typography-fontweight-semibold;
-$tab-default-color: $token-color-base-800;
-$tab-carousel-button-color: $token-tabs-carousel-button-color;
-$tab-background-color: $token-tabs-background-color;
+$tab-default-color: var(--tab-default-color);
+$tab-carousel-button-color: var(--tab-carousel-button-color);
+$tab-background-color: var(--tab-background-color);
 
 @function tab-vertical-marker($color) {
   $result: $color !default;
@@ -1502,8 +1795,41 @@ $tab-background-color: $token-tabs-background-color;
 
 // animation?
 
+// Leftnav color variables:
+
+:root {
+  --leftnav-default-color: #{$token-leftnav-default-color};
+  --leftnav-main-default-disabled-color: #{$token-leftnav-main-default-disabled-color};
+  --leftnav-background-color: #{$token-leftnav-background-color};
+  --leftnav-hover-background-color: #{$token-leftnav-leftnav-hover-bg-color};
+  --leftnav-title-font-color: #{$token-leftnav-title-font-color};
+  --leftnav-main-active-color: #{$token-leftnav-main-active-color};
+  --leftnav-main-active-disabled-color: #{$token-leftnav-main-active-disabled-color};
+  --leftnav-main-hover-color: #{$token-leftnav-main-hover-color};
+  --leftnav-sub-default-color: #{$token-leftnav-sub-default-color};
+  --leftnav-sub-active-color: #{$token-leftnav-sub-active-color};
+  --leftnav-sub-active-hover-color: #{$token-leftnav-sub-hover-color};
+  --leftnav-sub-active-disabled-color: #{$token-leftnav-sub-active-disabled-color};
+  --leftnav-sub-default-disabled-color: #{$token-leftnav-sub-default-disabled-color};
+}
+.dark {
+  --leftnav-default-color: #{$token-color-base-100};
+  --leftnav-main-default-disabled-color: #{$token-color-base-500};
+  --leftnav-background-color: #{$token-color-base-900};
+  --leftnav-hover-background-color: #{$token-color-base-800};
+  --leftnav-title-font-color: #{$token-color-base-400};
+  --leftnav-main-active-color: #{$token-color-blue-400};
+  --leftnav-main-active-disabled-color: #{$token-color-blue-600};
+  --leftnav-main-hover-color: #{$token-color-blue-200};
+  --leftnav-sub-default-color: #{$token-color-base-100};
+  --leftnav-sub-active-color: #{$token-color-blue-400};
+  --leftnav-sub-active-hover-color: #{$token-color-blue-200};
+  --leftnav-sub-active-disabled-color: #{$token-color-blue-600};
+  --leftnav-sub-default-disabled-color: #{$token-color-base-500};
+}
+
 //hover color
-$leftnav-hover-background-color: $token-leftnav-leftnav-hover-bg-color !default;
+$leftnav-hover-background-color: var(--leftnav-hover-background-color) !default;
 //title
 $leftnav-title-height: $token-leftnav-title-height !default;
 $leftnav-title-padding-horizontal: $token-leftnav-title-padding-horizontal !default;
@@ -1512,7 +1838,7 @@ $leftnav-title-font-size: $token-leftnav-title-font-size !default;
 $leftnav-title-font-weight: $token-leftnav-title-font-weight !default;
 $leftnav-title-font-line-height: $token-leftnav-title-line-height !default;
 $leftnav-title-font-letter-spacing: $token-leftnav-title-letter-spacing !default;
-$leftnav-title-font-color: $token-leftnav-title-font-color !default;
+$leftnav-title-font-color: var(--leftnav-title-font-color) !default;
 //link
 $leftnav-link-height: $token-leftnav-link-height !default;
 $leftnav-link-padding-horizontal: $token-leftnav-link-padding-horizontal !default;
@@ -1523,26 +1849,30 @@ $leftnav-link-font-letter-spacing: $token-leftnav-link-letter-spacing !default;
 //main
 $leftnav-collapse-icon-font-size: $token-leftnav-collapse-icon-font-size !default;
 $leftnav-icon-spacing: $token-leftnav-icon-spacing !default;
-$leftnav-background-color: $token-leftnav-background-color !default;
+$leftnav-background-color: var(--leftnav-background-color) !default;
 $leftnav-main-max-width: $token-leftnav-max-width !default;
 $leftnav-main-max-height: $token-leftnav-main-max-height !default;
 $leftnav-main-padding-horizontal: $token-leftnav-main-padding-horizontal !default;
 $leftnav-main-icon-font-size: $token-leftnav-main-icon-font-size !default;
 $leftnav-main-active-border-width: $token-leftnav-main-active-border-width !default;
 $leftnav-main-active-border-style: $token-leftnav-main-active-border-style !default;
-$leftnav-main-active-color: $token-leftnav-main-active-color !default;
-$leftnav-main-active-disabled-color: $token-leftnav-main-active-disabled-color !default;
+$leftnav-main-active-color: var(--leftnav-main-active-color) !default;
+$leftnav-main-active-disabled-color: var(
+  --leftnav-main-active-disabled-color
+) !default;
 $leftnav-main-active-font-size: $token-leftnav-active-font-size !default;
 $leftnav-main-active-font-weight: $token-leftnav-active-font-weight !default;
 $leftnav-main-active-font-line-height: $token-leftnav-active-line-height !default;
 $leftnav-main-active-font-letter-spacing: $token-leftnav-active-letter-spacing !default;
-$leftnav-main-hover-color: $token-leftnav-main-hover-color !default;
-$leftnav-main-default-color: $token-leftnav-default-color !default;
+$leftnav-main-hover-color: var(--leftnav-main-hover-color) !default;
+$leftnav-main-default-color: var(--leftnav-default-color) !default;
 $leftnav-main-default-font-size: $token-leftnav-default-font-size !default;
 $leftnav-main-default-font-weight: $token-leftnav-default-font-weight !default;
 $leftnav-main-default-font-line-height: $token-leftnav-default-line-height !default;
 $leftnav-main-default-font-letter-spacing: $token-leftnav-default-letter-spacing !default;
-$leftnav-main-default-disabled-color: $token-leftnav-main-default-disabled-color !default;
+$leftnav-main-default-disabled-color: var(
+  --leftnav-main-default-disabled-color
+) !default;
 $leftnav-main-chevron-icon: $token-icons-neo-icon-chevron-left !default;
 $leftnav-main-chevron-icon-reverse: $token-icons-neo-icon-chevron-right !default;
 //sub
@@ -1550,27 +1880,53 @@ $leftnav-sub-max-height: $token-leftnav-sub-max-height !default;
 $leftnav-sub-padding-horizontal: $token-leftnav-sub-padding-horizontal !default;
 $leftnav-sub-active-border-width: $token-leftnav-sub-active-border-width !default;
 $leftnav-sub-active-border-style: $token-leftnav-sub-active-border-style !default;
-$leftnav-sub-active-color: $token-leftnav-sub-active-color !default;
-$leftnav-sub-active-hover-color: $token-leftnav-sub-hover-color !default;
-$leftnav-sub-active-disabled-color: $token-leftnav-sub-active-disabled-color !default;
+$leftnav-sub-active-color: var(--leftnav-sub-active-color) !default;
+$leftnav-sub-active-hover-color: var(--leftnav-sub-active-hover-color) !default;
+$leftnav-sub-active-disabled-color: var(
+  --leftnav-sub-active-disabled-color
+) !default;
 $leftnav-sub-active-font-size: $token-leftnav-sub-active-font-size !default;
 $leftnav-sub-active-font-weight: $token-leftnav-sub-active-font-weight !default;
 $leftnav-sub-active-font-line-height: $token-leftnav-sub-active-line-height !default;
 $leftnav-sub-active-font-letter-spacing: $token-leftnav-sub-active-letter-spacing !default;
-$leftnav-sub-default-color: $token-leftnav-sub-default-color !default;
+$leftnav-sub-default-color: var(--leftnav-sub-default-color) !default;
 $leftnav-sub-default-font-size: $token-leftnav-sub-default-font-size !default;
 $leftnav-sub-default-font-weight: $token-leftnav-sub-default-font-weight !default;
 $leftnav-sub-default-font-line-height: $token-leftnav-sub-default-line-height !default;
 $leftnav-sub-default-font-letter-spacing: $token-leftnav-sub-default-letter-spacing !default;
-$leftnav-sub-default-disabled-color: $token-leftnav-sub-default-disabled-color !default;
+$leftnav-sub-default-disabled-color: var(
+  --leftnav-sub-default-disabled-color
+) !default;
 
 // Component name: Dropdown
 // Location: src/scss/components/_dropdown.scss
 //
+
+// Dropdown colour variables
+
+:root {
+  --dropdown-color: #{$token-menu-font-color};
+  --dropdown-content-border: #{$token-color-base-400};
+  --dropdown-content-background-color: #{$token-menu-default-background-color};
+  --dropdown-content-arrow-color: #{$token-menu-icon-color};
+  --dropdown-item-color: #{$token-menu-font-color};
+  --dropdown-item-hover-color: #{$token-menu-hover};
+  --dropdown-item-hover-background-color: #{$token-menu-default-active-color};
+}
+.dark {
+  --dropdown-color: #{$token-color-base-800};
+  --dropdown-content-border: #{$token-color-base-500};
+  --dropdown-content-background-color: #{$token-color-blue-400};
+  --dropdown-content-arrow-color: #{$token-color-base-200};
+  --dropdown-item-color: #{$token-color-base-800};
+  --dropdown-item-hover-color: #{$token-color-blue-800};
+  --dropdown-item-hover-background-color: #{$token-color-blue-200};
+}
+
 $dropdown-expand-icon: $token-icons-neo-icon-chevron-down !default;
 $dropdown-expand-left-icon: $token-icons-neo-icon-chevron-left !default;
 $dropdown-expand-right-icon: $token-icons-neo-icon-chevron-right !default;
-$dropdown-color: $token-menu-font-color !default;
+$dropdown-color: var(--dropdown-color) !default;
 $dropdown-padding-x: 16px !default;
 $dropdown-padding-y: $global-spacer-large !default;
 $dropdown-line-height: $input-line-height !default;
@@ -1580,16 +1936,20 @@ $dropdown-radius: $global-radius !default;
 $dropdown-min-width: 150px !default;
 $dropdown-content-border-width: $token-menu-separator-border-bottom-width !default;
 $dropdown-content-border: $token-menu-separator-border-bottom-width
-  $token-menu-separator-border-bottom-style $token-color-base-400 !default;
+  $token-menu-separator-border-bottom-style var(--dropdown-content-border) !default;
 $dropdown-content-padding: $global-spacer !default;
 $dropdown-content-shadow: none !default;
 $dropdown-content-z: 20 !default;
-$dropdown-content-background-color: $token-menu-default-background-color !default;
-$dropdown-content-arrow-color: $token-menu-icon-color !default;
+$dropdown-content-background-color: var(
+  --dropdown-content-background-color
+) !default;
+$dropdown-content-arrow-color: var(--dropdown-content-arrow-color) !default;
 $dropdown-subcontent-arrow-color: $dropdown-content-arrow-color !default;
-$dropdown-item-color: $token-menu-font-color !default;
-$dropdown-item-hover-color: $token-menu-hover !default;
-$dropdown-item-hover-background-color: $token-menu-default-active-color !default;
+$dropdown-item-color: var(--dropdown-item-color) !default;
+$dropdown-item-hover-color: var(--dropdown-item-hover-color) !default;
+$dropdown-item-hover-background-color: var(
+  --dropdown-item-hover-background-color
+) !default;
 $dropdown-icon-margin-x: $global-spacer !default;
 $dropdown-icon-margin-y: $global-spacer-small !default;
 $dropdown-avatar-sm-margin-x: $global-spacer !default;
@@ -1643,7 +2003,19 @@ $popover-font-weight: $token-web-typography-fontweight-semibold !default;
 // Location: src/scss/components/_widget.scss
 //
 
-$widget-border-color: $global-border-color-darker !default;
+// widget colour variables
+
+:root {
+  --widget-shimmer-color: #{$token-color-base-100};
+  --widget-border-color: #{$token-color-base-200};
+}
+.dark {
+  --widget-shimmer-color: #{$token-color-base-800};
+  --widget-border-color: #{$token-color-base-600};
+}
+
+$widget-shimmer-color: var(--widget-shimmer-color);
+$widget-border-color: var(--widget-border-color) !default;
 $widget-box-shadow: 2px 2px 2px $widget-border-color;
 $widget-heading-color: #616161 !default;
 $widget-border-radius: $global-radius !default;
@@ -1661,7 +2033,14 @@ $widget-disabled-opacity: $global-opacity !default;
 // Location: src/scss/components/_empty-state.scss
 //
 
-$empty-state-color: $token-color-base-500 !default;
+:root {
+  --empty-state-color: #{$token-color-base-500};
+}
+.dark {
+  --empty-state-color: #{$token-color-base-400};
+}
+
+$empty-state-color: var(--empty-state-color) !default;
 $empty-state-font-size: $global-font-size-large !default;
 $empty-state-font-weight: 400 !default;
 $empty-state-icon-size: $global-font-size * 3.5 !default;
@@ -1690,7 +2069,16 @@ $spinner-ring-sizes: map-merge(
   $spinner-ring-sizes
 );
 
-$spinner-ring-color: $token-spinner-color !default;
+// spinner color variable
+
+:root {
+  --spinner-color: #{$token-color-base-500};
+}
+.dark {
+  --spinner-color: #{$token-color-base-400};
+}
+
+$spinner-ring-color: var(--spinner-color) !default;
 $spinner-button-size: 14px !default;
 $spinner-timing-0: 0.55, 0.055, 0.675, 0.19 !default;
 $spinner-timing-50: 0.215, 0.61, 0.355, 1 !default;
@@ -1702,11 +2090,18 @@ $spinner-animation-duration: 500ms !default;
 
 // updated modal variables
 
-// end of updated variables
+// modal color variables
 
-$modal-scrim-color: $token-modal-scrim-color !default;
+:root {
+  --modal-color: #{$token-color-base-1000};
+}
+.dark {
+  --modal-color: #{$token-color-base-100};
+}
+
+// $modal-scrim-color: $token-modal-scrim-color !default;
 $modal-z: 999 !default;
-$modal-color: $token-color-base-1000 !default;
+$modal-color: var(--modal-color) !default;
 $modal-content-z: 1000 !default;
 $modal-width: 550px !default;
 $modal-shadow-color: $token-modal-box-shadow-color !default;
@@ -1718,7 +2113,7 @@ $modal-radius: $global-radius !default;
 $modal-border-width: 1px !default;
 $modal-message-font-size: $global-font-size-medium !default;
 $modal-message-margin-bottom: $global-spacer-large;
-$modal-body-color: $modal-color !default;
+$modal-body-color: var(--modal-color) !default;
 $modal-body-background: $global-background !default;
 $modal-body-height: 200px !default;
 $modal-background: $global-background !default;
@@ -1731,9 +2126,9 @@ $modal-divider: $global-divider-thickness solid darken($modal-border-color, 5%) 
 $modal-padding: $global-spacer-large 17px $global-spacer-large 0 !default;
 $modal-header-padding: $global-spacer-x-large 0 $global-spacer-large 0 !default;
 $modal-animation-time: 0.4s !default;
-$modal-menu-active-border: 4px $token-border-solid-1-px-border-style
-  $token-color-blue-500 !default;
-$modal-menu-active-border-color: $token-color-blue-500 !default;
+// $modal-menu-active-border: 4px $token-border-solid-1-px-border-style
+//   $token-color-blue-500 !default;
+// $modal-menu-active-border-color: $token-color-blue-500 !default;
 
 // Component name: Badge
 // Location: src/scss/elements/_badge.scss

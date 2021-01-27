@@ -1,31 +1,5 @@
 // updated input styles
 
-// @mixin input--editable {
-//   &--editable {
-//     display: flex;
-//     flex-wrap: wrap;
-//     min-height: $input-height;
-
-//     > * {
-//       margin-bottom: 0 !important;
-//     }
-
-//     // .neo-chip {
-//     //   line-height: $input-line-height;
-//     //   padding-bottom: 0;
-//     //   padding-top: 0;
-//     // }
-
-//     .neo-input {
-//       border: 0;
-//       box-shadow: none;
-//       flex-grow: 1;
-//       padding: 0;
-//       width: auto;
-//     }
-//   }
-// }
-
 @mixin input--states {
   @each $state-color-name, $state-color-value in $input-state-color-map {
     &--#{$state-color-name} {
@@ -40,6 +14,7 @@
 
 .neo-input {
   background-image: none;
+  background-color: $input-background-color;
   border: $input-border-width $input-border-style $input-border-color;
   border-radius: $input-border-radius;
   // box-shadow: $input-box-shadow;
@@ -56,7 +31,7 @@
   // width: 100%;
 
   &:hover {
-    border-color: $token-input-border-hover-color;
+    border-color: $input-border-hover-color;
   }
 
   &[readonly],
@@ -77,19 +52,34 @@
 
   &[disabled] {
     background-color: $input-disabled-bg;
-    border-color: $token-input-border-disabled-color;
+    border-color: $input-border-disabled-color;
     color: $input-disabled-color;
     cursor: not-allowed;
   }
 
   label > &,
   label + & {
-    margin-top: $input-in-label-margin-top;
+    // margin-top: $input-in-label-margin-top;
   }
 
   &:focus {
     border: $input-border-width $input-border-style $input-focus-border-color;
     outline: none;
+  }
+
+  &[disabled] {
+    &::-webkit-input-placeholder {
+      color: $input-disabled-color;
+    }
+    &::-moz-placeholder {
+      color: $input-disabled-color;
+    }
+    &:-ms-input-placeholder {
+      color: $input-disabled-color;
+    }
+    &::placeholder {
+      color: $input-disabled-color;
+    }
   }
 
   &::-webkit-input-placeholder {
@@ -158,8 +148,8 @@
 
 .neo-input-editable__wrapper {
   label + & {
-    margin-top: $input-in-label-margin-top;
-    margin-bottom: $input-in-label-margin-top;
+    // margin-top: $input-in-label-margin-top;
+    // margin-bottom: $input-in-label-margin-top;
   }
 
   border-radius: $input-border-radius;
@@ -173,7 +163,7 @@
   }
   .neo-form-control:not(.neo-form-control--disabled)
     &:hover:not(:focus-within) {
-    border-color: $token-input-border-hover-color;
+    border-color: $input-border-hover-color;
   }
   min-height: $input-height;
   width: $input-width;
@@ -199,7 +189,7 @@
     flex-direction: column;
     justify-content: center;
     border: none;
-    background-color: $global-background;
+    background-color: $input-background-color;
     color: $input-clear-button-color;
     // hard-coded for now
     padding: $input-padding-y $input-padding-x;

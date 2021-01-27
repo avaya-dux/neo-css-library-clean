@@ -23,7 +23,7 @@
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
-    min-height: $select-height;
+    // min-height: $select-height;
     padding: $select-padding-y $select-offset-x $select-padding-y
       $select-padding-x;
     min-width: $select-width;
@@ -97,10 +97,10 @@
   &--disabled:not(.neo-select--multiple)::after {
     color: $select-disabled-color;
   }
-
   &:not(.neo-select--multiple)::after {
     align-items: center;
     font-family: 'updated-neo-icons';
+    color: $select-font-color;
     // chevron-down
     content: $select-expand-icon;
     display: inline-flex;
@@ -116,13 +116,13 @@
     // &:hover {
     //   background-color: $select-hover-bg;
     // }
-    &[disabled] {
-      color: $select-disabled-color;
-    }
     @include rtl-selector {
       left: $select-padding-x;
       right: auto;
     }
+  }
+  &[disabled]:not(.neo-select--multiple)::after {
+    color: $select-disabled-color;
   }
 }
 
@@ -133,6 +133,7 @@
     }
 
     &::before {
+      color: $spinner-ring-color;
       font-family: 'updated-neo-icons';
       content: $spinner-icon;
       display: inline-block;
@@ -195,20 +196,22 @@
 .neo-select {
   border-radius: $select-border-radius;
   // margin: $select-vertical-margin 0px;
+  min-height: 38px;
   label > &,
   label + & {
-    margin: $select-vertical-margin 0px;
+    // margin: $select-vertical-margin 0px;
   }
   &:hover {
     &:after {
-      color: $token-input-border-hover-color;
+      color: $input-border-hover-color;
     }
     select {
-      border-color: $token-input-border-hover-color;
+      border-color: $input-border-hover-color;
     }
   }
   & select {
     border-radius: $select-border-radius;
+    min-height: 38px;
   }
   @extend %neo-select;
 

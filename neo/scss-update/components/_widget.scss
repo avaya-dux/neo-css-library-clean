@@ -50,6 +50,53 @@
     background-color: #f1f1f1;
     // height: 50px;
   }
+  .dark &--loading > * {
+    text-align: center;
+    color: transparent;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#323232),
+      to(#323232),
+      color-stop(0.5, #242424)
+    );
+    background: -moz-gradient(
+      linear,
+      left top,
+      right top,
+      from(#323232),
+      to(#323232),
+      color-stop(0.5, #242424)
+    );
+    background: gradient(
+      linear,
+      left top,
+      right top,
+      from(#323232),
+      to(#323232),
+      color-stop(0.5, #242424)
+    );
+    -webkit-background-size: 125px 100%;
+    -moz-background-size: 125px 100%;
+    background-size: 125px 100%;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+    -webkit-animation-name: shimmer;
+    -moz-animation-name: shimmer;
+    animation-name: shimmer;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #323232;
+    // height: 50px;
+  }
 }
 @-moz-keyframes shimmer {
   0% {
@@ -85,7 +132,7 @@
 }
 
 @mixin widget-element($value, $border-position: false) {
-  background-color: white;
+  background-color: $global-background;
   padding: $value;
 
   // @if ($border-position) {
@@ -95,8 +142,9 @@
 
 .neo-widget__content {
   // animation: animation-modal-content $modal-animation-time;
-  background-color: white;
-  border: 1px solid $token-color-base-200;
+  color: $global-text-color;
+  background-color: $global-background;
+  border: 1px solid $widget-border-color;
   border: $modal-border;
   border-radius: 4px;
   // box-shadow: $modal-shadow;
@@ -104,7 +152,6 @@
   flex-direction: column;
   max-width: 100%;
   height: 100%;
-  // overflow: auto;
   // padding: 0 $modal-padding-y;
   position: relative;
   width: auto;
@@ -140,7 +187,7 @@
             margin-right: 8px;
           }
         }
-        color: black;
+        color: $global-text-color;
       }
     }
 
@@ -170,6 +217,7 @@
   }
 
   .neo-widget__body {
+    // overflow: auto;
     min-height: $modal-body-height;
 
     @include widget-element(16px, top);

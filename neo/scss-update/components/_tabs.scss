@@ -35,7 +35,7 @@
     max-height: $tab-item-max-height;
     padding: $tab-padding-default;
     border-left: $tab-action-border-bottom-width solid transparent;
-    background-color: white;
+    background-color: $tab-background-color;
     display: flex;
 
     // @include rtl-selector {
@@ -84,7 +84,13 @@
         }
       }
     }
+    .neo-icon-end {
+      color: $tab-default-color;
+    }
     // hover states that affect whole Component
+    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):hover {
+      background-color: $tab-hover-bg-color;
+    }
     &:hover {
       a {
         &:before {
@@ -92,7 +98,7 @@
         }
         color: $tab-item-hover-color;
       }
-      span {
+      .neo-icon-end {
         cursor: pointer;
         &:before {
           color: $tab-item-hover-color;
@@ -107,7 +113,7 @@
 }
 @mixin tab--active-vertical {
   &--active {
-    background-color: white;
+    background-color: $tab-background-color;
     border-width: 2px;
     border-left-color: $tab-action-active-border-color;
     &:hover {
@@ -121,7 +127,7 @@
           font-weight: $tab-hover-font-weight;
         }
       }
-      span {
+      .neo-icon-end {
         cursor: pointer;
         color: $tab-item-hover-color;
       }
@@ -141,7 +147,7 @@
         font-weight: $tab-hover-font-weight;
       }
     }
-    span {
+    .neo-icon-end {
       color: $tab-action-active-color;
     }
   }
@@ -149,7 +155,7 @@
 
 @mixin tab-item {
   &__item {
-    background-color: white;
+    background-color: $tab-background-color;
     position: relative;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -216,13 +222,18 @@
       // }
     }
 
-    span {
+    .neo-icon-end {
       border-bottom: $tab-action-border-bottom-width solid transparent;
+      color: $tab-default-color;
       // &:hover {
       //   cursor: pointer;
       //   color: $tab-item-hover-color;
       //   // color: $input-hover-color;
       // }
+    }
+
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):hover {
+      background-color: $tab-hover-bg-color;
     }
 
     &:hover {
@@ -235,7 +246,7 @@
         color: $tab-item-hover-color;
         // text-shadow: 1px 0 0 $tab-item-hover-color;
       }
-      span {
+      .neo-icon-end {
         cursor: pointer;
         color: $tab-item-hover-color;
         // color: $input-hover-color;
@@ -253,7 +264,7 @@
   &--active {
     // property related to carousel
     opacity: 1;
-    background-color: white;
+    background-color: $tab-background-color;
     a {
       color: $tab-action-active-color;
       font-weight: $tab-hover-font-weight;
@@ -266,7 +277,7 @@
         box-shadow: none;
       }
     }
-    span {
+    .neo-icon-end {
       border-bottom-color: $tab-action-active-border-color;
       color: $tab-action-active-color;
     }
@@ -282,7 +293,7 @@
           font-weight: $tab-hover-font-weight;
         }
       }
-      span {
+      .neo-icon-end {
         cursor: pointer;
         color: $tab-item-hover-color;
         border-bottom-color: $tab-item-hover-color;
@@ -293,146 +304,146 @@
 
 @mixin tab--disabled {
   &--disabled {
-    background-color: white;
+    background-color: $tab-background-color;
     box-shadow: none;
-    color: $token-color-base-400;
+    color: $tab-disabled-color;
     cursor: not-allowed;
     a {
-      color: $token-color-base-400;
+      color: $tab-disabled-color;
       &:before {
-        color: $token-color-base-400;
+        color: $tab-disabled-color;
       }
       &:focus {
         box-shadow: none;
-        color: $token-color-base-400;
-        background-color: $token-color-base-0;
+        color: $tab-disabled-color;
+        background-color: $tab-background-color;
       }
     }
-    span {
-      color: $token-color-base-400;
+    .neo-icon-end {
+      color: $tab-disabled-color;
     }
     &:hover {
       cursor: not-allowed;
       a {
         cursor: not-allowed;
-        color: $token-color-base-400;
+        color: $tab-disabled-color;
         font-weight: normal;
         &:before {
-          color: $token-color-base-400;
+          color: $tab-disabled-color;
           font-weight: normal;
         }
       }
-      span {
+      .neo-icon-end {
         cursor: not-allowed;
-        color: $token-color-base-400;
+        color: $tab-disabled-color;
         &:before {
-          color: $token-color-base-400;
+          color: $tab-disabled-color;
         }
       }
     }
   }
 
   &--active-disabled {
-    background-color: white;
+    background-color: $tab-background-color;
     box-shadow: none;
-    color: $token-color-blue-200;
+    color: $tab-action-disabled-color;
     font-weight: $tab-hover-font-weight;
     cursor: not-allowed;
     a {
       cursor: not-allowed;
-      color: $token-color-blue-200;
+      color: $tab-action-disabled-color;
       border-width: 2px;
-      border-bottom-color: $token-color-blue-200;
+      border-bottom-color: $tab-action-disabled-color;
       &:before {
-        color: $token-color-blue-200;
+        color: $tab-action-disabled-color;
         font-weight: $tab-hover-font-weight;
       }
     }
     &:focus {
       box-shadow: none;
-      color: $token-color-blue-200;
-      background-color: $token-color-base-0;
+      color: $tab-action-disabled-color;
+      background-color: $tab-background-color;
     }
-    span {
-      color: $token-color-blue-200;
-      border-bottom-color: $token-color-blue-200;
+    .neo-icon-end {
+      color: $tab-action-disabled-color;
+      border-bottom-color: $tab-action-disabled-color;
       &:before {
-        color: $token-color-blue-200;
+        color: $tab-action-disabled-color;
       }
     }
     &:hover {
       a {
         cursor: not-allowed;
-        color: $token-color-blue-200;
+        color: $tab-action-disabled-color;
         font-weight: $tab-hover-font-weight;
         border-width: 2px;
-        border-bottom-color: $token-color-blue-200;
+        border-bottom-color: $tab-action-disabled-color;
         &:before {
-          color: $token-color-blue-200;
+          color: $tab-action-disabled-color;
           font-weight: $tab-hover-font-weight;
         }
       }
-      span {
+      .neo-icon-end {
         cursor: not-allowed;
         &:hover {
           cursor: not-allowed;
-          color: $token-color-blue-200;
+          color: $tab-action-disabled-color;
         }
       }
     }
   }
 
   &--vertical-active-disabled {
-    background-color: white;
+    background-color: $tab-background-color;
     box-shadow: none;
     font-weight: $tab-hover-font-weight;
-    color: $token-color-blue-200 !important;
+    color: $tab-action-disabled-color !important;
     cursor: not-allowed !important;
-    border-left: 2px solid $token-color-blue-200 !important;
+    border-left: 2px solid $tab-action-disabled-color !important;
     @include rtl-selector {
       border-left: none !important;
-      border-right: 2px solid $token-color-blue-200 !important;
+      border-right: 2px solid $tab-action-disabled-color !important;
       &:hover {
-        border-right: 2px solid $token-color-blue-200 !important;
+        border-right: 2px solid $tab-action-disabled-color !important;
       }
     }
     &:focus {
       box-shadow: none;
-      color: $token-color-base-400;
-      background-color: $token-color-base-0;
+      color: $tab-disabled-color;
+      background-color: $tab-background-color;
     }
     a {
       cursor: not-allowed !important;
-      color: $token-color-blue-200 !important;
+      color: $tab-action-disabled-color !important;
       &:before {
-        color: $token-color-blue-200;
+        color: $tab-action-disabled-color;
         font-weight: $tab-hover-font-weight;
       }
     }
-    span {
+    .neo-icon-end {
       cursor: not-allowed !important;
-      color: $token-color-blue-200;
+      color: $tab-action-disabled-color;
       &:before {
-        color: $token-color-blue-200 !important;
+        color: $tab-action-disabled-color !important;
       }
     }
     &:hover {
       cursor: not-allowed !important;
       a {
         cursor: not-allowed !important;
-        color: $token-color-blue-200;
+        color: $tab-action-disabled-color;
         font-weight: $tab-hover-font-weight;
         border-width: 2px;
-        border-left-color: $token-color-blue-200;
+        border-left-color: $tab-action-disabled-color;
 
         &:before {
-          color: $token-color-blue-200;
+          color: $tab-action-disabled-color;
           font-weight: $tab-hover-font-weight;
         }
       }
-      span {
+      .neo-icon-end {
         cursor: not-allowed !important;
-        color: $token-color-blue-200;
+        color: $tab-action-disabled-color;
       }
     }
   }
@@ -487,13 +498,16 @@
 }
 
 @mixin tab-close-btn {
-  /* stylelint-disable-next-line selector-class-pattern */
   & .neo-icon-end {
     background: none;
     &:before {
       font-size: $notification-close-icon-size;
     }
   }
+  // & .neo-tabs__nav :not(.neo-tabs__item--active) .neo-icon-end,
+  // & .neo-tabs__nav :not(.neo-tabs__item--disabled) .neo-icon-end {
+  //   color: $tab-default-color;
+  // }
 }
 
 @mixin extra-content {

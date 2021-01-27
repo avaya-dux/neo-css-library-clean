@@ -343,6 +343,7 @@
 .neo-leftnav {
   &--wrapper {
     height: inherit;
+    max-width: 240px;
     overflow: auto;
     &::-webkit-scrollbar {
       width: 0;

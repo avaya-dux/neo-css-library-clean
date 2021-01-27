@@ -1,1 +1,14 @@
-{"radio":{"size":{"value":"16px"},"active-ellipse-size":{"value":"10px"},"position-top":{"value":"2px"},"ellipse-position-top":{"value":"5px"},"ellipse-position-left":{"value":"3px"},"background-color":{"value":"{color.base/0.value}"},"active-color":{"value":"{color.blue/500.value}"},"disabled-border":{"value":"1px solid {color.blue/200.value}"},"border":{"value":"1px solid {color.blue/500.value}"},"text-offset":{"value":"24px"}}}
+{
+  "radio": {
+    "size": { "value": "16px" },
+    "active-ellipse-size": { "value": "10px" },
+    "position-top": { "value": "2px" },
+    "ellipse-position-top": { "value": "5px" },
+    "ellipse-position-left": { "value": "3px" },
+    "background-color": { "value": "{color.base/0.value}" },
+    "active-color": { "value": "{color.blue/500.value}" },
+    "disabled-border": { "value": "1px solid {color.blue/200.value}" },
+    "border": { "value": "1px solid {color.blue/500.value}" },
+    "text-offset": { "value": "24px" }
+  }
+}

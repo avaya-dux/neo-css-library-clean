@@ -11,21 +11,23 @@
   }
 }
 
-.neo-radio-group {
-  display: flex;
-  vertical-align: middle;
-  width: 100%;
-}
-
 .neo-radio {
   display: none;
 
+  .neo-input-group--inline & + label {
+    text-indent: $radio-text-offset;
+    padding-left: 0px !important;
+  }
+
   + label {
+    color: $global-text-color;
     cursor: pointer;
     // margin-right: $radio-label-offset-x;
-    padding: 0 !important;
+    // padding-left: $radio-text-offset;
     position: relative;
     text-indent: $radio-text-offset;
+    margin-top: 8px;
+    font-size: 14px !important;
 
     @include rtl-selector {
       margin: {
@@ -36,7 +38,7 @@
 
     &::before {
       background-color: $radio-background;
-      border: $radio-border;
+      border: 1px solid $radio-border;
       border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
       content: '';
       display: block;

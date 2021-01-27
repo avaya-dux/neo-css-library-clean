@@ -2,7 +2,7 @@
 
 @include neo-icon-context {
   &.neo-dropdown__link {
-    $color: white;
+    $color: $dropdown-color;
     &::before {
       font-size: $global-font-size;
       margin-bottom: $dropdown-icon-margin-y;
@@ -21,7 +21,7 @@
 @mixin neo-dropdown-arrow(
   // chevron-down
   $arrow-icon: $dropdown-expand-icon,
-  $color: white,
+  $color: $dropdown-color,
   $padding-left: $dropdown-padding-x
 ) {
   &::after {
@@ -162,7 +162,7 @@
 
   & > &__link {
     display: inline-block;
-
+    // hard-coded for now
     @include neo-dropdown-arrow();
   }
 
@@ -177,7 +177,10 @@
     display: block;
     font-size: $dropdown-font-size;
     line-height: $dropdown-line-height;
-    padding: $dropdown-padding-y $dropdown-padding-x;
+    padding: $dropdown-padding-y 30px $dropdown-padding-y $dropdown-padding-x;
+    @include rtl-selector {
+      padding: $dropdown-padding-y $dropdown-padding-x $dropdown-padding-y 30px;
+    }
     text-decoration: none;
     white-space: nowrap;
     transition: $button-transition;
@@ -288,7 +291,7 @@
   //hard-coded border for now
   @include neo-popover-content(
     $dropdown-animation-duration,
-    white,
+    $global-background,
     $modal-border,
     $dropdown-radius,
     none,

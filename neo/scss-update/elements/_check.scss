@@ -13,6 +13,7 @@
     position: relative;
     display: flex;
     align-items: center;
+    font-size: 14px !important;
 
     &::before {
       background: $checkbox-icon-color;
@@ -40,7 +41,7 @@
 
   &:focus + label::before {
     background: $checkbox-background;
-    box-shadow: $input-focus-shadow; // need to specify style for this in Figma?
+    // box-shadow: $input-focus-shadow; // need to specify style for this in Figma?
   }
 
   &:checked + label::before {

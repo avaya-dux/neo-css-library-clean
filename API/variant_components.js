@@ -13,6 +13,7 @@ const notificationStyles = require('./components-functions/notifications.js');
 const listStyles = require('./components-functions/list_variants.js');
 const chipStyles = require('./components-functions/chip_variants.js');
 const inputStyles = require('./components-functions/input_variants.js');
+const widgetStyles = require('./components-functions/widget_variants.js');
 
 coreFigmaFunctions
   .getComponentPages(
@@ -32,7 +33,7 @@ coreFigmaFunctions
     // }
     // await switchStyles.switchStyles(value);
     // await radioStyles.radioStyles(value);
-    await tabStyles.tabStyles(value);
+    // await tabStyles.tabStyles(value);
     // await navbarStyles.navbarStyles(value);
     // await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
@@ -42,6 +43,7 @@ coreFigmaFunctions
     // await listStyles.listItemStyles(value);
     // await chipStyles.chipStyles(value);
     // await inputStyles.inputStyles(value);
+    await widgetStyles.widgetStyles(value);
   });
 
 // coreFigmaFunctions

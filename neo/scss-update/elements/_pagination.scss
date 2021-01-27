@@ -41,7 +41,8 @@
       transform: rotate(180deg);
     }
     &:hover {
-      background-color: #ffffff;
+      background-color: $pagination-hover-background-color;
+      color: $pagination-active-color;
     }
 
     // @include pagination-item--hover;

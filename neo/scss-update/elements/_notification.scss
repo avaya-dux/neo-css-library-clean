@@ -24,6 +24,7 @@
 
 @mixin notification-message {
   &__message {
+    color: $global-text-color;
     display: flex;
     flex-direction: column;
     // font-size: $notification-font-size;
@@ -78,6 +79,7 @@
 
 @mixin notification-counter {
   &__counter {
+    color: $global-text-color;
     font-size: $notification-counter-font-size;
     line-height: $notification-counter-line-height;
     letter-spacing: $notification-counter-letter-spacing;
@@ -164,6 +166,10 @@
   a:not(.neo-close) {
     color: $link-color;
     text-decoration: underline;
+  }
+
+  button.neo-icon-end {
+    color: $global-text-color;
   }
 
   @include notification-message;

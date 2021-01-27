@@ -182,6 +182,7 @@
       border-color: map-get($value, pressed-color);
       color: map-get($value, pressed-color);
       // box-shadow: $button-box-shadow;
+      background-color: $button-tertiary-hover-background-color;
       background-image: none;
     }
     &--#{$name}[disabled] {
@@ -433,6 +434,8 @@
         color: map-get($value, pressed-color);
         // box-shadow: $button-box-shadow;
         background-image: none;
+        background-color: $button-tertiary-hover-background-color;
+        background-image: none;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -683,6 +686,8 @@
         border-color: map-get($value, pressed-color);
         color: map-get($value, pressed-color);
         // box-shadow: $button-box-shadow;
+        background-color: $button-tertiary-hover-background-color;
+        background-image: none;
       }
       &--#{$name}[disabled] {
         background-image: none;

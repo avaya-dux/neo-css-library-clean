@@ -139,6 +139,7 @@
 // Updated for new list style as at Neo 3.6.0
 //
 %list-item {
+  color: $global-text-color;
   background-color: transparent;
   // border: $group-list-border-width solid $group-list-border-color;
   // border-bottom: 0; /* Remove border-bottom for better stylization */
@@ -208,7 +209,7 @@
       margin-bottom: 4px;
     }
     & p.neo-body-small {
-      color: $token-color-base-800;
+      color: $list-item-subtext-color;
     }
   }
   & *:not(:last-child) {
@@ -230,7 +231,7 @@
   }
 
   &:last-child {
-    border-bottom: $group-list-border-width solid $group-list-border-color;
+    // border-bottom: $group-list-border-width solid $group-list-border-color;
     @include neo-border-bottom-radius($group-list-radius);
   }
 }

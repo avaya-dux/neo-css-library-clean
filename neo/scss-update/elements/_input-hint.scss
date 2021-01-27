@@ -19,6 +19,10 @@
   .neo-input + &,
   .neo-select + &,
   .neo-input-group + &,
+  .neo-input-editable__wrapper + &,
+  .neo-input-icon__wrapper + &,
+  .neo-input-group--addons + &,
+  .neo-input-group--inline + &,
   .neo-switch + &,
   .neo-check ~ & {
     margin-top: $input-in-label-margin-top;

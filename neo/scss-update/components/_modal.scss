@@ -1,7 +1,7 @@
 // updated modal classes
 
 @mixin modal-element($value, $border-position: false) {
-  background-color: white;
+  background-color: $global-background;
   padding: $value;
 }
 
@@ -16,7 +16,7 @@
 
     .neo-modal__background {
       animation: show-element $modal-animation-time;
-      background-color: white;
+      background-color: $global-background;
       height: 100%;
       width: 100%;
       z-index: $modal-z;
@@ -28,7 +28,8 @@
 
 .neo-modal__content {
   animation: animation-modal-content $modal-animation-time;
-  background-color: white;
+  color: $global-text-color;
+  background-color: $global-background;
   border-radius: 4px;
   border: $modal-border;
   box-shadow: $modal-shadow;
@@ -47,7 +48,7 @@
     text-align: center;
     vertical-align: center;
     & h2 {
-      color: black !important;
+      color: $global-text-color !important;
       font-size: 19px !important;
     }
   }
@@ -202,10 +203,10 @@
   & .neo-close {
     background-color: transparent;
     &::before {
-      background-color: $token-color-base-1000;
+      background-color: $global-text-color;
     }
     &::after {
-      background-color: $token-color-base-1000;
+      background-color: $global-text-color;
     }
   }
 }

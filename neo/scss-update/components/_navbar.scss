@@ -48,8 +48,9 @@
 }
 
 @mixin navbar-form {
-  .neo-form--inline {
+  .neo-form {
     margin-left: $navbar-padding-x;
+    align-self: center;
 
     & .neo-form-control {
       margin-bottom: 0px;
@@ -72,7 +73,7 @@
 @mixin navbar-button {
   .neo-btn:empty {
     font-size: $navbar-button-font-size;
-    background: white !important;
+    background: $navbar-background-color !important;
   }
 }
 
@@ -81,14 +82,14 @@
   height: 58px;
   align-items: center;
   justify-content: space-between;
-  background-color: white;
+  background-color: $navbar-background-color;
   display: flex;
   flex: 1;
   min-height: $navbar-height;
   // position: relative;
   z-index: $navbar-z;
   max-width: 100vw;
-  border-bottom: 1px solid #c9c9c9;
+  border-bottom: 1px solid $navbar-border-bottom-color;
 
   @include rtl-selector {
     // padding: 0 0 0 $navbar-padding-x;
@@ -170,7 +171,7 @@
     &--active {
       border-bottom: 2px solid $navbar-icon-selected-color;
       &:hover {
-        background-color: white !important;
+        background-color: $navbar-background-color !important;
         border-bottom-color: $navbar-icon-hover-color !important;
         // & button {
         //   background-color: white !important;
@@ -180,7 +181,7 @@
         // }
         // testing new class for higher specificity
         & .neo-badge__navbutton--content {
-          background-color: white !important;
+          background-color: $navbar-background-color !important;
           &::before {
             color: $navbar-icon-hover-color !important;
           }
@@ -233,10 +234,10 @@
     }
     .neo-badge__icon::after {
       font-family: 'noto-sans', sans-serif;
-      background: #db3232;
+      background: $badge-background-color;
       border-radius: 8px;
       box-sizing: border-box;
-      color: #ffffff;
+      color: $badge-color;
       content: attr(data-badge);
       display: flex;
       font-size: 10px;
@@ -300,6 +301,7 @@
       margin-right: 16px;
       margin-left: 0;
       & p {
+        color: $global-text-color;
         margin-bottom: 4px;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -317,7 +319,7 @@
       width: fit-content;
       padding: 2px 8px;
       border-radius: 16px !important;
-      color: #ffffff;
+      color: $global-text-inverse-color;
       @each $name, $color in $neo-navbar-pill-colors {
         &--#{$name} {
           background-color: $color !important;
@@ -327,11 +329,11 @@
 
     & button {
       &:hover {
-        background-color: white;
+        background-color: $navbar-background-color;
       }
     }
     & .neo-avatar {
-      border: 2px solid white !important;
+      border: 2px solid $navbar-background-color !important;
     }
     height: 100%;
     min-width: 215px;

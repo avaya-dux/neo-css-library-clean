@@ -1,1 +1,10 @@
-{"spinner":{"color":{"value":"#5a646e"},"height":{"value":"20px"},"width":{"value":"20px"},"animation-function":{"value":"cubic-bezier(0.55, 0.055, 0.675, 0.19)"},"animation-speed":{"value":"500ms"},"animation-duration":{"value":"infinite"}}}
+{
+  "spinner": {
+    "color": { "value": "#5a646e" },
+    "height": { "value": "20px" },
+    "width": { "value": "20px" },
+    "animation-function": { "value": "cubic-bezier(0.55, 0.055, 0.675, 0.19)" },
+    "animation-speed": { "value": "500ms" },
+    "animation-duration": { "value": "infinite" }
+  }
+}

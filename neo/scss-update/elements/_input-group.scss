@@ -5,24 +5,38 @@
   display: flex;
 }
 
+// @mixin neo-input-group--inline-children {
+
+// }
+
 @mixin neo-input-group-children {
   label:not(.neo-switch):not(.neo-label) {
     line-height: $input-line-height;
-    padding: $input-padding-y 0;
+    // padding: $input-padding-y 0;
+    // padding-bottom: $input-padding-y;
+    padding-bottom: 4px;
   }
 
-  .neo-input,
+  label:not(.neo-switch):not(.neo-label) + label {
+    padding-top: 0;
+  }
+
   .neo-switch,
   .neo-check,
   .neo-btn {
     border-radius: 0;
-    margin-bottom: 0;
-    margin-top: 0;
+    // margin-bottom: 0;
+    // margin-top: 0;
   }
 
-  .neo-input {
+  // & ~ .neo-input {
+  //   border: $input-border-width $input-border-style $input-border-color;
+  // }
+
+  .neo-input,
+  .neo-radio {
     flex-grow: 1;
-    border: none;
+    // border: none;
   }
 
   .neo-btn {
@@ -44,7 +58,7 @@
     display: flex;
     line-height: $input-line-height;
     padding: $input-padding-y $input-padding-x;
-    color: $token-input-addon-text-color;
+    color: $input-addon-font-color;
     cursor: default;
 
     &:first-child {
@@ -94,54 +108,129 @@
 
 .neo-input-group {
   // border-radius: $input-border-radius;
+
+  // possibly one solution to input group issue
   display: flex;
-  vertical-align: middle;
-  width: 100%;
-  border: $input-border-width $input-border-style $input-border-color;
-  & .neo-input-editable__wrapper {
-    flex-grow: 1;
-    border: none;
+  flex-direction: column;
+  & label:last-child {
+    padding-bottom: 0px !important;
   }
-  & > .neo-input-editable__wrapper,
-  & > .neo-input-icon__wrapper {
-    margin: 0 !important;
+  & > label:not(.neo-switch) {
+    font-size: $token-input-label-font-size;
+    line-height: $token-input-label-line-height;
+    letter-spacing: $token-input-label-letter-spacing;
+    font-weight: $token-input-label-font-weight;
+    color: $input-label-color;
   }
-  &:hover {
-    border-color: $token-input-border-hover-color;
-    & .neo-input-group__addon {
-      &:first-child {
-        border-right-color: $token-input-border-hover-color;
-        @include rtl-selector {
-          border-left-color: $token-input-border-hover-color;
-        }
-      }
-      &:last-child {
-        border-left-color: $token-input-border-hover-color;
-        @include rtl-selector {
+  & .neo-check + label:before {
+    line-height: 1.5;
+  }
+  // &--inline {
+  //   flex-direction: row;
+  //   align-items: center;
+  //   @include neo-input-group--inline-children();
+  // }
+  .neo-input-group--addons {
+    display: flex;
+    vertical-align: middle;
+    width: 100%;
+    border: $input-border-width $input-border-style $input-border-color;
+    border-radius: $input-border-radius;
+    .neo-input {
+      border: none;
+    }
+    & .neo-input-editable__wrapper {
+      flex-grow: 1;
+      border: none;
+    }
+    & > .neo-input-editable__wrapper,
+    & > .neo-input-icon__wrapper {
+      margin: 0 !important;
+    }
+    &:hover {
+      border-color: $token-input-border-hover-color;
+      & .neo-input-group__addon {
+        &:first-child {
           border-right-color: $token-input-border-hover-color;
+          @include rtl-selector {
+            border-left-color: $token-input-border-hover-color;
+          }
+        }
+        &:last-child {
+          border-left-color: $token-input-border-hover-color;
+          @include rtl-selector {
+            border-right-color: $token-input-border-hover-color;
+          }
         }
       }
     }
-  }
-  &:focus-within {
-    border-color: $input-focus-border-color;
-    & .neo-input-group__addon {
-      &:first-child {
-        border-right-color: $input-focus-border-color;
-        @include rtl-selector {
-          border-left-color: $input-focus-border-color;
-        }
-      }
-      &:last-child {
-        border-left-color: $input-focus-border-color;
-        @include rtl-selector {
+    &:focus-within {
+      border-color: $input-focus-border-color;
+      & .neo-input-group__addon {
+        &:first-child {
           border-right-color: $input-focus-border-color;
+          @include rtl-selector {
+            border-left-color: $input-focus-border-color;
+          }
+        }
+        &:last-child {
+          border-left-color: $input-focus-border-color;
+          @include rtl-selector {
+            border-right-color: $input-focus-border-color;
+          }
         }
       }
     }
+    .neo-input-hint + & {
+      margin-bottom: 0;
+    }
   }
-  .neo-input-hint + & {
-    margin-bottom: 0;
+
+  // mixed input types
+
+  // &.neo-input-group--inline {
+  //   flex-direction: row;
+  //   label {
+  //     align-self: center;
+  //   }
+  // }
+
+  .neo-input-group--inline {
+    min-height: 37px;
+    display: flex;
+    vertical-align: middle;
+    width: 100%;
+    align-items: center;
+    .neo-check + label {
+      margin-right: $global-spacer;
+      padding: 0 !important;
+      @include rtl-selector {
+        margin-right: 0px;
+        margin-left: $global-spacer;
+      }
+      &:before {
+        line-height: 1.5;
+      }
+    }
+    .neo-radio + label {
+      margin-right: $global-spacer;
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+      padding-bottom: 0 !important;
+      @include rtl-selector {
+        margin-right: 0px;
+        margin-left: $global-spacer;
+      }
+    }
+    .neo-switch {
+      margin-right: $global-spacer;
+      margin-top: 0;
+      margin-bottom: 0;
+      @include rtl-selector {
+        margin-right: 0px;
+        margin-left: $global-spacer;
+      }
+    }
   }
 
   @include neo-input-group-children;
