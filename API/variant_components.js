@@ -14,6 +14,8 @@ const listStyles = require('./components-functions/list_variants.js');
 const chipStyles = require('./components-functions/chip_variants.js');
 const inputStyles = require('./components-functions/input_variants.js');
 const widgetStyles = require('./components-functions/widget_variants.js');
+const tooltipStyles = require('./components-functions/tooltips_variants.js');
+const accordionStyles = require('./components-functions/accordion_variants.js');
 
 coreFigmaFunctions
   .getComponentPages(
@@ -43,7 +45,9 @@ coreFigmaFunctions
     // await listStyles.listItemStyles(value);
     // await chipStyles.chipStyles(value);
     // await inputStyles.inputStyles(value);
-    await widgetStyles.widgetStyles(value);
+    // await widgetStyles.widgetStyles(value);
+    // await tooltipStyles.tooltipStyles(value);
+    await accordionStyles.accordionStyles(value);
   });
 
 // coreFigmaFunctions

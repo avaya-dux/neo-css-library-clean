@@ -36,6 +36,7 @@
   &--hover &__#{$child-element}:hover:not(&__#{$child-element}--disabled) {
     background-color: $group-list-item-hover;
     cursor: pointer;
+    transition: $group-list-transition;
   }
 
   // @each $name, $color in $neo-state-colors {

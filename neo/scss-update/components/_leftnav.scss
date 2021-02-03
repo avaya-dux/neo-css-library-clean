@@ -24,7 +24,8 @@
       flex-grow: 1;
       color: $leftnav-main-default-color;
       margin: 0;
-      padding: 0 ($leftnav-main-padding-horizontal * 2) 0
+      padding: $leftnav-main-padding-horizontal
+        ($leftnav-main-padding-horizontal * 2) $leftnav-main-padding-horizontal
         $leftnav-main-padding-horizontal;
       border-left: $leftnav-main-active-border-width
         $leftnav-main-active-border-style transparent;
@@ -202,7 +203,8 @@
       display: flex;
       align-items: center;
       margin: 0;
-      padding: 0 0 0 $leftnav-sub-padding-horizontal;
+      padding: $leftnav-sub-padding-horizontal 0 $leftnav-sub-padding-horizontal
+        $leftnav-sub-padding-horizontal;
       font-size: $leftnav-sub-default-font-size;
       font-weight: $leftnav-sub-default-font-weight;
       line-height: $leftnav-sub-default-font-line-height;

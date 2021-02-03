@@ -1,21 +1,21 @@
 {
   "tooltip": {
-    "width": { "value": "106px" },
-    "height": { "value": "36px" },
+    "padding-x": { "value": "16px" },
+    "padding-y": { "value": "8px" },
+    "border-radius": { "value": "2px" },
     "background-color": { "value": "{color.base/900.value}" },
-    "color": { "value": "{color.base/100.value}" },
-    "arrow-color": { "value": "{color.base/900.value}" },
-    "fontSize": {
+    "tooltip-font-size": {
       "value": "{Web-typography.web/body - regular.fontSize.value}"
     },
-    "lineHeight": {
+    "tooltip-line-height": {
       "value": "{Web-typography.web/body - regular.lineHeight.value}"
     },
-    "letterSpacing": {
+    "tooltip-letter-spacing": {
       "value": "{Web-typography.web/body - regular.letterSpacing.value}"
     },
-    "fontWeight": { "value": "{Web-typography.fontweight-regular.value}" },
-    "horizontal-padding": { "value": "16px" },
-    "vertical-padding": { "value": "8px" }
+    "tooltip-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "font-color": { "value": "{color.base/0.value}" }
   }
 }

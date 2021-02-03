@@ -2413,7 +2413,7 @@ coreFigmaFunctions
     // getChipStyles(value);
     // getLabelStyles(value);
     // getSpinnerStyles();
-    getTooltipStyles(value);
+    // getTooltipStyles(value);
     // getCheckboxStyles(value);
     // radioStyles.radioStyles(value);
     // switchStyles.switchStyles(value);
@@ -2421,7 +2421,7 @@ coreFigmaFunctions
     // getInputStyles(value);
     getDropdownStyles(value);
     getTableStyles(value);
-    getAccordionStyles(value);
+    // getAccordionStyles(value);
     getListGroupStyles(value);
     getModalStyles(value);
     getMenuStyles(value);

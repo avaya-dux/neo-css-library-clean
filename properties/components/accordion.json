@@ -1,16 +1,1 @@
-{
-  "accordion": {
-    "fontSize": { "value": "{Web-typography.web/large body.fontSize.value}" },
-    "lineHeight": {
-      "value": "{Web-typography.web/large body.lineHeight.value}"
-    },
-    "border-style": { "value": "{border.solid-1px.borderStyle.value}" },
-    "border-width": { "value": "{border.solid-1px.borderWidth.value}" },
-    "border-color": { "value": "{color.base/400.value}" },
-    "down-arrow-icon": { "value": "\f206" },
-    "up-arrow-icon": { "value": "\f20d" },
-    "hover-background-color": { "value": "{color.blue/100.value}" },
-    "hover-disabled-color": { "value": "{color.base/500.value}" },
-    "hover-disabled-background-color": { "value": "{color.base/100.value}" }
-  }
-}
+{"accordion":{"padding-x":{"value":"16px"},"padding-y":{"value":"12px"},"background-color":{"value":"{color.base/0.value}"},"border-width":{"value":"1px"},"border-solid":{"value":"solid"},"border-color":{"value":"{color.base/400.value}"},"accordion-font-size":{"value":"{Web-typography.web/large body.fontSize.value}"},"accordion-line-height":{"value":"{Web-typography.web/large body.lineHeight.value}"},"accordion-letter-spacing":{"value":"{Web-typography.web/large body.letterSpacing.value}"},"accordion-font-weight":{"value":"{Web-typography.fontweight-regular.value}"},"default-font-color":{"value":"{color.base/1000.value}"},"body-padding-x":{"value":"16px"},"body-padding-y-bottom":{"value":"12px"},"hover-background-color":{"value":"{color.blue/100.value}"},"disabled-background-color":{"value":"{color.base/100.value}"},"disabled-font-color":{"value":"{color.base/400.value}"}}}

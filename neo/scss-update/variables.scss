@@ -588,7 +588,8 @@ $button-padding: $token-button-padding !default;
 $button-min-width: $token-button-min-width !default;
 $button-border-radius: $token-button-border-radius !default;
 $button-icon-padding: $token-button-icon-margin !default;
-$button-transition: all $global-transition-duration ease-in-out !default;
+$button-transition: background-color $global-transition-duration
+  $token-interactivity-motion-ease-in !default;
 // need to re-format to ensure grabbing proper styles for token
 $button-box-shadow: $token-shadows-elevation-200-x-offset
   $token-shadows-elevation-200-y-offset $token-shadows-elevation-200-radius
@@ -1128,8 +1129,8 @@ $navbar-icon-size: $token-navbar-icon-size !default;
 :root {
   --list-hover: #{$token-list-hover};
   --list-white: #{$token-color-base-100};
-  --list-disabled-bg-color: #{$token-accordion-hover-disabled-background-color};
-  --list-disabled-hover-color: #{$token-accordion-hover-disabled-color};
+  --list-disabled-bg-color: #{$token-accordion-disabled-background-color};
+  --list-disabled-hover-color: #{$token-color-base-500};
   --list-section-background: #{$token-color-base-100};
 }
 .dark {
@@ -1202,22 +1203,29 @@ $list-item-divider: 1px solid var(--list-item-divider) !default;
 
 :root {
   --accordion-border-color: #{$token-accordion-border-color};
+  --accordion-body-color: #{$token-accordion-background-color};
 }
 .dark {
   --accordion-border-color: #{$token-color-base-500};
+  --accordion-body-color: #{$token-color-base-900};
 }
 
-$accordion-body-background: $group-list-item-background !default;
+$accordion-body-background: var(--accordion-body-color) !default;
 $accordion-border-width: $token-accordion-border-width !default;
 $accordion-border-color: var(--accordion-border-color) !default;
 $accordion-icon-offset: 10px !default;
 $accordion-icon-transition: all $global-transition-duration ease !default;
 $accordion-icon-animation: rotate(0) !default;
 $accordion-active-icon-animation: rotate(-180deg) !default;
-$accordion-padding-y: $group-list-padding-y !default;
-$accordion-padding-x: $group-list-padding-x !default;
+$accordion-padding-y: $token-accordion-padding-y !default;
+$accordion-padding-x: $token-accordion-padding-x !default;
 $accordion-expanded-icon: $token-icons-neo-icon-chevron-down !default;
 $accordion-contracted-icon: $token-icons-neo-icon-chevron-up !default;
+
+$accordion-font-size: $token-accordion-accordion-font-size !default;
+$accordion-line-height: $token-accordion-accordion-line-height !default;
+$accordion-letter-spacing: $token-accordion-accordion-letter-spacing !default;
+$accordion-font-weight: $token-accordion-accordion-font-weight !default;
 
 //
 // Component name: Sheet
@@ -1300,7 +1308,7 @@ $pagination-hover-background-color: var(
 
 :root {
   --tooltip-background-color: #{$token-tooltip-background-color};
-  --tooltip-color: #{$token-tooltip-color};
+  --tooltip-color: #{$token-tooltip-font-color};
 }
 .dark {
   --tooltip-background-color: #{$token-color-base-0};
@@ -1323,15 +1331,14 @@ $pagination-hover-background-color: var(
 
 $tooltip-background: var(--tooltip-background-color) !default;
 $tooltip-color: var(--tooltip-color) !default;
-$tooltip-width: $token-tooltip-width !default;
+// $tooltip-width: $token-tooltip-width !default;
 $tooltip-offset: 8px !default;
 $tooltip-animation-duration: $global-transition-duration !default;
-$tooltip-font-size: $token-tooltip-font-size !default;
-$tooltip-border-radius: 0 !default;
-$tooltip-padding: $token-tooltip-vertical-padding
-  $token-tooltip-horizontal-padding !default;
+$tooltip-font-size: $token-tooltip-tooltip-font-size !default;
+$tooltip-border-radius: $token-tooltip-border-radius !default;
+$tooltip-padding: $token-tooltip-padding-y $token-tooltip-padding-x !default;
 $tooltip-z: 999 !default;
-$tooltip-height: $token-tooltip-height !default;
+// $tooltip-height: $token-tooltip-height !default;
 
 //--------------------------------------------//
 //                Components                  //
@@ -1525,7 +1532,8 @@ $switch-ellipse-box-shadow: $token-switch-ellipse-box-shadow !default;
 $chips-border-color: $input-border-color !default;
 $chips-border-radius: $token-chip-border-radius !default;
 $chips-border-radius: $token-chips-border-radius !default;
-$chip-transition: background-color $global-transition-duration ease-in-out !default;
+$chip-transition: background-color $global-transition-duration
+  $token-interactivity-motion-ease-in !default;
 // $chip-bg-color-lightness-scale: 60 !default;
 // $chip-bg-color: var-color-name(button-secondary-bg) !default;
 // $chip-color-dark: $token-chip-default-color !default;
@@ -1591,6 +1599,12 @@ $chip-close-icon: $token-icons-neo-icon-close !default;
   --chip-success-icon-color: #{$token-chips-success-icon-color};
   --chip-success-disabled-color: #{$token-chips-success-disabled-bg-color};
   --chip-success-disabled-icon-color: #{$token-chips-success-disabled-icon-color};
+  --chip-info-color: #{$token-chips-info-bg-color};
+  --chip-info-border-color: #{$token-chips-info-border-color};
+  --chip-info-hover-bg-color: #{$token-chips-info-hover-bg-color};
+  --chip-info-icon-color: #{$token-chips-info-icon-color};
+  --chip-info-disabled-color: #{$token-chips-info-disabled-bg-color};
+  --chip-info-disabled-icon-color: #{$token-chips-info-disabled-icon-color};
   --chip-warning-color: #{$token-chips-warning-bg-color};
   --chip-warning-border-color: #{$token-chips-warning-border-color};
   --chip-warning-hover-bg-color: #{$token-chips-warning-hover-bg-color};
@@ -1619,6 +1633,12 @@ $chip-close-icon: $token-icons-neo-icon-close !default;
   --chip-success-icon-color: #{$token-color-green-200};
   --chip-success-disabled-color: #{$token-color-green-800};
   --chip-success-disabled-icon-color: #{$token-color-green-500};
+  --chip-info-color: #{$token-color-blue-800};
+  --chip-info-border-color: #{$token-color-blue-500};
+  --chip-info-hover-bg-color: #{$token-color-blue-600};
+  --chip-info-icon-color: #{$token-color-blue-200};
+  --chip-info-disabled-color: #{$token-color-blue-800};
+  --chip-info-disabled-icon-color: #{$token-color-blue-500};
   --chip-warning-color: #{$token-color-orange-800};
   --chip-warning-border-color: #{$token-color-orange-500};
   --chip-warning-hover-bg-color: #{$token-color-orange-600};
@@ -1642,7 +1662,7 @@ $neo-chip-colors: map-merge(
     success: var(--chip-success-color),
     warning: var(--chip-warning-color),
     alert: var(--chip-alert-color),
-    info: var(--chip-default-color),
+    info: var(--chip-info-color),
   ),
   $neo-chip-colors
 );
@@ -1654,7 +1674,7 @@ $neo-chip-border-colors: map-merge(
     success: var(--chip-success-border-color),
     warning: var(--chip-warning-border-color),
     alert: var(--chip-alert-border-color),
-    info: var(--chip-default-border-color),
+    info: var(--chip-info-border-color),
   ),
   $neo-chip-border-colors
 );
@@ -1666,7 +1686,7 @@ $neo-chip-hover-colors: map-merge(
     success: var(--chip-success-hover-bg-color),
     warning: var(--chip-warning-hover-bg-color),
     alert: var(--chip-alert-hover-bg-color),
-    info: var(--chip-default-hover-bg-color),
+    info: var(--chip-info-hover-bg-color),
   ),
   $neo-chip-hover-colors
 );
@@ -1678,7 +1698,7 @@ $neo-chip-icon-colors: map-merge(
     success: var(--chip-success-icon-color),
     warning: var(--chip-warning-icon-color),
     alert: var(--chip-alert-icon-color),
-    info: var(--chip-default-icon-color),
+    info: var(--chip-info-icon-color),
   ),
   $neo-chip-icon-colors
 );
@@ -1690,7 +1710,7 @@ $neo-chip-disabled-colors: map-merge(
     success: var(--chip-success-disabled-color),
     warning: var(--chip-warning-disabled-color),
     alert: var(--chip-alert-disabled-color),
-    info: var(--chip-default-disabled-color),
+    info: var(--chip-info-disabled-color),
   ),
   $neo-chip-disabled-colors
 );
@@ -1702,7 +1722,7 @@ $neo-chip-disabled-icon-colors: map-merge(
     success: var(--chip-success-disabled-icon-color),
     warning: var(--chip-warning-disabled-icon-color),
     alert: var(--chip-alert-disabled-icon-color),
-    info: var(--chip-default-disabled-icon-color),
+    info: var(--chip-info-disabled-icon-color),
   ),
   $neo-chip-disabled-icon-colors
 );
