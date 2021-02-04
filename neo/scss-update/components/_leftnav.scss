@@ -203,8 +203,8 @@
       display: flex;
       align-items: center;
       margin: 0;
-      padding: $leftnav-sub-padding-horizontal 0 $leftnav-sub-padding-horizontal
-        $leftnav-sub-padding-horizontal;
+      // hard-coded for now
+      padding: 8px 0 8px 52px;
       font-size: $leftnav-sub-default-font-size;
       font-weight: $leftnav-sub-default-font-weight;
       line-height: $leftnav-sub-default-font-line-height;
