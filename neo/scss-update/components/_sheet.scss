@@ -3,6 +3,8 @@
   width: auto;
   // min-height: $sheet-min-height;
   padding: $sheet-padding;
+  // need to confirm this is correct transition property
+  transition-property: position;
   transition-duration: $sheet-transition-duration;
   transition-timing-function: $sheet-transition-timing-function;
   display: flex;

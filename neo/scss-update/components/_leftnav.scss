@@ -33,6 +33,7 @@
       font-weight: $leftnav-main-default-font-weight;
       line-height: $leftnav-main-default-font-line-height;
       letter-spacing: $leftnav-main-default-font-letter-spacing;
+      // transition: $global-hover-transition;
       @include rtl-selector {
         border-left: none;
         border-right: $leftnav-main-active-border-width
@@ -54,10 +55,10 @@
         font-family: 'updated-neo-icons';
         content: $leftnav-main-chevron-icon;
         position: absolute;
+        transition: $accordion-icon-transition;
         // hard-coded for now
         right: 16px;
         font-size: $leftnav-collapse-icon-font-size;
-        transition: $accordion-icon-transition;
         @include rtl-selector {
           content: $leftnav-main-chevron-icon-reverse;
           // hard-coded for now
@@ -69,6 +70,7 @@
         cursor: pointer;
         color: $leftnav-main-hover-color;
         background-color: $leftnav-hover-background-color;
+        transition: $global-hover-transition;
         &:before {
           color: $leftnav-main-hover-color;
         }
@@ -106,6 +108,7 @@
             color: $leftnav-main-hover-color;
             border-color: $leftnav-main-hover-color;
             background-color: $leftnav-hover-background-color;
+            transition: $global-hover-transition;
             &:before {
               color: $leftnav-main-hover-color;
             }
@@ -163,10 +166,12 @@
     }
     &--expand > .neo-leftnav__nav {
       max-height: 100vh;
-      transition: max-height $global-transition-duration ease-in-out;
+      transition: max-height $global-transition-duration
+        $global-transition-timing;
     }
     &--expand > a {
       &.expandable:after {
+        transition: $accordion-icon-transition;
         transform: rotate(90deg) $accordion-active-icon-animation;
         @include rtl-selector {
           transform: rotate(90deg);
@@ -209,6 +214,7 @@
       font-weight: $leftnav-sub-default-font-weight;
       line-height: $leftnav-sub-default-font-line-height;
       letter-spacing: $leftnav-sub-default-font-letter-spacing;
+      // transition: $global-hover-transition;
       @include rtl-selector {
         border-left: none;
         border-right: $leftnav-sub-active-border-width
@@ -224,9 +230,11 @@
     &:hover {
       cursor: pointer;
       background-color: $leftnav-hover-background-color;
+      transition: $global-hover-transition;
       & > a {
         color: $leftnav-sub-active-hover-color;
         background-color: $leftnav-hover-background-color;
+        transition: $global-hover-transition;
       }
     }
     &--active {
@@ -244,11 +252,13 @@
         }
       }
       &:hover {
+        transition: $global-hover-transition;
         border-color: $leftnav-sub-active-hover-color;
         background-color: $leftnav-hover-background-color;
         & > a {
           color: $leftnav-sub-active-hover-color;
           background-color: $leftnav-hover-background-color;
+          transition: $global-hover-transition;
         }
       }
     }
@@ -310,6 +320,7 @@
       cursor: pointer;
       & > a {
         color: $link-hover-color;
+        transition: $global-hover-transition;
       }
     }
     min-height: $leftnav-link-height;

@@ -1,22 +1,24 @@
 // updated modal classes
 
 @mixin modal-element($value, $border-position: false) {
-  background-color: $global-background;
+  background-color: $modal-background;
   padding: $value;
 }
 
 .neo-modal {
   display: none;
   position: absolute;
-  border-radius: 4px;
+  border-radius: $modal-radius;
 
   &--active {
     animation: $modal-animation-time;
+    animation-timing-function: $global-transition-timing;
     display: flex;
 
     .neo-modal__background {
       animation: show-element $modal-animation-time;
-      background-color: $global-background;
+      animation-timing-function: $global-transition-timing;
+      background-color: $modal-background;
       height: 100%;
       width: 100%;
       z-index: $modal-z;
@@ -28,40 +30,42 @@
 
 .neo-modal__content {
   animation: animation-modal-content $modal-animation-time;
-  color: $global-text-color;
-  background-color: $global-background;
-  border-radius: 4px;
+  animation-timing-function: $global-transition-timing;
+  color: $modal-color;
+  background-color: $modal-background;
+  border-radius: $modal-radius;
   border: $modal-border;
   box-shadow: $modal-shadow;
   display: flex;
   flex-direction: column;
   max-width: $modal-width;
   overflow: auto;
-  padding: 24px;
+  padding: $token-modal-padding-y;
   position: relative;
   width: $modal-width;
   z-index: $modal-content-z;
 
   .neo-modal__header {
-    @include modal-element($modal-header-padding);
+    // @include modal-element($modal-header-padding);
 
     text-align: center;
     vertical-align: center;
     & h2 {
-      color: $global-text-color !important;
-      font-size: 19px !important;
+      color: $modal-color !important;
+      font-size: $token-modal-header-font-size !important;
     }
   }
 
   .neo-modal__body {
-    min-height: $modal-body-height;
+    // min-height: $modal-body-height;
 
     @include modal-element($modal-padding, 'top');
   }
 
   .neo-modal__message {
-    font-size: 14px;
+    font-size: $global-font-size;
     margin-bottom: $modal-message-margin-bottom;
+    margin-top: $modal-message-margin-bottom;
   }
 
   .neo-modal__footer {

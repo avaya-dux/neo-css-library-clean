@@ -7,7 +7,12 @@ const fs = require('fs').promises;
 async function pullInteractivityTokens() {
   const interactivityJSONOBject = {
     interactivity: {
+      // all hard-coded for now
+      motionFast: { value: '.15s' },
+      motionMedium: { value: '.4s' },
+      motionSlow: { value: '.9s' },
       motionEaseIn: { value: 'cubic-bezier(.4, 0, .7, .2)' },
+      motionEase: { value: 'cubic-bezier(0.25, 0.1, 0.25, 1)' },
       motionEaseOut: { value: 'cubic-bezier(0, 0, .2, 1)' },
       motionFadeFast: { value: 'all .15s' },
       motionFadeSlow: { value: 'all .6s' },

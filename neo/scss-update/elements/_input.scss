@@ -31,6 +31,7 @@
   // width: 100%;
 
   &:hover {
+    transition: $input-hover-transition;
     border-color: $input-border-hover-color;
   }
 

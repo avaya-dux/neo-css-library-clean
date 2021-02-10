@@ -53,6 +53,7 @@
     color: $checkbox-color;
     padding-left: 2px;
     padding-right: 2px;
+    // transition: $global-hover-transition;
   }
 
   &--indeterminate:checked + label::before {

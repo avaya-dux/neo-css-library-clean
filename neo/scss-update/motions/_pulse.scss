@@ -2,8 +2,7 @@
   // @debug $color;
 
   &.neo-pulse {
-    animation: pulse--#{$element}-#{$name} 2s
-      $token-interactivity-motion-ease-out infinite;
+    animation: pulse--#{$element}-#{$name} 2s $global-transition-timing infinite;
     @media (prefers-reduced-motion) {
       animation-name: none;
     }

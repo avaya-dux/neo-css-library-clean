@@ -65,6 +65,7 @@ a {
   &:hover {
     color: $link-hover-color;
     cursor: pointer;
+    transition: color $global-transition-duration $global-transition-timing;
     //text-decoration: $link-hover-decoration;
   }
 }

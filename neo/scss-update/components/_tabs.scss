@@ -92,6 +92,7 @@
       background-color: $tab-hover-bg-color;
     }
     &:hover {
+      transition: $global-hover-transition;
       a {
         &:before {
           color: $tab-item-hover-color;
@@ -117,6 +118,7 @@
     border-width: 2px;
     border-left-color: $tab-action-active-border-color;
     &:hover {
+      transition: $global-hover-transition;
       border-left-color: $tab-item-hover-color;
       cursor: pointer;
       a {
@@ -136,6 +138,8 @@
       border-left: none;
       border-right: 2px solid $tab-action-active-border-color;
       &:hover {
+        transition: border-color $global-transition-duration
+          $global-transition-timing;
         border-right: 2px solid $tab-item-hover-color;
       }
     }
@@ -233,10 +237,12 @@
     }
 
     &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):hover {
+      transition: $global-hover-transition;
       background-color: $tab-hover-bg-color;
     }
 
     &:hover {
+      transition: $global-hover-transition;
       a {
         &:before {
           color: $tab-item-hover-color;
@@ -282,6 +288,7 @@
       color: $tab-action-active-color;
     }
     &:hover {
+      transition: $global-hover-transition;
       a {
         color: $tab-item-hover-color;
         // text-shadow: 0.5px 0 0 $tab-item-hover-color;

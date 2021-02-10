@@ -146,9 +146,11 @@
     transform: translateX(50%);
 
     @include rtl-selector {
-      left: $arrow-offset;
-      right: auto;
-      transform: translateX(-50%);
+      // left: $arrow-offset;
+      // right: auto;
+      // transform: translateX(-50%);
+      left: auto;
+      right: 15px;
     }
   }
 }
@@ -159,9 +161,11 @@
     transform: translateX(-50%);
 
     @include rtl-selector {
-      left: auto;
-      right: $arrow-offset;
-      transform: translateX(50%);
+      // left: auto;
+      // right: $arrow-offset;
+      left: $arrow-offset;
+      right: auto;
+      transform: translateX(-50%);
     }
   }
 }

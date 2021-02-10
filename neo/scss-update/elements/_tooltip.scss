@@ -10,6 +10,7 @@
 ) {
   &__content {
     animation: show-element $animation-duration;
+    animation-timing-function: $global-transition-timing;
     background-color: $content-background-color;
     color: $tooltip-color;
     // border: $content-border;
@@ -34,6 +35,8 @@
     &--multiline {
       max-width: 300px;
     }
+
+    // tooltip right
 
     .neo-tooltip--right & .neo-arrow {
       left: -6.5px;
@@ -61,10 +64,7 @@
       // }
     }
 
-    // left: 43.4%;
-    // right: 50%;
-    // top: 16.28%;
-    // bottom: 51.16%;
+    // tooltip up
 
     .neo-tooltip--up & .neo-arrow {
       bottom: -6.5px;
@@ -85,6 +85,29 @@
       border-color: transparent !important;
     }
 
+    // tooltip up-right
+
+    .neo-tooltip--up-right & .neo-arrow {
+      bottom: -6.5px;
+      right: 42%;
+      transform: rotate(180deg);
+      @include rtl-selector {
+        left: 50%;
+        right: auto;
+      }
+    }
+
+    .neo-tooltip--up-right & .neo-arrow::before {
+      border-bottom-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
+    }
+
+    .neo-tooltip--up-right & .neo-arrow::after {
+      border-color: transparent !important;
+    }
+
+    // tooltip left
+
     .neo-tooltip--left & .neo-arrow {
       right: -6.5px;
       bottom: 51%;
@@ -104,6 +127,29 @@
       border-color: transparent !important;
     }
 
+    // tooltip up-left
+
+    .neo-tooltip--up-left & .neo-arrow {
+      right: -6.5px;
+      bottom: -17%;
+      @include rtl-selector {
+        right: 20px !important;
+        // transform: translateY(-50%) rotate(180deg);
+      }
+    }
+
+    .neo-tooltip--up-left & .neo-arrow::before {
+      // border-left-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
+      transform: rotate(0deg);
+    }
+
+    .neo-tooltip--up-left & .neo-arrow::after {
+      border-color: transparent !important;
+    }
+
+    // tooltip down
+
     .neo-tooltip--down & .neo-arrow {
       top: -6.5px;
       right: 42%;
@@ -120,6 +166,48 @@
     }
 
     .neo-tooltip--down & .neo-arrow::after {
+      border-color: transparent !important;
+    }
+
+    // tooltip down-right
+
+    .neo-tooltip--down-right & .neo-arrow {
+      top: -6.5px;
+      right: 42%;
+      @include rtl-selector {
+        left: 50%;
+        right: auto;
+      }
+    }
+
+    .neo-tooltip--down-right & .neo-arrow::before {
+      border-top-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
+      // transform: rotate(180deg);
+    }
+
+    .neo-tooltip--down-right & .neo-arrow::after {
+      border-color: transparent !important;
+    }
+
+    // tooltip down-left
+
+    .neo-tooltip--down-left & .neo-arrow {
+      top: -6.5px;
+      right: 42%;
+      @include rtl-selector {
+        left: 50%;
+        right: auto;
+      }
+    }
+
+    .neo-tooltip--down-left & .neo-arrow::before {
+      border-top-color: $tooltip-background !important;
+      border-width: $arrow-border-width;
+      // transform: rotate(180deg);
+    }
+
+    .neo-tooltip--down-left & .neo-arrow::after {
       border-color: transparent !important;
     }
 

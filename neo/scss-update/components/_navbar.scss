@@ -166,11 +166,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: $button-transition;
-    transition-property: background-color;
     &--active {
       border-bottom: 2px solid $navbar-icon-selected-color;
       &:hover {
+        transition: $button-transition;
+        transition-property: background-color;
         background-color: $navbar-background-color !important;
         border-bottom-color: $navbar-icon-hover-color !important;
         // & button {
@@ -260,10 +260,10 @@
   }
   // testing new class for higher specificity
   & .neo-badge__navbutton--content {
-    transition: $button-transition;
-    transition-property: background-color;
     &:hover {
       background-color: $navbar-background-color-hover;
+      transition: $button-transition;
+      transition-property: background-color;
     }
     &::before {
       font-size: $navbar-icon-size;

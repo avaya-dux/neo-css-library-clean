@@ -11,8 +11,7 @@
   height: $button-height;
   outline: 0;
   padding: $button-padding;
-  transition: $button-transition;
-  transition-property: background-color, color, box-shadow;
+
   width: auto;
   // min-width: $button-min-width;
   line-height: $button-line-height;
@@ -20,11 +19,17 @@
   font-size: $button-font-size;
   color: $button-text-color;
 
+  &:hover {
+    transition: $button-transition;
+    transition-property: background-color, color, box-shadow;
+  }
+
   &:not(:empty)::before {
     margin-right: $token-button-icon-margin;
     margin-left: 0;
   }
-  &[dir='rtl']:not(:empty)::before {
+  &[dir='rtl']:not(:empty)::before,
+  [dir='rtl'] &:not(:empty)::before {
     margin-left: $token-button-icon-margin;
     margin-right: 0;
   }
@@ -67,10 +72,14 @@
 //   }
 // }
 
+@mixin button-animations() {
+}
+
 .neo-btn-primary {
   @extend %button;
   @each $name, $value in $button-states {
     &--#{$name} {
+      background-color: map-get($value, hover-color);
       color: $button-text-color;
       //
       background-image: linear-gradient(
@@ -83,22 +92,30 @@
       background-repeat: no-repeat;
       background-size: 300%;
       background-position: 100% 0%;
-      transition: background-position 0.4s $token-interactivity-motion-ease-in;
+      transition: background-position
+        $global-transition-duration
+        $global-transition-timing;
       transition-delay: 0s, 0.15s;
       //
       @include pulse('button', $name, map-get($value, color-rgb));
     }
     &--#{$name}:hover {
       //
+      transition-delay: 0s, 0.15s;
+      transition: background-position
+        $global-transition-duration
+        $global-transition-timing;
       cursor: pointer;
       background-position: 0% 100%;
       //
     }
     &--#{$name}:focus,
     &--#{$name}:active {
+      transition: $global-hover-transition;
       background-color: map-get($value, pressed-color);
       // box-shadow: $button-box-shadow;
       background-image: none;
+      // background-size: 0%;
     }
 
     &--#{$name}[disabled] {
@@ -151,6 +168,7 @@
   @each $name, $value in $button-states {
     &--#{$name} {
       //
+      background-color: $button-tertiary-hover-background-color;
       background-image: linear-gradient(
         50deg,
         $button-tertiary-hover-background-color 0%,
@@ -161,7 +179,9 @@
       background-repeat: no-repeat;
       background-size: 300%;
       background-position: 100% 0%;
-      transition: background-position 0.4s $token-interactivity-motion-ease-out;
+      transition: background-position
+        $global-transition-duration
+        $global-transition-timing;
       transition-delay: 0s, 0.15s;
       //
       border-color: map-get($value, color);
@@ -169,6 +189,10 @@
       @include pulse('button', $name, map-get($value, color-rgb));
     }
     &--#{$name}:hover {
+      transition-property: background-position, border-color, color;
+      transition-timing-function: $global-transition-timing;
+      transition-duration: $global-transition-duration;
+      transition-delay: 0s, 0.15s;
       border-color: map-get($value, hover-color);
       color: map-get($value, hover-color);
       // box-shadow: $button-box-shadow;
@@ -179,6 +203,9 @@
     }
     &--#{$name}:active,
     &--#{$name}:focus {
+      transition-property: background-color, border-color, color;
+      transition-timing-function: $global-transition-timing;
+      transition-duration: $global-transition-duration;
       border-color: map-get($value, pressed-color);
       color: map-get($value, pressed-color);
       // box-shadow: $button-box-shadow;
@@ -240,13 +267,19 @@
       background-repeat: no-repeat;
       background-size: 300%;
       background-position: 100% 0%;
-      transition: background-position 0.4s $token-interactivity-motion-ease-out;
+      transition: background-position
+        $global-transition-duration
+        $global-transition-timing;
       transition-delay: 0s, 0.15s;
       //
       color: map-get($value, color);
       @include pulse('button', $name, map-get($value, color-rgb));
     }
     &--#{$name}:hover {
+      transition-property: background-position, background-color, color;
+      transition-timing-function: $global-transition-timing;
+      transition-duration: $global-transition-duration;
+      transition-delay: 0s, 0.15s;
       color: map-get($value, hover-color);
       background-color: $button-tertiary-hover-background-color;
       //
@@ -280,8 +313,11 @@
   border-radius: 100%;
   height: $button-circular-size;
   width: $button-circular-size;
-  transition: $button-transition;
-  transition-property: background-color, color, box-shadow;
+  &:hover {
+    transition: $button-transition;
+    transition-property: background-color, color, box-shadow;
+  }
+
   outline: 0;
   color: $button-text-color;
   cursor: pointer;
@@ -319,6 +355,7 @@
     border: 0;
     @each $name, $value in $button-states {
       &--#{$name} {
+        background-color: map-get($value, hover-color);
         //
         background-image: linear-gradient(
           50deg,
@@ -331,8 +368,8 @@
         background-size: 300%;
         background-position: 100% 0%;
         transition: background-position
-          0.4s
-          $token-interactivity-motion-ease-out;
+          $global-transition-duration
+          $global-transition-timing;
         transition-delay: 0s, 0.15s;
         //
         // background-color: map-get($value, color);
@@ -340,6 +377,10 @@
       }
       &--#{$name}:hover {
         //
+        transition: background-position
+          $global-transition-duration
+          $global-transition-timing;
+        transition-delay: 0s, 0.15s;
         cursor: pointer;
         background-position: 0% 100%;
         //
@@ -348,9 +389,11 @@
       }
       &--#{$name}:active,
       &--#{$name}:focus {
+        transition: $global-hover-transition;
         background-color: map-get($value, pressed-color);
         // box-shadow: $button-box-shadow;
         background-image: none;
+        // background-size: 0%;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -411,8 +454,8 @@
         background-size: 300%;
         background-position: 100% 0%;
         transition: background-position
-          0.4s
-          $token-interactivity-motion-ease-out;
+          $global-transition-duration
+          $global-transition-timing;
         transition-delay: 0s, 0.15s;
         //
         border-color: map-get($value, color);
@@ -421,6 +464,10 @@
       }
       &--#{$name}:hover {
         //
+        transition: background-position
+          $global-transition-duration
+          $global-transition-timing;
+        transition-delay: 0s, 0.15s;
         cursor: pointer;
         background-position: 0% 100%;
         //
@@ -492,8 +539,8 @@
         background-size: 300%;
         background-position: 100% 0%;
         transition: background-position
-          0.4s
-          $token-interactivity-motion-ease-out;
+          $global-transition-duration
+          $global-transition-timing;
         transition-delay: 0s, 0.15s;
         //
         color: map-get($value, color);
@@ -501,6 +548,10 @@
       }
       &--#{$name}:hover {
         //
+        transition: background-position
+          $global-transition-duration
+          $global-transition-timing;
+        transition-delay: 0s, 0.15s;
         cursor: pointer;
         background-position: 0% 100%;
         //
@@ -584,8 +635,8 @@
         background-size: 300%;
         background-position: 100% 0%;
         transition: background-position
-          0.4s
-          $token-interactivity-motion-ease-out;
+          $global-transition-duration
+          $global-transition-timing;
         transition-delay: 0s, 0.15s;
         //
         // background-color: map-get($value, color);
@@ -593,6 +644,10 @@
       }
       &--#{$name}:hover {
         //
+        transition: background-position
+          $global-transition-duration
+          $global-transition-timing;
+        transition-delay: 0s, 0.15s;
         cursor: pointer;
         background-position: 0% 100%;
         //
@@ -601,9 +656,11 @@
       }
       &--#{$name}:active,
       &--#{$name}:focus {
+        transition: $global-hover-transition;
         background-color: map-get($value, pressed-color);
         // box-shadow: $button-box-shadow;
         background-image: none;
+        // background-size: 0%;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -663,9 +720,9 @@
         background-size: 300%;
         background-position: 100% 0%;
         transition: background-position
-          0.4s
-          $token-interactivity-motion-ease-out;
-        transition-delay: 0s, 0.15s;
+          $global-transition-duration
+          $global-transition-timing;
+        // transition-delay: 0s, 0.15s;
         //
         border-color: map-get($value, color);
         color: map-get($value, color);
@@ -744,9 +801,9 @@
         background-size: 300%;
         background-position: 100% 0%;
         transition: background-position
-          0.4s
-          $token-interactivity-motion-ease-out;
-        transition-delay: 0s, 0.15s;
+          $global-transition-duration
+          $global-transition-timing;
+        // transition-delay: 0s, 0.15s;
         //
         color: map-get($value, color);
         @include pulse('button', $name, map-get($value, color-rgb));

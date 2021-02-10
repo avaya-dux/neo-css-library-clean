@@ -35,6 +35,8 @@
   // Add parent scope as argument
   $self: &;
 
+  // transition: $chip-transition;
+
   // @include chip-states($chip-bg-color, $self);
 
   @each $name, $color in $neo-chip-colors {

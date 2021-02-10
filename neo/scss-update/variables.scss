@@ -259,7 +259,11 @@ $global-spacer-large: 10px !default;
 $global-spacer-x-large: 15px !default;
 $global-divider-thickness: 1px !default;
 $global-radius: 3px !default;
-$global-transition-duration: 0.4s !default;
+$global-transition-duration: $token-interactivity-motion-medium !default;
+$global-transition-timing: $token-interactivity-motion-ease !default;
+// creating a variable for global hover animation
+$global-hover-transition: background-color, color,
+  $global-transition-duration $global-transition-timing !default;
 $global-border-color: var-color-name(global-border) !default;
 $global-border-color-darker: var-color-name(global-border) !default;
 $global-text-direction: ltr !default;
@@ -457,13 +461,15 @@ $input-hint-font-size: $token-input-helper-font-size !default;
 $input-hint-font-weight: $token-input-helper-font-weight !default;
 $input-hint-line-height: $token-input-helper-line-height !default;
 $input-hint-letter-spacing: $token-input-helper-letter-spacing !default;
+$input-hover-transition: border-color $global-transition-duration
+  $global-transition-timing !default;
 
 //
 // Element name: Select
 // Location: src/scss/elements/_select.scss
 //
 
-$select-transition: 0.25s all ease !default;
+$select-transition: $global-transition-duration all $global-transition-timing !default;
 $select-background-color: $input-background-color !default;
 $select-border-color: $input-border-color !default;
 $select-border-style: $input-border-style !default;
@@ -589,7 +595,7 @@ $button-min-width: $token-button-min-width !default;
 $button-border-radius: $token-button-border-radius !default;
 $button-icon-padding: $token-button-icon-margin !default;
 $button-transition: background-color $global-transition-duration
-  $token-interactivity-motion-ease-in !default;
+  $global-transition-timing !default;
 // need to re-format to ensure grabbing proper styles for token
 $button-box-shadow: $token-shadows-elevation-200-x-offset
   $token-shadows-elevation-200-y-offset $token-shadows-elevation-200-radius
@@ -1153,7 +1159,8 @@ $group-list-font-size: $token-list-font-size !default;
 $group-list-padding-y: $global-spacer-large !default;
 $group-list-padding-x: $global-spacer-x-large !default;
 $group-list-spacer: $global-spacer !default;
-$group-list-transition: background-color $global-transition-duration ease-in-out !default;
+$group-list-transition: background-color $global-transition-duration
+  $global-transition-timing !default;
 $group-list-white: var(--list-white) !default;
 $group-list-disabled-bg-color: var(--list-disabled-bg-color) !default;
 $group-list-disabled-hover-color: var(--list-disabled-hover-color) !default;
@@ -1214,7 +1221,8 @@ $accordion-body-background: var(--accordion-body-color) !default;
 $accordion-border-width: $token-accordion-border-width !default;
 $accordion-border-color: var(--accordion-border-color) !default;
 $accordion-icon-offset: 10px !default;
-$accordion-icon-transition: all $global-transition-duration ease !default;
+$accordion-icon-transition: transform $global-transition-duration
+  $global-transition-timing !default;
 $accordion-icon-animation: rotate(0) !default;
 $accordion-active-icon-animation: rotate(-180deg) !default;
 $accordion-padding-y: $token-accordion-padding-y !default;
@@ -1235,7 +1243,7 @@ $accordion-font-weight: $token-accordion-accordion-font-weight !default;
 // Sheet color variables
 
 :root {
-  --sheet-background: #{$token-color-base-0};
+  --sheet-background: #{$token-sheet-sheet-background-color};
   --sheet-shadow: #{$token-shadows-elevation-300-color};
 }
 .dark {
@@ -1243,11 +1251,11 @@ $accordion-font-weight: $token-accordion-accordion-font-weight !default;
   --sheet-shadow: #{$token-shadows-elevationdark-300-color};
 }
 
-$sheet-width: $token-sheet-width !default;
-$sheet-min-height: $token-sheet-min-height !default;
-$sheet-padding: $token-sheet-padding !default;
-$sheet-transition-duration: $token-interactivity-motion-fade-slow !default;
-$sheet-transition-timing-function: $token-interactivity-motion-ease-in !default;
+// $sheet-width: $token-sheet-width !default;
+// $sheet-min-height: $token-sheet-min-height !default;
+$sheet-padding: $token-sheet-padding-y !default;
+$sheet-transition-duration: $global-transition-duration !default;
+$sheet-transition-timing-function: $global-transition-timing !default;
 $sheet-background: var(--sheet-background) !default;
 $sheet-shadow: $token-shadows-elevation-300-x-offset
   $token-shadows-elevation-300-y-offset $token-shadows-elevation-300-radius
@@ -1515,8 +1523,8 @@ $switch-knob-size: $token-switch-knob-size !default;
 $switch-translate-distance: $switch-width/2 !default;
 $switch-outline: 0 !default; // remove?
 $switch-border-radius: $token-switch-border-radius !default;
-$switch-transition: $token-interactivity-motion-fade-fast
-  $token-interactivity-motion-ease-out !default;
+$switch-transition: transform $global-transition-duration
+  $global-transition-timing !default;
 // $switch-transition: all 0.25s ease-in-out !default; // need to replace with token
 $switch-disabled-on-background-color: var(--switch-disabled-on-color) !default;
 $switch-disabled-off-background-color: var(
@@ -1533,7 +1541,7 @@ $chips-border-color: $input-border-color !default;
 $chips-border-radius: $token-chip-border-radius !default;
 $chips-border-radius: $token-chips-border-radius !default;
 $chip-transition: background-color $global-transition-duration
-  $token-interactivity-motion-ease-in !default;
+  $global-transition-timing !default;
 // $chip-bg-color-lightness-scale: 60 !default;
 // $chip-bg-color: var-color-name(button-secondary-bg) !default;
 // $chip-color-dark: $token-chip-default-color !default;
@@ -1757,7 +1765,7 @@ $neo-chip-disabled-icon-colors: map-merge(
 $tab-offset: $global-spacer !default;
 $tab-container-margin: 0 6px !default;
 // $tab-border-bottom-color: $token-tabs-border-bottom-color !default;
-$tab-transition: transform 0.5s ease !default;
+$tab-transition: transform $global-transition-duration $global-transition-timing !default;
 $tab-padding-default: 8px 16px 0px 16px !default;
 // $tab-padding-small: 6px 25px !default;
 // $tab-padding-medium: 10px 30px !default;
@@ -2113,10 +2121,16 @@ $spinner-animation-duration: 500ms !default;
 // modal color variables
 
 :root {
-  --modal-color: #{$token-color-base-1000};
+  --modal-background-color: #{$token-modal-background-color};
+  --modal-color: #{$token-modal-header-font-color};
+  --modal-border-color: rgba(0, 0, 0, 0.15);
+  --modal-shadow-color: rgba(0, 0, 0, 0.25);
 }
 .dark {
+  --modal-background-color: #{$token-color-base-900};
   --modal-color: #{$token-color-base-100};
+  --modal-border-color: rgba(241, 241, 241, 0.15);
+  --modal-shadow-color: rgba(241, 241, 241, 0.25);
 }
 
 // $modal-scrim-color: $token-modal-scrim-color !default;
@@ -2125,27 +2139,26 @@ $modal-color: var(--modal-color) !default;
 $modal-content-z: 1000 !default;
 $modal-width: 550px !default;
 $modal-shadow-color: $token-modal-box-shadow-color !default;
-$modal-padding-y: 20px !default;
+$modal-padding-y: $token-modal-padding-y !default;
 $modal-margin: $global-spacer-large !default;
 $modal-shadow: $token-modal-box-shadow-x-offset $token-modal-box-shadow-y-offset
-  $token-modal-box-shadow-radius 0 $modal-shadow-color !default;
-$modal-radius: $global-radius !default;
-$modal-border-width: 1px !default;
+  $token-modal-box-shadow-radius $modal-shadow-color !default;
+$modal-radius: $token-modal-border-radius !default;
+$modal-border-width: $token-modal-border-width !default;
 $modal-message-font-size: $global-font-size-medium !default;
-$modal-message-margin-bottom: $global-spacer-large;
+$modal-message-margin-bottom: $token-modal-body-margin;
 $modal-body-color: var(--modal-color) !default;
-$modal-body-background: $global-background !default;
+$modal-body-background: var(--modal-background-color) !default;
 $modal-body-height: 200px !default;
-$modal-background: $global-background !default;
-$modal-element-background: $modal-background !default;
+$modal-background: var(--modal-background-color) !default;
+$modal-element-background: var(--modal-background-color) !default;
 // hard-coded for now
-$modal-border-color: rgba(0, 0, 0, 0.15) !default;
-$modal-border: $token-border-solid-1-px-border-width
-  $token-border-solid-1-px-border-style $modal-border-color !default;
-$modal-divider: $global-divider-thickness solid darken($modal-border-color, 5%) !default;
+$modal-border-color: var(--modal-border-color) !default;
+$modal-border: $modal-border-width $token-modal-border-style $modal-border-color !default;
+// $modal-divider: $global-divider-thickness solid darken($modal-border-color, 5%) !default;
 $modal-padding: $global-spacer-large 17px $global-spacer-large 0 !default;
 $modal-header-padding: $global-spacer-x-large 0 $global-spacer-large 0 !default;
-$modal-animation-time: 0.4s !default;
+$modal-animation-time: $global-transition-duration !default;
 // $modal-menu-active-border: 4px $token-border-solid-1-px-border-style
 //   $token-color-blue-500 !default;
 // $modal-menu-active-border-color: $token-color-blue-500 !default;

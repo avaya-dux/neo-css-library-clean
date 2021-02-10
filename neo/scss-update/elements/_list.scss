@@ -251,7 +251,6 @@
   font-size: $group-list-font-size;
   list-style-type: none;
   padding: $group-list-section-padding;
-  transition: $group-list-transition;
 
   &:not(:last-child) {
     margin-bottom: 8px;
