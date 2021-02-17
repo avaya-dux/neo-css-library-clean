@@ -270,7 +270,8 @@
       $token-menu-box-shadow-radius $token-menu-box-shadow-color;
     // padding: 8px 0 !important;
     max-width: 300px;
-    word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
     max-height: 200px;
     overflow-y: auto;
     & *:not(:last-child) {

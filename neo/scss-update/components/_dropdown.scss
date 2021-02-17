@@ -175,7 +175,9 @@
     // text-overflow: clip;
     // white-space: pre-line;
     // width: max-content;
-    word-break: keep-all;
+    // word-break: keep-all;
+    overflow-wrap: break-word;
+    white-space: normal;
     // word-wrap: normal;
     color: $global-text-color;
     max-width: 300px;
@@ -310,7 +312,7 @@
     none,
     $dropdown-content-padding,
     $dropdown-content-z,
-    $dropdown-min-width
+    200px
   );
 }
 
