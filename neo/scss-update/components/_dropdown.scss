@@ -172,7 +172,13 @@
   // }
 
   &__link {
+    // text-overflow: clip;
+    // white-space: pre-line;
+    // width: max-content;
+    word-break: keep-all;
+    // word-wrap: normal;
     color: $global-text-color;
+    max-width: 300px;
     cursor: pointer;
     display: block;
     font-size: $dropdown-font-size;
@@ -186,7 +192,7 @@
       }
     }
     text-decoration: none;
-    white-space: nowrap;
+    // white-space: nowrap;
 
     &:hover {
       background-color: $dropdown-item-hover-color;

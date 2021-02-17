@@ -30,12 +30,12 @@
 
   &--down-right {
     #{$self}__content {
-      left: 70%;
-
+      left: 50%;
+      transform: translateX(10%) translateX(-22.5px);
       @include rtl-selector {
         left: auto;
-        right: 0;
-        transform: translateX(50%);
+        right: 50%;
+        transform: translateX(50%) translateX(22.5px);
       }
 
       @include neo-arrow-justify-right;
@@ -44,13 +44,13 @@
 
   &--down-left {
     #{$self}__content {
-      left: 30%;
-      transform: translateX(-100%);
+      left: 50%;
+      transform: translateX(-50%) translateX(-22.5px);
 
       @include rtl-selector {
         left: auto;
-        right: 100%;
-        transform: translateX(50%);
+        right: 50%;
+        transform: translateX(50%) translateX(-22.5px);
       }
 
       @include neo-arrow-justify-left;
@@ -85,13 +85,17 @@
 
   &--up-left {
     #{$self}__content {
-      left: 0%;
-      transform: translate(-30%, -100%);
+      left: 50%;
+      transform: translateX(-50%) translateX(-22.5px) translateY(-100%);
+      // transform: translate(5px, -100%);
 
       @include rtl-selector {
+        // left: auto;
+        // right: 0%;
+        // transform: translate(-100%, -100%);
         left: auto;
-        right: 0%;
-        transform: translate(-100%, -100%);
+        right: 50%;
+        transform: translateX(55%) translateX(-22.5px) translateY(-100%);
       }
 
       @include neo-arrow-justify-left;
@@ -100,13 +104,17 @@
 
   &--up-right {
     #{$self}__content {
-      left: 0;
-      transform: translate(100%, -100%);
+      left: 50%;
+      transform: translateX(10%) translateX(-22.5px) translateY(-100%);
 
       @include rtl-selector {
+        // left: auto;
+        // right: 0;
+
+        // transform: translateX(50%) translateY(-100%);
         left: auto;
-        right: 0;
-        transform: translate(50%, -100%);
+        right: 50%;
+        transform: translateX(50%) translateX(22.5px) translateY(-100%);
       }
 
       @include neo-arrow-justify-right;

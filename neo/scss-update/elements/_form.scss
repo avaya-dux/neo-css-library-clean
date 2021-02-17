@@ -85,6 +85,19 @@
         cursor: not-allowed;
       }
 
+      .neo-multiselect {
+        background-color: $select-disabled-bg;
+      }
+
+      .neo-multiselect .neo-multiselect__header {
+        border-color: $select-disabled-color !important;
+        cursor: not-allowed;
+        color: $select-disabled-color !important;
+        &:after {
+          color: $select-disabled-color !important;
+        }
+      }
+
       .neo-input-editable__wrapper {
         & .neo-input-edit__icon,
         & .neo-input-editable__close {
@@ -177,6 +190,9 @@
       }
     }
     &--error {
+      .neo-multiselect .neo-multiselect__header {
+        border-color: $input-border-error-color;
+      }
       &[dir='rtl'] {
         .neo-input-group--addons .neo-input-group__addon {
           &:first-child {

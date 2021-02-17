@@ -699,7 +699,7 @@ content: "\\{{ this }}";
 {{/ifEquals}}
 
 {{#ifEquals @key "custom"}}
-.{{ ../classPrefix }}custom01:before .{{ ../classPrefix }}custom02:before,
+.{{ ../classPrefix }}custom01:before, .{{ ../classPrefix }}custom02:before,
 .{{ ../classPrefix }}custom03:before,
 .{{ ../classPrefix }}custom04:before, .{{ ../classPrefix }}custom05:before,
 .{{ ../classPrefix }}custom06:before,
@@ -933,8 +933,8 @@ content: "\\{{ this }}";
 {{/ifEquals}}
 
 {{#ifEquals @key "instagram"}}
-.{{ ../classPrefix }}instagram_left:before
-.{{ ../classPrefix }}instagram_right:before
+.{{ ../classPrefix }}instagram_left:before,
+.{{ ../classPrefix }}instagram_right:before,
 .{{ ../classPrefix }}instagram_key:before, .{{ ../classPrefix }}instagram_outbound:before
 {
 content: "\\{{ this }}";
@@ -1051,7 +1051,7 @@ content: "\\{{ this }}";
 {{/ifEquals}}
 
 {{#ifEquals @key "supervisor"}}
-.{{ ../classPrefix }}call-supervisor:before
+.{{ ../classPrefix }}call-supervisor:before,
 .{{ ../classPrefix }}call-supervisor-inverted:before
 {
 content: "\\{{ this }}";

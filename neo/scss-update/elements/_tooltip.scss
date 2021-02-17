@@ -136,6 +136,13 @@
         right: 20px !important;
         // transform: translateY(-50%) rotate(180deg);
       }
+      // bottom: -6.5px;
+      // right: 42%;
+      // transform: rotate(180deg);
+      // @include rtl-selector {
+      //   left: 50%;
+      //   right: auto;
+      // }
     }
 
     .neo-tooltip--up-left & .neo-arrow::before {

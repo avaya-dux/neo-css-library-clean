@@ -223,3 +223,168 @@
   @include neo-select-spinner;
   // @include neo-select-icon;
 }
+
+// new mmultiple select styles
+
+@mixin neo-multiselect-arrow(
+  // chevron-down
+  $arrow-icon: $dropdown-expand-icon,
+  $color: #000000,
+  $padding-left: $dropdown-padding-x
+) {
+  &::after {
+    font-family: 'updated-neo-icons';
+    color: $color;
+    content: $arrow-icon;
+    padding: 0 0 0 $padding-left;
+    vertical-align: middle;
+
+    @include rtl-selector {
+      padding: {
+        left: initial;
+        right: $padding-left;
+      }
+    }
+  }
+  @include rtl-selector {
+    &::after {
+      display: none;
+    }
+    &::before {
+      font-family: 'updated-neo-icons';
+      color: $color;
+      content: $arrow-icon;
+      padding: 0 $padding-left 0 0;
+      vertical-align: middle;
+    }
+  }
+}
+
+@mixin neo-multiselect-content {
+  &__content {
+    transition-timing-function: $global-transition-timing;
+    left: 100%;
+    top: -1px;
+    // overrides box-shadow parameter in below mixin
+    box-shadow: $token-menu-box-shadow-x-offset $token-menu-box-shadow-y-offset
+      $token-menu-box-shadow-radius $token-menu-box-shadow-color;
+    // padding: 8px 0 !important;
+    max-width: 300px;
+    word-break: keep-all;
+    max-height: 200px;
+    overflow-y: auto;
+    & *:not(:last-child) {
+      // margin-bottom: 8px;
+    }
+    @include rtl-selector {
+      left: initial;
+      right: 100%;
+    }
+
+    // multiselect with checkbox styles
+
+    & .neo-check ~ label {
+      padding: 8px 16px !important;
+    }
+
+    & .neo-check:not(input:disabled) + label {
+      &:hover {
+        // need to replace with correct token from Figma
+        background-color: $navbar-background-color-hover;
+      }
+    }
+
+    //  multiselect with list styles
+
+    & ul {
+      margin: 0;
+    }
+
+    & ul li {
+      padding: 8px 16px;
+      list-style: none;
+      &[disabled] {
+        color: $checkbox-label-disabled-font-color;
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+      &:not([disabled]):hover {
+        cursor: pointer;
+        // need to replace with correct token from Figma
+        background-color: $navbar-background-color-hover;
+      }
+    }
+  }
+
+  //hard-coded border for now
+  //animation is show-element, which toggles opacity
+  @include neo-popover-content(
+    none,
+    $global-background,
+    $modal-border,
+    $dropdown-radius,
+    none,
+    0 0,
+    $dropdown-content-z,
+    $dropdown-min-width
+  );
+}
+
+// @mixin neo-dropdown-input {
+//   .neo-input {
+//     border: $dropdown-input-border;
+//     margin: $dropdown-input-offset;
+//     width: calc(100% - #{$dropdown-input-offset} * 2);
+//   }
+
+//   .neo-input-icon {
+//     margin: $dropdown-input-offset;
+
+//     .neo-input {
+//       margin: 0;
+//       width: 100%;
+//     }
+//   }
+// }
+
+@mixin neo-multiselect-states {
+  // &:active > &__content,
+  &--active > &__content
+  // &:focus > &__content {
+  {
+    display: block;
+    position: absolute;
+  }
+}
+
+.neo-multiselect {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  // margin-bottom: 1px;
+  &:focus,
+  &:focus-within {
+    outline: 0;
+    & .neo-multiselect__header {
+      outline: 0;
+      border-color: $input-focus-border-color;
+    }
+  }
+  & .neo-multiselect__header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: $select-font-color;
+    border: $select-border-width $select-border-style $select-border-color;
+    @include neo-multiselect-arrow();
+
+    padding: 8px 12px 8px 12px;
+    font-size: $select-font-size;
+    line-height: $select-line-height;
+    letter-spacing: $select-letter-spacing;
+  }
+
+  @include neo-multiselect-states;
+  @include neo-multiselect-content;
+}

@@ -112,7 +112,8 @@
     // @include position(absolute, 0, 0, 0, 0);
   }
 
-  .neo-btn > & {
+  .neo-btn > &,
+  .neo-multiselect__header > & {
     color: inherit;
     margin-right: $global-spacer;
 

@@ -24,7 +24,8 @@
   .neo-input-group--addons + &,
   .neo-input-group--inline + &,
   .neo-switch + &,
-  .neo-check ~ & {
+  .neo-check ~ &,
+  .neo-multiselect + & {
     margin-top: $input-in-label-margin-top;
   }
 

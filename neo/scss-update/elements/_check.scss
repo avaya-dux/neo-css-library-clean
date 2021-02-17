@@ -24,7 +24,7 @@
       height: $checkbox-size;
       margin-right: $checkbox-label-indent;
       vertical-align: text-top;
-      width: $checkbox-size;
+      min-width: $checkbox-size;
       border-radius: $checkbox-border-radius;
 
       /* stylelint-disable max-nesting-depth */
