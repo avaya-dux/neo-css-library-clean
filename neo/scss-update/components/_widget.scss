@@ -202,9 +202,57 @@
       flex-direction: row;
       justify-content: flex-end;
       flex: auto;
-      & [class^='neo-icon-']:before,
-      & [class*='neo-icon-']:before {
-        font-size: 24px;
+      & [class^='neo-icon-'],
+      & [class*='neo-icon-'] {
+        &:before {
+          font-size: 24px;
+        }
+        // NEEDS TO BE ADDED IN FIGMA
+        color: #000000;
+        // background-color: #ffffff;
+        border: none;
+
+        background-image: linear-gradient(
+          50deg,
+          $button-tertiary-hover-background-color 0%,
+          $button-tertiary-hover-background-color 50%,
+          $button-secondary-background-color 50%,
+          $button-secondary-background-color 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position $global-transition-duration
+          $global-transition-timing;
+        transition-delay: 0s, 0.15s;
+
+        &:hover {
+          transition-property: background-position, background-color, color;
+          transition-timing-function: $global-transition-timing;
+          transition-duration: $global-transition-duration;
+          transition-delay: 0s, 0.15s;
+          color: #000000;
+          background-color: $button-tertiary-hover-background-color;
+          cursor: pointer;
+          background-position: 0% 100%;
+        }
+        //   &--#{$name}:active,
+        //   &--#{$name}:focus {
+        //     color: map-get($value, pressed-color);
+        //     background-color: $button-tertiary-hover-background-color;
+        //     background-image: none;
+        //   }
+        &[disabled] {
+          background-image: none;
+          color: $token-color-base-400;
+          // added to fix issue with disabled state
+          background-color: transparent;
+          &:hover {
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+        }
+        // }
       }
     }
 

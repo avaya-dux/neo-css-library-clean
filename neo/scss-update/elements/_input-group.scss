@@ -14,7 +14,7 @@
     line-height: $input-line-height;
     // padding: $input-padding-y 0;
     // padding-bottom: $input-padding-y;
-    padding-bottom: 4px;
+    padding-bottom: 12px;
   }
 
   label:not(.neo-switch):not(.neo-label) + label {
@@ -134,6 +134,8 @@
     display: flex;
     vertical-align: middle;
     width: 100%;
+    // transition: border-color $global-transition-duration
+    //   $global-transition-timing;
     border: $input-border-width $input-border-style $input-border-color;
     border-radius: $input-border-radius;
     .neo-input {

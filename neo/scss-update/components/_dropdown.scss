@@ -425,20 +425,23 @@
 }
 
 @mixin neo-dropdown-input {
-  .neo-input {
-    border: $dropdown-input-border;
-    margin: $dropdown-input-offset;
-    width: calc(100% - #{$dropdown-input-offset} * 2);
+  .neo-form-control {
+    margin: 0px 0px 0px 16px;
   }
+  // .neo-input {
+  //   border: $dropdown-input-border;
+  //   margin: $dropdown-input-offset;
+  //   width: calc(100% - #{$dropdown-input-offset} * 2);
+  // }
 
-  .neo-input-icon {
-    margin: $dropdown-input-offset;
+  // .neo-input-icon {
+  //   margin: $dropdown-input-offset;
 
-    .neo-input {
-      margin: 0;
-      width: 100%;
-    }
-  }
+  //   .neo-input {
+  //     margin: 0;
+  //     width: 100%;
+  //   }
+  // }
 }
 
 .neo-dropdown {

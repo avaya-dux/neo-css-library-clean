@@ -122,6 +122,15 @@
     @extend %pagination;
     list-style-type: none;
     margin: $pagination-margin;
+    & li:not(:first-child):not(:last-child) {
+      button {
+        margin-right: 8px;
+        @include rtl-selector {
+          margin-left: 8px;
+          margin-right: 0px;
+        }
+      }
+    }
   }
 }
 
@@ -165,4 +174,65 @@
   @include pagination-dots;
   // @include pagination-list-position;
   @include pagination-label;
+}
+// pagination styles
+
+.neo-pagination__arrow-btn {
+  // Figma
+  color: #000000;
+  // background-color: #ffffff;
+  border: none;
+
+  background-image: linear-gradient(
+    50deg,
+    $button-tertiary-hover-background-color 0%,
+    $button-tertiary-hover-background-color 50%,
+    $button-secondary-background-color 50%,
+    $button-secondary-background-color 100%
+  );
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-position: 100% 0%;
+  transition: background-position $global-transition-duration
+    $global-transition-timing;
+  transition-delay: 0s, 0.15s;
+
+  &:hover {
+    transition-property: background-position, background-color, color;
+    transition-timing-function: $global-transition-timing;
+    transition-duration: $global-transition-duration;
+    transition-delay: 0s, 0.15s;
+    color: #000000;
+    background-color: $button-tertiary-hover-background-color;
+    cursor: pointer;
+    background-position: 0% 100%;
+  }
+  //   &--#{$name}:active,
+  //   &--#{$name}:focus {
+  //     color: map-get($value, pressed-color);
+  //     background-color: $button-tertiary-hover-background-color;
+  //     background-image: none;
+  //   }
+  &[disabled] {
+    background-image: none;
+    color: $token-color-base-400;
+    // added to fix issue with disabled state
+    background-color: transparent;
+    &:hover {
+      cursor: not-allowed;
+      box-shadow: none;
+    }
+  }
+  // }
+  &:before {
+    @include rtl-selector {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.neo-pagination__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

@@ -1,7 +1,8 @@
 // updated checkbox styles
 
 .neo-check {
-  opacity: 0;
+  // opacity: 0;
+  display: none;
   position: absolute;
 
   + label {
@@ -26,6 +27,7 @@
       vertical-align: text-top;
       min-width: $checkbox-size;
       border-radius: $checkbox-border-radius;
+      // transition: $global-hover-transition;
 
       /* stylelint-disable max-nesting-depth */
       @include rtl-selector {

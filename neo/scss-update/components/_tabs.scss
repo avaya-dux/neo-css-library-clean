@@ -53,7 +53,7 @@
     //   }
     // }
     &:focus {
-      outline: none;
+      // outline: none;
     }
     a {
       &:not(:last-child) {
@@ -72,7 +72,7 @@
       text-transform: capitalize;
 
       &:focus {
-        outline: none;
+        // outline: none;
       }
 
       &:before {
@@ -198,7 +198,7 @@
         padding-right: 5px;
       }
       &:focus {
-        outline: none;
+        // outline: none;
       }
       &:before {
         margin-right: 5px;
@@ -242,6 +242,7 @@
     }
 
     &:hover {
+      cursor: pointer;
       transition: $global-hover-transition;
       a {
         &:before {
@@ -288,6 +289,7 @@
       color: $tab-action-active-color;
     }
     &:hover {
+      cursor: pointer;
       transition: $global-hover-transition;
       a {
         color: $tab-item-hover-color;
@@ -356,6 +358,9 @@
     color: $tab-action-disabled-color;
     font-weight: $tab-hover-font-weight;
     cursor: not-allowed;
+    &:hover {
+      cursor: not-allowed;
+    }
     a {
       cursor: not-allowed;
       color: $tab-action-disabled-color;
@@ -435,6 +440,7 @@
       }
     }
     &:hover {
+      background-color: $tab-background-color !important;
       cursor: not-allowed !important;
       a {
         cursor: not-allowed !important;

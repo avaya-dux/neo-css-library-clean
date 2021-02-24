@@ -205,6 +205,7 @@
       }
       .neo-input-group .neo-input-group--addons {
         border: 1px solid $input-border-error-color;
+
         // &:hover {
         //   border-color: $input-border-error-color;
         // }
@@ -242,10 +243,18 @@
   }
 
   &--inline {
-    // align-items: center;
+    align-items: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    & > label {
+      margin-right: 8px;
+      // pagination styles
+      @include rtl-selector {
+        margin-right: 0px;
+        margin-left: 8px;
+      }
+    }
     label {
       white-space: nowrap;
     }

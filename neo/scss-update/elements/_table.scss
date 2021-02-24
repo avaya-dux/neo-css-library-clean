@@ -1,441 +1,708 @@
-// updated table styles
+// // updated table styles
 
-@mixin neo-table-children {
-  // thead,
-  // tbody,
-  // tfoot {
-  //   background-color: $table-background;
-  //   // border: $table-border;
-  // }
+// @mixin neo-table-children {
+//   // thead,
+//   // tbody,
+//   // tfoot {
+//   //   background-color: $table-background;
+//   //   // border: $table-border;
+//   // }
 
-  // styles to center checkbox in head
+//   // styles to center checkbox in head
 
-  th label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+//   th label {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//   }
 
-  td,
-  th {
-    padding: $table-padding;
-    text-align: left;
-    vertical-align: middle;
-    text-align: center;
-    @include rtl-selector {
-      // text-align: right;
-    }
+//   td,
+//   th {
+//     padding: $table-padding;
+//     text-align: left;
+//     vertical-align: middle;
+//     text-align: center;
+//     @include rtl-selector {
+//       // text-align: right;
+//     }
 
-    .neo-input,
-    .neo-input-group,
-    .neo-btn,
-    .neo-button-group,
-    .neo-label,
-    .neo-chip,
-    .neo-switch,
-    .neo-group-list,
-    .neo-form-control {
-      margin-bottom: 0;
-    }
-  }
+//     .neo-input,
+//     .neo-input-group,
+//     .neo-btn,
+//     .neo-button-group,
+//     .neo-label,
+//     .neo-chip,
+//     .neo-switch,
+//     .neo-group-list,
+//     .neo-form-control {
+//       margin-bottom: 0;
+//     }
+//   }
 
-  .neo-table--disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-    background-color: $table-disabled-bg-color;
-    color: $table-disabled-text-color;
-    & a {
-      // color: $table-disabled-clickable-color;
-      color: #757474;
-      cursor: not-allowed;
-    }
-  }
+//   .neo-table--disabled {
+//     cursor: not-allowed;
+//     opacity: 0.5;
+//     background-color: $table-disabled-bg-color;
+//     color: $table-disabled-text-color;
+//     & a {
+//       // color: $table-disabled-clickable-color;
+//       color: #757474;
+//       cursor: not-allowed;
+//     }
+//   }
 
-  th {
-    background-color: $table-head-background;
-    color: $table-head-font-color;
-    font-weight: 400 !important;
-  }
+//   th {
+//     background-color: $table-head-background;
+//     color: $table-head-font-color;
+//     font-weight: 400 !important;
+//   }
 
-  td {
-    border-top: $table-border;
-    &.neo-icon-more:before {
-      font-size: 24px;
-    }
-    & .neo-form-control .neo-check + label {
-      // display: block;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-  }
+//   td {
+//     border-top: $table-border;
+//     &.neo-icon-more:before {
+//       font-size: 24px;
+//     }
+//     & .neo-form-control .neo-check + label {
+//       // display: block;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//     }
+//   }
 
-  thead th {
-    vertical-align: bottom;
-  }
+//   thead th {
+//     vertical-align: bottom;
+//   }
 
-  tfoot {
-    background-color: $table-foot-background;
-    color: $table-foot-font-color;
-  }
-}
+//   tfoot {
+//     background-color: $table-foot-background;
+//     color: $table-foot-font-color;
+//   }
+// }
 
-// @mixin neo-table--bordered {
-//   &--bordered {
+// @mixin neo-table--hover {
+//   &--hover {
+//     thead tr:hover {
+//       background-color: $table-head-hover;
+//     }
+
+//     tbody tr:hover {
+//       background-color: $table-row-hover;
+//       cursor: pointer;
+//     }
+
+//     tfoot tr:hover {
+//       background-color: $table-foot-row-hover;
+//     }
+//   }
+// }
+
+// @mixin neo-table--condensed {
+//   &--condensed {
 //     th,
 //     td {
-//       border: $table-border;
+//       padding: $table-condensed-padding;
 //     }
 //   }
 // }
 
-// @mixin neo-table--striped {
-//   &--striped {
-//     tbody tr:nth-of-type(#{$table-stripe}) {
-//       background-color: $table-striped-background;
-
-//       @if $table-stripe == even {
-//         border-bottom: 0;
-//       }
-//     }
-
-//     @if $table-stripe == odd {
-//       thead th {
-//         background: $table-background;
-//       }
-//     }
+// @mixin neo-table--sticky($axis, $position) {
+//   th {
+//     position: sticky;
+//     // Resolves issue with defined border-spacing
+//     #{$position}: -$table-border-width;
 //   }
+//   overflow-#{$axis}: auto;
+//   padding-#{$position}: 0;
 // }
 
-@mixin neo-table--hover {
-  &--hover {
-    thead tr:hover {
-      background-color: $table-head-hover;
-    }
+// @mixin table-sort-order($orderName, $orderIcon) {
+//   &.neo-table--#{$orderName} {
+//     background-color: $table-sortable-background-active;
 
-    tbody tr:hover {
-      background-color: $table-row-hover;
-      cursor: pointer;
-    }
-
-    tfoot tr:hover {
-      background-color: $table-foot-row-hover;
-    }
-  }
-}
-
-@mixin neo-table--condensed {
-  &--condensed {
-    th,
-    td {
-      padding: $table-condensed-padding;
-    }
-  }
-}
-
-// @mixin neo-table--responsive {
-//   &--responsive {
-//     display: block;
-//     -ms-overflow-style: -ms-autohiding-scrollbar;
-//     overflow-x: auto;
-//     width: 100%;
-//   }
-// }
-
-@mixin neo-table--sticky($axis, $position) {
-  th {
-    position: sticky;
-    // Resolves issue with defined border-spacing
-    #{$position}: -$table-border-width;
-  }
-  overflow-#{$axis}: auto;
-  padding-#{$position}: 0;
-}
-
-@mixin table-sort-order($orderName, $orderIcon) {
-  &.neo-table--#{$orderName} {
-    background-color: $table-sortable-background-active;
-
-    &::after {
-      content: $orderIcon;
-    }
-  }
-}
-
-// @mixin neo-table--sortable {
-//   /* stylelint-disable selector-no-qualifying-type */
-//   &--sortable {
-//     th {
-//       cursor: pointer;
-//       padding-right: $table-sortable-icon-margin-x * 2 +
-//         $table-sortable-icon-size;
-//       position: relative;
-
-//       &:hover {
-//         background-color: $table-sortable-background-hover;
-//       }
-
-//       &::after {
-//         font-family: 'AOC-Icons';
-//         font-size: $table-sortable-icon-size;
-//         line-height: $table-sortable-icon-line-height;
-//         position: absolute;
-//         right: $table-sortable-icon-margin-x;
-//       }
-
-//       @include table-sort-order(ascending, '\e9a1');
-//       @include table-sort-order(descending, '\e9a0');
-//     }
-//   }
-//   /* stylelint-enable selector-no-qualifying-type */
-// }
-
-// @mixin neo-table--editable {
-//   &--editable {
-//     background-color: $token-color-base-0;
-
-//     > td {
-//       @include neo-table--editable-border;
+//     &::after {
+//       content: $orderIcon;
 //     }
 //   }
 // }
 
-// @mixin neo-table--editable-border {
-//   &:first-child {
-//     position: relative;
+// @mixin neo-table-buttons {
+//   :not(.neo-button-group) > .neo-btn {
+//     margin-right: $table-button-margin;
 
-//     &::before {
-//       border-left: $token-color-base-0;
-//       content: '';
-//       height: 100%;
-
-//       @include rtl-selector {
-//         left: auto;
+//     @include rtl-selector {
+//       margin: {
+//         left: $table-button-margin;
 //         right: 0;
 //       }
-//       @include position(absolute, 0, null, null, 0);
+//     }
+
+//     &:last-child {
+//       margin-right: 0;
+
+//       @include rtl-selector {
+//         margin-left: 0;
+//       }
 //     }
 //   }
 // }
 
-@mixin neo-table-buttons {
-  :not(.neo-button-group) > .neo-btn {
-    margin-right: $table-button-margin;
+// .neo-table__container--sticky {
+//   @include neo-table--sticky(x, top);
+// }
 
-    @include rtl-selector {
-      margin: {
-        left: $table-button-margin;
-        right: 0;
-      }
-    }
+// // .neo-table__container--vsticky {
+// //   @include neo-table--sticky(y, left);
+// // }
 
-    &:last-child {
-      margin-right: 0;
+// .neo-table {
+//   background-color: transparent;
+//   border-collapse: collapse;
+//   empty-cells: show;
+//   margin-bottom: $global-spacer;
+//   max-width: 100%;
+//   width: 100%;
 
-      @include rtl-selector {
-        margin-left: 0;
-      }
-    }
+//   // new table select styles
+
+//   &-page-select {
+//     height: $table-page-select-height;
+//     width: $table-page-select-width;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+
+//     & > label {
+//       margin-right: 8px;
+//       margin-left: auto;
+//       @include rtl-selector {
+//         margin-left: 8px;
+//         margin-right: auto;
+//       }
+//     }
+//     & > .neo-select {
+//       & > select {
+//         min-width: auto;
+//         // this is hard-coded for now
+//         width: $select-table-page-show-width;
+//         padding-left: $select-padding-left;
+//       }
+//       &:not(.neo-select--multiple)::after {
+//         // right: $select-padding-right;
+//         right: 8px;
+//       }
+//     }
+//   }
+
+//   // new filter select styles
+
+//   & ~ .neo-form-control {
+//     & .neo-table-filter {
+//       width: 116px;
+//       padding-left: $select-padding-left;
+//       // padding-right: auto;
+//       @include rtl-selector {
+//         // padding-left: auto;
+//         padding-right: $select-padding-left;
+//       }
+//       & ~ button {
+//         color: $global-text-color;
+//         background-color: #c9c9c9;
+//         // hard-coded padding for now
+//         // padding: 12px 0;
+//         &::before {
+//           font-size: 24px;
+//         }
+//         &:hover {
+//           box-shadow: none;
+//         }
+//       }
+
+//       // may not work on all browsers
+
+//       &::-webkit-input-placeholder {
+//         font-style: $input-placeholder-font-style;
+//       }
+//       &::-moz-placeholder {
+//         font-style: $input-placeholder-font-style;
+//       }
+//       &:-ms-input-placeholder {
+//         font-style: $input-placeholder-font-style;
+//       }
+//       &::placeholder {
+//         font-style: $input-placeholder-font-style;
+//       }
+//     }
+//   }
+
+//   @include neo-table-children;
+//   // @include neo-table--bordered;
+//   // @include neo-table--striped;
+//   @include neo-table--hover;
+//   @include neo-table--condensed;
+//   // @include neo-table--responsive;
+//   // @include neo-table--sortable;
+//   // @include neo-table--editable;
+//   @include neo-table-buttons;
+// }
+
+// // new date picker styles - only webkit version for now
+
+// // placeholder date picker styles - hard-coded for now
+
+// .neo-date-picker {
+//   padding: 4px 8px 4px 8px;
+//   border-radius: 4px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   width: 220px;
+//   height: 34px;
+//   font-size: 14px;
+//   font-style: italic;
+//   color: $table-date-picker-font-color;
+//   background-color: $table-date-picker-background-color;
+//   &::before {
+//     // hard-coded for now
+//     padding-right: 8px;
+//     content: 'MM DD YYYY';
+//   }
+//   &::after {
+//     // hard-coded for now
+//     padding-left: 8px;
+//     content: 'MM DD YYYY';
+//   }
+// }
+
+// // styles for sortable table heads -- WIP
+
+// .neo-table--sortable {
+//   & thead tr th.sort-asc {
+//     &::after {
+//       font-family: 'updated-neo-icons';
+//       content: $table-sortable-ascending-icon;
+//       vertical-align: middle;
+//     }
+//     @include rtl-selector {
+//       &::after {
+//         content: '';
+//       }
+//       &::before {
+//         font-family: 'updated-neo-icons';
+//         content: $table-sortable-ascending-icon;
+//         vertical-align: middle;
+//       }
+//     }
+//   }
+//   & thead tr th.sort-dsc {
+//     &::after {
+//       font-family: 'updated-neo-icons';
+//       content: $table-sortable-descending-icon;
+//       vertical-align: middle;
+//     }
+//     @include rtl-selector {
+//       &::after {
+//         content: '';
+//       }
+//       &::before {
+//         font-family: 'updated-neo-icons';
+//         content: $table-sortable-descending-icon;
+//         vertical-align: middle;
+//       }
+//     }
+//   }
+// }
+
+// .neo-table-filter__wrapper {
+//   display: flex;
+//   justify-content: flex-end;
+//   & .neo-form-control {
+//     & .neo-icon-filter {
+//       color: $global-text-color;
+//       background-color: #c9c9c9;
+//       // hard-coded padding for now
+//       // padding: 12px 0;
+//       &::before {
+//         font-size: 24px;
+//       }
+//       &:hover {
+//         box-shadow: none;
+//       }
+//     }
+//   }
+// }
+
+/// New Table styles
+
+.neo-table--sticky {
+  overflow-x: auto;
+  padding: 0;
+  th {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  .neo-avatar .neo-img {
+    // z-index: 0;
   }
 }
-
-.neo-table__container--sticky {
-  @include neo-table--sticky(x, top);
-}
-
-// .neo-table__container--vsticky {
-//   @include neo-table--sticky(y, left);
-// }
 
 .neo-table {
   background-color: transparent;
   border-collapse: collapse;
   empty-cells: show;
-  margin-bottom: $global-spacer;
   max-width: 100%;
   width: 100%;
 
-  // new table select styles
+  // Table headers
 
-  &-page-select {
-    height: $table-page-select-height;
-    width: $table-page-select-width;
+  th {
+    color: var(--global-font-color);
+    text-align: left;
+    vertical-align: middle;
+    // FIGMA
+    background-color: #ffffff;
+    padding: 12px 16px;
+    font-weight: 600;
+    min-height: 44px;
+    border-bottom: 1px solid #c9c9c9;
+    // &:not(:empty):hover {
+    //   // need colour transition animation
+    //   background-color: #e8f1fc;
+    //   transition: $global-hover-transition;
+    //   cursor: pointer;
+    // }
+    &.check {
+      width: 5%;
+      &:hover {
+        background-color: #e8f1fc;
+        transition: $global-hover-transition;
+        cursor: pointer;
+      }
+    }
+    &.filters {
+      padding: 0 !important;
+      .neo-multiselect {
+        padding: 12px 16px !important;
+      }
+    }
+    &.filters:hover {
+      & > * {
+        background-color: #e8f1fc;
+        transition: $global-hover-transition;
+        cursor: pointer;
+      }
+    }
+
+    .neo-check + label {
+      display: block;
+    }
+    .neo-multiselect__content ul li {
+      font-weight: 400;
+      &:before {
+        visibility: hidden;
+        margin-right: 8px;
+        font-size: 24px;
+        content: $token-icons-neo-icon-accept;
+        font-family: updated-neo-icons !important;
+        -ms-font-feature-settings: 'liga' 1;
+        font-feature-settings: 'liga';
+        font-variant-ligatures: discretionary-ligatures;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        display: inline-block;
+        height: auto;
+        width: auto;
+        letter-spacing: 0;
+        min-height: 0;
+        speak: none;
+        text-align: center;
+        text-transform: none;
+        vertical-align: middle;
+        @include rtl-selector {
+          margin-left: 8px;
+          margin-right: 0px;
+        }
+      }
+      &.selected:before {
+        visibility: initial;
+      }
+    }
+
+    span {
+      cursor: pointer;
+      &:first-child {
+        margin-left: 12px;
+        @include rtl-selector {
+          margin-left: 0px;
+          margin-right: 12px;
+        }
+      }
+      &:not(last-child) {
+        margin-right: 12px;
+        @include rtl-selector {
+          // margin-left: 12px;
+          margin-right: 0px;
+        }
+      }
+      background-color: transparent;
+      border: none;
+      // FIGMA
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  // Table rows
+
+  tr {
+    // FIGMA
+    border-bottom: 1px solid #c9c9c9;
+    background-color: #ffffff;
+    &.disabled {
+      // FIGMA
+      background-color: #f1f1f1;
+      opacity: 0.5;
+      cursor: not-allowed;
+      &:hover {
+        background-color: #f1f1f1;
+        * {
+          cursor: not-allowed;
+        }
+      }
+    }
+    &:not(.disabled):hover {
+      // need colour transition animation
+      // FIGMA
+      background-color: #e8f1fc;
+      td .neo-check + label {
+        display: block;
+      }
+      td .neo-btn-square {
+        display: block;
+      }
+    }
+    &.active {
+      background-color: #e8f1fc;
+      td {
+        // FIGMA
+        font-weight: 600;
+        // text-shadow: 0.5px 0 0 currentColor;
+      }
+      td .neo-check + label {
+        display: block;
+      }
+      td .neo-btn-square {
+        display: block;
+      }
+    }
+  }
+
+  // Table cells
+
+  td {
+    // FIGMA
+    padding: 12px 16px;
+    vertical-align: middle;
+    // need better class name for cells with figures
+    &.disabled {
+      background-color: #f1f1f1;
+      opacity: 0.5;
+    }
+    // &.disabled:not(.number) {
+    //   text-align: center;
+    // }
+    &.number {
+      text-align: right;
+    }
+    // FIGMA
+    span[class*='neo-icon-']:before {
+      font-size: 24px;
+    }
+    .neo-check + label {
+      display: none;
+    }
+    & > a {
+      // FIGMA
+      color: #1473e6;
+      &.active {
+        // FIGMA
+        color: #125ab3;
+        font-weight: 600;
+      }
+      &:hover {
+        // FIGMA
+        color: #125ab3;
+      }
+    }
+    .neo-btn-square {
+      &:not(.expand) {
+        display: none;
+      }
+      background-color: transparent;
+      background-image: none;
+      // td.disabled &:hover {
+      //   color: #1473e6;
+      // }
+      &:hover {
+        background-image: none;
+      }
+    }
+    .expand {
+      transition: transform 0.15s ease;
+    }
+    .expand--active {
+      transition: transform 0.15s ease;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.neo-table__nested--wrapper {
+  border-bottom: none !important;
+  &--active {
+    & > td {
+      padding: 24px 48px !important;
+      border-bottom: 3px solid #abccf5;
+    }
+    .neo-table {
+      visibility: initial !important;
+    }
+    div.neo-table__nested {
+      max-height: 500px;
+    }
+  }
+  & > td {
+    background-color: #f1f1f1;
+    padding: 0;
+  }
+  .neo-table__nested {
+    // Figma
+    max-height: 0px;
+    .neo-table {
+      // needs to change
+      visibility: collapse;
+    }
+    th {
+      max-height: 36px;
+      .neo-multiselect span:before {
+        font-size: 14px;
+      }
+    }
+    tr {
+      max-height: 36px;
+    }
+    td {
+      padding: 8px 16px !important;
+    }
+  }
+}
+
+.neo-table__filters--sheet {
+  position: absolute;
+  right: 0;
+  top: 0;
+  // height: 100%;
+  // keep this?
+  // width: 25% !important;
+  .neo-sheet__header--left h4 {
+    // FIGMA
+    margin-right: 12px;
+    @include rtl-selector {
+      margin-left: 12px;
+      margin-right: 0px;
+    }
+  }
+  .neo-form {
+    flex-grow: 1;
+    // FIGMA
+    margin-top: 8px;
+    background-color: $sheet-background;
+    .neo-form-control {
+      // FIGMA
+      width: 100%;
+      padding-bottom: 12px;
+      border-bottom: 1px solid #c9c9c9;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex-grow: 1;
+  }
+}
+
+.neo-table__actions {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  // FIGMA
+  padding-top: 16px;
+  padding-bottom: 16px;
+  &--left,
+  &--right {
+    display: flex;
+  }
+  &--left {
+    // FIGMA #1
+    & > *:first-child {
+      margin-right: 8px;
+      @include rtl-selector {
+        margin-left: 8px;
+        margin-right: 0px;
+      }
+    }
+  }
+  &--right {
+    align-items: center;
+    .neo-form {
+      // FIGMA
+      margin-right: 8px;
+      @include rtl-selector {
+        margin-left: 8px;
+        margin-right: 0px;
+      }
+    }
+    .neo-form .neo-form-control {
+      margin-bottom: 0px;
+    }
+  }
+  &--links {
     display: flex;
     flex-direction: row;
     align-items: center;
 
-    & > label {
+    *:not(last-child) {
+      // FIGMA #2
       margin-right: 8px;
-      margin-left: auto;
       @include rtl-selector {
         margin-left: 8px;
-        margin-right: auto;
-      }
-    }
-    & > .neo-select {
-      & > select {
-        min-width: auto;
-        // this is hard-coded for now
-        width: $select-table-page-show-width;
-        padding-left: $select-padding-left;
-      }
-      &:not(.neo-select--multiple)::after {
-        // right: $select-padding-right;
-        right: 8px;
+        margin-right: 0px;
       }
     }
   }
-
-  // new filter select styles
-
-  & ~ .neo-form-control {
-    & .neo-table-filter {
-      width: 116px;
-      padding-left: $select-padding-left;
-      // padding-right: auto;
-      @include rtl-selector {
-        // padding-left: auto;
-        padding-right: $select-padding-left;
-      }
-      & ~ button {
-        color: $global-text-color;
-        background-color: #c9c9c9;
-        // hard-coded padding for now
-        // padding: 12px 0;
-        &::before {
-          font-size: 24px;
-        }
-        &:hover {
-          box-shadow: none;
-        }
-      }
-
-      // may not work on all browsers
-
-      &::-webkit-input-placeholder {
-        font-style: $input-placeholder-font-style;
-      }
-      &::-moz-placeholder {
-        font-style: $input-placeholder-font-style;
-      }
-      &:-ms-input-placeholder {
-        font-style: $input-placeholder-font-style;
-      }
-      &::placeholder {
-        font-style: $input-placeholder-font-style;
-      }
-    }
-  }
-
-  @include neo-table-children;
-  // @include neo-table--bordered;
-  // @include neo-table--striped;
-  @include neo-table--hover;
-  @include neo-table--condensed;
-  // @include neo-table--responsive;
-  // @include neo-table--sortable;
-  // @include neo-table--editable;
-  @include neo-table-buttons;
 }
 
-// new date picker styles - only webkit version for now
-
-// placeholder date picker styles - hard-coded for now
-
-.neo-date-picker {
-  padding: 4px 8px 4px 8px;
-  border-radius: 4px;
+.neo-table__filters {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 220px;
-  height: 34px;
-  font-size: 14px;
-  font-style: italic;
-  color: $table-date-picker-font-color;
-  background-color: $table-date-picker-background-color;
-  &::before {
-    // hard-coded for now
-    padding-right: 8px;
-    content: 'MM DD YYYY';
-  }
-  &::after {
-    // hard-coded for now
-    padding-left: 8px;
-    content: 'MM DD YYYY';
-  }
-}
-
-// styles for sortable table heads -- WIP
-
-.neo-table--sortable {
-  & thead tr th.sort-asc {
-    &::after {
-      font-family: 'updated-neo-icons';
-      content: $table-sortable-ascending-icon;
-      vertical-align: middle;
-    }
-    @include rtl-selector {
-      &::after {
-        content: '';
-      }
-      &::before {
-        font-family: 'updated-neo-icons';
-        content: $table-sortable-ascending-icon;
-        vertical-align: middle;
-      }
-    }
-  }
-  & thead tr th.sort-dsc {
-    &::after {
-      font-family: 'updated-neo-icons';
-      content: $table-sortable-descending-icon;
-      vertical-align: middle;
-    }
-    @include rtl-selector {
-      &::after {
-        content: '';
-      }
-      &::before {
-        font-family: 'updated-neo-icons';
-        content: $table-sortable-descending-icon;
-        vertical-align: middle;
-      }
+  flex-direction: row;
+  // FIGMA
+  background-color: #f1f1f1;
+  // FIGMA
+  & > .neo-form--inline {
+    padding: 24px 16px;
+    width: 100%;
+    justify-content: space-between;
+    .neo-form-control {
+      flex-grow: 1;
     }
   }
 }
-
-.neo-table-filter__wrapper {
-  display: flex;
-  justify-content: flex-end;
-  & .neo-form-control {
-    & .neo-icon-filter {
-      color: $global-text-color;
-      background-color: #c9c9c9;
-      // hard-coded padding for now
-      // padding: 12px 0;
-      &::before {
-        font-size: 24px;
-      }
-      &:hover {
-        box-shadow: none;
-      }
-    }
-  }
-}
-
-// & ~ input[type='date' i] {
-//   // background-color: red;
-//   &::-webkit-datetime-edit-text {
-//     display: none;
-//   }
-//   &::-webkit-datetime-edit-month-field {
-//     color: blue;
-//   }
-//   &::-webkit-datetime-edit-day-field {
-//     color: blue;
-//   }
-//   &::-webkit-datetime-edit-year-field {
-//     color: blue;
-//   }
-// }

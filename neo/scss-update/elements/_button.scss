@@ -118,6 +118,10 @@
       // background-size: 0%;
     }
 
+    &--#{$name}:focus {
+      outline: rgba(20, 115, 230, 1) auto 2px;
+    }
+
     &--#{$name}[disabled] {
       background-color: map-get($value, disabled-color);
       background-image: none;
@@ -212,6 +216,9 @@
       background-color: $button-tertiary-hover-background-color;
       background-image: none;
     }
+    &--#{$name}:focus {
+      outline: rgba(20, 115, 230, 1) auto 2px;
+    }
     &--#{$name}[disabled] {
       border-color: map-get($value, disabled-color);
       color: map-get($value, disabled-color);
@@ -292,6 +299,9 @@
       color: map-get($value, pressed-color);
       background-color: $button-tertiary-hover-background-color;
       background-image: none;
+    }
+    &--#{$name}:focus {
+      outline: rgba(20, 115, 230, 1) auto 2px;
     }
     &--#{$name}[disabled] {
       background-image: none;
@@ -395,6 +405,9 @@
         background-image: none;
         // background-size: 0%;
       }
+      &--#{$name}:focus {
+        outline: rgba(20, 115, 230, 1) auto 2px;
+      }
       &--#{$name}[disabled] {
         background-image: none;
         background-color: map-get($value, disabled-color);
@@ -563,6 +576,9 @@
         background-image: none;
         color: map-get($value, pressed-color);
         background-color: $button-tertiary-hover-background-color;
+      }
+      &--#{$name}:focus {
+        outline: rgba(20, 115, 230, 1) auto 2px;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -662,6 +678,9 @@
         background-image: none;
         // background-size: 0%;
       }
+      &--#{$name}:focus {
+        outline: rgba(20, 115, 230, 1) auto 2px;
+      }
       &--#{$name}[disabled] {
         background-image: none;
         background-color: map-get($value, disabled-color);
@@ -746,6 +765,9 @@
         background-color: $button-tertiary-hover-background-color;
         background-image: none;
       }
+      &--#{$name}:focus {
+        outline: rgba(20, 115, 230, 1) auto 2px;
+      }
       &--#{$name}[disabled] {
         background-image: none;
         border-color: map-get($value, disabled-color);
@@ -821,6 +843,9 @@
         color: map-get($value, pressed-color);
         background-color: $button-tertiary-hover-background-color;
         background-image: none;
+      }
+      &--#{$name}:focus {
+        outline: rgba(20, 115, 230, 1) auto 2px;
       }
       &--#{$name}[disabled] {
         background-image: none;

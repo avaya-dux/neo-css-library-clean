@@ -6,6 +6,9 @@
   // new 3.6.0 style
   &__wrapper {
     @extend %list-item-wrapper;
+    &:focus-within {
+      background-color: $group-list-item-hover;
+    }
   }
 
   &__item {

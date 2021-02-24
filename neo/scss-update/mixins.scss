@@ -140,7 +140,8 @@
 
 @mixin neo-popover-states {
   &--onhover:hover > &__content,
-  &--active > &__content {
+  &--active > &__content,
+  &--onhover:focus > &__content {
     display: block;
     position: absolute;
   }

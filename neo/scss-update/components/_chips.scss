@@ -47,15 +47,6 @@
     }
   }
 
-  @each $name, $color in $neo-chip-hover-colors {
-    &--#{$name}:not(.neo-chip--static):hover,
-    &--#{$name}--selected {
-      transition: $chip-transition;
-      cursor: pointer;
-      background-color: $color;
-    }
-  }
-
   @each $name, $color in $neo-chip-border-colors {
     &--#{$name} {
       border: $chip-border-width $chip-border-style $color;
@@ -249,6 +240,17 @@
   // @include chip--disabled;
 
   &.neo-chip--expandable {
+    &:focus {
+      outline: rgba(20, 115, 230, 1) auto 2px;
+    }
+    @each $name, $color in $neo-chip-hover-colors {
+      &--#{$name}:not(.neo-chip--static):hover,
+      &--#{$name}--selected {
+        transition: $chip-transition;
+        cursor: pointer;
+        background-color: $color;
+      }
+    }
     &::after {
       font-family: 'updated-neo-icons';
       // margin-left: $chip-offset;
@@ -266,6 +268,17 @@
     // }
   }
   &.neo-chip--close {
+    &:focus {
+      outline: rgba(20, 115, 230, 1) auto 2px;
+    }
+    @each $name, $color in $neo-chip-hover-colors {
+      &--#{$name}:not(.neo-chip--static):hover,
+      &--#{$name}--selected {
+        transition: $chip-transition;
+        cursor: pointer;
+        background-color: $color;
+      }
+    }
     &::after {
       font-family: 'updated-neo-icons';
       // margin-left: $chip-offset;

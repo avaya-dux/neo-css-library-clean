@@ -88,7 +88,7 @@
 @mixin neo-select-focus {
   &:focus {
     // box-shadow: $input-focus-shadow;
-    outline: 0;
+    // outline: 0;
     border-color: $input-focus-border-color;
   }
 }
@@ -248,14 +248,14 @@
   }
   @include rtl-selector {
     &::after {
-      display: none;
-    }
-    &::before {
       font-family: 'updated-neo-icons';
       color: $color;
       content: $arrow-icon;
       padding: 0 $padding-left 0 0;
       vertical-align: middle;
+    }
+    &::before {
+      display: none;
     }
   }
 }
@@ -366,15 +366,17 @@
   // margin-bottom: 1px;
   &:focus,
   &:focus-within {
-    outline: 0;
+    // outline: 0;
     & .neo-multiselect__header {
-      outline: 0;
+      // outline: 0;
       border-color: $input-focus-border-color;
     }
   }
   & .neo-multiselect__header {
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    background-color: $select-background-color;
     cursor: pointer;
     color: $select-font-color;
     border: $select-border-width $select-border-style $select-border-color;

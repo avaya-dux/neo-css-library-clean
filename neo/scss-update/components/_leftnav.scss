@@ -14,7 +14,7 @@
 
     & > a {
       &:focus {
-        outline: 0;
+        // outline: 0;
       }
       width: 100%;
       min-height: $leftnav-main-max-height;
@@ -223,7 +223,7 @@
       }
       &:focus,
       &:active {
-        outline: 0;
+        // outline: 0;
       }
     }
 

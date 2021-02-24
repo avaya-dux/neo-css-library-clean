@@ -18,6 +18,7 @@ const tooltipStyles = require('./components-functions/tooltips_variants.js');
 const accordionStyles = require('./components-functions/accordion_variants.js');
 const sheetStyles = require('./components-functions/sheets_variants.js');
 const modalStyles = require('./components-functions/modal_variants.js');
+const tableStyles = require('./components-functions/table_variants.js');
 
 coreFigmaFunctions
   .getComponentPages(
@@ -51,7 +52,8 @@ coreFigmaFunctions
     // await tooltipStyles.tooltipStyles(value);
     // await accordionStyles.accordionStyles(value);
     // await sheetStyles.sheetStyles(value);
-    await modalStyles.modalStyles(value);
+    // await modalStyles.modalStyles(value);
+    await tableStyles.tableStyles(value);
   });
 
 // coreFigmaFunctions
