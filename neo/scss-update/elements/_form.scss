@@ -246,9 +246,10 @@
     align-items: center;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     & > label {
       margin-right: 8px;
+      padding-bottom: 0px !important;
       // pagination styles
       @include rtl-selector {
         margin-right: 0px;
@@ -262,15 +263,25 @@
     .neo-form-control {
       margin-bottom: 0px;
       margin-right: 12px;
+      & .neo-input-group {
+        & label {
+          padding-bottom: 0px !important;
+        }
+      }
+
       @include rtl-selector {
         margin-left: 12px;
         margin-right: 0px;
       }
     }
 
-    .neo-form-control .neo-input:only-child {
-      margin-top: $token-web-typography-web-body-regular-line-height + 4px;
-      margin-bottom: $input-hint-line-height + 4px;
+    // .neo-form-control .neo-input:only-child {
+    //   margin-top: $token-web-typography-web-body-regular-line-height + 4px;
+    //   margin-bottom: $input-hint-line-height + 4px;
+    // }
+
+    .neo-form-control .neo-input {
+      margin-top: 12px;
     }
 
     .neo-select {

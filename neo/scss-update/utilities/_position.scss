@@ -44,13 +44,24 @@
 
   &--down-left {
     #{$self}__content {
+      // left: 50%;
+      // transform: translateX(-50%) translateX(-22.5px);
+      // transform: translateX(-70%);
+
+      // @include rtl-selector {
+      //   left: auto;
+      //   right: 50%;
+      //   transform: translateX(50%) translateX(-22.5px);
+      // }
+
       left: 50%;
-      transform: translateX(-50%) translateX(-22.5px);
+      // length of content minus distance in pixels
+      transform: translateX(calc(-100% + 9.5px));
 
       @include rtl-selector {
         left: auto;
         right: 50%;
-        transform: translateX(50%) translateX(-22.5px);
+        transform: translateX(50%);
       }
 
       @include neo-arrow-justify-left;
@@ -105,7 +116,8 @@
   &--up-right {
     #{$self}__content {
       left: 50%;
-      transform: translateX(10%) translateX(-22.5px) translateY(-100%);
+      // transform: translateX(10%) translateX(-22.5px) translateY(-100%);
+      transform: translateX(-9.5px) translateY(-100%);
 
       @include rtl-selector {
         // left: auto;

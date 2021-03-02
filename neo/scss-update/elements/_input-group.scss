@@ -14,6 +14,7 @@
     line-height: $input-line-height;
     // padding: $input-padding-y 0;
     // padding-bottom: $input-padding-y;
+    /// PADDING HERE PROBLEMATIC???
     padding-bottom: 12px;
   }
 
@@ -33,8 +34,9 @@
   //   border: $input-border-width $input-border-style $input-border-color;
   // }
 
-  .neo-input,
-  .neo-radio {
+  // .neo-radio
+
+  .neo-input {
     flex-grow: 1;
     // border: none;
   }

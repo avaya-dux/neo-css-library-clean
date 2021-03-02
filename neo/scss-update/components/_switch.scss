@@ -2,13 +2,20 @@
 
 @mixin switch-input {
   input {
-    display: none;
-    // opacity: 0;
+    // display: none;
+    opacity: 0;
   }
 }
 
 @mixin switch-icon {
   /* stylelint-disable-next-line selector-class-pattern */
+
+  input:focus {
+    + .neo-switch__icon:before {
+      box-shadow: 0 0px 8px $radio-background-active-color;
+    }
+  }
+
   input + .neo-switch__icon {
     cursor: pointer;
     display: block;

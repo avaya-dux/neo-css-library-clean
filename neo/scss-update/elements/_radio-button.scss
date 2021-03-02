@@ -12,8 +12,18 @@
 }
 
 .neo-radio {
-  display: none;
-  // opacity: 0;
+  // display: none;
+  // visibility: hidden;
+  opacity: 0;
+  position: absolute;
+
+  &:focus {
+    + label {
+      &:before {
+        box-shadow: 0 0px 8px $radio-background-active-color;
+      }
+    }
+  }
 
   .neo-input-group--inline & + label {
     text-indent: $radio-text-offset;

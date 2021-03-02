@@ -201,7 +201,8 @@
 
     .neo-tooltip--down-left & .neo-arrow {
       top: -6.5px;
-      right: 42%;
+      // right: 42%;
+      right: 2px;
       @include rtl-selector {
         left: 50%;
         right: auto;

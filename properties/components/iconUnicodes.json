@@ -1,1 +1,21 @@
-{"icons":{"neo-icon-accept":{"value":"'\\f1ff'"},"neo-icon-close":{"value":"'\\f201'"},"neo-icon-chevron-up":{"value":"'\\f272'"},"neo-icon-chevron-down":{"value":"'\\f26f'"},"neo-icon-chevron-left":{"value":"'\\f270'"},"neo-icon-chevron-right":{"value":"'\\f271'"},"neo-icon-available-filled":{"value":"'\\f299'"},"neo-icon-away-filled":{"value":"'\\f29b'"},"neo-icon-busy-filled":{"value":"'\\f29d'"},"neo-icon-do-not-disturb-filled":{"value":"'\\f2a0'"},"neo-icon-offline-filled":{"value":"'\\f2a2'"},"neo-icon-error":{"value":"'\\f143'"},"neo-icon-warning":{"value":"'\\f149'"},"neo-icon-available":{"value":"'\\f29a'"},"neo-icon-info":{"value":"'\\f144'"},"neo-icon-minus":{"value":"'\\f214'"},"neo-icon-spinner":{"value":"'\\f284'"}}}
+{
+  "icons": {
+    "neo-icon-accept": { "value": "'\\f200'" },
+    "neo-icon-close": { "value": "'\\f202'" },
+    "neo-icon-chevron-up": { "value": "'\\f273'" },
+    "neo-icon-chevron-down": { "value": "'\\f270'" },
+    "neo-icon-chevron-left": { "value": "'\\f271'" },
+    "neo-icon-chevron-right": { "value": "'\\f272'" },
+    "neo-icon-available-filled": { "value": "'\\f29a'" },
+    "neo-icon-away-filled": { "value": "'\\f29c'" },
+    "neo-icon-busy-filled": { "value": "'\\f29e'" },
+    "neo-icon-do-not-disturb-filled": { "value": "'\\f2a1'" },
+    "neo-icon-offline-filled": { "value": "'\\f2a3'" },
+    "neo-icon-error": { "value": "'\\f143'" },
+    "neo-icon-warning": { "value": "'\\f149'" },
+    "neo-icon-available": { "value": "'\\f29b'" },
+    "neo-icon-info": { "value": "'\\f144'" },
+    "neo-icon-minus": { "value": "'\\f215'" },
+    "neo-icon-spinner": { "value": "'\\f285'" }
+  }
+}

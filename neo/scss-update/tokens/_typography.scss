@@ -35,9 +35,9 @@
 
 @include print-token-as-css-vars(
   'body-large-font-size',
-  $token-web-typography-web-large-body-font-size
+  $token-web-typography-web-large-body-regular-font-size
 );
 @include print-token-as-css-vars(
   'body-large-line-height',
-  $token-web-typography-web-large-body-line-height
+  $token-web-typography-web-large-body-regular-line-height
 );
