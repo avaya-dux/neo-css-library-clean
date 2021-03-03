@@ -219,10 +219,10 @@
       border-color: transparent !important;
     }
 
-    @include rtl-selector {
-      left: initial;
-      right: 0;
-    }
+    // @include rtl-selector {
+    //   left: initial;
+    //   right: 0;
+    // }
   }
 }
 

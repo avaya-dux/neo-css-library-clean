@@ -31,12 +31,11 @@
   &--down-right {
     #{$self}__content {
       left: 50%;
-      transform: translateX(10%) translateX(-22.5px);
-      @include rtl-selector {
-        left: auto;
-        right: 50%;
-        transform: translateX(50%) translateX(22.5px);
-      }
+      transform: translateX(-15px);
+      // @include rtl-selector {
+      //   left: 50%;
+      //   transform: translateX(calc(-100% + 15px)) scale(-1, 1);
+      // }
 
       @include neo-arrow-justify-right;
     }
@@ -44,25 +43,14 @@
 
   &--down-left {
     #{$self}__content {
-      // left: 50%;
-      // transform: translateX(-50%) translateX(-22.5px);
-      // transform: translateX(-70%);
-
-      // @include rtl-selector {
-      //   left: auto;
-      //   right: 50%;
-      //   transform: translateX(50%) translateX(-22.5px);
-      // }
-
       left: 50%;
       // length of content minus distance in pixels
-      transform: translateX(calc(-100% + 9.5px));
+      transform: translateX(calc(-100% + 15px));
 
-      @include rtl-selector {
-        left: auto;
-        right: 50%;
-        transform: translateX(50%);
-      }
+      // @include rtl-selector {
+      //   left: 50%;
+      //   transform: translateX(-15px) scale(-1, 1);
+      // }
 
       @include neo-arrow-justify-left;
     }
@@ -97,17 +85,11 @@
   &--up-left {
     #{$self}__content {
       left: 50%;
-      transform: translateX(-50%) translateX(-22.5px) translateY(-100%);
-      // transform: translate(5px, -100%);
-
-      @include rtl-selector {
-        // left: auto;
-        // right: 0%;
-        // transform: translate(-100%, -100%);
-        left: auto;
-        right: 50%;
-        transform: translateX(55%) translateX(-22.5px) translateY(-100%);
-      }
+      transform: translateX(calc(-100% + 15px)) translateY(-100%);
+      // @include rtl-selector {
+      //   left: 50%;
+      //   transform: translateX(-15px) translateY(-100%) scale(-1, 1);
+      // }
 
       @include neo-arrow-justify-left;
     }
@@ -116,18 +98,12 @@
   &--up-right {
     #{$self}__content {
       left: 50%;
-      // transform: translateX(10%) translateX(-22.5px) translateY(-100%);
-      transform: translateX(-9.5px) translateY(-100%);
+      transform: translateX(-15px) translateY(-100%);
 
-      @include rtl-selector {
-        // left: auto;
-        // right: 0;
-
-        // transform: translateX(50%) translateY(-100%);
-        left: auto;
-        right: 50%;
-        transform: translateX(50%) translateX(22.5px) translateY(-100%);
-      }
+      // @include rtl-selector {
+      //   left: 50%;
+      //   transform: translateX(calc(-100% + 15px)) translateY(-100%) scale(-1, 1);
+      // }
 
       @include neo-arrow-justify-right;
     }

@@ -213,7 +213,16 @@
       color: $list-item-subtext-color;
     }
   }
-  & *:not(:last-child) {
+  // & *:not(:last-child) {
+  //   margin-right: $list-item-margin-right * 2;
+  //   margin-left: 0;
+  //   @include rtl-selector {
+  //     margin-left: $list-item-margin-right * 2;
+  //     margin-right: 0;
+  //   }
+  // }
+  & > button:not(:last-child),
+  & > div:not(:last-child) {
     margin-right: $list-item-margin-right * 2;
     margin-left: 0;
     @include rtl-selector {

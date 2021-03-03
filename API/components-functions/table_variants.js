@@ -53,25 +53,27 @@ $table-sortable-descending-icon: $token-icons-neo-icon-chevron-down !default;
  // th filter multiselect spacing - DONE
 // th filter multiselect icon sizing & spacing - DONE
 
-// tr disabled color
-// tr border styles
-// tr hover/active color
-// tr active font weight
+// tr disabled color - DONE
+// tr border styles - DONE
+// tr hover/active color - DONE
+// tr active font weight - DONE
 
-// td padding
-// td link color
+// td padding - DONE
+// td link color - TOKEN OR <a> styles
 
-// nested table padding
-// nested table border style
-// nested table row background color
-// nasted table inside row max height
-// nested table row cell padding
+// nested table padding - DONE
+// nested table border style - DONE
+// nested table row background color - DONE
+// nasted table inside row max height - DONE
+// nested table row cell padding - DONE
 
-// filters sheet header spacing
-// filters sheet form padding
-// filters sheet border style
+// filters row form padding - DONE
+// filters row background colour - DONE
+// filters row spacing - ????
 
-// actions spacing
+// filters sheet border style - DONE
+
+// actions spacing - DONE
 
 */
 
@@ -176,7 +178,15 @@ async function tableStyles(value) {
           variant.name ===
           'Type=text, Can Sort/Filter=TRUE, Filter Applied=FALSE, Sorting Applied=none, State=hover, Location=main'
         ) {
-          // console.log(variant.children[0]);
+          // console.log(variant.children[0].children[0]);
+          // header cell filter icon size
+          tableJSONObject.table['header-cell-filter-icon-size'] = {
+            value: `${variant.children[0].children[0].children[3].size.x}px`,
+          };
+          // header cell filter icon spacing
+          tableJSONObject.table['header-cell-filter-icon-spacing'] = {
+            value: `${variant.children[0].children[0].relativeTransform[1][2]}px`,
+          };
           var headerCellHoverColorID = variant.children[0].styles.fills;
           await coreFigmaFunctions
             .getFigmaTokenNameByID(
@@ -227,7 +237,7 @@ async function tableStyles(value) {
               };
               // header-font-weight
               tableJSONObject.table['filter-font-weight'] = {
-                value: `{Web-typography.fontweight-regular.value}`,
+                value: `{Web-typography.fontweight-semibold.value}`,
               };
             });
           // filter text spacing
@@ -257,13 +267,253 @@ async function tableStyles(value) {
         }
       }
     }
+    if (component.name === 'row') {
+      for (variant of component.children) {
+        if (variant.name === 'Type=icon, State=selected, Location=main') {
+          // table icon sizing
+          tableJSONObject.table['icon-size'] = {
+            value: `${variant.children[0].children[1].size.x}px`,
+          };
+        }
+        if (
+          variant.name === 'Type=text - main, State=disabled, Location=main'
+        ) {
+          // row disabled colour
+          var rowDisabledColorID = variant.children[0].styles.fills;
+          await coreFigmaFunctions
+            .getFigmaTokenNameByID(
+              coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+              coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+              rowDisabledColorID
+            )
+            .then((value) => {
+              tableJSONObject.table['row-disabled-color'] = {
+                value: `{color.${value.nodes[
+                  rowDisabledColorID
+                ].document.name.toLowerCase()}.value}`,
+              };
+            });
+          // row border styles
+          // border width
+          tableJSONObject.table['row-border-width'] = {
+            value: `${variant.children[0].children[1].strokeWeight}px`,
+          };
+          // border style
+          tableJSONObject.table['row-border-style'] = {
+            value: variant.children[0].children[1].strokes[0].type.toLowerCase(),
+          };
+          // border color
+          var headerCellBorderColorID =
+            variant.children[0].children[1].styles.stroke;
+          await coreFigmaFunctions
+            .getFigmaTokenNameByID(
+              coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+              coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+              headerCellBorderColorID
+            )
+            .then((value) => {
+              tableJSONObject.table['row-border-color'] = {
+                value: `{color.${value.nodes[
+                  headerCellBorderColorID
+                ].document.name.toLowerCase()}.value}`,
+              };
+            });
+        }
+        if (variant.name === 'Type=text - main, State=hover, Location=main') {
+          // row hover colour
+          var rowHoverColorID = variant.children[0].styles.fills;
+          await coreFigmaFunctions
+            .getFigmaTokenNameByID(
+              coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+              coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+              rowHoverColorID
+            )
+            .then((value) => {
+              tableJSONObject.table['row-hover-color'] = {
+                value: `{color.${value.nodes[
+                  rowHoverColorID
+                ].document.name.toLowerCase()}.value}`,
+              };
+            });
+        }
+        if (
+          variant.name === 'Type=text - main, State=selected, Location=main'
+        ) {
+          // font active colour
+          var rowActiveColorID = variant.children[0].children[0].styles.fill;
+          await coreFigmaFunctions
+            .getFigmaTokenNameByID(
+              coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+              coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+              rowActiveColorID
+            )
+            .then((value) => {
+              tableJSONObject.table['row-font-active-color'] = {
+                value: `{color.${value.nodes[
+                  rowActiveColorID
+                ].document.name.toLowerCase()}.value}`,
+              };
+            });
+          // font active weight
+          tableJSONObject.table['row-font-active-weight'] = {
+            value: `{Web-typography.fontweight-semibold.value}`,
+          };
+          // table cell padding
+          tableJSONObject.table['row-cell-padding-x'] = {
+            value: `${variant.children[0].children[0].relativeTransform[0][2]}px`,
+          };
+          tableJSONObject.table['row-cell-padding-y'] = {
+            value: `${variant.children[0].children[0].relativeTransform[1][2]}px`,
+          };
+        }
+      }
+    }
+    if (component.name === '.widget-content-table') {
+      // console.log(component.children[13].children[0]);
+      // nested table row padding
+      tableJSONObject.table['nested-row-padding-y'] = {
+        value: `${component.children[13].children[0].relativeTransform[1][2]}px`,
+      };
+      tableJSONObject.table['nested-row-padding-x'] = {
+        value: `${component.children[13].children[0].relativeTransform[0][2]}px`,
+      };
+      // nested row border
+      // border width
+      tableJSONObject.table['nested-row-border-width'] = {
+        value: `${component.children[13].children[1].size.y}px`,
+      };
+      // border style - does not exist on Rectangle in Figma
+      // tableJSONObject.table['nested-row-border-style'] = {
+      //   value: component.children[13].children[1].strokes[0].type.toLowerCase(),
+      // };
+      // border color
+      // console.log(component.children[13].children[1]);
+      var nestedCellBorderColorID =
+        component.children[13].children[1].styles.fill;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          nestedCellBorderColorID
+        )
+        .then((value) => {
+          tableJSONObject.table['nested-row-border-color'] = {
+            value: `{color.${value.nodes[
+              nestedCellBorderColorID
+            ].document.name.toLowerCase()}.value}`,
+          };
+        });
+      // nested row background color
+      var nestedCellBackgroundColorID = component.children[13].styles.fills;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          nestedCellBackgroundColorID
+        )
+        .then((value) => {
+          tableJSONObject.table['nested-row-background-color'] = {
+            value: `{color.${value.nodes[
+              nestedCellBackgroundColorID
+            ].document.name.toLowerCase()}.value}`,
+          };
+        });
+      // nested row max height
+      tableJSONObject.table['nested-row-max-height'] = {
+        value: `${component.children[13].children[0].children[0].children[0].size.y}px`,
+      };
+      // nested row padding
+      // console.log(component.children[13].children[0]);
+      tableJSONObject.table['nested-row-wrapper-padding-y'] = {
+        value: `${component.children[13].children[0].relativeTransform[1][2]}px`,
+      };
+      tableJSONObject.table['nested-row-wrapper-padding-x'] = {
+        value: `${component.children[13].children[0].relativeTransform[0][2]}px`,
+      };
+      // nested row cell padding
+      tableJSONObject.table['nested-row-padding-y'] = {
+        value: `${component.children[13].children[0].children[0].children[0].children[0].relativeTransform[1][2]}px`,
+      };
+      tableJSONObject.table['nested-row-padding-x'] = {
+        value: `${component.children[13].children[0].children[0].children[0].children[0].relativeTransform[0][2]}px`,
+      };
+    }
+    if (component.name === '.advanced-filters-base') {
+      // filters padding
+      // console.log(component.children[1].children[0]);
+      tableJSONObject.table['filters-row-padding-y'] = {
+        value: `${component.children[1].children[0].relativeTransform[1][2]}px`,
+      };
+      tableJSONObject.table['filters-row-padding-x'] = {
+        value: `${component.children[1].children[0].relativeTransform[0][2]}px`,
+      };
+      // filters background colour
+      var filtersBackgroundColorID = component.children[1].styles.fills;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          filtersBackgroundColorID
+        )
+        .then((value) => {
+          tableJSONObject.table['nested-row-background-color'] = {
+            value: `{color.${value.nodes[
+              filtersBackgroundColorID
+            ].document.name.toLowerCase()}.value}`,
+          };
+        });
+    }
+    if (component.name === 'filter-by-sheet') {
+      console.log(component.children[1].children[0].children[0]);
+      // sheet form border style
+      // border width
+      tableJSONObject.table['sheet-border-width'] = {
+        value: `${component.children[0].children[0].children[0].children[1].children[1].children[8].strokeWeight}px`,
+      };
+      // border style
+      tableJSONObject.table['sheet-border-style'] = {
+        value: component.children[0].children[0].children[0].children[1].children[1].children[8].strokes[0].type.toLowerCase(),
+      };
+      // border color
+      var filterSheetBorderColorID =
+        component.children[0].children[0].children[0].children[1].children[1]
+          .children[8].styles.stroke;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          filterSheetBorderColorID
+        )
+        .then((value) => {
+          tableJSONObject.table['sheet-border-color'] = {
+            value: `{color.${value.nodes[
+              filterSheetBorderColorID
+            ].document.name.toLowerCase()}.value}`,
+          };
+        });
+    }
+    if (component.name === '.actions-base') {
+      // actions spacing
+      tableJSONObject.table['actions-bar-spacing'] = {
+        value: `${component.children[1].children[2].children[0].itemSpacing}px`,
+      };
+      // actions row padding
+      tableJSONObject.table['actions-row-padding'] = {
+        value: `${component.children[1].relativeTransform[1][2]}px`,
+      };
+      // console.log(component.children[1]);
+    }
   }
 
-  // const tableVariants = value.Table.children.filter(
-  //   (comp) => comp.type == 'COMPONENT_SET'
-  // )[0];
-
-  console.log(tableJSONObject);
+  // console.log(tableJSONObject);
+  // await fs
+  //   .writeFile(
+  //     '../properties/components/table.json',
+  //     JSON.stringify(tableJSONObject)
+  //   )
+  //   .then(function () {
+  //     console.log('table.json created');
+  //   });
 }
 
 exports.tableStyles = tableStyles;

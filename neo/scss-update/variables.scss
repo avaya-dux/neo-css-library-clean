@@ -499,7 +499,7 @@ $select-vertical-margin: $token-input-vertical-margin !default;
 $select-disabled-color: $input-disabled-color !default;
 $select-disabled-bg: $input-disabled-bg !default;
 // $select-hover-bg: $token-dropdown-hover !default;
-$select-table-page-show-width: $token-table-pagination-count-select-width !default;
+// $select-table-page-show-width: $token-table-pagination-count-select-width !default;
 $select-expand-icon: $token-icons-neo-icon-chevron-down !default;
 $select-multiple-selected-icon: $token-icons-neo-icon-accept !default;
 $select-multiple-unselected-icon: $token-icons-neo-icon-close !default;
@@ -541,42 +541,118 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
 // Location: src/scss/elements/_table.scss
 //
 
-$table-background: $global-background !default;
-$table-button-margin: $global-spacer;
-$table-padding: $token-table-padding !default;
-$table-condensed-padding: $table-padding / 2 !default;
-$table-color-scale: 5% !default;
-$table-head-background: $token-table-header-default-background-color !default;
-$table-head-hover: $table-head-background !default;
-$table-row-hover: $token-table-row-hover-color !default;
-$table-head-font-color: $global-text-color !default;
-$table-border-width: $token-table-row-border-bottom-width !default;
-$table-border: $table-border-width $token-table-row-border-bottom-style #c9c9c9 !default;
-$table-striped-background: lighten($table-row-hover, 20%) !default;
-$table-stripe: even !default;
-$table-foot-background: $table-head-background !default;
-$table-foot-row-hover: $table-head-hover !default;
-$table-foot-font-color: $global-text-color !default;
-$table-sortable-background-active: darken(
-  $table-head-background,
-  $table-color-scale
+:root {
+  --table-header-cell-border-color: #{$token-table-header-cell-border-color};
+  --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
+  --table-background-color: #{$token-table-background-color};
+  --table-row-disabled-color: #{$token-table-row-disabled-color};
+  --table-row-border-color: #{$token-table-row-border-color};
+  --table-row-hover-color: #{$token-table-row-hover-color};
+  --table-row-font-active-color: #{$token-table-row-font-active-color};
+  --table-nested-row-background-color: #{$token-table-nested-row-background-color};
+  --table-nested-row-border-color: #{$token-table-nested-row-border-color};
+  --table-sheet-border-color: #{$token-table-sheet-border-color};
+}
+.dark {
+  --table-header-cell-border-color: #{$token-color-base-600};
+  --table-header-cell-hover-color: #{$token-color-blue-800};
+  --table-background-color: #{$token-color-base-900};
+  --table-row-disabled-color: #{$token-color-base-800};
+  --table-row-border-color: #{$token-color-base-800};
+  --table-row-hover-color: #{$token-color-blue-800};
+  --table-row-font-active-color: #{$token-color-blue-200};
+  --table-nested-row-background-color: #{$token-color-base-800};
+  --table-nested-row-border-color: #{$token-color-blue-600};
+  --table-sheet-border-color: #{$token-color-base-600};
+}
+
+$table-header-cell-border-color: var(--table-header-cell-border-color) !default;
+$table-header-cell-hover-color: var(--table-header-cell-hover-color) !default;
+$table-background-color: var(--table-background-color) !default;
+$table-row-disabled-color: var(--table-row-disabled-color) !default;
+$table-row-border-color: var(--table-row-border-color) !default;
+$table-row-hover-color: var(--table-row-hover-color) !default;
+$table-row-font-active-color: var(--table-row-font-active-color) !default;
+$table-nested-row-background-color: var(
+  --table-nested-row-background-color
 ) !default;
-$table-sortable-background-hover: $table-sortable-background-active !default;
-$table-sortable-icon-size: $global-font-size-x-small !default;
-$table-sortable-icon-margin-x: $global-spacer-large !default;
-$table-sortable-icon-line-height: 24px !default;
-// $table-editable-border: 3px solid $neo-active-green;
-// $table-editable-bg-color: lighten($neo-presence-green, 45%);
-$table-disabled-bg-color: $token-table-row-disabled-background-color !default;
-$table-disabled-text-color: $token-table-row-disabled-default-color !default;
-$table-disabled-clickable-color: $token-table-row-disabled-clickable-color !default;
-$table-page-select-height: $token-table-pagination-count-height !default;
-$table-page-select-width: $token-table-pagination-count-width !default;
-$table-filter-button-color: $token-table-filter-button-color !default;
-$table-date-picker-background-color: $token-table-datepicker-background-color !default;
-$table-date-picker-font-color: $token-color-base-600 !default;
-$table-sortable-ascending-icon: $token-icons-neo-icon-chevron-up !default;
-$table-sortable-descending-icon: $token-icons-neo-icon-chevron-down !default;
+$table-nested-row-border-color: var(--table-nested-row-border-color) !default;
+$table-sheet-border-color: var(--table-sheet-border-color) !default;
+
+$table-header-cell-padding-x: $token-table-header-cell-padding-x !default;
+$table-header-cell-padding-y: $token-table-header-cell-padding-y !default;
+$table-header-cell-font-size: $token-table-header-cell-font-size !default;
+$table-header-cell-line-height: $token-table-header-cell-line-height !default;
+$table-header-cell-letter-spacing: $token-table-header-cell-letter-spacing !default;
+$table-header-cell-font-weight: $token-table-header-cell-font-weight !default;
+$table-header-cell-min-height: $token-table-header-cell-min-height !default;
+$table-header-cell-border-width: $token-table-header-cell-border-width !default;
+$table-header-cell-border-style: $token-table-header-cell-border-style !default;
+$table-header-cell-filter-icon-size: $token-table-header-cell-filter-icon-size !default;
+$table-header-cell-filter-icon-spacing: $token-table-header-cell-filter-icon-spacing !default;
+$table-icon-size: $token-table-icon-size !default;
+$table-row-border-width: $token-table-row-border-width !default;
+$table-row-border-style: $token-table-row-border-style !default;
+$table-row-font-active-weight: $token-table-row-font-active-weight !default;
+$table-row-cell-padding-x: $token-table-row-cell-padding-x !default;
+$table-row-cell-padding-y: $token-table-row-cell-padding-y !default;
+$table-actions-bar-spacing: $token-table-actions-bar-spacing !default;
+$table-actions-row-padding: $token-table-actions-row-padding !default;
+$table-filters-row-padding-y: $token-table-filters-row-padding-y !default;
+$table-filters-row-padding-x: $token-table-filters-row-padding-x !default;
+$table-nested-row-padding-y: $token-table-nested-row-padding-y !default;
+$table-nested-row-padding-x: $token-table-nested-row-padding-x !default;
+$table-nested-row-border-width: $token-table-nested-row-border-width !default;
+$table-nested-row-max-height: $token-table-nested-row-max-height !default;
+$table-filter-font-size: $token-table-filter-font-size !default;
+$table-filter-line-height: $token-table-filter-line-height !default;
+$table-filter-letter-spacing: $token-table-filter-letter-spacing !default;
+$table-filter-font-weight: $token-table-filter-font-weight !default;
+$table-filter-padding-vertical: $token-table-filter-padding-vertical !default;
+$table-filter-text-margin-bottom: $token-table-filter-text-margin-bottom !default;
+$table-filter-icon-spacing: $token-table-filter-icon-spacing !default;
+$table-filter-icon-size: $token-table-filter-icon-size !default;
+$table-sheet-border-width: $token-table-sheet-border-width !default;
+$table-sheet-border-style: $token-table-sheet-border-style !default;
+$table-nested-row-wrapper-padding-y: $token-table-nested-row-wrapper-padding-y !default;
+$table-nested-row-wrapper-padding-x: $token-table-nested-row-wrapper-padding-x !default;
+
+// $table-background: $global-background !default;
+// $table-button-margin: $global-spacer;
+// $table-padding: $token-table-padding !default;
+// $table-condensed-padding: $table-padding / 2 !default;
+// $table-color-scale: 5% !default;
+// $table-head-background: $token-table-header-default-background-color !default;
+// $table-head-hover: $table-head-background !default;
+// $table-row-hover: $token-table-row-hover-color !default;
+// $table-head-font-color: $global-text-color !default;
+// $table-border-width: $token-table-row-border-bottom-width !default;
+// $table-border: $table-border-width $token-table-row-border-bottom-style #c9c9c9 !default;
+// $table-striped-background: lighten($table-row-hover, 20%) !default;
+// $table-stripe: even !default;
+// $table-foot-background: $table-head-background !default;
+// $table-foot-row-hover: $table-head-hover !default;
+// $table-foot-font-color: $global-text-color !default;
+// $table-sortable-background-active: darken(
+//   $table-head-background,
+//   $table-color-scale
+// ) !default;
+// $table-sortable-background-hover: $table-sortable-background-active !default;
+// $table-sortable-icon-size: $global-font-size-x-small !default;
+// $table-sortable-icon-margin-x: $global-spacer-large !default;
+// $table-sortable-icon-line-height: 24px !default;
+// // $table-editable-border: 3px solid $neo-active-green;
+// // $table-editable-bg-color: lighten($neo-presence-green, 45%);
+// $table-disabled-bg-color: $token-table-row-disabled-background-color !default;
+// $table-disabled-text-color: $token-table-row-disabled-default-color !default;
+// $table-disabled-clickable-color: $token-table-row-disabled-clickable-color !default;
+// $table-page-select-height: $token-table-pagination-count-height !default;
+// $table-page-select-width: $token-table-pagination-count-width !default;
+// $table-filter-button-color: $token-table-filter-button-color !default;
+// $table-date-picker-background-color: $token-table-datepicker-background-color !default;
+// $table-date-picker-font-color: $token-color-base-600 !default;
+// $table-sortable-ascending-icon: $token-icons-neo-icon-chevron-up !default;
+// $table-sortable-descending-icon: $token-icons-neo-icon-chevron-down !default;
 
 //
 // Component name: Buttons
@@ -1269,10 +1345,10 @@ $sheet-shadow: $token-shadows-elevation-300-x-offset
 // pagination color variables:first
 
 :root {
-  --pagination-color: #{$token-table-pagination-color};
-  --pagination-border-color-hover: #{$token-table-pagination-active-div-border-color};
-  --pagination-active-background-color: #{$token-table-pagination-active-background-color};
-  --pagination-item-color-current: #{$token-table-pagination-active-color};
+  --pagination-color: #{$token-color-blue-500};
+  --pagination-border-color-hover: #{$token-color-blue-500};
+  --pagination-active-background-color: #{$token-color-blue-500};
+  --pagination-item-color-current: #{$token-color-base-100};
 }
 .dark {
   --pagination-color: #{$token-color-blue-400};
@@ -1281,16 +1357,16 @@ $sheet-shadow: $token-shadows-elevation-300-x-offset
   --pagination-item-color-current: #{$token-color-base-800};
 }
 
-$pagination-font-size: $token-table-font-size !default;
+// $pagination-font-size: $token-table-font-size !default;
 $pagination-label-font-size: $global-font-size-small !default;
 $pagination-spacer: $global-spacer !default;
 $pagination-btn-background: $global-background !default;
 $pagination-btn-padding: $global-spacer-small $global-spacer-large !default;
-$pagination-border-radius: $token-table-pagination-active-div-border-radius !default;
+// $pagination-border-radius: $token-table-pagination-active-div-border-radius !default;
 $pagination-border-color-hover: var(--pagination-border-color-hover) !default;
-$pagination-border: $token-table-pagination-active-div-border-width
-  $token-table-pagination-active-div-border-style
-  var(--pagination-border-color-hover) !default;
+// $pagination-border: $token-table-pagination-active-div-border-width
+//   $token-table-pagination-active-div-border-style
+//   var(--pagination-border-color-hover) !default;
 $pagination-dots-color: $global-text-color !default;
 $pagination-color: var(--pagination-color) !default;
 $pagination-margin: $global-spacer !default;

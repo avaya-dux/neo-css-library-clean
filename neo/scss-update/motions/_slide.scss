@@ -31,6 +31,23 @@
     // animation-timing-function: $token-interactivity-motion-ease-out;
     animation-timing-function: $token-interactivity-motion-ease;
   }
+
+  &--out-bottom {
+    animation-name: slideOutBottom;
+    // animation-timing-function: $token-interactivity-motion-ease-out;
+    animation-timing-function: $token-interactivity-motion-ease;
+  }
+  &--in-top {
+    animation-name: slideInTop;
+    // animation-timing-function: $token-interactivity-motion-ease-out;
+    animation-timing-function: $token-interactivity-motion-ease;
+  }
+
+  &--in-bottom {
+    animation-name: slideInBottom;
+    // animation-timing-function: $token-interactivity-motion-ease-out;
+    animation-timing-function: $token-interactivity-motion-ease;
+  }
 }
 
 @keyframes slideInLeft {
@@ -80,5 +97,35 @@
   100% {
     opacity: 0;
     transform: translateY(30px);
+  }
+}
+
+@keyframes slideOutBottom {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+@keyframes slideInTop {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+}
+
+@keyframes slideInBottom {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-30px);
   }
 }

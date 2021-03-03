@@ -29,8 +29,9 @@
 }
 
 .neo-modal__content {
-  animation: animation-modal-content $modal-animation-time;
+  animation: slideInBottom $modal-animation-time;
   animation-timing-function: $global-transition-timing;
+  animation-fill-mode: forwards;
   color: $modal-color;
   background-color: $modal-background;
   border-radius: $modal-radius;

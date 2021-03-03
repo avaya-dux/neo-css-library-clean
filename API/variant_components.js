@@ -50,10 +50,10 @@ coreFigmaFunctions
     // await inputStyles.inputStyles(value);
     // await widgetStyles.widgetStyles(value);
     // await tooltipStyles.tooltipStyles(value);
-    await accordionStyles.accordionStyles(value);
+    // await accordionStyles.accordionStyles(value);
     // await sheetStyles.sheetStyles(value);
     // await modalStyles.modalStyles(value);
-    // await tableStyles.tableStyles(value);
+    await tableStyles.tableStyles(value);
   });
 
 // coreFigmaFunctions

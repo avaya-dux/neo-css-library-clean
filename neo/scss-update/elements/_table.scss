@@ -360,22 +360,21 @@
     color: var(--global-font-color);
     text-align: left;
     vertical-align: middle;
-    // FIGMA
-    background-color: #ffffff;
-    padding: 12px 16px;
-    font-weight: 600;
-    min-height: 44px;
-    border-bottom: 1px solid #c9c9c9;
-    // &:not(:empty):hover {
-    //   // need colour transition animation
-    //   background-color: #e8f1fc;
-    //   transition: $global-hover-transition;
-    //   cursor: pointer;
-    // }
+
+    background-color: $table-background-color;
+    padding: $table-header-cell-padding-y $table-header-cell-padding-x;
+    font-size: $table-header-cell-font-size;
+    font-weight: $table-header-cell-font-weight;
+    letter-spacing: $table-header-cell-letter-spacing;
+    line-height: $table-header-cell-line-height;
+    min-height: $table-header-cell-min-height;
+    border-bottom: $table-header-cell-border-width
+      $table-header-cell-border-style $table-header-cell-border-color;
+
     &.check {
       width: 5%;
       &:hover {
-        background-color: #e8f1fc;
+        background-color: $table-header-cell-hover-color;
         transition: $global-hover-transition;
         cursor: pointer;
       }
@@ -384,12 +383,12 @@
       padding: 0 !important;
       .neo-multiselect {
         // should be th padding
-        padding: 12px 16px !important;
+        padding: $table-header-cell-padding-y $table-header-cell-padding-x !important;
       }
     }
     &.filters:hover {
       & > * {
-        background-color: #e8f1fc;
+        background-color: $table-header-cell-hover-color;
         transition: $global-hover-transition;
         cursor: pointer;
       }
@@ -399,11 +398,12 @@
       display: block;
     }
     .neo-multiselect__content ul li {
-      font-weight: 400;
+      font-weight: $table-filter-font-weight;
       &:before {
         visibility: hidden;
-        margin-right: 8px;
-        font-size: 24px;
+        // hard-coded value needs to change
+        margin-right: $table-filter-icon-spacing;
+        font-size: $table-filter-font-size;
         content: $token-icons-neo-icon-accept;
         font-family: updated-neo-icons !important;
         -ms-font-feature-settings: 'liga' 1;
@@ -426,7 +426,8 @@
         text-transform: none;
         vertical-align: middle;
         @include rtl-selector {
-          margin-left: 8px;
+          // hard-coded value needs to change
+          margin-left: $table-filter-icon-spacing;
           margin-right: 0px;
         }
       }
@@ -438,40 +439,37 @@
     span {
       cursor: pointer;
       &:first-child {
-        margin-left: 12px;
+        margin-left: $table-header-cell-filter-icon-spacing;
         @include rtl-selector {
           margin-left: 0px;
-          margin-right: 12px;
+          margin-right: $table-header-cell-filter-icon-spacing;
         }
       }
       &:not(last-child) {
-        margin-right: 12px;
+        margin-right: $table-header-cell-filter-icon-spacing;
         @include rtl-selector {
-          // margin-left: 12px;
           margin-right: 0px;
         }
       }
       background-color: transparent;
       border: none;
-      // FIGMA
-      width: 16px;
-      height: 16px;
+      width: $table-header-cell-filter-icon-size;
+      height: $table-header-cell-filter-icon-size;
     }
   }
 
   // Table rows
 
   tr {
-    // FIGMA
-    border-bottom: 1px solid #c9c9c9;
-    background-color: #ffffff;
+    border-bottom: $table-row-border-width $table-row-border-style
+      $table-row-border-color;
+    background-color: $table-background-color;
     &.disabled {
-      // FIGMA
-      background-color: #f1f1f1;
+      background-color: $table-row-disabled-color;
       opacity: 0.5;
       cursor: not-allowed;
       &:hover {
-        background-color: #f1f1f1;
+        background-color: $table-row-disabled-color;
         * {
           cursor: not-allowed;
         }
@@ -480,7 +478,7 @@
     &:not(.disabled):hover {
       // need colour transition animation
       // FIGMA
-      background-color: #e8f1fc;
+      background-color: $table-row-hover-color;
       td .neo-check + label {
         display: block;
       }
@@ -489,10 +487,10 @@
       }
     }
     &.active {
-      background-color: #e8f1fc;
+      background-color: $table-row-hover-color;
       td {
         // FIGMA
-        font-weight: 600;
+        font-weight: $table-row-font-active-weight;
         // text-shadow: 0.5px 0 0 currentColor;
       }
       td .neo-check + label {
@@ -507,38 +505,32 @@
   // Table cells
 
   td {
-    // FIGMA
-    padding: 12px 16px;
+    padding: $table-row-cell-padding-y $table-row-cell-padding-x;
     vertical-align: middle;
-    // need better class name for cells with figures
+    background-color: $table-background-color;
+    // need better class name for cells with figures?
     &.disabled {
-      background-color: #f1f1f1;
+      background-color: $table-row-disabled-color;
       opacity: 0.5;
     }
-    // &.disabled:not(.number) {
-    //   text-align: center;
-    // }
     &.number {
       text-align: right;
     }
-    // FIGMA
+
     span[class*='neo-icon-']:before {
-      font-size: 24px;
+      font-size: $table-icon-size;
     }
     .neo-check + label {
       display: none;
     }
     & > a {
-      // FIGMA
-      color: #1473e6;
+      color: $link-color;
       &.active {
-        // FIGMA
-        color: #125ab3;
-        font-weight: 600;
+        color: $table-row-font-active-color;
+        font-weight: $table-row-font-active-weight;
       }
       &:hover {
-        // FIGMA
-        color: #125ab3;
+        color: $table-row-font-active-color;
       }
     }
     .neo-btn-square {
@@ -547,17 +539,16 @@
       }
       background-color: transparent;
       background-image: none;
-      // td.disabled &:hover {
-      //   color: #1473e6;
-      // }
       &:hover {
         background-image: none;
       }
     }
     .expand {
+      // may need to tweak speed as necessary
       transition: transform 0.15s ease;
     }
     .expand--active {
+      // may need to tweak speed as necessary
       transition: transform 0.15s ease;
       transform: rotate(180deg);
     }
@@ -568,38 +559,40 @@
   border-bottom: none !important;
   &--active {
     & > td {
-      padding: 24px 48px !important;
-      border-bottom: 3px solid #abccf5;
+      padding: $table-nested-row-wrapper-padding-y
+        $token-table-nested-row-wrapper-padding-x !important;
+      border-bottom: $table-nested-row-border-width solid
+        $table-nested-row-border-color;
     }
     .neo-table {
       visibility: initial !important;
     }
     div.neo-table__nested {
+      // arbitrary for now
       max-height: 500px;
     }
   }
   & > td {
-    background-color: #f1f1f1;
+    background-color: $table-nested-row-background-color;
     padding: 0;
   }
   .neo-table__nested {
-    // Figma
+    // Figma?
     max-height: 0px;
     .neo-table {
-      // needs to change
       visibility: collapse;
     }
     th {
-      max-height: 36px;
+      max-height: $table-nested-row-max-height;
       .neo-multiselect span:before {
-        font-size: 14px;
+        font-size: $table-header-cell-filter-icon-size;
       }
     }
     tr {
-      max-height: 36px;
+      max-height: $table-nested-row-max-height;
     }
     td {
-      padding: 8px 16px !important;
+      padding: $table-nested-row-padding-y $table-nested-row-padding-x !important;
     }
   }
 }
@@ -608,11 +601,9 @@
   position: absolute;
   right: 0;
   top: 0;
-  // height: 100%;
-  // keep this?
-  // width: 25% !important;
+
   .neo-sheet__header--left h4 {
-    // FIGMA
+    // minimum space between header and buttons - hard-coded for now
     margin-right: 12px;
     @include rtl-selector {
       margin-left: 12px;
@@ -625,10 +616,11 @@
     margin-top: 8px;
     background-color: $sheet-background;
     .neo-form-control {
-      // FIGMA
       width: 100%;
+      // FIGMA
       padding-bottom: 12px;
-      border-bottom: 1px solid #c9c9c9;
+      border-bottom: $table-sheet-border-width $table-sheet-border-style
+        $table-sheet-border-color;
     }
   }
 
@@ -646,8 +638,8 @@
   justify-content: space-between;
   align-items: center;
   // FIGMA
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: $table-actions-row-padding;
+  padding-bottom: $table-actions-row-padding;
   &--left,
   &--right {
     display: flex;
@@ -655,9 +647,9 @@
   &--left {
     // FIGMA #1
     & > *:first-child {
-      margin-right: 8px;
+      margin-right: $table-actions-bar-spacing;
       @include rtl-selector {
-        margin-left: 8px;
+        margin-left: $table-actions-bar-spacing;
         margin-right: 0px;
       }
     }
@@ -665,10 +657,9 @@
   &--right {
     align-items: center;
     .neo-form {
-      // FIGMA
-      margin-right: 8px;
+      margin-right: $table-actions-bar-spacing;
       @include rtl-selector {
-        margin-left: 8px;
+        margin-left: $table-actions-bar-spacing;
         margin-right: 0px;
       }
     }
@@ -682,10 +673,9 @@
     align-items: center;
 
     *:not(last-child) {
-      // FIGMA #2
-      margin-right: 8px;
+      margin-right: $table-actions-bar-spacing;
       @include rtl-selector {
-        margin-left: 8px;
+        margin-left: $table-actions-bar-spacing;
         margin-right: 0px;
       }
     }
@@ -699,7 +689,7 @@
   background-color: #f1f1f1;
   // FIGMA
   & > .neo-form--inline {
-    padding: 24px 16px;
+    padding: $table-filters-row-padding-y $table-filters-row-padding-x;
     width: 100%;
     justify-content: space-between;
     .neo-form-control {
