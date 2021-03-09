@@ -505,6 +505,7 @@
   // Table cells
 
   td {
+    color: $global-text-color;
     padding: $table-row-cell-padding-y $table-row-cell-padding-x;
     vertical-align: middle;
     background-color: $table-background-color;

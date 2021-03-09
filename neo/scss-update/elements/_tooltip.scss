@@ -44,24 +44,31 @@
       @include rtl-selector {
         // left: -6.5px;
         // bottom: 51%;
-        transform: translateY(-50%) rotate(180deg) !important;
+        // transform: translateY(-50%) rotate(180deg) !important;
+        left: auto;
+        right: -6.5px;
+        bottom: 51%;
       }
     }
 
     .neo-tooltip--right & .neo-arrow::before {
       border-right-color: $tooltip-background !important;
       border-width: $arrow-border-width;
-      // @include rtl-selector {
-      //   border-right-color: $tooltip-background !important;
-      //   border-width: $arrow-border-width;
-      // }
+      @include rtl-selector {
+        border-right-color: transparent !important;
+        // border-width: $arrow-border-width;
+        border-left-color: $tooltip-background !important;
+        border-width: $arrow-border-width;
+        transform: rotate(0deg);
+      }
     }
 
     .neo-tooltip--right & .neo-arrow::after {
       border-color: transparent !important;
-      // @include rtl-selector {
-      //   border-color: transparent !important;
-      // }
+      @include rtl-selector {
+        // border-color: transparent !important;
+        border-color: transparent !important;
+      }
     }
 
     // tooltip up
@@ -112,8 +119,9 @@
       right: -6.5px;
       bottom: 51%;
       @include rtl-selector {
-        right: -6.5px !important;
-        transform: translateY(-50%) rotate(180deg) !important;
+        right: auto;
+        left: -6.5px;
+        bottom: 51%;
       }
     }
 
@@ -121,10 +129,18 @@
       border-left-color: $tooltip-background !important;
       border-width: $arrow-border-width;
       transform: rotate(0deg);
+      @include rtl-selector {
+        border-left-color: transparent !important;
+        border-right-color: $tooltip-background !important;
+        border-width: $arrow-border-width;
+      }
     }
 
     .neo-tooltip--left & .neo-arrow::after {
       border-color: transparent !important;
+      @include rtl-selector {
+        border-color: transparent !important;
+      }
     }
 
     // tooltip up-left
