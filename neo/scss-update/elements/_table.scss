@@ -638,6 +638,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  background-color: $table-background-color;
   // FIGMA
   padding-top: $table-actions-row-padding;
   padding-bottom: $table-actions-row-padding;
@@ -687,7 +688,7 @@
   display: flex;
   flex-direction: row;
   // FIGMA
-  background-color: #f1f1f1;
+  background-color: $table-background-color;
   // FIGMA
   & > .neo-form--inline {
     padding: $table-filters-row-padding-y $table-filters-row-padding-x;

@@ -229,7 +229,7 @@
 @mixin neo-multiselect-arrow(
   // chevron-down
   $arrow-icon: $dropdown-expand-icon,
-  $color: #000000,
+  $color: $global-text-color,
   $padding-left: $dropdown-padding-x
 ) {
   &::after {
@@ -302,6 +302,7 @@
     }
 
     & ul li {
+      color: $global-text-color;
       padding: 8px 16px;
       list-style: none;
       &[disabled] {
