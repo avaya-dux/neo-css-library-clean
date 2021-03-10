@@ -319,6 +319,9 @@
 // circle buttons
 
 .neo-btn-circle {
+  // NEO-359 fix - centering button in Firefox browser
+  display: flex;
+  align-items: center;
   justify-content: center;
   border-radius: 100%;
   height: $button-circular-size;
@@ -596,6 +599,9 @@
 // square buttons
 
 .neo-btn-square {
+  // NEO-359 fix - centering button in Firefox browser
+  display: flex;
+  align-items: center;
   justify-content: center;
   height: $button-square-size;
   width: $button-square-size;

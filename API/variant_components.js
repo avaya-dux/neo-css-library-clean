@@ -39,7 +39,7 @@ coreFigmaFunctions
     // await switchStyles.switchStyles(value);
     // await radioStyles.radioStyles(value);
     // await tabStyles.tabStyles(value);
-    // await navbarStyles.navbarStyles(value);
+    await navbarStyles.navbarStyles(value);
     // await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
@@ -53,7 +53,7 @@ coreFigmaFunctions
     // await accordionStyles.accordionStyles(value);
     // await sheetStyles.sheetStyles(value);
     // await modalStyles.modalStyles(value);
-    await tableStyles.tableStyles(value);
+    // await tableStyles.tableStyles(value);
   });
 
 // coreFigmaFunctions

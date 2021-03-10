@@ -104,7 +104,7 @@ async function tableStyles(value) {
         );
     }
     if (component.name === '.header-base') {
-      // console.log(component.children[1]);
+      console.log(component.children[1]);
       // console.log(component.children[0]);
       // header cell padding
       tableJSONObject.table['header-cell-padding-x'] = {
@@ -505,7 +505,7 @@ async function tableStyles(value) {
     }
   }
 
-  // console.log(tableJSONObject);
+  console.log(tableJSONObject);
   // await fs
   //   .writeFile(
   //     '../properties/components/table.json',

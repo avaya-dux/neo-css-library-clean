@@ -373,3 +373,9 @@
   @include leftnav-title;
   @include leftnav-links;
 }
+
+.neo-leftnav--collapsible {
+  @extend %sheet;
+
+  padding: 0 0 17px 0 !important;
+}

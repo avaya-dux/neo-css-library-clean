@@ -21,7 +21,6 @@
     "firebase-admin": "^8.10.0",
     "firebase-functions": "^3.6.1",
     "gm": "^1.23.1",
-    "nodemailer": "^6.4.14",
     "request": "^2.88.2"
   },
   "devDependencies": {
