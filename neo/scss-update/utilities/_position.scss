@@ -32,10 +32,10 @@
     #{$self}__content {
       left: 50%;
       transform: translateX(-15px);
-      // @include rtl-selector {
-      //   left: 50%;
-      //   transform: translateX(calc(-100% + 15px)) scale(-1, 1);
-      // }
+      @include rtl-selector {
+        left: 50%;
+        transform: translateX(calc(-100% + 15px)) scale(-1, 1);
+      }
 
       @include neo-arrow-justify-right;
     }
@@ -47,10 +47,10 @@
       // length of content minus distance in pixels
       transform: translateX(calc(-100% + 15px));
 
-      // @include rtl-selector {
-      //   left: 50%;
-      //   transform: translateX(-15px) scale(-1, 1);
-      // }
+      @include rtl-selector {
+        left: 50%;
+        transform: translateX(-15px) scale(-1, 1);
+      }
 
       @include neo-arrow-justify-left;
     }
@@ -86,10 +86,10 @@
     #{$self}__content {
       left: 50%;
       transform: translateX(calc(-100% + 15px)) translateY(-100%);
-      // @include rtl-selector {
-      //   left: 50%;
-      //   transform: translateX(-15px) translateY(-100%) scale(-1, 1);
-      // }
+      @include rtl-selector {
+        left: 50%;
+        transform: translateX(-15px) translateY(-100%) scale(-1, 1);
+      }
 
       @include neo-arrow-justify-left;
     }
@@ -100,10 +100,10 @@
       left: 50%;
       transform: translateX(-15px) translateY(-100%);
 
-      // @include rtl-selector {
-      //   left: 50%;
-      //   transform: translateX(calc(-100% + 15px)) translateY(-100%) scale(-1, 1);
-      // }
+      @include rtl-selector {
+        left: 50%;
+        transform: translateX(calc(-100% + 15px)) translateY(-100%) scale(-1, 1);
+      }
 
       @include neo-arrow-justify-right;
     }
@@ -117,11 +117,12 @@
       margin-left: -$popover-offset;
 
       @include rtl-selector {
-        left: 0;
-        margin-left: -$popover-offset;
-        right: auto;
-
-        @include neo-arrow-left;
+        // left: 0;
+        // margin-left: -$popover-offset;
+        // right: auto;
+        left: 100%;
+        margin-left: $popover-offset;
+        // @include neo-arrow-left;
       }
 
       @include neo-arrow-right;
@@ -135,6 +136,8 @@
 
       @include rtl-selector {
         // transform: translate(100%, -50%);
+        top: 50%;
+        transform: translate(0, -50%);
       }
     }
   }
@@ -179,11 +182,13 @@
       margin-left: $popover-offset;
 
       @include rtl-selector {
-        left: 100%;
+        // left: 100%;
         // margin-right: $popover-offset;
-        right: auto;
+        // right: auto;
+        left: 0;
+        margin-left: -$popover-offset;
 
-        @include neo-arrow-right;
+        // @include neo-arrow-right;
       }
 
       @include neo-arrow-left;
@@ -194,6 +199,10 @@
     #{$self}__content {
       top: 50%;
       transform: translate(0, -50%);
+      @include rtl-selector {
+        top: 50%;
+        transform: translate(-100%, -50%);
+      }
     }
   }
 
