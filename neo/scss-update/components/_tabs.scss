@@ -69,7 +69,7 @@
       margin: 0;
       padding-bottom: 8px;
       text-decoration: none;
-      text-transform: capitalize;
+      // text-transform: capitalize;
 
       &:focus {
         // outline: none;
@@ -192,7 +192,7 @@
       // padding-top of tab item minus 2px for border
       padding-bottom: 6px;
       text-decoration: none;
-      text-transform: capitalize;
+      // text-transform: capitalize;
       border-bottom: $tab-action-border-bottom-width solid transparent;
       &:not(:last-child) {
         padding-right: 5px;

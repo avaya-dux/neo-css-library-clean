@@ -266,7 +266,7 @@
 
     .neo-form-control {
       margin-bottom: 0px;
-      margin-right: 12px;
+      // margin-right: 12px;
       & .neo-input-group {
         & label {
           padding-bottom: 0px !important;
@@ -277,6 +277,10 @@
         margin-left: 12px;
         margin-right: 0px;
       }
+    }
+
+    .neo-form-control:not(:last-child) {
+      margin-right: 12px;
     }
 
     // .neo-form-control .neo-input:only-child {

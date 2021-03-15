@@ -51,6 +51,20 @@
     //   }
     //   @include neo-avatar-status;
     // }
+    &-icon {
+      &:before {
+        position: absolute;
+        top: -1px;
+        font-size: $avatar-small-size - 2;
+      }
+      &--generic {
+        background: $avatar-font-color;
+        &:before {
+          // background-color: $global-background;
+          color: $avatar-background-color;
+        }
+      }
+    }
   }
 
   &--large {
@@ -79,6 +93,20 @@
     //   }
     //   @include neo-avatar-status;
     // }
+    &-icon {
+      &:before {
+        position: absolute;
+        top: -1px;
+        font-size: $avatar-large-size - 2;
+      }
+      &--generic {
+        background: $avatar-font-color;
+        &:before {
+          // background-color: $global-background;
+          color: $avatar-background-color;
+        }
+      }
+    }
   }
 }
 
@@ -153,6 +181,23 @@
   margin: 0;
   position: relative;
   vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-icon {
+    &:before {
+      position: absolute;
+      top: -1px;
+      font-size: $avatar-medium-size - 2;
+    }
+    &--generic {
+      background: $avatar-font-color;
+      &:before {
+        // background-color: $global-background;
+        color: $avatar-background-color;
+      }
+    }
+  }
   &--large .neo-avatar-status {
     height: 22px !important;
     width: 22px !important;
