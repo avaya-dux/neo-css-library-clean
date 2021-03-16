@@ -123,6 +123,7 @@ dist
 
 .vscode
 build/
+!build/scss/tokens.scss
 neo/combine/
 neo/css/
 neo/demo
