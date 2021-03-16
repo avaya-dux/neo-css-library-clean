@@ -167,6 +167,7 @@
       background-color: $navbar-background-color;
       &:focus {
         box-shadow: none;
+        outline: rgba(20, 115, 230, 1) auto 2px;
       }
       &::before {
         color: $navbar-default-icon-color;
@@ -387,6 +388,7 @@
       background-color: $navbar-background-color;
       &:focus {
         box-shadow: none;
+        outline: rgba(20, 115, 230, 1) auto 2px;
       }
       &::before {
         color: $navbar-default-icon-color;
