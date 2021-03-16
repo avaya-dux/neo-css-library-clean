@@ -141,6 +141,11 @@ async function widgetStyles(value) {
           };
         });
     }
+    if (headerVariant.name === 'Icon on Title=FALSE, Right Side=input') {
+      widgetJSONObject.widgets['header-min-height'] = {
+        value: `${headerVariant.size.y}px`,
+      };
+    }
   }
 
   const widgetVariants = value.Other.children.filter(
@@ -152,6 +157,41 @@ async function widgetStyles(value) {
       widgetVariant.name ===
       'Icon on Title=FALSE, Right Side=empty, Content=placeholder, State=default'
     ) {
+      //widget border styles
+      //border-radius
+      widgetJSONObject.widgets['border-radius'] = {
+        value: `${widgetVariant.children[0].cornerRadius}px`,
+      };
+      //border-width
+      //   console.log(variant.children[0].strokes);
+      widgetJSONObject.widgets['border-style'] = {
+        value: widgetVariant.children[0].strokes[0].type.toLowerCase(),
+      };
+      //border-style
+      widgetJSONObject.widgets['border-width'] = {
+        value: `${widgetVariant.children[0].strokeWeight}px`,
+      };
+      // border color
+      // hard coded for now
+      widgetJSONObject.widgets['border-color'] = {
+        value: `rgba(0, 0, 0, 0.15)`,
+      };
+
+      // var widgetBorderColorTokenID = widgetVariant.children[0].styles.strokes;
+      // widgetJSONObject.widgets['border-color'] = {
+      //   value: await coreFigmaFunctions
+      //     .getFigmaTokenNameByID(
+      //       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+      //       coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+      //       widgetBorderColorTokenID
+      //     )
+      //     .then(
+      //       (value) =>
+      //         `{color.${value.nodes[
+      //           widgetBorderColorTokenID
+      //         ].document.name.toLowerCase()}.value}`
+      //     ),
+      // };
       // widget padding
       widgetJSONObject.widgets['padding-x'] = {
         value: `${widgetVariant.children[0].paddingLeft}px`,
@@ -160,9 +200,26 @@ async function widgetStyles(value) {
         value: `${widgetVariant.children[0].paddingTop}px`,
       };
     }
+    if (
+      widgetVariant.name ===
+      'Icon on Title=FALSE, Right Side=icon button, Content=placeholder, State=default'
+    ) {
+      // widget header button icon size
+      widgetJSONObject.widgets['header-button-icon-size'] = {
+        value: `${widgetVariant.children[0].children[0].children[0].children[1].children[5].children[0].children[0].size.x}px`,
+      };
+    }
   }
 
-  console.log(widgetJSONObject);
+  // console.log(widgetJSONObject);
+  await fs
+    .writeFile(
+      '../properties/components/widget.json',
+      JSON.stringify(widgetJSONObject)
+    )
+    .then(function () {
+      console.log('widget.json created');
+    });
 }
 
 exports.widgetStyles = widgetStyles;

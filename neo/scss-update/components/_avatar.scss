@@ -51,6 +51,28 @@
     //   }
     //   @include neo-avatar-status;
     // }
+    &--generic {
+      background: $avatar-font-color;
+      &:before {
+      position: absolute;
+      // top: -1px;
+      font-size: $avatar-small-size - 2;
+      content: $avatar-generic-icon;
+      font-family: 'updated-neo-icons';
+      color: $avatar-background-color;
+      }
+    }
+    &--bot {
+      // background: $avatar-font-color;
+      &:before {
+      position: absolute;
+      // top: -1px;
+      font-size: $avatar-small-size - 2;
+      content: $avatar-bot-icon;
+      font-family: 'updated-neo-icons';
+      // color: $avatar-background-color;
+      }
+    }
   }
 
   &--large {
@@ -79,6 +101,29 @@
     //   }
     //   @include neo-avatar-status;
     // }
+      &--generic {
+        background: $avatar-font-color;
+        &:before {
+        position: absolute;
+        // top: -1px;
+        font-size: $avatar-large-size - 2;
+        content: $avatar-generic-icon;
+        font-family: 'updated-neo-icons';
+        color: $avatar-background-color;
+        }
+      }
+      &--bot {
+        // background: $avatar-font-color;
+        &:before {
+        position: absolute;
+        // top: -1px;
+        font-size: $avatar-large-size - 2;
+        content: $avatar-bot-icon;
+        font-family: 'updated-neo-icons';
+        // color: $avatar-background-color;
+        }
+      }
+    
   }
 }
 
@@ -153,6 +198,31 @@
   margin: 0;
   position: relative;
   vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--generic {
+    background: $avatar-font-color;
+    &:before {
+    position: absolute;
+    // top: -1px;
+    font-size: $avatar-medium-size - 2;
+    content: $avatar-generic-icon;
+    font-family: 'updated-neo-icons';
+    color: $avatar-background-color;
+    }
+  }
+  &--bot {
+    // background: $avatar-font-color;
+    &:before {
+    position: absolute;
+    // top: -1px;
+    font-size: $avatar-medium-size - 2;
+    content: $avatar-bot-icon;
+    font-family: 'updated-neo-icons';
+    // color: $avatar-background-color;
+    }
+  }
   &--large .neo-avatar-status {
     height: 22px !important;
     width: 22px !important;

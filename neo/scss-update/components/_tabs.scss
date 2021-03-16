@@ -38,6 +38,10 @@
     background-color: $tab-background-color;
     display: flex;
 
+    &:focus-within {
+      outline: rgba(20, 115, 230, 1) auto 2px;
+    }
+
     // @include rtl-selector {
     //   margin: {
     //     left: $tab-offset;
@@ -69,10 +73,10 @@
       margin: 0;
       padding-bottom: 8px;
       text-decoration: none;
-      text-transform: capitalize;
+      // text-transform: capitalize;
 
       &:focus {
-        // outline: none;
+        outline: none;
       }
 
       &:before {
@@ -167,6 +171,10 @@
     padding: 8px 16px 0px 16px;
     display: flex;
 
+    &:focus-within {
+      outline: rgba(20, 115, 230, 1) auto 2px;
+    }
+
     // &:last-child {
     //   margin-right: 0;
 
@@ -192,13 +200,13 @@
       // padding-top of tab item minus 2px for border
       padding-bottom: 6px;
       text-decoration: none;
-      text-transform: capitalize;
+      // text-transform: capitalize;
       border-bottom: $tab-action-border-bottom-width solid transparent;
       &:not(:last-child) {
         padding-right: 5px;
       }
       &:focus {
-        // outline: none;
+        outline: none
       }
       &:before {
         margin-right: 5px;

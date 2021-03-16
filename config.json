@@ -30,6 +30,15 @@
           }
         },
         {
+          "destination": "_widgets.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "widgets"
+            }
+          }
+        },
+        {
           "destination": "_shadows.scss",
           "format": "scss/variables",
           "filter": {

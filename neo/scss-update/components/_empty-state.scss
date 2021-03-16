@@ -13,6 +13,7 @@
   transform: translateY(-50%);
 
   & p {
+    color: $empty-state-color;
     font-size: 19px;
   }
 

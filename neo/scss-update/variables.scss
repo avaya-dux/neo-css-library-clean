@@ -552,6 +552,7 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-nested-row-background-color: #{$token-table-nested-row-background-color};
   --table-nested-row-border-color: #{$token-table-nested-row-border-color};
   --table-sheet-border-color: #{$token-table-sheet-border-color};
+  --table-filter-row-background-color: #{$token-table-filters-row-background-color};
 }
 .dark {
   --table-header-cell-border-color: #{$token-color-base-600};
@@ -564,8 +565,10 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-nested-row-background-color: #{$token-color-base-800};
   --table-nested-row-border-color: #{$token-color-blue-600};
   --table-sheet-border-color: #{$token-color-base-600};
+  --table-filter-row-background-color: #{$token-color-base-900};
 }
 
+$table-filters-background-color: var(--table-filter-row-background-color) !default;
 $table-header-cell-border-color: var(--table-header-cell-border-color) !default;
 $table-header-cell-hover-color: var(--table-header-cell-hover-color) !default;
 $table-background-color: var(--table-background-color) !default;
@@ -1591,6 +1594,9 @@ $neo-avatar-status: map-merge(
   $neo-avatar-status
 );
 
+$avatar-bot-icon: $token-icons-neo-icon-bot !default;
+$avatar-generic-icon: $token-icons-neo-icon-contact-filled !default;
+
 // //
 // // Component name: Card
 // // Location: src/scss/components/_card.scss
@@ -2151,28 +2157,45 @@ $popover-font-weight: $token-web-typography-fontweight-semibold !default;
 // widget colour variables
 
 :root {
+  --widget-background-color: #{$global-background};
+  --widget-heading-font-color: #{$token-widgets-header-font-color};
+  --widget-heading-icon-color: #{$token-widgets-header-icon-color};
   --widget-shimmer-color: #{$token-color-base-100};
-  --widget-border-color: #{$token-color-base-200};
+  --widget-border-color: #{$token-widgets-border-color};
 }
 .dark {
+  --widget-background-color: #{$token-color-base-900};
+  --widget-heading-font-color: #{$token-color-base-100};
+  --widget-heading-icon-color: #{$token-color-base-100};
   --widget-shimmer-color: #{$token-color-base-800};
-  --widget-border-color: #{$token-color-base-600};
+  --widget-border-color: rgba(255, 255, 255, 0.15);
 }
 
-$widget-shimmer-color: var(--widget-shimmer-color);
+$widget-background-color: var(--widget-background-color) !default;
+$widget-shimmer-color: var(--widget-shimmer-color) !default;
 $widget-border-color: var(--widget-border-color) !default;
-$widget-box-shadow: 2px 2px 2px $widget-border-color;
-$widget-heading-color: #616161 !default;
-$widget-border-radius: $global-radius !default;
-$widget-heading-padding: $global-spacer-x-large !default;
-$widget-heading-height: 40px !default;
-$widget-heading-font-weight: 400 !default;
-$widget-heading-font-size: $global-font-size-large !default;
-$widget-content-padding: $global-spacer-x-large !default;
-$widget-content-min-height: 17vh !default;
-$widget-footer-padding: $global-spacer $global-spacer $global-spacer
-  $global-spacer-x-large !default;
-$widget-disabled-opacity: $global-opacity !default;
+$widget-border-width: $token-widgets-border-width !default;
+$widget-border-style: $token-widgets-border-style !default;
+// $widget-box-shadow: 2px 2px 2px $widget-border-color;
+$widget-heading-color: var(--widget-heading-font-color) !default;
+$widget-heading-icon-color: var(--widget-heading-icon-color) !default;
+$widget-heading-min-height: $token-widgets-header-min-height !default;
+$widget-border-radius: $token-widgets-border-radius !default;
+$widget-heading-padding: $token-widgets-padding-y $token-widgets-padding-x !default;
+// $widget-heading-height: 40px !default;
+$widget-heading-icon-size: $token-widgets-header-icon-size !default;
+$widget-heading-font-weight: $token-widgets-header-font-weight !default;
+$widget-heading-font-size: $token-widgets-header-font-size !default;
+$widget-heading-font-margin-left: $token-widgets-header-icon-spacing !default;
+$widget-heading-line-height: $token-widgets-header-line-height !default;
+$widget-heading-icon-button-size: $token-widgets-header-button-icon-size !default;
+$widget-heading-letter-spacing: $token-widgets-header-letter-spacing !default;
+$widget-content-padding: 0 $token-widgets-padding-x $token-widgets-padding-y
+  $token-widgets-padding-x !default;
+// $widget-content-min-height: 17vh !default;
+// $widget-footer-padding: $global-spacer $global-spacer $global-spacer
+//   $global-spacer-x-large !default;
+// $widget-disabled-opacity: $global-opacity !default;
 
 // Component name: Empty state
 // Location: src/scss/components/_empty-state.scss
@@ -2242,16 +2265,19 @@ $spinner-animation-duration: 500ms !default;
   --modal-color: #{$token-modal-header-font-color};
   --modal-border-color: rgba(0, 0, 0, 0.15);
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
+  --modal-scrim-color: rgba(0, 0, 0, 0.25);
 }
 .dark {
   --modal-background-color: #{$token-color-base-900};
   --modal-color: #{$token-color-base-100};
   --modal-border-color: rgba(241, 241, 241, 0.15);
   --modal-shadow-color: rgba(241, 241, 241, 0.25);
+  --modal-scrim-color: rgba(255, 255, 255, 0.25);
 }
 
 // $modal-scrim-color: $token-modal-scrim-color !default;
 $modal-z: 999 !default;
+$modal-scrim-color: var(--modal-scrim-color) !default;
 $modal-color: var(--modal-color) !default;
 $modal-content-z: 1000 !default;
 $modal-width: 550px !default;
