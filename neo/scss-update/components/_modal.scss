@@ -18,7 +18,7 @@
     .neo-modal__background {
       animation: show-element $modal-animation-time;
       animation-timing-function: $global-transition-timing;
-      background-color: $modal-background;
+      background-color: $modal-scrim-color;
       height: 100%;
       width: 100%;
       z-index: $modal-z;

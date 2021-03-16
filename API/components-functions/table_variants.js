@@ -439,6 +439,21 @@ async function tableStyles(value) {
       };
     }
     if (component.name === '.advanced-filters-base') {
+      // filters background colour
+      var filtersRowBackgroundColorID = component.children[0].styles.fills;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          filtersRowBackgroundColorID
+        )
+        .then((value) => {
+          tableJSONObject.table['filters-row-background-color'] = {
+            value: `{color.${value.nodes[
+              filtersRowBackgroundColorID
+            ].document.name.toLowerCase()}.value}`,
+          };
+        });
       // filters padding
       // console.log(component.children[1].children[0]);
       tableJSONObject.table['filters-row-padding-y'] = {
@@ -505,15 +520,15 @@ async function tableStyles(value) {
     }
   }
 
-  console.log(tableJSONObject);
-  // await fs
-  //   .writeFile(
-  //     '../properties/components/table.json',
-  //     JSON.stringify(tableJSONObject)
-  //   )
-  //   .then(function () {
-  //     console.log('table.json created');
-  //   });
+  // console.log(tableJSONObject);
+  await fs
+    .writeFile(
+      '../properties/components/table.json',
+      JSON.stringify(tableJSONObject)
+    )
+    .then(function () {
+      console.log('table.json created');
+    });
 }
 
 exports.tableStyles = tableStyles;

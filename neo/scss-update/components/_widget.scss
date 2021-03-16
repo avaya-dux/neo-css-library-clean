@@ -165,6 +165,7 @@
     // @include widget-element(16px);
     padding: $widget-heading-padding;
     background-color: $global-background;
+    min-height: $widget-heading-min-height + $token-widgets-padding-y * 2;
     // text-align: center;
     width: 100%;
     // vertical-align: middle;
@@ -176,6 +177,7 @@
     // &::before {
     //   margin-right: 10px;
     // }
+   
     & .neo-widget__header-left {
       display: flex;
       flex-direction: row;
@@ -184,8 +186,11 @@
       & [class*='neo-icon-']:before {
         font-size: $token-widgets-header-icon-size;
       }
-      & h4 {
+      & p {
         align-self: center;
+        font-size: $widget-heading-font-size;
+        font-weight: $widget-heading-font-weight;
+        line-height: $widget-heading-line-height;
         &:not(:only-child) {
           margin-left: $widget-heading-font-margin-left;
           margin-right: 0;
@@ -267,7 +272,7 @@
       background-color: $global-disabled-bg;
       color: $global-disabled-color;
 
-      & h4 {
+      & p {
         color: $global-disabled-color !important;
       }
 

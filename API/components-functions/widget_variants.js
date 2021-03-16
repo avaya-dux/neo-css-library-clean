@@ -141,6 +141,11 @@ async function widgetStyles(value) {
           };
         });
     }
+    if (headerVariant.name === 'Icon on Title=FALSE, Right Side=input') {
+      widgetJSONObject.widgets['header-min-height'] = {
+        value: `${headerVariant.size.y}px`,
+      };
+    }
   }
 
   const widgetVariants = value.Other.children.filter(

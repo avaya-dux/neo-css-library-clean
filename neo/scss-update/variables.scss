@@ -552,6 +552,7 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-nested-row-background-color: #{$token-table-nested-row-background-color};
   --table-nested-row-border-color: #{$token-table-nested-row-border-color};
   --table-sheet-border-color: #{$token-table-sheet-border-color};
+  --table-filter-row-background-color: #{$token-table-filters-row-background-color};
 }
 .dark {
   --table-header-cell-border-color: #{$token-color-base-600};
@@ -564,8 +565,10 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-nested-row-background-color: #{$token-color-base-800};
   --table-nested-row-border-color: #{$token-color-blue-600};
   --table-sheet-border-color: #{$token-color-base-600};
+  --table-filter-row-background-color: #{$token-color-base-900};
 }
 
+$table-filters-background-color: var(--table-filter-row-background-color) !default;
 $table-header-cell-border-color: var(--table-header-cell-border-color) !default;
 $table-header-cell-hover-color: var(--table-header-cell-hover-color) !default;
 $table-background-color: var(--table-background-color) !default;
@@ -1591,6 +1594,9 @@ $neo-avatar-status: map-merge(
   $neo-avatar-status
 );
 
+$avatar-bot-icon: $token-icons-neo-icon-bot !default;
+$avatar-generic-icon: $token-icons-neo-icon-contact-filled !default;
+
 // //
 // // Component name: Card
 // // Location: src/scss/components/_card.scss
@@ -2173,6 +2179,7 @@ $widget-border-style: $token-widgets-border-style !default;
 // $widget-box-shadow: 2px 2px 2px $widget-border-color;
 $widget-heading-color: var(--widget-heading-font-color) !default;
 $widget-heading-icon-color: var(--widget-heading-icon-color) !default;
+$widget-heading-min-height: $token-widgets-header-min-height !default;
 $widget-border-radius: $token-widgets-border-radius !default;
 $widget-heading-padding: $token-widgets-padding-y $token-widgets-padding-x !default;
 // $widget-heading-height: 40px !default;
@@ -2258,16 +2265,19 @@ $spinner-animation-duration: 500ms !default;
   --modal-color: #{$token-modal-header-font-color};
   --modal-border-color: rgba(0, 0, 0, 0.15);
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
+  --modal-scrim-color: rgba(0, 0, 0, 0.25);
 }
 .dark {
   --modal-background-color: #{$token-color-base-900};
   --modal-color: #{$token-color-base-100};
   --modal-border-color: rgba(241, 241, 241, 0.15);
   --modal-shadow-color: rgba(241, 241, 241, 0.25);
+  --modal-scrim-color: rgba(255, 255, 255, 0.25);
 }
 
 // $modal-scrim-color: $token-modal-scrim-color !default;
 $modal-z: 999 !default;
+$modal-scrim-color: var(--modal-scrim-color) !default;
 $modal-color: var(--modal-color) !default;
 $modal-content-z: 1000 !default;
 $modal-width: 550px !default;

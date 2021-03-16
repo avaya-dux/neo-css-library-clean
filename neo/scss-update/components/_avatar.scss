@@ -51,18 +51,26 @@
     //   }
     //   @include neo-avatar-status;
     // }
-    &-icon {
+    &--generic {
+      background: $avatar-font-color;
       &:before {
-        position: absolute;
-        top: -1px;
-        font-size: $avatar-small-size - 2;
+      position: absolute;
+      // top: -1px;
+      font-size: $avatar-small-size - 2;
+      content: $avatar-generic-icon;
+      font-family: 'updated-neo-icons';
+      color: $avatar-background-color;
       }
-      &--generic {
-        background: $avatar-font-color;
-        &:before {
-          // background-color: $global-background;
-          color: $avatar-background-color;
-        }
+    }
+    &--bot {
+      // background: $avatar-font-color;
+      &:before {
+      position: absolute;
+      // top: -1px;
+      font-size: $avatar-small-size - 2;
+      content: $avatar-bot-icon;
+      font-family: 'updated-neo-icons';
+      // color: $avatar-background-color;
       }
     }
   }
@@ -93,20 +101,29 @@
     //   }
     //   @include neo-avatar-status;
     // }
-    &-icon {
-      &:before {
-        position: absolute;
-        top: -1px;
-        font-size: $avatar-large-size - 2;
-      }
       &--generic {
         background: $avatar-font-color;
         &:before {
-          // background-color: $global-background;
-          color: $avatar-background-color;
+        position: absolute;
+        // top: -1px;
+        font-size: $avatar-large-size - 2;
+        content: $avatar-generic-icon;
+        font-family: 'updated-neo-icons';
+        color: $avatar-background-color;
         }
       }
-    }
+      &--bot {
+        // background: $avatar-font-color;
+        &:before {
+        position: absolute;
+        // top: -1px;
+        font-size: $avatar-large-size - 2;
+        content: $avatar-bot-icon;
+        font-family: 'updated-neo-icons';
+        // color: $avatar-background-color;
+        }
+      }
+    
   }
 }
 
@@ -184,18 +201,26 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  &-icon {
+  &--generic {
+    background: $avatar-font-color;
     &:before {
-      position: absolute;
-      top: -1px;
-      font-size: $avatar-medium-size - 2;
+    position: absolute;
+    // top: -1px;
+    font-size: $avatar-medium-size - 2;
+    content: $avatar-generic-icon;
+    font-family: 'updated-neo-icons';
+    color: $avatar-background-color;
     }
-    &--generic {
-      background: $avatar-font-color;
-      &:before {
-        // background-color: $global-background;
-        color: $avatar-background-color;
-      }
+  }
+  &--bot {
+    // background: $avatar-font-color;
+    &:before {
+    position: absolute;
+    // top: -1px;
+    font-size: $avatar-medium-size - 2;
+    content: $avatar-bot-icon;
+    font-family: 'updated-neo-icons';
+    // color: $avatar-background-color;
     }
   }
   &--large .neo-avatar-status {

@@ -364,6 +364,7 @@
   box-sizing: border-box;
   display: inline-block;
   position: relative;
+  
   // margin-bottom: 1px;
   &:focus,
   &:focus-within {
@@ -374,6 +375,7 @@
     }
   }
   & .neo-multiselect__header {
+    border-radius: $select-border-radius;
     display: flex;
     align-items: center;
     justify-content: space-between;

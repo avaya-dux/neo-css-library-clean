@@ -29,6 +29,11 @@ fs.readFile('../../build/css/updated-neo-icons.css', function (err, data) {
     '.neo-icon-minus:before ',
     // spinner
     '.neo-icon-spinner:before ',
+    // Avatars
+    // bot icon
+    '.neo-icon-bot:before ',
+    // contact filled icon
+    '.neo-icon-contact-filled:before ',
   ];
 
   var iconJSONObject = {
