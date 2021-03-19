@@ -31,6 +31,7 @@ async function pullTypographyTokens(styles) {
       // it limits duplication and makes it easier to import the tokens into Neo
 
       if (platform === 'Web') {
+        // console.log(style[0]);
         var styleName = style[0].document.name.toLowerCase();
 
         // console.log(style[0].document);
@@ -70,6 +71,12 @@ async function pullTypographyTokens(styles) {
           'fontSize'
         ] = {
           value: `${style[0].document.style.fontSize}px`,
+        };
+        // paragraph spacing
+        textStylesJSONObject[`${platform}-typography`][styleName][
+          'paragraphSpacing'
+        ] = {
+          value: `${style[0].document.style.paragraphSpacing}px`,
         };
         // // font-weight
         // textStylesJSONObject[`${platform}-typography`][styleName][
