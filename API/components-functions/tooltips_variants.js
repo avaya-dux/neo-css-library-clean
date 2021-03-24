@@ -31,9 +31,9 @@ async function tooltipStyles(value) {
 
   for (variant of tooltipVariants) {
     if (variant.name === 'Direction=right') {
-      console.log(variant);
-      console.log(variant.children[0]);
-      console.log(variant.children[1]);
+      // console.log(variant);
+      // console.log(variant.children[0]);
+      // console.log(variant.children[1]);
       // padding
       tooltipJSONObject.tooltip['padding-x'] = {
         value: `${variant.children[1].paddingRight}px`,
@@ -45,7 +45,8 @@ async function tooltipStyles(value) {
       tooltipJSONObject.tooltip['border-radius'] = {
         value: `${variant.children[1].cornerRadius}px`,
       };
-      // background-color
+      // background - color
+      // console.log(variant.children[1].styles);
       var tooltipBgColorTokenID = variant.children[1].styles.fills;
       tooltipJSONObject.tooltip['background-color'] = {
         value: await coreFigmaFunctions
@@ -115,14 +116,14 @@ async function tooltipStyles(value) {
     }
   }
   console.log(tooltipJSONObject);
-  // await fs
-  //   .writeFile(
-  //     '../properties/components/tooltip.json',
-  //     JSON.stringify(tooltipJSONObject)
-  //   )
-  //   .then(function () {
-  //     console.log('tooltip.json created');
-  //   });
+  await fs
+    .writeFile(
+      '../properties/components/tooltip.json',
+      JSON.stringify(tooltipJSONObject)
+    )
+    .then(function () {
+      console.log('tooltip.json created');
+    });
 }
 
 exports.tooltipStyles = tooltipStyles;
