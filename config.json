@@ -39,6 +39,15 @@
           }
         },
         {
+          "destination": "_images.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "imageContent"
+            }
+          }
+        },
+        {
           "destination": "_shadows.scss",
           "format": "scss/variables",
           "filter": {

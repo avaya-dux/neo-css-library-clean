@@ -2,6 +2,7 @@
 @import 'helpers';
 @import 'tokens-import';
 
+// need to update this
 /* Neo version 3.14.0   */
 
 // Variables
@@ -92,6 +93,13 @@ $token-color-base-800: #323232;
 //   ),
 //   $neo-state-colors
 // );
+
+// Images
+
+$generic-avatar-image: $token-image-content-generic-avatar;
+// :root {
+//   --generic-avatar-image: #{$generic-avatar-image};
+// }
 
 // updated state colors
 
@@ -303,6 +311,19 @@ $heading-font-sizes: map-merge(
   ),
   $heading-font-sizes
 );
+$heading-paragraph-spacing: () !default;
+$heading-paragraph-spacing: map-merge(
+  (
+    h1: $token-web-typography-web-heading-1-regular-paragraph-spacing,
+    h2: $token-web-typography-web-heading-2-regular-paragraph-spacing,
+    h3: $token-web-typography-web-heading-3-paragraph-spacing,
+    h4: $token-web-typography-web-heading-4-paragraph-spacing,
+    // we only go up to h4
+    h5: $global-font-size,
+    h6: $global-font-size * 0.7,
+  ),
+  $heading-font-sizes
+);
 $heading-font-weight: normal !default;
 $heading-line-height: 1 !default;
 $subtitle-line-height: $global-font-size * 1.4 !default;
@@ -492,7 +513,7 @@ $select-offset-x: $select-icon-font-size * 2 !default;
 //
 $select-padding-x: $input-padding-x !default;
 $select-padding-y: $input-padding-y !default;
-$select-padding-right: $token-dropdown-padding-right !default;
+$select-padding-right: $token-dropdown-padding-x !default;
 $select-padding-left: $input-padding-x !default;
 $select-vertical-margin: $token-input-vertical-margin !default;
 //
@@ -568,7 +589,9 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-filter-row-background-color: #{$token-color-base-900};
 }
 
-$table-filters-background-color: var(--table-filter-row-background-color) !default;
+$table-filters-background-color: var(
+  --table-filter-row-background-color
+) !default;
 $table-header-cell-border-color: var(--table-header-cell-border-color) !default;
 $table-header-cell-hover-color: var(--table-header-cell-hover-color) !default;
 $table-background-color: var(--table-background-color) !default;
@@ -1888,7 +1911,8 @@ $neo-chip-disabled-icon-colors: map-merge(
 $tab-offset: $global-spacer !default;
 $tab-container-margin: 0 6px !default;
 // $tab-border-bottom-color: $token-tabs-border-bottom-color !default;
-$tab-transition: transform $global-transition-duration $global-transition-timing !default;
+$tab-transition: background-color $global-transition-duration
+  $global-transition-timing !default;
 $tab-padding-default: 8px 16px 0px 16px !default;
 // $tab-padding-small: 6px 25px !default;
 // $tab-padding-medium: 10px 30px !default;
@@ -2053,24 +2077,44 @@ $leftnav-sub-default-disabled-color: var(
 // Location: src/scss/components/_dropdown.scss
 //
 
+// $token-dropdown-border-style: solid;
+// $token-dropdown-border-width: 1px;
+// $token-dropdown-border-color: rgba(0, 0, 0, 0.15);
+// $token-dropdown-divider-color: #c9c9c9;
+// $token-dropdown-shadow-x-offset: 0px;
+// $token-dropdown-shadow-y-offset: 4px;
+// $token-dropdown-shadow-radius: 4px;
+// $token-dropdown-shadow-color: rgba(0, 0, 0, 0.25);
+// $token-dropdown-padding-x: 8px;
+// $token-dropdown-padding-y: 8px;
+// $token-dropdown-min-width: 139px;
+// $token-dropdown-default-font-color: #000000;
+// $token-dropdown-font-size: 14px;
+// $token-dropdown-line-height: 21px;
+// $token-dropdown-letter-spacing: 0px;
+// $token-dropdown-font-weight: 400;
+// $token-dropdown-disabled-font-color: #939393;
+// $token-dropdown-hover-color: #e8f1fc;
+// $token-dropdown-item-spacer: 8px;
+
 // Dropdown colour variables
 
 :root {
-  --dropdown-color: #{$token-menu-font-color};
-  --dropdown-content-border: #{$token-color-base-400};
-  --dropdown-content-background-color: #{$token-menu-default-background-color};
-  --dropdown-content-arrow-color: #{$token-menu-icon-color};
-  --dropdown-item-color: #{$token-menu-font-color};
-  --dropdown-item-hover-color: #{$token-menu-hover};
-  --dropdown-item-hover-background-color: #{$token-menu-default-active-color};
+  --dropdown-color: #{$token-dropdown-default-font-color};
+  --dropdown-content-border: #{$token-dropdown-border-color};
+  --dropdown-content-background-color: #{$global-background};
+  --dropdown-content-arrow-color: #{$token-dropdown-default-font-color};
+  --dropdown-item-color: #{$token-dropdown-default-font-color};
+  --dropdown-item-hover-color: #{$token-dropdown-hover-color};
+  --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
 }
 .dark {
   --dropdown-color: #{$token-color-base-800};
-  --dropdown-content-border: #{$token-color-base-500};
+  --dropdown-content-border: rgba(241, 241, 241, 0.15);
   --dropdown-content-background-color: #{$token-color-blue-400};
   --dropdown-content-arrow-color: #{$token-color-base-200};
   --dropdown-item-color: #{$token-color-base-800};
-  --dropdown-item-hover-color: #{$token-color-blue-800};
+  --dropdown-item-hover-color: #{$token-color-blue-200};
   --dropdown-item-hover-background-color: #{$token-color-blue-200};
 }
 
@@ -2078,18 +2122,17 @@ $dropdown-expand-icon: $token-icons-neo-icon-chevron-down !default;
 $dropdown-expand-left-icon: $token-icons-neo-icon-chevron-left !default;
 $dropdown-expand-right-icon: $token-icons-neo-icon-chevron-right !default;
 $dropdown-color: var(--dropdown-color) !default;
-$dropdown-padding-x: 16px !default;
-$dropdown-padding-y: $global-spacer-large !default;
-$dropdown-line-height: $input-line-height !default;
-$dropdown-font-size: $input-font-size !default;
+$dropdown-padding-x: $token-dropdown-padding-x !default;
+$dropdown-padding-y: $token-dropdown-padding-y !default;
+$dropdown-line-height: $token-dropdown-line-height !default;
+$dropdown-font-size: $token-dropdown-font-size !default;
 $dropdown-animation-duration: $global-transition-duration !default;
-$dropdown-radius: $global-radius !default;
-$dropdown-min-width: 150px !default;
-$dropdown-content-border-width: $token-menu-separator-border-bottom-width !default;
-$dropdown-content-border: $token-menu-separator-border-bottom-width
-  $token-menu-separator-border-bottom-style var(--dropdown-content-border) !default;
-$dropdown-content-padding: $global-spacer !default;
-$dropdown-content-shadow: none !default;
+$dropdown-radius: $token-dropdown-border-radius !default;
+$dropdown-min-width: $token-dropdown-min-width !default;
+$dropdown-content-border-width: $token-dropdown-border-width !default;
+$dropdown-content-border: $token-dropdown-border-width
+  $token-dropdown-border-style var(--dropdown-content-border) !default;
+// $dropdown-content-padding: $global-spacer !default;
 $dropdown-content-z: 20 !default;
 $dropdown-content-background-color: var(
   --dropdown-content-background-color
@@ -2101,17 +2144,18 @@ $dropdown-item-hover-color: var(--dropdown-item-hover-color) !default;
 $dropdown-item-hover-background-color: var(
   --dropdown-item-hover-background-color
 ) !default;
-$dropdown-icon-margin-x: $global-spacer !default;
-$dropdown-icon-margin-y: $global-spacer-small !default;
-$dropdown-avatar-sm-margin-x: $global-spacer !default;
+$dropdown-icon-margin-x: $token-dropdown-item-spacer !default;
+// $dropdown-icon-margin-y: $global-spacer-small !default;
+$dropdown-avatar-sm-margin-x: $token-dropdown-item-spacer !default;
 $dropdown-divider-border: 1px solid var-color-name(dropdown-divider) !default;
-$dropdown-input-offset: 6px !default;
-$dropdown-input-border: 2px solid var-color-name(dropdown-input-border) !default;
-$dropdown-input-bg: transparent !default;
+$dropdown-input-offset: $token-dropdown-item-spacer !default;
+// $dropdown-input-border: 2px solid var-color-name(dropdown-input-border) !default;
+// $dropdown-input-bg: transparent !default;
 $dropdown-input-icon-color: $dropdown-item-color !default;
-$dropdown-box-shadow: $token-menu-box-shadow-x-offset
-  $token-menu-box-shadow-y-offset $token-menu-box-shadow-radius
-  $token-menu-box-shadow-color !default;
+$dropdown-box-shadow: $token-dropdown-shadow-x-offset
+  $token-dropdown-shadow-y-offset $token-dropdown-shadow-radius
+  $token-dropdown-shadow-color !default;
+$dropdown-content-shadow: $dropdown-box-shadow !default;
 
 // Component name: Popover
 // Location: src/scss/components/_popover.scss
@@ -2272,7 +2316,7 @@ $spinner-animation-duration: 500ms !default;
   --modal-color: #{$token-color-base-100};
   --modal-border-color: rgba(241, 241, 241, 0.15);
   --modal-shadow-color: rgba(241, 241, 241, 0.25);
-  --modal-scrim-color: rgba(255, 255, 255, 0.25);
+  // --modal-scrim-color: rgba(255, 255, 255, 0.25);
 }
 
 // $modal-scrim-color: $token-modal-scrim-color !default;

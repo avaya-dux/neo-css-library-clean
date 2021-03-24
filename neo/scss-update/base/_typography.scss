@@ -27,6 +27,15 @@ h6 {
   }
 }
 
+// jumbo
+
+h1.jumbo {
+  line-height: $token-web-typography-web-heading-1-jumbo-line-height;
+  letter-spacing: $token-web-typography-web-heading-1-jumbo-letter-spacing;
+  font-size: $token-web-typography-web-heading-1-jumbo-font-size;
+  margin-bottom: $token-web-typography-web-heading-1-jumbo-paragraph-spacing;
+}
+
 .neo-subtitle {
   line-height: $subtitle-line-height;
   margin-bottom: 0;
@@ -44,7 +53,7 @@ p {
   color: $global-text-color;
   font-weight: normal;
   letter-spacing: 0.05px;
-  margin-bottom: $global-spacer;
+  margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
   margin-top: 0;
   text-rendering: optimizeLEgibility;
   // hard-coded for now
@@ -144,14 +153,14 @@ hr {
   white-space: nowrap;
 }
 
-// utility classes to apply tokens
+// utility classes for reset and to apply tokens
 
 .neo-underline {
   text-decoration: underline;
 }
 
 .neo-italic {
-  text-decoration: italic;
+  font-style: italic;
 }
 
 .neo-light {
@@ -175,21 +184,25 @@ hr {
 .neo-body-tiny {
   font-size: $token-web-typography-web-tiny-body-font-size;
   line-height: $token-web-typography-web-tiny-body-line-height;
+  margin-bottom: $token-web-typography-web-tiny-body-paragraph-spacing;
 }
 
 .neo-body-small {
   font-size: $token-web-typography-web-small-body-font-size;
   line-height: $token-web-typography-web-small-body-line-height;
+  margin-bottom: $token-web-typography-web-small-body-paragraph-spacing;
 }
 
 .neo-body-regular {
   font-size: $token-web-typography-web-body-regular-font-size;
   line-height: $token-web-typography-web-body-regular-line-height;
+  margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
 }
 
 .neo-body-large {
   font-size: $token-web-typography-web-large-body-regular-font-size;
   line-height: $token-web-typography-web-large-body-regular-line-height;
+  margin-bottom: $token-web-typography-web-large-body-regular-paragraph-spacing;
 }
 
 // element based text

@@ -143,6 +143,15 @@
     .neo-input {
       border: none;
     }
+    & .neo-multiselect:focus {
+      outline: none;
+    }
+    & .neo-multiselect .neo-multiselect__header {
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
     & .neo-input-editable__wrapper {
       flex-grow: 1;
       border: none;

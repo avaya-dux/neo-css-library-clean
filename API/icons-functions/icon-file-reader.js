@@ -32,7 +32,7 @@ fs.readFile('../../build/css/updated-neo-icons.css', function (err, data) {
     // Avatars
     // bot icon
     '.neo-icon-bot:before ',
-    // contact filled icon
+    // generic icon
     '.neo-icon-contact-filled:before ',
   ];
 
