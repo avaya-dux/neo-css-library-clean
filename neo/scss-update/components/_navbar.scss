@@ -407,5 +407,92 @@
         }
       }
     }
+    &--active {
+      border-bottom: $navbar-action-border-width $navbar-action-border-style
+        $navbar-icon-selected-color;
+      &:hover {
+        transition: $button-transition;
+        border-bottom-color: $navbar-icon-hover-color;
+        & .neo-badge__navbutton--content {
+          &::before {
+            color: $navbar-icon-hover-color;
+          }
+        }
+      }
+
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-icon-selected-color;
+      }
+    }
+    &--active-disabled {
+      border-bottom: $navbar-action-border-width $navbar-action-border-style
+        $navbar-item-selected-disabled-color;
+      &:hover {
+        cursor: not-allowed;
+        background-color: $navbar-background-color;
+        border-bottom-color: $navbar-item-selected-disabled-color;
+
+        // testing new class for higher specificity
+        & .neo-badge__navbutton--content {
+          cursor: not-allowed;
+          background-color: $navbar-background-color;
+          &::before {
+            color: $navbar-item-selected-disabled-color;
+          }
+        }
+      }
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-item-selected-disabled-color;
+      }
+    }
+    &--disabled {
+      &:hover {
+        cursor: not-allowed;
+        background-color: $navbar-background-color;
+        // testing new class for higher specificity
+        & .neo-badge__navbutton--content {
+          cursor: not-allowed;
+          background-color: $navbar-background-color;
+          &::before {
+            color: $navbar-item-disabled-color;
+          }
+        }
+      }
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-item-disabled-color;
+      }
+    }
+    .neo-badge__icon::after {
+      font-family: 'noto-sans', sans-serif;
+      background: $badge-background-color;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: $badge-color;
+      content: attr(data-badge);
+      display: flex;
+      font-size: 10px;
+      height: 16px;
+      justify-content: center;
+      line-height: 16px;
+      min-width: 16px;
+      padding: 0px 4px;
+      position: absolute;
+      right: 19px;
+      top: 21px;
+      transform: translate(65%, -65%);
+      z-index: 49;
+      @include rtl-selector {
+        left: 0;
+        right: auto;
+        transform: translate(35%, -65%);
+      }
+    }
+  }
+
+  & [class*='neo-icon-'].neo-btn:empty::before {
+    font-size: $navbar-icon-size;
   }
 }

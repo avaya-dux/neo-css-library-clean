@@ -155,6 +155,17 @@ hr {
 
 // utility classes for reset and to apply tokens
 
+.neo-typography-reset {
+  text-decoration: none;
+  font-style: initial;
+  &::-webkit-input-placeholder,
+  &::-moz-placeholder,
+  &::-ms-input-placeholder,
+  &::placeholder {
+    font-style: normal !important;
+  }
+}
+
 .neo-underline {
   text-decoration: underline;
 }

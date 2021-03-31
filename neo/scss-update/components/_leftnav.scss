@@ -52,7 +52,7 @@
       }
       &.expandable:after {
         color: $leftnav-main-default-color;
-        font-family: 'updated-neo-icons';
+        font-family: "updated-neo-icons";
         content: $leftnav-main-chevron-icon;
         position: absolute;
         transition: $accordion-icon-transition;
@@ -202,28 +202,42 @@
       // transition: opacity 1s ease-in-out;
       // min-height: $leftnav-sub-max-height;
       width: 100%;
-      border-left: $leftnav-sub-active-border-width
-        $leftnav-sub-active-border-style transparent;
+      // border-left: $leftnav-sub-active-border-width
+      //   $leftnav-sub-active-border-style transparent;
       color: $leftnav-sub-default-color;
       display: flex;
       align-items: center;
       margin: 0;
       // hard-coded for now
-      padding: 8px 0 8px 52px;
+      padding: 8px 0 8px $leftnav-sub-padding-horizontal;
       font-size: $leftnav-sub-default-font-size;
       font-weight: $leftnav-sub-default-font-weight;
       line-height: $leftnav-sub-default-font-line-height;
       letter-spacing: $leftnav-sub-default-font-letter-spacing;
       // transition: $global-hover-transition;
-      @include rtl-selector {
-        border-left: none;
-        border-right: $leftnav-sub-active-border-width
-          $leftnav-sub-active-border-style transparent;
-        padding: 0 $leftnav-sub-padding-horizontal 0 0;
-      }
+      // @include rtl-selector {
+      //   border-left: none;
+      //   border-right: $leftnav-sub-active-border-width
+      //     $leftnav-sub-active-border-style transparent;
+      //   padding: 0 $leftnav-sub-padding-horizontal 0 0;
+      // }
       &:focus,
       &:active {
         // outline: 0;
+      }
+      &::before {
+        content: "";
+        height: $leftnav-active-dot-size;
+        width: $leftnav-active-dot-size;
+        background-color: transparent;
+        border-radius: 50%;
+        // hard-coded for now
+        margin-right: 12px;
+      }
+    }
+    &--no-icon {
+      & > a {
+        padding: 8px 0 8px $leftnav-sub-padding-no-icon-horizontal;
       }
     }
 
@@ -242,18 +256,28 @@
       & > a {
         color: $leftnav-sub-active-color;
         // background-color: $leftnav-hover-background-color;
-        border-color: $leftnav-sub-active-color;
+        // border-color: $leftnav-sub-active-color;
         font-size: $leftnav-sub-active-font-size;
         font-weight: $leftnav-sub-active-font-weight;
         // line-height: $leftnav-sub-active-font-line-height;
         letter-spacing: $leftnav-sub-active-font-letter-spacing;
-        @include rtl-selector {
-          border-color: $leftnav-main-active-color;
+        // @include rtl-selector {
+        //   border-color: $leftnav-main-active-color;
+        // }
+        &::before {
+          content: "";
+          // height: $leftnav-active-dot-size;
+          // width: $leftnav-active-dot-size;
+          background-color: $leftnav-sub-active-color;
+          // border-radius: 50%;
+          // // hard-coded for now
+          // margin-right: 12px;
         }
       }
+
       &:hover {
         transition: $global-hover-transition;
-        border-color: $leftnav-sub-active-hover-color;
+        // border-color: $leftnav-sub-active-hover-color;
         background-color: $leftnav-hover-background-color;
         & > a {
           color: $leftnav-sub-active-hover-color;
@@ -269,11 +293,20 @@
         cursor: not-allowed;
         background-color: $leftnav-background-color;
         color: $leftnav-sub-active-disabled-color !important;
-        border-color: $leftnav-sub-active-disabled-color !important;
+        // border-color: $leftnav-sub-active-disabled-color !important;
         font-size: $leftnav-sub-active-font-size;
         font-weight: $leftnav-sub-active-font-weight;
         // line-height: $leftnav-sub-active-font-line-height;
         letter-spacing: $leftnav-sub-active-font-letter-spacing;
+        &::before {
+          content: "";
+          // height: $leftnav-active-dot-size;
+          // width: $leftnav-active-dot-size;
+          background-color: $leftnav-sub-active-disabled-color;
+          // border-radius: 50%;
+          // // hard-coded for now
+          // margin-right: 12px;
+        }
       }
     }
     &[disabled] {

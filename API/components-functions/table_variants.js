@@ -1,5 +1,5 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
 
@@ -84,7 +84,7 @@ async function tableStyles(value) {
 
   for (component of value.Table.children) {
     // TABLE ACTION ROW
-    if (component.name === '.row-text-base') {
+    if (component.name === ".row-text-base") {
       // console.log(component);
       // table background
       var tableBackgroundColorTokenID = component.styles.fills;
@@ -96,21 +96,21 @@ async function tableStyles(value) {
         )
         .then(
           (value) =>
-            (tableJSONObject.table['background-color'] = {
+            (tableJSONObject.table["background-color"] = {
               value: `{color.${value.nodes[
                 tableBackgroundColorTokenID
               ].document.name.toLowerCase()}.value}`,
             })
         );
     }
-    if (component.name === '.header-base') {
+    if (component.name === ".header-base") {
       console.log(component.children[1]);
       // console.log(component.children[0]);
       // header cell padding
-      tableJSONObject.table['header-cell-padding-x'] = {
+      tableJSONObject.table["header-cell-padding-x"] = {
         value: `${component.children[0].relativeTransform[0][2]}px`,
       };
-      tableJSONObject.table['header-cell-padding-y '] = {
+      tableJSONObject.table["header-cell-padding-y "] = {
         value: `${component.children[0].relativeTransform[1][2]}px`,
       };
       // header cell font styles
@@ -126,33 +126,33 @@ async function tableStyles(value) {
             headerFontTokenID
           ].document.name.toLowerCase();
           // header-font-size
-          tableJSONObject.table['header-cell-font-size'] = {
+          tableJSONObject.table["header-cell-font-size"] = {
             value: `{Web-typography.${headerFontTokenName}.fontSize.value}`,
           };
           // header-line-height
-          tableJSONObject.table['header-cell-line-height'] = {
+          tableJSONObject.table["header-cell-line-height"] = {
             value: `{Web-typography.${headerFontTokenName}.lineHeight.value}`,
           };
           // header-letter-spacing
-          tableJSONObject.table['header-cell-letter-spacing'] = {
+          tableJSONObject.table["header-cell-letter-spacing"] = {
             value: `{Web-typography.${headerFontTokenName}.letterSpacing.value}`,
           };
           // header-font-weight
-          tableJSONObject.table['header-cell-font-weight'] = {
-            value: `{Web-typography.fontweight-regular.value}`,
+          tableJSONObject.table["header-cell-font-weight"] = {
+            value: `{Web-typography.fontweight-semibold.value}`,
           };
         });
       // header cell min height
-      tableJSONObject.table['header-cell-min-height'] = {
+      tableJSONObject.table["header-cell-min-height"] = {
         value: `${component.size.y}px`,
       };
       // header border styles
       // border width
-      tableJSONObject.table['header-cell-border-width'] = {
+      tableJSONObject.table["header-cell-border-width"] = {
         value: `${component.children[1].strokeWeight}px`,
       };
       // border style
-      tableJSONObject.table['header-cell-border-style'] = {
+      tableJSONObject.table["header-cell-border-style"] = {
         value: component.children[1].strokes[0].type.toLowerCase(),
       };
       // border color
@@ -164,27 +164,27 @@ async function tableStyles(value) {
           headerCellBorderColorID
         )
         .then((value) => {
-          tableJSONObject.table['header-cell-border-color'] = {
+          tableJSONObject.table["header-cell-border-color"] = {
             value: `{color.${value.nodes[
               headerCellBorderColorID
             ].document.name.toLowerCase()}.value}`,
           };
         });
     }
-    if (component.name === 'column-header') {
+    if (component.name === "column-header") {
       // console.log(component);
       for (variant of component.children) {
         if (
           variant.name ===
-          'Type=text, Can Sort/Filter=TRUE, Filter Applied=FALSE, Sorting Applied=none, State=hover, Location=main'
+          "Type=text, Can Sort/Filter=TRUE, Filter Applied=FALSE, Sorting Applied=none, State=hover, Location=main"
         ) {
           // console.log(variant.children[0].children[0]);
           // header cell filter icon size
-          tableJSONObject.table['header-cell-filter-icon-size'] = {
+          tableJSONObject.table["header-cell-filter-icon-size"] = {
             value: `${variant.children[0].children[0].children[3].size.x}px`,
           };
           // header cell filter icon spacing
-          tableJSONObject.table['header-cell-filter-icon-spacing'] = {
+          tableJSONObject.table["header-cell-filter-icon-spacing"] = {
             value: `${variant.children[0].children[0].relativeTransform[1][2]}px`,
           };
           var headerCellHoverColorID = variant.children[0].styles.fills;
@@ -195,7 +195,7 @@ async function tableStyles(value) {
               headerCellHoverColorID
             )
             .then((value) => {
-              tableJSONObject.table['header-cell-hover-color'] = {
+              tableJSONObject.table["header-cell-hover-color"] = {
                 value: `{color.${value.nodes[
                   headerCellHoverColorID
                 ].document.name.toLowerCase()}.value}`,
@@ -204,10 +204,10 @@ async function tableStyles(value) {
         }
       }
     }
-    if (component.name === 'column-filter') {
+    if (component.name === "column-filter") {
       // console.log(component);
       for (variant of component.children) {
-        if (variant.name === 'Type=alphabetical, Active=none') {
+        if (variant.name === "Type=alphabetical, Active=none") {
           // filter text styles
           var textElement =
             variant.children[0].children[0].children[1].children[1];
@@ -224,59 +224,59 @@ async function tableStyles(value) {
                 filterFontTokenID
               ].document.name.toLowerCase();
               // header-font-size
-              tableJSONObject.table['filter-font-size'] = {
+              tableJSONObject.table["filter-font-size"] = {
                 value: `{Web-typography.${filterFontTokenName}.fontSize.value}`,
               };
               // header-line-height
-              tableJSONObject.table['filter-line-height'] = {
+              tableJSONObject.table["filter-line-height"] = {
                 value: `{Web-typography.${filterFontTokenName}.lineHeight.value}`,
               };
               // header-letter-spacing
-              tableJSONObject.table['filter-letter-spacing'] = {
+              tableJSONObject.table["filter-letter-spacing"] = {
                 value: `{Web-typography.${filterFontTokenName}.letterSpacing.value}`,
               };
               // header-font-weight
-              tableJSONObject.table['filter-font-weight'] = {
+              tableJSONObject.table["filter-font-weight"] = {
                 value: `{Web-typography.fontweight-semibold.value}`,
               };
             });
           // filter text spacing
-          tableJSONObject.table['filter-padding-vertical'] = {
+          tableJSONObject.table["filter-padding-vertical"] = {
             value: `${textElement.relativeTransform[1][2]}px`,
           };
           // filter text margin
           const filterTextMarginBottom =
             textElement.relativeTransform[1][2] * 2;
-          tableJSONObject.table['filter-text-margin-bottom'] = {
+          tableJSONObject.table["filter-text-margin-bottom"] = {
             value: `${filterTextMarginBottom}px`,
           };
         }
-        if (variant.name === 'Type=alphabetical, Active=first') {
+        if (variant.name === "Type=alphabetical, Active=first") {
           // filter icon spacing
           const filterIconSpacing =
             variant.children[0].children[0].children[0].children[0]
               .relativeTransform[0][2] +
             variant.children[0].children[0].children[0].relativeTransform[0][2];
-          tableJSONObject.table['filter-icon-spacing'] = {
+          tableJSONObject.table["filter-icon-spacing"] = {
             value: `${filterIconSpacing}px`,
           };
           // filter icon size
-          tableJSONObject.table['filter-icon-size'] = {
+          tableJSONObject.table["filter-icon-size"] = {
             value: `${variant.children[0].children[0].children[0].children[0].size.x}px`,
           };
         }
       }
     }
-    if (component.name === 'row') {
+    if (component.name === "row") {
       for (variant of component.children) {
-        if (variant.name === 'Type=icon, State=selected, Location=main') {
+        if (variant.name === "Type=icon, State=selected, Location=main") {
           // table icon sizing
-          tableJSONObject.table['icon-size'] = {
+          tableJSONObject.table["icon-size"] = {
             value: `${variant.children[0].children[1].size.x}px`,
           };
         }
         if (
-          variant.name === 'Type=text - main, State=disabled, Location=main'
+          variant.name === "Type=text - main, State=disabled, Location=main"
         ) {
           // row disabled colour
           var rowDisabledColorID = variant.children[0].styles.fills;
@@ -287,7 +287,7 @@ async function tableStyles(value) {
               rowDisabledColorID
             )
             .then((value) => {
-              tableJSONObject.table['row-disabled-color'] = {
+              tableJSONObject.table["row-disabled-color"] = {
                 value: `{color.${value.nodes[
                   rowDisabledColorID
                 ].document.name.toLowerCase()}.value}`,
@@ -295,11 +295,11 @@ async function tableStyles(value) {
             });
           // row border styles
           // border width
-          tableJSONObject.table['row-border-width'] = {
+          tableJSONObject.table["row-border-width"] = {
             value: `${variant.children[0].children[1].strokeWeight}px`,
           };
           // border style
-          tableJSONObject.table['row-border-style'] = {
+          tableJSONObject.table["row-border-style"] = {
             value: variant.children[0].children[1].strokes[0].type.toLowerCase(),
           };
           // border color
@@ -312,14 +312,14 @@ async function tableStyles(value) {
               headerCellBorderColorID
             )
             .then((value) => {
-              tableJSONObject.table['row-border-color'] = {
+              tableJSONObject.table["row-border-color"] = {
                 value: `{color.${value.nodes[
                   headerCellBorderColorID
                 ].document.name.toLowerCase()}.value}`,
               };
             });
         }
-        if (variant.name === 'Type=text - main, State=hover, Location=main') {
+        if (variant.name === "Type=text - main, State=hover, Location=main") {
           // row hover colour
           var rowHoverColorID = variant.children[0].styles.fills;
           await coreFigmaFunctions
@@ -329,7 +329,7 @@ async function tableStyles(value) {
               rowHoverColorID
             )
             .then((value) => {
-              tableJSONObject.table['row-hover-color'] = {
+              tableJSONObject.table["row-hover-color"] = {
                 value: `{color.${value.nodes[
                   rowHoverColorID
                 ].document.name.toLowerCase()}.value}`,
@@ -337,7 +337,7 @@ async function tableStyles(value) {
             });
         }
         if (
-          variant.name === 'Type=text - main, State=selected, Location=main'
+          variant.name === "Type=text - main, State=selected, Location=main"
         ) {
           // font active colour
           var rowActiveColorID = variant.children[0].children[0].styles.fill;
@@ -348,38 +348,38 @@ async function tableStyles(value) {
               rowActiveColorID
             )
             .then((value) => {
-              tableJSONObject.table['row-font-active-color'] = {
+              tableJSONObject.table["row-font-active-color"] = {
                 value: `{color.${value.nodes[
                   rowActiveColorID
                 ].document.name.toLowerCase()}.value}`,
               };
             });
           // font active weight
-          tableJSONObject.table['row-font-active-weight'] = {
+          tableJSONObject.table["row-font-active-weight"] = {
             value: `{Web-typography.fontweight-semibold.value}`,
           };
           // table cell padding
-          tableJSONObject.table['row-cell-padding-x'] = {
+          tableJSONObject.table["row-cell-padding-x"] = {
             value: `${variant.children[0].children[0].relativeTransform[0][2]}px`,
           };
-          tableJSONObject.table['row-cell-padding-y'] = {
+          tableJSONObject.table["row-cell-padding-y"] = {
             value: `${variant.children[0].children[0].relativeTransform[1][2]}px`,
           };
         }
       }
     }
-    if (component.name === '.widget-content-table') {
+    if (component.name === ".widget-content-table") {
       // console.log(component.children[13].children[0]);
       // nested table row padding
-      tableJSONObject.table['nested-row-padding-y'] = {
+      tableJSONObject.table["nested-row-padding-y"] = {
         value: `${component.children[13].children[0].relativeTransform[1][2]}px`,
       };
-      tableJSONObject.table['nested-row-padding-x'] = {
+      tableJSONObject.table["nested-row-padding-x"] = {
         value: `${component.children[13].children[0].relativeTransform[0][2]}px`,
       };
       // nested row border
       // border width
-      tableJSONObject.table['nested-row-border-width'] = {
+      tableJSONObject.table["nested-row-border-width"] = {
         value: `${component.children[13].children[1].size.y}px`,
       };
       // border style - does not exist on Rectangle in Figma
@@ -397,7 +397,7 @@ async function tableStyles(value) {
           nestedCellBorderColorID
         )
         .then((value) => {
-          tableJSONObject.table['nested-row-border-color'] = {
+          tableJSONObject.table["nested-row-border-color"] = {
             value: `{color.${value.nodes[
               nestedCellBorderColorID
             ].document.name.toLowerCase()}.value}`,
@@ -412,33 +412,33 @@ async function tableStyles(value) {
           nestedCellBackgroundColorID
         )
         .then((value) => {
-          tableJSONObject.table['nested-row-background-color'] = {
+          tableJSONObject.table["nested-row-background-color"] = {
             value: `{color.${value.nodes[
               nestedCellBackgroundColorID
             ].document.name.toLowerCase()}.value}`,
           };
         });
       // nested row max height
-      tableJSONObject.table['nested-row-max-height'] = {
+      tableJSONObject.table["nested-row-max-height"] = {
         value: `${component.children[13].children[0].children[0].children[0].size.y}px`,
       };
       // nested row padding
       // console.log(component.children[13].children[0]);
-      tableJSONObject.table['nested-row-wrapper-padding-y'] = {
+      tableJSONObject.table["nested-row-wrapper-padding-y"] = {
         value: `${component.children[13].children[0].relativeTransform[1][2]}px`,
       };
-      tableJSONObject.table['nested-row-wrapper-padding-x'] = {
+      tableJSONObject.table["nested-row-wrapper-padding-x"] = {
         value: `${component.children[13].children[0].relativeTransform[0][2]}px`,
       };
       // nested row cell padding
-      tableJSONObject.table['nested-row-padding-y'] = {
+      tableJSONObject.table["nested-row-padding-y"] = {
         value: `${component.children[13].children[0].children[0].children[0].children[0].relativeTransform[1][2]}px`,
       };
-      tableJSONObject.table['nested-row-padding-x'] = {
+      tableJSONObject.table["nested-row-padding-x"] = {
         value: `${component.children[13].children[0].children[0].children[0].children[0].relativeTransform[0][2]}px`,
       };
     }
-    if (component.name === '.advanced-filters-base') {
+    if (component.name === ".advanced-filters-base") {
       // filters background colour
       var filtersRowBackgroundColorID = component.children[0].styles.fills;
       await coreFigmaFunctions
@@ -448,7 +448,7 @@ async function tableStyles(value) {
           filtersRowBackgroundColorID
         )
         .then((value) => {
-          tableJSONObject.table['filters-row-background-color'] = {
+          tableJSONObject.table["filters-row-background-color"] = {
             value: `{color.${value.nodes[
               filtersRowBackgroundColorID
             ].document.name.toLowerCase()}.value}`,
@@ -456,10 +456,10 @@ async function tableStyles(value) {
         });
       // filters padding
       // console.log(component.children[1].children[0]);
-      tableJSONObject.table['filters-row-padding-y'] = {
+      tableJSONObject.table["filters-row-padding-y"] = {
         value: `${component.children[1].children[0].relativeTransform[1][2]}px`,
       };
-      tableJSONObject.table['filters-row-padding-x'] = {
+      tableJSONObject.table["filters-row-padding-x"] = {
         value: `${component.children[1].children[0].relativeTransform[0][2]}px`,
       };
       // filters background colour
@@ -471,22 +471,22 @@ async function tableStyles(value) {
           filtersBackgroundColorID
         )
         .then((value) => {
-          tableJSONObject.table['nested-row-background-color'] = {
+          tableJSONObject.table["nested-row-background-color"] = {
             value: `{color.${value.nodes[
               filtersBackgroundColorID
             ].document.name.toLowerCase()}.value}`,
           };
         });
     }
-    if (component.name === 'filter-by-sheet') {
+    if (component.name === "filter-by-sheet") {
       console.log(component.children[1].children[0].children[0]);
       // sheet form border style
       // border width
-      tableJSONObject.table['sheet-border-width'] = {
+      tableJSONObject.table["sheet-border-width"] = {
         value: `${component.children[0].children[0].children[0].children[1].children[1].children[8].strokeWeight}px`,
       };
       // border style
-      tableJSONObject.table['sheet-border-style'] = {
+      tableJSONObject.table["sheet-border-style"] = {
         value: component.children[0].children[0].children[0].children[1].children[1].children[8].strokes[0].type.toLowerCase(),
       };
       // border color
@@ -500,20 +500,20 @@ async function tableStyles(value) {
           filterSheetBorderColorID
         )
         .then((value) => {
-          tableJSONObject.table['sheet-border-color'] = {
+          tableJSONObject.table["sheet-border-color"] = {
             value: `{color.${value.nodes[
               filterSheetBorderColorID
             ].document.name.toLowerCase()}.value}`,
           };
         });
     }
-    if (component.name === '.actions-base') {
+    if (component.name === ".actions-base") {
       // actions spacing
-      tableJSONObject.table['actions-bar-spacing'] = {
+      tableJSONObject.table["actions-bar-spacing"] = {
         value: `${component.children[1].children[2].children[0].itemSpacing}px`,
       };
       // actions row padding
-      tableJSONObject.table['actions-row-padding'] = {
+      tableJSONObject.table["actions-row-padding"] = {
         value: `${component.children[1].relativeTransform[1][2]}px`,
       };
       // console.log(component.children[1]);
@@ -523,11 +523,11 @@ async function tableStyles(value) {
   // console.log(tableJSONObject);
   await fs
     .writeFile(
-      '../properties/components/table.json',
+      "../properties/components/table.json",
       JSON.stringify(tableJSONObject)
     )
     .then(function () {
-      console.log('table.json created');
+      console.log("table.json created");
     });
 }
 

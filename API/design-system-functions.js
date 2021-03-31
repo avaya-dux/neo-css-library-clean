@@ -20,6 +20,7 @@ async function pullAllDesignTokens() {
 
   await borderTokens.pullBorderRadiusTokens(figmaObjectTree);
   await borderTokens.pullBorderTokens(figmaObjectTree);
+  
   await typographyTokens.pullTypographyTokens(stylesToParse);
   await effectTokens.pullEffectTokens(stylesToParse);
   await colorTokens.pullColorTokens(stylesToParse);
@@ -28,12 +29,12 @@ async function pullAllDesignTokens() {
 }
 
 pullAllDesignTokens()
-  // .then(() =>
-  //   iconFunctions.pullIcons(
-  //     coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-  //     coreFigmaFunctions.figmaCredentials.iconsFileID
-  //   )
-  // )
+  .then(() =>
+    iconFunctions.pullIcons(
+      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+      coreFigmaFunctions.figmaCredentials.iconsFileID
+    )
+  )
   .catch((error) => console.log(error));
 
 // code to debug stale data from API
