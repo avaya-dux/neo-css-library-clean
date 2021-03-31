@@ -30,6 +30,15 @@
           }
         },
         {
+          "destination": "_channelIcons.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "channelIcon"
+            }
+          }
+        },
+        {
           "destination": "_widgets.scss",
           "format": "scss/variables",
           "filter": {

@@ -34,6 +34,13 @@ fs.readFile('../../build/css/updated-neo-icons.css', function (err, data) {
     '.neo-icon-bot:before ',
     // generic icon
     '.neo-icon-contact-filled:before ',
+    // Channel state icons
+    '.neo-icon-lock-filled:before ',
+    '.neo-icon-warning-filled:before ',
+    '.neo-icon-missed-filled:before ',
+    '.neo-icon-connected-filled:before ',
+    '.neo-icon-inbound-filled:before ',
+    '.neo-icon-outbound-filled:before ',
   ];
 
   var iconJSONObject = {

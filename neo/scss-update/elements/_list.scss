@@ -293,8 +293,12 @@
     justify-content: space-around;
     align-items: center;
     padding: $group-list-section-action-padding;
-    & button:before {
-      font-size: 21px;
+    & button {
+      // hard-coded for now
+      margin-left: 8px;
+      &:before {
+        font-size: 21px;
+      }
     }
     & .neo-form-control {
       margin-bottom: 0;

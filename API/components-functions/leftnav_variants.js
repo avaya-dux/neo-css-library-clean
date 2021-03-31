@@ -1,5 +1,5 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
 
@@ -70,7 +70,7 @@ async function leftnavStyles(value) {
   };
 
   const leftnavs = value.Navigation.children.filter(
-    (comps) => comps.name.includes('left-nav') && !comps.name.includes('.base')
+    (comps) => comps.name.includes("left-nav") && !comps.name.includes(".base")
   );
   //   console.log(leftnavs);
 
@@ -81,23 +81,23 @@ async function leftnavStyles(value) {
   const leftnavSubVariants = leftnavs[1].children;
 
   const leftnavLink = leftnavs.filter(
-    (comps) => comps.name === 'left-nav/link'
+    (comps) => comps.name === "left-nav/link"
   );
 
   const leftnavTitle = leftnavs.filter(
-    (comps) => comps.name === 'left-nav/title'
+    (comps) => comps.name === "left-nav/title"
   );
 
   for (const titleComp of leftnavTitle) {
     //title height
-    leftnavJSONObject.leftnav['title-height'] = {
+    leftnavJSONObject.leftnav["title-height"] = {
       value: `${titleComp.size.y}px`,
     };
     // title padding
-    leftnavJSONObject.leftnav['title-padding-horizontal'] = {
+    leftnavJSONObject.leftnav["title-padding-horizontal"] = {
       value: `${titleComp.children[0].relativeTransform[0][2]}px`,
     };
-    leftnavJSONObject.leftnav['title-padding-vertical'] = {
+    leftnavJSONObject.leftnav["title-padding-vertical"] = {
       value: `${titleComp.children[0].relativeTransform[1][2]}px`,
     };
     // title font style
@@ -113,19 +113,19 @@ async function leftnavStyles(value) {
           titlefontStyleTokenID
         ].document.name.toLowerCase();
         // font-size
-        leftnavJSONObject.leftnav['title-font-size'] = {
+        leftnavJSONObject.leftnav["title-font-size"] = {
           value: `{Web-typography.${fontTokenName}.fontSize.value}`,
         };
         // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-        leftnavJSONObject.leftnav['title-font-weight'] = {
+        leftnavJSONObject.leftnav["title-font-weight"] = {
           value: `{Web-typography.fontweight-regular.value}`,
         };
         // line-height
-        leftnavJSONObject.leftnav['title-line-height'] = {
+        leftnavJSONObject.leftnav["title-line-height"] = {
           value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
         };
         // letter-spacing
-        leftnavJSONObject.leftnav['title-letter-spacing'] = {
+        leftnavJSONObject.leftnav["title-letter-spacing"] = {
           value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
         };
       });
@@ -139,7 +139,7 @@ async function leftnavStyles(value) {
         titlefontColorTokenID
       )
       .then((value) => {
-        leftnavJSONObject.leftnav['title-font-color'] = {
+        leftnavJSONObject.leftnav["title-font-color"] = {
           value: `{color.${value.nodes[
             titlefontColorTokenID
           ].document.name.toLowerCase()}.value}`,
@@ -149,11 +149,11 @@ async function leftnavStyles(value) {
 
   for (const linkComp of leftnavLink) {
     // links height
-    leftnavJSONObject.leftnav['link-height'] = {
+    leftnavJSONObject.leftnav["link-height"] = {
       value: `${linkComp.size.y}px`,
     };
     // links padding
-    leftnavJSONObject.leftnav['link-padding-horizontal'] = {
+    leftnavJSONObject.leftnav["link-padding-horizontal"] = {
       value: `${linkComp.children[0].relativeTransform[0][2]}px`,
     };
     // links font style
@@ -169,19 +169,19 @@ async function leftnavStyles(value) {
           linkfontStyleTokenID
         ].document.name.toLowerCase();
         // font-size
-        leftnavJSONObject.leftnav['link-font-size'] = {
+        leftnavJSONObject.leftnav["link-font-size"] = {
           value: `{Web-typography.${fontTokenName}.fontSize.value}`,
         };
         // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-        leftnavJSONObject.leftnav['link-font-weight'] = {
+        leftnavJSONObject.leftnav["link-font-weight"] = {
           value: `{Web-typography.fontweight-regular.value}`,
         };
         // line-height
-        leftnavJSONObject.leftnav['link-line-height'] = {
+        leftnavJSONObject.leftnav["link-line-height"] = {
           value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
         };
         // letter-spacing
-        leftnavJSONObject.leftnav['link-letter-spacing'] = {
+        leftnavJSONObject.leftnav["link-letter-spacing"] = {
           value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
         };
       });
@@ -191,15 +191,15 @@ async function leftnavStyles(value) {
     // console.log(mainVariant);
     if (
       mainVariant.name ===
-      'active=TRUE, expandable=TRUE, icon=TRUE, state=default'
+      "active=TRUE, expandable=TRUE, icon=TRUE, state=default"
     ) {
       // collapse icon size
-      leftnavJSONObject.leftnav['collapse-icon-font-size'] = {
+      leftnavJSONObject.leftnav["collapse-icon-font-size"] = {
         value: `${mainVariant.children[0].children[1].size.x}px`,
       };
       // background-color
       var backgroundColorTokenID = mainVariant.children[0].styles.fills;
-      leftnavJSONObject.leftnav['background-color'] = {
+      leftnavJSONObject.leftnav["background-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -214,36 +214,36 @@ async function leftnavStyles(value) {
           ),
       };
       // leftnav max-width
-      leftnavJSONObject.leftnav['max-width'] = {
+      leftnavJSONObject.leftnav["max-width"] = {
         value: `${mainVariant.size.x}px`,
       };
       // leftnav Main max-height
-      leftnavJSONObject.leftnav['main-max-height'] = {
+      leftnavJSONObject.leftnav["main-max-height"] = {
         value: `${mainVariant.size.y}px`,
       };
       // leftnav Main icon-spacing
-      leftnavJSONObject.leftnav['icon-spacing'] = {
+      leftnavJSONObject.leftnav["icon-spacing"] = {
         value: `${mainVariant.children[0].children[0].itemSpacing}px`,
       };
       // leftnav Main padding
-      leftnavJSONObject.leftnav['main-padding-horizontal'] = {
+      leftnavJSONObject.leftnav["main-padding-horizontal"] = {
         value: `${mainVariant.children[0].children[0].relativeTransform[0][2]}px`,
       };
       // leftnav Main icon font size
-      leftnavJSONObject.leftnav['main-icon-font-size'] = {
+      leftnavJSONObject.leftnav["main-icon-font-size"] = {
         value: `${mainVariant.children[0].children[0].children[0].children[0].size.x}px`,
       };
       // leftnav active border width
-      leftnavJSONObject.leftnav['main-active-border-width'] = {
+      leftnavJSONObject.leftnav["main-active-border-width"] = {
         value: `${mainVariant.children[0].children[2].size.x}px`,
       };
       // leftnav active border style
-      leftnavJSONObject.leftnav['main-active-border-style'] = {
+      leftnavJSONObject.leftnav["main-active-border-style"] = {
         value: mainVariant.children[0].children[2].fills[0].type.toLowerCase(),
       };
       // leftnav active color
       var activeColorTokenID = mainVariant.children[0].children[2].styles.fill;
-      leftnavJSONObject.leftnav['main-active-color'] = {
+      leftnavJSONObject.leftnav["main-active-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -260,11 +260,11 @@ async function leftnavStyles(value) {
     }
     if (
       mainVariant.name ===
-      'active=TRUE, expandable=TRUE, icon=TRUE, state=hover'
+      "active=TRUE, expandable=TRUE, icon=TRUE, state=hover"
     ) {
       // leftnav hover background color
       var hoverBGColorTokenID = mainVariant.children[0].styles.fills;
-      leftnavJSONObject.leftnav['leftnav-hover-bg-color'] = {
+      leftnavJSONObject.leftnav["leftnav-hover-bg-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -280,7 +280,7 @@ async function leftnavStyles(value) {
       };
       // leftnav hover color
       var hoverColorTokenID = mainVariant.children[0].children[2].styles.fill;
-      leftnavJSONObject.leftnav['main-hover-color'] = {
+      leftnavJSONObject.leftnav["main-hover-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -297,12 +297,12 @@ async function leftnavStyles(value) {
     }
     if (
       mainVariant.name ===
-      'active=TRUE, expandable=TRUE, icon=TRUE, state=disabled'
+      "active=TRUE, expandable=TRUE, icon=TRUE, state=disabled"
     ) {
       // leftnav active disabled color
       var activeDisabledColorTokenID =
         mainVariant.children[0].children[2].styles.fill;
-      leftnavJSONObject.leftnav['main-active-disabled-color'] = {
+      leftnavJSONObject.leftnav["main-active-disabled-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -331,31 +331,31 @@ async function leftnavStyles(value) {
             textTokenID
           ].document.name.toLowerCase();
           // font-size
-          leftnavJSONObject.leftnav['active-font-size'] = {
+          leftnavJSONObject.leftnav["active-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
           };
           // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-          leftnavJSONObject.leftnav['active-font-weight'] = {
+          leftnavJSONObject.leftnav["active-font-weight"] = {
             value: `{Web-typography.fontweight-semibold.value}`,
           };
           // line-height
-          leftnavJSONObject.leftnav['active-line-height'] = {
+          leftnavJSONObject.leftnav["active-line-height"] = {
             value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
           };
           // letter-spacing
-          leftnavJSONObject.leftnav['active-letter-spacing'] = {
+          leftnavJSONObject.leftnav["active-letter-spacing"] = {
             value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
           };
         });
     }
     if (
       mainVariant.name ===
-      'active=FALSE, expandable=TRUE, icon=TRUE, state=default'
+      "active=FALSE, expandable=TRUE, icon=TRUE, state=default"
     ) {
       // leftnav default color
       var defaultColorTokenID =
         mainVariant.children[0].children[0].children[1].styles.fill;
-      leftnavJSONObject.leftnav['default-color'] = {
+      leftnavJSONObject.leftnav["default-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -383,31 +383,31 @@ async function leftnavStyles(value) {
             textTokenID
           ].document.name.toLowerCase();
           // font-size
-          leftnavJSONObject.leftnav['default-font-size'] = {
+          leftnavJSONObject.leftnav["default-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
           };
           // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-          leftnavJSONObject.leftnav['default-font-weight'] = {
+          leftnavJSONObject.leftnav["default-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
           // line-height
-          leftnavJSONObject.leftnav['default-line-height'] = {
+          leftnavJSONObject.leftnav["default-line-height"] = {
             value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
           };
           // letter-spacing
-          leftnavJSONObject.leftnav['default-letter-spacing'] = {
+          leftnavJSONObject.leftnav["default-letter-spacing"] = {
             value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
           };
         });
     }
     if (
       mainVariant.name ===
-      'active=FALSE, expandable=TRUE, icon=TRUE, state=disabled'
+      "active=FALSE, expandable=TRUE, icon=TRUE, state=disabled"
     ) {
       // leftnav default disabled color
       var defaultDisabledColorTokenID =
         mainVariant.children[0].children[0].children[1].styles.fill;
-      leftnavJSONObject.leftnav['main-default-disabled-color'] = {
+      leftnavJSONObject.leftnav["main-default-disabled-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -425,29 +425,40 @@ async function leftnavStyles(value) {
   }
 
   for (const subVariant of leftnavSubVariants) {
-    // console.log(mainVariant);
-    if (subVariant.name === 'active=TRUE, state=default') {
+    if (
+      subVariant.name === "active=TRUE, state=default, icon on parent=FALSE"
+    ) {
+      leftnavJSONObject.leftnav["sub-padding-no-icon-horizontal"] = {
+        value: `${subVariant.children[0].children[0].relativeTransform[0][2]}px`,
+      };
+      leftnavJSONObject.leftnav["active-circle-size"] = {
+        value: `${subVariant.children[0].children[0].size.x}px`,
+      };
+    }
+
+    // console.log(subVariant);
+    if (subVariant.name === "active=TRUE, state=default, icon on parent=TRUE") {
       //   console.log(mainVariant);
       //   console.log(mainVariant.children[0].children[2]);
       // leftnav Sub max-height
-      leftnavJSONObject.leftnav['sub-max-height'] = {
+      leftnavJSONObject.leftnav["sub-max-height"] = {
         value: `${subVariant.size.y}px`,
       };
       // leftnav Sub padding
-      leftnavJSONObject.leftnav['sub-padding-horizontal'] = {
+      leftnavJSONObject.leftnav["sub-padding-icon-horizontal"] = {
         value: `${subVariant.children[0].children[0].relativeTransform[0][2]}px`,
       };
-      // leftnav Sub active border width
-      leftnavJSONObject.leftnav['sub-active-border-width'] = {
-        value: `${subVariant.children[0].children[1].size.x}px`,
-      };
-      // leftnav Sub active border style
-      leftnavJSONObject.leftnav['sub-active-border-style'] = {
-        value: subVariant.children[0].children[1].fills[0].type.toLowerCase(),
-      };
+      // // leftnav Sub active border width
+      // leftnavJSONObject.leftnav["sub-active-border-width"] = {
+      //   value: `${subVariant.children[0].children[1].size.x}px`,
+      // };
+      // // leftnav Sub active border style
+      // leftnavJSONObject.leftnav["sub-active-border-style"] = {
+      //   value: subVariant.children[0].children[1].fills[0].type.toLowerCase(),
+      // };
       // leftnav Sub active color
       var activeColorTokenID = subVariant.children[0].children[1].styles.fill;
-      leftnavJSONObject.leftnav['sub-active-color'] = {
+      leftnavJSONObject.leftnav["sub-active-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -462,10 +473,10 @@ async function leftnavStyles(value) {
           ),
       };
     }
-    if (subVariant.name === 'active=TRUE, state=hover') {
+    if (subVariant.name === "active=TRUE, state=hover, icon on parent=TRUE") {
       // leftnav Sub hover color
       var hoverColorTokenID = subVariant.children[0].children[1].styles.fill;
-      leftnavJSONObject.leftnav['sub-hover-color'] = {
+      leftnavJSONObject.leftnav["sub-hover-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -480,11 +491,13 @@ async function leftnavStyles(value) {
           ),
       };
     }
-    if (subVariant.name === 'active=TRUE, state=disabled') {
+    if (
+      subVariant.name === "active=TRUE, state=disabled, icon on parent=TRUE"
+    ) {
       // leftnav Sub active disabled color
       var activeDisabledColorTokenID =
         subVariant.children[0].children[1].styles.fill;
-      leftnavJSONObject.leftnav['sub-active-disabled-color'] = {
+      leftnavJSONObject.leftnav["sub-active-disabled-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -499,7 +512,7 @@ async function leftnavStyles(value) {
           ),
       };
       // Sub active font styles
-      var textTokenID = subVariant.children[0].children[0].styles.text;
+      var textTokenID = subVariant.children[0].children[1].styles.text;
 
       await coreFigmaFunctions
         .getFigmaTokenNameByID(
@@ -512,27 +525,29 @@ async function leftnavStyles(value) {
             textTokenID
           ].document.name.toLowerCase();
           // font-size
-          leftnavJSONObject.leftnav['sub-active-font-size'] = {
+          leftnavJSONObject.leftnav["sub-active-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
           };
           // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-          leftnavJSONObject.leftnav['sub-active-font-weight'] = {
+          leftnavJSONObject.leftnav["sub-active-font-weight"] = {
             value: `{Web-typography.fontweight-semibold.value}`,
           };
           // line-height
-          leftnavJSONObject.leftnav['sub-active-line-height'] = {
+          leftnavJSONObject.leftnav["sub-active-line-height"] = {
             value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
           };
           // letter-spacing
-          leftnavJSONObject.leftnav['sub-active-letter-spacing'] = {
+          leftnavJSONObject.leftnav["sub-active-letter-spacing"] = {
             value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
           };
         });
     }
-    if (subVariant.name === 'active=FALSE, state=default') {
+    if (
+      subVariant.name === "active=FALSE, state=default, icon on parent=TRUE"
+    ) {
       // leftnav default color
-      var defaultColorTokenID = subVariant.children[0].children[0].styles.fill;
-      leftnavJSONObject.leftnav['sub-default-color'] = {
+      var defaultColorTokenID = subVariant.children[0].children[1].styles.fill;
+      leftnavJSONObject.leftnav["sub-default-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -547,7 +562,7 @@ async function leftnavStyles(value) {
           ),
       };
       // default font-styles
-      var textTokenID = subVariant.children[0].children[0].styles.text;
+      var textTokenID = subVariant.children[0].children[1].styles.text;
       await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -559,28 +574,30 @@ async function leftnavStyles(value) {
             textTokenID
           ].document.name.toLowerCase();
           // font-size
-          leftnavJSONObject.leftnav['sub-default-font-size'] = {
+          leftnavJSONObject.leftnav["sub-default-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
           };
           // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-          leftnavJSONObject.leftnav['sub-default-font-weight'] = {
+          leftnavJSONObject.leftnav["sub-default-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
           // line-height
-          leftnavJSONObject.leftnav['sub-default-line-height'] = {
+          leftnavJSONObject.leftnav["sub-default-line-height"] = {
             value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
           };
           // letter-spacing
-          leftnavJSONObject.leftnav['sub-default-letter-spacing'] = {
+          leftnavJSONObject.leftnav["sub-default-letter-spacing"] = {
             value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
           };
         });
     }
-    if (subVariant.name === 'active=FALSE, state=disabled') {
+    if (
+      subVariant.name === "active=FALSE, state=disabled, icon on parent=TRUE"
+    ) {
       // leftnav default disabled color
       var defaultDisabledColorTokenID =
-        subVariant.children[0].children[0].styles.fill;
-      leftnavJSONObject.leftnav['sub-default-disabled-color'] = {
+        subVariant.children[0].children[1].styles.fill;
+      leftnavJSONObject.leftnav["sub-default-disabled-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -601,11 +618,11 @@ async function leftnavStyles(value) {
 
   await fs
     .writeFile(
-      '../properties/components/leftnav.json',
+      "../properties/components/leftnav.json",
       JSON.stringify(leftnavJSONObject)
     )
     .then(function () {
-      console.log('leftnav.json created');
+      console.log("leftnav.json created");
     });
 }
 

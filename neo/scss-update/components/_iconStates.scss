@@ -1,0 +1,58 @@
+.neo-icon-state {
+  position: relative;
+  &:after {
+    position: absolute;
+    top: 25%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1px;
+  }
+
+  &:before {
+    font-size: $channel-icon-small-icon-font-size;
+  }
+
+  &:after {
+    font-family: "updated-neo-icons";
+    font-size: $channel-icon-small-size;
+    border-radius: 50%;
+    background-color: $channel-background-color;
+    -ms-font-feature-settings: "liga" 1;
+    font-feature-settings: "liga";
+    font-variant-ligatures: discretionary-ligatures;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1.2;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    height: $channel-icon-small-size;
+    width: $channel-icon-small-size;
+    letter-spacing: 0;
+    min-height: 0;
+    speak: none;
+  }
+  &--large {
+    &:before {
+      font-size: $channel-icon-large-icon-font-size;
+    }
+    &:after {
+      font-size: $channel-icon-large-size;
+      height: $channel-icon-large-size;
+      width: $channel-icon-large-size;
+    }
+  }
+  @each $name, $value in $channel-icon-types {
+    &--#{$name} {
+      &:after {
+        content: map-get($value, icon);
+        color: map-get($value, color);
+      }
+    }
+  }
+}

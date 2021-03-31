@@ -70,10 +70,10 @@
     },
     "main-default-disabled-color": { "value": "{color.base/400.value}" },
     "sub-max-height": { "value": "36px" },
-    "sub-padding-horizontal": { "value": "52px" },
-    "sub-active-border-width": { "value": "2px" },
-    "sub-active-border-style": { "value": "solid" },
+    "sub-padding-icon-horizontal": { "value": "52px" },
     "sub-active-color": { "value": "{color.blue/500.value}" },
+    "sub-padding-no-icon-horizontal": { "value": "16px" },
+    "active-circle-size": { "value": "8px" },
     "sub-hover-color": { "value": "{color.blue/600.value}" },
     "sub-active-disabled-color": { "value": "{color.blue/200.value}" },
     "sub-active-font-size": {

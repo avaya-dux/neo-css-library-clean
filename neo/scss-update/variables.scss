@@ -1,6 +1,6 @@
-@import 'mixins';
-@import 'helpers';
-@import 'tokens-import';
+@import "mixins";
+@import "helpers";
+@import "tokens-import";
 
 // need to update this
 /* Neo version 3.14.0   */
@@ -919,6 +919,86 @@ $checkbox-border-color: var(--checkbox-border-color) !default;
 $checkbox-disabled-border-color: var(--checkbox-disabled-border-color) !default;
 $checkbox-border-style: $token-checkbox-border-style !default;
 $checkbox-border-width: $token-checkbox-border-width !default;
+
+//
+// Component name: Icon States
+// Location: src/scss/elements/_iconStates.scss
+//
+
+:root {
+  --channel-bg-color: #{$token-channel-icon-bg-color};
+  --channel-available-color: #{$token-channel-icon-available-color};
+  --channel-busy-away-color: #{$token-channel-icon-busy-away-color};
+  --channel-dnd-color: #{$token-channel-icon-dnd-color};
+  --channel-offline-color: #{$token-channel-icon-offline-color};
+  --channel-icon-generic-color: #{$token-channel-icon-generic-color};
+}
+
+.neo-dark {
+  --channel-bg-color: #{$token-color-base-900};
+  --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
+  --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
+  --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+  --channel-offline-color: #{$token-color-base-500};
+  --channel-icon-generic-color: #{$token-color-base-100};
+}
+
+$channel-icon-types: () !default;
+$channel-icon-types: map-merge(
+  (
+    available: (
+      color: var(--channel-available-color),
+      icon: $token-icons-neo-icon-available-filled,
+    ),
+    away: (
+      color: var(--channel-busy-away-color),
+      icon: $token-icons-neo-icon-away-filled,
+    ),
+    busy: (
+      color: var(--channel-busy-away-color),
+      icon: $token-icons-neo-icon-busy-filled,
+    ),
+    do-not-disturb: (
+      color: var(--channel-dnd-color),
+      icon: $token-icons-neo-icon-do-not-disturb-filled,
+    ),
+    offline: (
+      color: var(--channel-offline-color),
+      icon: $token-icons-neo-icon-offline-filled,
+    ),
+    lock: (
+      color: var(--channel-icon-generic-color),
+      icon: $token-icons-neo-icon-lock-filled,
+    ),
+    warning: (
+      color: var(--channel-busy-away-color),
+      icon: $token-icons-neo-icon-warning-filled,
+    ),
+    missed: (
+      color: var(--channel-dnd-color),
+      icon: $token-icons-neo-icon-missed-filled,
+    ),
+    connected: (
+      color: var(--channel-icon-generic-color),
+      icon: $token-icons-neo-icon-connected-filled,
+    ),
+    inbound: (
+      color: var(--channel-icon-generic-color),
+      icon: $token-icons-neo-icon-inbound-filled,
+    ),
+    outbound: (
+      color: var(--channel-icon-generic-color),
+      icon: $token-icons-neo-icon-outbound-filled,
+    ),
+  ),
+  $channel-icon-types
+);
+
+$channel-background-color: var(--channel-bg-color) !default;
+$channel-icon-small-icon-font-size: $token-channel-icon-small-icon-font-size !default;
+$channel-icon-large-icon-font-size: $token-channel-icon-large-icon-font-size !default;
+$channel-icon-small-size: $token-channel-icon-small-size !default;
+$channel-icon-large-size: $token-channel-icon-large-size !default;
 
 //
 // Component name: Label
@@ -2055,9 +2135,10 @@ $leftnav-main-chevron-icon: $token-icons-neo-icon-chevron-left !default;
 $leftnav-main-chevron-icon-reverse: $token-icons-neo-icon-chevron-right !default;
 //sub
 $leftnav-sub-max-height: $token-leftnav-sub-max-height !default;
-$leftnav-sub-padding-horizontal: $token-leftnav-sub-padding-horizontal !default;
-$leftnav-sub-active-border-width: $token-leftnav-sub-active-border-width !default;
-$leftnav-sub-active-border-style: $token-leftnav-sub-active-border-style !default;
+$leftnav-sub-padding-horizontal: $token-leftnav-sub-padding-icon-horizontal !default;
+$leftnav-sub-padding-no-icon-horizontal: $token-leftnav-sub-padding-no-icon-horizontal !default;
+// $leftnav-sub-active-border-width: $token-leftnav-sub-active-border-width !default;
+// $leftnav-sub-active-border-style: $token-leftnav-sub-active-border-style !default;
 $leftnav-sub-active-color: var(--leftnav-sub-active-color) !default;
 $leftnav-sub-active-hover-color: var(--leftnav-sub-active-hover-color) !default;
 $leftnav-sub-active-disabled-color: var(
@@ -2075,6 +2156,7 @@ $leftnav-sub-default-font-letter-spacing: $token-leftnav-sub-default-letter-spac
 $leftnav-sub-default-disabled-color: var(
   --leftnav-sub-default-disabled-color
 ) !default;
+$leftnav-active-dot-size: $token-leftnav-active-circle-size !default;
 
 // Component name: Dropdown
 // Location: src/scss/components/_dropdown.scss
