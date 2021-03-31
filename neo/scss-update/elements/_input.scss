@@ -198,7 +198,7 @@
       cursor: pointer;
     }
     &:focus {
-      outline: none;
+      outline: $global-outline-color auto 2px;
     }
     &::before {
       font-size: $token-input-input-close-button-size;

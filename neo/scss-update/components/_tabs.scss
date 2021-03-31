@@ -39,7 +39,7 @@
     display: flex;
 
     &:focus-within {
-      outline: rgba(20, 115, 230, 1) auto 2px;
+      outline: $global-outline-color auto 2px;
     }
 
     // @include rtl-selector {
@@ -172,7 +172,7 @@
     display: flex;
 
     &:focus-within {
-      outline: rgba(20, 115, 230, 1) auto 2px;
+      outline: $global-outline-color auto 2px;
     }
 
     // &:last-child {

@@ -241,6 +241,7 @@ $link-hover-decoration: none !default;
   --global-text-inverse-color: #{$token-color-base-0};
   --global-disabled-color: #{$token-color-base-500};
   --global-disabled-background: #{$token-color-base-100};
+  --global-outline-color: #{$token-color-blue-500};
 }
 .dark {
   --icon-color: #{$token-color-base-100};
@@ -249,6 +250,7 @@ $link-hover-decoration: none !default;
   --global-text-inverse-color: #{$token-color-base-900};
   --global-disabled-color: #{$token-color-base-400};
   --global-disabled-background: #{$token-color-base-800};
+  --global-outline-color: #{$token-color-blue-400};
 }
 
 $global-background: var(--global-background) !default;
@@ -281,6 +283,7 @@ $global-right: if($global-text-direction == rtl, left, right) !default;
 $global-opacity: 0.5;
 $global-disabled-color: var(--global-disabled-color);
 $global-disabled-bg: var(--global-disabled-background);
+$global-outline-color: var(--global-outline-color);
 
 // Typography
 
@@ -2425,7 +2428,7 @@ $modal-element-background: var(--modal-background-color) !default;
 $modal-border-color: var(--modal-border-color) !default;
 $modal-border: $modal-border-width $token-modal-border-style $modal-border-color !default;
 // $modal-divider: $global-divider-thickness solid darken($modal-border-color, 5%) !default;
-$modal-padding: $global-spacer-large 17px $global-spacer-large 0 !default;
+$modal-padding: $token-modal-padding-x $token-modal-padding-y !default;
 $modal-header-padding: $global-spacer-x-large 0 $global-spacer-large 0 !default;
 $modal-animation-time: $global-transition-duration !default;
 // $modal-menu-active-border: 4px $token-border-solid-1-px-border-style

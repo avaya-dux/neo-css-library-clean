@@ -60,7 +60,7 @@
   .neo-modal__body {
     // min-height: $modal-body-height;
 
-    @include modal-element($modal-padding, 'top');
+    @include modal-element(0, 'top');
   }
 
   .neo-modal__message {
