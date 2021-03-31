@@ -241,7 +241,7 @@
 
   &.neo-chip--expandable {
     &:focus {
-      outline: rgba(20, 115, 230, 1) auto 2px;
+      outline: $global-outline-color auto 2px;
     }
     @each $name, $color in $neo-chip-hover-colors {
       &--#{$name}:not(.neo-chip--static):hover,
@@ -269,7 +269,7 @@
   }
   &.neo-chip--close {
     &:focus {
-      outline: rgba(20, 115, 230, 1) auto 2px;
+      outline: $global-outline-color auto 2px;
     }
     @each $name, $color in $neo-chip-hover-colors {
       &--#{$name}:not(.neo-chip--static):hover,
