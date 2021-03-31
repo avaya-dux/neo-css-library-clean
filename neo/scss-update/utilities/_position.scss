@@ -34,7 +34,7 @@
       transform: translateX(-15px);
       @include rtl-selector {
         left: 50%;
-        transform: translateX(calc(-100% + 15px)) scale(-1, 1);
+        transform: translateX(calc(-100% + 15px));
       }
 
       @include neo-arrow-justify-right;
@@ -49,7 +49,7 @@
 
       @include rtl-selector {
         left: 50%;
-        transform: translateX(-15px) scale(-1, 1);
+        transform: translateX(-15px);
       }
 
       @include neo-arrow-justify-left;
@@ -88,7 +88,7 @@
       transform: translateX(calc(-100% + 15px)) translateY(-100%);
       @include rtl-selector {
         left: 50%;
-        transform: translateX(-15px) translateY(-100%) scale(-1, 1);
+        transform: translateX(-15px) translateY(-100%);
       }
 
       @include neo-arrow-justify-left;
@@ -102,7 +102,7 @@
 
       @include rtl-selector {
         left: 50%;
-        transform: translateX(calc(-100% + 15px)) translateY(-100%) scale(-1, 1);
+        transform: translateX(calc(-100% + 15px)) translateY(-100%);
       }
 
       @include neo-arrow-justify-right;
@@ -117,12 +117,8 @@
       margin-left: -$popover-offset;
 
       @include rtl-selector {
-        // left: 0;
-        // margin-left: -$popover-offset;
-        // right: auto;
         left: 100%;
         margin-left: $popover-offset;
-        // @include neo-arrow-left;
       }
 
       @include neo-arrow-right;
@@ -135,7 +131,6 @@
       transform: translate(-100%, -50%);
 
       @include rtl-selector {
-        // transform: translate(100%, -50%);
         top: 50%;
         transform: translate(0, -50%);
       }
@@ -182,13 +177,8 @@
       margin-left: $popover-offset;
 
       @include rtl-selector {
-        // left: 100%;
-        // margin-right: $popover-offset;
-        // right: auto;
         left: 0;
         margin-left: -$popover-offset;
-
-        // @include neo-arrow-right;
       }
 
       @include neo-arrow-left;

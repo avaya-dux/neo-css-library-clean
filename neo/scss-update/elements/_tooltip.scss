@@ -149,7 +149,8 @@
       right: -6.5px;
       bottom: -17%;
       @include rtl-selector {
-        right: 20px !important;
+        right: auto;
+        // right: 20px;
         // transform: translateY(-50%) rotate(180deg);
       }
       // bottom: -6.5px;
@@ -245,7 +246,7 @@
 @mixin neo-tooltip-states {
   &--onhover:hover > &__content,
   &--active > &__content,
-  &--onhover:focus > &__content {
+  &--onhover:focus-within > &__content {
     display: block;
     position: absolute;
   }

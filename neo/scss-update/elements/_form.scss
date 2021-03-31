@@ -32,7 +32,7 @@
     > .neo-input-group > label {
       &::after {
         color: $input-asterix-required-color;
-        content: ' *';
+        content: " *";
         // padding-left: $token-input-label-letter-spacing;
       }
     }
@@ -116,7 +116,7 @@
           border-color: $input-border-disabled-color !important;
         }
       }
-      &[dir='rtl'] {
+      &[dir="rtl"] {
         .neo-input-group .neo-input-group__addon,
         .neo-input-group:hover .neo-input-group__addon {
           &:first-child {
@@ -193,7 +193,7 @@
       .neo-multiselect .neo-multiselect__header {
         border-color: $input-border-error-color;
       }
-      &[dir='rtl'] {
+      &[dir="rtl"] {
         .neo-input-group--addons .neo-input-group__addon {
           &:first-child {
             border-left-color: $input-border-error-color;
@@ -272,15 +272,14 @@
           padding-bottom: 0px !important;
         }
       }
-
-      @include rtl-selector {
-        margin-left: 12px;
-        margin-right: 0px;
-      }
     }
 
     .neo-form-control:not(:last-child) {
       margin-right: 12px;
+      @include rtl-selector {
+        margin-left: 12px;
+        margin-right: 0px;
+      }
     }
 
     // .neo-form-control .neo-input:only-child {

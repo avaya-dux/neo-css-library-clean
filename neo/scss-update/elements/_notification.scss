@@ -89,7 +89,7 @@
     align-self: center;
     right: $notification-padding-x;
     white-space: pre-wrap;
-    word-break: break-word;
+    // word-break: break-word;
     @include rtl-selector {
       left: $notification-padding-x;
       right: initial;
@@ -157,7 +157,7 @@
   }
   @each $name, $icon in $neo-notification-icons {
     &--#{$name} .neo-notification__icon:before {
-      font-family: 'updated-neo-icons';
+      font-family: "updated-neo-icons";
       content: $icon;
     }
   }
