@@ -3,7 +3,7 @@
 @import "tokens-import";
 
 // need to update this
-/* Neo version 3.14.0   */
+/* Neo version ____   */
 
 // Variables
 //
@@ -94,163 +94,56 @@ $token-color-base-800: #323232;
 //   $neo-state-colors
 // );
 
-// Images
+// Images - test variables for images
 
-$generic-avatar-image: $token-image-content-generic-avatar;
-// :root {
-//   --generic-avatar-image: #{$generic-avatar-image};
-// }
-
-// updated state colors
-
-$neo-state-colors: () !default;
-
-$neo-state-colors: map-merge(
-  (
-    default: $token-color-base-100,
-    primary: $token-color-blue-500,
-    success: $token-color-green-500,
-    warning: $token-color-orange-500,
-    alert: $token-color-red-500,
-    info: $token-color-blue-500,
-  ),
-  $neo-state-colors
-);
-
-// updated hover state colors
-
-$neo-hover-colors: () !default;
-
-$neo-hover-colors: map-merge(
-  (
-    default: $token-color-base-200,
-    primary: $token-color-blue-600,
-    success: $token-color-green-600,
-    warning: $token-color-orange-600,
-    alert: $token-color-red-600,
-    info: $token-color-blue-600,
-  ),
-  $neo-hover-colors
-);
-
-// updated close button colors
-
-$neo-close-colors: () !default;
-
-$neo-close-colors: map-merge(
-  (
-    default: $token-color-base-600,
-    primary: $token-color-blue-600,
-    success: $token-color-green-600,
-    warning: $token-color-orange-600,
-    alert: $token-color-red-600,
-    info: $token-color-blue-600,
-  ),
-  $neo-close-colors
-);
-
-// updated lighter state colors
-
-$neo-state-colors-light: () !default;
-
-$neo-state-colors-light: map-merge(
-  (
-    default: $token-color-base-100,
-    primary: $token-color-blue-100,
-    success: $token-color-green-100,
-    warning: $token-color-orange-100,
-    alert: $token-color-red-100,
-    info: $token-color-blue-100,
-  ),
-  $neo-state-colors-light
-);
-
-$neo-hover-colors-light: () !default;
-
-$neo-hover-colors-light: map-merge(
-  (
-    default: $token-color-base-200,
-    primary: $token-color-blue-200,
-    success: $token-color-green-200,
-    warning: $token-color-orange-200,
-    alert: $token-color-red-200,
-    info: $token-color-blue-200,
-  ),
-  $neo-hover-colors-light
-);
-
-$neo-border-colors: () !default;
-
-$neo-border-colors: map-merge(
-  (
-    default: $token-color-base-400,
-    primary: $token-color-blue-400,
-    success: $token-color-green-400,
-    warning: $token-color-orange-400,
-    alert: $token-color-red-400,
-    info: $token-color-blue-400,
-  ),
-  $neo-border-colors
-);
-
-// link color variables
-
-:root {
-  --link-color: #{$token-color-blue-500};
-}
-.dark {
-  --link-color: #{$token-color-blue-400};
-}
-
-// Link colors
-$link-color: var(--link-color) !default;
-$link-hover-color: var(--link-color) !default;
-$link-hover-decoration: none !default;
+// $generic-avatar-image: $token-image-content-generic-avatar;
 
 //
 // Global
 //
 
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     --icon-color: #{$token-color-base-1000};
-//     --global-font-color: #{$token-color-base-1000};
-//     --global-background: #{$token-color-base-0};
-//     --global-text-inverse-color: #{$token-color-base-0};
-//     --global-disabled-color: #{$token-color-base-500};
-//     --global-disabled-background: #{$token-color-base-100};
-//   }
-// }
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --icon-color: #{$token-color-base-100};
-//     --global-font-color: #{$token-color-base-100};
-//     --global-background: #{$token-color-base-900};
-//     --global-text-inverse-color: #{$token-color-base-900};
-//     --global-disabled-color: #{$token-color-base-400};
-//     --global-disabled-background: #{$token-color-base-800};
-//   }
-// }
+// Note that all colours must be nested within the (prefers-color-scheme) media query
+// in order for dark mode themeing to work correctly
 
-// global color variables
-
-:root {
-  --icon-color: #{$token-color-base-1000};
-  --global-font-color: #{$token-color-base-1000};
-  --global-background: #{$token-color-base-0};
-  --global-text-inverse-color: #{$token-color-base-0};
-  --global-disabled-color: #{$token-color-base-500};
-  --global-disabled-background: #{$token-color-base-100};
-  --global-outline-color: #{$token-color-blue-500};
+@media (prefers-color-scheme: light) {
+  :root {
+    --icon-color: #{$token-color-base-1000};
+    --global-font-color: #{$token-color-base-1000};
+    --global-background: #{$token-color-base-0};
+    --global-text-inverse-color: #{$token-color-base-0};
+    --global-disabled-color: #{$token-color-base-500};
+    --global-disabled-background: #{$token-color-base-100};
+    --global-outline-color: #{$token-color-blue-500};
+  }
+  .neo-dark {
+    --icon-color: #{$token-color-base-100};
+    --global-font-color: #{$token-color-base-100};
+    --global-background: #{$token-color-base-900};
+    --global-text-inverse-color: #{$token-color-base-900};
+    --global-disabled-color: #{$token-color-base-400};
+    --global-disabled-background: #{$token-color-base-800};
+    --global-outline-color: #{$token-color-blue-400};
+  }
 }
-.dark {
-  --icon-color: #{$token-color-base-100};
-  --global-font-color: #{$token-color-base-100};
-  --global-background: #{$token-color-base-900};
-  --global-text-inverse-color: #{$token-color-base-900};
-  --global-disabled-color: #{$token-color-base-400};
-  --global-disabled-background: #{$token-color-base-800};
-  --global-outline-color: #{$token-color-blue-400};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --icon-color: #{$token-color-base-100};
+    --global-font-color: #{$token-color-base-100};
+    --global-background: #{$token-color-base-900};
+    --global-text-inverse-color: #{$token-color-base-900};
+    --global-disabled-color: #{$token-color-base-400};
+    --global-disabled-background: #{$token-color-base-800};
+    --global-outline-color: #{$token-color-blue-400};
+  }
+  .neo-light {
+    --icon-color: #{$token-color-base-1000};
+    --global-font-color: #{$token-color-base-1000};
+    --global-background: #{$token-color-base-0} !important;
+    --global-text-inverse-color: #{$token-color-base-0};
+    --global-disabled-color: #{$token-color-base-500};
+    --global-disabled-background: #{$token-color-base-100};
+    --global-outline-color: #{$token-color-blue-500};
+  }
 }
 
 $global-background: var(--global-background) !default;
@@ -285,17 +178,49 @@ $global-disabled-color: var(--global-disabled-color);
 $global-disabled-bg: var(--global-disabled-background);
 $global-outline-color: var(--global-outline-color);
 
-// Typography
+// link color variables
 
-// new typography variables
+@media (prefers-color-scheme: dark) {
+  :root {
+    --link-color: #{$token-color-blue-400};
+  }
+  .neo-light {
+    --link-color: #{$token-color-blue-500};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --link-color: #{$token-color-blue-500};
+  }
+  .neo-dark {
+    --link-color: #{$token-color-blue-400};
+  }
+}
+
+// Link colors
+$link-color: var(--link-color) !default;
+$link-hover-color: var(--link-color) !default;
+$link-hover-decoration: none !default;
+
+// Typography
 
 // typography color variables
 
-:root {
-  --heading-color: #{$token-color-base-1000};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --heading-color: #{$token-color-base-100};
+  }
+  .neo-light {
+    --heading-color: #{$token-color-base-1000};
+  }
 }
-.dark {
-  --heading-color: #{$token-color-base-100};
+@media (prefers-color-scheme: light) {
+  :root {
+    --heading-color: #{$token-color-base-1000};
+  }
+  .neo-dark {
+    --heading-color: #{$token-color-base-100};
+  }
 }
 
 $body-font-family: $token-web-typography-font-family !default;
@@ -399,37 +324,73 @@ $form-control-margin-bottom: $global-spacer-x-large !default;
 
 // Input color variables
 
-:root {
-  --input-asterix-color: #{$token-input-error-helper-color};
-  --input-background-color: #{$token-color-base-0};
-  --input-border-color: #{$token-color-base-400};
-  --input-focus-border-color: #{$token-input-border-active-color};
-  --input-font-color: #{$token-input-filled-color};
-  --input-placeholder-font-color: #{$token-input-placeholder-color};
-  --input-hint-color: #{$token-input-helper-color};
-  --input-disabled-bg: #{$token-input-disabled-bg-color};
-  --input-disabled-color: #{$token-input-disabled-text-color};
-  --input-border-error-color: #{$token-input-border-error-color};
-  --input-label-color: #{$token-input-label-color};
-  --input-border-disabled-color: #{$token-color-base-400};
-  --input-border-hover-color: #{$token-input-border-hover-color};
-  --input-addon-font-color: #{$token-color-base-600};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --input-asterix-color: #{$token-color-red-400};
+    --input-background-color: #{$token-color-base-900};
+    --input-border-color: #{$token-color-base-500};
+    --input-focus-border-color: #{$token-color-blue-400};
+    --input-font-color: #{$token-color-base-100};
+    --input-placeholder-font-color: #{$token-color-base-400};
+    --input-hint-color: #{$token-color-base-400};
+    --input-disabled-bg: #{$token-color-base-800};
+    --input-disabled-color: #{$token-color-base-500};
+    --input-border-error-color: #{$token-color-red-400};
+    --input-label-color: #{$token-color-base-100};
+    --input-border-disabled-color: #{$token-color-base-500};
+    --input-border-hover-color: #{$token-color-base-100};
+    --input-addon-font-color: #{$token-color-base-200};
+  }
+  .neo-light {
+    --input-asterix-color: #{$token-input-error-helper-color};
+    --input-background-color: #{$token-color-base-0};
+    --input-border-color: #{$token-color-base-400};
+    --input-focus-border-color: #{$token-input-border-active-color};
+    --input-font-color: #{$token-input-filled-color};
+    --input-placeholder-font-color: #{$token-input-placeholder-color};
+    --input-hint-color: #{$token-input-helper-color};
+    --input-disabled-bg: #{$token-input-disabled-bg-color};
+    --input-disabled-color: #{$token-input-disabled-text-color};
+    --input-border-error-color: #{$token-input-border-error-color};
+    --input-label-color: #{$token-input-label-color};
+    --input-border-disabled-color: #{$token-color-base-400};
+    --input-border-hover-color: #{$token-input-border-hover-color};
+    --input-addon-font-color: #{$token-color-base-600};
+  }
 }
-.dark {
-  --input-asterix-color: #{$token-color-red-400};
-  --input-background-color: #{$token-color-base-900};
-  --input-border-color: #{$token-color-base-500};
-  --input-focus-border-color: #{$token-color-blue-400};
-  --input-font-color: #{$token-color-base-100};
-  --input-placeholder-font-color: #{$token-color-base-400};
-  --input-hint-color: #{$token-color-base-400};
-  --input-disabled-bg: #{$token-color-base-800};
-  --input-disabled-color: #{$token-color-base-500};
-  --input-border-error-color: #{$token-color-red-400};
-  --input-label-color: #{$token-color-base-100};
-  --input-border-disabled-color: #{$token-color-base-500};
-  --input-border-hover-color: #{$token-color-base-100};
-  --input-addon-font-color: #{$token-color-base-200};
+@media (prefers-color-scheme: light) {
+  :root {
+    --input-asterix-color: #{$token-input-error-helper-color};
+    --input-background-color: #{$token-color-base-0};
+    --input-border-color: #{$token-color-base-400};
+    --input-focus-border-color: #{$token-input-border-active-color};
+    --input-font-color: #{$token-input-filled-color};
+    --input-placeholder-font-color: #{$token-input-placeholder-color};
+    --input-hint-color: #{$token-input-helper-color};
+    --input-disabled-bg: #{$token-input-disabled-bg-color};
+    --input-disabled-color: #{$token-input-disabled-text-color};
+    --input-border-error-color: #{$token-input-border-error-color};
+    --input-label-color: #{$token-input-label-color};
+    --input-border-disabled-color: #{$token-color-base-400};
+    --input-border-hover-color: #{$token-input-border-hover-color};
+    --input-addon-font-color: #{$token-color-base-600};
+  }
+  .neo-dark {
+    --input-asterix-color: #{$token-color-red-400};
+    --input-background-color: #{$token-color-base-900};
+    --input-border-color: #{$token-color-base-500};
+    --input-focus-border-color: #{$token-color-blue-400};
+    --input-font-color: #{$token-color-base-100};
+    --input-placeholder-font-color: #{$token-color-base-400};
+    --input-hint-color: #{$token-color-base-400};
+    --input-disabled-bg: #{$token-color-base-800};
+    --input-disabled-color: #{$token-color-base-500};
+    --input-border-error-color: #{$token-color-red-400};
+    --input-label-color: #{$token-color-base-100};
+    --input-border-disabled-color: #{$token-color-base-500};
+    --input-border-hover-color: #{$token-color-base-100};
+    --input-addon-font-color: #{$token-color-base-200};
+  }
 }
 
 $input-label-color: var(--input-label-color) !default;
@@ -440,7 +401,6 @@ $input-border-color: var(--input-border-color) !default;
 $input-border-hover-color: var(--input-border-hover-color) !default;
 $input-border-disabled-color: var(--input-border-disabled-color) !default;
 $input-focus-border-color: var(--input-focus-border-color) !default;
-// $input-focus-shadow: 0 0 1px 2px rgba(0, 102, 255, 0.5) !default;
 $input-font-color: var(--input-font-color) !default;
 $input-placeholder-font-color: var(--input-placeholder-font-color) !default;
 $input-hint-color: var(--input-hint-color) !default;
@@ -452,8 +412,7 @@ $input-addon-font-color: var(--input-addon-font-color) !default;
 $input-state-color-map: () !default;
 $input-state-color-map: map-merge(
   (
-    // success: #939393,
-    error: var(--input-border-error-color)
+    error: var(--input-border-error-color),
   ),
   $input-state-color-map
 );
@@ -500,51 +459,59 @@ $select-border-style: $input-border-style !default;
 $select-border-width: $input-border-width !default;
 $select-border-radius: $input-border-radius !default;
 $select-box-shadow: $input-box-shadow !default;
-//
 $select-font-color: $input-font-color !default;
 $select-font-size: $input-font-size !default;
 $select-line-height: $input-line-height !default;
 $select-letter-spacing: $input-letter-spacing !default;
-//
 $select-height: $token-input-min-height !default;
 $select-width: auto !default;
-// $select-arrow-icon: $token-dropdown-icon !default;
-// $select-icon-height: 16px !default;
-// $select-icon-width: $select-icon-height !default;
 $select-icon-font-size: $input-icon-size !default;
 $select-offset-x: $select-icon-font-size * 2 !default;
-//
 $select-padding-x: $input-padding-x !default;
 $select-padding-y: $input-padding-y !default;
 $select-padding-right: $token-dropdown-padding-x !default;
 $select-padding-left: $input-padding-x !default;
 $select-vertical-margin: $token-input-vertical-margin !default;
-//
 $select-disabled-color: $input-disabled-color !default;
 $select-disabled-bg: $input-disabled-bg !default;
-// $select-hover-bg: $token-dropdown-hover !default;
-// $select-table-page-show-width: $token-table-pagination-count-select-width !default;
 $select-expand-icon: $token-icons-neo-icon-chevron-down !default;
 $select-multiple-selected-icon: $token-icons-neo-icon-accept !default;
 $select-multiple-unselected-icon: $token-icons-neo-icon-close !default;
+
 //
 // Element name: Radio
 // Location: src/scss/elements/_radio-button.scss
 //
 
-// radio colour variables
+// Radio colour variables
 
-:root {
-  --radio-background: #{$token-radio-background-color};
-  --radio-background-active-color: #{$token-radio-active-color};
-  --radio-border: #{$token-color-blue-500};
-  --radio-disabled-border: #{$token-radio-disabled-border};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --radio-background: #{$token-color-base-900};
+    --radio-background-active-color: #{$token-color-blue-400};
+    --radio-border: #{$token-color-blue-400};
+    --radio-disabled-border: #{$token-color-blue-600};
+  }
+  .neo-light {
+    --radio-background: #{$token-radio-background-color};
+    --radio-background-active-color: #{$token-radio-active-color};
+    --radio-border: #{$token-color-blue-500};
+    --radio-disabled-border: #{$token-radio-disabled-border};
+  }
 }
-.dark {
-  --radio-background: #{$token-color-base-900};
-  --radio-background-active-color: #{$token-color-blue-400};
-  --radio-border: #{$token-color-blue-400};
-  --radio-disabled-border: #{$token-color-blue-600};
+@media (prefers-color-scheme: light) {
+  :root {
+    --radio-background: #{$token-radio-background-color};
+    --radio-background-active-color: #{$token-radio-active-color};
+    --radio-border: #{$token-color-blue-500};
+    --radio-disabled-border: #{$token-radio-disabled-border};
+  }
+  .neo-dark {
+    --radio-background: #{$token-color-base-900};
+    --radio-background-active-color: #{$token-color-blue-400};
+    --radio-border: #{$token-color-blue-400};
+    --radio-disabled-border: #{$token-color-blue-600};
+  }
 }
 
 $radio-background: var(--radio-background) !default;
@@ -552,8 +519,6 @@ $radio-background-active-color: var(--radio-background-active-color) !default;
 $radio-border: var(--radio-border) !default;
 $radio-disabled-border: var(--radio-disabled-border) !default;
 $radio-text-offset: $token-radio-text-offset !default;
-// $radio-label-offset-x: $global-spacer-x-large !default;
-// $radio-disabled-opacity: $global-opacity !default;
 $radio-size: $token-radio-size !default;
 $radio-active-ellipse-size: $token-radio-active-ellipse-size !default;
 $radio-position-top: $token-radio-position-top !default;
@@ -565,31 +530,63 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
 // Location: src/scss/elements/_table.scss
 //
 
-:root {
-  --table-header-cell-border-color: #{$token-table-header-cell-border-color};
-  --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
-  --table-background-color: #{$token-table-background-color};
-  --table-row-disabled-color: #{$token-table-row-disabled-color};
-  --table-row-border-color: #{$token-table-row-border-color};
-  --table-row-hover-color: #{$token-table-row-hover-color};
-  --table-row-font-active-color: #{$token-table-row-font-active-color};
-  --table-nested-row-background-color: #{$token-table-nested-row-background-color};
-  --table-nested-row-border-color: #{$token-table-nested-row-border-color};
-  --table-sheet-border-color: #{$token-table-sheet-border-color};
-  --table-filter-row-background-color: #{$token-table-filters-row-background-color};
+// Table colour variables
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --table-header-cell-border-color: #{$token-color-base-600};
+    --table-header-cell-hover-color: #{$token-color-blue-800};
+    --table-background-color: #{$token-color-base-900};
+    --table-row-disabled-color: #{$token-color-base-800};
+    --table-row-border-color: #{$token-color-base-800};
+    --table-row-hover-color: #{$token-color-blue-800};
+    --table-row-font-active-color: #{$token-color-blue-200};
+    --table-nested-row-background-color: #{$token-color-base-800};
+    --table-nested-row-border-color: #{$token-color-blue-600};
+    --table-sheet-border-color: #{$token-color-base-600};
+    --table-filter-row-background-color: #{$token-color-base-900};
+  }
+  .neo-light {
+    --table-header-cell-border-color: #{$token-table-header-cell-border-color};
+    --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
+    --table-background-color: #{$token-table-background-color};
+    --table-row-disabled-color: #{$token-table-row-disabled-color};
+    --table-row-border-color: #{$token-table-row-border-color};
+    --table-row-hover-color: #{$token-table-row-hover-color};
+    --table-row-font-active-color: #{$token-table-row-font-active-color};
+    --table-nested-row-background-color: #{$token-table-nested-row-background-color};
+    --table-nested-row-border-color: #{$token-table-nested-row-border-color};
+    --table-sheet-border-color: #{$token-table-sheet-border-color};
+    --table-filter-row-background-color: #{$token-table-filters-row-background-color};
+  }
 }
-.dark {
-  --table-header-cell-border-color: #{$token-color-base-600};
-  --table-header-cell-hover-color: #{$token-color-blue-800};
-  --table-background-color: #{$token-color-base-900};
-  --table-row-disabled-color: #{$token-color-base-800};
-  --table-row-border-color: #{$token-color-base-800};
-  --table-row-hover-color: #{$token-color-blue-800};
-  --table-row-font-active-color: #{$token-color-blue-200};
-  --table-nested-row-background-color: #{$token-color-base-800};
-  --table-nested-row-border-color: #{$token-color-blue-600};
-  --table-sheet-border-color: #{$token-color-base-600};
-  --table-filter-row-background-color: #{$token-color-base-900};
+@media (prefers-color-scheme: light) {
+  :root {
+    --table-header-cell-border-color: #{$token-table-header-cell-border-color};
+    --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
+    --table-background-color: #{$token-table-background-color};
+    --table-row-disabled-color: #{$token-table-row-disabled-color};
+    --table-row-border-color: #{$token-table-row-border-color};
+    --table-row-hover-color: #{$token-table-row-hover-color};
+    --table-row-font-active-color: #{$token-table-row-font-active-color};
+    --table-nested-row-background-color: #{$token-table-nested-row-background-color};
+    --table-nested-row-border-color: #{$token-table-nested-row-border-color};
+    --table-sheet-border-color: #{$token-table-sheet-border-color};
+    --table-filter-row-background-color: #{$token-table-filters-row-background-color};
+  }
+  .neo-dark {
+    --table-header-cell-border-color: #{$token-color-base-600};
+    --table-header-cell-hover-color: #{$token-color-blue-800};
+    --table-background-color: #{$token-color-base-900};
+    --table-row-disabled-color: #{$token-color-base-800};
+    --table-row-border-color: #{$token-color-base-800};
+    --table-row-hover-color: #{$token-color-blue-800};
+    --table-row-font-active-color: #{$token-color-blue-200};
+    --table-nested-row-background-color: #{$token-color-base-800};
+    --table-nested-row-border-color: #{$token-color-blue-600};
+    --table-sheet-border-color: #{$token-color-base-600};
+    --table-filter-row-background-color: #{$token-color-base-900};
+  }
 }
 
 $table-filters-background-color: var(
@@ -607,7 +604,6 @@ $table-nested-row-background-color: var(
 ) !default;
 $table-nested-row-border-color: var(--table-nested-row-border-color) !default;
 $table-sheet-border-color: var(--table-sheet-border-color) !default;
-
 $table-header-cell-padding-x: $token-table-header-cell-padding-x !default;
 $table-header-cell-padding-y: $token-table-header-cell-padding-y !default;
 $table-header-cell-font-size: $token-table-header-cell-font-size !default;
@@ -646,47 +642,130 @@ $table-sheet-border-style: $token-table-sheet-border-style !default;
 $table-nested-row-wrapper-padding-y: $token-table-nested-row-wrapper-padding-y !default;
 $table-nested-row-wrapper-padding-x: $token-table-nested-row-wrapper-padding-x !default;
 
-// $table-background: $global-background !default;
-// $table-button-margin: $global-spacer;
-// $table-padding: $token-table-padding !default;
-// $table-condensed-padding: $table-padding / 2 !default;
-// $table-color-scale: 5% !default;
-// $table-head-background: $token-table-header-default-background-color !default;
-// $table-head-hover: $table-head-background !default;
-// $table-row-hover: $token-table-row-hover-color !default;
-// $table-head-font-color: $global-text-color !default;
-// $table-border-width: $token-table-row-border-bottom-width !default;
-// $table-border: $table-border-width $token-table-row-border-bottom-style #c9c9c9 !default;
-// $table-striped-background: lighten($table-row-hover, 20%) !default;
-// $table-stripe: even !default;
-// $table-foot-background: $table-head-background !default;
-// $table-foot-row-hover: $table-head-hover !default;
-// $table-foot-font-color: $global-text-color !default;
-// $table-sortable-background-active: darken(
-//   $table-head-background,
-//   $table-color-scale
-// ) !default;
-// $table-sortable-background-hover: $table-sortable-background-active !default;
-// $table-sortable-icon-size: $global-font-size-x-small !default;
-// $table-sortable-icon-margin-x: $global-spacer-large !default;
-// $table-sortable-icon-line-height: 24px !default;
-// // $table-editable-border: 3px solid $neo-active-green;
-// // $table-editable-bg-color: lighten($neo-presence-green, 45%);
-// $table-disabled-bg-color: $token-table-row-disabled-background-color !default;
-// $table-disabled-text-color: $token-table-row-disabled-default-color !default;
-// $table-disabled-clickable-color: $token-table-row-disabled-clickable-color !default;
-// $table-page-select-height: $token-table-pagination-count-height !default;
-// $table-page-select-width: $token-table-pagination-count-width !default;
-// $table-filter-button-color: $token-table-filter-button-color !default;
-// $table-date-picker-background-color: $token-table-datepicker-background-color !default;
-// $table-date-picker-font-color: $token-color-base-600 !default;
-// $table-sortable-ascending-icon: $token-icons-neo-icon-chevron-up !default;
-// $table-sortable-descending-icon: $token-icons-neo-icon-chevron-down !default;
-
 //
 // Component name: Buttons
 // Location: src/scss/elements/_button.scss
 //
+
+// Button color variables
+
+$button-color-primary-rgb-light: 20, 115, 230;
+$button-color-primary-rgb-dark: 76, 148, 237;
+$button-color-success-rgb-light: 8, 138, 8;
+$button-color-success-rgb-dark: 81, 166, 81;
+$button-color-warning-rgb-light: 204, 77, 27;
+$button-color-warning-rgb-dark: 247, 97, 37;
+$button-color-alert-rgb-light: 217, 61, 50;
+$button-color-alert-rgb-dark: 229, 105, 96;
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --button-shadow-color: #{$token-shadows-elevationdark-200-color};
+    --button-text-color: #{$token-color-base-900};
+    --button-color-primary: #{$token-color-blue-400};
+    --button-color-primary-rgb: #{$button-color-primary-rgb-dark};
+    --button-hover-color-default-info: #{$token-color-blue-200};
+    --button-pressed-color-default-info: #{$token-color-blue-100};
+    --button-disabled-color-default-info: #{$token-color-blue-600};
+    --button-color-success: #{$token-color-green-400};
+    --button-color-success-rgb: #{$button-color-success-rgb-dark};
+    --button-hover-color-success: #{$token-color-green-200};
+    --button-pressed-color-success: #{$token-color-green-100};
+    --button-disabled-color-success: #{$token-color-green-600};
+    --button-color-warning: #{$token-color-orange-400};
+    --button-color-warning-rgb: #{$button-color-warning-rgb-dark};
+    --button-hover-color-warning: #{$token-color-orange-200};
+    --button-pressed-color-warning: #{$token-color-orange-100};
+    --button-disabled-color-warning: #{$token-color-orange-600};
+    --button-color-alert: #{$token-color-red-400};
+    --button-color-alert-rgb: #{$button-color-alert-rgb-dark};
+    --button-hover-color-alert: #{$token-color-red-200};
+    --button-pressed-color-alert: #{$token-color-red-100};
+    --button-disabled-color-alert: #{$token-color-red-600};
+    --button-secondary-background-color: #{$token-color-base-900};
+    --button-tertiary-hover-background-color: #{$token-color-base-800};
+  }
+  .neo-light {
+    --button-shadow-color: #{$token-shadows-elevation-200-color};
+    --button-text-color: #{$token-button-font-color};
+    --button-color-primary: #{$token-button-default-info-color};
+    --button-color-primary-rgb: #{$button-color-primary-rgb-light};
+    --button-hover-color-default-info: #{$token-color-blue-600};
+    --button-pressed-color-default-info: #{$token-button-default-info-pressed-color};
+    --button-disabled-color-default-info: #{$token-button-default-info-disabled-color};
+    --button-color-success: #{$token-button-success-color};
+    --button-color-success-rgb: #{$button-color-success-rgb-light};
+    --button-hover-color-success: #{$token-color-green-600};
+    --button-pressed-color-success: #{$token-button-success-pressed-color};
+    --button-disabled-color-success: #{$token-button-success-disabled-color};
+    --button-color-warning: #{$token-button-warning-color};
+    --button-color-warning-rgb: #{$button-color-warning-rgb-light};
+    --button-hover-color-warning: #{$token-color-orange-600};
+    --button-pressed-color-warning: #{$token-button-warning-pressed-color};
+    --button-disabled-color-warning: #{$token-button-warning-disabled-color};
+    --button-color-alert: #{$token-button-alert-color};
+    --button-color-alert-rgb: #{$button-color-alert-rgb-light};
+    --button-hover-color-alert: #{$token-color-red-600};
+    --button-pressed-color-alert: #{$token-button-alert-pressed-color};
+    --button-disabled-color-alert: #{$token-button-alert-disabled-color};
+    --button-secondary-background-color: #{$token-button-secondary-background-color};
+    --button-tertiary-hover-background-color: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --button-shadow-color: #{$token-shadows-elevation-200-color};
+    --button-text-color: #{$token-button-font-color};
+    --button-color-primary: #{$token-button-default-info-color};
+    --button-color-primary-rgb: #{$button-color-primary-rgb-light};
+    --button-hover-color-default-info: #{$token-color-blue-600};
+    --button-pressed-color-default-info: #{$token-button-default-info-pressed-color};
+    --button-disabled-color-default-info: #{$token-button-default-info-disabled-color};
+    --button-color-success: #{$token-button-success-color};
+    --button-color-success-rgb: #{$button-color-success-rgb-light};
+    --button-hover-color-success: #{$token-color-green-600};
+    --button-pressed-color-success: #{$token-button-success-pressed-color};
+    --button-disabled-color-success: #{$token-button-success-disabled-color};
+    --button-color-warning: #{$token-button-warning-color};
+    --button-color-warning-rgb: #{$button-color-warning-rgb-light};
+    --button-hover-color-warning: #{$token-color-orange-600};
+    --button-pressed-color-warning: #{$token-button-warning-pressed-color};
+    --button-disabled-color-warning: #{$token-button-warning-disabled-color};
+    --button-color-alert: #{$token-button-alert-color};
+    --button-color-alert-rgb: #{$button-color-alert-rgb-light};
+    --button-hover-color-alert: #{$token-color-red-600};
+    --button-pressed-color-alert: #{$token-button-alert-pressed-color};
+    --button-disabled-color-alert: #{$token-button-alert-disabled-color};
+    --button-secondary-background-color: #{$token-button-secondary-background-color};
+    --button-tertiary-hover-background-color: #{$token-color-base-100};
+  }
+  .neo-dark {
+    --button-shadow-color: #{$token-shadows-elevationdark-200-color};
+    --button-text-color: #{$token-color-base-900};
+    --button-color-primary: #{$token-color-blue-400};
+    --button-color-primary-rgb: #{$button-color-primary-rgb-dark};
+    --button-hover-color-default-info: #{$token-color-blue-200};
+    --button-pressed-color-default-info: #{$token-color-blue-100};
+    --button-disabled-color-default-info: #{$token-color-blue-600};
+    --button-color-success: #{$token-color-green-400};
+    --button-color-success-rgb: #{$button-color-success-rgb-dark};
+    --button-hover-color-success: #{$token-color-green-200};
+    --button-pressed-color-success: #{$token-color-green-100};
+    --button-disabled-color-success: #{$token-color-green-600};
+    --button-color-warning: #{$token-color-orange-400};
+    --button-color-warning-rgb: #{$button-color-warning-rgb-dark};
+    --button-hover-color-warning: #{$token-color-orange-200};
+    --button-pressed-color-warning: #{$token-color-orange-100};
+    --button-disabled-color-warning: #{$token-color-orange-600};
+    --button-color-alert: #{$token-color-red-400};
+    --button-color-alert-rgb: #{$button-color-alert-rgb-dark};
+    --button-hover-color-alert: #{$token-color-red-200};
+    --button-pressed-color-alert: #{$token-color-red-100};
+    --button-disabled-color-alert: #{$token-color-red-600};
+    --button-secondary-background-color: #{$token-color-base-900};
+    --button-tertiary-hover-background-color: #{$token-color-base-800};
+  }
+}
 
 $button-font-weight: $token-button-font-weight !default;
 // need to re-format to ensure grabbing proper styles for token
@@ -719,77 +798,6 @@ $button-circular-size: $token-button-circle-button-size !default;
 $button-circle-icon-size: $token-button-circle-icon-size !default;
 $button-square-size: $token-button-square-button-size !default;
 $button-square-icon-size: $token-button-square-icon-size !default;
-
-// pseudo code here
-
-// $button-primary-color: $token-button-default-info-color
-// *[theme="dark"] {
-//  $button-primary-color: <<the dark color>>
-// }
-
-// Button color variables
-
-$button-color-primary-rgb-light: 20, 115, 230;
-$button-color-primary-rgb-dark: 76, 148, 237;
-$button-color-success-rgb-light: 8, 138, 8;
-$button-color-success-rgb-dark: 81, 166, 81;
-$button-color-warning-rgb-light: 204, 77, 27;
-$button-color-warning-rgb-dark: 247, 97, 37;
-$button-color-alert-rgb-light: 217, 61, 50;
-$button-color-alert-rgb-dark: 229, 105, 96;
-
-:root {
-  --button-shadow-color: #{$token-shadows-elevation-200-color};
-  --button-text-color: #{$token-button-font-color};
-  --button-color-primary: #{$token-button-default-info-color};
-  --button-color-primary-rgb: #{$button-color-primary-rgb-light};
-  --button-hover-color-default-info: #{$token-color-blue-600};
-  --button-pressed-color-default-info: #{$token-button-default-info-pressed-color};
-  --button-disabled-color-default-info: #{$token-button-default-info-disabled-color};
-  --button-color-success: #{$token-button-success-color};
-  --button-color-success-rgb: #{$button-color-success-rgb-light};
-  --button-hover-color-success: #{$token-color-green-600};
-  --button-pressed-color-success: #{$token-button-success-pressed-color};
-  --button-disabled-color-success: #{$token-button-success-disabled-color};
-  --button-color-warning: #{$token-button-warning-color};
-  --button-color-warning-rgb: #{$button-color-warning-rgb-light};
-  --button-hover-color-warning: #{$token-color-orange-600};
-  --button-pressed-color-warning: #{$token-button-warning-pressed-color};
-  --button-disabled-color-warning: #{$token-button-warning-disabled-color};
-  --button-color-alert: #{$token-button-alert-color};
-  --button-color-alert-rgb: #{$button-color-alert-rgb-light};
-  --button-hover-color-alert: #{$token-color-red-600};
-  --button-pressed-color-alert: #{$token-button-alert-pressed-color};
-  --button-disabled-color-alert: #{$token-button-alert-disabled-color};
-  --button-secondary-background-color: #{$token-button-secondary-background-color};
-  --button-tertiary-hover-background-color: #{$token-color-base-100};
-}
-.dark {
-  --button-shadow-color: #{$token-shadows-elevationdark-200-color};
-  --button-text-color: #{$token-color-base-900};
-  --button-color-primary: #{$token-color-blue-400};
-  --button-color-primary-rgb: #{$button-color-primary-rgb-dark};
-  --button-hover-color-default-info: #{$token-color-blue-200};
-  --button-pressed-color-default-info: #{$token-color-blue-100};
-  --button-disabled-color-default-info: #{$token-color-blue-600};
-  --button-color-success: #{$token-color-green-400};
-  --button-color-success-rgb: #{$button-color-success-rgb-dark};
-  --button-hover-color-success: #{$token-color-green-200};
-  --button-pressed-color-success: #{$token-color-green-100};
-  --button-disabled-color-success: #{$token-color-green-600};
-  --button-color-warning: #{$token-color-orange-400};
-  --button-color-warning-rgb: #{$button-color-warning-rgb-dark};
-  --button-hover-color-warning: #{$token-color-orange-200};
-  --button-pressed-color-warning: #{$token-color-orange-100};
-  --button-disabled-color-warning: #{$token-color-orange-600};
-  --button-color-alert: #{$token-color-red-400};
-  --button-color-alert-rgb: #{$button-color-alert-rgb-dark};
-  --button-hover-color-alert: #{$token-color-red-200};
-  --button-pressed-color-alert: #{$token-color-red-100};
-  --button-disabled-color-alert: #{$token-color-red-600};
-  --button-secondary-background-color: #{$token-color-base-900};
-  --button-tertiary-hover-background-color: #{$token-color-base-800};
-}
 
 $button-states: () !default;
 $button-states: map-merge(
@@ -846,15 +854,27 @@ $neo-button-group-offset: 1px;
 // Location: src/scss/elements/_arrow.scss
 //
 
-// arrow colour variables
+// Arrow colour variables
 
-:root {
-  --arrow-outer-color: #{$token-color-base-900};
-  --arrow-color: #{$token-color-base-0};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --arrow-outer-color: #{$token-color-base-0};
+    --arrow-color: #{$token-color-base-900};
+  }
+  .neo-light {
+    --arrow-outer-color: #{$token-color-base-900};
+    --arrow-color: #{$token-color-base-0};
+  }
 }
-.dark {
-  --arrow-outer-color: #{$token-color-base-0};
-  --arrow-color: #{$token-color-base-900};
+@media (prefers-color-scheme: light) {
+  :root {
+    --arrow-outer-color: #{$token-color-base-900};
+    --arrow-color: #{$token-color-base-0};
+  }
+  .neo-dark {
+    --arrow-outer-color: #{$token-color-base-0};
+    --arrow-color: #{$token-color-base-900};
+  }
 }
 
 $arrow-width: $global-spacer-x-large !default;
@@ -871,25 +891,50 @@ $arrow-color: var(--arrow-color);
 
 // Checkbox color variables
 
-:root {
-  --checkbox-background-color: #{$token-checkbox-unchecked-bg-color};
-  --checkbox-checked-background-color: #{$token-checkbox-checked-bg-color};
-  --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
-  --checkbox-icon-color: #{$token-checkbox-icon-color};
-  --checkbox-font-color: #{$token-checkbox-label-font-color};
-  --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
-  --checkbox-border-color: #{$token-checkbox-border-color};
-  --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --checkbox-background-color: #{$token-color-base-900};
+    --checkbox-checked-background-color: #{$token-color-blue-400};
+    --checkbox-disabled-background-color: #{$token-color-blue-600};
+    --checkbox-icon-color: #{$token-color-base-900};
+    --checkbox-font-color: #{$token-color-base-100};
+    --checkbox-disabled-font-color: #{$token-color-base-500};
+    --checkbox-border-color: #{$token-color-blue-400};
+    --checkbox-disabled-border-color: #{$token-color-blue-600};
+  }
+  .neo-light {
+    --checkbox-background-color: #{$token-checkbox-unchecked-bg-color};
+    --checkbox-checked-background-color: #{$token-checkbox-checked-bg-color};
+    --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
+    --checkbox-icon-color: #{$token-checkbox-icon-color};
+    --checkbox-font-color: #{$token-checkbox-label-font-color};
+    --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+    --checkbox-border-color: #{$token-checkbox-border-color};
+    --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
+  }
 }
-.dark {
-  --checkbox-background-color: #{$token-color-base-900};
-  --checkbox-checked-background-color: #{$token-color-blue-400};
-  --checkbox-disabled-background-color: #{$token-color-blue-600};
-  --checkbox-icon-color: #{$token-color-base-900};
-  --checkbox-font-color: #{$token-color-base-100};
-  --checkbox-disabled-font-color: #{$token-color-base-500};
-  --checkbox-border-color: #{$token-color-blue-400};
-  --checkbox-disabled-border-color: #{$token-color-blue-600};
+@media (prefers-color-scheme: light) {
+  :root {
+    --checkbox-background-color: #{$token-checkbox-unchecked-bg-color};
+    --checkbox-checked-background-color: #{$token-checkbox-checked-bg-color};
+    --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
+    --checkbox-icon-color: #{$token-checkbox-icon-color};
+    --checkbox-font-color: #{$token-checkbox-label-font-color};
+    --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+    --checkbox-border-color: #{$token-checkbox-border-color};
+    --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
+  }
+
+  .neo-dark {
+    --checkbox-background-color: #{$token-color-base-900};
+    --checkbox-checked-background-color: #{$token-color-blue-400};
+    --checkbox-disabled-background-color: #{$token-color-blue-600};
+    --checkbox-icon-color: #{$token-color-base-900};
+    --checkbox-font-color: #{$token-color-base-100};
+    --checkbox-disabled-font-color: #{$token-color-base-500};
+    --checkbox-border-color: #{$token-color-blue-400};
+    --checkbox-disabled-border-color: #{$token-color-blue-600};
+  }
 }
 
 $checkbox-size: $token-checkbox-size !default;
@@ -925,22 +970,44 @@ $checkbox-border-width: $token-checkbox-border-width !default;
 // Location: src/scss/elements/_iconStates.scss
 //
 
-:root {
-  --channel-bg-color: #{$token-channel-icon-bg-color};
-  --channel-available-color: #{$token-channel-icon-available-color};
-  --channel-busy-away-color: #{$token-channel-icon-busy-away-color};
-  --channel-dnd-color: #{$token-channel-icon-dnd-color};
-  --channel-offline-color: #{$token-channel-icon-offline-color};
-  --channel-icon-generic-color: #{$token-channel-icon-generic-color};
-}
+// Icon state colour variables
 
-.neo-dark {
-  --channel-bg-color: #{$token-color-base-900};
-  --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
-  --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
-  --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
-  --channel-offline-color: #{$token-color-base-500};
-  --channel-icon-generic-color: #{$token-color-base-100};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --channel-bg-color: #{$token-color-base-900};
+    --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
+    --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
+    --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+    --channel-offline-color: #{$token-color-base-500};
+    --channel-icon-generic-color: #{$token-color-base-100};
+  }
+  .neo-light {
+    --channel-bg-color: #{$token-channel-icon-bg-color};
+    --channel-available-color: #{$token-channel-icon-available-color};
+    --channel-busy-away-color: #{$token-channel-icon-busy-away-color};
+    --channel-dnd-color: #{$token-channel-icon-dnd-color};
+    --channel-offline-color: #{$token-channel-icon-offline-color};
+    --channel-icon-generic-color: #{$token-channel-icon-generic-color};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --channel-bg-color: #{$token-channel-icon-bg-color};
+    --channel-available-color: #{$token-channel-icon-available-color};
+    --channel-busy-away-color: #{$token-channel-icon-busy-away-color};
+    --channel-dnd-color: #{$token-channel-icon-dnd-color};
+    --channel-offline-color: #{$token-channel-icon-offline-color};
+    --channel-icon-generic-color: #{$token-channel-icon-generic-color};
+  }
+
+  .neo-dark {
+    --channel-bg-color: #{$token-color-base-900};
+    --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
+    --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
+    --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+    --channel-offline-color: #{$token-color-base-500};
+    --channel-icon-generic-color: #{$token-color-base-100};
+  }
 }
 
 $channel-icon-types: () !default;
@@ -1005,22 +1072,82 @@ $channel-icon-large-size: $token-channel-icon-large-size !default;
 // Location: src/scss/elements/_label.scss
 //
 
-$label-background: $global-background !default;
-$label-color: $global-text-color !default;
-$label-color-alt: $token-color-base-1000 !default;
-$label-font-size: $token-label-font-size !default;
-$label-height: 24px !default;
-$label-line-height: $token-label-line-height !default;
-$label-padding-y: $global-spacer !default;
-$label-padding-x: $global-spacer-large !default;
-$label-spacing: 0 !default;
-$label-radius: $global-radius !default;
-$label-margin-bottom: $input-in-label-margin-top !default;
+// $label-background: $global-background !default;
+// $label-color: $global-text-color !default;
+// $label-color-alt: $token-color-base-1000 !default;
+// $label-font-size: $token-label-font-size !default;
+// $label-height: 24px !default;
+// $label-line-height: $token-label-line-height !default;
+// $label-padding-y: $global-spacer !default;
+// $label-padding-x: $global-spacer-large !default;
+// $label-spacing: 0 !default;
+// $label-radius: $global-radius !default;
+// $label-margin-bottom: $input-in-label-margin-top !default;
 
 //
 // Element name: Notification
 // Location: src/scss/elements/_notification.scss
 //
+
+// Notification color variables
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
+    --notification-success-color: #{$token-color-green-800};
+    --notification-success-icon-color: #{$token-color-green-200};
+    --notification-warning-color: #{$token-color-orange-800};
+    --notification-warning-icon-color: #{$token-color-orange-200};
+    --notification-alert-color: #{$token-color-red-800};
+    --notification-alert-icon-color: #{$token-color-red-200};
+    --notification-info-color: #{$token-color-blue-800};
+    --notification-info-icon-color: #{$token-color-blue-200};
+    --notification-event-color: #{$token-color-base-800};
+    --notification-event-icon-color: #{$token-color-base-200};
+  }
+  .neo-light {
+    --notification-elevation-color: #{$token-notification-elevation-color};
+    --notification-success-color: #{$token-notification-success-color};
+    --notification-success-icon-color: #{$token-notification-success-icon-color};
+    --notification-warning-color: #{$token-notification-warning-color};
+    --notification-warning-icon-color: #{$token-notification-warning-icon-color};
+    --notification-alert-color: #{$token-notification-alert-color};
+    --notification-alert-icon-color: #{$token-notification-alert-icon-color};
+    --notification-info-color: #{$token-notification-info-color};
+    --notification-info-icon-color: #{$token-notification-info-icon-color};
+    --notification-event-color: #{$token-notification-event-color};
+    --notification-event-icon-color: #{$token-notification-event-icon-color};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    --notification-elevation-color: #{$token-notification-elevation-color};
+    --notification-success-color: #{$token-notification-success-color};
+    --notification-success-icon-color: #{$token-notification-success-icon-color};
+    --notification-warning-color: #{$token-notification-warning-color};
+    --notification-warning-icon-color: #{$token-notification-warning-icon-color};
+    --notification-alert-color: #{$token-notification-alert-color};
+    --notification-alert-icon-color: #{$token-notification-alert-icon-color};
+    --notification-info-color: #{$token-notification-info-color};
+    --notification-info-icon-color: #{$token-notification-info-icon-color};
+    --notification-event-color: #{$token-notification-event-color};
+    --notification-event-icon-color: #{$token-notification-event-icon-color};
+  }
+
+  .neo-dark {
+    --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
+    --notification-success-color: #{$token-color-green-800};
+    --notification-success-icon-color: #{$token-color-green-200};
+    --notification-warning-color: #{$token-color-orange-800};
+    --notification-warning-icon-color: #{$token-color-orange-200};
+    --notification-alert-color: #{$token-color-red-800};
+    --notification-alert-icon-color: #{$token-color-red-200};
+    --notification-info-color: #{$token-color-blue-800};
+    --notification-info-icon-color: #{$token-color-blue-200};
+    --notification-event-color: #{$token-color-base-800};
+    --notification-event-icon-color: #{$token-color-base-200};
+  }
+}
 
 $notification-option-spacing: $token-notification-option-spacing !default;
 $notification-text-spacing: $token-notification-text-spacing-y !default;
@@ -1033,7 +1160,6 @@ $notification-min-height: $token-notification-min-height !default;
 $notification-padding-x: $token-notification-padding-x !default;
 $notification-padding-y: $token-notification-padding-y !default;
 $notification-border-radius: $token-notification-border-radius !default;
-// fonts
 $notification-header-font-size: $token-notification-header-font-size !default;
 $notification-header-line-height: $token-notification-header-line-height !default;
 $notification-header-letter-spacing: $token-notification-header-letter-spacing !default;
@@ -1051,37 +1177,6 @@ $notification-elevation-x-offset: $token-notification-elevation-x-offset !defaul
 $notification-elevation-y-offset: $token-notification-elevation-y-offset !default;
 $notification-elevation-radius: $token-notification-elevation-radius !default;
 $notification-elevation-color: var(--notification-elevation-color) !default;
-
-// updated notification colors
-
-// notification color variables
-
-:root {
-  --notification-elevation-color: #{$token-notification-elevation-color};
-  --notification-success-color: #{$token-notification-success-color};
-  --notification-success-icon-color: #{$token-notification-success-icon-color};
-  --notification-warning-color: #{$token-notification-warning-color};
-  --notification-warning-icon-color: #{$token-notification-warning-icon-color};
-  --notification-alert-color: #{$token-notification-alert-color};
-  --notification-alert-icon-color: #{$token-notification-alert-icon-color};
-  --notification-info-color: #{$token-notification-info-color};
-  --notification-info-icon-color: #{$token-notification-info-icon-color};
-  --notification-event-color: #{$token-notification-event-color};
-  --notification-event-icon-color: #{$token-notification-event-icon-color};
-}
-.dark {
-  --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
-  --notification-success-color: #{$token-color-green-800};
-  --notification-success-icon-color: #{$token-color-green-200};
-  --notification-warning-color: #{$token-color-orange-800};
-  --notification-warning-icon-color: #{$token-color-orange-200};
-  --notification-alert-color: #{$token-color-red-800};
-  --notification-alert-icon-color: #{$token-color-red-200};
-  --notification-info-color: #{$token-color-blue-800};
-  --notification-info-icon-color: #{$token-color-blue-200};
-  --notification-event-color: #{$token-color-base-800};
-  --notification-event-icon-color: #{$token-color-base-200};
-}
 
 $neo-notification-colors: () !default;
 
@@ -1110,44 +1205,48 @@ $neo-notification-icons: map-merge(
   $neo-notification-icons
 );
 
-// updated icon colors
+// // updated icon colors
 
-$neo-icon-colors: () !default;
+// $neo-icon-colors: () !default;
 
-$neo-icon-colors: map-merge(
-  (
-    success: var(--notification-success-icon-color),
-    warning: var(--notification-warning-icon-color),
-    alert: var(--notification-alert-icon-color),
-    info: var(--notification-info-icon-color),
-    event: var(--notification-event-icon-color),
-  ),
-  $neo-icon-colors
-);
+// $neo-icon-colors: map-merge(
+//   (
+//     success: var(--notification-success-icon-color),
+//     warning: var(--notification-warning-icon-color),
+//     alert: var(--notification-alert-icon-color),
+//     info: var(--notification-info-icon-color),
+//     event: var(--notification-event-icon-color),
+//   ),
+//   $neo-icon-colors
+// );
 
-// $notification-background: $global-background !default;
-// $notification-color: $global-text-color !default;
-// $notification-radius: 0 !default;
-// $notification-font-size: $token-web-typography-web-heading-4-font-size !default;
-// $notification-padding-y: $global-spacer * 2 !default;
-// $notification-padding-x: $global-spacer-large * 2 !default;
-// $notification-margin-bottom: $global-spacer !default;
-// $notification-btn-offset: $global-spacer !default;
-// $notification-icon-offset-y: $global-spacer-small !default;
-// $notification-icon-offset-x: $global-spacer-large !default;
-// $notification-description-font-size: $global-font-size !default;
-// $notification-counter-font-size: $global-font-size !default;
-// $notification-opacity: 0.8 !default;
+//
+// Element name: Close
+// Location: src/scss/elements/_close.scss
+//
 
 // close color variables
 
-:root {
-  --clear-close-color: #{$token-color-base-500};
-  --clear-close-hover-color: #{$token-color-base-1000};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --clear-close-color: #{$token-color-base-400};
+    --clear-close-hover-color: #{$token-color-base-100};
+  }
+  .neo-light {
+    --clear-close-color: #{$token-color-base-500};
+    --clear-close-hover-color: #{$token-color-base-1000};
+  }
 }
-.dark {
-  --clear-close-color: #{$token-color-base-400};
-  --clear-close-hover-color: #{$token-color-base-100};
+@media (prefers-color-scheme: light) {
+  :root {
+    --clear-close-color: #{$token-color-base-500};
+    --clear-close-hover-color: #{$token-color-base-1000};
+  }
+
+  .neo-dark {
+    --clear-close-color: #{$token-color-base-400};
+    --clear-close-hover-color: #{$token-color-base-100};
+  }
 }
 
 $close-types: () !default;
@@ -1184,40 +1283,80 @@ $close-sizes: map-merge(
 // Location: src/scss/components/_navbar.scss
 //
 
-// navbar color variables:first
-:root {
-  --navbar-border-bottom-color: #{$token-navbar-bottom-border-color};
-  --navbar-status-pill-font-color: #{$token-navbar-agent-card-name-font-color};
-  --navbar-ready-color: #{$token-navbar-ready-card-background-color};
-  --navbar-not-ready-color: #{$token-navbar-not-ready-card-background-color};
-  --navbar-connected-color: #{$token-navbar-connected-card-background-color};
-  --navbar-pill-ready-color: #{$token-navbar-ready-card-status-color};
-  --navbar-pill-not-ready-color: #{$token-navbar-not-ready-card-status-color};
-  --navbar-pill-connected-color: #{$token-navbar-connected-card-status-color};
-  --navbar-bg-color-hover: #{$token-navbar-action-hover-background-color};
-  --navbar-default-icon-color: #{$token-navbar-action-default-color};
-  --navbar-icon-hover-color: #{$token-navbar-action-hover-color};
-  --navbar-icon-selected-color: #{$token-navbar-action-active-color};
-  --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
-  --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
-  --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
+// Navbar color variables
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --navbar-border-bottom-color: #{$token-color-base-600};
+    --navbar-status-pill-font-color: #{$token-color-base-900};
+    --navbar-ready-color: #{$token-color-green-800};
+    --navbar-not-ready-color: #{$token-color-orange-800};
+    --navbar-connected-color: #{$token-color-base-800};
+    --navbar-pill-ready-color: #{$token-color-green-200};
+    --navbar-pill-not-ready-color: #{$token-color-orange-200};
+    --navbar-pill-connected-color: #{$token-color-base-200};
+    --navbar-bg-color-hover: #{$token-color-base-800};
+    --navbar-default-icon-color: #{$token-color-base-100};
+    --navbar-icon-hover-color: #{$token-color-blue-200};
+    --navbar-icon-selected-color: #{$token-color-blue-400};
+    --navbar-icon-disabled-color: #{$token-color-base-500};
+    --navbar-active-disabled-color: #{$token-color-blue-600};
+    --navbar-status-avatar-border-color: #{$token-color-base-900};
+  }
+  .neo-light {
+    --navbar-border-bottom-color: #{$token-navbar-bottom-border-color};
+    --navbar-status-pill-font-color: #{$token-navbar-agent-card-name-font-color};
+    --navbar-ready-color: #{$token-navbar-ready-card-background-color};
+    --navbar-not-ready-color: #{$token-navbar-not-ready-card-background-color};
+    --navbar-connected-color: #{$token-navbar-connected-card-background-color};
+    --navbar-pill-ready-color: #{$token-navbar-ready-card-status-color};
+    --navbar-pill-not-ready-color: #{$token-navbar-not-ready-card-status-color};
+    --navbar-pill-connected-color: #{$token-navbar-connected-card-status-color};
+    --navbar-bg-color-hover: #{$token-navbar-action-hover-background-color};
+    --navbar-default-icon-color: #{$token-navbar-action-default-color};
+    --navbar-icon-hover-color: #{$token-navbar-action-hover-color};
+    --navbar-icon-selected-color: #{$token-navbar-action-active-color};
+    --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
+    --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
+    --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
+  }
 }
-.dark {
-  --navbar-border-bottom-color: #{$token-color-base-600};
-  --navbar-status-pill-font-color: #{$token-color-base-900};
-  --navbar-ready-color: #{$token-color-green-800};
-  --navbar-not-ready-color: #{$token-color-orange-800};
-  --navbar-connected-color: #{$token-color-base-800};
-  --navbar-pill-ready-color: #{$token-color-green-200};
-  --navbar-pill-not-ready-color: #{$token-color-orange-200};
-  --navbar-pill-connected-color: #{$token-color-base-200};
-  --navbar-bg-color-hover: #{$token-color-base-800};
-  --navbar-default-icon-color: #{$token-color-base-100};
-  --navbar-icon-hover-color: #{$token-color-blue-200};
-  --navbar-icon-selected-color: #{$token-color-blue-400};
-  --navbar-icon-disabled-color: #{$token-color-base-500};
-  --navbar-active-disabled-color: #{$token-color-blue-600};
-  --navbar-status-avatar-border-color: #{$token-color-base-900};
+@media (prefers-color-scheme: light) {
+  :root {
+    --navbar-border-bottom-color: #{$token-navbar-bottom-border-color};
+    --navbar-status-pill-font-color: #{$token-navbar-agent-card-name-font-color};
+    --navbar-ready-color: #{$token-navbar-ready-card-background-color};
+    --navbar-not-ready-color: #{$token-navbar-not-ready-card-background-color};
+    --navbar-connected-color: #{$token-navbar-connected-card-background-color};
+    --navbar-pill-ready-color: #{$token-navbar-ready-card-status-color};
+    --navbar-pill-not-ready-color: #{$token-navbar-not-ready-card-status-color};
+    --navbar-pill-connected-color: #{$token-navbar-connected-card-status-color};
+    --navbar-bg-color-hover: #{$token-navbar-action-hover-background-color};
+    --navbar-default-icon-color: #{$token-navbar-action-default-color};
+    --navbar-icon-hover-color: #{$token-navbar-action-hover-color};
+    --navbar-icon-selected-color: #{$token-navbar-action-active-color};
+    --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
+    --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
+    --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
+  }
+
+  .neo-dark {
+    --navbar-border-bottom-color: #{$token-color-base-600};
+    --navbar-status-pill-font-color: #{$token-color-base-900};
+    --navbar-ready-color: #{$token-color-green-800};
+    --navbar-not-ready-color: #{$token-color-orange-800};
+    --navbar-connected-color: #{$token-color-base-800};
+    --navbar-pill-ready-color: #{$token-color-green-200};
+    --navbar-pill-not-ready-color: #{$token-color-orange-200};
+    --navbar-pill-connected-color: #{$token-color-base-200};
+    --navbar-bg-color-hover: #{$token-color-base-800};
+    --navbar-default-icon-color: #{$token-color-base-100};
+    --navbar-icon-hover-color: #{$token-color-blue-200};
+    --navbar-icon-selected-color: #{$token-color-blue-400};
+    --navbar-icon-disabled-color: #{$token-color-base-500};
+    --navbar-active-disabled-color: #{$token-color-blue-600};
+    --navbar-status-avatar-border-color: #{$token-color-base-900};
+  }
 }
 
 $neo-navbar-colors: () !default;
@@ -1356,7 +1495,7 @@ $navbar-brand-height: $navbar-height;
 // Location: src/scss/components/_group-list.scss
 //
 
-// group list colour variables
+// Group list colour variables
 
 :root {
   --list-hover: #{$token-list-hover};
@@ -1365,7 +1504,7 @@ $navbar-brand-height: $navbar-height;
   --list-disabled-hover-color: #{$token-color-base-500};
   --list-section-background: #{$token-color-base-100};
 }
-.dark {
+.neo-dark {
   --list-hover: #{$token-color-blue-800};
   --list-white: #{$token-color-base-800};
   --list-disabled-bg-color: #{$token-color-base-800};
@@ -1410,13 +1549,26 @@ $group-list-section-action-padding: $token-list-section-action-padding !default;
 
 // list item color variables
 
-:root {
-  --list-item-divider: #{$token-color-base-200};
-  --list-item-subtext: #{$token-color-base-800};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --list-item-divider: #{$token-color-base-600};
+    --list-item-subtext: #{$token-color-base-100};
+  }
+  .neo-light {
+    --list-item-divider: #{$token-color-base-200};
+    --list-item-subtext: #{$token-color-base-800};
+  }
 }
-.dark {
-  --list-item-divider: #{$token-color-base-600};
-  --list-item-subtext: #{$token-color-base-100};
+@media (prefers-color-scheme: light) {
+  :root {
+    --list-item-divider: #{$token-color-base-200};
+    --list-item-subtext: #{$token-color-base-800};
+  }
+
+  .neo-dark {
+    --list-item-divider: #{$token-color-base-600};
+    --list-item-subtext: #{$token-color-base-100};
+  }
 }
 
 $list-item-subtext-color: var(--list-item-subtext) !default;
@@ -1432,15 +1584,28 @@ $list-item-divider: 1px solid var(--list-item-divider) !default;
 // Location: src/scss/components/_accordion.scss
 //
 
-// accordion colour variables
+// Accordion colour variables
 
-:root {
-  --accordion-border-color: #{$token-accordion-border-color};
-  --accordion-body-color: #{$token-accordion-background-color};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --accordion-border-color: #{$token-color-base-500};
+    --accordion-body-color: #{$token-color-base-900};
+  }
+  .neo-light {
+    --accordion-border-color: #{$token-accordion-border-color};
+    --accordion-body-color: #{$token-accordion-background-color};
+  }
 }
-.dark {
-  --accordion-border-color: #{$token-color-base-500};
-  --accordion-body-color: #{$token-color-base-900};
+@media (prefers-color-scheme: light) {
+  :root {
+    --accordion-border-color: #{$token-accordion-border-color};
+    --accordion-body-color: #{$token-accordion-background-color};
+  }
+
+  .neo-dark {
+    --accordion-border-color: #{$token-color-base-500};
+    --accordion-body-color: #{$token-color-base-900};
+  }
 }
 
 $accordion-body-background: var(--accordion-body-color) !default;
@@ -1455,7 +1620,6 @@ $accordion-padding-y: $token-accordion-padding-y !default;
 $accordion-padding-x: $token-accordion-padding-x !default;
 $accordion-expanded-icon: $token-icons-neo-icon-chevron-down !default;
 $accordion-contracted-icon: $token-icons-neo-icon-chevron-up !default;
-
 $accordion-font-size: $token-accordion-accordion-font-size !default;
 $accordion-line-height: $token-accordion-accordion-line-height !default;
 $accordion-letter-spacing: $token-accordion-accordion-letter-spacing !default;
@@ -1468,17 +1632,28 @@ $accordion-font-weight: $token-accordion-accordion-font-weight !default;
 
 // Sheet color variables
 
-:root {
-  --sheet-background: #{$token-sheet-sheet-background-color};
-  --sheet-shadow: #{$token-shadows-elevation-300-color};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --sheet-background: #{$token-color-base-900};
+    --sheet-shadow: #{$token-shadows-elevationdark-300-color};
+  }
+  .neo-light {
+    --sheet-background: #{$token-sheet-sheet-background-color};
+    --sheet-shadow: #{$token-shadows-elevation-300-color};
+  }
 }
-.dark {
-  --sheet-background: #{$token-color-base-900};
-  --sheet-shadow: #{$token-shadows-elevationdark-300-color};
+@media (prefers-color-scheme: light) {
+  :root {
+    --sheet-background: #{$token-sheet-sheet-background-color};
+    --sheet-shadow: #{$token-shadows-elevation-300-color};
+  }
+
+  .neo-dark {
+    --sheet-background: #{$token-color-base-900};
+    --sheet-shadow: #{$token-shadows-elevationdark-300-color};
+  }
 }
 
-// $sheet-width: $token-sheet-width !default;
-// $sheet-min-height: $token-sheet-min-height !default;
 $sheet-padding: $token-sheet-padding-y !default;
 $sheet-transition-duration: $global-transition-duration !default;
 $sheet-transition-timing-function: $global-transition-timing !default;
@@ -1492,31 +1667,43 @@ $sheet-shadow: $token-shadows-elevation-300-x-offset
 // Location: src/scss/elements/_pagination.scss
 //
 
-// pagination color variables:first
+// Pagination color variables
 
-:root {
-  --pagination-color: #{$token-color-blue-500};
-  --pagination-border-color-hover: #{$token-color-blue-500};
-  --pagination-active-background-color: #{$token-color-blue-500};
-  --pagination-item-color-current: #{$token-color-base-100};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pagination-color: #{$token-color-blue-400};
+    --pagination-border-color-hover: #{$token-color-blue-400};
+    --pagination-active-background-color: #{$token-color-blue-400};
+    --pagination-item-color-current: #{$token-color-base-800};
+  }
+  .neo-light {
+    --pagination-color: #{$token-color-blue-500};
+    --pagination-border-color-hover: #{$token-color-blue-500};
+    --pagination-active-background-color: #{$token-color-blue-500};
+    --pagination-item-color-current: #{$token-color-base-100};
+  }
 }
-.dark {
-  --pagination-color: #{$token-color-blue-400};
-  --pagination-border-color-hover: #{$token-color-blue-400};
-  --pagination-active-background-color: #{$token-color-blue-400};
-  --pagination-item-color-current: #{$token-color-base-800};
+@media (prefers-color-scheme: light) {
+  :root {
+    --pagination-color: #{$token-color-blue-500};
+    --pagination-border-color-hover: #{$token-color-blue-500};
+    --pagination-active-background-color: #{$token-color-blue-500};
+    --pagination-item-color-current: #{$token-color-base-100};
+  }
+
+  .neo-dark {
+    --pagination-color: #{$token-color-blue-400};
+    --pagination-border-color-hover: #{$token-color-blue-400};
+    --pagination-active-background-color: #{$token-color-blue-400};
+    --pagination-item-color-current: #{$token-color-base-800};
+  }
 }
 
-// $pagination-font-size: $token-table-font-size !default;
 $pagination-label-font-size: $global-font-size-small !default;
 $pagination-spacer: $global-spacer !default;
 $pagination-btn-background: $global-background !default;
 $pagination-btn-padding: $global-spacer-small $global-spacer-large !default;
-// $pagination-border-radius: $token-table-pagination-active-div-border-radius !default;
 $pagination-border-color-hover: var(--pagination-border-color-hover) !default;
-// $pagination-border: $token-table-pagination-active-div-border-width
-//   $token-table-pagination-active-div-border-style
-//   var(--pagination-border-color-hover) !default;
 $pagination-dots-color: $global-text-color !default;
 $pagination-color: var(--pagination-color) !default;
 $pagination-margin: $global-spacer !default;
@@ -1540,39 +1727,36 @@ $pagination-hover-background-color: var(
 
 // Tooltip color variables
 
-:root {
-  --tooltip-background-color: #{$token-tooltip-background-color};
-  --tooltip-color: #{$token-tooltip-font-color};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --tooltip-background-color: #{$token-color-base-0};
+    --tooltip-color: #{$token-color-base-800};
+  }
+  .neo-light {
+    --tooltip-background-color: #{$token-tooltip-background-color};
+    --tooltip-color: #{$token-tooltip-font-color};
+  }
 }
-.dark {
-  --tooltip-background-color: #{$token-color-base-0};
-  --tooltip-color: #{$token-color-base-800};
-}
-// @media (prefers-color-scheme: light) {
-//   :root {
-//     --tooltip-background-color: #{$token-tooltip-background-color};
-//     --tooltip-color: #{$token-tooltip-color};
-//   }
-// }
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --tooltip-background-color: #{$token-color-base-0};
-//     --tooltip-color: #{$token-color-base-800};
-//   }
-// }
+@media (prefers-color-scheme: light) {
+  :root {
+    --tooltip-background-color: #{$token-tooltip-background-color};
+    --tooltip-color: #{$token-tooltip-font-color};
+  }
 
-// neo-theme-default, neo-theme-dark, neo-theme-<<custom>>-default, neo-theme-<<custom>>-dark
+  .neo-dark {
+    --tooltip-background-color: #{$token-color-base-0};
+    --tooltip-color: #{$token-color-base-800};
+  }
+}
 
 $tooltip-background: var(--tooltip-background-color) !default;
 $tooltip-color: var(--tooltip-color) !default;
-// $tooltip-width: $token-tooltip-width !default;
 $tooltip-offset: 8px !default;
 $tooltip-animation-duration: $global-transition-duration !default;
 $tooltip-font-size: $token-tooltip-tooltip-font-size !default;
 $tooltip-border-radius: $token-tooltip-border-radius !default;
 $tooltip-padding: $token-tooltip-padding-y $token-tooltip-padding-x !default;
 $tooltip-z: 999 !default;
-// $tooltip-height: $token-tooltip-height !default;
 
 //--------------------------------------------//
 //                Components                  //
@@ -1607,7 +1791,7 @@ $image-thumbnail-border-radius: $global-radius !default;
   --avatar-status-offline-color: #{$token-avatar-status-offline-color};
 }
 
-.dark {
+.neo-dark {
   --avatar-background-color: #{$token-color-blue-100};
   --avatar-font-color: #{$token-color-base-900};
   --avatar-primary-color: #{$token-color-blue-400};
@@ -1731,7 +1915,7 @@ $avatar-generic-icon: $token-icons-neo-icon-contact-filled !default;
   --switch-ellipse-color: #{$token-switch-ellipse-color};
   --switch-elevation-color: #{$token-shadows-elevation-100-color};
 }
-.dark {
+.neo-dark {
   --switch-off-color: #{$token-color-base-500};
   --switch-on-color: #{$token-color-blue-400};
   --switch-disabled-on-color: #{$token-color-blue-600};
@@ -1855,7 +2039,7 @@ $chip-close-icon: $token-icons-neo-icon-close !default;
   --chip-alert-disabled-color: #{$token-chips-alert-disabled-bg-color};
   --chip-alert-disabled-icon-color: #{$token-chips-alert-disabled-icon-color};
 }
-.dark {
+.neo-dark {
   --chip-font-color: #{$token-color-base-100};
   --chip-disabled-font-color: #{$token-color-base-500};
   --chip-default-color: #{$token-color-base-800};
@@ -1980,7 +2164,7 @@ $neo-chip-disabled-icon-colors: map-merge(
   --tab-action-disabled-color: #{$token-tabs-active-disabled-color};
   --tab-carousel-button-color: #{$token-tabs-carousel-button-color};
 }
-.dark {
+.neo-dark {
   --tab-default-color: #{$token-color-base-100};
   --tab-background-color: #{$token-color-base-900};
   --tab-background-hover-color: #{$token-color-base-800};
@@ -2070,7 +2254,7 @@ $tab-background-color: var(--tab-background-color);
   --leftnav-sub-active-disabled-color: #{$token-leftnav-sub-active-disabled-color};
   --leftnav-sub-default-disabled-color: #{$token-leftnav-sub-default-disabled-color};
 }
-.dark {
+.neo-dark {
   --leftnav-default-color: #{$token-color-base-100};
   --leftnav-main-default-disabled-color: #{$token-color-base-500};
   --leftnav-background-color: #{$token-color-base-900};
@@ -2193,7 +2377,7 @@ $leftnav-active-dot-size: $token-leftnav-active-circle-size !default;
   --dropdown-item-hover-color: #{$token-dropdown-hover-color};
   --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
 }
-.dark {
+.neo-dark {
   --dropdown-color: #{$token-color-base-800};
   --dropdown-content-border: rgba(241, 241, 241, 0.15);
   --dropdown-content-background-color: #{$token-color-blue-400};
@@ -2284,21 +2468,36 @@ $popover-font-weight: $token-web-typography-fontweight-semibold !default;
 //
 
 // widget colour variables
-
-:root {
-  --widget-background-color: #{$global-background};
-  --widget-heading-font-color: #{$token-widgets-header-font-color};
-  --widget-heading-icon-color: #{$token-widgets-header-icon-color};
-  --widget-shimmer-color: #{$token-color-base-100};
-  --widget-border-color: #{$token-widgets-border-color};
+@media (prefers-color-scheme: dark) {
+  :root {
+    --widget-background-color: #{$token-color-base-900};
+    --widget-heading-font-color: #{$token-color-base-100};
+    --widget-heading-icon-color: #{$token-color-base-100};
+    --widget-shimmer-color: #{$token-color-base-800};
+    --widget-border-color: rgba(255, 255, 255, 0.15);
+  }
+  .neo-light {
+    --widget-background-color: #{$global-background};
+    --widget-heading-font-color: #{$token-widgets-header-font-color};
+    --widget-heading-icon-color: #{$token-widgets-header-icon-color};
+    --widget-shimmer-color: #{$token-color-base-100};
+    --widget-border-color: #{$token-widgets-border-color};
+  }
 }
-.dark {
-  --widget-background-color: #{$token-color-base-900};
-  --widget-heading-font-color: #{$token-color-base-100};
-  --widget-heading-icon-color: #{$token-color-base-100};
-  --widget-shimmer-color: #{$token-color-base-800};
-  --widget-border-color: rgba(255, 255, 255, 0.15);
-}
+// :root {
+//   --widget-background-color: #{$global-background};
+//   --widget-heading-font-color: #{$token-widgets-header-font-color};
+//   --widget-heading-icon-color: #{$token-widgets-header-icon-color};
+//   --widget-shimmer-color: #{$token-color-base-100};
+//   --widget-border-color: #{$token-widgets-border-color};
+// }
+// .neo-dark {
+//   --widget-background-color: #{$token-color-base-900};
+//   --widget-heading-font-color: #{$token-color-base-100};
+//   --widget-heading-icon-color: #{$token-color-base-100};
+//   --widget-shimmer-color: #{$token-color-base-800};
+//   --widget-border-color: rgba(255, 255, 255, 0.15);
+// }
 
 $widget-background-color: var(--widget-background-color) !default;
 $widget-shimmer-color: var(--widget-shimmer-color) !default;
@@ -2333,7 +2532,7 @@ $widget-content-padding: 0 $token-widgets-padding-x $token-widgets-padding-y
 :root {
   --empty-state-color: #{$token-color-base-500};
 }
-.dark {
+.neo-dark {
   --empty-state-color: #{$token-color-base-400};
 }
 
@@ -2371,7 +2570,7 @@ $spinner-ring-sizes: map-merge(
 :root {
   --spinner-color: #{$token-color-base-500};
 }
-.dark {
+.neo-dark {
   --spinner-color: #{$token-color-base-400};
 }
 
@@ -2396,7 +2595,7 @@ $spinner-animation-duration: 500ms !default;
   --modal-shadow-color: rgba(0, 0, 0, 0.25);
   --modal-scrim-color: rgba(0, 0, 0, 0.25);
 }
-.dark {
+.neo-dark {
   --modal-background-color: #{$token-color-base-900};
   --modal-color: #{$token-color-base-100};
   --modal-border-color: rgba(241, 241, 241, 0.15);
@@ -2445,7 +2644,7 @@ $modal-animation-time: $global-transition-duration !default;
   --badge-color: #{$token-badge-color};
   --badge-background-color: #{$token-badge-background-color};
 }
-.dark {
+.neo-dark {
   --badge-background-color: #{$token-color-red-400};
   --badge-color: #{$token-color-base-800};
 }
