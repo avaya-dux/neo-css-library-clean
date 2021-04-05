@@ -206,7 +206,7 @@
         padding-right: 5px;
       }
       &:focus {
-        outline: none
+        outline: none;
       }
       &:before {
         margin-right: 5px;
@@ -344,10 +344,10 @@
       a {
         cursor: not-allowed;
         color: $tab-disabled-color;
-        font-weight: normal;
+        // font-weight: normal;
         &:before {
           color: $tab-disabled-color;
-          font-weight: normal;
+          // font-weight: normal;
         }
       }
       .neo-icon-end {

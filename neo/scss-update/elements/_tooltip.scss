@@ -162,6 +162,10 @@
       // }
     }
 
+    .neo-tooltip--up-left &--multiline .neo-arrow {
+      bottom: -8%;
+    }
+
     .neo-tooltip--up-left & .neo-arrow::before {
       // border-left-color: $tooltip-background !important;
       border-width: $arrow-border-width;
