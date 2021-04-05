@@ -115,6 +115,15 @@ $token-color-base-800: #323232;
     --global-disabled-background: #{$token-color-base-100};
     --global-outline-color: #{$token-color-blue-500};
   }
+  .neo-light {
+    --icon-color: #{$token-color-base-1000};
+    --global-font-color: #{$token-color-base-1000};
+    --global-background: #{$token-color-base-0};
+    --global-text-inverse-color: #{$token-color-base-0};
+    --global-disabled-color: #{$token-color-base-500};
+    --global-disabled-background: #{$token-color-base-100};
+    --global-outline-color: #{$token-color-blue-500};
+  }
   .neo-dark {
     --icon-color: #{$token-color-base-100};
     --global-font-color: #{$token-color-base-100};
@@ -127,6 +136,15 @@ $token-color-base-800: #323232;
 }
 @media (prefers-color-scheme: dark) {
   :root {
+    --icon-color: #{$token-color-base-100};
+    --global-font-color: #{$token-color-base-100};
+    --global-background: #{$token-color-base-900};
+    --global-text-inverse-color: #{$token-color-base-900};
+    --global-disabled-color: #{$token-color-base-400};
+    --global-disabled-background: #{$token-color-base-800};
+    --global-outline-color: #{$token-color-blue-400};
+  }
+  .neo-dark {
     --icon-color: #{$token-color-base-100};
     --global-font-color: #{$token-color-base-100};
     --global-background: #{$token-color-base-900};
@@ -184,12 +202,18 @@ $global-outline-color: var(--global-outline-color);
   :root {
     --link-color: #{$token-color-blue-400};
   }
+  .neo-dark {
+    --link-color: #{$token-color-blue-400};
+  }
   .neo-light {
     --link-color: #{$token-color-blue-500};
   }
 }
 @media (prefers-color-scheme: light) {
   :root {
+    --link-color: #{$token-color-blue-500};
+  }
+  .neo-light {
     --link-color: #{$token-color-blue-500};
   }
   .neo-dark {
@@ -210,12 +234,18 @@ $link-hover-decoration: none !default;
   :root {
     --heading-color: #{$token-color-base-100};
   }
+  .neo-dark {
+    --heading-color: #{$token-color-base-100};
+  }
   .neo-light {
     --heading-color: #{$token-color-base-1000};
   }
 }
 @media (prefers-color-scheme: light) {
   :root {
+    --heading-color: #{$token-color-base-1000};
+  }
+  .neo-light {
     --heading-color: #{$token-color-base-1000};
   }
   .neo-dark {
