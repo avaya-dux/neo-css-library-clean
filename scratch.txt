@@ -1,3 +1,0 @@
-Rest of icongen-manual: && node -r esm ./icons-functions/icon-file-replacer.js && cd .. && node -r esm neo-icon-combine.js
-
-Something deleting the icon name in file replacer function?
