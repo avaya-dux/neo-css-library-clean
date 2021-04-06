@@ -903,6 +903,12 @@
       "integrity": "sha512-lhd/wF+Lk98HZoTCtlVraHtfh5XYijIjalXck7saUtuanSDyLMxnHhSXEDJqHxD7msR8D0uCmqlkwjCV8xvwHw==",
       "dev": true
     },
+    "fast-xml-parser": {
+      "version": "3.19.0",
+      "resolved": "https://registry.npmjs.org/fast-xml-parser/-/fast-xml-parser-3.19.0.tgz",
+      "integrity": "sha512-4pXwmBplsCPv8FOY1WRakF970TjNGnGnfbOnLqjlYvMiF1SR3yOHyxMR/YCXpPTOspNF5gwudqktIP4VsWkvBg==",
+      "dev": true
+    },
     "file-uri-to-path": {
       "version": "1.0.0",
       "resolved": "https://registry.npmjs.org/file-uri-to-path/-/file-uri-to-path-1.0.0.tgz",
@@ -1182,12 +1188,6 @@
       "integrity": "sha1-wc56MWjIxmFAM6S194d/OyJfnDg=",
       "dev": true
     },
-    "html-comment-regex": {
-      "version": "1.1.2",
-      "resolved": "https://registry.npmjs.org/html-comment-regex/-/html-comment-regex-1.1.2.tgz",
-      "integrity": "sha512-P+M65QY2JQ5Y0G9KKdlDpo0zK+/OHptU5AaBwUfAIDJZk1MYf32Frm84EcOytfJE0t5JvkAnKlmjsXDnWzCJmQ==",
-      "dev": true
-    },
     "http-signature": {
       "version": "1.2.0",
       "resolved": "https://registry.npmjs.org/http-signature/-/http-signature-1.2.0.tgz",
@@ -1319,6 +1319,15 @@
       "resolved": "https://registry.npmjs.org/is-resolvable/-/is-resolvable-1.1.0.tgz",
       "integrity": "sha512-qgDYXFSR5WvEfuS5dMj6oTMEbrrSaM0CrFk2Yiq/gXnBvD9pMa2jGXxyhGLfvhZpuMZe18CJpFxAt3CRs42NMg==",
       "dev": true
+    },
+    "is-svg": {
+      "version": "4.3.1",
+      "resolved": "https://registry.npmjs.org/is-svg/-/is-svg-4.3.1.tgz",
+      "integrity": "sha512-h2CGs+yPUyvkgTJQS9cJzo9lYK06WgRiXUqBBHtglSzVKAuH4/oWsqk7LGfbSa1hGk9QcZ0SyQtVggvBA8LZXA==",
+      "dev": true,
+      "requires": {
+        "fast-xml-parser": "^3.19.0"
+      }
     },
     "is-symbol": {
       "version": "1.0.3",
@@ -2545,21 +2554,12 @@
       "integrity": "sha512-C6wyjo3VwFm0QgBy+Fu7gCYOkCmgmClghO+pjcxvrcBKtiKt0uCF+hvbMO1fyv5BMImRK90SMb+dwUnfbGd+jw==",
       "dev": true,
       "requires": {
-        "is-svg": "^3.0.0",
+        "is-svg": "^4.3.1",
         "postcss": "^7.0.0",
         "postcss-value-parser": "^3.0.0",
         "svgo": "^1.0.0"
       },
       "dependencies": {
-        "is-svg": {
-          "version": "3.0.0",
-          "resolved": "https://registry.npmjs.org/is-svg/-/is-svg-3.0.0.tgz",
-          "integrity": "sha512-gi4iHK53LR2ujhLVVj+37Ykh9GLqYHX6JOVXbLAucaG/Cqw9xwdFOjDM2qeifLs1sF1npXXFvDu0r5HNgCMrzQ==",
-          "dev": true,
-          "requires": {
-            "html-comment-regex": "^1.1.0"
-          }
-        },
         "postcss-value-parser": {
           "version": "3.3.1",
           "resolved": "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-3.3.1.tgz",
