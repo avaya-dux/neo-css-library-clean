@@ -25,7 +25,7 @@
   $padding-left: $dropdown-padding-x
 ) {
   &::after {
-    font-family: 'updated-neo-icons';
+    font-family: "updated-neo-icons";
     color: $global-text-inverse-color;
     content: $arrow-icon;
     padding: 0 0 0 $padding-left;
@@ -43,10 +43,10 @@
       display: none;
     }
     &::before {
-      font-family: 'updated-neo-icons';
-      color: $color;
+      font-family: "updated-neo-icons";
+      color: $global-text-inverse-color;
       content: $arrow-icon;
-      padding: 0 $padding-left 0 0;
+      // padding: 0 $padding-left 0 0;
       vertical-align: middle;
     }
     &:not(.neo-dropdown__link-header)::before {
@@ -239,11 +239,19 @@
   &__content--left {
     left: auto !important;
     right: 0 !important;
+    @include rtl-selector {
+      left: 0 !important;
+      right: auto !important;
+    }
   }
 
   &__content--right {
     left: 0 !important;
     right: auto !important;
+    @include rtl-selector {
+      left: auto !important;
+      right: 0 !important;
+    }
   }
 
   // this doesn't work as we need the dropdowns to function independently of each other
@@ -251,11 +259,19 @@
   &__content--left-nested {
     left: auto !important;
     right: 100% !important;
+    @include rtl-selector {
+      left: 100% !important;
+      right: auto !important;
+    }
   }
 
   &__content--right-nested {
     left: 100% !important;
     right: auto !important;
+    @include rtl-selector {
+      left: auto !important;
+      right: 100% !important;
+    }
   }
 
   // &__content--right {

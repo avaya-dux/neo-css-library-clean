@@ -122,15 +122,23 @@ dist
 # project-specific files and folders
 
 .vscode
-build/
+firebase-functions/
 neo/combine/
 neo/css/
 neo/demo
+neo/dist
+neo/original-neo-styles
 neo/scss
 neo/scss-update-tokens
+neo_zip/
 placeholders-notes/
-x-icon/
-x-icons/
 formatter.html
+emailTemplate.html
+emailTest.html
+emailTest2.html
 global-styles.css
 global-styles.min.css
+cors-config.json
+cors-reset.json
+commits.txt
+scratch.txt
