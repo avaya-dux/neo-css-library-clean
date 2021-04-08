@@ -90,6 +90,9 @@
     right: $notification-padding-x;
     white-space: pre-wrap;
     // word-break: break-word;
+    & p {
+      margin: 0px;
+    }
     @include rtl-selector {
       left: $notification-padding-x;
       right: initial;
@@ -118,8 +121,8 @@
 
 @mixin notification-options {
   &__options {
-    position: absolute;
-    right: $notification-padding-x;
+    // position: absolute;
+    // right: $notification-padding-x;
     align-self: center;
     @include rtl-selector {
       left: $notification-padding-x;
