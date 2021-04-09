@@ -2,6 +2,7 @@
   font-family: $body-font-family;
   font-size: $global-font-size;
   line-height: $body-line-height;
+  // background-color: $global-background;
   &:focus {
     // outline: none;
     outline: rgba(20, 115, 230, 1) auto 2px;
@@ -19,3 +20,10 @@
 // html {
 //   background-color: $global-background;
 // }
+
+// to trigger dark mode, please use var(--global-background) in your styles
+
+.neo-global-colors {
+  background-color: $global-background;
+  color: $global-text-color;
+}
