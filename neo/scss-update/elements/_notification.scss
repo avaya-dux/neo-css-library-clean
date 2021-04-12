@@ -67,7 +67,10 @@
     font-size: $notification-large-icon-size;
     line-height: 1;
     margin-right: $notification-icon-offset;
-    @include TooltipMargin($notification-icon-offset);
+
+    // experimental Tooltip mix-in
+
+    // @include TooltipMargin($notification-icon-offset);
 
     @include rtl-selector {
       margin: {
