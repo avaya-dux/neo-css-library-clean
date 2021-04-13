@@ -146,6 +146,12 @@
     & .neo-multiselect:focus {
       outline: none;
     }
+    & .neo-select select {
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
     & .neo-multiselect .neo-multiselect__header {
       border: none;
       &:focus {
