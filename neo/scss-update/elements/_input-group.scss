@@ -158,6 +158,12 @@
         outline: none;
       }
     }
+    & .neo-multiselect .neo-multiselect-combo__header {
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
     & .neo-input-editable__wrapper {
       flex-grow: 1;
       border: none;

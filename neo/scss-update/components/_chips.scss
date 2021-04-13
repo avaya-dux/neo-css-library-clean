@@ -269,6 +269,7 @@
     // }
   }
   &.neo-chip--close {
+    cursor: pointer;
     &:focus {
       outline: $global-outline-color auto 2px;
     }

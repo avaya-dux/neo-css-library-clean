@@ -89,7 +89,8 @@
         background-color: $select-disabled-bg;
       }
 
-      .neo-multiselect .neo-multiselect__header {
+      .neo-multiselect .neo-multiselect__header,
+      .neo-multiselect .neo-multiselect-combo__header {
         border-color: $select-disabled-color !important;
         cursor: not-allowed;
         color: $select-disabled-color !important;
@@ -190,7 +191,8 @@
       }
     }
     &--error {
-      .neo-multiselect .neo-multiselect__header {
+      .neo-multiselect .neo-multiselect__header,
+      .neo-multiselect .neo-multiselect-combo__header {
         border-color: $input-border-error-color;
       }
       &[dir="rtl"] {
