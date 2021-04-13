@@ -35,7 +35,7 @@
 
 @mixin close-types() {
   @each $name, $config in $close-types {
-    @if $name == 'default' {
+    @if $name == "default" {
       @include close-type($config);
     } @else {
       &--#{$name} {
@@ -47,7 +47,7 @@
 
 @mixin close-sizes() {
   @each $name, $value in $close-sizes {
-    @if $name == 'default' {
+    @if $name == "default" {
       @include close-size($value);
     } @else {
       &--#{$name} {
@@ -74,7 +74,7 @@
 
   &::after,
   &::before {
-    content: '';
+    content: "";
     display: block;
     left: 50%;
     position: absolute;

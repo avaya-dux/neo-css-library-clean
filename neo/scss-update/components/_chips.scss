@@ -60,9 +60,10 @@
       color: $color;
       font-size: $chip-icon-size;
     }
-    // &--#{$name} .neo-close {
-    //   background-color: $color;
-    // }
+    &--#{$name} .neo-close::before,
+    &--#{$name} .neo-close::after {
+      background-color: $color;
+    }
   }
 
   @each $name, $color in $neo-chip-disabled-colors {
@@ -252,7 +253,7 @@
       }
     }
     &::after {
-      font-family: 'updated-neo-icons';
+      font-family: "updated-neo-icons";
       // margin-left: $chip-offset;
       // margin-right: auto;
       content: $chip-expandable-icon;
@@ -279,16 +280,16 @@
         background-color: $color;
       }
     }
-    &::after {
-      font-family: 'updated-neo-icons';
-      // margin-left: $chip-offset;
-      // margin-right: auto;
-      content: $chip-close-icon;
-      // @include rtl-selector {
-      //   margin-right: $chip-offset;
-      //   margin-left: auto;
-      // }
-    }
+    // &::after {
+    //   font-family: 'updated-neo-icons';
+    //   // margin-left: $chip-offset;
+    //   // margin-right: auto;
+    //   content: $chip-close-icon;
+    //   // @include rtl-selector {
+    //   //   margin-right: $chip-offset;
+    //   //   margin-left: auto;
+    //   // }
+    // }
     // @each $name, $color in $neo-close-colors {
     //   &--#{$name}::after {
     //     color: $color;
