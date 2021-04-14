@@ -18,15 +18,15 @@
   }
 }
 
-@mixin neo-arrow-color($position) {
-  @each $name, $color in $neo-state-colors {
-    &--#{$name} {
-      .neo-arrow::before {
-        border-#{$position}-color: $color;
-      }
-    }
-  }
-}
+// @mixin neo-arrow-color($position) {
+//   @each $name, $color in $neo-state-colors {
+//     &--#{$name} {
+//       .neo-arrow::before {
+//         border-#{$position}-color: $color;
+//       }
+//     }
+//   }
+// }
 
 @mixin neo-arrow-left(
   $position: "left",
@@ -56,7 +56,7 @@
     }
   }
 
-  @include neo-arrow-color(right);
+  // @include neo-arrow-color(right);
 }
 
 @mixin neo-arrow-right(
@@ -84,7 +84,7 @@
     }
   }
 
-  @include neo-arrow-color(left);
+  // @include neo-arrow-color(left);
 }
 
 @mixin neo-arrow-up(
@@ -110,7 +110,7 @@
     }
   }
 
-  @include neo-arrow-color(top);
+  // @include neo-arrow-color(top);
 }
 
 @mixin neo-arrow-down(
@@ -136,7 +136,7 @@
     }
   }
 
-  @include neo-arrow-color(bottom);
+  // @include neo-arrow-color(bottom);
 }
 
 @mixin neo-arrow-justify-left {

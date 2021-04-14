@@ -173,6 +173,7 @@
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    color: $widget-heading-color;
     // hard-coded for now
     // &::before {
     //   margin-right: 10px;
@@ -183,8 +184,8 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      & [class^='neo-icon-']:before,
-      & [class*='neo-icon-']:before {
+      & [class^="neo-icon-"]:before,
+      & [class*="neo-icon-"]:before {
         font-size: $token-widgets-header-icon-size;
       }
       & p {
@@ -201,7 +202,7 @@
             margin-right: $widget-heading-font-margin-left;
           }
         }
-        color: $token-widgets-header-font-color;
+        color: $widget-heading-color;
       }
     }
 
@@ -217,8 +218,8 @@
         padding-left: 0px;
         margin-right: 0px;
       }
-      & button[class^='neo-icon-']:not([class^='neo-btn']),
-      & button[class*='neo-icon-']:not([class*='neo-btn']) {
+      & button[class^="neo-icon-"]:not([class^="neo-btn"]),
+      & button[class*="neo-icon-"]:not([class*="neo-btn"]) {
         &:before {
           font-size: $widget-heading-icon-button-size;
         }

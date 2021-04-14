@@ -32,16 +32,16 @@
     }
   }
 
-  @each $name, $color in $neo-state-colors {
-    &__content--#{$name} {
-      border-color: $color;
+  // @each $name, $color in $neo-state-colors {
+  //   &__content--#{$name} {
+  //     border-color: $color;
 
-      #{$self}__header {
-        background-color: $color;
-        color: $global-background;
-      }
-    }
-  }
+  //     #{$self}__header {
+  //       background-color: $color;
+  //       color: $global-background;
+  //     }
+  //   }
+  // }
 }
 
 .neo-popover {

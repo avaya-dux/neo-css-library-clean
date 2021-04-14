@@ -28,8 +28,8 @@
     margin-right: $token-button-icon-margin;
     margin-left: 0;
   }
-  &[dir='rtl']:not(:empty)::before,
-  [dir='rtl'] &:not(:empty)::before {
+  &[dir="rtl"]:not(:empty)::before,
+  [dir="rtl"] &:not(:empty)::before {
     margin-left: $token-button-icon-margin;
     margin-right: 0;
   }
@@ -97,7 +97,7 @@
         $global-transition-timing;
       transition-delay: 0s, 0.15s;
       //
-      @include pulse('button', $name, map-get($value, color-rgb));
+      @include pulse("button", $name, map-get($value, color-rgb));
     }
     &--#{$name}:hover {
       //
@@ -190,7 +190,7 @@
       //
       border-color: map-get($value, color);
       color: map-get($value, color);
-      @include pulse('button', $name, map-get($value, color-rgb));
+      @include pulse("button", $name, map-get($value, color-rgb));
     }
     &--#{$name}:hover {
       transition-property: background-position, border-color, color;
@@ -280,7 +280,7 @@
       transition-delay: 0s, 0.15s;
       //
       color: map-get($value, color);
-      @include pulse('button', $name, map-get($value, color-rgb));
+      @include pulse("button", $name, map-get($value, color-rgb));
     }
     &--#{$name}:hover {
       transition-property: background-position, background-color, color;
@@ -386,7 +386,7 @@
         transition-delay: 0s, 0.15s;
         //
         // background-color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color-rgb));
+        @include pulse("button", $name, map-get($value, color-rgb));
       }
       &--#{$name}:hover {
         //
@@ -476,7 +476,7 @@
         //
         border-color: map-get($value, color);
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color-rgb));
+        @include pulse("button", $name, map-get($value, color-rgb));
       }
       &--#{$name}:hover {
         //
@@ -560,7 +560,7 @@
         transition-delay: 0s, 0.15s;
         //
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color-rgb));
+        @include pulse("button", $name, map-get($value, color-rgb));
       }
       &--#{$name}:hover {
         //
@@ -662,7 +662,7 @@
         transition-delay: 0s, 0.15s;
         //
         // background-color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color-rgb));
+        @include pulse("button", $name, map-get($value, color-rgb));
       }
       &--#{$name}:hover {
         //
@@ -751,7 +751,7 @@
         //
         border-color: map-get($value, color);
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color-rgb));
+        @include pulse("button", $name, map-get($value, color-rgb));
       }
       &--#{$name}:hover {
         //
@@ -834,7 +834,7 @@
         // transition-delay: 0s, 0.15s;
         //
         color: map-get($value, color);
-        @include pulse('button', $name, map-get($value, color-rgb));
+        @include pulse("button", $name, map-get($value, color-rgb));
       }
       &--#{$name}:hover {
         //

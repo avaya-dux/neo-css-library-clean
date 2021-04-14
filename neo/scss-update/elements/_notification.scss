@@ -51,7 +51,7 @@
     line-height: $notification-description-line-height;
     letter-spacing: $notification-description-letter-spacing;
     font-weight: $notification-description-font-weight;
-    white-space: pre-wrap;
+    // white-space: pre-wrap;
     word-break: break-word;
     &:not(:first-child) {
       margin-top: $notification-text-spacing;
@@ -67,6 +67,10 @@
     font-size: $notification-large-icon-size;
     line-height: 1;
     margin-right: $notification-icon-offset;
+
+    // experimental Tooltip mix-in
+
+    // @include TooltipMargin($notification-icon-offset);
 
     @include rtl-selector {
       margin: {
@@ -90,6 +94,9 @@
     right: $notification-padding-x;
     white-space: pre-wrap;
     // word-break: break-word;
+    & p {
+      margin: 0px;
+    }
     @include rtl-selector {
       left: $notification-padding-x;
       right: initial;
@@ -118,8 +125,8 @@
 
 @mixin notification-options {
   &__options {
-    position: absolute;
-    right: $notification-padding-x;
+    // position: absolute;
+    // right: $notification-padding-x;
     align-self: center;
     @include rtl-selector {
       left: $notification-padding-x;
