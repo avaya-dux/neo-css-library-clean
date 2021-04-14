@@ -555,7 +555,14 @@ content: "\\{{ this }}";
 {{/ifEquals}}
 
 {{#ifEquals @key 'social'}}
-.{{ ../classPrefix }}social-active:before {
+.{{ ../classPrefix }}fb:before,
+.{{ ../classPrefix }}fbm:before,
+.{{ ../classPrefix }}instagram:before,
+.{{ ../classPrefix }}twitter:before,
+.{{ ../classPrefix }}wechat:before,
+.{{ ../classPrefix }}whatsapp:before,
+.{{ ../classPrefix }}youtube:before,
+.{{ ../classPrefix }}social-active:before, .{{ ../classPrefix }}social-active:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
@@ -676,6 +683,20 @@ content: "\\{{ this }}";
 
 {{#ifEquals @key "chevron-down"}}
 .{{ ../classPrefix }}collapse:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "headphones-wireless"}}
+.{{ ../classPrefix }}headphones-bluetooth:before {
+content: "\\{{ this }}";
+}
+{{/ifEquals}}
+
+{{#ifEquals @key "speaker-wireless"}}
+.{{ ../classPrefix }}bluetooth:before,
+.{{ ../classPrefix }}speaker-bluetooth:before,
+.{{ ../classPrefix }}speaker-bluetooth-rtl:before {
 content: "\\{{ this }}";
 }
 {{/ifEquals}}
@@ -949,8 +970,13 @@ content: "\\{{ this }}";
 {{/ifEquals}}
 
 {{#ifEquals @key "not-available"}}
+.{{ ../classPrefix }}apple:before,
+.{{ ../classPrefix }}asana:before,
+.{{ ../classPrefix }}google-drive:before,
+.{{ ../classPrefix }}office-365:before,
+.{{ ../classPrefix }}salesforce:before,
 .{{ ../classPrefix }}fa_direction_left:before,
-.{{ ../classPrefix }}fa_directrion_right:before,
+.{{ ../classPrefix }}fa_direction_right:before,
 .{{ ../classPrefix }}fa_key:before, .{{ ../classPrefix }}fa_outbound:before
 {
 content: "\\{{ this }}";

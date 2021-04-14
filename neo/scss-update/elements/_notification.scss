@@ -51,7 +51,7 @@
     line-height: $notification-description-line-height;
     letter-spacing: $notification-description-letter-spacing;
     font-weight: $notification-description-font-weight;
-    white-space: pre-wrap;
+    // white-space: pre-wrap;
     word-break: break-word;
     &:not(:first-child) {
       margin-top: $notification-text-spacing;
