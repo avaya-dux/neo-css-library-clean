@@ -1,0 +1,683 @@
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --icon-color: #{$token-color-base-1000};
+    --global-font-color: #{$token-color-base-1000};
+    --global-background: #{$token-color-base-0};
+    --global-text-inverse-color: #{$token-color-base-0};
+    --global-disabled-color: #{$token-color-base-500};
+    --global-disabled-background: #{$token-color-base-100};
+    --global-outline-color: #{$token-color-blue-500};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --icon-color: #{$token-color-base-100};
+    --global-font-color: #{$token-color-base-100};
+    --global-background: #{$token-color-base-900};
+    --global-text-inverse-color: #{$token-color-base-900};
+    --global-disabled-color: #{$token-color-base-400};
+    --global-disabled-background: #{$token-color-base-800};
+    --global-outline-color: #{$token-color-blue-400};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --link-color: #{$token-color-blue-400};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --link-color: #{$token-color-blue-500};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --heading-color: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --heading-color: #{$token-color-base-1000};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --input-asterix-color: #{$token-color-red-400};
+    --input-background-color: #{$token-color-base-900};
+    --input-border-color: #{$token-color-base-500};
+    --input-focus-border-color: #{$token-color-blue-400};
+    --input-font-color: #{$token-color-base-100};
+    --input-placeholder-font-color: #{$token-color-base-400};
+    --input-hint-color: #{$token-color-base-400};
+    --input-disabled-bg: #{$token-color-base-800};
+    --input-disabled-color: #{$token-color-base-500};
+    --input-border-error-color: #{$token-color-red-400};
+    --input-label-color: #{$token-color-base-100};
+    --input-border-disabled-color: #{$token-color-base-500};
+    --input-border-hover-color: #{$token-color-base-100};
+    --input-addon-font-color: #{$token-color-base-200};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --input-asterix-color: #{$token-input-error-helper-color};
+    --input-background-color: #{$token-color-base-0};
+    --input-border-color: #{$token-color-base-400};
+    --input-focus-border-color: #{$token-input-border-active-color};
+    --input-font-color: #{$token-input-filled-color};
+    --input-placeholder-font-color: #{$token-input-placeholder-color};
+    --input-hint-color: #{$token-input-helper-color};
+    --input-disabled-bg: #{$token-input-disabled-bg-color};
+    --input-disabled-color: #{$token-input-disabled-text-color};
+    --input-border-error-color: #{$token-input-border-error-color};
+    --input-label-color: #{$token-input-label-color};
+    --input-border-disabled-color: #{$token-color-base-400};
+    --input-border-hover-color: #{$token-input-border-hover-color};
+    --input-addon-font-color: #{$token-color-base-600};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --radio-background: #{$token-color-base-900};
+    --radio-background-active-color: #{$token-color-blue-400};
+    --radio-border: #{$token-color-blue-400};
+    --radio-disabled-border: #{$token-color-blue-600};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --radio-background: #{$token-radio-background-color};
+    --radio-background-active-color: #{$token-radio-active-color};
+    --radio-border: #{$token-color-blue-500};
+    --radio-disabled-border: #{$token-radio-disabled-border};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --table-header-cell-border-color: #{$token-color-base-600};
+    --table-header-cell-hover-color: #{$token-color-blue-800};
+    --table-background-color: #{$token-color-base-900};
+    --table-row-disabled-color: #{$token-color-base-800};
+    --table-row-border-color: #{$token-color-base-800};
+    --table-row-hover-color: #{$token-color-blue-800};
+    --table-row-font-active-color: #{$token-color-blue-200};
+    --table-nested-row-background-color: #{$token-color-base-800};
+    --table-nested-row-border-color: #{$token-color-blue-600};
+    --table-sheet-border-color: #{$token-color-base-600};
+    --table-filter-row-background-color: #{$token-color-base-900};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --table-header-cell-border-color: #{$token-table-header-cell-border-color};
+    --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
+    --table-background-color: #{$token-table-background-color};
+    --table-row-disabled-color: #{$token-table-row-disabled-color};
+    --table-row-border-color: #{$token-table-row-border-color};
+    --table-row-hover-color: #{$token-table-row-hover-color};
+    --table-row-font-active-color: #{$token-table-row-font-active-color};
+    --table-nested-row-background-color: #{$token-table-nested-row-background-color};
+    --table-nested-row-border-color: #{$token-table-nested-row-border-color};
+    --table-sheet-border-color: #{$token-table-sheet-border-color};
+    --table-filter-row-background-color: #{$token-table-filters-row-background-color};
+  }
+}
+$button-color-primary-rgb-light: 20, 115, 230;
+$button-color-primary-rgb-dark: 76, 148, 237;
+$button-color-success-rgb-light: 8, 138, 8;
+$button-color-success-rgb-dark: 81, 166, 81;
+$button-color-warning-rgb-light: 204, 77, 27;
+$button-color-warning-rgb-dark: 247, 97, 37;
+$button-color-alert-rgb-light: 217, 61, 50;
+$button-color-alert-rgb-dark: 229, 105, 96;
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --button-shadow-color: #{$token-shadows-elevationdark-200-color};
+    --button-text-color: #{$token-color-base-900};
+    --button-color-primary: #{$token-color-blue-400};
+    --button-color-primary-rgb: #{$button-color-primary-rgb-dark};
+    --button-hover-color-default-info: #{$token-color-blue-200};
+    --button-pressed-color-default-info: #{$token-color-blue-100};
+    --button-disabled-color-default-info: #{$token-color-blue-600};
+    --button-color-success: #{$token-color-green-400};
+    --button-color-success-rgb: #{$button-color-success-rgb-dark};
+    --button-hover-color-success: #{$token-color-green-200};
+    --button-pressed-color-success: #{$token-color-green-100};
+    --button-disabled-color-success: #{$token-color-green-600};
+    --button-color-warning: #{$token-color-orange-400};
+    --button-color-warning-rgb: #{$button-color-warning-rgb-dark};
+    --button-hover-color-warning: #{$token-color-orange-200};
+    --button-pressed-color-warning: #{$token-color-orange-100};
+    --button-disabled-color-warning: #{$token-color-orange-600};
+    --button-color-alert: #{$token-color-red-400};
+    --button-color-alert-rgb: #{$button-color-alert-rgb-dark};
+    --button-hover-color-alert: #{$token-color-red-200};
+    --button-pressed-color-alert: #{$token-color-red-100};
+    --button-disabled-color-alert: #{$token-color-red-600};
+    --button-secondary-background-color: #{$token-color-base-900};
+    --button-tertiary-hover-background-color: #{$token-color-base-800};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --button-shadow-color: #{$token-shadows-elevation-200-color};
+    --button-text-color: #{$token-button-font-color};
+    --button-color-primary: #{$token-button-default-info-color};
+    --button-color-primary-rgb: #{$button-color-primary-rgb-light};
+    --button-hover-color-default-info: #{$token-color-blue-600};
+    --button-pressed-color-default-info: #{$token-button-default-info-pressed-color};
+    --button-disabled-color-default-info: #{$token-button-default-info-disabled-color};
+    --button-color-success: #{$token-button-success-color};
+    --button-color-success-rgb: #{$button-color-success-rgb-light};
+    --button-hover-color-success: #{$token-color-green-600};
+    --button-pressed-color-success: #{$token-button-success-pressed-color};
+    --button-disabled-color-success: #{$token-button-success-disabled-color};
+    --button-color-warning: #{$token-button-warning-color};
+    --button-color-warning-rgb: #{$button-color-warning-rgb-light};
+    --button-hover-color-warning: #{$token-color-orange-600};
+    --button-pressed-color-warning: #{$token-button-warning-pressed-color};
+    --button-disabled-color-warning: #{$token-button-warning-disabled-color};
+    --button-color-alert: #{$token-button-alert-color};
+    --button-color-alert-rgb: #{$button-color-alert-rgb-light};
+    --button-hover-color-alert: #{$token-color-red-600};
+    --button-pressed-color-alert: #{$token-button-alert-pressed-color};
+    --button-disabled-color-alert: #{$token-button-alert-disabled-color};
+    --button-secondary-background-color: #{$token-button-secondary-background-color};
+    --button-tertiary-hover-background-color: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --arrow-outer-color: #{$token-color-base-0};
+    --arrow-color: #{$token-color-base-900};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --arrow-outer-color: #{$token-color-base-900};
+    --arrow-color: #{$token-color-base-0};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --checkbox-background-color: #{$token-color-base-900};
+    --checkbox-checked-background-color: #{$token-color-blue-400};
+    --checkbox-disabled-background-color: #{$token-color-blue-600};
+    --checkbox-icon-color: #{$token-color-base-900};
+    --checkbox-font-color: #{$token-color-base-100};
+    --checkbox-disabled-font-color: #{$token-color-base-500};
+    --checkbox-border-color: #{$token-color-blue-400};
+    --checkbox-disabled-border-color: #{$token-color-blue-600};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --checkbox-background-color: #{$token-checkbox-unchecked-bg-color};
+    --checkbox-checked-background-color: #{$token-checkbox-checked-bg-color};
+    --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
+    --checkbox-icon-color: #{$token-checkbox-icon-color};
+    --checkbox-font-color: #{$token-checkbox-label-font-color};
+    --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+    --checkbox-border-color: #{$token-checkbox-border-color};
+    --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --channel-bg-color: #{$token-color-base-900};
+    --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
+    --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
+    --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+    --channel-offline-color: #{$token-color-base-500};
+    --channel-icon-generic-color: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --channel-bg-color: #{$token-channel-icon-bg-color};
+    --channel-available-color: #{$token-channel-icon-available-color};
+    --channel-busy-away-color: #{$token-channel-icon-busy-away-color};
+    --channel-dnd-color: #{$token-channel-icon-dnd-color};
+    --channel-offline-color: #{$token-channel-icon-offline-color};
+    --channel-icon-generic-color: #{$token-channel-icon-generic-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
+    --notification-success-color: #{$token-color-green-800};
+    --notification-success-icon-color: #{$token-color-green-200};
+    --notification-warning-color: #{$token-color-orange-800};
+    --notification-warning-icon-color: #{$token-color-orange-200};
+    --notification-alert-color: #{$token-color-red-800};
+    --notification-alert-icon-color: #{$token-color-red-200};
+    --notification-info-color: #{$token-color-blue-800};
+    --notification-info-icon-color: #{$token-color-blue-200};
+    --notification-event-color: #{$token-color-base-800};
+    --notification-event-icon-color: #{$token-color-base-200};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --notification-elevation-color: #{$token-notification-elevation-color};
+    --notification-success-color: #{$token-notification-success-color};
+    --notification-success-icon-color: #{$token-notification-success-icon-color};
+    --notification-warning-color: #{$token-notification-warning-color};
+    --notification-warning-icon-color: #{$token-notification-warning-icon-color};
+    --notification-alert-color: #{$token-notification-alert-color};
+    --notification-alert-icon-color: #{$token-notification-alert-icon-color};
+    --notification-info-color: #{$token-notification-info-color};
+    --notification-info-icon-color: #{$token-notification-info-icon-color};
+    --notification-event-color: #{$token-notification-event-color};
+    --notification-event-icon-color: #{$token-notification-event-icon-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --clear-close-color: #{$token-color-base-400};
+    --clear-close-hover-color: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --clear-close-color: #{$token-color-base-500};
+    --clear-close-hover-color: #{$token-color-base-1000};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --navbar-border-bottom-color: #{$token-color-base-600};
+    --navbar-status-pill-font-color: #{$token-color-base-900};
+    --navbar-ready-color: #{$token-color-green-800};
+    --navbar-not-ready-color: #{$token-color-orange-800};
+    --navbar-connected-color: #{$token-color-base-800};
+    --navbar-pill-ready-color: #{$token-color-green-200};
+    --navbar-pill-not-ready-color: #{$token-color-orange-200};
+    --navbar-pill-connected-color: #{$token-color-base-200};
+    --navbar-bg-color-hover: #{$token-color-base-800};
+    --navbar-default-icon-color: #{$token-color-base-100};
+    --navbar-icon-hover-color: #{$token-color-blue-200};
+    --navbar-icon-selected-color: #{$token-color-blue-400};
+    --navbar-icon-disabled-color: #{$token-color-base-500};
+    --navbar-active-disabled-color: #{$token-color-blue-600};
+    --navbar-status-avatar-border-color: #{$token-color-base-900};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --navbar-border-bottom-color: #{$token-navbar-bottom-border-color};
+    --navbar-status-pill-font-color: #{$token-navbar-agent-card-name-font-color};
+    --navbar-ready-color: #{$token-navbar-ready-card-background-color};
+    --navbar-not-ready-color: #{$token-navbar-not-ready-card-background-color};
+    --navbar-connected-color: #{$token-navbar-connected-card-background-color};
+    --navbar-pill-ready-color: #{$token-navbar-ready-card-status-color};
+    --navbar-pill-not-ready-color: #{$token-navbar-not-ready-card-status-color};
+    --navbar-pill-connected-color: #{$token-navbar-connected-card-status-color};
+    --navbar-bg-color-hover: #{$token-navbar-action-hover-background-color};
+    --navbar-default-icon-color: #{$token-navbar-action-default-color};
+    --navbar-icon-hover-color: #{$token-navbar-action-hover-color};
+    --navbar-icon-selected-color: #{$token-navbar-action-active-color};
+    --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
+    --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
+    --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --list-hover: #{$token-list-hover};
+    --list-white: #{$token-color-base-100};
+    --list-disabled-bg-color: #{$token-accordion-disabled-background-color};
+    --list-disabled-hover-color: #{$token-color-base-500};
+    --list-section-background: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --list-hover: #{$token-color-blue-800};
+    --list-white: #{$token-color-base-800};
+    --list-disabled-bg-color: #{$token-color-base-800};
+    --list-disabled-hover-color: #{$token-color-base-400};
+    --list-section-background: #{$token-color-base-800};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --list-item-divider: #{$token-color-base-600};
+    --list-item-subtext: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --list-item-divider: #{$token-color-base-200};
+    --list-item-subtext: #{$token-color-base-800};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --accordion-border-color: #{$token-color-base-500};
+    --accordion-body-color: #{$token-color-base-900};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --accordion-border-color: #{$token-accordion-border-color};
+    --accordion-body-color: #{$token-accordion-background-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --sheet-background: #{$token-color-base-900};
+    --sheet-shadow: #{$token-shadows-elevationdark-300-color};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --sheet-background: #{$token-sheet-sheet-background-color};
+    --sheet-shadow: #{$token-shadows-elevation-300-color};
+  }
+  .neo-light {
+    --sheet-background: #{$token-sheet-sheet-background-color};
+    --sheet-shadow: #{$token-shadows-elevation-300-color};
+  }
+  .neo-dark {
+    --sheet-background: #{$token-color-base-900};
+    --sheet-shadow: #{$token-shadows-elevationdark-300-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --pagination-color: #{$token-color-blue-400};
+    --pagination-border-color-hover: #{$token-color-blue-400};
+    --pagination-active-background-color: #{$token-color-blue-400};
+    --pagination-item-color-current: #{$token-color-base-800};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --pagination-color: #{$token-color-blue-500};
+    --pagination-border-color-hover: #{$token-color-blue-500};
+    --pagination-active-background-color: #{$token-color-blue-500};
+    --pagination-item-color-current: #{$token-color-base-100};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --tooltip-background-color: #{$token-color-base-0};
+    --tooltip-color: #{$token-color-base-800};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --tooltip-background-color: #{$token-tooltip-background-color};
+    --tooltip-color: #{$token-tooltip-font-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --avatar-background-color: #{$token-color-blue-100};
+    --avatar-font-color: #{$token-color-base-900};
+    --avatar-primary-color: #{$token-color-blue-400};
+    --avatar-success-color: #{$token-color-green-400};
+    --avatar-warning-color: #{$token-color-orange-400};
+    --avatar-alert-color: #{$token-color-red-400};
+    --avatar-status-available-color: #{$token-color-data-viz-categorial-dark-green};
+    --avatar-status-away-color: #{$token-color-data-viz-categorial-dark-orange};
+    --avatar-status-busy-color: #{$token-color-data-viz-categorial-dark-orange};
+    --avatar-status-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+    --avatar-status-offline-color: #{$token-color-base-500};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --avatar-background-color: #{$token-avatar-background-color};
+    --avatar-font-color: #{$token-avatar-font-color};
+    --avatar-primary-color: #{$token-avatar-border-primary-info};
+    --avatar-success-color: #{$token-avatar-border-success};
+    --avatar-warning-color: #{$token-avatar-border-warning};
+    --avatar-alert-color: #{$token-avatar-border-warning};
+    --avatar-status-available-color: #{$token-avatar-status-available-color};
+    --avatar-status-away-color: #{$token-avatar-status-away-color};
+    --avatar-status-busy-color: #{$token-avatar-status-busy-color};
+    --avatar-status-dnd-color: #{$token-avatar-status-do-not-disturb-color};
+    --avatar-status-offline-color: #{$token-avatar-status-offline-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --switch-off-color: #{$token-color-base-500};
+    --switch-on-color: #{$token-color-blue-400};
+    --switch-disabled-on-color: #{$token-color-blue-600};
+    --switch-disabled-off-color: #{$token-color-base-600};
+    --switch-ellipse-color: #{$token-color-base-900};
+    --switch-elevation-color: #{$token-shadows-elevationdark-100-color};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --switch-off-color: #{$token-switch-off-background-color};
+    --switch-on-color: #{$token-switch-on-background-color};
+    --switch-disabled-on-color: #{$token-switch-disabled-on-background-color};
+    --switch-disabled-off-color: #{$token-switch-disabled-off-background-color};
+    --switch-ellipse-color: #{$token-switch-ellipse-color};
+    --switch-elevation-color: #{$token-shadows-elevation-100-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --chip-font-color: #{$token-color-base-100};
+    --chip-disabled-font-color: #{$token-color-base-500};
+    --chip-default-color: #{$token-color-base-800};
+    --chip-default-border-color: #{$token-color-base-500};
+    --chip-default-hover-bg-color: #{$token-color-base-600};
+    --chip-default-icon-color: #{$token-color-base-200};
+    --chip-default-disabled-color: #{$token-color-base-800};
+    --chip-default-disabled-icon-color: #{$token-color-base-500};
+    --chip-success-color: #{$token-color-green-800};
+    --chip-success-border-color: #{$token-color-green-500};
+    --chip-success-hover-bg-color: #{$token-color-green-600};
+    --chip-success-icon-color: #{$token-color-green-200};
+    --chip-success-disabled-color: #{$token-color-green-800};
+    --chip-success-disabled-icon-color: #{$token-color-green-500};
+    --chip-info-color: #{$token-color-blue-800};
+    --chip-info-border-color: #{$token-color-blue-500};
+    --chip-info-hover-bg-color: #{$token-color-blue-600};
+    --chip-info-icon-color: #{$token-color-blue-200};
+    --chip-info-disabled-color: #{$token-color-blue-800};
+    --chip-info-disabled-icon-color: #{$token-color-blue-500};
+    --chip-warning-color: #{$token-color-orange-800};
+    --chip-warning-border-color: #{$token-color-orange-500};
+    --chip-warning-hover-bg-color: #{$token-color-orange-600};
+    --chip-warning-icon-color: #{$token-color-orange-200};
+    --chip-warning-disabled-color: #{$token-color-orange-800};
+    --chip-warning-disabled-icon-color: #{$token-color-orange-500};
+    --chip-alert-color: #{$token-color-red-800};
+    --chip-alert-border-color: #{$token-color-red-500};
+    --chip-alert-hover-bg-color: #{$token-color-red-600};
+    --chip-alert-icon-color: #{$token-color-red-200};
+    --chip-alert-disabled-color: #{$token-color-red-800};
+    --chip-alert-disabled-icon-color: #{$token-color-red-500};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --chip-font-color: #{$token-chips-font-color};
+    --chip-disabled-font-color: #{$token-chips-disabled-font-color};
+    --chip-default-color: #{$token-chips-default-bg-color};
+    --chip-default-border-color: #{$token-chips-default-border-color};
+    --chip-default-hover-bg-color: #{$token-chips-default-hover-bg-color};
+    --chip-default-icon-color: #{$token-chips-default-icon-color};
+    --chip-default-disabled-color: #{$token-chips-default-disabled-bg-color};
+    --chip-default-disabled-icon-color: #{$token-chips-default-disabled-icon-color};
+    --chip-success-color: #{$token-chips-success-bg-color};
+    --chip-success-border-color: #{$token-chips-success-border-color};
+    --chip-success-hover-bg-color: #{$token-chips-success-hover-bg-color};
+    --chip-success-icon-color: #{$token-chips-success-icon-color};
+    --chip-success-disabled-color: #{$token-chips-success-disabled-bg-color};
+    --chip-success-disabled-icon-color: #{$token-chips-success-disabled-icon-color};
+    --chip-info-color: #{$token-chips-info-bg-color};
+    --chip-info-border-color: #{$token-chips-info-border-color};
+    --chip-info-hover-bg-color: #{$token-chips-info-hover-bg-color};
+    --chip-info-icon-color: #{$token-chips-info-icon-color};
+    --chip-info-disabled-color: #{$token-chips-info-disabled-bg-color};
+    --chip-info-disabled-icon-color: #{$token-chips-info-disabled-icon-color};
+    --chip-warning-color: #{$token-chips-warning-bg-color};
+    --chip-warning-border-color: #{$token-chips-warning-border-color};
+    --chip-warning-hover-bg-color: #{$token-chips-warning-hover-bg-color};
+    --chip-warning-icon-color: #{$token-chips-warning-icon-color};
+    --chip-warning-disabled-color: #{$token-chips-warning-disabled-bg-color};
+    --chip-warning-disabled-icon-color: #{$token-chips-warning-disabled-icon-color};
+    --chip-alert-color: #{$token-chips-alert-bg-color};
+    --chip-alert-border-color: #{$token-chips-alert-border-color};
+    --chip-alert-hover-bg-color: #{$token-chips-alert-hover-bg-color};
+    --chip-alert-icon-color: #{$token-chips-alert-icon-color};
+    --chip-alert-disabled-color: #{$token-chips-alert-disabled-bg-color};
+    --chip-alert-disabled-icon-color: #{$token-chips-alert-disabled-icon-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --tab-default-color: #{$token-color-base-100};
+    --tab-background-color: #{$token-color-base-900};
+    --tab-background-hover-color: #{$token-color-base-800};
+    --tab-disabled-color: #{$token-color-base-500};
+    --tab-item-hover-color: #{$token-color-blue-200};
+    --tab-action-color: #{$token-color-blue-400};
+    --tab-action-disabled-color: #{$token-color-blue-600};
+    --tab-carousel-button-color: #{$token-color-blue-400};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --tab-default-color: #{$token-color-base-800};
+    --tab-background-color: #{$token-tabs-background-color};
+    --tab-background-hover-color: #{$token-color-base-100};
+    --tab-disabled-color: #{$token-tabs-disabled-color};
+    --tab-item-hover-color: #{$token-color-blue-600};
+    --tab-action-color: #{$token-tabs-active-color};
+    --tab-action-disabled-color: #{$token-tabs-active-disabled-color};
+    --tab-carousel-button-color: #{$token-tabs-carousel-button-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --leftnav-default-color: #{$token-color-base-100};
+    --leftnav-main-default-disabled-color: #{$token-color-base-500};
+    --leftnav-background-color: #{$token-color-base-900};
+    --leftnav-hover-background-color: #{$token-color-base-800};
+    --leftnav-title-font-color: #{$token-color-base-400};
+    --leftnav-main-active-color: #{$token-color-blue-400};
+    --leftnav-main-active-disabled-color: #{$token-color-blue-600};
+    --leftnav-main-hover-color: #{$token-color-blue-200};
+    --leftnav-sub-default-color: #{$token-color-base-100};
+    --leftnav-sub-active-color: #{$token-color-blue-400};
+    --leftnav-sub-active-hover-color: #{$token-color-blue-200};
+    --leftnav-sub-active-disabled-color: #{$token-color-blue-600};
+    --leftnav-sub-default-disabled-color: #{$token-color-base-500};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --leftnav-default-color: #{$token-leftnav-default-color};
+    --leftnav-main-default-disabled-color: #{$token-leftnav-main-default-disabled-color};
+    --leftnav-background-color: #{$token-leftnav-background-color};
+    --leftnav-hover-background-color: #{$token-leftnav-leftnav-hover-bg-color};
+    --leftnav-title-font-color: #{$token-leftnav-title-font-color};
+    --leftnav-main-active-color: #{$token-leftnav-main-active-color};
+    --leftnav-main-active-disabled-color: #{$token-leftnav-main-active-disabled-color};
+    --leftnav-main-hover-color: #{$token-leftnav-main-hover-color};
+    --leftnav-sub-default-color: #{$token-leftnav-sub-default-color};
+    --leftnav-sub-active-color: #{$token-leftnav-sub-active-color};
+    --leftnav-sub-active-hover-color: #{$token-leftnav-sub-hover-color};
+    --leftnav-sub-active-disabled-color: #{$token-leftnav-sub-active-disabled-color};
+    --leftnav-sub-default-disabled-color: #{$token-leftnav-sub-default-disabled-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --dropdown-color: #{$token-color-base-800};
+    --dropdown-content-border: rgba(241, 241, 241, 0.15);
+    --dropdown-content-background-color: #{$token-color-blue-400};
+    --dropdown-content-arrow-color: #{$token-color-base-200};
+    --dropdown-item-color: #{$token-color-base-800};
+    --dropdown-item-hover-color: #{$token-color-blue-200};
+    --dropdown-item-hover-background-color: #{$token-color-blue-200};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --dropdown-color: #{$token-dropdown-default-font-color};
+    --dropdown-content-border: #{$token-dropdown-border-color};
+    --dropdown-content-background-color: #{$token-color-base-0};
+    --dropdown-content-arrow-color: #{$token-dropdown-default-font-color};
+    --dropdown-item-color: #{$token-dropdown-default-font-color};
+    --dropdown-item-hover-color: #{$token-dropdown-hover-color};
+    --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --widget-background-color: #{$token-color-base-900};
+    --widget-heading-font-color: #{$token-color-base-100};
+    --widget-heading-icon-color: #{$token-color-base-100};
+    --widget-shimmer-color: #{$token-color-base-800};
+    --widget-border-color: rgba(255, 255, 255, 0.15);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --widget-background-color: #{$token-color-base-0};
+    --widget-heading-font-color: #{$token-widgets-header-font-color};
+    --widget-heading-icon-color: #{$token-widgets-header-icon-color};
+    --widget-shimmer-color: #{$token-color-base-100};
+    --widget-border-color: #{$token-widgets-border-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --empty-state-color: #{$token-color-base-400};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --empty-state-color: #{$token-color-base-500};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --spinner-color: #{$token-color-base-400};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --spinner-color: #{$token-color-base-500};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --modal-background-color: #{$token-color-base-900};
+    --modal-color: #{$token-color-base-100};
+    --modal-border-color: rgba(241, 241, 241, 0.15);
+    --modal-shadow-color: rgba(241, 241, 241, 0.25);
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --modal-background-color: #{$token-modal-background-color};
+    --modal-color: #{$token-modal-header-font-color};
+    --modal-border-color: rgba(0, 0, 0, 0.15);
+    --modal-shadow-color: rgba(0, 0, 0, 0.25);
+    --modal-scrim-color: rgba(0, 0, 0, 0.25);
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --badge-background-color: #{$token-color-red-400};
+    --badge-color: #{$token-color-base-800};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --badge-color: #{$token-badge-color};
+    --badge-background-color: #{$token-badge-background-color};
+  }
+}

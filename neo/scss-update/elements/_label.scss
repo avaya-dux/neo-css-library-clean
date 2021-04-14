@@ -1,64 +1,64 @@
-// updated label styles
+// // updated label styles
 
-%label {
-  background: $label-background;
-  border: 0;
-  border-radius: $label-radius;
-  color: $label-color;
-  display: inline-block;
-  font-size: $label-font-size;
-  line-height: $label-line-height;
-  padding: $label-padding-y $label-padding-x;
-  white-space: nowrap;
-  margin: {
-    bottom: $label-spacing;
-    right: $label-spacing;
-  }
+// %label {
+//   background: $label-background;
+//   border: 0;
+//   border-radius: $label-radius;
+//   color: $label-color;
+//   display: inline-block;
+//   font-size: $label-font-size;
+//   line-height: $label-line-height;
+//   padding: $label-padding-y $label-padding-x;
+//   white-space: nowrap;
+//   margin: {
+//     bottom: $label-spacing;
+//     right: $label-spacing;
+//   }
 
-  @include neo-icons;
+//   @include neo-icons;
 
-  &[dir='rtl']:not(:empty)::before {
-    margin-left: 10px;
-    margin-right: 0 !important;
-  }
-}
+//   &[dir="rtl"]:not(:empty)::before {
+//     margin-left: 10px;
+//     margin-right: 0 !important;
+//   }
+// }
 
-@mixin label-colors {
-  @each $name, $color in $neo-state-colors-light {
-    @if $name == 'default' {
-      &--#{$name} {
-        background-color: transparent !important;
-        color: $global-text-color !important;
-      }
-    } @else {
-      &--#{$name} {
-        background-color: $color !important;
-        color: $global-text-color !important;
-      }
-    }
-  }
-  @each $name, $color in $neo-border-colors {
-    &--#{$name} {
-      border: 1px solid $color;
-      border-radius: 4px;
-    }
-  }
-  @each $name, $color in $neo-icon-colors {
-    &--#{$name}::before {
-      color: $color;
-    }
-  }
-}
+// // @mixin label-colors {
+// //   @each $name, $color in $neo-state-colors-light {
+// //     @if $name == 'default' {
+// //       &--#{$name} {
+// //         background-color: transparent !important;
+// //         color: $global-text-color !important;
+// //       }
+// //     } @else {
+// //       &--#{$name} {
+// //         background-color: $color !important;
+// //         color: $global-text-color !important;
+// //       }
+// //     }
+// //   }
+// //   @each $name, $color in $neo-border-colors {
+// //     &--#{$name} {
+// //       border: 1px solid $color;
+// //       border-radius: 4px;
+// //     }
+// //   }
+// //   @each $name, $color in $neo-icon-colors {
+// //     &--#{$name}::before {
+// //       color: $color;
+// //     }
+// //   }
+// // }
 
-.neo-label {
-  @extend %label;
-  @include label-colors;
-}
+// .neo-label {
+//   @extend %label;
+//   // @include label-colors;
+// }
 
-// new input label styles
+// // new input label styles
 
-.neo-label-input {
-  margin-bottom: $label-margin-bottom;
-  padding: 0;
-  border: none !important;
-}
+// .neo-label-input {
+//   margin-bottom: $label-margin-bottom;
+//   padding: 0;
+//   border: none !important;
+// }
