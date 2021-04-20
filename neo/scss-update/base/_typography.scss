@@ -1,6 +1,6 @@
 // importing Noto Sans
 
-@import url('https://use.typekit.net/jyd4rjy.css');
+@import url("https://use.typekit.net/jyd4rjy.css");
 // @import url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/noto_sans.css');
 
 // Headings
@@ -12,7 +12,7 @@ h5,
 h6 {
   color: $heading-color;
   font-weight: $heading-font-weight;
-  line-height: $heading-line-height;
+  // line-height: $heading-line-height;
   margin-top: 0;
 }
 

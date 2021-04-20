@@ -1,0 +1,33 @@
+{
+  "breadcrumb": {
+    "breadcrumb-font-size": {
+      "value": "{Web-typography.web/heading 4.fontSize.value}"
+    },
+    "breadcrumb-line-height": {
+      "value": "{Web-typography.web/heading 4.lineHeight.value}"
+    },
+    "breadcrumb-letter-spacing": {
+      "value": "{Web-typography.web/heading 4.letterSpacing.value}"
+    },
+    "breadcrumb-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "breadcrumb-slash-spacing": { "value": "8px" },
+    "default-color": { "value": "{color.base/1000.value}" },
+    "active-color": { "value": "{color.blue/500.value}" },
+    "breadcrumb-subtext-spacing": { "value": "8px" },
+    "breadcrumb-subtext-font-size": {
+      "value": "{Web-typography.web/body - regular.fontSize.value}"
+    },
+    "breadcrumb-subtext-line-height": {
+      "value": "{Web-typography.web/body - regular.lineHeight.value}"
+    },
+    "breadcrumb-subtext-letter-spacing": {
+      "value": "{Web-typography.web/body - regular.letterSpacing.value}"
+    },
+    "breadcrumb-subtext-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "breadcrumb-button-spacing": { "value": "8px" }
+  }
+}

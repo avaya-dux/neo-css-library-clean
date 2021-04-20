@@ -1,17 +1,17 @@
-const fs = require('fs').promises;
-const webfontsGenerator = require('webfonts-generator');
+const fs = require("fs").promises;
+const webfontsGenerator = require("webfonts-generator");
 
-const iconUtilityFunctions = require('./icon-utility-files/icons-utility-functions.js');
+const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functions.js");
 
 // const iconInfo = require('./icon-utility-files/iconInfo.js');
-const { includes } = require('lodash');
+const { includes } = require("lodash");
 
-const Handlebars = require('handlebars');
+const Handlebars = require("handlebars");
 
-const replace = require('./icon-utility-files/icon-replacement-string');
+const replace = require("./icon-utility-files/icon-replacement-string");
 
-Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
-  var amendedArg = arg1.replace(replace.stringsToReplace, '');
+Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
+  var amendedArg = arg1.replace(replace.stringsToReplace, "");
 
   return amendedArg === arg2 ? options.fn(this) : options.inverse(this);
 });
@@ -22,10 +22,10 @@ Handlebars.registerHelper('ifEquals', function (arg1, arg2, options) {
 
 async function convertIconFontToBase64() {
   const base64FileBuffer = await fs.readFile(
-    '../properties/neo-icon-font.woff'
+    "../properties/neo-icon-font.woff"
   );
 
-  const contents_in_base64 = await base64FileBuffer.toString('base64');
+  const contents_in_base64 = await base64FileBuffer.toString("base64");
 
   return contents_in_base64.toString();
 }
@@ -36,7 +36,7 @@ convertIconFontToBase64().then(async (result) => {
   // We get an array of the file names in our icons folder
 
   var IconsArray = await fs
-    .readdir('../properties/assets/icons/svgs')
+    .readdir("../properties/assets/icons/svgs")
     .then(async (files) => {
       // utility function to create file with copyable SVG code
 
@@ -76,15 +76,15 @@ convertIconFontToBase64().then(async (result) => {
   webfontsGenerator(
     {
       files: IconsArray,
-      dest: '../build/css',
-      fontName: 'updated-neo-icons',
+      dest: "../build/css",
+      fontName: "updated-neo-icons",
       types: [],
-      cssTemplate: '../templates/css.hbs',
+      cssTemplate: "../templates/css.hbs",
       templateOptions: {
         src: `url(data:application/font-woff;base64,${result}) format('woff')`,
         // temporary class prefix for the purposes of side-by-side demo
         // TO-DO: replace this with universal class name when using namespaces
-        classPrefix: 'neo-icon-',
+        classPrefix: "neo-icon-",
       },
       html: false,
       // htmlTemplate: '../templates/html.hbs',
@@ -93,10 +93,10 @@ convertIconFontToBase64().then(async (result) => {
     },
     function (error, result) {
       if (error) {
-        console.log('Fail!', error);
+        console.log("Fail!", error);
       } else {
         // console.log(result);
-        console.log('updated-neo-icons.css generated in build/ folder');
+        console.log("updated-neo-icons.css generated in build/ folder");
       }
     }
   );
