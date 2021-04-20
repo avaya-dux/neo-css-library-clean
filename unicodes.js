@@ -1,1193 +1,1193 @@
 const unicodes = {
-  agents: "f101",
+  agents: x0f101,
 
-  "agents-inverted": "f101",
-  "my-agents": "f101",
-  "customer-consult": "f101",
+  "agents-inverted": x0f101,
+  "my-agents": x0f101,
+  "customer-consult": x0f101,
 
-  business: "f102",
+  business: x0f102,
 
-  "contact-filled": "f103",
+  "contact-filled": x0f103,
 
-  contact: "f104",
+  contact: x0f104,
 
-  customer: "f104",
+  customer: x0f104,
 
-  crown: "f105",
+  crown: x0f105,
 
-  "sub-accounts": "f106",
+  "sub-accounts": x0f106,
 
-  supervisor: "f107",
+  supervisor: x0f107,
 
-  "call-supervisor": "f107",
-  "call-supervisor-inverted": "f107",
+  "call-supervisor": x0f107,
+  "call-supervisor-inverted": x0f107,
 
-  "user-add": "f108",
+  "user-add": x0f108,
 
-  "add-member": "f108",
+  "add-member": x0f108,
 
-  "user-conference": "f109",
+  "user-conference": x0f109,
 
-  conference: "f109",
+  conference: x0f109,
 
-  "user-details-rtl": "f10a",
+  "user-details-rtl": x0f10a,
 
-  "customer-details-rtl": "f10a",
+  "customer-details-rtl": x0f10a,
 
-  "customer-details-rtl": "f10a",
+  "customer-details-rtl": x0f10a,
 
-  "user-details": "f10b",
+  "user-details": x0f10b,
 
-  "customer-details": "f10b",
+  "customer-details": x0f10b,
 
-  "user-group": "f10c",
+  "user-group": x0f10c,
 
-  "user-waiting": "f10d",
+  "user-waiting": x0f10d,
 
-  waiting: "f10d",
+  waiting: x0f10d,
 
-  analytics: "f10e",
+  analytics: x0f10e,
 
-  "audit-rtl": "f10f",
+  "audit-rtl": x0f10f,
 
-  audit: "f110",
+  audit: x0f110,
 
-  "backward-fast": "f111",
+  "backward-fast": x0f111,
 
-  "backward-skip": "f112",
+  "backward-skip": x0f112,
 
-  calculator: "f113",
+  calculator: x0f113,
 
-  calendar: "f114",
+  calendar: x0f114,
 
-  "camera-flip": "f115",
+  "camera-flip": x0f115,
 
-  flip: "f115",
+  flip: x0f115,
 
-  camera: "f116",
+  camera: x0f116,
 
-  capture: "f116",
+  capture: x0f116,
 
-  "change-password": "f117",
+  "change-password": x0f117,
 
-  "clone-preview": "f118",
+  "clone-preview": x0f118,
 
-  configure: "f119",
+  configure: x0f119,
 
-  "chart-configure": "f119",
+  "chart-configure": x0f119,
 
-  dashboard: "f11a",
+  dashboard: x0f11a,
 
-  drag: "f11b",
+  drag: x0f11b,
 
-  "exit-left": "f11c",
+  "exit-left": x0f11c,
 
-  exit: "f11c",
+  exit: x0f11c,
 
-  "export-logs": "f11d",
+  "export-logs": x0f11d,
 
-  "forward-fast": "f11e",
+  "forward-fast": x0f11e,
 
-  "forward-skip": "f11f",
+  "forward-skip": x0f11f,
 
-  "fullscreen-off": "f120",
+  "fullscreen-off": x0f120,
 
-  "fullscreen-on": "f121",
+  "fullscreen-on": x0f121,
 
-  fullscreen: "f121",
+  fullscreen: x0f121,
 
-  global: "f122",
+  global: x0f122,
 
-  "item-public": "f122",
+  "item-public": x0f122,
 
-  help: "f123",
+  help: x0f123,
 
-  "history-search": "f124",
+  "history-search": x0f124,
 
-  "customer-history-search": "f124",
+  "customer-history-search": x0f124,
 
-  history: "f125",
+  history: x0f125,
 
-  "customer-history": "f125",
+  "customer-history": x0f125,
 
-  home: "f126",
+  home: x0f126,
 
-  idea: "f127",
+  idea: x0f127,
 
-  key: "f128",
+  key: x0f128,
 
-  "lock-filled": "f129",
+  "lock-filled": x0f129,
 
-  lock: "f12a",
+  lock: x0f12a,
 
-  "item-private": "f12a",
+  "item-private": x0f12a,
 
-  play: "f12b",
+  play: x0f12b,
 
-  playback: "f12c",
+  playback: x0f12c,
 
-  preferences: "f12d",
+  preferences: x0f12d,
 
-  "adding-columns": "f12d",
+  "adding-columns": x0f12d,
 
-  print: "f12e",
+  print: x0f12e,
 
-  save: "f12f",
+  save: x0f12f,
 
-  "screen-max": "f130",
+  "screen-max": x0f130,
 
-  maximize: "f130",
+  maximize: x0f130,
 
-  "screen-min": "f131",
+  "screen-min": x0f131,
 
-  minimize: "f131",
+  minimize: x0f131,
 
-  "screen-swap": "f132",
+  "screen-swap": x0f132,
 
-  "swap-screen": "f132",
+  "swap-screen": x0f132,
 
-  "screenpop-off": "f133",
+  "screenpop-off": x0f133,
 
-  "close-screenpop": "f133",
+  "close-screenpop": x0f133,
 
-  "screenpop-on": "f134",
+  "screenpop-on": x0f134,
 
-  screenpop: "f134",
+  screenpop: x0f134,
 
-  search: "f135",
+  search: x0f135,
 
-  send: "f136",
+  send: x0f136,
 
-  "send-chat": "f136",
+  "send-chat": x0f136,
 
-  settings: "f137",
+  settings: x0f137,
 
-  share: "f138",
+  share: x0f138,
 
-  "sign-in": "f139",
+  "sign-in": x0f139,
 
-  skills: "f13a",
+  skills: x0f13a,
 
-  sort: "f13b",
+  sort: x0f13b,
 
-  support: "f13c",
+  support: x0f13c,
 
-  "time-extend": "f13d",
+  "time-extend": x0f13d,
 
-  "defer-interaction": "f13d",
+  "defer-interaction": x0f13d,
 
-  "window-attach": "f13e",
+  "window-attach": x0f13e,
 
-  "window-detach": "f13f",
+  "window-detach": x0f13f,
 
-  "work-end": "f140",
+  "work-end": x0f140,
 
-  "end-work": "f140",
+  "end-work": x0f140,
 
-  "work-start": "f141",
+  "work-start": x0f141,
 
-  "start-work": "f141",
+  "start-work": x0f141,
 
-  "zoom-in": "f142",
+  "zoom-in": x0f142,
 
-  "zoom-out": "f143",
+  "zoom-out": x0f143,
 
-  "error-filled": "f144",
+  "error-filled": x0f144,
 
-  error: "f145",
+  error: x0f145,
 
-  "error-outline": "f145",
+  "error-outline": x0f145,
 
-  info: "f146",
+  info: x0f146,
 
-  "info-outline": "f146",
+  "info-outline": x0f146,
 
-  "notifications-alerting": "f147",
+  "notifications-alerting": x0f147,
 
-  "notifications-off": "f148",
+  "notifications-off": x0f148,
 
-  "notifications-on-filled": "f149",
+  "notifications-on-filled": x0f149,
 
-  "notifications-on": "f14a",
+  "notifications-on": x0f14a,
 
-  notifications: "f14a",
+  notifications: x0f14a,
 
-  "warning-filled": "f14b",
+  "warning-filled": x0f14b,
 
-  warning: "f14c",
+  warning: x0f14c,
 
-  "warning-outline": "f14c",
+  "warning-outline": x0f14c,
 
-  "audio-lock": "f14d",
+  "audio-lock": x0f14d,
 
-  "audio-off": "f14e",
+  "audio-off": x0f14e,
 
-  "audio-on": "f14f",
+  "audio-on": x0f14f,
 
-  audio: "f14f",
+  audio: x0f14f,
 
-  "audio-warning": "f150",
+  "audio-warning": x0f150,
 
-  "av-block": "f151",
+  "av-block": x0f151,
 
-  "av-settings": "f152",
+  "av-settings": x0f152,
 
-  "barge-in": "f153",
+  "barge-in": x0f153,
 
-  bot: "f154",
+  bot: x0f154,
 
-  "bot-avatar": "f154",
+  "bot-avatar": x0f154,
 
-  broadcast: "f155",
+  broadcast: x0f155,
 
-  "call-add": "f156",
+  "call-add": x0f156,
 
-  "add-call": "f156",
+  "add-call": x0f156,
 
-  "call-alerting": "f157",
+  "call-alerting": x0f157,
 
-  "voice-alerting": "f157",
+  "voice-alerting": x0f157,
 
-  "call-connected": "f158",
+  "call-connected": x0f158,
 
-  "call-dial-in": "f159",
+  "call-dial-in": x0f159,
 
-  "phone-dial-in": "f159",
+  "phone-dial-in": x0f159,
 
-  "call-end": "f15a",
+  "call-end": x0f15a,
 
-  "end-call": "f15a",
+  "end-call": x0f15a,
 
-  "call-inbound": "f15b",
+  "call-inbound": x0f15b,
 
-  "voice-inbound": "f15b",
+  "voice-inbound": x0f15b,
 
-  "call-logs-rtl": "f15c",
+  "call-logs-rtl": x0f15c,
 
-  "phone-call-logs-rtl": "f15c",
+  "phone-call-logs-rtl": x0f15c,
 
-  "call-logs": "f15d",
+  "call-logs": x0f15d,
 
-  "phone-call-logs": "f15d",
+  "phone-call-logs": x0f15d,
 
-  "call-make": "f15e",
+  "call-make": x0f15e,
 
-  "make-call": "f15e",
+  "make-call": x0f15e,
 
-  "call-missed": "f15f",
+  "call-missed": x0f15f,
 
-  "voice-missed": "f15f",
+  "voice-missed": x0f15f,
 
-  "call-mute": "f160",
+  "call-mute": x0f160,
 
-  "phone-mute": "f160",
+  "phone-mute": x0f160,
 
-  "call-not-ready": "f161",
+  "call-not-ready": x0f161,
 
-  "voice-not-ready": "f161",
+  "voice-not-ready": x0f161,
 
-  "call-outbound": "f162",
+  "call-outbound": x0f162,
 
-  "voice-outbound": "f162",
+  "voice-outbound": x0f162,
 
-  "call-pending": "f163",
+  "call-pending": x0f163,
 
-  "voice-pending": "f163",
+  "voice-pending": x0f163,
 
-  "call-ready": "f164",
+  "call-ready": x0f164,
 
-  "call-split": "f165",
+  "call-split": x0f165,
 
-  "split-call": "f165",
+  "split-call": x0f165,
 
-  "call-transfer": "f166",
+  "call-transfer": x0f166,
 
-  call: "f167",
+  call: x0f167,
 
-  voice: "f167",
+  voice: x0f167,
 
-  callback: "f168",
+  callback: x0f168,
 
-  "camera-control": "f169",
+  "camera-control": x0f169,
 
-  "center-focus": "f16a",
+  "center-focus": x0f16a,
 
-  "chat-alerting": "f16b",
+  "chat-alerting": x0f16b,
 
-  "messaging-alerting": "f16b",
+  "messaging-alerting": x0f16b,
 
-  "chat-connected": "f16c",
+  "chat-connected": x0f16c,
 
-  "chat-filled": "f16d",
+  "chat-filled": x0f16d,
 
-  "chat-inbound": "f16e",
+  "chat-inbound": x0f16e,
 
-  "chat-missed": "f16f",
+  "chat-missed": x0f16f,
 
-  "messaging-missed": "f16f",
+  "messaging-missed": x0f16f,
 
-  "chat-not-ready": "f170",
+  "chat-not-ready": x0f170,
 
-  "messaging-not-ready": "f170",
+  "messaging-not-ready": x0f170,
 
-  "chat-outbound": "f171",
+  "chat-outbound": x0f171,
 
-  "messaging-outbound": "f171",
+  "messaging-outbound": x0f171,
 
-  "chat-pending": "f172",
+  "chat-pending": x0f172,
 
-  "messaging-pending": "f172",
+  "messaging-pending": x0f172,
 
-  "chat-ready": "f173",
+  "chat-ready": x0f173,
 
-  chat: "f174",
+  chat: x0f174,
 
-  "chat-channel": "f174",
-  messaging: "f174",
+  "chat-channel": x0f174,
+  messaging: x0f174,
 
-  "closed-caption": "f175",
+  "closed-caption": x0f175,
 
-  "co-browse": "f176",
+  "co-browse": x0f176,
 
-  computer: "f177",
+  computer: x0f177,
 
-  "conference-call": "f178",
+  "conference-call": x0f178,
 
-  "control-release": "f179",
+  "control-release": x0f179,
 
-  "release-control": "f179",
+  "release-control": x0f179,
 
-  "control-request": "f17a",
+  "control-request": x0f17a,
 
-  "request-control": "f17a",
+  "request-control": x0f17a,
 
-  "custom-alerting": "f17b",
+  "custom-alerting": x0f17b,
 
-  "custom01-alerting": "f17b",
-  "custom02-alerting": "f17b",
-  "custom03-alerting": "f17b",
-  "custom04-alerting": "f17b",
-  "custom05-alerting": "f17b",
-  "custom06-alerting": "f17b",
-  "custom08-alerting": "f17b",
-  "custom09-alerting": "f17b",
-  "custom10-alerting": "f17b",
+  "custom01-alerting": x0f17b,
+  "custom02-alerting": x0f17b,
+  "custom03-alerting": x0f17b,
+  "custom04-alerting": x0f17b,
+  "custom05-alerting": x0f17b,
+  "custom06-alerting": x0f17b,
+  "custom08-alerting": x0f17b,
+  "custom09-alerting": x0f17b,
+  "custom10-alerting": x0f17b,
 
-  "custom-connected": "f17c",
+  "custom-connected": x0f17c,
 
-  "custom-inbound": "f17d",
+  "custom-inbound": x0f17d,
 
-  "custom01-inbound": "f17d",
-  "custom02-inbound": "f17d",
-  "custom03-inbound": "f17d",
-  "custom04-inbound": "f17d",
-  "custom05-inbound": "f17d",
-  "custom06-inbound": "f17d",
-  "custom08-inbound": "f17d",
-  "custom09-inbound": "f17d",
-  "custom10-inbound": "f17d",
+  "custom01-inbound": x0f17d,
+  "custom02-inbound": x0f17d,
+  "custom03-inbound": x0f17d,
+  "custom04-inbound": x0f17d,
+  "custom05-inbound": x0f17d,
+  "custom06-inbound": x0f17d,
+  "custom08-inbound": x0f17d,
+  "custom09-inbound": x0f17d,
+  "custom10-inbound": x0f17d,
 
-  "custom-missed": "f17e",
+  "custom-missed": x0f17e,
 
-  "custom01-missed": "f17e",
-  "custom02-missed": "f17e",
-  "custom03-missed": "f17e",
-  "custom04-missed": "f17e",
-  "custom05-missed": "f17e",
-  "custom06-missed": "f17e",
-  "custom08-missed": "f17e",
-  "custom09-missed": "f17e",
-  "custom10-missed": "f17e",
+  "custom01-missed": x0f17e,
+  "custom02-missed": x0f17e,
+  "custom03-missed": x0f17e,
+  "custom04-missed": x0f17e,
+  "custom05-missed": x0f17e,
+  "custom06-missed": x0f17e,
+  "custom08-missed": x0f17e,
+  "custom09-missed": x0f17e,
+  "custom10-missed": x0f17e,
 
-  "custom-not-ready": "f17f",
+  "custom-not-ready": x0f17f,
 
-  "custom-outbound": "f180",
+  "custom-outbound": x0f180,
 
-  "custom01-outbound": "f180",
-  "custom02-outbound": "f180",
-  "custom03-outbound": "f180",
-  "custom04-outbound": "f180",
-  "custom05-outbound": "f180",
-  "custom06-outbound": "f180",
-  "custom08-outbound": "f180",
-  "custom09-outbound": "f180",
-  "custom10-outbound": "f180",
+  "custom01-outbound": x0f180,
+  "custom02-outbound": x0f180,
+  "custom03-outbound": x0f180,
+  "custom04-outbound": x0f180,
+  "custom05-outbound": x0f180,
+  "custom06-outbound": x0f180,
+  "custom08-outbound": x0f180,
+  "custom09-outbound": x0f180,
+  "custom10-outbound": x0f180,
 
-  "custom-pending": "f181",
+  "custom-pending": x0f181,
 
-  "custom-ready": "f182",
+  "custom-ready": x0f182,
 
-  custom: "f183",
+  custom: x0f183,
 
-  custom01: "f183",
-  custom02: "f183",
-  custom03: "f183",
-  custom04: "f183",
-  custom05: "f183",
-  custom06: "f183",
-  custom08: "f183",
-  custom09: "f183",
-  custom10: "f183",
+  custom01: x0f183,
+  custom02: x0f183,
+  custom03: x0f183,
+  custom04: x0f183,
+  custom05: x0f183,
+  custom06: x0f183,
+  custom08: x0f183,
+  custom09: x0f183,
+  custom10: x0f183,
 
-  "defer-in": "f184",
+  "defer-in": x0f184,
 
-  "defer-inbox": "f185",
+  "defer-inbox": x0f185,
 
-  "defer-out": "f186",
+  "defer-out": x0f186,
 
-  dialpad: "f187",
+  dialpad: x0f187,
 
-  "dialpad-inverted": "f187",
+  "dialpad-inverted": x0f187,
 
-  digital: "f188",
+  digital: x0f188,
 
-  dtmf: "f189",
+  dtmf: x0f189,
 
-  "email-alerting": "f18a",
+  "email-alerting": x0f18a,
 
-  "custom07-alerting": "f18a",
+  "custom07-alerting": x0f18a,
 
-  "email-connected": "f18b",
+  "email-connected": x0f18b,
 
-  "email-forwarded-rtl": "f18c",
+  "email-forwarded-rtl": x0f18c,
 
-  "email-forwarded": "f18d",
+  "email-forwarded": x0f18d,
 
-  "email-inbound": "f18e",
+  "email-inbound": x0f18e,
 
-  "custom07-inbound": "f18e",
+  "custom07-inbound": x0f18e,
 
-  "email-missed": "f18f",
+  "email-missed": x0f18f,
 
-  "custom07-missed": "f18f",
+  "custom07-missed": x0f18f,
 
-  "email-not-ready": "f190",
+  "email-not-ready": x0f190,
 
-  "email-open": "f191",
+  "email-open": x0f191,
 
-  "email-outbound": "f192",
+  "email-outbound": x0f192,
 
-  "custom07-outbound": "f192",
-  "email-outbound-inverted": "f192",
+  "custom07-outbound": x0f192,
+  "email-outbound-inverted": x0f192,
 
-  "email-pending": "f193",
+  "email-pending": x0f193,
 
-  "email-defer": "f193",
-  "defer-email": "f193",
+  "email-defer": x0f193,
+  "defer-email": x0f193,
 
-  "email-ready": "f194",
+  "email-ready": x0f194,
 
-  email: "f195",
+  email: x0f195,
 
-  "email-outline": "f195",
+  "email-outline": x0f195,
 
-  "headphones-wireless": "f196",
+  "headphones-wireless": x0f196,
 
-  "headphones-bluetooth": "f196",
+  "headphones-bluetooth": x0f196,
 
-  headphones: "f197",
+  headphones: x0f197,
 
-  "hold-off": "f198",
+  "hold-off": x0f198,
 
-  "hold-on": "f199",
+  "hold-on": x0f199,
 
-  hold: "f199",
+  hold: x0f199,
 
-  "ic-conference-wifi": "f19a",
+  "ic-conference-wifi": x0f19a,
 
-  "interaction-details": "f19b",
+  "interaction-details": x0f19b,
 
-  "layout-active-speaker": "f19c",
+  "layout-active-speaker": x0f19c,
 
-  "layout-automatic": "f19d",
+  "layout-automatic": x0f19d,
 
-  "layout-concert": "f19e",
+  "layout-concert": x0f19e,
 
-  "layout-grid": "f19f",
+  "layout-grid": x0f19f,
 
-  "layout-thumbnail-horizontal": "f1a0",
+  "layout-thumbnail-horizontal": x0f1a0,
 
-  "layout-thumbnail-vertical": "f1a1",
+  "layout-thumbnail-vertical": x0f1a1,
 
-  listen: "f1a2",
+  listen: x0f1a2,
 
-  "meeting-controls": "f1a3",
+  "meeting-controls": x0f1a3,
 
-  merge: "f1a4",
+  merge: x0f1a4,
 
-  "message-read": "f1a5",
+  "message-read": x0f1a5,
 
-  "messaging-alerting": "f1a6",
+  "messaging-alerting": x0f1a6,
 
-  "messaging-connected": "f1a7",
+  "messaging-connected": x0f1a7,
 
-  "messaging-inbound": "f1a8",
+  "messaging-inbound": x0f1a8,
 
-  "messaging-missed": "f1a9",
+  "messaging-missed": x0f1a9,
 
-  "messaging-not-ready": "f1aa",
+  "messaging-not-ready": x0f1aa,
 
-  "messaging-outbound": "f1ab",
+  "messaging-outbound": x0f1ab,
 
-  "messaging-pending": "f1ac",
+  "messaging-pending": x0f1ac,
 
-  "messaging-ready": "f1ad",
+  "messaging-ready": x0f1ad,
 
-  messaging: "f1ae",
+  messaging: x0f1ae,
 
-  mobile: "f1af",
+  mobile: x0f1af,
 
-  "network-quality-0": "f1b0",
+  "network-quality-0": x0f1b0,
 
-  "network-quality-1": "f1b1",
+  "network-quality-1": x0f1b1,
 
-  "network-quality-2": "f1b2",
+  "network-quality-2": x0f1b2,
 
-  "network-quality-3": "f1b3",
+  "network-quality-3": x0f1b3,
 
-  "network-quality": "f1b4",
+  "network-quality": x0f1b4,
 
-  "noise-1": "f1b5",
+  "noise-1": x0f1b5,
 
-  "noise-2": "f1b6",
+  "noise-2": x0f1b6,
 
-  "noise-3": "f1b7",
+  "noise-3": x0f1b7,
 
-  "noise-off": "f1b8",
+  "noise-off": x0f1b8,
 
-  noise: "f1b9",
+  noise: x0f1b9,
 
-  "phone-hard": "f1ba",
+  "phone-hard": x0f1ba,
 
-  "picture-in-picture": "f1bb",
+  "picture-in-picture": x0f1bb,
 
-  pom: "f1bc",
+  pom: x0f1bc,
 
-  outreach: "f1bc",
+  outreach: x0f1bc,
 
-  "presentation-only": "f1bd",
+  "presentation-only": x0f1bd,
 
-  "queue-external-call": "f1be",
+  "queue-external-call": x0f1be,
 
-  "queue-internal-call": "f1bf",
+  "queue-internal-call": x0f1bf,
 
-  "queue-recall": "f1c0",
+  "queue-recall": x0f1c0,
 
-  "queue-send-to": "f1c1",
+  "queue-send-to": x0f1c1,
 
-  "send-to-queue": "f1c1",
+  "send-to-queue": x0f1c1,
 
-  queue: "f1c2",
+  queue: x0f1c2,
 
-  "raise-hand": "f1c3",
+  "raise-hand": x0f1c3,
 
-  "recall-missed": "f1c4",
+  "recall-missed": x0f1c4,
 
-  "recording-off": "f1c5",
+  "recording-off": x0f1c5,
 
-  "recording-on": "f1c6",
+  "recording-on": x0f1c6,
 
-  redirect: "f1c7",
+  redirect: x0f1c7,
 
-  "screenshare-off": "f1c8",
+  "screenshare-off": x0f1c8,
 
-  "screenshare-on": "f1c9",
+  "screenshare-on": x0f1c9,
 
-  sip: "f1ca",
+  sip: x0f1ca,
 
-  "sms-alerting": "f1cb",
+  "sms-alerting": x0f1cb,
 
-  "sms-connected": "f1cc",
+  "sms-connected": x0f1cc,
 
-  "sms-inbound": "f1cd",
+  "sms-inbound": x0f1cd,
 
-  "sms-missed": "f1ce",
+  "sms-missed": x0f1ce,
 
-  "sms-not-ready": "f1cf",
+  "sms-not-ready": x0f1cf,
 
-  "sms-outbound": "f1d0",
+  "sms-outbound": x0f1d0,
 
-  "sms-pending": "f1d1",
+  "sms-pending": x0f1d1,
 
-  "sms-ready": "f1d2",
+  "sms-ready": x0f1d2,
 
-  sms: "f1d3",
+  sms: x0f1d3,
 
-  "sms-active": "f1d3",
-  "sms-channel": "f1d3",
+  "sms-active": x0f1d3,
+  "sms-channel": x0f1d3,
 
-  "spaces-filled": "f1d4",
+  "spaces-filled": x0f1d4,
 
-  spaces: "f1d5",
+  spaces: x0f1d5,
 
-  "speaker-high": "f1d6",
+  "speaker-high": x0f1d6,
 
-  sound: "f1d6",
+  sound: x0f1d6,
 
-  "speaker-low": "f1d7",
+  "speaker-low": x0f1d7,
 
-  "speaker-medium": "f1d8",
+  "speaker-medium": x0f1d8,
 
-  "speaker-none": "f1d9",
+  "speaker-none": x0f1d9,
 
-  "speaker-off": "f1da",
+  "speaker-off": x0f1da,
 
-  "speaker-wireless": "f1db",
+  "speaker-wireless": x0f1db,
 
-  bluetooth: "f1db",
-  "speaker-bluetooth": "f1db",
-  "speaker-bluetooth-rtl": "f1db",
+  bluetooth: x0f1db,
+  "speaker-bluetooth": x0f1db,
+  "speaker-bluetooth-rtl": x0f1db,
 
-  "transfer-forward": "f1dc",
+  "transfer-forward": x0f1dc,
 
-  "tv-screen": "f1dd",
+  "tv-screen": x0f1dd,
 
-  "typing-1": "f1de",
+  "typing-1": x0f1de,
 
-  "typing-2": "f1df",
+  "typing-2": x0f1df,
 
-  "typing-3": "f1e0",
+  "typing-3": x0f1e0,
 
-  typing: "f1e1",
+  typing: x0f1e1,
 
-  "video-alerting": "f1e2",
+  "video-alerting": x0f1e2,
 
-  "video-connected": "f1e3",
+  "video-connected": x0f1e3,
 
-  "video-inbound": "f1e4",
+  "video-inbound": x0f1e4,
 
-  "video-missed": "f1e5",
+  "video-missed": x0f1e5,
 
-  "video-not-ready": "f1e6",
+  "video-not-ready": x0f1e6,
 
-  "video-off": "f1e7",
+  "video-off": x0f1e7,
 
-  "video-on": "f1e8",
+  "video-on": x0f1e8,
 
-  video: "f1e8",
+  video: x0f1e8,
 
-  "video-outbound": "f1e9",
+  "video-outbound": x0f1e9,
 
-  "video-pending": "f1ea",
+  "video-pending": x0f1ea,
 
-  "video-ready": "f1eb",
+  "video-ready": x0f1eb,
 
-  "video-warning": "f1ec",
+  "video-warning": x0f1ec,
 
-  "voicemail-private": "f1ed",
+  "voicemail-private": x0f1ed,
 
-  voicemail_private: "f1ed",
+  voicemail_private: x0f1ed,
 
-  voicemail: "f1ee",
+  voicemail: x0f1ee,
 
-  "voicemail-priority": "f1ee",
-  "voice-mailbox": "f1ee",
+  "voicemail-priority": x0f1ee,
+  "voice-mailbox": x0f1ee,
 
-  whisper: "f1ef",
+  whisper: x0f1ef,
 
-  wifi: "f1f0",
+  wifi: x0f1f0,
 
-  "add-circle": "f1f1",
+  "add-circle": x0f1f1,
 
-  add: "f1f2",
+  add: x0f1f2,
 
-  "address-book": "f1f3",
+  "address-book": x0f1f3,
 
-  "address-book-inverted": "f1f3",
-  "address-folder": "f1f3",
+  "address-book-inverted": x0f1f3,
+  "address-folder": x0f1f3,
 
-  address: "f1f4",
+  address: x0f1f4,
 
-  "auto-answer": "f1f5",
+  "auto-answer": x0f1f5,
 
-  "awfos-rtl": "f1f6",
+  "awfos-rtl": x0f1f6,
 
-  awfos: "f1f7",
+  awfos: x0f1f7,
 
-  "awfos-portal": "f1f7",
-  "rtl-awfos": "f1f7",
-  "rtl-evaluation": "f1f7",
+  "awfos-portal": x0f1f7,
+  "rtl-awfos": x0f1f7,
+  "rtl-evaluation": x0f1f7,
 
-  backspace: "f1f8",
+  backspace: x0f1f8,
 
-  "bar-chart": "f1f9",
+  "bar-chart": x0f1f9,
 
-  "billboard-chart": "f1fa",
+  "billboard-chart": x0f1fa,
 
-  "chart-billboard": "f1fa",
+  "chart-billboard": x0f1fa,
 
-  billboard: "f1fb",
+  billboard: x0f1fb,
 
-  "chart-area": "f1fc",
+  "chart-area": x0f1fc,
 
-  "chart-bubbles": "f1fd",
+  "chart-bubbles": x0f1fd,
 
-  "chart-donut": "f1fe",
+  "chart-donut": x0f1fe,
 
-  "chart-gauge": "f1ff",
+  "chart-gauge": x0f1ff,
 
-  "chart-lines": "f200",
+  "chart-lines": x0f200,
 
-  check: "f201",
+  check: x0f201,
 
-  accept: "f201",
+  accept: x0f201,
 
-  clipboard: "f202",
+  clipboard: x0f202,
 
-  worklog: "f202",
+  worklog: x0f202,
 
-  close: "f203",
+  close: x0f203,
 
-  end: "f203",
+  end: x0f203,
 
-  coach: "f204",
+  coach: x0f204,
 
-  comments: "f205",
+  comments: x0f205,
 
-  copy: "f206",
+  copy: x0f206,
 
-  "credit-card": "f207",
+  "credit-card": x0f207,
 
-  crm: "f208",
+  crm: x0f208,
 
-  "customer-journey": "f209",
+  "customer-journey": x0f209,
 
-  "journey-information": "f209",
+  "journey-information": x0f209,
 
-  "disposition-code": "f20a",
+  "disposition-code": x0f20a,
 
-  edit: "f20b",
+  edit: x0f20b,
 
-  "filter-filled": "f20c",
+  "filter-filled": x0f20c,
 
-  filter: "f20d",
+  filter: x0f20d,
 
-  "filter-cancel": "f20d",
+  "filter-cancel": x0f20d,
 
-  gif: "f20e",
+  gif: x0f20e,
 
-  graph: "f20f",
+  graph: x0f20f,
 
-  "history-reports": "f210",
+  "history-reports": x0f210,
 
-  "historical-reports": "f210",
+  "historical-reports": x0f210,
 
-  invoice: "f211",
+  invoice: x0f211,
 
-  "layout-custom": "f212",
+  "layout-custom": x0f212,
 
-  "custom-layout": "f212",
+  "custom-layout": x0f212,
 
-  layout: "f213",
+  layout: x0f213,
 
-  legal: "f214",
+  legal: x0f214,
 
-  link: "f215",
+  link: x0f215,
 
-  minus: "f216",
+  minus: x0f216,
 
-  music: "f217",
+  music: x0f217,
 
-  "pie-chart": "f218",
+  "pie-chart": x0f218,
 
-  charts: "f218",
-  "view-manager": "f218",
+  charts: x0f218,
+  "view-manager": x0f218,
 
-  "pin-off": "f219",
+  "pin-off": x0f219,
 
-  "pin-on": "f21a",
+  "pin-on": x0f21a,
 
-  posts: "f21b",
+  posts: x0f21b,
 
-  note: "f21b",
+  note: x0f21b,
 
-  "qr-code": "f21c",
+  "qr-code": x0f21c,
 
-  "reason-codes": "f21d",
+  "reason-codes": x0f21d,
 
-  redo: "f21e",
+  redo: x0f21e,
 
-  "retrieve-interaction": "f21e",
+  "retrieve-interaction": x0f21e,
 
-  "reply-all": "f21f",
+  "reply-all": x0f21f,
 
-  "reply-all-to-chat": "f21f",
+  "reply-all-to-chat": x0f21f,
 
-  reply: "f220",
+  reply: x0f220,
 
-  "reply-to-chat": "f220",
+  "reply-to-chat": x0f220,
 
-  signature: "f221",
+  signature: x0f221,
 
-  "star-filled": "f222",
+  "star-filled": x0f222,
 
-  "item-default": "f222",
+  "item-default": x0f222,
 
-  "star-half-filled": "f223",
+  "star-half-filled": x0f223,
 
-  star: "f224",
+  star: x0f224,
 
-  "star-outline": "f224",
+  "star-outline": x0f224,
 
-  suggested: "f225",
+  suggested: x0f225,
 
-  "suggested-content": "f225",
+  "suggested-content": x0f225,
 
-  "support-ticket": "f226",
+  "support-ticket": x0f226,
 
-  table: "f227",
+  table: x0f227,
 
-  thresholds: "f228",
+  thresholds: x0f228,
 
-  timeline: "f229",
+  timeline: x0f229,
 
-  trash: "f22a",
+  trash: x0f22a,
 
-  undo: "f22b",
+  undo: x0f22b,
 
-  "view-off": "f22c",
+  "view-off": x0f22c,
 
-  "stop-observing": "f22c",
+  "stop-observing": x0f22c,
 
-  "view-on": "f22d",
+  "view-on": x0f22d,
 
-  observe: "f22d",
+  observe: x0f22d,
 
-  "view-tiles": "f22e",
+  "view-tiles": x0f22e,
 
-  "widget-layout": "f22f",
+  "widget-layout": x0f22f,
 
-  "widget-overview": "f230",
+  "widget-overview": x0f230,
 
-  widgets: "f230",
-  "widget-list": "f230",
+  widgets: x0f230,
+  "widget-list": x0f230,
 
-  workflow: "f231",
+  workflow: x0f231,
 
-  "align-bottom": "f232",
+  "align-bottom": x0f232,
 
-  "align-center-horizontal": "f233",
+  "align-center-horizontal": x0f233,
 
-  "align-center-vertical": "f234",
+  "align-center-vertical": x0f234,
 
-  "align-distribute-horizontal": "f235",
+  "align-distribute-horizontal": x0f235,
 
-  "align-distribute-vertical": "f236",
+  "align-distribute-vertical": x0f236,
 
-  "align-left": "f237",
+  "align-left": x0f237,
 
-  "align-right": "f238",
+  "align-right": x0f238,
 
-  "align-top": "f239",
+  "align-top": x0f239,
 
-  "alignment-center": "f23a",
+  "alignment-center": x0f23a,
 
-  "center-alignment": "f23a",
+  "center-alignment": x0f23a,
 
-  "alignment-left": "f23b",
+  "alignment-left": x0f23b,
 
-  "left-alignment": "f23b",
+  "left-alignment": x0f23b,
 
-  "alignment-right": "f23c",
+  "alignment-right": x0f23c,
 
-  "right-alignment": "f23c",
+  "right-alignment": x0f23c,
 
-  "at-symbol": "f23d",
+  "at-symbol": x0f23d,
 
-  bold: "f23e",
+  bold: x0f23e,
 
-  "caps-lock": "f23f",
+  "caps-lock": x0f23f,
 
-  code: "f240",
+  code: x0f240,
 
-  "font-size": "f241",
+  "font-size": x0f241,
 
-  "format-collapse": "f242",
+  "format-collapse": x0f242,
 
-  "email-format": "f242",
+  "email-format": x0f242,
 
-  "format-expand": "f243",
+  "format-expand": x0f243,
 
-  "rich-text-expanded": "f243",
+  "rich-text-expanded": x0f243,
 
-  "heading-1": "f244",
+  "heading-1": x0f244,
 
-  "heading-2": "f245",
+  "heading-2": x0f245,
 
-  italics: "f246",
+  italics: x0f246,
 
-  "list-bullet": "f247",
+  "list-bullet": x0f247,
 
-  "bullet-list": "f247",
+  "bullet-list": x0f247,
 
-  "list-number-rtl": "f248",
+  "list-number-rtl": x0f248,
 
-  "rtl-num-list": "f248",
+  "rtl-num-list": x0f248,
 
-  "list-number": "f249",
+  "list-number": x0f249,
 
-  "numbered-list": "f249",
+  "numbered-list": x0f249,
 
-  paragraph: "f24a",
+  paragraph: x0f24a,
 
-  quote: "f24b",
+  quote: x0f24b,
 
-  strikethrough: "f24c",
+  strikethrough: x0f24c,
 
-  underline: "f24d",
+  underline: x0f24d,
 
-  archive: "f24e",
+  archive: x0f24e,
 
-  attach: "f24f",
+  attach: x0f24f,
 
-  download: "f250",
+  download: x0f250,
 
-  "file-avi": "f251",
+  "file-avi": x0f251,
 
-  "filetype-avi": "f251",
+  "filetype-avi": x0f251,
 
-  "file-doc": "f252",
+  "file-doc": x0f252,
 
-  "filetype-doc": "f252",
+  "filetype-doc": x0f252,
 
-  "file-html": "f253",
+  "file-html": x0f253,
 
-  "filetype-html": "f253",
+  "filetype-html": x0f253,
 
-  "file-jpg": "f254",
+  "file-jpg": x0f254,
 
-  "filetype-jpg": "f254",
+  "filetype-jpg": x0f254,
 
-  "file-json": "f255",
+  "file-json": x0f255,
 
-  "filetype-json": "f255",
+  "filetype-json": x0f255,
 
-  "file-mp4": "f256",
+  "file-mp4": x0f256,
 
-  "filetype-mp4": "f256",
+  "filetype-mp4": x0f256,
 
-  "file-pdf": "f257",
+  "file-pdf": x0f257,
 
-  "filetype-pdf": "f257",
+  "filetype-pdf": x0f257,
 
-  "file-png": "f258",
+  "file-png": x0f258,
 
-  "filetype-png": "f258",
+  "filetype-png": x0f258,
 
-  "file-ppt": "f259",
+  "file-ppt": x0f259,
 
-  "filetype-ppt": "f259",
+  "filetype-ppt": x0f259,
 
-  "file-rtl": "f25a",
+  "file-rtl": x0f25a,
 
-  "file-txt": "f25b",
+  "file-txt": x0f25b,
 
-  "filetype-txt": "f25b",
+  "filetype-txt": x0f25b,
 
-  "file-xls": "f25c",
+  "file-xls": x0f25c,
 
-  "filetype-xls": "f25c",
+  "filetype-xls": x0f25c,
 
-  "file-zip": "f25d",
+  "file-zip": x0f25d,
 
-  "filetype-zip": "f25d",
+  "filetype-zip": x0f25d,
 
-  file: "f25e",
+  file: x0f25e,
 
-  folder: "f25f",
+  folder: x0f25f,
 
-  "image-broken": "f260",
+  "image-broken": x0f260,
 
-  "broken-image": "f260",
+  "broken-image": x0f260,
 
-  image: "f261",
+  image: x0f261,
 
-  "screen-captures": "f261",
+  "screen-captures": x0f261,
 
-  upload: "f262",
+  upload: x0f262,
 
-  "app-grid": "f263",
+  "app-grid": x0f263,
 
-  "arrow-down": "f264",
+  "arrow-down": x0f264,
 
-  inbound: "f264",
+  inbound: x0f264,
 
-  "arrow-fill-down": "f265",
+  "arrow-fill-down": x0f265,
 
-  "arrow-fill-left": "f266",
+  "arrow-fill-left": x0f266,
 
-  "arrow-fill-right": "f267",
+  "arrow-fill-right": x0f267,
 
-  "arrow-fill-up": "f268",
+  "arrow-fill-up": x0f268,
 
-  "arrow-left": "f269",
+  "arrow-left": x0f269,
 
-  "arrow-right": "f26a",
+  "arrow-right": x0f26a,
 
-  "arrow-up": "f26b",
+  "arrow-up": x0f26b,
 
-  outbound: "f26b",
-  "outbound-channel": "f26b",
+  outbound: x0f26b,
+  "outbound-channel": x0f26b,
 
-  "chevron-down": "f26c",
+  "chevron-down": x0f26c,
 
-  collapse: "f26c",
+  collapse: x0f26c,
 
-  "chevron-left": "f26d",
+  "chevron-left": x0f26d,
 
-  "chevron-right": "f26e",
+  "chevron-right": x0f26e,
 
-  "chevron-up": "f26f",
+  "chevron-up": x0f26f,
 
-  "ellipses-horizontal": "f270",
+  "ellipses-horizontal": x0f270,
 
-  more: "f270",
+  more: x0f270,
 
-  "ellipses-vertical": "f271",
+  "ellipses-vertical": x0f271,
 
-  menu: "f272",
+  menu: x0f272,
 
-  "page-first": "f273",
+  "page-first": x0f273,
 
-  "first-page": "f273",
+  "first-page": x0f273,
 
-  "page-last": "f274",
+  "page-last": x0f274,
 
-  "last-page": "f274",
+  "last-page": x0f274,
 
-  refresh: "f275",
+  refresh: x0f275,
 
-  cart: "f276",
+  cart: x0f276,
 
-  "code-cloud": "f277",
+  "code-cloud": x0f277,
 
-  emergency: "f278",
+  emergency: x0f278,
 
-  integrations: "f279",
+  integrations: x0f279,
 
-  "not-available": "f27a",
+  "not-available": x0f27a,
 
-  apple: "f27a",
-  asana: "f27a",
-  "google-drive": "f27a",
-  "office-365": "f27a",
-  salesforce: "f27a",
-  fa_direction_left: "f27a",
-  fa_direction_right: "f27a",
-  fa_key: "f27a",
-  fa_outbound: "f27a",
+  apple: x0f27a,
+  asana: x0f27a,
+  "google-drive": x0f27a,
+  "office-365": x0f27a,
+  salesforce: x0f27a,
+  fa_direction_left: x0f27a,
+  fa_direction_right: x0f27a,
+  fa_key: x0f27a,
+  fa_outbound: x0f27a,
 
-  "sentiment-happy": "f27b",
+  "sentiment-happy": x0f27b,
 
-  "sentiment-neutral": "f27c",
+  "sentiment-neutral": x0f27c,
 
-  "sentiment-sad": "f27d",
+  "sentiment-sad": x0f27d,
 
-  "sentiment-very-happy": "f27e",
+  "sentiment-very-happy": x0f27e,
 
-  "sentiment-very-sad": "f27f",
+  "sentiment-very-sad": x0f27f,
 
-  shield: "f280",
+  shield: x0f280,
 
-  "social-integrations": "f281",
+  "social-integrations": x0f281,
 
-  spinner: "f282",
+  spinner: x0f282,
 
-  "work-code": "f283",
+  "work-code": x0f283,
 
-  "social-alerting": "f284",
+  "social-alerting": x0f284,
 
-  "social-connected": "f285",
+  "social-connected": x0f285,
 
-  "social-inbound": "f286",
+  "social-inbound": x0f286,
 
-  "social-missed": "f287",
+  "social-missed": x0f287,
 
-  "social-not-ready": "f288",
+  "social-not-ready": x0f288,
 
-  "social-outbound": "f289",
+  "social-outbound": x0f289,
 
-  "social-pending": "f28a",
+  "social-pending": x0f28a,
 
-  "social-ready": "f28b",
+  "social-ready": x0f28b,
 
-  social: "f28c",
+  social: x0f28c,
 
-  fb: "f28c",
-  fbm: "f28c",
-  instagram: "f28c",
-  twitter: "f28c",
-  wechat: "f28c",
-  whatsapp: "f28c",
-  youtube: "f28c",
-  "social-active": "f28c",
-  "social-active": "f28c",
+  fb: x0f28c,
+  fbm: x0f28c,
+  instagram: x0f28c,
+  twitter: x0f28c,
+  wechat: x0f28c,
+  whatsapp: x0f28c,
+  youtube: x0f28c,
+  "social-active": x0f28c,
+  "social-active": x0f28c,
 
-  "thumbs-down": "f28d",
+  "thumbs-down": x0f28d,
 
-  "thumbs-up": "f28e",
+  "thumbs-up": x0f28e,
 
-  "available-filled": "f28f",
+  "available-filled": x0f28f,
 
-  available: "f290",
+  available: x0f290,
 
-  "go-ready": "f290",
+  "go-ready": x0f290,
 
-  "away-filled": "f291",
+  "away-filled": x0f291,
 
-  away: "f292",
+  away: x0f292,
 
-  clock: "f292",
+  clock: x0f292,
 
-  "busy-filled": "f293",
+  "busy-filled": x0f293,
 
-  busy: "f294",
+  busy: x0f294,
 
-  "go-not-ready": "f294",
+  "go-not-ready": x0f294,
 
-  "connected-filled": "f295",
+  "connected-filled": x0f295,
 
-  disconnected: "f296",
+  disconnected: x0f296,
 
-  "do-not-disturb-filled": "f297",
+  "do-not-disturb-filled": x0f297,
 
-  "do-not-disturb": "f298",
+  "do-not-disturb": x0f298,
 
-  "inbound-filled": "f299",
+  "inbound-filled": x0f299,
 
-  "missed-filled": "f29a",
+  "missed-filled": x0f29a,
 
-  "offline-filled": "f29b",
+  "offline-filled": x0f29b,
 
-  offline: "f29c",
+  offline: x0f29c,
 
-  "outbound-filled": "f29d",
+  "outbound-filled": x0f29d,
 
-  "socket-connected": "f29e",
+  "socket-connected": x0f29e,
 
-  "socket-disconnected": "f29f",
+  "socket-disconnected": x0f29f,
 
-  "task-incomplete": "f2a0",
+  "task-incomplete": x0f2a0,
 
-  "clear-day": "f2a1",
+  "clear-day": x0f2a1,
 
-  "clear-night": "f2a2",
+  "clear-night": x0f2a2,
 
-  "cloudy-few": "f2a3",
+  "cloudy-few": x0f2a3,
 
-  "few-clouds": "f2a3",
+  "few-clouds": x0f2a3,
 
-  "cloudy-scattered": "f2a4",
+  "cloudy-scattered": x0f2a4,
 
-  "scattered-clouds": "f2a4",
+  "scattered-clouds": x0f2a4,
 
-  cloudy: "f2a5",
+  cloudy: x0f2a5,
 
-  mist: "f2a6",
+  mist: x0f2a6,
 
-  showers: "f2a7",
+  showers: x0f2a7,
 
-  snow: "f2a8",
+  snow: x0f2a8,
 
-  thunderstorm: "f2a9",
+  thunderstorm: x0f2a9,
 };
