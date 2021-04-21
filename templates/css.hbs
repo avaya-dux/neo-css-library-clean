@@ -1,6 +1,6 @@
 @font-face {
 font-family: "{{ fontName }}";
-src: {{{ src }}};
+src: replaceMe;
 }
 
 
@@ -35,6 +35,8 @@ vertical-align: middle;
 {
 transform: scaleX(-1) !important;
 }
+
+{{ log codepoints }}
 
 {{# each codepoints }}
 .{{ ../classPrefix }}{{ @key }}:before {

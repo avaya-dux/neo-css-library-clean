@@ -39,6 +39,15 @@
           }
         },
         {
+          "destination": "_breadcrumbs.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "breadcrumb"
+            }
+          }
+        },
+        {
           "destination": "_widgets.scss",
           "format": "scss/variables",
           "filter": {

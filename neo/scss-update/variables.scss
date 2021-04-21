@@ -2,10 +2,6 @@
 @import "helpers";
 @import "tokens-import";
 @import "themes/theme";
-
-// need to update this
-/* Neo version 3.24.0   */
-
 // Variables
 //
 // Variables should follow the `$component-state-property` formula for consistent naming,
@@ -339,6 +335,19 @@ $heading-paragraph-spacing: map-merge(
   ),
   $heading-font-sizes
 );
+$heading-line-heights: () !default;
+$heading-line-heights: map-merge(
+  (
+    h1: $token-web-typography-web-heading-1-regular-line-height,
+    h2: $token-web-typography-web-heading-2-regular-line-height,
+    h3: $token-web-typography-web-heading-3-line-height,
+    h4: $token-web-typography-web-heading-4-line-height,
+    // we only go up to h4
+    h5: $global-font-size,
+    h6: $global-font-size * 0.7,
+  ),
+  $heading-line-heights
+);
 $heading-font-weight: normal !default;
 $heading-line-height: 1 !default;
 $subtitle-line-height: $global-font-size * 1.4 !default;
@@ -594,7 +603,7 @@ $select-vertical-margin: $token-input-vertical-margin !default;
 $select-disabled-color: $input-disabled-color !default;
 $select-disabled-bg: $input-disabled-bg !default;
 $select-expand-icon: $token-icons-neo-icon-chevron-down !default;
-$select-multiple-selected-icon: $token-icons-neo-icon-accept !default;
+$select-multiple-selected-icon: $token-icons-neo-icon-check !default;
 $select-multiple-unselected-icon: $token-icons-neo-icon-close !default;
 
 //
@@ -1186,7 +1195,7 @@ $checkbox-icon-color: var(--checkbox-icon-color) !default;
 $checkbox-label-indent: $token-checkbox-label-indent !default;
 $checkbox-font-size: $token-checkbox-font-size !default;
 $checkbox-color: var(--checkbox-icon-color) !default;
-$checkbox-checked-icon: $token-icons-neo-icon-accept !default;
+$checkbox-checked-icon: $token-icons-neo-icon-check !default;
 $checkbox-indeterminate-icon: $token-icons-neo-icon-minus !default;
 $checkbox-border-radius: $token-checkbox-border-radius !default;
 $checkbox-label-font-weight: $token-checkbox-font-weight !default;
@@ -2741,6 +2750,31 @@ $neo-chip-disabled-icon-colors: map-merge(
   ),
   $neo-chip-disabled-icon-colors
 );
+
+// Component name: Breadcrumbs
+// Location: src/scss/components/_breadcrumbs.scss
+//
+
+:root {
+  --breadcrumbs-default-color: #{$token-breadcrumb-default-color};
+  --breadcrumbs-active-color: #{$token-breadcrumb-active-color};
+  --breadcrumbs-hover-color: #{$token-color-blue-600};
+}
+
+$breadcrumbs-default-color: var(--breadcrumbs-default-color) !default;
+$breadcrumbs-active-color: var(--breadcrumbs-active-color) !default;
+$breadcrumbs-hover-color: var(--breadcrumbs-hover-color) !default;
+$breadcrumbs-link-font-size: $token-breadcrumb-breadcrumb-font-size !default;
+$breadcrumbs-link-line-height: $token-breadcrumb-breadcrumb-line-height !default;
+$breadcrumbs-link-letter-spacing: $token-breadcrumb-breadcrumb-letter-spacing !default;
+$breadcrumbs-link-font-weight: $token-breadcrumb-breadcrumb-font-weight !default;
+$breadcrumb-slash-spacing: $token-breadcrumb-breadcrumb-slash-spacing !default;
+$breadcrumbs-subtext-font-size: $token-breadcrumb-breadcrumb-subtext-font-size !default;
+$breadcrumbs-subtext-line-height: $token-breadcrumb-breadcrumb-subtext-line-height !default;
+$breadcrumbs-subtext-letter-spacing: $token-breadcrumb-breadcrumb-subtext-letter-spacing !default;
+$breadcrumbs-subtext-font-weight: $token-breadcrumb-breadcrumb-subtext-font-weight !default;
+$breadcrumbs-subtext-spacing: $token-breadcrumb-breadcrumb-subtext-spacing !default;
+$breadcrumbs-button-spacing: $token-breadcrumb-breadcrumb-button-spacing !default;
 
 // Component name: Tab
 // Location: src/scss/components/_tabs.scss

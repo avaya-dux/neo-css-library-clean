@@ -1,9 +1,11 @@
-const fs = require('fs').promises;
-const fsdefault = require('fs');
-const fetch = require('node-fetch');
-const axios = require('axios');
+const fs = require("fs").promises;
+const fsdefault = require("fs");
+const fetch = require("node-fetch");
+const axios = require("axios");
 
-const iconUtilityFunctions = require('./icon-utility-files/icons-utility-functions.js');
+const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functions.js");
+
+const replace = require("./icon-utility-files/icon-replacement-string");
 
 // functions to pull icons from Icon file
 // TODO - check why API call is sometimes failing -- probably to do with several calls at once
@@ -15,13 +17,13 @@ const iconUtilityFunctions = require('./icon-utility-files/icons-utility-functio
 
 async function getIconsComponents(figmaId, figmaApiKey) {
   let result = await fetch(
-    'https://api.figma.com/v1/files/' + figmaId + '/components',
+    "https://api.figma.com/v1/files/" + figmaId + "/components",
     {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-Figma-Token': figmaApiKey,
-        pragma: 'no-cache',
-        'cache-control': 'no-store, no-cache, must-revalidate',
+        "X-Figma-Token": figmaApiKey,
+        pragma: "no-cache",
+        "cache-control": "no-store, no-cache, must-revalidate",
       },
     }
   );
@@ -42,7 +44,7 @@ async function getIconsComponents(figmaId, figmaApiKey) {
   // });
 
   const iconsOnAll = figmaFileComponents.meta.components.filter((component) => {
-    return component.containing_frame.pageName === 'Icons';
+    return component.containing_frame.pageName === "Icons";
   });
 
   return iconsOnAll;
@@ -56,13 +58,13 @@ async function getIconsComponents(figmaId, figmaApiKey) {
 
 async function getIconURL(figmaApiKey, figmaId, imageNodeId, fileType) {
   let result = await fetch(
-    'https://api.figma.com/v1/images/' +
+    "https://api.figma.com/v1/images/" +
       figmaId +
       `/?ids=${imageNodeId}&format=${fileType}`,
     {
-      method: 'GET',
+      method: "GET",
       headers: {
-        'X-Figma-Token': figmaApiKey,
+        "X-Figma-Token": figmaApiKey,
       },
     }
   );
@@ -82,13 +84,13 @@ async function getIconURL(figmaApiKey, figmaId, imageNodeId, fileType) {
 async function writeIconContentFromURL(URL, imagePath) {
   await axios({
     url: URL,
-    responseType: 'stream',
+    responseType: "stream",
   }).then((response) => {
     new Promise(async (resolve, reject) => {
       response.data
         .pipe(await fsdefault.createWriteStream(imagePath))
-        .on('finish', () => resolve())
-        .on('error', (e) => reject(e));
+        .on("finish", () => resolve())
+        .on("error", (e) => reject(e));
     });
   });
 }
@@ -119,13 +121,13 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
 
     var compName = component.name.toLowerCase();
     // we skip over the template icon
-    if (compName === 'template') {
+    if (compName === "template") {
       return;
     }
 
     // we seperate out '-' and '/' from icon name
 
-    var iconName = component.name.toLowerCase().replace(/\/|\s+/g, '');
+    var iconName = component.name.toLowerCase().replace(/\/|\s+/g, "");
 
     // temporarily skip over 'fill' icons
     // TO-DO: separate this out
@@ -164,8 +166,8 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
       .then(async () => {
         if (iconsOnAll.indexOf(component) == iconsOnAll.length - 1) {
           await fs.appendFile(
-            './icons-functions/icon-utility-files/iconInfo.js',
-            ']'
+            "./icons-functions/icon-utility-files/iconInfo.js",
+            "]"
           );
         }
       })
@@ -196,13 +198,13 @@ async function generateIconFiles(iconArrays, URLs, fileType) {
 
       var iconURL = URLs.images[tag[Object.keys(tag)]];
 
-      var iconFileName = `../properties/assets/icons/${fileType}s/${
-        Object.keys(tag)[0]
-      }.${fileType}`;
+      var iconFileName = `../properties/assets/icons/${fileType}s/${Object.keys(
+        tag
+      )[0].replace(replace.stringsToReplace, "")}.${fileType}`;
 
       var iconName = Object.keys(tag)[0]
-        .slice(Object.keys(tag)[0].lastIndexOf('/') + 1)
-        .replace(/\-|\/|\s+/g, '');
+        .slice(Object.keys(tag)[0].lastIndexOf("/") + 1)
+        .replace(/\-|\/|\s+/g, "");
 
       await writeIconContentFromURL(iconURL, iconFileName).catch((error) => {
         // if there was an error pulling icon content from the URL, we switch success to false
@@ -264,11 +266,11 @@ async function generateIconFiles(iconArrays, URLs, fileType) {
 async function pullIcons(figmaApiKey, figmaId) {
   // make directories for both svgs and pngs
 
-  await fs.mkdir('../properties/assets/icons/svgs', {
+  await fs.mkdir("../properties/assets/icons/svgs", {
     recursive: true,
   });
 
-  await fs.mkdir('../properties/assets/icons/pngs', {
+  await fs.mkdir("../properties/assets/icons/pngs", {
     recursive: true,
   });
 
@@ -280,9 +282,9 @@ async function pullIcons(figmaApiKey, figmaId) {
     figmaApiKey,
     figmaId,
     iconFunctionArrays.figmaFileNodes.toString(),
-    'svg'
+    "svg"
   ).then(async (iconSVGURLs) => {
-    await generateIconFiles(iconFunctionArrays, iconSVGURLs, 'svg');
+    await generateIconFiles(iconFunctionArrays, iconSVGURLs, "svg");
   });
 
   // we get the iconPNG URLs and pull content from them
@@ -291,9 +293,9 @@ async function pullIcons(figmaApiKey, figmaId) {
     figmaApiKey,
     figmaId,
     iconFunctionArrays.figmaFileNodes.toString(),
-    'png'
+    "png"
   ).then(async (iconPNGURLs) => {
-    await generateIconFiles(iconFunctionArrays, iconPNGURLs, 'png');
+    await generateIconFiles(iconFunctionArrays, iconPNGURLs, "png");
   });
 }
 

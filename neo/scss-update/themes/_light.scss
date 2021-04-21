@@ -302,3 +302,9 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --badge-color: #{$token-badge-color};
   --badge-background-color: #{$token-badge-background-color};
 }
+
+:root .neo-light {
+  --breadcrumbs-default-color: #{$token-breadcrumb-default-color};
+  --breadcrumbs-active-color: #{$token-breadcrumb-active-color};
+  --breadcrumbs-hover-color: #{$token-color-blue-600};
+}

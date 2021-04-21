@@ -1,5 +1,5 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
 
@@ -25,21 +25,21 @@ function radioStyles(value) {
     radio: {},
   };
   value.Form.children.forEach(async (child) => {
-    if (child.name === 'radio') {
+    if (child.name === "radio") {
       var children = child.children;
       // $radio-size
-      radioJSONObject.radio['size'] = {
+      radioJSONObject.radio["size"] = {
         value: `${children[0].size.x}px`,
       };
 
       // $radio-active-ellipse-size
-      radioJSONObject.radio['active-ellipse-size'] = {
+      radioJSONObject.radio["active-ellipse-size"] = {
         value: `${children[0].children[1].size.x}px`,
       };
 
       //$radio-positioning
 
-      radioJSONObject.radio['position-top'] = {
+      radioJSONObject.radio["position-top"] = {
         value: `${children[4].children[0].relativeTransform[1][2]}px`,
       };
 
@@ -50,17 +50,17 @@ function radioStyles(value) {
       var ellipsePositionLeft =
         children[4].children[0].children[1].relativeTransform[0][2];
 
-      radioJSONObject.radio['ellipse-position-top'] = {
+      radioJSONObject.radio["ellipse-position-top"] = {
         value: `${ellipsePositionTop}px`,
       };
 
-      radioJSONObject.radio['ellipse-position-left'] = {
+      radioJSONObject.radio["ellipse-position-left"] = {
         value: `${ellipsePositionLeft}px`,
       };
 
       // $radio-background
       var backgroundColorId = children[0].children[0].styles.fill;
-      radioJSONObject.radio['background-color'] = {
+      radioJSONObject.radio["background-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -76,7 +76,7 @@ function radioStyles(value) {
       };
       // $radio-active-color
       var activeColorId = children[0].children[1].styles.fill;
-      radioJSONObject.radio['active-color'] = {
+      radioJSONObject.radio["active-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -106,7 +106,7 @@ function radioStyles(value) {
             ].document.name.toLowerCase()}.value}`
         );
 
-      radioJSONObject.radio['disabled-border'] = {
+      radioJSONObject.radio["disabled-border"] = {
         value: `${
           children[1].children[0].children[0].strokeWeight
         }px ${children[1].children[0].children[0].strokes[0].type.toLowerCase()} ${disabledBorderColor}`,
@@ -124,24 +124,24 @@ function radioStyles(value) {
           value.nodes[borderColorId].document.name.toLowerCase()
         );
 
-      radioJSONObject.radio['border'] = {
+      radioJSONObject.radio["border"] = {
         value: `${
           children[0].children[0].strokeWeight
         }px ${children[0].children[0].strokes[0].type.toLowerCase()} {color.${borderColor}.value}`,
       };
 
       // $radio-text-offset
-      radioJSONObject.radio['text-offset'] = {
+      radioJSONObject.radio["text-offset"] = {
         value: `${children[4].children[1].relativeTransform[0][2]}px`,
       };
       // console.log(radioJSONObject);
       await fs
         .writeFile(
-          '../properties/components/radio.json',
+          "../properties/components/radio.json",
           JSON.stringify(radioJSONObject)
         )
         .then(function () {
-          console.log('radio.json created');
+          console.log("radio.json created");
         });
     }
   });
