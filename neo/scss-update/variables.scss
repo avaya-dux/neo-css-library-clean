@@ -2,10 +2,6 @@
 @import "helpers";
 @import "tokens-import";
 @import "themes/theme";
-
-// need to update this
-/* Neo version 3.24.0   */
-
 // Variables
 //
 // Variables should follow the `$component-state-property` formula for consistent naming,
@@ -594,7 +590,7 @@ $select-vertical-margin: $token-input-vertical-margin !default;
 $select-disabled-color: $input-disabled-color !default;
 $select-disabled-bg: $input-disabled-bg !default;
 $select-expand-icon: $token-icons-neo-icon-chevron-down !default;
-$select-multiple-selected-icon: $token-icons-neo-icon-accept !default;
+$select-multiple-selected-icon: $token-icons-neo-icon-check !default;
 $select-multiple-unselected-icon: $token-icons-neo-icon-close !default;
 
 //
@@ -1186,7 +1182,7 @@ $checkbox-icon-color: var(--checkbox-icon-color) !default;
 $checkbox-label-indent: $token-checkbox-label-indent !default;
 $checkbox-font-size: $token-checkbox-font-size !default;
 $checkbox-color: var(--checkbox-icon-color) !default;
-$checkbox-checked-icon: $token-icons-neo-icon-accept !default;
+$checkbox-checked-icon: $token-icons-neo-icon-check !default;
 $checkbox-indeterminate-icon: $token-icons-neo-icon-minus !default;
 $checkbox-border-radius: $token-checkbox-border-radius !default;
 $checkbox-label-font-weight: $token-checkbox-font-weight !default;
