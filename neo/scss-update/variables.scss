@@ -335,6 +335,19 @@ $heading-paragraph-spacing: map-merge(
   ),
   $heading-font-sizes
 );
+$heading-line-heights: () !default;
+$heading-line-heights: map-merge(
+  (
+    h1: $token-web-typography-web-heading-1-regular-line-height,
+    h2: $token-web-typography-web-heading-2-regular-line-height,
+    h3: $token-web-typography-web-heading-3-line-height,
+    h4: $token-web-typography-web-heading-4-line-height,
+    // we only go up to h4
+    h5: $global-font-size,
+    h6: $global-font-size * 0.7,
+  ),
+  $heading-line-heights
+);
 $heading-font-weight: normal !default;
 $heading-line-height: 1 !default;
 $subtitle-line-height: $global-font-size * 1.4 !default;
