@@ -1,19 +1,14 @@
-
 // Do not edit directly
-<<<<<<< HEAD
-// Generated on Fri, 16 Apr 2021 15:20:21 GMT
-=======
 // Generated on Tue, 20 Apr 2021 22:25:13 GMT
->>>>>>> latest_develop_mo_iconUnicodes
 
-$token-interactivity-motion-fast: .15s;
-$token-interactivity-motion-medium: .4s;
-$token-interactivity-motion-slow: .9s;
-$token-interactivity-motion-ease-in: cubic-bezier(.4, 0, .7, .2);
+$token-interactivity-motion-fast: 0.15s;
+$token-interactivity-motion-medium: 0.4s;
+$token-interactivity-motion-slow: 0.9s;
+$token-interactivity-motion-ease-in: cubic-bezier(0.4, 0, 0.7, 0.2);
 $token-interactivity-motion-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
-$token-interactivity-motion-ease-out: cubic-bezier(0, 0, .2, 1);
-$token-interactivity-motion-fade-fast: all .15s;
-$token-interactivity-motion-fade-slow: all .6s;
-$token-interactivity-motion-combo-fast-short: transform .15s, background .15s;
-$token-interactivity-motion-combo-fast-medium: transform .3s, background .15s;
-$token-interactivity-motion-combo-slow-long: transform .6s, background .6s;
+$token-interactivity-motion-ease-out: cubic-bezier(0, 0, 0.2, 1);
+$token-interactivity-motion-fade-fast: all 0.15s;
+$token-interactivity-motion-fade-slow: all 0.6s;
+$token-interactivity-motion-combo-fast-short: transform 0.15s, background 0.15s;
+$token-interactivity-motion-combo-fast-medium: transform 0.3s, background 0.15s;
+$token-interactivity-motion-combo-slow-long: transform 0.6s, background 0.6s;

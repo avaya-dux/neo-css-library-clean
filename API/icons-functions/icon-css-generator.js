@@ -10,11 +10,8 @@ const Handlebars = require("handlebars");
 
 const replace = require("./icon-utility-files/icon-replacement-string");
 
-<<<<<<< HEAD
-=======
 const replacelib = require("replace-in-file");
 
->>>>>>> latest_develop_mo_iconUnicodes
 Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
   var amendedArg = arg1.replace(replace.stringsToReplace, "");
 
@@ -516,21 +513,14 @@ const generateIcons = async () => {
       files: IconsArray,
       dest: "../build/css",
       fontName: "updated-neo-icons",
-<<<<<<< HEAD
-      types: [],
-=======
       types: ["woff"],
->>>>>>> latest_develop_mo_iconUnicodes
       cssTemplate: "../templates/css.hbs",
       templateOptions: {
         // src: `url(data:application/font-woff;base64,${result}) format('woff')`,
         // temporary class prefix for the purposes of side-by-side demo
         // TO-DO: replace this with universal class name when using namespaces
         classPrefix: "neo-icon-",
-<<<<<<< HEAD
-=======
         // codepoints: unicodes,
->>>>>>> latest_develop_mo_iconUnicodes
       },
       html: false,
       // htmlTemplate: '../templates/html.hbs',
@@ -543,9 +533,6 @@ const generateIcons = async () => {
         console.log("Fail!", error);
       } else {
         // console.log(result);
-<<<<<<< HEAD
-        console.log("updated-neo-icons.css generated in build/ folder");
-=======
 
         const base64FileBuffer = await fs.readFile(
           "../build/css/updated-neo-icons.woff"
@@ -570,7 +557,6 @@ const generateIcons = async () => {
           console.log("Replacement results:", results);
           console.log("updated-neo-icons.css generated in build/ folder");
         });
->>>>>>> latest_develop_mo_iconUnicodes
       }
     }
   );
