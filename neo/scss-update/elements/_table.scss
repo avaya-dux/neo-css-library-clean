@@ -404,10 +404,10 @@
         // hard-coded value needs to change
         margin-right: $table-filter-icon-spacing;
         font-size: $table-filter-font-size;
-        content: $token-icons-neo-icon-accept;
+        content: $token-icons-neo-icon-check;
         font-family: updated-neo-icons !important;
-        -ms-font-feature-settings: 'liga' 1;
-        font-feature-settings: 'liga';
+        -ms-font-feature-settings: "liga" 1;
+        font-feature-settings: "liga";
         font-variant-ligatures: discretionary-ligatures;
         font-style: normal;
         font-weight: normal;
@@ -518,7 +518,7 @@
       text-align: right;
     }
 
-    span[class*='neo-icon-']:before {
+    span[class*="neo-icon-"]:before {
       font-size: $table-icon-size;
     }
     .neo-check + label {

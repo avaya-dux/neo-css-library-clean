@@ -60,7 +60,7 @@
   .neo-modal__body {
     // min-height: $modal-body-height;
 
-    @include modal-element(0, 'top');
+    @include modal-element(0, "top");
   }
 
   .neo-modal__message {
@@ -70,6 +70,8 @@
   }
 
   .neo-modal__footer {
+    // hard-coded for now
+    $footer-padding: 20px 0px 12px 0px;
     display: flex;
     justify-content: flex-end;
 
@@ -89,7 +91,7 @@
       }
     }
 
-    @include modal-element($modal-padding, 'top');
+    @include modal-element($footer-padding, "top");
   }
 }
 
