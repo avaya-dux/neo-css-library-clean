@@ -43,7 +43,7 @@ coreFigmaFunctions
     // await radioStyles.radioStyles(value);
     // await tabStyles.tabStyles(value);
     // await navbarStyles.navbarStyles(value);
-    // await buttonStyles.buttonStyles(value);
+    await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
     // await leftnavStyles.leftnavStyles(value);
@@ -59,7 +59,7 @@ coreFigmaFunctions
     // await tableStyles.tableStyles(value);
     // await dropdownStyles.dropdownStyles(value);
     // await channelIconVariants.channelIconVariants(value);
-    await breadcrumbStyles.breadcrumbStyles(value);
+    // await breadcrumbStyles.breadcrumbStyles(value);
   });
 
 // coreFigmaFunctions

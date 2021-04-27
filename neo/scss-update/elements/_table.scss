@@ -475,7 +475,8 @@
         }
       }
     }
-    &:not(.disabled):hover {
+    &:not(.disabled):hover,
+    &:not(.disabled):focus-within {
       // need colour transition animation
       // FIGMA
       background-color: $table-row-hover-color;
