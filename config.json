@@ -343,6 +343,15 @@
               "category": "tooltip"
             }
           }
+        },
+        {
+          "destination": "_skipNav.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "skipNav"
+            }
+          }
         }
       ]
     }

@@ -289,3 +289,9 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --breadcrumbs-active-color: #{$token-color-blue-400};
   --breadcrumbs-hover-color: #{$token-color-blue-200};
 }
+
+:root .neo-dark {
+  --skipNav-background-color: #{$token-color-blue-400};
+  --skipNav-font-color: #{$token-color-base-900};
+  --skipNav-hover-color: #{$token-color-blue-200};
+}
