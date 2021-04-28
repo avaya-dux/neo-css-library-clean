@@ -38,6 +38,9 @@
       }
     }
   }
+  &:not(.neo-dropdown__link-header)::after {
+    color: $global-text-color;
+  }
   @include rtl-selector {
     &::after {
       display: none;

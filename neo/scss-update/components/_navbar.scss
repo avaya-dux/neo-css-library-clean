@@ -130,6 +130,34 @@
 }
 
 .neo-nav {
+  // avatar dropdown in Navbar
+  & .neo-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include rtl-selector {
+      margin-right: 0px;
+      margin-left: 16px;
+    }
+    & .neo-dropdown__link.neo-dropdown__link-header {
+      padding: 0px;
+      &::after {
+        color: $global-text-color;
+      }
+    }
+    & > .neo-avatar {
+      margin-left: 12px;
+      margin-right: 24px;
+      background: none;
+      @include rtl-selector {
+        margin-left: 24px;
+        margin-right: 12px;
+      }
+      display: flex;
+      justify-content: initial;
+    }
+  }
+
   // align-items: center;
   display: flex;
   list-style: none;
@@ -333,6 +361,7 @@
       border: $navbar-agentcard-avatar-border-width
         $navbar-agentcard-avatar-border-style
         $navbar-agentcard-avatar-border-color !important;
+      margin: 0px;
     }
     height: 100%;
     min-width: 215px;
@@ -372,6 +401,15 @@
   // & [class*='neo-icon-'].neo-btn:empty::before {
   //   font-size: 32px;
   // }
+  align-items: center;
+  & h4 {
+    margin: 0;
+    margin-left: 16px;
+    @include rtl-selector {
+      margin-left: 0px;
+      margin-right: 16px;
+    }
+  }
   height: 100%;
   & .neo-badge__navbutton {
     height: 100%;

@@ -22,6 +22,7 @@ const tableStyles = require("./components-functions/table_variants.js");
 const dropdownStyles = require("./components-functions/dropdown_variants.js");
 const channelIconVariants = require("./components-functions/channel_icon_variants.js");
 const breadcrumbStyles = require("./components-functions/breadcrumbs_variants.js");
+const skipNavStyles = require("./components-functions/skipnav_variants.js");
 
 coreFigmaFunctions
   .getComponentPages(
@@ -43,7 +44,7 @@ coreFigmaFunctions
     // await radioStyles.radioStyles(value);
     // await tabStyles.tabStyles(value);
     // await navbarStyles.navbarStyles(value);
-    // await buttonStyles.buttonStyles(value);
+    await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
     // await leftnavStyles.leftnavStyles(value);
@@ -59,7 +60,8 @@ coreFigmaFunctions
     // await tableStyles.tableStyles(value);
     // await dropdownStyles.dropdownStyles(value);
     // await channelIconVariants.channelIconVariants(value);
-    await breadcrumbStyles.breadcrumbStyles(value);
+    // await breadcrumbStyles.breadcrumbStyles(value);
+    await skipNavStyles.skipNavStyles(value);
   });
 
 // coreFigmaFunctions

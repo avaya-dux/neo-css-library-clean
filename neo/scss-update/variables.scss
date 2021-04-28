@@ -3481,3 +3481,38 @@ $badge-background-color: var(--badge-background-color) !default;
 $badge-color: var(--badge-color) !default;
 $badge-offset: 65% !default;
 $badge-padding: $token-badge-padding !default;
+
+/**
+  Component name: SkipNav
+
+  Location: src/scss/elements/_skipNav.scss 
+  $token-skip-nav-padding-x: 16px;
+  $token-skip-nav-padding-y: 12px;
+  $token-skip-nav-border-radius: 2px;
+  $token-skip-nav-min-height: 44px;
+  $token-skip-nav-min-width: 168px;
+  $token-skip-nav-item-spacer: 10px;
+  $token-skip-nav-background: #1473e6;
+  $token-skip-nav-font-color: #ffffff;
+  $token-skip-nav-font-size: 14px;
+  $token-skip-nav-line-height: 20px;
+  $token-skip-nav-letter-spacing: 0px;
+  $token-skip-nav-font-weight: 400;
+*/
+$skipNav-padding: $token-skip-nav-padding-y $token-skip-nav-padding-x !default;
+$skipNav-margin: $token-skip-nav-item-spacer !default;
+$skipNav-border-radius: $token-skip-nav-border-radius !default;
+$skipNav-min-height: $token-skip-nav-min-height !default;
+$skipNav-min-width: $token-skip-nav-min-width !default;
+$skipNav-font-size: $token-skip-nav-font-size !default;
+$skipNav-line-height: $token-skip-nav-line-height !default;
+$skipNav-font-weight: $token-skip-nav-font-weight !default;
+$skipNav-hover-color: var(--skipNav-hover-color) !default;
+$skipNav-background-color: var(--skipNav-background-color) !default;
+$skipNav-font-color: var(--skipNav-font-color) !default;
+
+:root {
+  --skipNav-background-color: #{$token-skip-nav-background};
+  --skipNav-font-color: #{$token-skip-nav-font-color};
+  --skipNav-hover-color: #{$token-color-blue-600};
+}
