@@ -1,0 +1,22 @@
+{
+  "skipNav": {
+    "padding-x": { "value": "16px" },
+    "padding-y": { "value": "12px" },
+    "border-radius": { "value": "2px" },
+    "min-height": { "value": "44px" },
+    "min-width": { "value": "168px" },
+    "item-spacer": { "value": "10px" },
+    "background": { "value": "{color.blue/500.value}" },
+    "font-color": { "value": "{color.base/0.value}" },
+    "font-size": {
+      "value": "{Web-typography.web/body - regular.fontSize.value}"
+    },
+    "line-height": {
+      "value": "{Web-typography.web/body - regular.lineHeight.value}"
+    },
+    "letter-spacing": {
+      "value": "{Web-typography.web/body - regular.letterSpacing.value}"
+    },
+    "font-weight": { "value": "{Web-typography.fontweight-regular.value}" }
+  }
+}
