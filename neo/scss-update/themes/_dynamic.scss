@@ -695,3 +695,17 @@ $button-color-alert-rgb-dark: 229, 105, 96;
     --breadcrumbs-hover-color: #{$token-color-blue-200};
   }
 }
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --skipNav-background-color: #{$token-skip-nav-background};
+    --skipNav-font-color: #{$token-skip-nav-font-color};
+    --skipNav-hover-color: #{$token-color-blue-600};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --skipNav-background-color: #{$token-color-blue-400};
+    --skipNav-font-color: #{$token-color-base-900};
+    --skipNav-hover-color: #{$token-color-blue-200};
+  }
+}
