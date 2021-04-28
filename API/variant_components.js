@@ -44,7 +44,7 @@ coreFigmaFunctions
     // await radioStyles.radioStyles(value);
     // await tabStyles.tabStyles(value);
     // await navbarStyles.navbarStyles(value);
-    // await buttonStyles.buttonStyles(value);
+    await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
     // await leftnavStyles.leftnavStyles(value);

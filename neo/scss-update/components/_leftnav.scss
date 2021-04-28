@@ -410,5 +410,6 @@
 .neo-leftnav--collapsible {
   @extend %sheet;
 
+  height: inherit;
   padding: 0 0 17px 0 !important;
 }
