@@ -280,6 +280,12 @@
       right: 100%;
     }
 
+    .neo-radio + label:not(last-child),
+    .neo-switch:not(last-child),
+    .neo-check + label:not(last-child) {
+      margin-right: 0px;
+    }
+
     // multiselect with checkbox styles
 
     & .neo-check ~ label {

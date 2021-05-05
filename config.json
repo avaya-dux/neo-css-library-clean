@@ -48,6 +48,15 @@
           }
         },
         {
+          "destination": "_treeview.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "treeview"
+            }
+          }
+        },
+        {
           "destination": "_widgets.scss",
           "format": "scss/variables",
           "filter": {

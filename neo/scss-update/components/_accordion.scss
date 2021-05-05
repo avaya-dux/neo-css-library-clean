@@ -27,7 +27,7 @@
     &::after {
       // chevron-up
       content: $accordion-contracted-icon;
-      font-family: 'updated-neo-icons';
+      font-family: "updated-neo-icons";
       position: absolute;
       right: $accordion-icon-offset;
       text-align: center;
@@ -98,7 +98,7 @@
     }
   }
 
-  @include list--hover('header');
+  @include list--hover("header");
   @include accordion-header;
   // @include list--borderless;
 }
