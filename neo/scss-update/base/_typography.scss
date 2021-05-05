@@ -72,7 +72,7 @@ a {
   color: $link-color;
   //text-decoration: none;
 
-  &:hover {
+  &:hover:not([class*="disabled"]) {
     color: $link-hover-color;
     cursor: pointer;
     transition: color $global-transition-duration $global-transition-timing;

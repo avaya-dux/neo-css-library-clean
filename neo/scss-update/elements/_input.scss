@@ -197,7 +197,7 @@
     &:hover {
       cursor: pointer;
     }
-    &:focus {
+    &:not(:disabled):focus {
       outline: $global-outline-color auto 2px;
     }
     &::before {

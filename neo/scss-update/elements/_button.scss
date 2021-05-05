@@ -43,6 +43,11 @@
     display: flex;
     justify-content: center;
   }
+  &--compact {
+    min-height: $compact-button-height;
+    padding: $compact-button-padding;
+    font-size: $compact-circle-button-font-size;
+  }
   @extend %button;
 }
 
@@ -337,6 +342,13 @@
   &::before {
     font-size: $button-circle-icon-size;
   }
+  &--compact {
+    height: $compact-circle-button-size;
+    width: $compact-circle-button-size;
+    &::before {
+      font-size: $compact-circle-button-icon-size;
+    }
+  }
 
   // primary class
 
@@ -613,6 +625,14 @@
   cursor: pointer;
   &::before {
     font-size: $button-square-icon-size;
+  }
+
+  &--compact {
+    height: $compact-square-button-size;
+    width: $compact-square-button-size;
+    &::before {
+      font-size: $compact-square-button-icon-size;
+    }
   }
 
   // primary class
