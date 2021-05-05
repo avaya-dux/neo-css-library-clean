@@ -89,7 +89,7 @@
   @include navbar-form;
   @include navbar-tabs;
 
-  & button::before {
+  & .neo-badge__navbutton--content::before {
     font-size: $navbar-icon-size !important;
   }
 }
@@ -273,7 +273,7 @@
       }
     }
     .neo-badge__icon::after {
-      font-family: 'noto-sans', sans-serif;
+      font-family: "noto-sans", sans-serif;
       background: $badge-background-color;
       border-radius: 8px;
       box-sizing: border-box;
@@ -299,7 +299,7 @@
     }
   }
 
-  & [class*='neo-icon-'].neo-btn:empty::before {
+  & [class*="neo-icon-"].neo-btn:empty::before {
     font-size: $navbar-icon-size;
   }
   & .neo-nav-status {
@@ -369,7 +369,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    & [class*='neo-icon-'].neo-btn:empty::before {
+    & [class*="neo-icon-"].neo-btn:empty::before {
       font-size: 12px;
     }
   }
@@ -504,7 +504,7 @@
       }
     }
     .neo-badge__icon::after {
-      font-family: 'noto-sans', sans-serif;
+      font-family: "noto-sans", sans-serif;
       background: $badge-background-color;
       border-radius: 8px;
       box-sizing: border-box;
@@ -530,7 +530,7 @@
     }
   }
 
-  & [class*='neo-icon-'].neo-btn:empty::before {
+  & [class*="neo-icon-"].neo-btn:empty::before {
     font-size: $navbar-icon-size;
   }
 }

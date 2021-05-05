@@ -1017,6 +1017,19 @@ $button-circle-icon-size: $token-button-circle-icon-size !default;
 $button-square-size: $token-button-square-button-size !default;
 $button-square-icon-size: $token-button-square-icon-size !default;
 
+$compact-button-height: $token-button-compact-height !default;
+$compact-button-padding: $token-button-compact-padding !default;
+$compact-circle-button-font-size: $token-button-compact-font-size !default;
+
+$compact-square-button-size: $token-button-compact-square-button-size !default;
+$compact-square-button-icon-size: $token-button-compact-square-icon-size !default;
+$compact-circle-button-size: $token-button-compact-circle-button-size !default;
+$compact-circle-button-icon-size: $token-button-compact-circle-icon-size !default;
+
+// $token-button-compact-font-weight: 400;
+// $token-button-compact-line-height: 16px;
+// $token-button-compact-letter-spacing: 0px;
+
 $button-states: () !default;
 $button-states: map-merge(
   (
@@ -3516,3 +3529,57 @@ $skipNav-font-color: var(--skipNav-font-color) !default;
   --skipNav-font-color: #{$token-skip-nav-font-color};
   --skipNav-hover-color: #{$token-color-blue-600};
 }
+
+/**
+
+Component name: Treeview
+
+Location: src/scss/components/_treeview.scss
+
+$token-treeview-item-spacing: 8px;
+$token-treeview-default-bg-color: #ffffff;
+$token-treeview-min-height: 36px;
+$token-treeview-padding-y: 8px;
+$token-treeview-default-font-size: 14px;
+$token-treeview-default-line-height: 20px;
+$token-treeview-default-letter-spacing: 0px;
+$token-treeview-default-font-weight: 400;
+$token-treeview-default-font-color: #323232;
+$token-treeview-hover-bg-color: #f1f1f1;
+$token-treeview-hover-font-color: #125ab3;
+$token-treeview-disabled-font-color: #939393;
+$token-treeview-border-width: 2px;
+$token-treeview-selected-font-size: 14px;
+$token-treeview-selected-line-height: 20px;
+$token-treeview-selected-letter-spacing: 0px;
+$token-treeview-selected-font-weight: 600;
+$token-treeview-selected-font-color: #1473e6;
+
+*/
+
+:root {
+  --treeview-default-bg-colour: #{$token-treeview-default-bg-color};
+  --treeview-hover-bg-colour: #{$token-treeview-hover-bg-color};
+  --treeview-default-font-colour: #{$token-treeview-default-font-color};
+  --treeview-hover-font-colour: #{$token-treeview-hover-font-color};
+  --treeview-selected-font-colour: #{$token-treeview-selected-font-color};
+  --treeview-disabled-font-colour: #{$token-treeview-disabled-font-color};
+}
+
+$treeview-default-bg-color: var(--treeview-default-bg-colour) !default;
+$treeview-hover-bg-color: var(--treeview-hover-bg-colour) !default;
+$treeview-default-font-color: var(--treeview-default-font-colour) !default;
+$treeview-hover-font-color: var(--treeview-hover-font-colour) !default;
+$treeview-selected-font-color: var(--treeview-selected-font-colour) !default;
+$treeview-disabled-font-color: var(--treeview-disabled-font-colour) !default;
+
+$treeview-item-spacing: $token-treeview-item-spacing !default;
+$treeview-min-height: $token-treeview-min-height !default;
+$treeview-default-padding: $token-treeview-padding-y !default;
+$treeview-font-size: $token-treeview-default-font-size !default;
+$treeview-line-height: $token-treeview-default-line-height !default;
+$treeview-letter-spacing: $token-treeview-default-letter-spacing !default;
+$treeview-default-font-weight: $token-treeview-default-font-weight !default;
+$treeview-selected-font-weight: $token-treeview-selected-font-weight !default;
+$treeview-selected-border-width: $token-treeview-border-width !default;
+$treeview-expandable-icon: $token-icons-neo-icon-chevron-right !default;
