@@ -82,14 +82,6 @@
     color: $checkbox-label-disabled-font-color;
     cursor: not-allowed;
 
-    &:checked:disabled {
-      font-family: "updated-neo-icons" !important;
-      content: $checkbox-checked-icon;
-      font-size: $checkbox-icon-font-size;
-      color: $checkbox-color;
-      padding-left: 2px;
-      padding-right: 2px;
-    }
     &--indeterminate:checked:disabled {
       font-family: "updated-neo-icons" !important;
       content: $checkbox-indeterminate-icon;
@@ -106,6 +98,17 @@
       box-shadow: none;
       cursor: not-allowed;
     }
+    &::before {
+      // background-color: $checkbox-disabled-background;
+    }
+  }
+  &:checked:disabled + label {
+    // font-family: "updated-neo-icons" !important;
+    content: $checkbox-checked-icon;
+    font-size: $checkbox-icon-font-size;
+    // color: $checkbox-color;
+    // padding-left: 2px;
+    padding-right: 2px;
     &::before {
       background-color: $checkbox-disabled-background;
     }

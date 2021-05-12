@@ -295,7 +295,26 @@
     & .neo-check:not(input:disabled) + label {
       &:hover {
         // need to replace with correct token from Figma
-        background-color: $navbar-background-color-hover;
+        background-color: $group-list-item-hover;
+      }
+      // hint styles for checkboxes
+      & + .neo-input-hint {
+        white-space: nowrap;
+        margin: 0px;
+        padding-left: 40px !important;
+        padding-right: 8px !important;
+        @include rtl-selector {
+          padding-right: 8px !important;
+          padding-left: 40px !important;
+        }
+      }
+    }
+
+    // styles for hover on groups
+    & .neo-input-group {
+      padding-bottom: 8px;
+      &:hover {
+        background-color: $group-list-item-hover;
       }
     }
 
