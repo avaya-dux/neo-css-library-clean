@@ -461,7 +461,22 @@ const unicodes = {
   "zoom-out": 0xf2a9,
   "expand-all": 0xf2b1,
   "collapse-all": 0xf2b2,
+  "font-color": 0xf2b3,
+  "font-family": 0xf2b4,
+  "font-highlight": 0xf2b5,
+  "format-predefined": 0xf2b6,
+  "format-remove": 0xf2b7,
+  "indent-decrease": 0xf2b8,
+  "indent-increase": 0xf2b9,
+  "line-break": 0xf2c1,
+  "special-character": 0xf2c2,
+  superscript: 0xf2c3,
+  "link-remove": 0xf2c4,
 };
+
+// .neo-icon-legal:before {
+//   content: "\f1e8";
+// }
 
 // We call the above function to generate the base64 String that we will be inserting into our css
 
