@@ -20,7 +20,7 @@
     // @include list-item--disabled;
   }
 
-  @include list--hover('wrapper');
+  @include list--hover("wrapper");
   // @include list--borderless;
 }
 
@@ -30,6 +30,14 @@
   @extend %list;
 
   &__item {
+    &--clickable {
+      transition: background-color $global-transition-duration
+        $global-transition-timing;
+      &:hover {
+        background-color: $group-list-section-hover;
+        cursor: pointer;
+      }
+    }
     @extend %list-action-item;
 
     @include list-actions;

@@ -1,10 +1,10 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
 
 ////////
-Lists
+List Sections
 ////////
 
 - list wrapper - flexbox?
@@ -26,7 +26,7 @@ async function listItemStyles(value) {
 
   await Promise.all(
     value.Other.children.map(async (child) => {
-      if (child.name === '.base-list-item/left') {
+      if (child.name === ".base-list-item/left") {
         // console.log(child);
         // padding top/bottom
         var listItemVerticalPadding = `${child.paddingTop}px`;
@@ -40,17 +40,17 @@ async function listItemStyles(value) {
           listItemMargin,
         ];
       }
-      if (child.name === 'list-item') {
+      if (child.name === "list-item") {
         var comp = child.children.filter(
           (child) =>
             child.name ===
-            'Left Side=1) empty, Middle=1) one line, Right Side=1) empty'
+            "Left Side=1) empty, Middle=1) one line, Right Side=1) empty"
         );
         var listItemMinWidth = `${comp[0].absoluteBoundingBox.width}px`;
         var listItemMinHeight = `${comp[0].absoluteBoundingBox.height}px`;
         return [listItemMinWidth, listItemMinHeight];
       }
-      if (child.name === 'divider') {
+      if (child.name === "divider") {
         // console.log(child.children[0]);
         var divider = child.children[0];
         var listItemDividerWidth = `${divider.strokeWeight}px`;
@@ -79,27 +79,27 @@ async function listItemStyles(value) {
     // console.log(values);
     var definedValues = values.filter((value) => value != undefined);
     // console.log(definedValues);
-    listJSONObject.listItems['vertical-padding'] = {
+    listJSONObject.listItems["vertical-padding"] = {
       value: definedValues[0][0],
     };
-    listJSONObject.listItems['horizontal-padding'] = {
+    listJSONObject.listItems["horizontal-padding"] = {
       value: definedValues[0][1],
     };
-    listJSONObject.listItems['margin-right'] = { value: definedValues[0][2] };
-    listJSONObject.listItems['min-width'] = { value: definedValues[1][0] };
-    listJSONObject.listItems['min-height'] = { value: definedValues[1][1] };
-    listJSONObject.listItems['divider'] = {
+    listJSONObject.listItems["margin-right"] = { value: definedValues[0][2] };
+    listJSONObject.listItems["min-width"] = { value: definedValues[1][0] };
+    listJSONObject.listItems["min-height"] = { value: definedValues[1][1] };
+    listJSONObject.listItems["divider"] = {
       value: `${definedValues[2][0]} ${definedValues[2][1]} ${definedValues[2][2]}`,
     };
   });
 
   await fs
     .writeFile(
-      '../properties/components/listItems.json',
+      "../properties/components/listItems.json",
       JSON.stringify(listJSONObject)
     )
     .then(function () {
-      console.log('listItems.json created');
+      console.log("listItems.json created");
     });
 }
 
