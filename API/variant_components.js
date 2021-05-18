@@ -10,7 +10,8 @@ const avatarStyles = require("./components-functions/avatar_variants.js");
 const checkboxStyles = require("./components-functions/checkbox_variants.js");
 const leftnavStyles = require("./components-functions/leftnav_variants.js");
 const notificationStyles = require("./components-functions/notifications.js");
-const listStyles = require("./components-functions/list_variants.js");
+const listItemStyles = require("./components-functions/list_item_variants.js");
+const listSectionStyles = require("./components-functions/list_section_variants.js");
 const chipStyles = require("./components-functions/chip_variants.js");
 const inputStyles = require("./components-functions/input_variants.js");
 const widgetStyles = require("./components-functions/widget_variants.js");
@@ -50,7 +51,8 @@ coreFigmaFunctions
     // await checkboxStyles.checkBoxStyles(value);
     // await leftnavStyles.leftnavStyles(value);
     // await notificationStyles.notificationStyles(value);
-    // await listStyles.listItemStyles(value);
+    // await listItemStyles.listItemStyles(value);
+    await listSectionStyles.listSectionStyles(value);
     // await chipStyles.chipStyles(value);
     // await inputStyles.inputStyles(value);
     // await widgetStyles.widgetStyles(value);
@@ -63,7 +65,7 @@ coreFigmaFunctions
     // await channelIconVariants.channelIconVariants(value);
     // await breadcrumbStyles.breadcrumbStyles(value);
     // await skipNavStyles.skipNavStyles(value);
-    await treeviewStyles.treeviewStyles(value);
+    // await treeviewStyles.treeviewStyles(value);
   });
 
 // coreFigmaFunctions

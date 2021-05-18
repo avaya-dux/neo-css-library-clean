@@ -189,6 +189,12 @@
     font-size: $dropdown-font-size;
     line-height: $dropdown-line-height;
     padding: $dropdown-padding-y $dropdown-padding-x;
+
+    &[class*="neo-icon"] {
+      text-indent: -11px;
+      padding: 8px 30px 8px 30px !important;
+    }
+
     &:not(.neo-dropdown__link-header) {
       padding: $dropdown-padding-y 30px $dropdown-padding-y $dropdown-padding-x;
       @include rtl-selector {
@@ -202,7 +208,7 @@
 
     &:hover {
       background-color: $dropdown-item-hover-color;
-      color: $global-text-color;
+      color: $global-text-color !important;
       transition: $button-transition;
       transition-property: background-color;
     }
