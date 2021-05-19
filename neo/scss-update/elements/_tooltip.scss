@@ -21,8 +21,8 @@
     margin: 0;
     // do we need this?
     // min-width: 20px;
-    text-overflow: clip;
-    white-space: pre-line;
+    // text-overflow: clip;
+    white-space: pre-wrap;
     width: max-content;
     word-break: keep-all;
     word-wrap: normal;
@@ -34,7 +34,11 @@
 
     &--multiline {
       max-width: 300px;
-      word-break: initial !important;
+      // all experimental to solve long string wrap issues
+      overflow-wrap: break-word;
+      word-wrap: break-word;
+      hyphens: manual;
+      word-break: break-all !important;
     }
 
     // tooltip right
@@ -256,6 +260,17 @@
     position: absolute;
   }
 }
+
+// idea is seperate class name on focus-within
+
+// @mixin neo-tooltip-states {
+//   &--onhover:hover > &__content,
+//   &--active > &__content,
+//   &--onhover:focus-within > &__content {
+//     display: block;
+//     position: absolute;
+//   }
+// }
 
 // %neo-tooltip {
 //   box-sizing: border-box;

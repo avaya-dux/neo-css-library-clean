@@ -1,7 +1,1 @@
-{
-  "listSection": {
-    "width": { "value": "304px" },
-    "padding": { "value": "8px" },
-    "action-padding": { "value": "0px" }
-  }
-}
+{"listSection":{"hover-bg-color":{"value":"{color.base/200.value}"},"width":{"value":"304px"},"padding":{"value":"8px"},"action-padding":{"value":"0px"},"default-bg-color":{"value":"{color.base/100.value}"}}}

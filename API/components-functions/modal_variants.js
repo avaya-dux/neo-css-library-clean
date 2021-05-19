@@ -1,5 +1,5 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
 
@@ -38,19 +38,19 @@ async function modalStyles(value) {
   };
 
   const modalVariants = value.Overlay.children.filter(
-    (comps) => comps.name === 'modal'
+    (comps) => comps.name === "modal"
   )[0].children;
 
   for (variant of modalVariants) {
-    if (variant.name === 'Type=action') {
+    if (variant.name === "Type=action") {
       //   console.log(variant.effects);
       // modal border styles
       // border width
-      modalJSONObject.modal['border-width'] = {
+      modalJSONObject.modal["border-width"] = {
         value: `${variant.strokeWeight}px`,
       };
       // border style
-      modalJSONObject.modal['border-style'] = {
+      modalJSONObject.modal["border-style"] = {
         value: variant.strokes[0].type.toLowerCase(),
       };
       // border color
@@ -62,21 +62,21 @@ async function modalStyles(value) {
           modalBorderColorID
         )
         .then((value) => {
-          modalJSONObject.modal['border-color'] = {
+          modalJSONObject.modal["border-color"] = {
             value: `{color.${value.nodes[
               modalBorderColorID
             ].document.name.toLowerCase()}.value}`,
           };
         });
       // modal box shadow offsets
-      modalJSONObject.modal['box-shadow-y-offset'] = {
+      modalJSONObject.modal["box-shadow-y-offset"] = {
         value: `${variant.effects[0].offset.y}px`,
       };
-      modalJSONObject.modal['box-shadow-x-offset'] = {
+      modalJSONObject.modal["box-shadow-x-offset"] = {
         value: `${variant.effects[0].offset.x}px`,
       };
       // modal box shadow radius
-      modalJSONObject.modal['box-shadow-radius'] = {
+      modalJSONObject.modal["box-shadow-radius"] = {
         value: `${variant.effects[0].radius}px`,
       };
       // modal box shadow color
@@ -88,25 +88,25 @@ async function modalStyles(value) {
           modalBoxShadowColorID
         )
         .then((value) => {
-          modalJSONObject.modal['box-shadow-color'] = {
+          modalJSONObject.modal["box-shadow-color"] = {
             value: `{shadows.${value.nodes[modalBoxShadowColorID].document.name
-              .replace('-', '')
+              .replace("-", "")
               .toLowerCase()}.color.value}`,
           };
         });
       // modal body margin top
-      modalJSONObject.modal['body-margin'] = {
+      modalJSONObject.modal["body-margin"] = {
         value: `${variant.itemSpacing}px`,
       };
       // modal padding
-      modalJSONObject.modal['padding-y'] = {
+      modalJSONObject.modal["padding-y"] = {
         value: `${variant.paddingTop}px`,
       };
-      modalJSONObject.modal['padding-x'] = {
+      modalJSONObject.modal["padding-x"] = {
         value: `${variant.paddingRight}px`,
       };
       // border-radius
-      modalJSONObject.modal['border-radius'] = {
+      modalJSONObject.modal["border-radius"] = {
         value: `${variant.cornerRadius}px`,
       };
       // background-color
@@ -118,7 +118,7 @@ async function modalStyles(value) {
           modalBgColorID
         )
         .then((value) => {
-          modalJSONObject.modal['background-color'] = {
+          modalJSONObject.modal["background-color"] = {
             value: `{color.${value.nodes[
               modalBgColorID
             ].document.name.toLowerCase()}.value}`,
@@ -137,19 +137,19 @@ async function modalStyles(value) {
             modalHeaderTextTokenID
           ].document.name.toLowerCase();
           // font-size
-          modalJSONObject.modal['header-font-size'] = {
+          modalJSONObject.modal["header-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
           };
           // font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-          modalJSONObject.modal['header-font-weight'] = {
+          modalJSONObject.modal["header-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
           // line-height
-          modalJSONObject.modal['header-line-height'] = {
+          modalJSONObject.modal["header-line-height"] = {
             value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
           };
           // letter-spacing
-          modalJSONObject.modal['header-letter-spacing'] = {
+          modalJSONObject.modal["header-letter-spacing"] = {
             value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
           };
         });
@@ -162,7 +162,7 @@ async function modalStyles(value) {
           modalHeaderColorID
         )
         .then((value) => {
-          modalJSONObject.modal['header-font-color'] = {
+          modalJSONObject.modal["header-font-color"] = {
             value: `{color.${value.nodes[
               modalHeaderColorID
             ].document.name.toLowerCase()}.value}`,
@@ -174,11 +174,11 @@ async function modalStyles(value) {
   console.log(modalJSONObject);
   await fs
     .writeFile(
-      '../properties/components/modal.json',
+      "../properties/components/modal.json",
       JSON.stringify(modalJSONObject)
     )
     .then(function () {
-      console.log('modal.json created');
+      console.log("modal.json created");
     });
 }
 
