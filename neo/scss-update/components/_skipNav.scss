@@ -23,6 +23,6 @@
     outline: $global-outline-color auto 2px;
   }
   &:hover {
-    color: $skipNav-font-color;
+    color: $skipNav-font-color !important;
   }
 }
