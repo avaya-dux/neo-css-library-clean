@@ -12,6 +12,8 @@ const replace = require("./icon-utility-files/icon-replacement-string");
 
 const replacelib = require("replace-in-file");
 
+const prettier = require("prettier");
+
 Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
   var amendedArg = arg1.replace(replace.stringsToReplace, "");
 
@@ -570,8 +572,37 @@ const generateIcons = async () => {
           to: `url(data:application/font-woff;base64,${contents_in_base64.toString()}) format('woff')`,
         };
 
-        replacelib(replaceSource).then((results) => {
+        replacelib(replaceSource).then(async (results) => {
           console.log("Replacement results:", results);
+          const prettierConfig = await prettier.resolveConfig(
+            "../build/css/updated-neo-icons.css"
+          );
+          await fs
+            .readFile("../build/css/updated-neo-icons.css")
+            .then(async (fileContent) => {
+              await fs
+                .writeFile(
+                  "../build/css/updated-neo-icons.css",
+                  prettier.format(fileContent.toString(), {
+                    ...prettierConfig,
+                    filepath: "../build/css/updated-neo-icons.css",
+                  })
+                )
+                .then(async () => {
+                  await fs
+                    .readFile("../build/css/updated-neo-icons.css")
+                    .then(async (result) => {
+                      //   console.log(result.toString());
+                      await fs.writeFile(
+                        "../neo/scss-update/icons.scss",
+                        result.toString()
+                      );
+                    })
+                    .catch((error) => {
+                      console.log(error);
+                    });
+                });
+            });
           console.log("updated-neo-icons.css generated in build/ folder");
         });
       }
