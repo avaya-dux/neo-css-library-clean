@@ -101,7 +101,7 @@ async function writeIconContentFromURL(URL, imagePath) {
 
 // this function is to seperate out the functionality that generates the Arrays of information necessary to pull icon content from Figma
 
-async function makeIconFunctionArrays(figmaApiKey, figmaId) {
+async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
   // we get all icon Components
   var iconsOnAll = await getIconsComponents(figmaId, figmaApiKey);
 
@@ -121,7 +121,8 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
 
     var compName = component.name.toLowerCase();
     // we skip over the template icon
-    if (compName === "template") {
+    // TO-DO: Make it so that function requests only new or updated icons
+    if (compName === "template" || !iconNames.includes(compName)) {
       return;
     }
 
@@ -263,7 +264,7 @@ async function generateIconFiles(iconArrays, URLs, fileType) {
 
 // this function combines all the above functionality to get icon URLs, pull data from them and write that data to file
 
-async function pullIcons(figmaApiKey, figmaId) {
+async function pullIcons(figmaApiKey, figmaId, iconNames) {
   // make directories for both svgs and pngs
 
   await fs.mkdir("../properties/assets/icons/svgs", {
@@ -274,7 +275,11 @@ async function pullIcons(figmaApiKey, figmaId) {
     recursive: true,
   });
 
-  const iconFunctionArrays = await makeIconFunctionArrays(figmaApiKey, figmaId);
+  const iconFunctionArrays = await makeIconFunctionArrays(
+    figmaApiKey,
+    figmaId,
+    iconNames
+  );
 
   // we get the iconSVG URLs and pull content from them
 

@@ -398,7 +398,7 @@
       display: block;
     }
     .neo-multiselect__content ul li {
-      font-weight: $table-filter-font-weight;
+      font-weight: 400;
       &:before {
         visibility: hidden;
         // hard-coded value needs to change

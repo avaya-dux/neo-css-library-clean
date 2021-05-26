@@ -35,10 +35,11 @@
     &--multiline {
       max-width: 300px;
       // all experimental to solve long string wrap issues
-      overflow-wrap: break-word;
+      // overflow-wrap: break-word;
       word-wrap: break-word;
-      hyphens: manual;
-      word-break: break-all !important;
+      white-space: normal !important;
+      // hyphens: manual;
+      word-break: normal !important;
     }
 
     // tooltip right
