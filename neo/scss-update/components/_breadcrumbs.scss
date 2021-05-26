@@ -46,6 +46,9 @@
         display: inline-block;
         margin: 0px $breadcrumb-slash-spacing;
         content: "/";
+        // @include rtl-selector {
+        //   content: "\\";
+        // }
         font-size: $breadcrumbs-link-font-size;
         font-weight: $breadcrumbs-link-font-weight;
         letter-spacing: $breadcrumbs-link-letter-spacing;
@@ -90,6 +93,10 @@
     align-self: center;
     & .neo-btn:not(:last-child) {
       margin-right: $token-breadcrumb-breadcrumb-button-spacing;
+      @include rtl-selector {
+        margin-right: 0px;
+        margin-left: $token-breadcrumb-breadcrumb-button-spacing;
+      }
     }
   }
 }

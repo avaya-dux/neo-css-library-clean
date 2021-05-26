@@ -32,7 +32,7 @@
     &::before,
     &::after {
       border-radius: $switch-border-radius;
-      content: '';
+      content: "";
       position: absolute;
       transition: $switch-transition;
     }
@@ -115,14 +115,16 @@
   min-width: $switch-width;
   // hard-coded for now
   // margin: 8px 0;
-  padding-left: $switch-width + $input-padding-x;
+  // hard-coded for now
+  // padding-left: $switch-width + $input-padding-x;
+  padding-left: 27px;
   position: relative;
 
   color: $input-label-color;
 
   @include rtl-selector {
     padding-left: 0;
-    padding-right: $switch-width + $input-padding-x;
+    padding-right: 27px;
   }
   &:focus {
     // outline-offset: 15px;

@@ -3437,7 +3437,7 @@ $modal-content-z: 1000 !default;
 $modal-width: 550px !default;
 $modal-shadow-color: $token-modal-box-shadow-color !default;
 $modal-padding-y: $token-modal-padding-y !default;
-$modal-margin: $global-spacer-large !default;
+$modal-margin: $token-modal-button-margin !default;
 $modal-shadow: $token-modal-box-shadow-x-offset $token-modal-box-shadow-y-offset
   $token-modal-box-shadow-radius $modal-shadow-color !default;
 $modal-radius: $token-modal-border-radius !default;
