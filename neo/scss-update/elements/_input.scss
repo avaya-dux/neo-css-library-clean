@@ -35,6 +35,16 @@
     border-color: $input-border-hover-color;
   }
 
+  &:hover + .neo-input-edit__icon,
+  &:hover + .neo-input-editable__close {
+    visibility: visible;
+  }
+
+  &:focus + .neo-input-edit__icon,
+  &:focus + .neo-input-editable__close {
+    visibility: visible;
+  }
+
   &[readonly],
   &-readonly {
     background-color: transparent;
@@ -186,6 +196,7 @@
   & .neo-input-edit__icon,
   & .neo-input-editable__close {
     border-radius: $input-border-radius;
+    visibility: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -204,4 +215,8 @@
       font-size: $token-input-input-close-button-size;
     }
   }
+  // &:hover .neo-input-edit__icon,
+  // &:hover .neo-input-editable__close {
+  //   visibility: visible;
+  // }
 }

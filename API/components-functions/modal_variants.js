@@ -43,7 +43,11 @@ async function modalStyles(value) {
 
   for (variant of modalVariants) {
     if (variant.name === "Type=action") {
-      //   console.log(variant.effects);
+      // modal button margin
+      modalJSONObject.modal["button-margin"] = {
+        value: `${variant.children[2].itemSpacing}px`,
+      };
+      console.log(variant.children[2]);
       // modal border styles
       // border width
       modalJSONObject.modal["border-width"] = {
@@ -133,9 +137,8 @@ async function modalStyles(value) {
           modalHeaderTextTokenID
         )
         .then((value) => {
-          var fontTokenName = value.nodes[
-            modalHeaderTextTokenID
-          ].document.name.toLowerCase();
+          var fontTokenName =
+            value.nodes[modalHeaderTextTokenID].document.name.toLowerCase();
           // font-size
           modalJSONObject.modal["header-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,

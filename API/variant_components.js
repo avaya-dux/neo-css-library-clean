@@ -52,14 +52,14 @@ coreFigmaFunctions
     // await leftnavStyles.leftnavStyles(value);
     // await notificationStyles.notificationStyles(value);
     // await listItemStyles.listItemStyles(value);
-    await listSectionStyles.listSectionStyles(value);
+    // await listSectionStyles.listSectionStyles(value);
     // await chipStyles.chipStyles(value);
     // await inputStyles.inputStyles(value);
     // await widgetStyles.widgetStyles(value);
     // await tooltipStyles.tooltipStyles(value);
     // await accordionStyles.accordionStyles(value);
     // await sheetStyles.sheetStyles(value);
-    // await modalStyles.modalStyles(value);
+    await modalStyles.modalStyles(value);
     // await tableStyles.tableStyles(value);
     // await dropdownStyles.dropdownStyles(value);
     // await channelIconVariants.channelIconVariants(value);
