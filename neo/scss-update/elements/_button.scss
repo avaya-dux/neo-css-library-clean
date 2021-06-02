@@ -623,7 +623,7 @@
   border-radius: $button-border-radius;
   outline: 0;
   color: $button-text-color;
-  cursor: pointer;
+  // cursor: pointer;
   &::before {
     font-size: $button-square-icon-size;
   }

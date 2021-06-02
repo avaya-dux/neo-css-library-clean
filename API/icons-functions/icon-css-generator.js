@@ -474,8 +474,8 @@ const unicodes = {
   "special-character": 0xf2c2,
   superscript: 0xf2c3,
   "link-remove": 0xf2c4,
-  "camera-lens-off": 0xf2c5,
-  "camera-lens-on": 0xf2c6,
+  "camera-ext-off": 0xf2c5,
+  "camera-ext-on": 0xf2c6,
 };
 
 // .neo-icon-legal:before {

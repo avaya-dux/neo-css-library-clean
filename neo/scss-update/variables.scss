@@ -1409,14 +1409,19 @@ $channel-icon-large-size: $token-channel-icon-large-size !default;
 :root {
   --notification-elevation-color: #{$token-notification-elevation-color};
   --notification-success-color: #{$token-notification-success-color};
+  --notification-success-border-color: #{$token-notification-success-color-border};
   --notification-success-icon-color: #{$token-notification-success-icon-color};
   --notification-warning-color: #{$token-notification-warning-color};
+  --notification-warning-border-color: #{$token-notification-warning-color-border};
   --notification-warning-icon-color: #{$token-notification-warning-icon-color};
   --notification-alert-color: #{$token-notification-alert-color};
+  --notification-alert-border-color: #{$token-notification-alert-color-border};
   --notification-alert-icon-color: #{$token-notification-alert-icon-color};
   --notification-info-color: #{$token-notification-info-color};
+  --notification-info-border-color: #{$token-notification-info-color-border};
   --notification-info-icon-color: #{$token-notification-info-icon-color};
   --notification-event-color: #{$token-notification-event-color};
+  --notification-event-border-color: #{$token-notification-event-color-border};
   --notification-event-icon-color: #{$token-notification-event-icon-color};
 }
 //   .neo-light {
@@ -1475,6 +1480,8 @@ $notification-elevation-x-offset: $token-notification-elevation-x-offset !defaul
 $notification-elevation-y-offset: $token-notification-elevation-y-offset !default;
 $notification-elevation-radius: $token-notification-elevation-radius !default;
 $notification-elevation-color: var(--notification-elevation-color) !default;
+$notification-border-width: $token-notification-border-width !default;
+$notification-border-style: $token-notification-border-style !default;
 
 $neo-notification-colors: () !default;
 
@@ -1487,6 +1494,21 @@ $neo-notification-colors: map-merge(
     event: var(--notification-event-color),
   ),
   $neo-notification-colors
+);
+
+// notification border colors
+
+$neo-notification-border-colors: () !default;
+
+$neo-notification-border-colors: map-merge(
+  (
+    success: var(--notification-success-border-color),
+    warning: var(--notification-warning-border-color),
+    alert: var(--notification-alert-border-color),
+    info: var(--notification-info-border-color),
+    event: var(--notification-event-border-color),
+  ),
+  $neo-notification-border-colors
 );
 
 // updated icons

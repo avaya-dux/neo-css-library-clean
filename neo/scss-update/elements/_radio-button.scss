@@ -16,6 +16,7 @@
   // visibility: hidden;
   opacity: 0;
   position: absolute;
+  z-index: -1;
 
   &:focus {
     + label {
@@ -50,7 +51,7 @@
     &::after {
       background-color: $radio-background;
       border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
-      content: '';
+      content: "";
       display: block;
       height: $radio-active-ellipse-size;
       width: $radio-active-ellipse-size;
@@ -70,7 +71,7 @@
       background-color: $radio-background;
       border: 1px solid $radio-border;
       border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
-      content: '';
+      content: "";
       display: block;
       height: $radio-size;
       width: $radio-size;
@@ -83,7 +84,7 @@
   &:checked + label::after {
     background-color: $radio-background-active-color;
     border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
-    content: '';
+    content: "";
     display: block;
     height: $radio-active-ellipse-size;
     width: $radio-active-ellipse-size;

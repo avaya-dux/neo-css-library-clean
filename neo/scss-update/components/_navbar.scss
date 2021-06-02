@@ -131,6 +131,7 @@
 
 .neo-nav {
   // avatar dropdown in Navbar
+  // TO-DO: extend these styles to Avatar dropdowns more generally
   & .neo-dropdown {
     display: flex;
     flex-direction: column;
@@ -139,19 +140,42 @@
       margin-right: 0px;
       margin-left: 16px;
     }
-    & .neo-dropdown__link.neo-dropdown__link-header {
+
+    & .neo-dropdown__link-header {
       padding: 0px;
       &::after {
         color: $global-text-color;
+        padding: 0 0 0 8px;
       }
     }
+
     & > .neo-avatar {
       margin-left: 12px;
       margin-right: 24px;
-      background: none;
       @include rtl-selector {
         margin-left: 24px;
         margin-right: 12px;
+      }
+      &:not(:empty) {
+        background: none;
+      }
+      &--small:empty::after {
+        padding: 0 0 0 36px;
+        @include rtl-selector {
+          padding: 0 36px 0 0;
+        }
+      }
+      &--medium:empty::after {
+        padding: 0 0 0 44px;
+        @include rtl-selector {
+          padding: 0 44px 0 0;
+        }
+      }
+      &--large:empty::after {
+        padding: 0 0 0 56px;
+        @include rtl-selector {
+          padding: 0 56px 0 0;
+        }
       }
       display: flex;
       justify-content: initial;
@@ -405,10 +429,10 @@
   & h4 {
     margin: 0;
     margin-left: 16px;
-    @include rtl-selector {
-      margin-left: 0px;
-      margin-right: 16px;
-    }
+    // @include rtl-selector {
+    //   margin-left: 0px;
+    //   margin-right: 16px;
+    // }
   }
   height: 100%;
   & .neo-badge__navbutton {
