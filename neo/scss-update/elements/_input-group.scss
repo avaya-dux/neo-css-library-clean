@@ -19,6 +19,11 @@
     pointer-events: none;
   }
 
+  .neo-radio + label,
+  .neo-check + label {
+    pointer-events: initial !important;
+  }
+
   label:not(.neo-switch):not(.neo-label) + label {
     padding-top: 0;
   }
