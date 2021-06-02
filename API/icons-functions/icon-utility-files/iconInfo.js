@@ -1,1 +1,1 @@
-export const iconInfo = [['accountuseradd', 'user-add', '', 'account'],
+export const iconInfo = [['actioncameraextoff', 'camera-ext-off', '', 'action'],['actioncameraexton', 'camera-ext-on', '', 'action'],

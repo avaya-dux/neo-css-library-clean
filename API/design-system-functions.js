@@ -33,7 +33,8 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["account/user-add"]
+      ["action/camera-ext-off",
+      "action/camera-ext-on"]
     )
   )
   .catch((error) => console.log(error));
