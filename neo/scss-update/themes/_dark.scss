@@ -110,15 +110,21 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
   --notification-success-color: #{$token-color-green-800};
   --notification-success-icon-color: #{$token-color-green-200};
+  --notification-success-border-color: #{$token-color-green-600};
   --notification-warning-color: #{$token-color-orange-800};
   --notification-warning-icon-color: #{$token-color-orange-200};
+  --notification-warning-border-color: #{$token-color-orange-600};
   --notification-alert-color: #{$token-color-red-800};
   --notification-alert-icon-color: #{$token-color-red-200};
+  --notification-alert-border-color: #{$token-color-red-600};
   --notification-info-color: #{$token-color-blue-800};
   --notification-info-icon-color: #{$token-color-blue-200};
+  --notification-info-border-color: #{$token-color-blue-600};
   --notification-event-color: #{$token-color-base-800};
   --notification-event-icon-color: #{$token-color-base-200};
+  --notification-event-border-color: #{$token-color-base-600};
 }
+
 :root .neo-dark {
   --clear-close-color: #{$token-color-base-400};
   --clear-close-hover-color: #{$token-color-base-100};

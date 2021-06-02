@@ -141,7 +141,8 @@
 
 .neo-notification {
   // background-color: $notification-background;
-  // border: 0;
+  border-width: $notification-border-width;
+  border-style: $notification-border-style;
   border-radius: $notification-border-radius;
   color: $notification-font-color;
   display: flex;
@@ -166,6 +167,11 @@
     &--#{$name} .neo-notification__icon:before {
       font-family: "updated-neo-icons";
       content: $icon;
+    }
+  }
+  @each $name, $color in $neo-notification-border-colors {
+    &--#{$name} {
+      border-color: $color;
     }
   }
 

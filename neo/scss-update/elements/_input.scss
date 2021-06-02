@@ -35,14 +35,23 @@
     border-color: $input-border-hover-color;
   }
 
-  &:hover + .neo-input-edit__icon,
-  &:hover + .neo-input-editable__close {
+  // hover to display close button
+
+  &:not(:disabled):hover + .neo-input-edit__icon,
+  &:not(:disabled):hover + .neo-input-editable__close {
     visibility: visible;
   }
 
-  &:focus + .neo-input-edit__icon,
-  &:focus + .neo-input-editable__close {
+  // focus to display close button
+
+  &:not(:disabled):focus + .neo-input-edit__icon,
+  &:not(:disabled):focus + .neo-input-editable__close {
     visibility: visible;
+  }
+
+  &:disabled + .neo-input-edit__icon,
+  &:disabled + .neo-input-editable__close {
+    display: none;
   }
 
   &[readonly],
@@ -99,6 +108,7 @@
     letter-spacing: $input-placeholder-letter-spacing;
     line-height: $input-placeholder-line-height;
     color: $input-placeholder-font-color;
+    opacity: 1;
   }
   &::-moz-placeholder {
     font-size: $input-placeholder-font-size;
@@ -106,6 +116,7 @@
     letter-spacing: $input-placeholder-letter-spacing;
     line-height: $input-placeholder-line-height;
     color: $input-placeholder-font-color;
+    opacity: 1;
   }
   &:-ms-input-placeholder {
     font-size: $input-placeholder-font-size;
@@ -113,6 +124,7 @@
     letter-spacing: $input-placeholder-letter-spacing;
     line-height: $input-placeholder-line-height;
     color: $input-placeholder-font-color;
+    opacity: 1;
   }
   &::placeholder {
     font-size: $input-placeholder-font-size;
@@ -120,6 +132,7 @@
     letter-spacing: $input-placeholder-letter-spacing;
     line-height: $input-placeholder-line-height;
     color: $input-placeholder-font-color;
+    opacity: 1;
   }
 
   // @include input--editable;
@@ -175,6 +188,12 @@
   .neo-form-control:not(.neo-form-control--disabled)
     &:hover:not(:focus-within) {
     border-color: $input-border-hover-color;
+  }
+  // test styles to display close buttons on hover
+
+  &:hover .neo-input-edit__icon,
+  &:hover .neo-input-editable__close {
+    visibility: visible;
   }
   min-height: $input-height;
   width: $input-width;

@@ -16,6 +16,7 @@
     // padding-bottom: $input-padding-y;
     /// PADDING HERE PROBLEMATIC???
     padding-bottom: 4px;
+    pointer-events: none;
   }
 
   label:not(.neo-switch):not(.neo-label) + label {
