@@ -71,7 +71,8 @@
 
   .neo-modal__footer {
     // hard-coded for now
-    $footer-padding: $modal-message-margin-bottom 0px 0px 0px;
+    // $footer-padding: $modal-message-margin-bottom 0px 0px 0px;
+    $footer-padding: 0px;
     display: flex;
     justify-content: flex-end;
 
