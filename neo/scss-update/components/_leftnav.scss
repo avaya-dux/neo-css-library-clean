@@ -1,5 +1,93 @@
 // updated leftnav styles
 
+// .neo-leftnav__main {
+//   & > a {
+//     white-space: nowrap !important;
+//   }
+// }
+
+// .neo-leftnav--wrapper {
+//   transition: max-width 0.2s ease !important;
+//   &.test-condensed {
+//     & .neo-leftnav {
+//       margin-bottom: 56px;
+//     }
+//     & .neo-leftnav__main {
+//       min-width: 240px;
+//       & > a {
+//         padding: 16px !important;
+//         & span {
+//           flex-grow: 1;
+//           display: flex;
+//           justify-content: flex-end;
+//           font-size: 16px;
+//           color: var(--leftnav-default-color);
+//           &:before {
+//             transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// .test-condensed-leftNav {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-between;
+//   max-width: 55px !important;
+//   .test-condensed-leftNav-main {
+//     max-width: 55px !important;
+//     & > a {
+//       font-size: 0px;
+//       padding: 16px !important;
+//       max-width: 55px !important;
+//       & span {
+//         visibility: hidden;
+//       }
+//       &:before {
+//         margin: 0px !important;
+//       }
+//     }
+//   }
+// }
+
+// .test-condensed-leftNav-toggle {
+//   & li {
+//     &::after {
+//       display: none;
+//     }
+//     & > a {
+//       &:before {
+//         font-size: 16px;
+//         margin: 0px;
+//       }
+//     }
+//   }
+//   .neo-leftnav__main {
+//     min-width: 55px !important;
+//     max-width: 55px !important;
+//   }
+//   max-width: 55px !important;
+//   position: absolute;
+//   bottom: 0;
+//   & > a {
+//     padding: 16px !important;
+//     &:before {
+//       margin: 0px !important;
+//     }
+//   }
+// }
+
+// .test-condensed-leftNav .test-condensed-leftNav-toggle {
+//   left: 0;
+//   & li > a {
+//     &::before {
+//       transform: rotate(180deg);
+//     }
+//   }
+// }
+
 @mixin leftnav-main {
   &__main {
     background-color: $leftnav-background-color;
@@ -11,8 +99,19 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-
+    // // test styles
+    // &:hover {
+    //   cursor: pointer;
+    //   color: $leftnav-main-hover-color;
+    //   background-color: $leftnav-hover-background-color;
+    //   transition: $global-hover-transition;
+    //   &:before {
+    //     color: $leftnav-main-hover-color;
+    //   }
+    // }
+    // //
     & > a {
+      white-space: nowrap !important;
       &:focus {
         // outline: 0;
       }
@@ -70,7 +169,9 @@
         cursor: pointer;
         color: $leftnav-main-hover-color;
         background-color: $leftnav-hover-background-color;
-        transition: $global-hover-transition;
+        // transition: $global-hover-transition;
+        transition: background-color $global-transition-duration
+          $global-transition-timing;
         &:before {
           color: $leftnav-main-hover-color;
         }
@@ -156,6 +257,9 @@
         }
         &.expandable:after {
           color: $leftnav-main-default-disabled-color;
+        }
+        &:focus {
+          outline: none;
         }
       }
     }
@@ -386,11 +490,105 @@
 //   }
 // }
 
+@mixin leftnav-condensed {
+  &.neo-leftnav--condensed {
+    position: relative;
+    & .neo-leftnav {
+      //hard-coded space between last list item and toggle
+      margin-bottom: 56px;
+    }
+    & .neo-leftnav__main {
+      min-width: 240px;
+      & > a {
+        padding: 16px !important;
+        & span {
+          flex-grow: 1;
+          display: flex;
+          justify-content: flex-end;
+          font-size: 16px;
+          color: var(--leftnav-default-color);
+          &:before {
+            transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+          }
+        }
+      }
+      &--expand {
+        & > a > span {
+          &:before {
+            transition: $accordion-icon-transition;
+            transform: rotate(90deg) $accordion-active-icon-animation;
+            @include rtl-selector {
+              transform: rotate(90deg);
+            }
+          }
+        }
+      }
+    }
+    & .neo-leftnav--condensed__toggle {
+      & li {
+        &::after {
+          display: none;
+        }
+        & > a {
+          &:before {
+            font-size: 16px;
+            margin: 0px;
+          }
+        }
+      }
+      .neo-leftnav__main {
+        min-width: 55px !important;
+        max-width: 55px !important;
+      }
+      max-width: 55px !important;
+      position: absolute;
+      bottom: 0;
+      & > a {
+        padding: 16px !important;
+        &:before {
+          margin: 0px !important;
+        }
+      }
+    }
+
+    &.hide-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 55px !important;
+      & .neo-leftnav__main {
+        max-width: 55px !important;
+        & > a {
+          font-size: 0px;
+          padding: 16px !important;
+          max-width: 55px !important;
+          & span {
+            visibility: hidden;
+          }
+          &:before {
+            margin: 0px !important;
+          }
+        }
+      }
+      .neo-leftnav--condensed__toggle {
+        left: 0;
+        & li > a {
+          &::before {
+            transform: rotate(180deg);
+          }
+        }
+      }
+    }
+  }
+}
+
 .neo-leftnav {
   &--wrapper {
     height: inherit;
     max-width: 240px;
     overflow: auto;
+    transition: max-width 0.2s ease !important;
+    @include leftnav-condensed;
     &::-webkit-scrollbar {
       width: 0;
     }
@@ -401,6 +599,7 @@
   }
 
   // @include leftnav-close-btn;
+
   @include leftnav-main;
   @include leftnav-sub;
   @include leftnav-title;

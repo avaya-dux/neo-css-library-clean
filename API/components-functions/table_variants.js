@@ -122,9 +122,8 @@ async function tableStyles(value) {
           headerFontTokenID
         )
         .then((value) => {
-          var headerFontTokenName = value.nodes[
-            headerFontTokenID
-          ].document.name.toLowerCase();
+          var headerFontTokenName =
+            value.nodes[headerFontTokenID].document.name.toLowerCase();
           // header-font-size
           tableJSONObject.table["header-cell-font-size"] = {
             value: `{Web-typography.${headerFontTokenName}.fontSize.value}`,
@@ -220,9 +219,8 @@ async function tableStyles(value) {
               filterFontTokenID
             )
             .then((value) => {
-              var filterFontTokenName = value.nodes[
-                filterFontTokenID
-              ].document.name.toLowerCase();
+              var filterFontTokenName =
+                value.nodes[filterFontTokenID].document.name.toLowerCase();
               // header-font-size
               tableJSONObject.table["filter-font-size"] = {
                 value: `{Web-typography.${filterFontTokenName}.fontSize.value}`,
@@ -300,7 +298,8 @@ async function tableStyles(value) {
           };
           // border style
           tableJSONObject.table["row-border-style"] = {
-            value: variant.children[0].children[1].strokes[0].type.toLowerCase(),
+            value:
+              variant.children[0].children[1].strokes[0].type.toLowerCase(),
           };
           // border color
           var headerCellBorderColorID =
@@ -379,30 +378,30 @@ async function tableStyles(value) {
       };
       // nested row border
       // border width
-      tableJSONObject.table["nested-row-border-width"] = {
-        value: `${component.children[13].children[1].size.y}px`,
-      };
+      // tableJSONObject.table["nested-row-border-width"] = {
+      //   value: `${component.children[13].children[1].size.y}px`,
+      // };
       // border style - does not exist on Rectangle in Figma
       // tableJSONObject.table['nested-row-border-style'] = {
       //   value: component.children[13].children[1].strokes[0].type.toLowerCase(),
       // };
       // border color
       // console.log(component.children[13].children[1]);
-      var nestedCellBorderColorID =
-        component.children[13].children[1].styles.fill;
-      await coreFigmaFunctions
-        .getFigmaTokenNameByID(
-          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
-          nestedCellBorderColorID
-        )
-        .then((value) => {
-          tableJSONObject.table["nested-row-border-color"] = {
-            value: `{color.${value.nodes[
-              nestedCellBorderColorID
-            ].document.name.toLowerCase()}.value}`,
-          };
-        });
+      // var nestedCellBorderColorID =
+      //   component.children[13].children[1].styles.fill;
+      // await coreFigmaFunctions
+      //   .getFigmaTokenNameByID(
+      //     coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+      //     coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+      //     nestedCellBorderColorID
+      //   )
+      //   .then((value) => {
+      //     tableJSONObject.table["nested-row-border-color"] = {
+      //       value: `{color.${value.nodes[
+      //         nestedCellBorderColorID
+      //       ].document.name.toLowerCase()}.value}`,
+      //     };
+      //   });
       // nested row background color
       var nestedCellBackgroundColorID = component.children[13].styles.fills;
       await coreFigmaFunctions
@@ -487,7 +486,8 @@ async function tableStyles(value) {
       };
       // border style
       tableJSONObject.table["sheet-border-style"] = {
-        value: component.children[0].children[0].children[0].children[1].children[1].children[8].strokes[0].type.toLowerCase(),
+        value:
+          component.children[0].children[0].children[0].children[1].children[1].children[8].strokes[0].type.toLowerCase(),
       };
       // border color
       var filterSheetBorderColorID =
