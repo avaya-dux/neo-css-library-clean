@@ -49,8 +49,8 @@ coreFigmaFunctions
     // await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
-    // await leftnavStyles.leftnavStyles(value);
-    await notificationStyles.notificationStyles(value);
+    await leftnavStyles.leftnavStyles(value);
+    // await notificationStyles.notificationStyles(value);
     // await listItemStyles.listItemStyles(value);
     // await listSectionStyles.listSectionStyles(value);
     // await chipStyles.chipStyles(value);

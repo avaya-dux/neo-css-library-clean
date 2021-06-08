@@ -370,6 +370,8 @@
     min-height: $table-header-cell-min-height;
     border-bottom: $table-header-cell-border-width
       $table-header-cell-border-style $table-header-cell-border-color;
+    border-top: $table-header-cell-border-width $table-header-cell-border-style
+      $table-header-cell-border-color;
 
     &.check {
       width: 5%;
@@ -552,7 +554,7 @@
     .expand--active {
       // may need to tweak speed as necessary
       transition: transform 0.15s ease;
-      transform: rotate(180deg);
+      transform: rotate(90deg);
     }
   }
 }
@@ -562,9 +564,11 @@
   &--active {
     & > td {
       padding: $table-nested-row-wrapper-padding-y
+        $token-table-nested-row-wrapper-padding-x
+        $token-table-nested-row-wrapper-padding-x
         $token-table-nested-row-wrapper-padding-x !important;
-      border-bottom: $table-nested-row-border-width solid
-        $table-nested-row-border-color;
+      // border-bottom: $table-nested-row-border-width solid;
+      // $table-nested-row-border-color;
     }
     .neo-table {
       visibility: initial !important;

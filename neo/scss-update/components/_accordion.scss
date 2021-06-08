@@ -91,7 +91,7 @@
 
   &__item--active {
     .neo-accordion__header::after {
-      transform: translate(0, -50%) $accordion-active-icon-animation;
+      transform: translate(0, -50%) $accordion-active-icon-animation-left-down;
     }
     .neo-accordion__body {
       height: auto;

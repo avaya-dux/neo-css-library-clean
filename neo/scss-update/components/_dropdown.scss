@@ -369,7 +369,8 @@
 @mixin neo-dropdown-avatar {
   .neo-avatar {
     margin: 0 $dropdown-avatar-sm-margin-x 0 0; /* Custom margin-right for avatar within dropdown items */
-    display: inline-block;
+    // display: inline-block;
+    display: inline-flex;
     @include rtl-selector {
       margin: {
         left: $dropdown-avatar-sm-margin-x;

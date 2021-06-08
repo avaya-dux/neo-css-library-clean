@@ -117,7 +117,7 @@
     }
     &--#{$name}:focus,
     &--#{$name}:active {
-      transition: $global-hover-transition;
+      // transition: $global-hover-transition;
       background-color: map-get($value, pressed-color);
       // box-shadow: $button-box-shadow;
       background-image: none;
