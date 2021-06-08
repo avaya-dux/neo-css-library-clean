@@ -102,7 +102,7 @@
     --table-row-hover-color: #{$token-color-blue-800};
     --table-row-font-active-color: #{$token-color-blue-200};
     --table-nested-row-background-color: #{$token-color-base-800};
-    --table-nested-row-border-color: #{$token-color-blue-600};
+    // --table-nested-row-border-color: #{$token-color-blue-600};
     --table-sheet-border-color: #{$token-color-base-600};
     --table-filter-row-background-color: #{$token-color-base-900};
   }
@@ -117,7 +117,7 @@
     --table-row-hover-color: #{$token-table-row-hover-color};
     --table-row-font-active-color: #{$token-table-row-font-active-color};
     --table-nested-row-background-color: #{$token-table-nested-row-background-color};
-    --table-nested-row-border-color: #{$token-table-nested-row-border-color};
+    // --table-nested-row-border-color: #{$token-table-nested-row-border-color};
     --table-sheet-border-color: #{$token-table-sheet-border-color};
     --table-filter-row-background-color: #{$token-table-filters-row-background-color};
   }

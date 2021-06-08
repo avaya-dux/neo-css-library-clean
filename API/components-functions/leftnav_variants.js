@@ -109,9 +109,8 @@ async function leftnavStyles(value) {
         titlefontStyleTokenID
       )
       .then((value) => {
-        var fontTokenName = value.nodes[
-          titlefontStyleTokenID
-        ].document.name.toLowerCase();
+        var fontTokenName =
+          value.nodes[titlefontStyleTokenID].document.name.toLowerCase();
         // font-size
         leftnavJSONObject.leftnav["title-font-size"] = {
           value: `{Web-typography.${fontTokenName}.fontSize.value}`,
@@ -165,9 +164,8 @@ async function leftnavStyles(value) {
         linkfontStyleTokenID
       )
       .then((value) => {
-        var fontTokenName = value.nodes[
-          linkfontStyleTokenID
-        ].document.name.toLowerCase();
+        var fontTokenName =
+          value.nodes[linkfontStyleTokenID].document.name.toLowerCase();
         // font-size
         leftnavJSONObject.leftnav["link-font-size"] = {
           value: `{Web-typography.${fontTokenName}.fontSize.value}`,
@@ -191,7 +189,7 @@ async function leftnavStyles(value) {
     // console.log(mainVariant);
     if (
       mainVariant.name ===
-      "active=TRUE, expandable=TRUE, icon=TRUE, state=default"
+      "label=TRUE, active=TRUE, expandable=TRUE, icon=TRUE, state=default"
     ) {
       // collapse icon size
       leftnavJSONObject.leftnav["collapse-icon-font-size"] = {
@@ -260,7 +258,7 @@ async function leftnavStyles(value) {
     }
     if (
       mainVariant.name ===
-      "active=TRUE, expandable=TRUE, icon=TRUE, state=hover"
+      "label=TRUE, active=TRUE, expandable=TRUE, icon=TRUE, state=hover"
     ) {
       // leftnav hover background color
       var hoverBGColorTokenID = mainVariant.children[0].styles.fills;
@@ -297,7 +295,7 @@ async function leftnavStyles(value) {
     }
     if (
       mainVariant.name ===
-      "active=TRUE, expandable=TRUE, icon=TRUE, state=disabled"
+      "label=TRUE, active=TRUE, expandable=TRUE, icon=TRUE, state=disabled"
     ) {
       // leftnav active disabled color
       var activeDisabledColorTokenID =
@@ -327,9 +325,8 @@ async function leftnavStyles(value) {
           textTokenID
         )
         .then((value) => {
-          var fontTokenName = value.nodes[
-            textTokenID
-          ].document.name.toLowerCase();
+          var fontTokenName =
+            value.nodes[textTokenID].document.name.toLowerCase();
           // font-size
           leftnavJSONObject.leftnav["active-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
@@ -350,7 +347,7 @@ async function leftnavStyles(value) {
     }
     if (
       mainVariant.name ===
-      "active=FALSE, expandable=TRUE, icon=TRUE, state=default"
+      "label=TRUE, active=FALSE, expandable=TRUE, icon=TRUE, state=default"
     ) {
       // leftnav default color
       var defaultColorTokenID =
@@ -379,9 +376,8 @@ async function leftnavStyles(value) {
           textTokenID
         )
         .then((value) => {
-          var fontTokenName = value.nodes[
-            textTokenID
-          ].document.name.toLowerCase();
+          var fontTokenName =
+            value.nodes[textTokenID].document.name.toLowerCase();
           // font-size
           leftnavJSONObject.leftnav["default-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
@@ -402,7 +398,7 @@ async function leftnavStyles(value) {
     }
     if (
       mainVariant.name ===
-      "active=FALSE, expandable=TRUE, icon=TRUE, state=disabled"
+      "label=TRUE, active=FALSE, expandable=TRUE, icon=TRUE, state=disabled"
     ) {
       // leftnav default disabled color
       var defaultDisabledColorTokenID =
@@ -521,9 +517,8 @@ async function leftnavStyles(value) {
           textTokenID
         )
         .then((value) => {
-          var fontTokenName = value.nodes[
-            textTokenID
-          ].document.name.toLowerCase();
+          var fontTokenName =
+            value.nodes[textTokenID].document.name.toLowerCase();
           // font-size
           leftnavJSONObject.leftnav["sub-active-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
@@ -570,9 +565,8 @@ async function leftnavStyles(value) {
           textTokenID
         )
         .then((value) => {
-          var fontTokenName = value.nodes[
-            textTokenID
-          ].document.name.toLowerCase();
+          var fontTokenName =
+            value.nodes[textTokenID].document.name.toLowerCase();
           // font-size
           leftnavJSONObject.leftnav["sub-default-font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
@@ -614,7 +608,7 @@ async function leftnavStyles(value) {
     }
   }
 
-  // console.log(leftnavJSONObject);
+  console.log(leftnavJSONObject);
 
   await fs
     .writeFile(
