@@ -20,8 +20,9 @@
       margin: initial !important;
     }
 
-    &:focus {
-      // outline: none;
+    &:focus,
+    &:focus-visible {
+      outline-offset: 0px;
     }
 
     &::after {

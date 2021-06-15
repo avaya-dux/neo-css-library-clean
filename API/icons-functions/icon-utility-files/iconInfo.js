@@ -1,1 +1,1 @@
-export const iconInfo = [['actioncameraextoff', 'camera-ext-off', '', 'action'],['actioncameraexton', 'camera-ext-on', '', 'action'],
+export const iconInfo = [['contentlabel', 'label', '', 'content'],

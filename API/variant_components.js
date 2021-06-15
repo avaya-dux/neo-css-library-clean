@@ -45,11 +45,11 @@ coreFigmaFunctions
     // await switchStyles.switchStyles(value);
     // await radioStyles.radioStyles(value);
     // await tabStyles.tabStyles(value);
-    // await navbarStyles.navbarStyles(value);
+    await navbarStyles.navbarStyles(value);
     // await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
-    await leftnavStyles.leftnavStyles(value);
+    // await leftnavStyles.leftnavStyles(value);
     // await notificationStyles.notificationStyles(value);
     // await listItemStyles.listItemStyles(value);
     // await listSectionStyles.listSectionStyles(value);
