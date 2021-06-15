@@ -6,7 +6,7 @@
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
-  transition: $tab-transition;
+  // transition: $tab-transition;
   @include rtl-selector {
     margin: {
       left: initial;
@@ -40,6 +40,7 @@
 
     &:focus-within {
       outline: $global-outline-color auto 2px;
+      outline-offset: -4px;
     }
 
     // @include rtl-selector {
@@ -92,11 +93,13 @@
       color: $tab-default-color;
     }
     // hover states that affect whole Component
-    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):hover {
+    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):hover,
+    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):focus-within {
       background-color: $tab-hover-bg-color;
     }
-    &:hover {
-      transition: $global-hover-transition;
+    &:hover,
+    &:focus-within {
+      transition: $tab-hover-transition;
       a {
         &:before {
           color: $tab-item-hover-color;
@@ -122,7 +125,7 @@
     border-width: 2px;
     border-left-color: $tab-action-active-border-color;
     &:hover {
-      transition: $global-hover-transition;
+      transition: $tab-hover-transition;
       border-left-color: $tab-item-hover-color;
       cursor: pointer;
       a {
@@ -173,6 +176,7 @@
 
     &:focus-within {
       outline: $global-outline-color auto 2px;
+      outline-offset: -3px;
     }
 
     // &:last-child {
@@ -244,14 +248,16 @@
       // }
     }
 
-    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):hover {
-      transition: $global-hover-transition;
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):hover,
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):focus-within {
+      transition: $tab-hover-transition;
       background-color: $tab-hover-bg-color;
     }
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       cursor: pointer;
-      transition: $global-hover-transition;
+      // transition: $tab-hover-transition;
       a {
         &:before {
           color: $tab-item-hover-color;
@@ -298,7 +304,7 @@
     }
     &:hover {
       cursor: pointer;
-      transition: $global-hover-transition;
+      transition: $tab-hover-transition;
       a {
         color: $tab-item-hover-color;
         // text-shadow: 0.5px 0 0 $tab-item-hover-color;

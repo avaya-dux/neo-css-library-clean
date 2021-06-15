@@ -476,6 +476,7 @@ const unicodes = {
   "link-remove": 0xf2c4,
   "camera-ext-off": 0xf2c5,
   "camera-ext-on": 0xf2c6,
+  label: 0xf2c7,
 };
 
 // .neo-icon-legal:before {

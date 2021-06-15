@@ -1,93 +1,5 @@
 // updated leftnav styles
 
-// .neo-leftnav__main {
-//   & > a {
-//     white-space: nowrap !important;
-//   }
-// }
-
-// .neo-leftnav--wrapper {
-//   transition: max-width 0.2s ease !important;
-//   &.test-condensed {
-//     & .neo-leftnav {
-//       margin-bottom: 56px;
-//     }
-//     & .neo-leftnav__main {
-//       min-width: 240px;
-//       & > a {
-//         padding: 16px !important;
-//         & span {
-//           flex-grow: 1;
-//           display: flex;
-//           justify-content: flex-end;
-//           font-size: 16px;
-//           color: var(--leftnav-default-color);
-//           &:before {
-//             transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
-
-// .test-condensed-leftNav {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: space-between;
-//   max-width: 55px !important;
-//   .test-condensed-leftNav-main {
-//     max-width: 55px !important;
-//     & > a {
-//       font-size: 0px;
-//       padding: 16px !important;
-//       max-width: 55px !important;
-//       & span {
-//         visibility: hidden;
-//       }
-//       &:before {
-//         margin: 0px !important;
-//       }
-//     }
-//   }
-// }
-
-// .test-condensed-leftNav-toggle {
-//   & li {
-//     &::after {
-//       display: none;
-//     }
-//     & > a {
-//       &:before {
-//         font-size: 16px;
-//         margin: 0px;
-//       }
-//     }
-//   }
-//   .neo-leftnav__main {
-//     min-width: 55px !important;
-//     max-width: 55px !important;
-//   }
-//   max-width: 55px !important;
-//   position: absolute;
-//   bottom: 0;
-//   & > a {
-//     padding: 16px !important;
-//     &:before {
-//       margin: 0px !important;
-//     }
-//   }
-// }
-
-// .test-condensed-leftNav .test-condensed-leftNav-toggle {
-//   left: 0;
-//   & li > a {
-//     &::before {
-//       transform: rotate(180deg);
-//     }
-//   }
-// }
-
 @mixin leftnav-main {
   &__main {
     background-color: $leftnav-background-color;
@@ -104,7 +16,7 @@
     //   cursor: pointer;
     //   color: $leftnav-main-hover-color;
     //   background-color: $leftnav-hover-background-color;
-    //   transition: $global-hover-transition;
+    //   transition: $tab-hover-transition;
     //   &:before {
     //     color: $leftnav-main-hover-color;
     //   }
@@ -112,8 +24,9 @@
     // //
     & > a {
       white-space: nowrap !important;
-      &:focus {
-        // outline: 0;
+      &:not(.neo-icon-page-first):focus,
+      &:not(.neo-icon-page-first):focus-visible {
+        outline-offset: -4px;
       }
       width: 100%;
       min-height: $leftnav-main-max-height;
@@ -132,7 +45,7 @@
       font-weight: $leftnav-main-default-font-weight;
       line-height: $leftnav-main-default-font-line-height;
       letter-spacing: $leftnav-main-default-font-letter-spacing;
-      // transition: $global-hover-transition;
+      // transition: $tab-hover-transition;
       @include rtl-selector {
         border-left: none;
         border-right: $leftnav-main-active-border-width
@@ -165,11 +78,13 @@
           right: auto;
         }
       }
-      &:hover {
+      &:hover,
+      &:focus,
+      &:focus-visible {
         cursor: pointer;
         color: $leftnav-main-hover-color;
         background-color: $leftnav-hover-background-color;
-        // transition: $global-hover-transition;
+        // transition: $tab-hover-transition;
         transition: background-color $global-transition-duration
           $global-transition-timing;
         &:before {
@@ -209,7 +124,7 @@
             color: $leftnav-main-hover-color;
             border-color: $leftnav-main-hover-color;
             background-color: $leftnav-hover-background-color;
-            transition: $global-hover-transition;
+            transition: $tab-hover-transition;
             &:before {
               color: $leftnav-main-hover-color;
             }
@@ -318,7 +233,7 @@
       font-weight: $leftnav-sub-default-font-weight;
       line-height: $leftnav-sub-default-font-line-height;
       letter-spacing: $leftnav-sub-default-font-letter-spacing;
-      // transition: $global-hover-transition;
+      // transition: $tab-hover-transition;
       // @include rtl-selector {
       //   border-left: none;
       //   border-right: $leftnav-sub-active-border-width
@@ -326,8 +241,10 @@
       //   padding: 0 $leftnav-sub-padding-horizontal 0 0;
       // }
       &:focus,
-      &:active {
-        // outline: 0;
+      &:focus-visible {
+        color: $leftnav-sub-active-hover-color;
+        background-color: $leftnav-hover-background-color;
+        transition: $tab-hover-transition;
       }
       &::before {
         content: "";
@@ -348,11 +265,11 @@
     &:hover {
       cursor: pointer;
       background-color: $leftnav-hover-background-color;
-      transition: $global-hover-transition;
+      transition: $tab-hover-transition;
       & > a {
         color: $leftnav-sub-active-hover-color;
         background-color: $leftnav-hover-background-color;
-        transition: $global-hover-transition;
+        transition: $tab-hover-transition;
       }
     }
     &--active {
@@ -380,13 +297,13 @@
       }
 
       &:hover {
-        transition: $global-hover-transition;
+        transition: $tab-hover-transition;
         // border-color: $leftnav-sub-active-hover-color;
         background-color: $leftnav-hover-background-color;
         & > a {
           color: $leftnav-sub-active-hover-color;
           background-color: $leftnav-hover-background-color;
-          transition: $global-hover-transition;
+          transition: $tab-hover-transition;
         }
       }
     }
@@ -457,7 +374,7 @@
       cursor: pointer;
       & > a {
         color: $link-hover-color;
-        transition: $global-hover-transition;
+        transition: $tab-hover-transition;
       }
     }
     min-height: $leftnav-link-height;

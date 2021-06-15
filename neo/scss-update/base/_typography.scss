@@ -3,6 +3,16 @@
 @import url("https://use.typekit.net/jyd4rjy.css");
 // @import url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/noto_sans.css');
 
+// importing Roboto Mono Regular 400
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+// Code
+
+.neo-code {
+  font-family: "Roboto Mono", monospace;
+}
+
 // Headings
 h1,
 h2,

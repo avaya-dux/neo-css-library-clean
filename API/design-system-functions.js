@@ -33,8 +33,7 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["action/camera-ext-off",
-      "action/camera-ext-on"]
+      ["content/label"]
     )
   )
   .catch((error) => console.log(error));
