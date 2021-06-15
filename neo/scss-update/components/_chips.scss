@@ -241,12 +241,15 @@
   // @include chip--disabled;
 
   &.neo-chip--expandable {
-    &:focus {
-      outline: $global-outline-color auto 2px;
-    }
+    // &:focus {
+    //   outline: $global-outline-color auto 2px;
+    // }
     @each $name, $color in $neo-chip-hover-colors {
       &--#{$name}:not(.neo-chip--static):hover,
+      &--#{$name}:not(.neo-chip--static):focus,
+      &--#{$name}:not(.neo-chip--static):focus-visible,
       &--#{$name}--selected {
+        outline-offset: 0px !important;
         transition: $chip-transition;
         cursor: pointer;
         background-color: $color;
@@ -270,12 +273,15 @@
   }
   &.neo-chip--close {
     cursor: pointer;
-    &:focus {
-      outline: $global-outline-color auto 2px;
-    }
+    // &:focus {
+    //   outline: $global-outline-color auto 2px;
+    // }
     @each $name, $color in $neo-chip-hover-colors {
       &--#{$name}:not(.neo-chip--static):hover,
+      &--#{$name}:not(.neo-chip--static):focus,
+      &--#{$name}:not(.neo-chip--static):focus-visible,
       &--#{$name}--selected {
+        outline-offset: 0px !important;
         transition: $chip-transition;
         cursor: pointer;
         background-color: $color;

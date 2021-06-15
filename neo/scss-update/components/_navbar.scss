@@ -163,19 +163,44 @@
       &:not(:empty) {
         background: none;
       }
-      &--small:empty::after {
+      // &.neo-avatar--empty {
+      //   &.neo-avatar--small::after {
+      //     padding: 0 0 0 36px;
+      //     @include rtl-selector {
+      //       padding: 0 36px 0 0;
+      //     }
+      //   }
+      //   &.neo-avatar--medium::after {
+      //     padding: 0 0 0 44px;
+      //     @include rtl-selector {
+      //       padding: 0 44px 0 0;
+      //     }
+      //   }
+      //   &.neo-avatar--large::after {
+      //     padding: 0 0 0 56px;
+      //     @include rtl-selector {
+      //       padding: 0 56px 0 0;
+      //     }
+      //   }
+      // }
+      &--small:empty::after,
+      &.neo-avatar--small:empty::after {
         padding: 0 0 0 36px;
         @include rtl-selector {
           padding: 0 36px 0 0;
         }
       }
-      &--medium:empty::after {
+      &--medium:empty,
+      &.neo-avatar--medium:empty::after {
+        // &::after {
         padding: 0 0 0 44px;
         @include rtl-selector {
           padding: 0 44px 0 0;
         }
+        // }
       }
-      &--large:empty::after {
+      &--large:empty::after,
+      &.neo-avatar--large:empty::after {
         padding: 0 0 0 56px;
         @include rtl-selector {
           padding: 0 56px 0 0;
@@ -221,15 +246,18 @@
       height: 100% !important;
       width: $navbar-icon-button-width !important;
       background-color: $navbar-background-color;
-      &:focus {
+      &:focus,
+      &:focus-visible {
+        outline-offset: -2px !important;
         box-shadow: none;
-        outline: rgba(20, 115, 230, 1) auto 2px;
+        // outline: rgba(20, 115, 230, 1) auto 2px;
       }
       &::before {
         color: $navbar-default-icon-color;
       }
     }
-    &:hover {
+    &:hover,
+    &:focus-within {
       transition: $button-transition;
       // background-color: $navbar-background-color-hover;
       & .neo-badge__navbutton--content {

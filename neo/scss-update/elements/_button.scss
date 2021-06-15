@@ -10,7 +10,7 @@
   display: inline-flex;
   font-weight: $button-font-weight;
   // height: $button-height;
-  outline: 0;
+  // outline: 0;
   padding: $button-padding;
 
   width: auto;
@@ -23,6 +23,11 @@
   &:hover {
     transition: $button-transition;
     transition-property: background-color, color, box-shadow;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline-offset: 0px;
   }
 
   &:not(:empty)::before {
@@ -52,32 +57,6 @@
   @extend %button;
 }
 
-// // primary class
-
-// .neo-btn-primary {
-//   @extend %button;
-//   @each $name, $value in $button-states {
-//     &--#{$name} {
-//       background-color: map-get($value, color);
-//       @include pulse('button', $name, map-get($value, color));
-//     }
-//     &--#{$name}:hover,
-//     &--#{$name}:focus,
-//     &--#{$name}:active {
-//       background-color: map-get($value, hover-color);
-//       box-shadow: $button-box-shadow;
-//     }
-
-//     &--#{$name}[disabled] {
-//       background-color: map-get($value, disabled-color);
-//       &:hover {
-//         cursor: not-allowed;
-//         box-shadow: none;
-//       }
-//     }
-//   }
-// }
-
 @mixin button-animations() {
 }
 
@@ -105,7 +84,8 @@
       //
       @include pulse("button", $name, map-get($value, color-rgb));
     }
-    &--#{$name}:hover {
+    &--#{$name}:hover,
+    &--#{$name}:focus {
       //
       transition-delay: 0s, 0.15s;
       transition: background-position
@@ -115,7 +95,7 @@
       background-position: 0% 100%;
       //
     }
-    &--#{$name}:focus,
+
     &--#{$name}:active {
       // transition: $global-hover-transition;
       background-color: map-get($value, pressed-color);
@@ -125,7 +105,7 @@
     }
 
     &--#{$name}:focus {
-      outline: $global-outline-color auto 2px;
+      // outline: $global-outline-color auto 2px;
     }
 
     &--#{$name}[disabled] {
@@ -138,37 +118,6 @@
     }
   }
 }
-
-// secondary class
-
-// .neo-btn-secondary {
-//   @extend %button;
-//   background-color: $button-secondary-background-color;
-//   border-width: $button-secondary-border-width;
-//   border-style: $button-secondary-border-style;
-//   @each $name, $value in $button-states {
-//     &--#{$name} {
-//       border-color: map-get($value, color);
-//       color: map-get($value, color);
-//       @include pulse('button', $name, map-get($value, color));
-//     }
-//     &--#{$name}:hover,
-//     &--#{$name}:active,
-//     &--#{$name}:focus {
-//       border-color: map-get($value, hover-color);
-//       color: map-get($value, hover-color);
-//       box-shadow: $button-box-shadow;
-//     }
-//     &--#{$name}[disabled] {
-//       border-color: map-get($value, disabled-color);
-//       color: map-get($value, disabled-color);
-//       &:hover {
-//         cursor: not-allowed;
-//         box-shadow: none;
-//       }
-//     }
-//   }
-// }
 
 .neo-btn-secondary {
   @extend %button;
@@ -198,7 +147,8 @@
       color: map-get($value, color);
       @include pulse("button", $name, map-get($value, color-rgb));
     }
-    &--#{$name}:hover {
+    &--#{$name}:hover,
+    &--#{$name}:focus {
       transition-property: background-position, border-color, color;
       transition-timing-function: $global-transition-timing;
       transition-duration: $global-transition-duration;
@@ -211,8 +161,7 @@
       background-position: 0% 100%;
       //
     }
-    &--#{$name}:active,
-    &--#{$name}:focus {
+    &--#{$name}:active {
       transition-property: background-color, border-color, color;
       transition-timing-function: $global-transition-timing;
       transition-duration: $global-transition-duration;
@@ -223,7 +172,7 @@
       background-image: none;
     }
     &--#{$name}:focus {
-      outline: $global-outline-color auto 2px;
+      // outline: $global-outline-color auto 2px;
     }
     &--#{$name}[disabled] {
       border-color: map-get($value, disabled-color);
@@ -288,7 +237,8 @@
       color: map-get($value, color);
       @include pulse("button", $name, map-get($value, color-rgb));
     }
-    &--#{$name}:hover {
+    &--#{$name}:hover,
+    &--#{$name}:focus {
       transition-property: background-position, background-color, color;
       transition-timing-function: $global-transition-timing;
       transition-duration: $global-transition-duration;
@@ -300,14 +250,13 @@
       background-position: 0% 100%;
       //
     }
-    &--#{$name}:active,
-    &--#{$name}:focus {
+    &--#{$name}:active {
       color: map-get($value, pressed-color);
       background-color: $button-tertiary-hover-background-color;
       background-image: none;
     }
     &--#{$name}:focus {
-      outline: $global-outline-color auto 2px;
+      // outline: $global-outline-color auto 2px;
     }
     &--#{$name}[disabled] {
       background-image: none;
@@ -337,7 +286,7 @@
     transition-property: background-color, color, box-shadow;
   }
 
-  outline: 0;
+  // outline: 0;
   color: $button-text-color;
   cursor: pointer;
   &::before {
@@ -350,32 +299,13 @@
       font-size: $compact-circle-button-icon-size;
     }
   }
+  &:focus,
+  &:focus-visible {
+    outline-offset: 0px;
+  }
 
   // primary class
 
-  // &-primary {
-  //   // remove extra colored circle from buttons
-  //   border: 0;
-  //   @each $name, $value in $button-states {
-  //     &--#{$name} {
-  //       background-color: map-get($value, color);
-  //       @include pulse('button', $name, map-get($value, color));
-  //     }
-  //     &--#{$name}:hover,
-  //     &--#{$name}:active,
-  //     &--#{$name}:focus {
-  //       background-color: map-get($value, hover-color);
-  //       box-shadow: $button-box-shadow;
-  //     }
-  //     &--#{$name}[disabled] {
-  //       background-color: map-get($value, disabled-color);
-  //       &:hover {
-  //         cursor: not-allowed;
-  //         box-shadow: none;
-  //       }
-  //     }
-  //   }
-  // }
   &-primary {
     // remove extra colored circle from buttons
     border: 0;
@@ -401,7 +331,8 @@
         // background-color: map-get($value, color);
         @include pulse("button", $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover {
+      &--#{$name}:hover,
+      &--#{$name}:focus {
         //
         transition: background-position
           $global-transition-duration
@@ -413,8 +344,7 @@
         // background-color: map-get($value, hover-color);
         // box-shadow: $button-box-shadow;
       }
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:active {
         transition: $global-hover-transition;
         background-color: map-get($value, pressed-color);
         // box-shadow: $button-box-shadow;
@@ -422,7 +352,7 @@
         // background-size: 0%;
       }
       &--#{$name}:focus {
-        outline: $global-outline-color auto 2px;
+        // outline: $global-outline-color auto 2px;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -437,35 +367,8 @@
 
   // secondary class
 
-  // &-secondary {
-  //   border-width: $button-secondary-border-width;
-  //   border-style: $button-secondary-border-style;
-  //   background-color: $button-secondary-background-color;
-  //   @each $name, $value in $button-states {
-  //     &--#{$name} {
-  //       border-color: map-get($value, color);
-  //       color: map-get($value, color);
-  //       @include pulse('button', $name, map-get($value, color));
-  //     }
-  //     &--#{$name}:hover,
-  //     &--#{$name}:active,
-  //     &--#{$name}:focus {
-  //       border-color: map-get($value, hover-color);
-  //       color: map-get($value, hover-color);
-  //       box-shadow: $button-box-shadow;
-  //     }
-  //     &--#{$name}[disabled] {
-  //       border-color: map-get($value, disabled-color);
-  //       color: map-get($value, disabled-color);
-  //       &:hover {
-  //         cursor: not-allowed;
-  //         box-shadow: none;
-  //       }
-  //     }
-  //   }
-  // }
-
   &-secondary {
+    outline-offset: 1px !important;
     border-width: $button-secondary-border-width;
     border-style: $button-secondary-border-style;
     // background-color: $button-secondary-background-color;
@@ -491,7 +394,8 @@
         color: map-get($value, color);
         @include pulse("button", $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover {
+      &--#{$name}:hover,
+      &--#{$name}:focus {
         //
         transition: background-position
           $global-transition-duration
@@ -504,8 +408,7 @@
         color: map-get($value, hover-color);
         // box-shadow: $button-box-shadow;
       }
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:active {
         border-color: map-get($value, pressed-color);
         color: map-get($value, pressed-color);
         // box-shadow: $button-box-shadow;
@@ -527,30 +430,6 @@
 
   // tertiary class
 
-  // &-tertiary {
-  //   border: 0;
-  //   background-color: transparent;
-  //   @each $name, $value in $button-states {
-  //     &--#{$name} {
-  //       color: map-get($value, color);
-  //       @include pulse('button', $name, map-get($value, color));
-  //     }
-  //     &--#{$name}:hover,
-  //     &--#{$name}:active,
-  //     &--#{$name}:focus {
-  //       color: map-get($value, hover-color);
-  //       background-color: $button-tertiary-hover-background-color;
-  //     }
-  //     &--#{$name}[disabled] {
-  //       color: map-get($value, disabled-color);
-  //       background-color: transparent;
-  //       &:hover {
-  //         cursor: not-allowed;
-  //         box-shadow: none;
-  //       }
-  //     }
-  //   }
-  // }
   &-tertiary {
     border: 0;
     // background-color: transparent;
@@ -575,7 +454,8 @@
         color: map-get($value, color);
         @include pulse("button", $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover {
+      &--#{$name}:hover,
+      &--#{$name}:focus {
         //
         transition: background-position
           $global-transition-duration
@@ -587,14 +467,13 @@
         color: map-get($value, hover-color);
         // background-color: $button-tertiary-hover-background-color;
       }
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:active {
         background-image: none;
         color: map-get($value, pressed-color);
         background-color: $button-tertiary-hover-background-color;
       }
       &--#{$name}:focus {
-        outline: $global-outline-color auto 2px;
+        // outline: $global-outline-color auto 2px;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -621,11 +500,15 @@
   transition: $button-transition;
   transition-property: background-color, color, box-shadow;
   border-radius: $button-border-radius;
-  outline: 0;
+  // outline: 0;
   color: $button-text-color;
   // cursor: pointer;
   &::before {
     font-size: $button-square-icon-size;
+  }
+  &:focus,
+  &:focus-visible {
+    outline-offset: 0px;
   }
 
   &--compact {
@@ -638,29 +521,6 @@
 
   // primary class
 
-  // &-primary {
-  //   // remove extra colored circle from buttons
-  //   border: 0;
-  //   @each $name, $value in $button-states {
-  //     &--#{$name} {
-  //       background-color: map-get($value, color);
-  //       @include pulse('button', $name, map-get($value, color));
-  //     }
-  //     &--#{$name}:hover,
-  //     &--#{$name}:active,
-  //     &--#{$name}:focus {
-  //       background-color: map-get($value, hover-color);
-  //       box-shadow: $button-box-shadow;
-  //     }
-  //     &--#{$name}[disabled] {
-  //       background-color: map-get($value, disabled-color);
-  //       &:hover {
-  //         cursor: not-allowed;
-  //         box-shadow: none;
-  //       }
-  //     }
-  //   }
-  // }
   &-primary {
     // remove extra colored circle from buttons
     border: 0;
@@ -685,7 +545,8 @@
         // background-color: map-get($value, color);
         @include pulse("button", $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover {
+      &--#{$name}:hover,
+      &--#{$name}:focus {
         //
         transition: background-position
           $global-transition-duration
@@ -697,8 +558,7 @@
         // background-color: map-get($value, hover-color);
         // box-shadow: $button-box-shadow;
       }
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:active {
         transition: $global-hover-transition;
         background-color: map-get($value, pressed-color);
         // box-shadow: $button-box-shadow;
@@ -706,7 +566,7 @@
         // background-size: 0%;
       }
       &--#{$name}:focus {
-        outline: $global-outline-color auto 2px;
+        // outline: $global-outline-color auto 2px;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -721,34 +581,8 @@
 
   // secondary class
 
-  // &-secondary {
-  //   border-width: $button-secondary-border-width;
-  //   border-style: $button-secondary-border-style;
-  //   background-color: $button-secondary-background-color;
-  //   @each $name, $value in $button-states {
-  //     &--#{$name} {
-  //       border-color: map-get($value, color);
-  //       color: map-get($value, color);
-  //       @include pulse('button', $name, map-get($value, color));
-  //     }
-  //     &--#{$name}:hover,
-  //     &--#{$name}:active,
-  //     &--#{$name}:focus {
-  //       border-color: map-get($value, hover-color);
-  //       color: map-get($value, hover-color);
-  //       box-shadow: $button-box-shadow;
-  //     }
-  //     &--#{$name}[disabled] {
-  //       border-color: map-get($value, disabled-color);
-  //       color: map-get($value, disabled-color);
-  //       &:hover {
-  //         cursor: not-allowed;
-  //         box-shadow: none;
-  //       }
-  //     }
-  //   }
-  // }
   &-secondary {
+    outline-offset: 1px !important;
     border-width: $button-secondary-border-width;
     border-style: $button-secondary-border-style;
     // background-color: $button-secondary-background-color;
@@ -774,7 +608,8 @@
         color: map-get($value, color);
         @include pulse("button", $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover {
+      &--#{$name}:hover,
+      &--#{$name}:focus {
         //
         cursor: pointer;
         background-position: 0% 100%;
@@ -783,8 +618,7 @@
         color: map-get($value, hover-color);
         // box-shadow: $button-box-shadow;
       }
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:active {
         background-image: none;
         border-color: map-get($value, pressed-color);
         color: map-get($value, pressed-color);
@@ -793,7 +627,7 @@
         background-image: none;
       }
       &--#{$name}:focus {
-        outline: $global-outline-color auto 2px;
+        // outline: $global-outline-color auto 2px;
       }
       &--#{$name}[disabled] {
         background-image: none;
@@ -809,30 +643,6 @@
 
   // tertiary class
 
-  // &-tertiary {
-  //   background-color: transparent;
-  //   border: 0;
-  //   @each $name, $value in $button-states {
-  //     &--#{$name} {
-  //       color: map-get($value, color);
-  //       @include pulse('button', $name, map-get($value, color));
-  //     }
-  //     &--#{$name}:hover,
-  //     &--#{$name}:active,
-  //     &--#{$name}:focus {
-  //       color: map-get($value, hover-color);
-  //       background-color: $button-tertiary-hover-background-color;
-  //     }
-  //     &--#{$name}[disabled] {
-  //       color: map-get($value, disabled-color);
-  //       background-color: transparent;
-  //       &:hover {
-  //         cursor: not-allowed;
-  //         box-shadow: none;
-  //       }
-  //     }
-  //   }
-  // }
   &-tertiary {
     // background-color: transparent;
     border: 0;
@@ -857,7 +667,8 @@
         color: map-get($value, color);
         @include pulse("button", $name, map-get($value, color-rgb));
       }
-      &--#{$name}:hover {
+      &--#{$name}:hover,
+      &--#{$name}:focus {
         //
         cursor: pointer;
         background-position: 0% 100%;
@@ -865,14 +676,13 @@
         color: map-get($value, hover-color);
         // background-color: $button-tertiary-hover-background-color;
       }
-      &--#{$name}:active,
-      &--#{$name}:focus {
+      &--#{$name}:active {
         color: map-get($value, pressed-color);
         background-color: $button-tertiary-hover-background-color;
         background-image: none;
       }
       &--#{$name}:focus {
-        outline: $global-outline-color auto 2px;
+        // outline: $global-outline-color auto 2px;
       }
       &--#{$name}[disabled] {
         background-image: none;

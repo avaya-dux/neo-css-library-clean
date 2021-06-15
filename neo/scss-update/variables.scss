@@ -22,7 +22,7 @@
   --neo-color-blue-100: #{$token-color-blue-100};
   --neo-color-purple-500: #{$token-color-purple-500};
   --neo-color-orange-600: #{$token-color-orange-600};
-  --neo-color-orange-600: #{$token-color-base-0};
+  --neo-color-base-0: #{$token-color-base-0};
   --neo-color-green-600: #{$token-color-green-600};
   --neo-color-red-900: #{$token-color-red-900};
   --neo-color-red-100: #{$token-color-red-100};
@@ -35,7 +35,7 @@
   --neo-color-orange-900: #{$token-color-orange-900};
   --neo-color-green-800: #{$token-color-green-800};
   --neo-color-green-900: #{$token-color-green-900};
-  --neo-color-base-100: #{$token-color-base-1000};
+  --neo-color-base-1000: #{$token-color-base-1000};
   --neo-color-orange-400: #{$token-color-orange-400};
   --neo-color-blue-800: #{$token-color-blue-800};
   --neo-color-purple-100: #{$token-color-purple-100};
@@ -238,6 +238,9 @@ $global-transition-timing: $token-interactivity-motion-ease !default;
 // creating a variable for global hover animation
 $global-hover-transition: background-color, color,
   $global-transition-duration $global-transition-timing !default;
+// custom tab hover transition
+$tab-hover-transition: background-color $global-transition-duration
+  $global-transition-timing !default;
 $global-border-color: var-color-name(global-border) !default;
 $global-border-color-darker: var-color-name(global-border) !default;
 $global-text-direction: ltr !default;
