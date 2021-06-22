@@ -190,7 +190,7 @@
           padding: 0 36px 0 0;
         }
       }
-      &--medium:empty,
+      &--medium:empty::after,
       &.neo-avatar--medium:empty::after {
         // &::after {
         padding: 0 0 0 44px;

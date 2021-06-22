@@ -108,7 +108,8 @@
       // outline: $global-outline-color auto 2px;
     }
 
-    &--#{$name}[disabled] {
+    &--#{$name}[disabled],
+    &--#{$name}--disabled {
       background-color: map-get($value, disabled-color);
       background-image: none;
       &:hover {
@@ -174,7 +175,8 @@
     &--#{$name}:focus {
       // outline: $global-outline-color auto 2px;
     }
-    &--#{$name}[disabled] {
+    &--#{$name}[disabled],
+    &--#{$name}--disabled {
       border-color: map-get($value, disabled-color);
       color: map-get($value, disabled-color);
       background-color: $button-secondary-background-color;
@@ -258,7 +260,8 @@
     &--#{$name}:focus {
       // outline: $global-outline-color auto 2px;
     }
-    &--#{$name}[disabled] {
+    &--#{$name}[disabled],
+    &--#{$name}--disabled {
       background-image: none;
       color: map-get($value, disabled-color);
       // added to fix issue with disabled state
@@ -354,7 +357,8 @@
       &--#{$name}:focus {
         // outline: $global-outline-color auto 2px;
       }
-      &--#{$name}[disabled] {
+      &--#{$name}[disabled],
+      &--#{$name}--disabled {
         background-image: none;
         background-color: map-get($value, disabled-color);
         &:hover {
@@ -416,7 +420,8 @@
         background-color: $button-tertiary-hover-background-color;
         background-image: none;
       }
-      &--#{$name}[disabled] {
+      &--#{$name}[disabled],
+      &--#{$name}--disabled {
         background-image: none;
         border-color: map-get($value, disabled-color);
         color: map-get($value, disabled-color);
@@ -432,6 +437,14 @@
 
   &-tertiary {
     border: 0;
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        border: initial;
+        border-style: outset;
+        border-width: 1px;
+        border-color: transparent;
+      }
+    }
     // background-color: transparent;
     @each $name, $value in $button-states {
       &--#{$name} {
@@ -446,6 +459,11 @@
         background-repeat: no-repeat;
         background-size: 300%;
         background-position: 100% 0%;
+        @media not all and (min-resolution: 0.001dpcm) {
+          @supports (-webkit-appearance: none) {
+            background-position: 96% 5%;
+          }
+        }
         transition: background-position
           $global-transition-duration
           $global-transition-timing;
@@ -463,6 +481,11 @@
         transition-delay: 0s, 0.15s;
         cursor: pointer;
         background-position: 0% 100%;
+        @media not all and (min-resolution: 0.001dpcm) {
+          @supports (-webkit-appearance: none) {
+            background-position: 5% 96%;
+          }
+        }
         //
         color: map-get($value, hover-color);
         // background-color: $button-tertiary-hover-background-color;
@@ -475,7 +498,8 @@
       &--#{$name}:focus {
         // outline: $global-outline-color auto 2px;
       }
-      &--#{$name}[disabled] {
+      &--#{$name}[disabled],
+      &--#{$name}--disabled {
         background-image: none;
         color: map-get($value, disabled-color);
         background-color: transparent;
@@ -568,7 +592,8 @@
       &--#{$name}:focus {
         // outline: $global-outline-color auto 2px;
       }
-      &--#{$name}[disabled] {
+      &--#{$name}[disabled],
+      &--#{$name}--disabled {
         background-image: none;
         background-color: map-get($value, disabled-color);
         &:hover {
@@ -629,7 +654,8 @@
       &--#{$name}:focus {
         // outline: $global-outline-color auto 2px;
       }
-      &--#{$name}[disabled] {
+      &--#{$name}[disabled],
+      &--#{$name}--disabled {
         background-image: none;
         border-color: map-get($value, disabled-color);
         color: map-get($value, disabled-color);
@@ -684,7 +710,8 @@
       &--#{$name}:focus {
         // outline: $global-outline-color auto 2px;
       }
-      &--#{$name}[disabled] {
+      &--#{$name}[disabled],
+      &--#{$name}--disabled {
         background-image: none;
         color: map-get($value, disabled-color);
         background-color: transparent;

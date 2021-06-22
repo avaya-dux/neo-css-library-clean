@@ -76,9 +76,8 @@ async function buttonStyles(value) {
               textID
             )
             .then((value) => {
-              var fontTokenName = value.nodes[
-                textID
-              ].document.name.toLowerCase();
+              var fontTokenName =
+                value.nodes[textID].document.name.toLowerCase();
               // font-size
               buttonsJSONObject.button["compact-font-size"] = {
                 value: `{Web-typography.${fontTokenName}.fontSize.value}`,
@@ -130,9 +129,8 @@ async function buttonStyles(value) {
               textID
             )
             .then((value) => {
-              var fontTokenName = value.nodes[
-                textID
-              ].document.name.toLowerCase();
+              var fontTokenName =
+                value.nodes[textID].document.name.toLowerCase();
               // font-size
               buttonsJSONObject.button["font-size"] = {
                 value: `{Web-typography.${fontTokenName}.fontSize.value}`,
