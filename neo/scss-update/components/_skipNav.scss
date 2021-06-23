@@ -15,6 +15,12 @@
   font-weight: $skipNav-font-weight;
   color: $skipNav-font-color;
   font-size: $skipNav-font-size;
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      width: auto;
+      height: auto;
+    }
+  }
 
   &:focus {
     outline: $global-outline-color auto 2px;

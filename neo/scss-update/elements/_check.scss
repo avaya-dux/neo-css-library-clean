@@ -79,7 +79,8 @@
     padding-right: 0px;
   }
 
-  &:disabled + label {
+  &:disabled + label,
+  &--disabled + label {
     color: $checkbox-label-disabled-font-color;
     cursor: not-allowed;
 
