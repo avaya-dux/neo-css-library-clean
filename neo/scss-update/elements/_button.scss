@@ -112,6 +112,11 @@
     &--#{$name}--disabled {
       background-color: map-get($value, disabled-color);
       background-image: none;
+      &:active,
+      &:focus {
+        background-color: map-get($value, disabled-color);
+        background-image: none;
+      }
       &:hover {
         cursor: not-allowed;
         // box-shadow: none;
@@ -181,6 +186,13 @@
       color: map-get($value, disabled-color);
       background-color: $button-secondary-background-color;
       background-image: none;
+      &:active,
+      &:focus {
+        border-color: map-get($value, disabled-color);
+        color: map-get($value, disabled-color);
+        background-color: $button-secondary-background-color;
+        background-image: none;
+      }
       &:hover {
         cursor: not-allowed;
         // box-shadow: none;
@@ -266,6 +278,13 @@
       color: map-get($value, disabled-color);
       // added to fix issue with disabled state
       background-color: transparent;
+      &:active,
+      &:focus {
+        background-image: none;
+        color: map-get($value, disabled-color);
+        // added to fix issue with disabled state
+        background-color: transparent;
+      }
       &:hover {
         cursor: not-allowed;
         box-shadow: none;
@@ -361,6 +380,11 @@
       &--#{$name}--disabled {
         background-image: none;
         background-color: map-get($value, disabled-color);
+        &:active,
+        &:focus {
+          background-image: none;
+          background-color: map-get($value, disabled-color);
+        }
         &:hover {
           cursor: not-allowed;
           // box-shadow: none;
@@ -425,6 +449,12 @@
         background-image: none;
         border-color: map-get($value, disabled-color);
         color: map-get($value, disabled-color);
+        &:active,
+        &:focus {
+          background-image: none;
+          border-color: map-get($value, disabled-color);
+          color: map-get($value, disabled-color);
+        }
         &:hover {
           cursor: not-allowed;
           // box-shadow: none;
@@ -503,6 +533,12 @@
         background-image: none;
         color: map-get($value, disabled-color);
         background-color: transparent;
+        &:active,
+        &:focus {
+          background-image: none;
+          color: map-get($value, disabled-color);
+          background-color: transparent;
+        }
         &:hover {
           cursor: not-allowed;
           // box-shadow: none;
@@ -596,6 +632,11 @@
       &--#{$name}--disabled {
         background-image: none;
         background-color: map-get($value, disabled-color);
+        &:active,
+        &:focus {
+          background-image: none;
+          background-color: map-get($value, disabled-color);
+        }
         &:hover {
           cursor: not-allowed;
           // box-shadow: none;
@@ -659,6 +700,12 @@
         background-image: none;
         border-color: map-get($value, disabled-color);
         color: map-get($value, disabled-color);
+        &:active,
+        &:focus {
+          background-image: none;
+          border-color: map-get($value, disabled-color);
+          color: map-get($value, disabled-color);
+        }
         &:hover {
           cursor: not-allowed;
           // box-shadow: none;
@@ -715,6 +762,12 @@
         background-image: none;
         color: map-get($value, disabled-color);
         background-color: transparent;
+        &:active,
+        &:focus {
+          background-image: none;
+          color: map-get($value, disabled-color);
+          background-color: transparent;
+        }
         &:hover {
           cursor: not-allowed;
           // box-shadow: none;
