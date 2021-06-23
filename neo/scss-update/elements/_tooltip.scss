@@ -24,6 +24,14 @@
     // text-overflow: clip;
     white-space: pre-wrap;
     width: max-content;
+    @media not all and (min-resolution: 0.001dpcm) {
+      @supports (-webkit-appearance: none) {
+        &:not(.neo-tooltip__content--multiline) {
+          width: auto;
+          white-space: nowrap;
+        }
+      }
+    }
     word-break: keep-all;
     word-wrap: normal;
     padding: $content-padding;

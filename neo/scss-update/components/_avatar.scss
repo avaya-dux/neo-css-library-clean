@@ -60,7 +60,7 @@
         // font-size: $avatar-large-size;
         font-size: 32px;
         content: $avatar-generic-icon;
-        font-family: 'updated-neo-icons';
+        font-family: "updated-neo-icons";
         color: $avatar-background-color;
         display: flex;
         justify-content: center;
@@ -77,7 +77,7 @@
         // top: -1px;
         font-size: $avatar-small-size - 2;
         content: $avatar-bot-icon;
-        font-family: 'updated-neo-icons';
+        font-family: "updated-neo-icons";
         // color: $avatar-background-color;
       }
     }
@@ -118,7 +118,7 @@
         // font-size: $avatar-large-size;
         font-size: 54.86px;
         content: $avatar-generic-icon;
-        font-family: 'updated-neo-icons';
+        font-family: "updated-neo-icons";
         color: $avatar-background-color;
         display: flex;
         justify-content: center;
@@ -135,7 +135,7 @@
         // top: -1px;
         font-size: $avatar-large-size - 2;
         content: $avatar-bot-icon;
-        font-family: 'updated-neo-icons';
+        font-family: "updated-neo-icons";
         // color: $avatar-background-color;
       }
     }
@@ -161,16 +161,16 @@
 @mixin neo-avatar-status {
   @each $name, $state in $neo-avatar-status {
     &--#{$name}::after {
-      font-family: 'updated-neo-icons';
+      font-family: "updated-neo-icons";
       border-radius: $avatar-border-radius;
       content: map-get($state, icon);
       color: map-get($state, color);
       background-color: $avatar-font-color;
-      -webkit-font-feature-settings: 'liga';
-      -moz-font-feature-settings: 'liga=1';
-      -moz-font-feature-settings: 'liga';
-      -ms-font-feature-settings: 'liga' 1;
-      font-feature-settings: 'liga';
+      -webkit-font-feature-settings: "liga";
+      -moz-font-feature-settings: "liga=1";
+      -moz-font-feature-settings: "liga";
+      -ms-font-feature-settings: "liga" 1;
+      font-feature-settings: "liga";
       -webkit-font-variant-ligatures: discretionary-ligatures;
       font-variant-ligatures: discretionary-ligatures;
       font-style: normal;
@@ -189,10 +189,10 @@
       text-align: center;
       text-transform: none;
       vertical-align: middle;
-      @if $name == 'offline' {
+      @if $name == "offline" {
         padding: 0 !important;
       }
-      @if $name == 'away' {
+      @if $name == "away" {
         line-height: 3 !important;
       }
     }
@@ -226,7 +226,7 @@
       // font-size: $avatar-large-size;
       font-size: 41.14px;
       content: $avatar-generic-icon;
-      font-family: 'updated-neo-icons';
+      font-family: "updated-neo-icons";
       color: $avatar-background-color;
       display: flex;
       justify-content: center;
@@ -243,7 +243,7 @@
       // top: -1px;
       font-size: $avatar-medium-size - 2;
       content: $avatar-bot-icon;
-      font-family: 'updated-neo-icons';
+      font-family: "updated-neo-icons";
       // color: $avatar-background-color;
     }
   }
@@ -275,6 +275,13 @@
       line-height: 9px !important;
     }
   }
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      &:not(:empty) {
+        background: none;
+      }
+    }
+  }
   .neo-avatar-status {
     height: 18px;
     width: 18px;
@@ -291,16 +298,16 @@
     }
     @each $name, $state in $neo-avatar-status {
       &--#{$name}::before {
-        font-family: 'updated-neo-icons';
+        font-family: "updated-neo-icons";
         border-radius: 50px;
         content: map-get($state, icon);
         color: map-get($state, color);
         background-color: $avatar-font-color;
-        -webkit-font-feature-settings: 'liga';
-        -moz-font-feature-settings: 'liga=1';
-        -moz-font-feature-settings: 'liga';
-        -ms-font-feature-settings: 'liga' 1;
-        font-feature-settings: 'liga';
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga=1";
+        -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+        font-feature-settings: "liga";
         -webkit-font-variant-ligatures: discretionary-ligatures;
         font-variant-ligatures: discretionary-ligatures;
         font-style: normal;

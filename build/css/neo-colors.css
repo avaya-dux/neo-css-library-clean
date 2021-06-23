@@ -9,7 +9,7 @@
   --neo-color-blue-100: #e8f1fc;
   --neo-color-purple-500: #ab3fe0;
   --neo-color-orange-600: #a63b11;
-  --neo-color-orange-600: #ffffff;
+  --neo-color-base-0: #ffffff;
   --neo-color-green-600: #2b6b2b;
   --neo-color-red-900: #3d1815;
   --neo-color-red-100: #fceceb;
@@ -22,7 +22,7 @@
   --neo-color-orange-900: #3d1809;
   --neo-color-green-800: #173b17;
   --neo-color-green-900: #102910;
-  --neo-color-base-100: #000000;
+  --neo-color-base-1000: #000000;
   --neo-color-orange-400: #f76125;
   --neo-color-blue-800: #0b3363;
   --neo-color-purple-100: #f7edfc;
@@ -52,4 +52,13 @@
   --neo-color-base-600: #5e5e5e;
   --neo-color-base-400: #939393;
   --neo-color-base-800: #323232;
+  --neo-color-data-viz-categorial-dark-blue-mid: #019bef;
+  --neo-color-data-viz-categorial-dark-purple: #b1439d;
+  --neo-color-data-viz-categorial-dark-purple-light: #746bf5;
+  --neo-color-data-viz-categorial-dark-blue-dark: #77addf;
+  --neo-color-data-viz-categorial-dark-red: #e93f42;
+  --neo-color-data-viz-categorial-dark-orange: #cc6600;
+  --neo-color-data-viz-categorial-dark-pink: #c591bd;
+  --neo-color-data-viz-categorial-dark-teal: #2a7884;
+  --neo-color-data-viz-categorial-dark-green: #038761;
 }
