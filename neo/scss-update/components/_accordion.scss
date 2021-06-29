@@ -4,7 +4,7 @@
   &__header {
     @extend %list-item;
     // display: block !important;
-    padding: $token-accordion-padding-y $token-accordion-padding-x !important;
+    // padding: $token-accordion-padding-y $token-accordion-padding-x !important;
     margin-right: 0 !important;
     border: none;
     cursor: pointer;

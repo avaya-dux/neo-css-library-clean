@@ -248,14 +248,14 @@
       // }
     }
 
-    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):hover,
-    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):focus-within {
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(.neo-tabs__item--vertical-active-disabled):hover,
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(.neo-tabs__item--vertical-active-disabled):focus-within {
       transition: $tab-hover-transition;
       background-color: $tab-hover-bg-color;
     }
 
     &:hover,
-    &:focus-within {
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):focus-within {
       cursor: pointer;
       // transition: $tab-hover-transition;
       a {

@@ -257,10 +257,13 @@
       }
     }
     &:hover,
-    &:focus-within {
+    // &:not(.neo-badge__navbutton--active-disabled):focus-within,
+    &:not(.neo-badge__navbutton--active-disabled):not(.neo-badge__navbutton--disabled):focus-within {
       transition: $button-transition;
       // background-color: $navbar-background-color-hover;
-      & .neo-badge__navbutton--content {
+      & .neo-badge__navbutton--content,
+      & .neo-badge__navbutton--content:active,
+      & .neo-badge__navbutton--content:target {
         transition: $button-transition;
         background-color: $navbar-background-color-hover;
         &::before {
@@ -297,7 +300,8 @@
         border-bottom-color: $navbar-item-selected-disabled-color;
 
         // testing new class for higher specificity
-        & .neo-badge__navbutton--content {
+        & .neo-badge__navbutton--content,
+        & .neo-badge__navbutton--content:active {
           cursor: not-allowed;
           background-color: $navbar-background-color;
           &::before {
@@ -315,7 +319,8 @@
         cursor: not-allowed;
         background-color: $navbar-background-color;
         // testing new class for higher specificity
-        & .neo-badge__navbutton--content {
+        & .neo-badge__navbutton--content,
+        & .neo-badge__navbutton--content:active {
           cursor: not-allowed;
           background-color: $navbar-background-color;
           &::before {

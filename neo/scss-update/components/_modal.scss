@@ -39,11 +39,11 @@
   box-shadow: $modal-shadow;
   display: flex;
   flex-direction: column;
-  max-width: $modal-width;
+  // max-width: $modal-width;
   overflow: auto;
   padding: $token-modal-padding-y;
   position: relative;
-  width: $modal-width;
+  // width: $modal-width;
   z-index: $modal-content-z;
 
   .neo-modal__header {
