@@ -116,6 +116,78 @@
     }
   }
 
+  // utility styles for CSS-disabled checkboxes
+
+  &--disabled:checked + label {
+    &::before {
+      background: $checkbox-icon-color;
+      border: $checkbox-border-width $checkbox-border-style
+        $checkbox-disabled-border-color;
+      content: "";
+      display: inline-block;
+      height: $checkbox-size;
+      margin-right: $checkbox-label-indent;
+      vertical-align: text-top;
+      min-width: $checkbox-size;
+      border-radius: $checkbox-border-radius;
+      // transition: $global-hover-transition;
+
+      /* stylelint-disable max-nesting-depth */
+      @include rtl-selector {
+        margin-left: $checkbox-label-indent;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--disabled--checked:checked,
+  &--disabled--checked {
+    &:focus {
+      + label {
+        &:before {
+          box-shadow: 0 0px 8px $radio-background-active-color;
+        }
+      }
+    }
+    & + label {
+      &::before {
+        border: $checkbox-border-width $checkbox-border-style
+          $checkbox-disabled-border-color;
+        display: inline-block;
+        height: $checkbox-size;
+        margin-right: $checkbox-label-indent;
+        vertical-align: text-top;
+        min-width: $checkbox-size;
+        border-radius: $checkbox-border-radius;
+        font-family: "updated-neo-icons" !important;
+        content: $checkbox-checked-icon;
+        font-size: $checkbox-icon-font-size;
+        color: $checkbox-color;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: $checkbox-disabled-background;
+        background: $checkbox-disabled-background !important;
+
+        @include rtl-selector {
+          margin-left: $checkbox-label-indent;
+          margin-right: 0;
+        }
+      }
+    }
+    // &--indeterminate + label,
+    &.neo-check--disabled--checked--indeterminate + label {
+      &::before {
+        font-family: "updated-neo-icons" !important;
+        content: $checkbox-indeterminate-icon;
+        color: $checkbox-color;
+        // hard-coded for now
+        font-size: 12px;
+        padding-left: 1px;
+        padding-right: 0px;
+      }
+    }
+  }
+
   // useless code?
 
   + label::after {
