@@ -461,6 +461,13 @@
       border: none;
     }
 
+    & .neo-chip {
+      &:first-child {
+        margin-left: 12px;
+      }
+      margin-left: 4px;
+    }
+
     padding-right: 12px;
     font-size: $select-font-size;
     line-height: $select-line-height;

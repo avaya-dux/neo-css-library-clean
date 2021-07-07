@@ -33,7 +33,11 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["content/label"]
+      [
+        "communication/mobile-not-paired",
+        "communication/mobile-paired",
+        "communication/mobile-wireless",
+      ]
     )
   )
   .catch((error) => console.log(error));

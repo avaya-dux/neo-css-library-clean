@@ -160,8 +160,10 @@
         }
       }
     }
-    &[disabled] {
+    &[disabled],
+    &[disabled]:focus-within {
       cursor: not-allowed;
+
       // background-color: $leftnav-background-color;
       & > a {
         cursor: not-allowed;
@@ -173,11 +175,15 @@
         &.expandable:after {
           color: $leftnav-main-default-disabled-color;
         }
-        &:focus {
-          outline: none;
+        &:focus-visible {
+          outline: #1473e6 auto 2px;
         }
       }
     }
+    // &[disabled]:focus-visible {
+    //   outline: #1473e6 auto 2px;
+    //   outline-offset: -2px;
+    // }
     & > .neo-leftnav__nav {
       max-height: 0px;
       transition: max-height $global-transition-duration
@@ -330,7 +336,8 @@
         }
       }
     }
-    &[disabled] {
+    &[disabled],
+    &[disabled]:focus {
       background-color: $leftnav-background-color;
       cursor: not-allowed;
       & > a {
@@ -416,6 +423,9 @@
     }
     & .neo-leftnav__main {
       min-width: 240px;
+      &:focus-visible {
+        outline: 0;
+      }
       & > a {
         padding: 16px !important;
         & span {
