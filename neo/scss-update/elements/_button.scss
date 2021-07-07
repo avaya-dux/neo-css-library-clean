@@ -194,6 +194,10 @@
         background-image: none;
       }
       &:hover {
+        border-color: map-get($value, disabled-color);
+        color: map-get($value, disabled-color);
+        background-color: $button-secondary-background-color;
+        background-image: none;
         cursor: not-allowed;
         // box-shadow: none;
       }
@@ -456,6 +460,9 @@
           color: map-get($value, disabled-color);
         }
         &:hover {
+          background-image: none;
+          border-color: map-get($value, disabled-color);
+          color: map-get($value, disabled-color);
           cursor: not-allowed;
           // box-shadow: none;
         }
@@ -540,6 +547,9 @@
           background-color: transparent;
         }
         &:hover {
+          background-image: none;
+          color: map-get($value, disabled-color);
+          background-color: transparent;
           cursor: not-allowed;
           // box-shadow: none;
         }
@@ -707,6 +717,9 @@
           color: map-get($value, disabled-color);
         }
         &:hover {
+          background-image: none;
+          border-color: map-get($value, disabled-color);
+          color: map-get($value, disabled-color);
           cursor: not-allowed;
           // box-shadow: none;
         }
@@ -769,6 +782,9 @@
           background-color: transparent;
         }
         &:hover {
+          background-image: none;
+          color: map-get($value, disabled-color);
+          background-color: transparent;
           cursor: not-allowed;
           // box-shadow: none;
         }

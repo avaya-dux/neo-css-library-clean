@@ -40,6 +40,10 @@
 }
 
 .neo-form {
+  &-control--checkboxes {
+    margin-bottom: 0px !important;
+    // line-height: 20px;
+  }
   &-control {
     // margin-bottom: $form-control-margin-bottom;
     margin-bottom: 12px;

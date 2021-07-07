@@ -477,6 +477,9 @@ const unicodes = {
   "camera-ext-off": 0xf2c5,
   "camera-ext-on": 0xf2c6,
   label: 0xf2c7,
+  "mobile-not-paired": 0xf2c8,
+  "mobile-paired": 0xf2c9,
+  "mobile-wireless": 0xf2d1,
 };
 
 // .neo-icon-legal:before {

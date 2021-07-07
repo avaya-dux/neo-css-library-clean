@@ -215,7 +215,8 @@
   //     background-color: $button-tertiary-hover-background-color;
   //     background-image: none;
   //   }
-  &[disabled] {
+  &[disabled],
+  &--disabled {
     background-image: none;
     color: $token-color-base-400;
     // added to fix issue with disabled state
@@ -223,9 +224,13 @@
     &:hover {
       cursor: not-allowed;
       box-shadow: none;
+      background-image: none;
+      color: $token-color-base-400;
+      // added to fix issue with disabled state
+      background-color: transparent;
     }
     &:focus {
-      outline: none;
+      // outline: none;
     }
   }
   // }

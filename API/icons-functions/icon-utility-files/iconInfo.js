@@ -1,1 +1,1 @@
-export const iconInfo = [['contentlabel', 'label', '', 'content'],
+export const iconInfo = [['communicationmobilenotpaired', 'mobile-not-paired', '', 'communication'],['communicationmobilewireless', 'mobile-wireless', '', 'communication'],['communicationmobilepaired', 'mobile-paired', '', 'communication'],

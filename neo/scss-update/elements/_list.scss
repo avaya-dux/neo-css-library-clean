@@ -69,6 +69,23 @@
   }
   & > .neo-accordion__header-text {
     font-size: 16px;
+    width: 100%;
+    border: 0;
+    background-color: $accordion-body-background;
+    text-align: left;
+    padding: $token-accordion-padding-y $token-accordion-padding-x !important;
+    &:hover {
+      cursor: pointer;
+      background-color: $group-list-item-hover !important;
+    }
+  }
+  &.neo-accordion__header--disabled > .neo-accordion__header-text {
+    color: $group-list-disabled-hover-color;
+    opacity: 0.5;
+    &:hover {
+      cursor: not-allowed;
+      background-color: $accordion-body-background !important;
+    }
   }
 
   & > &-text {

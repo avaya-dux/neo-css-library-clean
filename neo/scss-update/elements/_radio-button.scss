@@ -1,12 +1,46 @@
 // updated radio button styles
 
 @mixin radio--disabled {
-  &[disabled] + label {
+  &[disabled] + label,
+  &.neo-radio--disabled + .neo-tooltip > label {
     cursor: not-allowed;
     color: $global-disabled-color;
 
     &::before {
       border: $radio-disabled-border;
+    }
+  }
+  &.neo-radio--disabled:checked + .neo-tooltip > label {
+    &::after {
+      background-color: $radio-background;
+      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      content: "";
+      display: block;
+      height: $radio-active-ellipse-size;
+      width: $radio-active-ellipse-size;
+      left: $radio-ellipse-position-left;
+      top: $radio-ellipse-position-top;
+      position: absolute;
+      // transition: $global-hover-transition;
+
+      @include rtl-selector {
+        left: auto;
+        right: $radio-ellipse-position-left;
+      }
+      background-color: $radio-background;
+    }
+
+    &::before {
+      background-color: $radio-background;
+      border: $radio-disabled-border;
+      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      content: "";
+      display: block;
+      height: $radio-size;
+      width: $radio-size;
+      position: absolute;
+      top: $radio-position-top;
+      // transition: $global-hover-transition;
     }
   }
 }
@@ -19,11 +53,15 @@
   z-index: -1;
 
   &:focus {
-    + label {
+    + label,
+    &:focus:not(.neo-radio--disabled) + .neo-tooltip > label {
       &:before {
         box-shadow: 0 0px 8px $radio-background-active-color;
       }
     }
+    // &:focus:not(.neo-radio--disabled) + .neo-tooltip .neo-tooltip__content {
+    //   display: block;
+    // }
   }
 
   .neo-input-group--inline & + label {
@@ -31,6 +69,16 @@
     padding-left: 0px !important;
   }
 
+  + .neo-tooltip {
+    margin-top: 8px;
+  }
+
+  + .neo-tooltip > label {
+    padding-left: 24px;
+    pointer-events: initial !important;
+  }
+
+  + .neo-tooltip > label,
   + label {
     color: $global-text-color;
     cursor: pointer;
@@ -81,7 +129,8 @@
     }
   }
 
-  &:checked + label::after {
+  &:checked + label::after,
+  &:checked + .neo-tooltip > label::after {
     background-color: $radio-background-active-color;
     border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
     content: "";
