@@ -6,10 +6,18 @@
   position: absolute;
   z-index: -1;
 
-  &:focus {
-    + label {
+  &:focus-visible {
+    + label:not(:empty) {
+      // &:before {
+      // box-shadow: 0 0px 8px $radio-background-active-color;
+      outline: rgba(20, 115, 230, 1) auto 2px;
+      // outline-offset: -2px;
+      // }
+    }
+    + label:empty {
       &:before {
-        box-shadow: 0 0px 8px $radio-background-active-color;
+        outline: rgba(20, 115, 230, 1) auto 2px;
+        outline-offset: 2px;
       }
     }
   }
@@ -145,7 +153,7 @@
     &:focus {
       + label {
         &:before {
-          box-shadow: 0 0px 8px $radio-background-active-color;
+          // box-shadow: 0 0px 8px $radio-background-active-color;
         }
       }
     }

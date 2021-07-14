@@ -93,6 +93,15 @@
           }
         },
         {
+          "destination": "_shimmer.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "shimmer"
+            }
+          }
+        },
+        {
           "destination": "_border-radius.scss",
           "format": "scss/variables",
           "filter": {

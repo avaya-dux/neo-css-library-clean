@@ -119,10 +119,20 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
 
     iconsArrays.totalIcons++;
 
+    // checking whether icon admits RTL/bidirectionality
+
+    var bidirectional = false;
+
+    if (component.description.includes("RTL")) {
+      // console.log(component.description);
+      bidirectional = true;
+    }
+
     var compName = component.name.toLowerCase();
     // we skip over the template icon
     // TO-DO: Make it so that function requests only new or updated icons
-    if (compName === "template" || !iconNames.includes(compName)) {
+    // if (compName === "template" || !iconNames.includes(compName)) {
+    if (compName === "template") {
       return;
     }
 
@@ -163,7 +173,7 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
     // this is function to get icon information for design system portal
 
     iconUtilityFunctions
-      .getIconInformation(compName)
+      .getIconInformation(compName, bidirectional)
       .then(async () => {
         if (iconsOnAll.indexOf(component) == iconsOnAll.length - 1) {
           await fs.appendFile(

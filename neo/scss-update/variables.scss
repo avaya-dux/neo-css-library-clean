@@ -181,7 +181,7 @@ $token-color-base-800: #323232;
 // @media (prefers-color-scheme: light) {
 :root {
   --icon-color: #{$token-color-base-1000};
-  --global-font-color: #{$token-color-base-1000};
+  --global-font-color: #{$token-color-base-900};
   --global-background: #{$token-color-base-0};
   --global-text-inverse-color: #{$token-color-base-0};
   --global-disabled-color: #{$token-color-base-500};
@@ -597,6 +597,16 @@ $input-hint-line-height: $token-input-helper-line-height !default;
 $input-hint-letter-spacing: $token-input-helper-letter-spacing !default;
 $input-hover-transition: border-color $global-transition-duration
   $global-transition-timing !default;
+
+//
+// Element name: Shimmer
+// Location: src/scss/elements/_shimmer.scss
+//
+
+$shimmer-rectangle-height: $token-shimmer-rectangle-shimmer-height !default;
+$shimmer-small-circle-size: $token-shimmer-small-circle-shimmer-width !default;
+$shimmer-medium-circle-size: $token-shimmer-medium-circle-shimmer-width !default;
+$shimmer-large-circle-size: $token-shimmer-large-circle-shimmer-width !default;
 
 //
 // Element name: Select

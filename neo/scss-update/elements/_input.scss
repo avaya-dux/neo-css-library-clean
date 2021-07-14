@@ -84,6 +84,8 @@
 
   &:focus {
     border: $input-border-width $input-border-style $input-focus-border-color;
+    //hard-coded for now
+    border-width: 2px;
     outline: none;
   }
 
@@ -184,6 +186,8 @@
   border: $input-border-width $input-border-style $input-border-color;
   &:focus-within {
     border-color: $input-focus-border-color;
+    // hard-coded for now
+    border-width: 2px;
   }
   .neo-form-control:not(.neo-form-control--disabled)
     &:hover:not(:focus-within) {
