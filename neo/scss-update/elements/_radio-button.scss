@@ -56,7 +56,9 @@
     + label,
     &:focus:not(.neo-radio--disabled) + .neo-tooltip > label {
       &:before {
-        box-shadow: 0 0px 8px $radio-background-active-color;
+        // box-shadow: 0 0px 8px $radio-background-active-color;
+        outline: 1px auto $radio-background-active-color;
+        outline-offset: 2px;
       }
     }
     // &:focus:not(.neo-radio--disabled) + .neo-tooltip .neo-tooltip__content {

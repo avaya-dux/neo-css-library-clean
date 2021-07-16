@@ -45,7 +45,7 @@
       // all experimental to solve long string wrap issues
       // overflow-wrap: break-word;
       word-wrap: break-word;
-      white-space: normal !important;
+      white-space: pre-line !important;
       // hyphens: manual;
       word-break: normal !important;
     }

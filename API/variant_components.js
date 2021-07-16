@@ -25,6 +25,7 @@ const channelIconVariants = require("./components-functions/channel_icon_variant
 const breadcrumbStyles = require("./components-functions/breadcrumbs_variants.js");
 const skipNavStyles = require("./components-functions/skipnav_variants.js");
 const treeviewStyles = require("./components-functions/treeview_variants.js");
+const shimmerStyles = require("./components-functions/shimmer_variants.js");
 
 coreFigmaFunctions
   .getComponentPages(
@@ -45,7 +46,7 @@ coreFigmaFunctions
     // await switchStyles.switchStyles(value);
     // await radioStyles.radioStyles(value);
     // await tabStyles.tabStyles(value);
-    await navbarStyles.navbarStyles(value);
+    // await navbarStyles.navbarStyles(value);
     // await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
@@ -66,6 +67,7 @@ coreFigmaFunctions
     // await breadcrumbStyles.breadcrumbStyles(value);
     // await skipNavStyles.skipNavStyles(value);
     // await treeviewStyles.treeviewStyles(value);
+    await shimmerStyles.shimmerStyles(value);
   });
 
 // coreFigmaFunctions

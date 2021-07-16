@@ -11,7 +11,8 @@
 
 @mixin neo-input-group-children {
   label:not(.neo-switch):not(.neo-label) {
-    line-height: $input-line-height;
+    // line-height: $input-line-height;
+    line-height: 21px;
     // padding: $input-padding-y 0;
     // padding-bottom: $input-padding-y;
     /// PADDING HERE PROBLEMATIC???
@@ -198,17 +199,23 @@
     }
     &:focus-within {
       border-color: $input-focus-border-color;
+      // hard-coded for now
+      border-width: 2px;
       & .neo-input-group__addon {
         &:first-child {
           border-right-color: $input-focus-border-color;
+          border-right-width: 2px;
           @include rtl-selector {
             border-left-color: $input-focus-border-color;
+            border-left-width: 2px;
           }
         }
         &:last-child {
           border-left-color: $input-focus-border-color;
+          border-left-width: 2px;
           @include rtl-selector {
             border-right-color: $input-focus-border-color;
+            border-right-width: 2px;
           }
         }
       }
