@@ -173,11 +173,12 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
     // this is function to get icon information for design system portal
 
     iconUtilityFunctions
-      .getIconInformation(compName, bidirectional)
+      // .getIconInformation(compName, bidirectional)
+      .getIconInformationNextGen(compName, bidirectional)
       .then(async () => {
         if (iconsOnAll.indexOf(component) == iconsOnAll.length - 1) {
           await fs.appendFile(
-            "./icons-functions/icon-utility-files/iconInfo.js",
+            "./icons-functions/icon-utility-files/iconInfoNextGen.js",
             "]"
           );
         }

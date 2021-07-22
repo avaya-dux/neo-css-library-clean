@@ -78,6 +78,44 @@ async function getIconInformation(string, bidirectional) {
   }
 }
 
+// function to generate a streamlined version of our iconInfo file for use in our Next Gen portal
+
+async function getIconInformationNextGen(string, bidirectional) {
+  // file to record icon names for DS Portal
+
+  await fs.writeFile(
+    "./icons-functions/icon-utility-files/iconInfoNextGen.js",
+    "export const iconInfo = ["
+  );
+
+  // get the icon type ex. outline
+
+  var iconCategory = string.slice(0, string.indexOf("/"));
+
+  // get the icon name ex. worklog
+
+  var iconName = string
+    .slice(string.lastIndexOf("/") + 1)
+    .replace(/\/|\s+/g, "");
+
+  // write this information to iconInfo.js utility file
+
+  await fs.appendFile(
+    "./icons-functions/icon-utility-files/iconInfoNextGen.js",
+    `['${iconName}', ${bidirectional && true}, '${iconCategory}'],`
+  );
+
+  // functionality to log icon names to console
+  // this line logs the icon names to console for inclusion in the Design Portal
+  // TO-DO - create a seperate file to hold this information
+
+  if (iconOutlineType != "fill") {
+    // console.log(`"${iconName.replace(/-/g, '')}",`);
+    console.log(`"${iconName}",`);
+    // console.log(iconCategory);
+  }
+}
+
 // test function to generate a list of icon names for use in our Design System portal
 
 // async function getIconNames(iconName) {
@@ -85,4 +123,5 @@ async function getIconInformation(string, bidirectional) {
 // }
 
 exports.getIconInformation = getIconInformation;
+exports.getIconInformationNextGen = getIconInformationNextGen;
 exports.createCopyableSVG = createCopyableSVG;
