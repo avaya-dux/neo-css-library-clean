@@ -102,6 +102,15 @@
           }
         },
         {
+          "destination": "_toast.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "toast"
+            }
+          }
+        },
+        {
           "destination": "_border-radius.scss",
           "format": "scss/variables",
           "filter": {

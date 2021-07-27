@@ -131,9 +131,10 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
     var compName = component.name.toLowerCase();
     // we skip over the template icon
     // TO-DO: Make it so that function requests only new or updated icons
-    // if (compName === "template" || !iconNames.includes(compName)) {
-    if (compName === "template") {
-      return;
+    if (compName === "template" || !iconNames.includes(compName)) {
+      if (compName === "template") {
+        return;
+      }
     }
 
     // we seperate out '-' and '/' from icon name

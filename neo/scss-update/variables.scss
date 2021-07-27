@@ -181,7 +181,7 @@ $token-color-base-800: #323232;
 // @media (prefers-color-scheme: light) {
 :root {
   --icon-color: #{$token-color-base-1000};
-  --global-font-color: #{$token-color-base-900};
+  --global-font-color: #{$token-color-base-1000};
   --global-background: #{$token-color-base-0};
   --global-text-inverse-color: #{$token-color-base-0};
   --global-disabled-color: #{$token-color-base-500};
@@ -428,6 +428,31 @@ $neo-breakpoints: map-merge(
 //--------------------------------------------//
 //                 Elements                   //
 //--------------------------------------------//
+
+// Component name: Toast
+// Location: src/scss/elements/_toast.scss,
+//
+
+:root {
+  --toast-font-color: #{$token-toast-font-color};
+  --toast-background-color: #{$token-toast-background-color};
+  --toast-elevation-color: #{$token-toast-elevation-color};
+}
+
+$toast-padding-y: $token-toast-padding-y !default;
+$toast-padding-x: $token-toast-padding-x !default;
+$toast-icon-size: $token-toast-icon-size !default;
+$toast-icon-spacing: $token-toast-icon-spacing !default;
+$toast-border-radius: $token-toast-border-radius !default;
+$toast-font-size: $token-toast-font-size !default;
+$toast-font-weight: $token-toast-default-font-weight !default;
+$toast-line-height: $token-toast-line-height !default;
+$toast-letter-spacing: $token-toast-letter-spacing !default;
+$toast-font-color: var(--toast-font-color) !default;
+$toast-background-color: var(--toast-background-color) !default;
+$toast-elevation-x-offset: $token-toast-elevation-x-offset !default;
+$toast-elevation-y-offset: $token-toast-elevation-y-offset !default;
+$toast-elevation-color: var(--toast-elevation-color) !default;
 
 // Component name: Form
 // Location: src/scss/elements/_form.scss,

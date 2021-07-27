@@ -320,3 +320,8 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --skipNav-font-color: #{$token-skip-nav-font-color};
   --skipNav-hover-color: #{$token-color-blue-600};
 }
+:root .neo-light {
+  --toast-font-color: #{$token-toast-font-color};
+  --toast-background-color: #{$token-toast-background-color};
+  --toast-elevation-color: #{$token-toast-elevation-color};
+}

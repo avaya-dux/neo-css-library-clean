@@ -522,6 +522,9 @@ const unicodes = {
   "font-size-zh": 0xf3b5,
   "font-size-ja": 0xf3b6,
   "font-size-ko": 0xf3b7,
+  "play-filled": 0xf3b8,
+  "stop-filled": 0xf3b9,
+  usb: 0xf3c1,
 };
 
 // .neo-icon-legal:before {
