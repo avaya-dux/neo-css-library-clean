@@ -224,7 +224,7 @@ hr {
 .neo-body-small {
   font-size: $token-web-typography-web-small-body-font-size;
   line-height: $token-web-typography-web-small-body-line-height;
-  margin-bottom: $token-web-typography-web-small-body-paragraph-spacing;
+  // margin-bottom: $token-web-typography-web-small-body-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-small-body-paragraph-spacing;
   }
@@ -233,7 +233,7 @@ hr {
 .neo-body-regular {
   font-size: $token-web-typography-web-body-regular-font-size;
   line-height: $token-web-typography-web-body-regular-line-height;
-  margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
+  // margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
   }
@@ -242,7 +242,7 @@ hr {
 .neo-body-large {
   font-size: $token-web-typography-web-large-body-regular-font-size;
   line-height: $token-web-typography-web-large-body-regular-line-height;
-  margin-bottom: $token-web-typography-web-large-body-regular-paragraph-spacing;
+  // margin-bottom: $token-web-typography-web-large-body-regular-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-large-body-regular-paragraph-spacing;
   }

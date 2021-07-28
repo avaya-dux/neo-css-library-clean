@@ -1,16 +1,15 @@
 // pending fix for text alignment issue
 
-// .neo-switch {
-//   padding-left: 38px;
-//   text-indent: -13px;
-// }
-
-// .neo-switch__icon {
-//   left: 12px;
-//   &::after {
-//     left: -11px;
-//   }
-// }
+.neo-switch--multiline {
+  padding-left: 38px !important;
+  text-indent: -13px !important;
+  .neo-switch__icon {
+    left: 13px !important;
+    &::after {
+      left: -12px !important;
+    }
+  }
+}
 
 // updated switch styles
 
@@ -26,7 +25,9 @@
 
   input:focus {
     + .neo-switch__icon:before {
-      box-shadow: 0 0px 8px $radio-background-active-color;
+      // box-shadow: 0 0px 8px $radio-background-active-color;
+      outline: 1px auto $radio-background-active-color;
+      outline-offset: 2px;
     }
   }
 
@@ -140,9 +141,9 @@
     padding-left: 0;
     padding-right: 27px;
   }
-  &:focus {
-    // outline-offset: 15px;
-    // outline: 0;
+  &:focus-within {
+    // outline: rgba(20, 115, 230, 1) auto 2px;
+    // outline-offset: 2px;
   }
 
   &:focus .neo-switch__icon {

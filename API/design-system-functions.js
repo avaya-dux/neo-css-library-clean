@@ -33,11 +33,7 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      [
-        "communication/mobile-not-paired",
-        "communication/mobile-paired",
-        "communication/mobile-wireless",
-      ]
+      ["action/play-filled", "action/stop-filled", "other/usb"]
     )
   )
   .catch((error) => console.log(error));
