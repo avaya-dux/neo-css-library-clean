@@ -1,0 +1,27 @@
+{
+  "toast": {
+    "padding-y": { "value": "12px" },
+    "padding-x": { "value": "12px" },
+    "icon-size": { "value": "16px" },
+    "icon-spacing": { "value": "8px" },
+    "border-radius": { "value": "4px" },
+    "font-size": {
+      "value": "{Web-typography.web/body - regular.fontSize.value}"
+    },
+    "default-font-weight": {
+      "value": "{Web-typography.fontweight-regular.value}"
+    },
+    "line-height": {
+      "value": "{Web-typography.web/body - regular.lineHeight.value}"
+    },
+    "letter-spacing": {
+      "value": "{Web-typography.web/body - regular.letterSpacing.value}"
+    },
+    "font-color": { "value": "{color.base/0.value}" },
+    "background-color": { "value": "{color.base/800.value}" },
+    "elevation-x-offset": { "value": "{shadows.elevation300.xOffset.value}" },
+    "elevation-y-offset": { "value": "{shadows.elevation300.yOffset.value}" },
+    "elevation-radius": { "value": "{shadows.elevation300.radius.value}" },
+    "elevation-color": { "value": "{shadows.elevation300.color.value}" }
+  }
+}

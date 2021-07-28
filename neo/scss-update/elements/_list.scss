@@ -68,6 +68,11 @@
     }
   }
   & > .neo-accordion__header-text {
+    @media not all and (min-resolution: 0.001dpcm) {
+      & {
+        color: $global-text-color;
+      }
+    }
     font-size: 16px;
     width: 100%;
     border: 0;

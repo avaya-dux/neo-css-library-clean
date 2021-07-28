@@ -15,6 +15,12 @@
     font-weight: $accordion-font-weight;
     line-height: $accordion-line-height;
     letter-spacing: $accordion-letter-spacing;
+    @media not all and (min-resolution: 0.001dpcm) {
+      & &-text:focus {
+        outline: rgba(20, 115, 230, 1) auto 2px;
+        outline-offset: -2px;
+      }
+    }
 
     & span {
       margin: initial !important;

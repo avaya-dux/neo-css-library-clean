@@ -1,5 +1,5 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
   
@@ -68,17 +68,17 @@ async function tabStyles(value) {
   };
 
   const tabVariants = value.Navigation.children.filter(
-    (comp) => comp.name == 'tab-horizontal'
+    (comp) => comp.name == "tab-horizontal"
   )[0];
 
   // console.log(tabVariants);
 
   for (horizontalTab of tabVariants.children) {
     // console.log(horizontalTab);
-    if (horizontalTab.name === 'Icon=none, Active=FALSE, State=default') {
+    if (horizontalTab.name === "Icon=none, Active=FALSE, State=default") {
       // console.log(horizontalTab);
       // max-height
-      tabsJSONObject.tabs['max-height'] = {
+      tabsJSONObject.tabs["max-height"] = {
         value: `${horizontalTab.children[0].size.y}px`,
       };
       // font styles incl. active font-weight
@@ -92,27 +92,26 @@ async function tabStyles(value) {
           textTokenID
         )
         .then((value) => {
-          var fontTokenName = value.nodes[
-            textTokenID
-          ].document.name.toLowerCase();
+          var fontTokenName =
+            value.nodes[textTokenID].document.name.toLowerCase();
           // font-size
-          tabsJSONObject.tabs['font-size'] = {
+          tabsJSONObject.tabs["font-size"] = {
             value: `{Web-typography.${fontTokenName}.fontSize.value}`,
           };
           // default font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-          tabsJSONObject.tabs['default-font-weight'] = {
+          tabsJSONObject.tabs["default-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
           // active font-weight -- HARD_CODED FOR NOW, NEED TO REVISE TOKENS
-          tabsJSONObject.tabs['active-font-weight'] = {
+          tabsJSONObject.tabs["active-font-weight"] = {
             value: `{Web-typography.fontweight-semibold.value}`,
           };
           // line-height
-          tabsJSONObject.tabs['line-height'] = {
+          tabsJSONObject.tabs["line-height"] = {
             value: `{Web-typography.${fontTokenName}.lineHeight.value}`,
           };
           // letter-spacing
-          tabsJSONObject.tabs['letter-spacing'] = {
+          tabsJSONObject.tabs["letter-spacing"] = {
             value: `{Web-typography.${fontTokenName}.letterSpacing.value}`,
           };
         });
@@ -126,7 +125,7 @@ async function tabStyles(value) {
         )
         .then(
           (value) =>
-            (tabsJSONObject.tabs['background-color'] = {
+            (tabsJSONObject.tabs["background-color"] = {
               value: `{color.${value.nodes[
                 tabBackgroundColorTokenID
               ].document.name.toLowerCase()}.value}`,
@@ -144,14 +143,14 @@ async function tabStyles(value) {
         )
         .then(
           (value) =>
-            (tabsJSONObject.tabs['default-color'] = {
+            (tabsJSONObject.tabs["default-color"] = {
               value: `{color.${value.nodes[
                 tabDefaultColorTokenID
               ].document.name.toLowerCase()}.value}`,
             })
         );
     }
-    if (horizontalTab.name === 'Icon=none, Active=FALSE, State=hover') {
+    if (horizontalTab.name === "Icon=none, Active=FALSE, State=hover") {
       // tab hover color
       var tabHoverColorTokenID =
         horizontalTab.children[0].children[0].children[0].children[1].styles
@@ -164,14 +163,14 @@ async function tabStyles(value) {
         )
         .then(
           (value) =>
-            (tabsJSONObject.tabs['hover-color'] = {
+            (tabsJSONObject.tabs["hover-color"] = {
               value: `{color.${value.nodes[
                 tabHoverColorTokenID
               ].document.name.toLowerCase()}.value}`,
             })
         );
     }
-    if (horizontalTab.name === 'Icon=none, Active=FALSE, State=disabled') {
+    if (horizontalTab.name === "Icon=none, Active=FALSE, State=disabled") {
       // tab disabled color
       var tabDisabledColorTokenID =
         horizontalTab.children[0].children[0].children[0].children[1].styles
@@ -184,21 +183,21 @@ async function tabStyles(value) {
         )
         .then(
           (value) =>
-            (tabsJSONObject.tabs['disabled-color'] = {
+            (tabsJSONObject.tabs["disabled-color"] = {
               value: `{color.${value.nodes[
                 tabDisabledColorTokenID
               ].document.name.toLowerCase()}.value}`,
             })
         );
     }
-    if (horizontalTab.name === 'Icon=right, Active=TRUE, State=default') {
+    if (horizontalTab.name === "Icon=right, Active=TRUE, State=default") {
       // console.log(horizontalTab.children[0].children[0].children[0]);
       // icon size
-      tabsJSONObject.tabs['icon-size'] = {
+      tabsJSONObject.tabs["icon-size"] = {
         value: `${horizontalTab.children[0].children[0].children[0].children[2].size.y}px`,
       };
       // icon offset
-      tabsJSONObject.tabs['icon-offset'] = {
+      tabsJSONObject.tabs["icon-offset"] = {
         value: `${horizontalTab.children[0].children[0].children[0].itemSpacing}px`,
       };
       // tab active color
@@ -213,18 +212,18 @@ async function tabStyles(value) {
         )
         .then(
           (value) =>
-            (tabsJSONObject.tabs['active-color'] = {
+            (tabsJSONObject.tabs["active-color"] = {
               value: `{color.${value.nodes[
                 tabActiveColorTokenID
               ].document.name.toLowerCase()}.value}`,
             })
         );
       // tab active border width
-      tabsJSONObject.tabs['border-width'] = {
+      tabsJSONObject.tabs["border-width"] = {
         value: `${horizontalTab.children[0].children[0].children[1].size.y}px`,
       };
     }
-    if (horizontalTab.name === 'Icon=right, Active=TRUE, State=disabled') {
+    if (horizontalTab.name === "Icon=right, Active=TRUE, State=disabled") {
       // tab active disabled color
       var tabActiveDisabledColorTokenID =
         horizontalTab.children[0].children[0].children[0].children[1].styles
@@ -237,7 +236,7 @@ async function tabStyles(value) {
         )
         .then(
           (value) =>
-            (tabsJSONObject.tabs['active-disabled-color'] = {
+            (tabsJSONObject.tabs["active-disabled-color"] = {
               value: `{color.${value.nodes[
                 tabActiveDisabledColorTokenID
               ].document.name.toLowerCase()}.value}`,
@@ -256,7 +255,7 @@ async function tabStyles(value) {
   await Promise.all(
     value.Navigation.children.map(async (child) => {
       // tab-carousel
-      if (child.name === 'tab-carousel') {
+      if (child.name === "tab-carousel") {
         // tabs background color
         var tabBackgroundColorId = child.styles.fills;
         var tabBackgroundColorName = await coreFigmaFunctions
@@ -273,7 +272,7 @@ async function tabStyles(value) {
           );
         // tabs carousel button icon color
         var children = child.children;
-        var buttons = children.filter((child) => child.name != 'tabs');
+        var buttons = children.filter((child) => child.name != "tabs");
         // console.log(buttons);
         var carouselButtonIconColorId =
           buttons[0].children[0].children[0].styles.fill;
@@ -296,20 +295,20 @@ async function tabStyles(value) {
     // console.log(values);
     var definedValues = values.filter((value) => !value.includes(undefined));
     // console.log(definedValues);
-    tabsJSONObject.tabs['carousel-button-color'] = {
+    tabsJSONObject.tabs["carousel-button-color"] = {
       value: definedValues[0][0],
     };
-    tabsJSONObject.tabs['carousel-background-color'] = {
+    tabsJSONObject.tabs["carousel-background-color"] = {
       value: definedValues[0][1],
     };
     console.log(tabsJSONObject);
     await fs
       .writeFile(
-        '../properties/components/tabs.json',
+        "../properties/components/tabs.json",
         JSON.stringify(tabsJSONObject)
       )
       .then(function () {
-        console.log('tabs.json created');
+        console.log("tabs.json created");
       });
   });
 }

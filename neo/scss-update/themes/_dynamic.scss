@@ -721,3 +721,17 @@ $button-color-alert-rgb-dark: 229, 105, 96;
     --skipNav-hover-color: #{$token-color-blue-200};
   }
 }
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --toast-font-color: #{$token-toast-font-color};
+    --toast-background-color: #{$token-toast-background-color};
+    --toast-elevation-color: #{$token-toast-elevation-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --toast-font-color: #{$token-color-base-900};
+    --toast-background-color: #{$token-color-base-100};
+    --toast-elevation-color: #{$token-shadows-elevationdark-300-color};
+  }
+}

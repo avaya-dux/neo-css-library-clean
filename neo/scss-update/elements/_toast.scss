@@ -1,0 +1,30 @@
+.neo-toast {
+  border-radius: $toast-border-radius;
+  padding: $toast-padding-y $toast-padding-x;
+  background-color: $toast-background-color;
+  box-shadow: $toast-elevation-x-offset $toast-elevation-y-offset 16px
+    $toast-elevation-color;
+  width: fit-content;
+  display: flex;
+
+  .neo-toast__message {
+    font-size: $toast-font-size;
+    font-weight: $toast-font-weight;
+    line-height: $toast-line-height;
+    letter-spacing: $toast-letter-spacing;
+    color: $toast-font-color;
+  }
+  .neo-toast__icon {
+    display: flex;
+    align-items: center;
+    color: $toast-font-color;
+    margin-right: $toast-icon-spacing;
+    @include rtl-selector {
+      margin-right: $toast-icon-spacing;
+      margin-left: $toast-icon-spacing;
+    }
+    &:before {
+      font-size: $toast-icon-size;
+    }
+  }
+}

@@ -302,3 +302,9 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --skipNav-font-color: #{$token-color-base-900};
   --skipNav-hover-color: #{$token-color-blue-200};
 }
+
+:root .neo-dark {
+  --toast-font-color: #{$token-color-base-900};
+  --toast-background-color: #{$token-color-base-100};
+  --toast-elevation-color: #{$token-shadows-elevationdark-300-color};
+}

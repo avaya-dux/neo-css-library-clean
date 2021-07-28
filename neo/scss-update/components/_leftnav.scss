@@ -45,6 +45,7 @@
       font-weight: $leftnav-main-default-font-weight;
       line-height: $leftnav-main-default-font-line-height;
       letter-spacing: $leftnav-main-default-font-letter-spacing;
+      word-break: break-word;
       // transition: $tab-hover-transition;
       @include rtl-selector {
         border-left: none;
@@ -219,6 +220,7 @@
     justify-content: space-between;
     // transition: max-height, min-height $global-transition-duration ease-in-out;
     & > a {
+      word-break: break-word;
       // animation properties
       // line-height: 0px;
       overflow: hidden;
