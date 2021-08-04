@@ -48,7 +48,7 @@ coreFigmaFunctions
     // await radioStyles.radioStyles(value);
     // await tabStyles.tabStyles(value);
     // await navbarStyles.navbarStyles(value);
-    // await buttonStyles.buttonStyles(value);
+    await buttonStyles.buttonStyles(value);
     // await avatarStyles.avatarStyles(value);
     // await checkboxStyles.checkBoxStyles(value);
     // await leftnavStyles.leftnavStyles(value);
@@ -56,7 +56,7 @@ coreFigmaFunctions
     // await listItemStyles.listItemStyles(value);
     // await listSectionStyles.listSectionStyles(value);
     // await chipStyles.chipStyles(value);
-    await inputStyles.inputStyles(value);
+    // await inputStyles.inputStyles(value);
     // await widgetStyles.widgetStyles(value);
     // await tooltipStyles.tooltipStyles(value);
     // await accordionStyles.accordionStyles(value);

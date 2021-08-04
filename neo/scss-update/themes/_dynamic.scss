@@ -70,7 +70,7 @@
     --input-disabled-bg: #{$token-input-disabled-bg-color};
     --input-disabled-color: #{$token-input-disabled-text-color};
     --input-border-error-color: #{$token-input-border-error-color};
-    --input-label-color: #{$token-input-label-color};
+    --input-label-color: #{$token-color-base-800};
     --input-border-disabled-color: #{$token-color-base-400};
     --input-border-hover-color: #{$token-input-border-hover-color};
     --input-addon-font-color: #{$token-color-base-600};
@@ -130,6 +130,8 @@ $button-color-warning-rgb-light: 204, 77, 27;
 $button-color-warning-rgb-dark: 247, 97, 37;
 $button-color-alert-rgb-light: 217, 61, 50;
 $button-color-alert-rgb-dark: 229, 105, 96;
+$button-color-event-rgb-light: 50, 50, 50;
+$button-color-event-rgb-dark: 241, 241, 241;
 @media (prefers-color-scheme: dark) {
   :root .neo-dynamic {
     --button-shadow-color: #{$token-shadows-elevationdark-200-color};
@@ -156,6 +158,11 @@ $button-color-alert-rgb-dark: 229, 105, 96;
     --button-disabled-color-alert: #{$token-color-red-600};
     --button-secondary-background-color: #{$token-color-base-900};
     --button-tertiary-hover-background-color: #{$token-color-base-800};
+    --button-color-event: #{$token-color-base-100};
+    --button-hover-color-event: #{$token-color-base-200};
+    --button-pressed-color-event: #{$token-color-base-100};
+    --button-disabled-color-event: #{$token-color-base-600};
+    --button-color-event-rgb: #{$button-color-event-rgb-dark};
   }
 }
 @media (prefers-color-scheme: light) {
@@ -184,6 +191,11 @@ $button-color-alert-rgb-dark: 229, 105, 96;
     --button-disabled-color-alert: #{$token-button-alert-disabled-color};
     --button-secondary-background-color: #{$token-button-secondary-background-color};
     --button-tertiary-hover-background-color: #{$token-color-base-100};
+    --button-color-event: #{$token-button-event-color};
+    --button-hover-color-event: #{$token-color-base-600};
+    --button-pressed-color-event: #{$token-button-event-pressed-color};
+    --button-disabled-color-event: #{$token-button-event-disabled-color};
+    --button-color-event-rgb: #{$button-color-event-rgb-light};
   }
 }
 @media (prefers-color-scheme: dark) {

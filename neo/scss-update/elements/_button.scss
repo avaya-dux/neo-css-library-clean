@@ -654,7 +654,6 @@
       }
     }
   }
-
   // secondary class
 
   &-secondary {
@@ -791,4 +790,10 @@
       }
     }
   }
+}
+
+// custom text color for dark mode
+
+.neo-dark .neo-btn-primary--event {
+  color: $token-color-base-100;
 }
