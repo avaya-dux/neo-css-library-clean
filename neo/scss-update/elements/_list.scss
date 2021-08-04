@@ -78,6 +78,9 @@
     border: 0;
     background-color: $accordion-body-background;
     text-align: left;
+    @include rtl-selector {
+      text-align: right;
+    }
     padding: $token-accordion-padding-y $token-accordion-padding-x !important;
     &:hover {
       cursor: pointer;

@@ -59,6 +59,9 @@
     background-color: transparent;
     border: none;
     padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    min-height: auto;
     @include rtl-selector {
       padding-right: 0;
       padding-left: auto;
@@ -235,7 +238,7 @@
       outline: $global-outline-color auto 2px;
     }
     &::before {
-      font-size: $token-input-input-close-button-size;
+      // font-size: $token-input-input-close-button-size;
     }
   }
   // &:hover .neo-input-edit__icon,

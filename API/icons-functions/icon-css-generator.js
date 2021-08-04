@@ -525,6 +525,10 @@ const unicodes = {
   "play-filled": 0xf3b8,
   "stop-filled": 0xf3b9,
   usb: 0xf3c1,
+  "audio-filled": 0xf3c2,
+  "audio-on-1": 0xf3c3,
+  "audio-on-2": 0xf3c4,
+  "audio-on-3": 0xf3c5,
 };
 
 // .neo-icon-legal:before {
