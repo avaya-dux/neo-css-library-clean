@@ -30,6 +30,10 @@
     // font-size: $notification-font-size;
     justify-content: center;
     flex-grow: 1;
+    margin-right: 16px;
+    @include rtl-selector {
+      margin-left: 16px;
+    }
   }
 }
 
@@ -183,6 +187,7 @@
 
   button.neo-icon-end {
     color: $global-text-color;
+    padding: 0;
   }
 
   @include notification-message;

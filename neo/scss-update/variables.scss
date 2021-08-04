@@ -340,7 +340,7 @@ $heading-font-sizes: map-merge(
     h3: $token-web-typography-web-heading-3-font-size,
     h4: $token-web-typography-web-heading-4-font-size,
     // we only go up to h4
-    h5: $global-font-size,
+      h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes
@@ -353,7 +353,7 @@ $heading-paragraph-spacing: map-merge(
     h3: $token-web-typography-web-heading-3-paragraph-spacing,
     h4: $token-web-typography-web-heading-4-paragraph-spacing,
     // we only go up to h4
-    h5: $global-font-size,
+      h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes
@@ -366,7 +366,7 @@ $heading-line-heights: map-merge(
     h3: $token-web-typography-web-heading-3-line-height,
     h4: $token-web-typography-web-heading-4-line-height,
     // we only go up to h4
-    h5: $global-font-size,
+      h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-line-heights
@@ -530,7 +530,7 @@ $form-control-margin-bottom: $global-spacer-x-large !default;
   --input-disabled-bg: #{$token-input-disabled-bg-color};
   --input-disabled-color: #{$token-input-disabled-text-color};
   --input-border-error-color: #{$token-input-border-error-color};
-  --input-label-color: #{$token-input-label-color};
+  --input-label-color: #{$token-color-base-800};
   --input-border-disabled-color: #{$token-color-base-400};
   --input-border-hover-color: #{$token-input-border-hover-color};
   --input-addon-font-color: #{$token-color-base-600};
@@ -881,6 +881,8 @@ $button-color-warning-rgb-light: 204, 77, 27;
 $button-color-warning-rgb-dark: 247, 97, 37;
 $button-color-alert-rgb-light: 217, 61, 50;
 $button-color-alert-rgb-dark: 229, 105, 96;
+$button-color-event-rgb-light: 50, 50, 50;
+$button-color-event-rgb-dark: 241, 241, 241;
 
 // @media (prefers-color-scheme: dark) {
 //   :root {
@@ -971,6 +973,13 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --button-hover-color-default-info: #{$token-color-blue-600};
   --button-pressed-color-default-info: #{$token-button-default-info-pressed-color};
   --button-disabled-color-default-info: #{$token-button-default-info-disabled-color};
+
+  --button-color-event: #{$token-button-event-color};
+  --button-hover-color-event: #{$token-color-base-900};
+  --button-pressed-color-event: #{$token-button-event-pressed-color};
+  --button-disabled-color-event: #{$token-button-event-disabled-color};
+  --button-color-event-rgb: #{$button-color-event-rgb-light};
+
   --button-color-success: #{$token-button-success-color};
   --button-color-success-rgb: #{$button-color-success-rgb-light};
   --button-hover-color-success: #{$token-color-green-600};
@@ -1132,6 +1141,13 @@ $button-states: map-merge(
       hover-color: var(--button-hover-color-default-info),
       pressed-color: var(--button-pressed-color-default-info),
       disabled-color: var(--button-disabled-color-default-info),
+    ),
+    event: (
+      color: var(--button-color-event),
+      color-rgb: var(--button-color-event-rgb),
+      hover-color: var(--button-hover-color-event),
+      pressed-color: var(--button-pressed-color-event),
+      disabled-color: var(--button-disabled-color-event),
     ),
   ),
   $button-states

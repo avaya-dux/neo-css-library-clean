@@ -25,7 +25,7 @@
   --input-disabled-bg: #{$token-input-disabled-bg-color};
   --input-disabled-color: #{$token-input-disabled-text-color};
   --input-border-error-color: #{$token-input-border-error-color};
-  --input-label-color: #{$token-input-label-color};
+  --input-label-color: #{$token-color-base-800};
   --input-border-disabled-color: #{$token-color-base-400};
   --input-border-hover-color: #{$token-input-border-hover-color};
   --input-addon-font-color: #{$token-color-base-600};
@@ -83,6 +83,11 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --button-disabled-color-alert: #{$token-button-alert-disabled-color};
   --button-secondary-background-color: #{$token-button-secondary-background-color};
   --button-tertiary-hover-background-color: #{$token-color-base-100};
+  --button-color-event: #{$token-button-event-color};
+  --button-hover-color-event: #{$token-color-base-600};
+  --button-pressed-color-event: #{$token-button-event-pressed-color};
+  --button-disabled-color-event: #{$token-button-event-disabled-color};
+  --button-color-event-rgb: #{$button-color-event-rgb-light};
 }
 :root .neo-light {
   --arrow-outer-color: #{$token-color-base-900};
