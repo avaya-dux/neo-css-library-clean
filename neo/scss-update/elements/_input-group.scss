@@ -149,6 +149,9 @@
     border-radius: $input-border-radius;
     .neo-input {
       border: none;
+      &:focus {
+        box-shadow: none;
+      }
     }
     & .neo-multiselect:focus {
       outline: none;
@@ -178,9 +181,13 @@
     & > .neo-input-editable__wrapper,
     & > .neo-input-icon__wrapper {
       margin: 0 !important;
+      &:focus,
+      &:focus-within {
+        box-shadow: none;
+      }
     }
     &:hover {
-      transition: $input-hover-transition;
+      // transition: $input-hover-transition;
       border-color: $token-input-border-hover-color;
       & .neo-input-group__addon {
         &:first-child {
@@ -198,24 +205,34 @@
       }
     }
     &:focus-within {
-      border-color: $input-focus-border-color;
-      // hard-coded for now
-      border-width: 2px;
+      // border-color: $input-focus-border-color;
+      // // hard-coded for now
+      // border-width: 2px;
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $input-focus-border-color;
       & .neo-input-group__addon {
         &:first-child {
           border-right-color: $input-focus-border-color;
           border-right-width: 2px;
+          // border-color: transparent;
+          // box-shadow: 0 0 0 2px $input-focus-border-color;
           @include rtl-selector {
             border-left-color: $input-focus-border-color;
             border-left-width: 2px;
+            // border-color: transparent;
+            // box-shadow: 0 0 0 2px $input-focus-border-color;
           }
         }
         &:last-child {
           border-left-color: $input-focus-border-color;
           border-left-width: 2px;
+          // border-color: transparent;
+          // box-shadow: 0 0 0 2px $input-focus-border-color;
           @include rtl-selector {
             border-right-color: $input-focus-border-color;
             border-right-width: 2px;
+            // border-color: transparent;
+            // box-shadow: 0 0 0 2px $input-focus-border-color;
           }
         }
       }
