@@ -38,15 +38,15 @@
       padding-left: $input-padding-x + $input-icon-size;
     }
 
-    + [class*='aoc-'],
-    + [class*='neo-icon'] {
+    + [class*="aoc-"],
+    + [class*="neo-icon"] {
       left: auto;
       right: 0;
     }
   }
 
-  [class*='aoc-'],
-  [class*='neo-icon'] {
+  [class*="aoc-"],
+  [class*="neo-icon"] {
     align-items: center;
     display: inline-flex;
     height: $input-height;

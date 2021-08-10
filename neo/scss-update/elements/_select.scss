@@ -93,9 +93,11 @@
   &:focus {
     // box-shadow: $input-focus-shadow;
     // outline: 0;
-    border-color: $input-focus-border-color;
-    // hard-coded for now
-    border-width: 2px;
+    // border-color: $input-focus-border-color;
+    // // hard-coded for now
+    // border-width: 2px;
+    border-color: transparent;
+    box-shadow: 0 0 0 2px $input-focus-border-color;
   }
 }
 
@@ -206,12 +208,12 @@
     // margin: $select-vertical-margin 0px;
   }
   &:hover {
-    transition: $input-hover-transition;
+    // transition: $input-hover-transition;
     &:after {
       color: $input-border-hover-color;
     }
     select {
-      transition: $input-hover-transition;
+      // transition: $input-hover-transition;
       border-color: $input-border-hover-color;
     }
   }
@@ -232,7 +234,7 @@
 
 @mixin neo-multiselect-arrow(
   // chevron-down
-  $arrow-icon: $dropdown-expand-icon,
+    $arrow-icon: $dropdown-expand-icon,
   $color: $global-text-color,
   $padding-left: $dropdown-padding-x
 ) {
@@ -400,12 +402,19 @@
     outline: 0;
     & .neo-multiselect__header {
       outline: 0;
-      border-color: $input-focus-border-color;
-      border-width: 2px;
+      // border-color: $input-focus-border-color;
+      // border-width: 2px;
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $input-focus-border-color;
     }
     & .neo-multiselect-combo__header {
-      border-color: $input-focus-border-color;
-      border-width: 2px;
+      // border-color: $input-focus-border-color;
+      // border-width: 2px;
+      border-color: transparent;
+      box-shadow: 0 0 0 2px $input-focus-border-color;
+      & .neo-input {
+        box-shadow: none;
+      }
     }
   }
 
