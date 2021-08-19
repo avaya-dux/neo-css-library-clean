@@ -625,6 +625,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --dropdown-item-color: #{$token-color-base-800};
     --dropdown-item-hover-color: #{$token-color-blue-200};
     --dropdown-item-hover-background-color: #{$token-color-blue-200};
+    --dropdown-readonly-font-color: #{$token-color-base-200};
   }
 }
 @media (prefers-color-scheme: light) {
@@ -636,6 +637,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --dropdown-item-color: #{$token-dropdown-default-font-color};
     --dropdown-item-hover-color: #{$token-dropdown-hover-color};
     --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
+    --dropdown-readonly-font-color: #{$token-dropdown-readonly-font-color};
   }
 }
 @media (prefers-color-scheme: dark) {
