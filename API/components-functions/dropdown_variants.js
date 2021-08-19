@@ -1,5 +1,5 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
 
@@ -53,27 +53,27 @@ async function dropdownStyles(value) {
     dropdown: {},
   };
   var dropDownItemVariants = value.Navigation.children.filter(
-    (child) => child.name === 'dropdown-item'
+    (child) => child.name === "dropdown-item"
   )[0].children;
 
   var dropDownComponent = value.Navigation.children.filter(
-    (child) => child.name === 'dropdown'
+    (child) => child.name === "dropdown"
   )[0];
 
   // console.log(dropDownComponent);
   // console.log(dropDownComponent.children);
   // border styles
   //border-style
-  dropdownJSONObject.dropdown['border-style'] = {
+  dropdownJSONObject.dropdown["border-style"] = {
     value: dropDownComponent.strokes[0].type.toLowerCase(),
   };
   // border-width
-  dropdownJSONObject.dropdown['border-width'] = {
+  dropdownJSONObject.dropdown["border-width"] = {
     value: `${dropDownComponent.strokeWeight}px`,
   };
   // border color
   // hard coded for now
-  dropdownJSONObject.dropdown['border-color'] = {
+  dropdownJSONObject.dropdown["border-color"] = {
     value: `rgba(0, 0, 0, 0.15)`,
   };
 
@@ -81,7 +81,7 @@ async function dropdownStyles(value) {
   // console.log(dropDownComponent.children[1].children[0].styles);
   var dividerColorTokenID =
     dropDownComponent.children[1].children[0].styles.stroke;
-  dropdownJSONObject.dropdown['divider-color'] = {
+  dropdownJSONObject.dropdown["divider-color"] = {
     value: await coreFigmaFunctions
       .getFigmaTokenNameByID(
         coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -112,48 +112,102 @@ async function dropdownStyles(value) {
         dropdownShadowTokenID
       ].document.name
         .toLowerCase()
-        .replace('-', '');
+        .replace("-", "");
 
       // x-offset
-      dropdownJSONObject.dropdown['shadow-x-offset'] = {
+      dropdownJSONObject.dropdown["shadow-x-offset"] = {
         value: `{shadows.${dropdownShadowTokenName}.xOffset.value}`,
       };
       // y-offset
-      dropdownJSONObject.dropdown['shadow-y-offset'] = {
+      dropdownJSONObject.dropdown["shadow-y-offset"] = {
         value: `{shadows.${dropdownShadowTokenName}.yOffset.value}`,
       };
       // radius
-      dropdownJSONObject.dropdown['shadow-radius'] = {
+      dropdownJSONObject.dropdown["shadow-radius"] = {
         value: `{shadows.${dropdownShadowTokenName}.radius.value}`,
       };
       // color
-      dropdownJSONObject.dropdown['shadow-color'] = {
+      dropdownJSONObject.dropdown["shadow-color"] = {
         value: `{shadows.${dropdownShadowTokenName}.color.value}`,
       };
     });
 
   // border radius
-  dropdownJSONObject.dropdown['border-radius'] = {
+  dropdownJSONObject.dropdown["border-radius"] = {
     value: `${dropDownComponent.cornerRadius}px`,
   };
 
   for (variant of dropDownItemVariants) {
-    if (variant.name === 'Left Side=none, Expandable=FALSE, State=default') {
+    // read-only text styles
+    if (
+      variant.name ===
+      "Left Side=none-read-only, Expandable=FALSE, State=default"
+    ) {
+      var dropdownReadOnlyColorTokenID =
+        variant.children[0].children[0].children[2].styles.fill;
+      dropdownJSONObject.dropdown["readonly-font-color"] = {
+        value: await coreFigmaFunctions
+          .getFigmaTokenNameByID(
+            coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+            coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+            dropdownReadOnlyColorTokenID
+          )
+          .then(
+            (value) =>
+              //   console.log(
+              //     value.nodes[headerFontTokenID].document.name.toLowerCase()
+              //   );
+              `{color.${value.nodes[
+                dropdownReadOnlyColorTokenID
+              ].document.name.toLowerCase()}.value}`
+          ),
+      };
+      var readOnlyFontTokenID =
+        variant.children[0].children[0].children[2].styles.text;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          readOnlyFontTokenID
+        )
+        .then((value) => {
+          var readOnyFontTokenName = value.nodes[
+            readOnlyFontTokenID
+          ].document.name.toLowerCase();
+          // font-size
+          dropdownJSONObject.dropdown["readonly-font-size"] = {
+            value: `{Web-typography.${readOnyFontTokenName}.fontSize.value}`,
+          };
+          // line-height
+          dropdownJSONObject.dropdown["readonly-line-height"] = {
+            value: `{Web-typography.${readOnyFontTokenName}.lineHeight.value}`,
+          };
+          // letter-spacing
+          dropdownJSONObject.dropdown["readonly-letter-spacing"] = {
+            value: `{Web-typography.${readOnyFontTokenName}.letterSpacing.value}`,
+          };
+          // font-weight
+          dropdownJSONObject.dropdown["readonly-font-weight"] = {
+            value: `{Web-typography.fontweight-regular.value}`,
+          };
+        });
+    }
+    if (variant.name === "Left Side=none, Expandable=FALSE, State=default") {
       // padding-x
-      dropdownJSONObject.dropdown['padding-x'] = {
+      dropdownJSONObject.dropdown["padding-x"] = {
         value: `${variant.children[0].paddingRight}px`,
       };
-      dropdownJSONObject.dropdown['padding-y'] = {
+      dropdownJSONObject.dropdown["padding-y"] = {
         value: `${variant.children[0].paddingTop}px`,
       };
       // min-width
-      dropdownJSONObject.dropdown['min-width'] = {
+      dropdownJSONObject.dropdown["min-width"] = {
         value: `${variant.size.x}px`,
       };
       // default font colour
       var dropdownDefaultColorTokenID =
         variant.children[0].children[0].children[2].styles.fill;
-      dropdownJSONObject.dropdown['default-font-color'] = {
+      dropdownJSONObject.dropdown["default-font-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -184,28 +238,28 @@ async function dropdownStyles(value) {
             dropdownFontTokenID
           ].document.name.toLowerCase();
           // font-size
-          dropdownJSONObject.dropdown['font-size'] = {
+          dropdownJSONObject.dropdown["font-size"] = {
             value: `{Web-typography.${dropdownFontTokenName}.fontSize.value}`,
           };
           // line-height
-          dropdownJSONObject.dropdown['line-height'] = {
+          dropdownJSONObject.dropdown["line-height"] = {
             value: `{Web-typography.${dropdownFontTokenName}.lineHeight.value}`,
           };
           // letter-spacing
-          dropdownJSONObject.dropdown['letter-spacing'] = {
+          dropdownJSONObject.dropdown["letter-spacing"] = {
             value: `{Web-typography.${dropdownFontTokenName}.letterSpacing.value}`,
           };
           // font-weight
-          dropdownJSONObject.dropdown['font-weight'] = {
+          dropdownJSONObject.dropdown["font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
         });
     }
-    if (variant.name === 'Left Side=none, Expandable=FALSE, State=disabled') {
+    if (variant.name === "Left Side=none, Expandable=FALSE, State=disabled") {
       // disabled font color
       var dropdownDisabledColorTokenID =
         variant.children[0].children[0].children[2].styles.fill;
-      dropdownJSONObject.dropdown['disabled-font-color'] = {
+      dropdownJSONObject.dropdown["disabled-font-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -223,19 +277,19 @@ async function dropdownStyles(value) {
           ),
       };
     }
-    if (variant.name === 'Left Side=icon, Expandable=FALSE, State=default') {
+    if (variant.name === "Left Side=icon, Expandable=FALSE, State=default") {
       // variant.children.forEach((child) => {
       //   console.log(child);
       // });
       // icon spacer
-      dropdownJSONObject.dropdown['item-spacer'] = {
+      dropdownJSONObject.dropdown["item-spacer"] = {
         value: `${variant.children[0].children[0].itemSpacing}px`,
       };
     }
-    if (variant.name === 'Left Side=none, Expandable=FALSE, State=hover') {
+    if (variant.name === "Left Side=none, Expandable=FALSE, State=hover") {
       // hover colour
       var dropdownHoverColorTokenID = variant.children[0].styles.fills;
-      dropdownJSONObject.dropdown['hover-color'] = {
+      dropdownJSONObject.dropdown["hover-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -261,11 +315,11 @@ async function dropdownStyles(value) {
 
   await fs
     .writeFile(
-      '../properties/components/dropdown.json',
+      "../properties/components/dropdown.json",
       JSON.stringify(dropdownJSONObject)
     )
     .then(function () {
-      console.log('dropdown.json created');
+      console.log("dropdown.json created");
     });
 }
 

@@ -283,6 +283,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --dropdown-item-color: #{$token-dropdown-default-font-color};
   --dropdown-item-hover-color: #{$token-dropdown-hover-color};
   --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
+  --dropdown-readonly-font-color: #{$token-dropdown-readonly-font-color};
 }
 
 :root .neo-light {

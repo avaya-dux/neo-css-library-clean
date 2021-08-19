@@ -20,7 +20,7 @@
 
 @mixin neo-dropdown-arrow(
   // chevron-down
-  $arrow-icon: $dropdown-expand-icon,
+    $arrow-icon: $dropdown-expand-icon,
   $color: $dropdown-color,
   $padding-left: $dropdown-padding-x
 ) {
@@ -431,8 +431,13 @@
     .neo-form-control {
       // padding: 0px 0px 0px 16px;
       margin: 0;
+      &:only-child {
+        flex-grow: 1;
+        margin-right: 8px;
+      }
     }
   }
+
   // .neo-input {
   //   border: $dropdown-input-border;
   //   margin: $dropdown-input-offset;
@@ -449,6 +454,20 @@
   // }
 }
 
+@mixin neo-dropdown-readonly-text {
+  .neo-dropdown__readonly-separator {
+    border-top: $dropdown-content-border;
+  }
+  .neo-dropdown__readonly-text {
+    font-size: $dropdown-readonly-font-size;
+    line-height: $dropdown-readonly-line-height;
+    letter-spacing: $dropdown-readonly-letter-spacing;
+    font-weight: $dropdown-readonly-font-weight;
+    padding: $dropdown-padding-y $dropdown-padding-x;
+    color: $dropdown-readonly-font-color;
+  }
+}
+
 .neo-dropdown {
   box-sizing: border-box;
   display: inline-block;
@@ -463,5 +482,6 @@
   @include neo-dropdown-avatar;
   @include neo-dropdown-position;
   @include neo-dropdown-input;
+  @include neo-dropdown-readonly-text;
   @include neo-popover-states;
 }

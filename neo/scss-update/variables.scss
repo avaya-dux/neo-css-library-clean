@@ -3222,6 +3222,7 @@ $leftnav-active-dot-size: $token-leftnav-active-circle-size !default;
   --dropdown-item-color: #{$token-dropdown-default-font-color};
   --dropdown-item-hover-color: #{$token-dropdown-hover-color};
   --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
+  --dropdown-readonly-font-color: #{$token-dropdown-readonly-font-color};
 }
 //   .neo-light {
 //     --dropdown-color: #{$token-dropdown-default-font-color};
@@ -3277,6 +3278,11 @@ $dropdown-box-shadow: $token-dropdown-shadow-x-offset
   $token-dropdown-shadow-y-offset $token-dropdown-shadow-radius
   $token-dropdown-shadow-color !default;
 $dropdown-content-shadow: $dropdown-box-shadow !default;
+$dropdown-readonly-font-size: $token-dropdown-readonly-font-size !default;
+$dropdown-readonly-line-height: $token-dropdown-readonly-line-height !default;
+$dropdown-readonly-letter-spacing: $token-dropdown-readonly-letter-spacing !default;
+$dropdown-readonly-font-weight: $token-dropdown-readonly-font-weight !default;
+$dropdown-readonly-font-color: var(--dropdown-readonly-font-color) !default;
 
 // Component name: Popover
 // Location: src/scss/components/_popover.scss
