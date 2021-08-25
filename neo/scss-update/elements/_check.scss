@@ -22,27 +22,29 @@
     }
   }
 
-  &:focus {
-    + label:not(:empty) {
-      // &:before {
-      // box-shadow: 0 0px 8px $radio-background-active-color;
-      outline: rgba(20, 115, 230, 1) auto 2px;
-      // outline-offset: -2px;
-      // }
-    }
-    + label:empty {
-      &:before {
-        outline: rgba(20, 115, 230, 1) auto 2px;
-        outline-offset: 2px;
-      }
-    }
-  }
+  // &:focus {
+  //   + label:not(:empty) {
+  //     // &:before {
+  //     // box-shadow: 0 0px 8px $radio-background-active-color;
+  //     outline: rgba(20, 115, 230, 1) auto 2px;
+  //     // outline-offset: -2px;
+  //     // }
+  //   }
+  //   + label:empty {
+  //     &:before {
+  //       outline: rgba(20, 115, 230, 1) auto 2px;
+  //       outline-offset: 2px;
+  //     }
+  //   }
+  // }
 
   + label {
     color: $checkbox-label-font-color;
     cursor: pointer;
     display: inline-block;
-    line-height: $checkbox-size;
+    // line-height: $checkbox-size;
+    // hard-coded for now
+    line-height: 22px !important;
     padding: 0;
     position: relative;
     display: flex;

@@ -47,7 +47,7 @@
   &-control {
     // margin-bottom: $form-control-margin-bottom;
     margin-bottom: 12px;
-    width: fit-content;
+    // width: fit-content;
     & > label:not(.neo-switch) {
       font-size: $token-input-label-font-size;
       line-height: $token-input-label-line-height;
@@ -275,7 +275,7 @@
       // margin-right: 12px;
       & .neo-input-group {
         & > label {
-          padding-bottom: 0px !important;
+          // padding-bottom: 0px !important;
         }
       }
     }
