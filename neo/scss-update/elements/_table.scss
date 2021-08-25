@@ -411,6 +411,7 @@
 
     .neo-check + label {
       display: block;
+      line-height: 16px !important;
     }
     .neo-multiselect__content ul li {
       font-weight: 400;
@@ -479,6 +480,10 @@
     border-bottom: $table-row-border-width $table-row-border-style
       $table-row-border-color;
     background-color: $table-background-color;
+    &:hover {
+      border-bottom: $table-row-border-width $table-row-border-style
+        $table-row-border-hover-active-color;
+    }
     &.disabled {
       background-color: $table-row-disabled-color;
       opacity: 0.5;
@@ -504,6 +509,8 @@
     }
     &.active {
       background-color: $table-row-hover-color;
+      border-bottom: $table-row-border-width $table-row-border-style
+        $table-row-border-hover-active-color;
       td {
         // FIGMA
         font-weight: $table-row-font-active-weight;
@@ -511,6 +518,7 @@
       }
       td .neo-check + label {
         display: block;
+        line-height: 16px !important;
       }
       td .neo-btn-square {
         display: block;

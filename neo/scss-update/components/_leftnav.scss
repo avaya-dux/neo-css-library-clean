@@ -237,6 +237,9 @@
       margin: 0;
       // hard-coded for now
       padding: 8px 0 8px $leftnav-sub-padding-horizontal;
+      @include rtl-selector {
+        padding: 8px $leftnav-sub-padding-horizontal 8px 0px;
+      }
       font-size: $leftnav-sub-default-font-size;
       font-weight: $leftnav-sub-default-font-weight;
       line-height: $leftnav-sub-default-font-line-height;
@@ -262,11 +265,18 @@
         border-radius: 50%;
         // hard-coded for now
         margin-right: 12px;
+        @include rtl-selector {
+          margin-right: 0px;
+          margin-left: 12px;
+        }
       }
     }
     &--no-icon {
       & > a {
         padding: 8px 0 8px $leftnav-sub-padding-no-icon-horizontal;
+        @include rtl-selector {
+          padding: 8px $leftnav-sub-padding-no-icon-horizontal 8px 0px;
+        }
       }
     }
 

@@ -10,9 +10,9 @@
 // }
 
 @mixin neo-input-group-children {
-  label:not(.neo-switch):not(.neo-label) {
-    // line-height: $input-line-height;
-    line-height: 21px;
+  label:not(.neo-switch):not(.neo-label):not() {
+    line-height: $input-line-height;
+    // line-height: 20px;
     // padding: $input-padding-y 0;
     // padding-bottom: $input-padding-y;
     /// PADDING HERE PROBLEMATIC???
@@ -127,9 +127,11 @@
   & > label:not(.neo-switch) {
     font-size: $token-input-label-font-size;
     line-height: $token-input-label-line-height;
+    // line-height: 20px;
     letter-spacing: $token-input-label-letter-spacing;
     font-weight: $token-input-label-font-weight;
     color: $input-label-color;
+    padding-bottom: 4px;
   }
   & .neo-check + label:before {
     line-height: 1.5;
@@ -151,6 +153,7 @@
       border: none;
       &:focus {
         box-shadow: none;
+        padding: 8px 11px;
       }
     }
     & .neo-multiselect:focus {
@@ -183,6 +186,7 @@
       margin: 0 !important;
       &:focus,
       &:focus-within {
+        margin: -1px -1px;
         box-shadow: none;
       }
     }
@@ -205,15 +209,17 @@
       }
     }
     &:focus-within {
-      // border-color: $input-focus-border-color;
+      border-color: $input-focus-border-color;
       // // hard-coded for now
-      // border-width: 2px;
-      border-color: transparent;
-      box-shadow: 0 0 0 2px $input-focus-border-color;
+      border-width: 2px;
+      margin: -1px -1px;
+      // border-color: transparent;
+      // box-shadow: 0 0 0 2px $input-focus-border-color;
       & .neo-input-group__addon {
         &:first-child {
           border-right-color: $input-focus-border-color;
           border-right-width: 2px;
+          // margin-left: -1px;
           // border-color: transparent;
           // box-shadow: 0 0 0 2px $input-focus-border-color;
           @include rtl-selector {

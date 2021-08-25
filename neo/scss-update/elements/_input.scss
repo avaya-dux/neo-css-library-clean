@@ -39,14 +39,25 @@
 
   &:not(:disabled):hover + .neo-input-edit__icon,
   &:not(:disabled):hover + .neo-input-editable__close {
-    visibility: visible;
+    &:before {
+      visibility: visible;
+    }
   }
 
   // focus to display close button
 
   &:not(:disabled):focus + .neo-input-edit__icon,
   &:not(:disabled):focus + .neo-input-editable__close {
-    visibility: visible;
+    &:before {
+      visibility: visible;
+    }
+  }
+
+  &:not(:disabled) + .neo-input-edit__icon:focus,
+  &:not(:disabled) + .neo-input-editable__close:focus {
+    &:before {
+      visibility: visible;
+    }
   }
 
   &:disabled + .neo-input-edit__icon,
@@ -72,6 +83,9 @@
     }
     // input placeholder wrapper
   }
+  // &-readonly ~ label {
+  //   line-height: 16px;
+  // }
 
   &[disabled] {
     background-color: $input-disabled-bg;
@@ -86,12 +100,13 @@
   }
 
   &:focus {
-    // border: $input-border-width $input-border-style $input-focus-border-color;
+    border: $input-border-width $input-border-style $input-focus-border-color;
     // //hard-coded for now
-    // border-width: 2px;
+    border-width: 2px;
     outline: none;
-    border-color: transparent;
-    box-shadow: 0 0 0 2px $input-focus-border-color;
+    // margin: -1px -1px;
+    // border-color: transparent;
+    // box-shadow: 0 0 0 2px $input-focus-border-color;
   }
 
   &[disabled] {
@@ -190,12 +205,13 @@
   // need to work on border styles for whole input wrapper
   border: $input-border-width $input-border-style $input-border-color;
   &:focus-within {
-    // border-color: $input-focus-border-color;
+    border-color: $input-focus-border-color;
     // hard-coded for now
-    // border-width: 2px;
+    border-width: 2px;
     // padding: 1px;
-    border-color: transparent;
-    box-shadow: 0 0 0 2px $input-focus-border-color;
+    // border-color: transparent;
+    // box-shadow: 0 0 0 2px $input-focus-border-color;
+    margin: -1px -1px;
   }
   .neo-form-control:not(.neo-form-control--disabled)
     &:hover:not(:focus-within) {
@@ -205,7 +221,9 @@
 
   &:hover .neo-input-edit__icon,
   &:hover .neo-input-editable__close {
-    visibility: visible;
+    &:before {
+      visibility: visible;
+    }
   }
   min-height: $input-height;
   width: $input-width;
@@ -221,6 +239,7 @@
     }
     &:focus {
       border: none;
+      // margin: -1px -1px;
       // outline: none;
       &:focus {
         box-shadow: none;
@@ -230,7 +249,9 @@
   & .neo-input-edit__icon,
   & .neo-input-editable__close {
     border-radius: $input-border-radius;
-    visibility: hidden;
+    &:before {
+      visibility: hidden;
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
