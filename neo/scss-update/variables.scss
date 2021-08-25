@@ -778,6 +778,7 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-background-color: #{$token-table-background-color};
   --table-row-disabled-color: #{$token-table-row-disabled-color};
   --table-row-border-color: #{$token-table-row-border-color};
+  --table-row-border-hover-active-color: #{$token-color-base-0};
   --table-row-hover-color: #{$token-table-row-hover-color};
   --table-row-font-active-color: #{$token-table-row-font-active-color};
   --table-nested-row-background-color: #{$token-table-nested-row-background-color};
@@ -821,6 +822,9 @@ $table-header-cell-hover-color: var(--table-header-cell-hover-color) !default;
 $table-background-color: var(--table-background-color) !default;
 $table-row-disabled-color: var(--table-row-disabled-color) !default;
 $table-row-border-color: var(--table-row-border-color) !default;
+$table-row-border-hover-active-color: var(
+  --table-row-border-hover-active-color
+) !default;
 $table-row-hover-color: var(--table-row-hover-color) !default;
 $table-row-font-active-color: var(--table-row-font-active-color) !default;
 $table-nested-row-background-color: var(

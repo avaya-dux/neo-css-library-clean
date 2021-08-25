@@ -17,6 +17,10 @@
   .neo-input {
     flex-grow: 1;
 
+    &:focus {
+      // margin: -1px -1px;
+    }
+
     &:first-child {
       padding-right: $input-padding-x + $input-icon-size;
       @include rtl-selector {
