@@ -417,6 +417,7 @@
     display: flex;
     align-items: center;
     padding: $dropdown-padding-y 0px $dropdown-padding-y $dropdown-padding-x;
+    width: 100%;
     &:hover {
       background-color: $dropdown-item-hover-color;
     }
@@ -465,6 +466,7 @@
     font-weight: $dropdown-readonly-font-weight;
     padding: $dropdown-padding-y $dropdown-padding-x;
     color: $dropdown-readonly-font-color;
+    margin-block-end: 0px;
   }
 }
 
