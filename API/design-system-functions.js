@@ -33,7 +33,7 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["audio-filled", "audio-on-1", "audio-on-2", "audio-on-3"]
+      ["collapse-all", "expand-all"]
     )
   )
   .catch((error) => console.log(error));
