@@ -186,6 +186,7 @@
 }
 
 .neo-treeview {
+  @include NeoLinkStyles;
   ul {
     margin: 0;
   }

@@ -522,6 +522,7 @@
 }
 
 .neo-leftnav {
+  @include NeoLinkStyles;
   &--wrapper {
     height: inherit;
     max-width: 240px;

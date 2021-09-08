@@ -292,6 +292,7 @@
 // }
 
 .neo-tooltip {
+  @include NeoLinkStyles;
   // alignment utility class
 
   &--fit-content {

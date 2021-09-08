@@ -529,6 +529,8 @@ const unicodes = {
   "audio-on-1": 0xf3c3,
   "audio-on-2": 0xf3c4,
   "audio-on-3": 0xf3c5,
+  "audio-jack": 0xf3c6,
+  clean: 0xf3c7,
 };
 
 // .neo-icon-legal:before {

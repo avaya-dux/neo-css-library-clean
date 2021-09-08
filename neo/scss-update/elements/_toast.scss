@@ -1,4 +1,5 @@
 .neo-toast {
+  @include NeoLinkStyles;
   border-radius: $toast-border-radius;
   padding: $toast-padding-y $toast-padding-x;
   background-color: $toast-background-color;

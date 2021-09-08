@@ -162,6 +162,7 @@
 // Easily usable on <nav>.
 
 .neo-pagination {
+  @include NeoLinkStyles;
   @extend %pagination;
   // font-size: $pagination-font-size;
 

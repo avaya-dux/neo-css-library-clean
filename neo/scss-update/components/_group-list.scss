@@ -1,6 +1,7 @@
 // updated group list styles
 
 .neo-group-list {
+  @include NeoLinkStyles;
   @extend %list;
 
   // new 3.6.0 style
