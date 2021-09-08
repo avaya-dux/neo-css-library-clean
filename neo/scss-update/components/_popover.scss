@@ -45,6 +45,7 @@
 }
 
 .neo-popover {
+  @include NeoLinkStyles;
   @extend %neo-popover;
 
   .neo-btn {

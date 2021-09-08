@@ -141,6 +141,7 @@
 }
 
 .neo-widget__content {
+  @include NeoLinkStyles;
   // animation: animation-modal-content $modal-animation-time;
   color: $global-text-color;
   // padding: 0 16px;

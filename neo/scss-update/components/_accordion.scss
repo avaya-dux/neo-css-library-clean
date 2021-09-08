@@ -111,5 +111,6 @@
 
   @include list--hover("header");
   @include accordion-header;
+  @include NeoLinkStyles;
   // @include list--borderless;
 }

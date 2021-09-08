@@ -23,7 +23,7 @@
 @mixin switch-icon {
   /* stylelint-disable-next-line selector-class-pattern */
 
-  input:focus {
+  input:focus-visible {
     + .neo-switch__icon:before {
       // box-shadow: 0 0px 8px $radio-background-active-color;
       outline: 1px auto $radio-background-active-color;
@@ -124,6 +124,7 @@
 }
 
 .neo-switch {
+  @include NeoLinkStyles;
   display: inline-block;
   height: $switch-label-height;
   line-height: $body-line-height;
@@ -146,7 +147,7 @@
     // outline-offset: 2px;
   }
 
-  &:focus .neo-switch__icon {
+  &:focus-visible .neo-switch__icon {
     &::before {
       box-shadow: $token-shadows-elevation-100-x-offset
         $token-shadows-elevation-100-y-offset

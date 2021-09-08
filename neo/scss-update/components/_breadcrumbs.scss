@@ -33,6 +33,7 @@
 //   }
 
 .neo-breadcrumbs {
+  @include NeoLinkStyles;
   display: flex;
   justify-content: space-between;
   & .neo-breadcrumbs__wrapper {

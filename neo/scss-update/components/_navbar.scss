@@ -130,6 +130,7 @@
 }
 
 .neo-nav {
+  @include NeoLinkStyles;
   // avatar dropdown in Navbar
   // TO-DO: extend these styles to Avatar dropdowns more generally
   & .neo-dropdown {

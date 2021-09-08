@@ -217,6 +217,7 @@
 // updated chips classes
 
 .neo-chips {
+  @include NeoLinkStyles;
   align-items: center;
   border: 1px solid $chips-border-color;
   border-radius: $chips-border-radius;
