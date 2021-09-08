@@ -6,6 +6,7 @@
 }
 
 .neo-modal {
+  @include NeoLinkStyles;
   display: none;
   position: absolute;
   border-radius: $modal-radius;

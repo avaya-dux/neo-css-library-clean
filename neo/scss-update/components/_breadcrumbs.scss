@@ -33,8 +33,21 @@
 //   }
 
 .neo-breadcrumbs {
+  @include NeoLinkStyles;
   display: flex;
   justify-content: space-between;
+  & .neo-breadcrumbs__wrapper {
+    display: flex;
+    flex-direction: column;
+    & .neo-breadcrumbs__description {
+      color: $breadcrumbs-default-color;
+      font-size: $breadcrumbs-subtext-font-size;
+      font-weight: $breadcrumbs-subtext-font-weight;
+      letter-spacing: $breadcrumbs-subtext-letter-spacing;
+      line-height: $breadcrumbs-subtext-line-height;
+      margin: $breadcrumbs-subtext-spacing 0px 0px 0px;
+    }
+  }
   & ol {
     flex-grow: 1;
     margin: 0;
@@ -77,14 +90,6 @@
           color: $breadcrumbs-default-color;
         }
       }
-    }
-    & .neo-breadcrumbs__description {
-      color: $breadcrumbs-default-color;
-      font-size: $breadcrumbs-subtext-font-size;
-      font-weight: $breadcrumbs-subtext-font-weight;
-      letter-spacing: $breadcrumbs-subtext-letter-spacing;
-      line-height: $breadcrumbs-subtext-line-height;
-      margin: $breadcrumbs-subtext-spacing 0px 0px 0px;
     }
   }
 

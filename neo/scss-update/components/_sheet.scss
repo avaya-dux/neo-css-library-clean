@@ -81,6 +81,7 @@
 }
 
 .neo-sheet {
+  @include NeoLinkStyles;
   @extend %sheet;
 
   @include sheet-header;

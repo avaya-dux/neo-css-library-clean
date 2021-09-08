@@ -355,6 +355,7 @@
 }
 
 .neo-table {
+  @include NeoLinkStyles;
   background-color: transparent;
   border-collapse: collapse;
   empty-cells: show;

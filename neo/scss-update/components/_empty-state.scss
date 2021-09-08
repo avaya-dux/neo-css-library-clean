@@ -1,6 +1,7 @@
 // new empty state class
 
 .neo-empty-state {
+  @include NeoLinkStyles;
   color: $empty-state-color;
   font-size: $empty-state-font-size;
   font-weight: $empty-state-font-weight;
