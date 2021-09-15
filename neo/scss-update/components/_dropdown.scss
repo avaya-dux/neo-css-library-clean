@@ -416,14 +416,15 @@
   &--input {
     display: flex;
     align-items: center;
-    padding: $dropdown-padding-y 0px $dropdown-padding-y $dropdown-padding-x;
+    padding: $dropdown-padding-y $dropdown-padding-x $dropdown-padding-y
+      $dropdown-padding-x;
     width: 100%;
     &:hover {
       background-color: $dropdown-item-hover-color;
     }
     .neo-btn-square {
       margin-left: 8px;
-      margin-right: 8px;
+      // margin-right: 8px;
       // @include rtl-selector {
       //   margin-left: 0px;
       //   margin-right: 8px;
@@ -434,7 +435,7 @@
       margin: 0;
       &:only-child {
         flex-grow: 1;
-        margin-right: 8px;
+        // margin-right: 8px;
       }
     }
   }
