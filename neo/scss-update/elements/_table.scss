@@ -362,6 +362,14 @@
   max-width: 100%;
   width: 100%;
 
+  &--compact {
+    tr:not(.neo-table__nested--wrapper) td,
+    .neo-table__nested.show td {
+      padding: $table-condensed-row-cell-padding-y
+        $table-condensed-row-cell-padding-x !important;
+    }
+  }
+
   // Table headers
 
   th {

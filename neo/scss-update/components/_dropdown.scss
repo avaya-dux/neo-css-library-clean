@@ -149,7 +149,7 @@
 
     &[class*="neo-icon"] {
       text-indent: -11px;
-      padding: 8px 30px 8px 30px !important;
+      padding: 8px 25px 8px 30px !important;
     }
 
     &:not(.neo-dropdown__link-header) {
@@ -433,10 +433,11 @@
     .neo-form-control {
       // padding: 0px 0px 0px 16px;
       margin: 0;
-      &:only-child {
-        flex-grow: 1;
-        // margin-right: 8px;
-      }
+      flex-grow: 1;
+      // &:only-child {
+      //   flex-grow: 1;
+      //   // margin-right: 8px;
+      // }
     }
   }
 

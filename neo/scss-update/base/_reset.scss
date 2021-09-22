@@ -29,6 +29,10 @@ body {
     outline: rgba(20, 115, 230, 1) auto 2px;
     outline-offset: -2px;
   }
+  * {
+    margin: 0;
+    padding: 0;
+  }
   *,
   *::before,
   *::after {
