@@ -535,6 +535,17 @@
         }
       }
     }
+    &--scrollable {
+      .neo-leftnav {
+        overflow: auto;
+      }
+      &.neo-leftnav--condensed--scrollable.hide-nav {
+        max-width: 70px !important;
+      }
+      & .neo-leftnav__main {
+        min-width: initial;
+      }
+    }
   }
 }
 

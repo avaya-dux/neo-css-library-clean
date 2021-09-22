@@ -122,8 +122,9 @@ async function tableStyles(value) {
           headerFontTokenID
         )
         .then((value) => {
-          var headerFontTokenName =
-            value.nodes[headerFontTokenID].document.name.toLowerCase();
+          var headerFontTokenName = value.nodes[
+            headerFontTokenID
+          ].document.name.toLowerCase();
           // header-font-size
           tableJSONObject.table["header-cell-font-size"] = {
             value: `{Web-typography.${headerFontTokenName}.fontSize.value}`,
@@ -175,7 +176,7 @@ async function tableStyles(value) {
       for (variant of component.children) {
         if (
           variant.name ===
-          "Type=text, Can Sort/Filter=TRUE, Filter Applied=FALSE, Sorting Applied=none, State=hover, Location=main"
+          "Type=text, Can Sort/Filter=TRUE, Filter Applied=FALSE, Sorting Applied=none, State=hover, Size=default"
         ) {
           // console.log(variant.children[0].children[0]);
           // header cell filter icon size
@@ -219,8 +220,9 @@ async function tableStyles(value) {
               filterFontTokenID
             )
             .then((value) => {
-              var filterFontTokenName =
-                value.nodes[filterFontTokenID].document.name.toLowerCase();
+              var filterFontTokenName = value.nodes[
+                filterFontTokenID
+              ].document.name.toLowerCase();
               // header-font-size
               tableJSONObject.table["filter-font-size"] = {
                 value: `{Web-typography.${filterFontTokenName}.fontSize.value}`,
@@ -267,15 +269,13 @@ async function tableStyles(value) {
     }
     if (component.name === "row") {
       for (variant of component.children) {
-        if (variant.name === "Type=icon, State=selected, Location=main") {
+        if (variant.name === "Type=icon, State=selected, Size=default") {
           // table icon sizing
           tableJSONObject.table["icon-size"] = {
             value: `${variant.children[0].children[1].size.x}px`,
           };
         }
-        if (
-          variant.name === "Type=text - main, State=disabled, Location=main"
-        ) {
+        if (variant.name === "Type=text - main, State=disabled, Size=default") {
           // row disabled colour
           var rowDisabledColorID = variant.children[0].styles.fills;
           await coreFigmaFunctions
@@ -298,8 +298,7 @@ async function tableStyles(value) {
           };
           // border style
           tableJSONObject.table["row-border-style"] = {
-            value:
-              variant.children[0].children[1].strokes[0].type.toLowerCase(),
+            value: variant.children[0].children[1].strokes[0].type.toLowerCase(),
           };
           // border color
           var headerCellBorderColorID =
@@ -318,7 +317,7 @@ async function tableStyles(value) {
               };
             });
         }
-        if (variant.name === "Type=text - main, State=hover, Location=main") {
+        if (variant.name === "Type=text - main, State=hover, Size=default") {
           // row hover colour
           var rowHoverColorID = variant.children[0].styles.fills;
           await coreFigmaFunctions
@@ -335,9 +334,7 @@ async function tableStyles(value) {
               };
             });
         }
-        if (
-          variant.name === "Type=text - main, State=selected, Location=main"
-        ) {
+        if (variant.name === "Type=text - main, State=selected, Size=default") {
           // font active colour
           var rowActiveColorID = variant.children[0].children[0].styles.fill;
           await coreFigmaFunctions
@@ -362,6 +359,22 @@ async function tableStyles(value) {
             value: `${variant.children[0].children[0].relativeTransform[0][2]}px`,
           };
           tableJSONObject.table["row-cell-padding-y"] = {
+            value: `${variant.children[0].children[0].relativeTransform[1][2]}px`,
+          };
+          // // condensed table cell padding
+          // tableJSONObject.table["condensed-row-cell-padding-x"] = {
+          //   value: `${variant.children[0].children[0].relativeTransform[0][2]}px`,
+          // };
+          // tableJSONObject.table["condensed-row-cell-padding-y"] = {
+          //   value: `${variant.children[0].children[0].relativeTransform[1][2]}px`,
+          // };
+        }
+        if (variant.name === "Type=text - main, State=selected, Size=compact") {
+          // condensed table cell padding
+          tableJSONObject.table["condensed-row-cell-padding-x"] = {
+            value: `${variant.children[0].children[0].relativeTransform[0][2]}px`,
+          };
+          tableJSONObject.table["condensed-row-cell-padding-y"] = {
             value: `${variant.children[0].children[0].relativeTransform[1][2]}px`,
           };
         }
@@ -478,7 +491,7 @@ async function tableStyles(value) {
         });
     }
     if (component.name === "filter-by-sheet") {
-      console.log(component.children[1].children[0].children[0]);
+      // console.log(component.children[1].children[0].children[0]);
       // sheet form border style
       // border width
       tableJSONObject.table["sheet-border-width"] = {
@@ -486,8 +499,7 @@ async function tableStyles(value) {
       };
       // border style
       tableJSONObject.table["sheet-border-style"] = {
-        value:
-          component.children[0].children[0].children[0].children[1].children[1].children[8].strokes[0].type.toLowerCase(),
+        value: component.children[0].children[0].children[0].children[1].children[1].children[8].strokes[0].type.toLowerCase(),
       };
       // border color
       var filterSheetBorderColorID =
