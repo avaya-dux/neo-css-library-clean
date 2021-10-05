@@ -365,8 +365,10 @@
   &--compact {
     tr:not(.neo-table__nested--wrapper) td,
     .neo-table__nested.show td {
-      padding: $table-condensed-row-cell-padding-y
-        $table-condensed-row-cell-padding-x !important;
+      padding: 0px $table-condensed-row-cell-padding-x !important;
+    }
+    th {
+      padding: 0px $table-condensed-row-cell-padding-x !important;
     }
   }
 
@@ -388,6 +390,10 @@
       $table-header-cell-border-style $table-header-cell-border-color;
     border-top: $table-header-cell-border-width $table-header-cell-border-style
       $table-header-cell-border-color;
+
+    & .neo-multiselect {
+      display: inline-block !important;
+    }
 
     &.check {
       width: 5%;
@@ -421,6 +427,7 @@
     .neo-check + label {
       display: block;
       line-height: 16px !important;
+      margin-top: 2px;
     }
     .neo-multiselect__content ul li {
       font-weight: 400;

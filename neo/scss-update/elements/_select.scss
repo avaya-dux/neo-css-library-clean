@@ -407,7 +407,8 @@
       // border-color: transparent;
       // box-shadow: 0 0 0 2px $input-focus-border-color;
     }
-    & .neo-multiselect-combo__header {
+    & .neo-multiselect-combo__header,
+    & .neo-multiselect-combo__header:focus {
       border-color: $input-focus-border-color;
       border-width: 2px;
       // border-color: transparent;
