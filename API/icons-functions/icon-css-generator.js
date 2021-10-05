@@ -531,6 +531,14 @@ const unicodes = {
   "audio-on-3": 0xf3c5,
   "audio-jack": 0xf3c6,
   clean: 0xf3c7,
+  "line-straight": 0xf3c8,
+  text: 0xf3c9,
+  "shape-circle": 0xf3d1,
+  "shape-square": 0xf3d2,
+  "shape-circle-filled": 0xf3d3,
+  "shape-square-filled": 0xf3d4,
+  select: 0xf3d5,
+  erase: 0xf3d6,
 };
 
 // .neo-icon-legal:before {
