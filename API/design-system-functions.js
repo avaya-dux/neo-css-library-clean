@@ -33,7 +33,16 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["clean", "audio-jack"]
+      [
+        "line-straight",
+        "text",
+        "shape-circle",
+        "shape-square",
+        "shape-circle-filled",
+        "shape-square-filled",
+        "select",
+        "erase",
+      ]
     )
   )
   .catch((error) => console.log(error));
