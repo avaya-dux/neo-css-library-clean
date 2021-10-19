@@ -34,14 +34,11 @@ pullAllDesignTokens()
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
       [
-        "line-straight",
-        "text",
-        "shape-circle",
-        "shape-square",
-        "shape-circle-filled",
-        "shape-square-filled",
-        "select",
-        "erase",
+        "dashboard-filled",
+        "bridged-line-appearance",
+        "ic-conference-wifi",
+        "bounce",
+        "forward",
       ]
     )
   )
