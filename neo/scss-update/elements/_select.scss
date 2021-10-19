@@ -307,14 +307,13 @@
       }
       // hint styles for checkboxes
       & + .neo-input-hint {
-        white-space: nowrap;
-        margin: 0px;
-        padding-left: 40px !important;
+      white-space: nowrap;
+      margin: 0px;
+      padding-left: 40px !important;
+      padding-right: 8px !important;
+      @include rtl-selector {
         padding-right: 8px !important;
-        @include rtl-selector {
-          padding-right: 8px !important;
-          padding-left: 40px !important;
-        }
+        padding-left: 40px !important;
       }
     }
 
@@ -336,6 +335,9 @@
       color: $global-text-color;
       padding: 8px 16px;
       list-style: none;
+      &::before {
+        margin-right: 8px;
+      }
       &[disabled] {
         color: $checkbox-label-disabled-font-color;
         &:hover {
@@ -393,7 +395,8 @@
 
 .neo-multiselect {
   box-sizing: border-box;
-  display: inline-block;
+  // display: inline-block;
+  display: table;
   position: relative;
 
   // margin-bottom: 1px;
@@ -489,4 +492,29 @@
 
   @include neo-multiselect-states;
   @include neo-multiselect-content;
+}
+
+
+.neo-multiselect-combo__dropdown + .neo-multiselect__content, .neo-multiselect__dropdown + .neo-multiselect__content {
+    ul li.neo-multiselect__dropdown__item {
+      display: flex;
+      &::after {
+        align-self: flex-end;
+        font-family: "updated-neo-icons";
+        content: $token-icons-neo-icon-chevron-right;
+        position: absolute;
+        right: 12px;
+      }
+      &::before {
+        margin-right: 8px;
+      }
+    }
+}
+
+.neo-multiselect__content + .neo-dropdown .neo-dropdown__content .neo-dropdown__link {
+  padding: 8px 16px;
+}
+
+.neo-multiselect__content + .neo-dropdown {
+  display: block;
 }

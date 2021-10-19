@@ -364,10 +364,20 @@
 
   &--compact {
     tr:not(.neo-table__nested--wrapper) td,
-    .neo-table__nested.show td {
-      padding: $table-condensed-row-cell-padding-y
-        $table-condensed-row-cell-padding-x !important;
+    .neo-table__nested.show td,
+    thead tr th {
+      padding: 3px $table-condensed-row-cell-padding-x;
     }
+    .neo-table__nested.show thead tr th {
+      padding: 7px $table-condensed-row-cell-padding-x;
+    }
+    thead tr th {
+      padding: 7px 16px;
+    }
+    thead tr th .neo-check + label {
+      display: flex;
+    }
+    
   }
 
   // Table headers
@@ -398,7 +408,7 @@
       }
     }
     &.filters {
-      padding: 0 !important;
+      padding: 0 8px !important;
       .neo-multiselect {
         // should be th padding
         padding: $table-header-cell-padding-y $table-header-cell-padding-x !important;
@@ -411,6 +421,8 @@
     }
     &.filters:hover,
     &.filters:focus-within {
+      background-color: $table-header-cell-hover-color;
+      transition: $tab-hover-transition;
       & > * {
         background-color: $table-header-cell-hover-color;
         transition: $tab-hover-transition;
@@ -419,7 +431,7 @@
     }
 
     .neo-check + label {
-      display: block;
+      display: flex;
       line-height: 16px !important;
     }
     .neo-multiselect__content ul li {
@@ -510,7 +522,7 @@
       // FIGMA
       background-color: $table-row-hover-color;
       td .neo-check + label {
-        display: block;
+        display: flex;
       }
       td .neo-btn-square {
         display: block;
@@ -526,12 +538,15 @@
         // text-shadow: 0.5px 0 0 currentColor;
       }
       td .neo-check + label {
-        display: block;
+        display: flex;
         line-height: 16px !important;
       }
       td .neo-btn-square {
         display: block;
       }
+    }
+    &.expanded {
+      border-bottom: none !important;
     }
   }
 
@@ -568,6 +583,7 @@
       }
     }
     .neo-btn-square {
+      height: auto;
       &:not(.expand) {
         display: none;
       }
@@ -628,7 +644,7 @@
       max-height: $table-nested-row-max-height;
     }
     td {
-      padding: $table-nested-row-padding-y $table-nested-row-padding-x !important;
+      padding: $table-nested-row-padding-y $table-nested-row-padding-x;
     }
   }
 }
