@@ -497,6 +497,8 @@
 
 
 .neo-multiselect-combo__dropdown + .neo-multiselect__content, .neo-multiselect__dropdown + .neo-multiselect__content {
+  width: 100%;
+  max-width: initial;
     ul li.neo-multiselect__dropdown__item {
       display: flex;
       &::after {
