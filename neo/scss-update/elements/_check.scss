@@ -89,7 +89,10 @@
     font-size: $checkbox-icon-font-size;
     color: $checkbox-color;
     padding-left: 1px;
-    padding-right: 2px;
+    // padding-right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     // transition: $global-hover-transition;
   }
 
@@ -103,6 +106,9 @@
     font-size: 12px;
     padding-left: 1px;
     padding-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &:disabled + label,
@@ -139,6 +145,9 @@
     padding-right: 2px;
     &::before {
       background-color: $checkbox-disabled-background;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 
@@ -150,12 +159,14 @@
       border: $checkbox-border-width $checkbox-border-style
         $checkbox-disabled-border-color;
       content: "";
-      display: inline-block;
       height: $checkbox-size;
       margin-right: $checkbox-label-indent;
       vertical-align: text-top;
       min-width: $checkbox-size;
       border-radius: $checkbox-border-radius;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       // transition: $global-hover-transition;
 
       /* stylelint-disable max-nesting-depth */
@@ -179,7 +190,10 @@
       &::before {
         border: $checkbox-border-width $checkbox-border-style
           $checkbox-disabled-border-color;
-        display: inline-block;
+        // display: inline-block;
+        display: flex;
+      align-items: center;
+      justify-content: center;
         height: $checkbox-size;
         margin-right: $checkbox-label-indent;
         vertical-align: text-top;
@@ -190,7 +204,7 @@
         font-size: $checkbox-icon-font-size;
         color: $checkbox-color;
         padding-left: 2px;
-        padding-right: 2px;
+        // padding-right: 2px;
         background-color: $checkbox-disabled-background;
         background: $checkbox-disabled-background !important;
 
