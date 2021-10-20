@@ -42,7 +42,9 @@
 .neo-form {
   &-control--checkboxes {
     margin-bottom: 0px !important;
+    // width: auto;
     // line-height: 20px;
+    display: flex;
   }
   &-control {
     // margin-bottom: $form-control-margin-bottom;
@@ -269,6 +271,11 @@
     label {
       white-space: nowrap;
     }
+
+    .neo-input-group > label:not(.neo-switch) {
+      padding-bottom: 0px;
+    }
+
 
     .neo-form-control {
       margin-bottom: 0px;

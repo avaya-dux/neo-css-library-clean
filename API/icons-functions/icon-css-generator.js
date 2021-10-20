@@ -539,6 +539,11 @@ const unicodes = {
   "shape-square-filled": 0xf3d4,
   select: 0xf3d5,
   erase: 0xf3d6,
+  "dashboard-filled": 0xf3d7,
+  "bridged-line-appearance": 0xf3d8,
+  "ic-conference-wifi": 0xf3d9,
+  "bounce": 0xf3e1,
+  "forward": 0xf3e2
 };
 
 // .neo-icon-legal:before {
