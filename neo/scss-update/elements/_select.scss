@@ -269,13 +269,14 @@
 
 @mixin neo-multiselect-content {
   &__content {
+    width: 100%;
     transition-timing-function: $global-transition-timing;
     left: 100%;
     top: -1px;
     // overrides box-shadow parameter in below mixin
     box-shadow: $dropdown-box-shadow;
     // padding: 8px 0 !important;
-    max-width: 300px;
+    // max-width: 300px;
     overflow-wrap: break-word;
     white-space: normal;
     max-height: 200px;
@@ -301,12 +302,14 @@
     }
 
     & .neo-check:not(input:disabled) + label {
-      &:hover {
+      &:hover, &.neo-multiselect__content__item--hover, &.neo-multiselect__content__item--focus, &.neo-multiselect__content__item--focus {
         // need to replace with correct token from Figma
         background-color: $group-list-item-hover;
       }
       // hint styles for checkboxes
-      & + .neo-input-hint {
+    }
+
+    & .neo-check + label + .neo-input-hint {
       white-space: nowrap;
       margin: 0px;
       padding-left: 40px !important;
@@ -317,10 +320,14 @@
       }
     }
 
+    & input[type="checkbox"]:disabled + label + .neo-input-hint {
+     color: $checkbox-label-disabled-font-color;
+    }
+
     // styles for hover on groups
     & .neo-input-group {
       padding-bottom: 8px;
-      &:hover {
+      &:hover, &.neo-multiselect__content__item--hover, &.neo-multiselect__content__item--focus, &.neo-multiselect__content__item--focus {
         background-color: $group-list-item-hover;
       }
     }
@@ -338,13 +345,13 @@
       &::before {
         margin-right: 8px;
       }
-      &[disabled] {
+      &[disabled], &.neo-multiselect__content__item--disabled {
         color: $checkbox-label-disabled-font-color;
         &:hover {
           cursor: not-allowed;
         }
       }
-      &:not([disabled]):hover {
+      &:not([disabled]):hover, &.neo-multiselect__content__item--hover:not([disabled]), &.neo-multiselect__content__item--focus:not([disabled]), &.neo-multiselect__content__item--focus:not([disabled]) {
         cursor: pointer;
         // need to replace with correct token from Figma
         background-color: $navbar-background-color-hover;
