@@ -31,44 +31,45 @@
     padding: 0 0 0 $padding-left;
     vertical-align: middle;
 
-    @include rtl-selector {
-      padding: {
-        left: initial;
-        right: $padding-left;
-      }
-    }
+    // @include rtl-selector {
+    //   padding: {
+    //     left: initial;
+    //     right: $padding-left;
+    //   }
+    // }
   }
   &:not(.neo-dropdown__link-header)::after {
     color: $global-text-color;
-  }
-  @include rtl-selector {
-    &::after {
-      // display: none;
-    }
-    // &::before {
-    //   font-family: "updated-neo-icons";
-    //   color: $global-text-inverse-color;
-    //   content: $arrow-icon;
-    //   // padding: 0 $padding-left 0 0;
-    //   vertical-align: middle;
-    // }
-    // &:not(.neo-dropdown__link-header)::before {
-    //   position: absolute;
-    //   left: 0px;
-    //   padding: 0 0 0 8px;
-    //   vertical-align: middle;
-    // }
-  }
-  &:not(.neo-dropdown__link-header)::after {
     position: absolute;
     right: 0px;
     padding: 0 8px 0 0;
     vertical-align: middle;
-    @include rtl-selector {
-      padding: {
-        left: 8px;
-        right: initial;
-      }
+    // @include rtl-selector {
+    //   padding: {
+    //     left: 8px;
+    //     right: initial;
+    //   }
+    // }
+  }
+  @include rtl-selector {
+    &::after {
+      // display: none;
+      all: initial;
+    }
+    &::before {
+      font-family: "updated-neo-icons";
+      // color: $global-text-inverse-color;
+      content: $arrow-icon;
+      padding: 0 $padding-left 0 0;
+      vertical-align: middle;
+      transform: rotateY(180deg);
+    }
+    &:not(.neo-dropdown__link-header)::before {
+      color: $global-text-color;
+      position: absolute;
+      left: 0px;
+      padding: 0 8px 0 8px;
+      vertical-align: middle;
     }
   }
 }
@@ -333,6 +334,7 @@
     margin: 0 $dropdown-avatar-sm-margin-x 0 0; /* Custom margin-right for avatar within dropdown items */
     // display: inline-block;
     display: inline-flex;
+
     @include rtl-selector {
       margin: {
         left: $dropdown-avatar-sm-margin-x;
