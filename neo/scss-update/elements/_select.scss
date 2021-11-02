@@ -134,7 +134,7 @@
 
 @mixin neo-select-spinner {
   &__spinner {
-    & select {
+    & select, & > div.neo-multiselect__header, & > div.neo-multiselect-combo__header {
       padding-left: $select-offset-x;
     }
 
@@ -329,7 +329,7 @@
     & .neo-input-group {
       padding-bottom: 8px;
       &:hover, &.neo-multiselect__content__item--hover, &.neo-multiselect__content__item--focus, &.neo-multiselect__content__item--focus {
-        background-color: $group-list-item-hover;
+        background-color: $navbar-background-color-hover;;
       }
     }
 
