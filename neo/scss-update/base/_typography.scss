@@ -253,3 +253,11 @@ hr {
 // #text {
 //   color: $global-text-color;
 // }
+
+.neo-apac-language {
+  display: block !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  // Max-width needs to be disabled on wrapper
+}
