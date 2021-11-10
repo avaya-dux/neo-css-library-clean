@@ -27,10 +27,13 @@
     "lodash": "^4.17.21",
     "node-fetch": "^2.6.1",
     "node-sass": "^5.0.0",
+    "postcss": "^8.3.11",
+    "postcss-cli": "^9.0.2",
     "prettier": "^2.3.0",
     "replace-in-file": "^6.2.0",
     "style-dictionary": "^2.10.3",
     "susy": "^3.0.7",
     "webfonts-generator": "^0.4.0"
-  }
+  },
+  "dependencies": {}
 }
