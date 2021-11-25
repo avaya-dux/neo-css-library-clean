@@ -543,7 +543,9 @@ const unicodes = {
   "bridged-line-appearance": 0xf3d8,
   "ic-conference-wifi": 0xf3d9,
   "bounce": 0xf3e1,
-  "forward": 0xf3e2
+  "forward": 0xf3e2,
+  "conference-screen": 0xf3e4,
+  "coach-off": 0xf3e5
 };
 
 // .neo-icon-legal:before {
