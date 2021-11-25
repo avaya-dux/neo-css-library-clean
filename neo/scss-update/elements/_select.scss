@@ -242,15 +242,15 @@
     font-family: "updated-neo-icons";
     color: $color;
     content: $arrow-icon;
-    padding: 0 0 0 $padding-left;
+    // padding: 0 0 0 $padding-left;
     vertical-align: middle;
     cursor: pointer;
+    position: absolute;
+    right: 8px;
 
     @include rtl-selector {
-      padding: {
-        left: initial;
-        right: $padding-left;
-      }
+     right: 0;
+     left: 8px;
     }
   }
   @include rtl-selector {
@@ -403,8 +403,8 @@
 
 .neo-multiselect {
   box-sizing: border-box;
-  // display: inline-block;
-  display: table;
+  display: inline-block;
+  // display: table;
   position: relative;
 
   // margin-bottom: 1px;
@@ -483,6 +483,8 @@
 
     & .neo-input {
       border: none;
+      padding: 8px 0px 8px 12px;
+      width: 100%;
     }
 
     & .neo-chip {
