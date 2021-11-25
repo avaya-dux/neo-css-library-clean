@@ -34,11 +34,9 @@ pullAllDesignTokens()
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
       [
-        "dashboard-filled",
-        "bridged-line-appearance",
-        "ic-conference-wifi",
-        "bounce",
-        "forward",
+        "conference-call",
+        "conference-screen",
+        "coach-off"
       ]
     )
   )
