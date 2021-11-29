@@ -1,0 +1,36 @@
+{
+  "name": "figma-test",
+  "version": "1.0.0",
+  "description": "Testing the Figma API",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r esm server.js",
+    "icongen": "cd API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js",
+    "neo-update-site": "cd API && node -r esm design-system-functions.js && node -r esm server.js && npx icon-font-generator ../properties/assets/icons/svgs/*.svg -o ../properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node -r esm ./icons-functions/icon-css-generator.js && node -r esm ./icons-functions/icon-file-replacer.js && cd .. && node -r esm styleDicExt.js && node -r esm neo-icon-combine.js && node-sass neo/scss-update/main.scss ../Avaya_Design_Portal_proto/src/global_styles/neo.css",
+    "icongen-manual": "cd API && npx icon-font-generator ../properties/assets/icons/svgs/*.svg -o ../properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node -r esm ./icons-functions/icon-css-generator.js && node -r esm ./icons-functions/icon-file-replacer.js",
+    "neo-update-fast": "node-sass neo/scss-update/main.scss neo/dist/3.10.0/neo.css",
+    "neo-update-site-fast": "node-sass neo/scss-update/main.scss ../Avaya_Design_Portal_proto/src/global_styles/neo.css",
+    "neo-update": "cd API && node -r esm design-system-functions.js && node -r esm server.js && npx icon-font-generator ../properties/assets/icons/svgs/*.svg -o ../properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node -r esm ./icons-functions/icon-css-generator.js && node -r esm ./icons-functions/icon-file-replacer.js && cd .. && node -r esm styleDicExt.js && node -r esm neo-icon-combine.js && node-sass neo/scss-update/main.scss neo/dist/3.10.0/neo.css",
+    "x-icongen": "npx icon-font-generator x-icons/svgs/*.svg -o x-icons/ --name 'x-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000",
+    "neo-update-site-nextgen": "node-sass neo/scss-update/main.scss ../Portal_Next_Gen/Avaya_Portal_Nxt_Gen/src/global_styles/neo.css"
+  },
+  "keywords": [
+    "Figma"
+  ],
+  "author": "Mohammad Razian",
+  "license": "ISC",
+  "devDependencies": {
+    "axios": "^0.21.1",
+    "cssnano": "^4.1.10",
+    "esm": "^3.2.25",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.1",
+    "node-sass": "^5.0.0",
+    "prettier": "^2.3.0",
+    "replace-in-file": "^6.2.0",
+    "style-dictionary": "^2.10.3",
+    "susy": "^3.0.7",
+    "webfonts-generator": "^0.4.0"
+  }
+}
