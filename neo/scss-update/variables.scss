@@ -3229,6 +3229,7 @@ $leftnav-active-dot-size: $token-leftnav-active-circle-size !default;
   --dropdown-item-hover-color: #{$token-dropdown-hover-color};
   --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
   --dropdown-readonly-font-color: #{$token-dropdown-readonly-font-color};
+  --dropdown-shortcut-text-color: #{$token-dropdown-shortcut-text-color};
 }
 //   .neo-light {
 //     --dropdown-color: #{$token-dropdown-default-font-color};
@@ -3250,6 +3251,11 @@ $leftnav-active-dot-size: $token-leftnav-active-circle-size !default;
 //   }
 // }
 
+$dropdown-shortcut-line-height: $token-dropdown-shortcut-line-height !default;
+$dropdown-shortcut-letter-spacing: $token-dropdown-shortcut-letter-spacing !default;
+$dropdown-shortcut-font-weight: $token-dropdown-shortcut-font-weight !default;
+$dropdown-shortcut-font-size: $token-dropdown-shortcut-font-size !default;
+$dropdown-shortcut-text-color: var(--dropdown-shortcut-text-color) !default;
 $dropdown-expand-icon: $token-icons-neo-icon-chevron-down !default;
 $dropdown-expand-left-icon: $token-icons-neo-icon-chevron-left !default;
 $dropdown-expand-right-icon: $token-icons-neo-icon-chevron-right !default;

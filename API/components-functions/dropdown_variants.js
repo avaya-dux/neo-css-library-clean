@@ -141,7 +141,7 @@ async function dropdownStyles(value) {
     // read-only text styles
     if (
       variant.name ===
-      "Left Side=none-read-only, Expandable=FALSE, State=default"
+      "Left Side=none-read-only, Expandable=FALSE, State=default, Shortcut Text=FALSE"
     ) {
       var dropdownReadOnlyColorTokenID =
         variant.children[0].children[0].children[2].styles.fill;
@@ -192,7 +192,7 @@ async function dropdownStyles(value) {
           };
         });
     }
-    if (variant.name === "Left Side=none, Expandable=FALSE, State=default") {
+    if (variant.name === "Left Side=none, Expandable=FALSE, State=default, Shortcut Text=FALSE") {
       // padding-x
       dropdownJSONObject.dropdown["padding-x"] = {
         value: `${variant.children[0].paddingRight}px`,
@@ -255,7 +255,7 @@ async function dropdownStyles(value) {
           };
         });
     }
-    if (variant.name === "Left Side=none, Expandable=FALSE, State=disabled") {
+    if (variant.name === "Left Side=none, Expandable=FALSE, State=disabled, Shortcut Text=FALSE") {
       // disabled font color
       var dropdownDisabledColorTokenID =
         variant.children[0].children[0].children[2].styles.fill;
@@ -277,7 +277,7 @@ async function dropdownStyles(value) {
           ),
       };
     }
-    if (variant.name === "Left Side=icon, Expandable=FALSE, State=default") {
+    if (variant.name === "Left Side=icon, Expandable=FALSE, State=default, Shortcut Text=FALSE") {
       // variant.children.forEach((child) => {
       //   console.log(child);
       // });
@@ -286,7 +286,58 @@ async function dropdownStyles(value) {
         value: `${variant.children[0].children[0].itemSpacing}px`,
       };
     }
-    if (variant.name === "Left Side=none, Expandable=FALSE, State=hover") {
+    if (variant.name === "Left Side=none, Expandable=FALSE, State=default, Shortcut Text=TRUE") {
+      var dropdownShortcutTextTokenID = variant.children[0].children[1].children[1].styles.fill;
+      // console.log(dropdownShortcutTextTokenID)
+      dropdownJSONObject.dropdown["shortcut-text-color"] = {
+        value: await coreFigmaFunctions
+          .getFigmaTokenNameByID(
+            coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+            coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+            dropdownShortcutTextTokenID
+          )
+          .then(
+            (value) =>
+              //   console.log(
+              //     value.nodes[headerFontTokenID].document.name.toLowerCase()
+              //   );
+              `{color.${value.nodes[
+                dropdownShortcutTextTokenID
+              ].document.name.toLowerCase()}.value}`
+          ),
+      };
+      // shortcut text styles
+      var dropdownShortcutFontTokenID =
+      variant.children[0].children[1].children[1].styles.text;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          dropdownShortcutFontTokenID
+        )
+        .then((value) => {
+          var dropdownShortcutFontTokenName = value.nodes[
+            dropdownShortcutFontTokenID
+          ].document.name.toLowerCase();
+          // font-size
+          dropdownJSONObject.dropdown["shortcut-font-size"] = {
+            value: `{Web-typography.${dropdownShortcutFontTokenName}.fontSize.value}`,
+          };
+          // line-height
+          dropdownJSONObject.dropdown["shortcut-line-height"] = {
+            value: `{Web-typography.${dropdownShortcutFontTokenName}.lineHeight.value}`,
+          };
+          // letter-spacing
+          dropdownJSONObject.dropdown["shortcut-letter-spacing"] = {
+            value: `{Web-typography.${dropdownShortcutFontTokenName}.letterSpacing.value}`,
+          };
+          // font-weight
+          dropdownJSONObject.dropdown["shortcut-font-weight"] = {
+            value: `{Web-typography.fontweight-regular.value}`,
+          };
+        });
+    }
+    if (variant.name === "Left Side=none, Expandable=FALSE, State=hover, Shortcut Text=FALSE") {
       // hover colour
       var dropdownHoverColorTokenID = variant.children[0].styles.fills;
       dropdownJSONObject.dropdown["hover-color"] = {
