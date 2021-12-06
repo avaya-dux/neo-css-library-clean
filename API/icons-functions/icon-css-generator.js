@@ -545,7 +545,8 @@ const unicodes = {
   "bounce": 0xf3e1,
   "forward": 0xf3e2,
   "conference-screen": 0xf3e4,
-  "coach-off": 0xf3e5
+  "coach-off": 0xf3e5,
+  "calendar-filled": 0xf3e6
 };
 
 // .neo-icon-legal:before {
