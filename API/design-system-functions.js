@@ -33,11 +33,7 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      [
-        "conference-call",
-        "conference-screen",
-        "coach-off"
-      ]
+      ["calendar-filled"]
     )
   )
   .catch((error) => console.log(error));
