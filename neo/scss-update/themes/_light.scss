@@ -285,7 +285,6 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
   --dropdown-readonly-font-color: #{$token-dropdown-readonly-font-color};
   --dropdown-shortcut-text-color: #{$token-dropdown-shortcut-text-color};
-
 }
 
 :root .neo-light {
@@ -332,4 +331,14 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --toast-font-color: #{$token-toast-font-color};
   --toast-background-color: #{$token-toast-background-color};
   --toast-elevation-color: #{$token-toast-elevation-color};
+}
+
+:root .neo-light {
+  --stepper-background-color: #{$token-stepper-background-color};
+  --stepper-main-font-color: #{$token-stepper-main-text-font-color};
+  --stepper-optional-font-color: #{$token-stepper-optional-text-font-color};
+  --stepper-disabled-dash-color: #{$token-stepper-disabled-dash-color};
+  --stepper-disabled-indicator-color: #{$token-stepper-disabled-indicator-color};
+  --stepper-disabled-main-text-font-color: #{$token-stepper-disabled-main-text-font-color};
+  --stepper-disabled-optional-text-font-color: #{$token-stepper-disabled-optional-text-font-color};
 }

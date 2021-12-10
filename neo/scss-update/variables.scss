@@ -2285,6 +2285,50 @@ $image-thumbnail-border: 1px solid $global-border-color !default;
 $image-thumbnail-border-radius: $global-radius !default;
 
 //
+// Component name: Stepper
+// Location: src/scss/components/_stepper.scss
+//
+
+// Stepper color variables
+
+:root {
+--stepper-background-color: #{$token-stepper-background-color};
+--stepper-main-font-color: #{$token-stepper-main-text-font-color};
+--stepper-optional-font-color: #{$token-stepper-optional-text-font-color};
+--stepper-disabled-dash-color: #{$token-stepper-disabled-dash-color};
+--stepper-disabled-indicator-color: #{$token-stepper-disabled-indicator-color};
+--stepper-disabled-main-text-font-color: #{$token-stepper-disabled-main-text-font-color};
+--stepper-disabled-optional-text-font-color: #{$token-stepper-disabled-optional-text-font-color};
+}
+
+$stepper-background-color: var(--stepper-background-color) !default;
+$stepper-main-font-color: var(--stepper-main-font-color) !default;
+$stepper-optional-font-color: var(--stepper-optional-font-color) !default;
+$stepper-disabled-dash-color: var(--stepper-disabled-dash-color) !default;
+$stepper-disabled-indicator-color: var(--stepper-disabled-indicator-color) !default;
+$stepper-disabled-main-text-font-color: var(--stepper-disabled-main-text-font-color) !default;
+$stepper-disabled-optional-text-font-color: var(--stepper-disabled-optional-text-font-color) !default;
+$stepper-dash-width: $token-stepper-dash-width !default;
+$stepper-dash-border-width: $token-stepper-dash-border-width !default;
+$stepper-dash-border-style: $token-stepper-dash-border-style !default;
+$stepper-dash-spacing: $token-stepper-dash-spacing !default;
+$stepper-indicator-size: $token-stepper-indicator-size !default;
+$stepper-indicator-border-radius: $token-stepper-indicator-border-radius !default;
+$stepper-icon-name: $token-stepper-icon-name;
+$stepper-text-spacing: $token-stepper-text-spacing !default;
+$stepper-main-text-font-size: $token-stepper-main-text-font-size !default;
+$stepper-main-text-font-weight: $token-stepper-main-text-font-weight !default;
+$stepper-main-text-letter-spacing: $token-stepper-main-text-letter-spacing !default;
+$stepper-main-text-line-height: $token-stepper-main-text-line-height !default;
+$stepper-optional-text-font-size: $token-stepper-optional-text-font-size !default;
+$stepper-optional-text-font-weight: $token-stepper-optional-text-font-weight !default;
+$stepper-optional-text-letter-spacing: $token-stepper-optional-text-letter-spacing !default;
+$stepper-optional-text-line-height: $token-stepper-optional-text-line-height !default;
+$stepper-unselected-inner-circle-size: $token-stepper-unselected-inner-circle-size !default;
+$stepper-disabled-dash-border-width: $token-stepper-disabled-dash-border-width !default;
+$stepper-disabled-indicator-border-width: $token-stepper-disabled-indicator-border-width !default;
+
+//
 // Component name: Avatar
 // Location: src/scss/components/_avatar.scss
 //

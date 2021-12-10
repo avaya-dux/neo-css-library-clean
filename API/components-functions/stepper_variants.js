@@ -51,11 +51,11 @@ async function stepperStyles(value) {
         value: `${variant.children[0].children[0].children[2].children[0].size.x}px`,
       };
       // dash border width
-      stepperJSONObject.stepper["border-width"] = {
+      stepperJSONObject.stepper["dash-border-width"] = {
         value: `${variant.children[0].children[0].children[2].children[0].strokeWeight}px`,
       };
       // dash border style
-      stepperJSONObject.stepper["border-style"] = {
+      stepperJSONObject.stepper["dash-border-style"] = {
         value: variant.children[0].children[0].children[2].children[0].strokes[0].type.toLowerCase(),
       };
       // dash spacing
@@ -126,9 +126,7 @@ async function stepperStyles(value) {
           ].document.name.toLowerCase()}.fontSize.value}`,
         };
         stepperJSONObject.stepper['main-text-font-weight'] = {
-          value: `{Web-typography.${value.nodes[
-            mainTextFontTokenID
-          ].document.name.toLowerCase()}.fontWeight.value}`,
+          value: `{Web-typography.fontweight-regular.value}`,
         };
         stepperJSONObject.stepper["main-text-letter-spacing"] = {
           value: `{Web-typography.${value.nodes[
@@ -156,9 +154,7 @@ async function stepperStyles(value) {
           ].document.name.toLowerCase()}.fontSize.value}`,
         };
         stepperJSONObject.stepper['optional-text-font-weight'] = {
-          value: `{Web-typography.${value.nodes[
-            optionalTextFontTokenID
-          ].document.name.toLowerCase()}.fontWeight.value}`,
+          value: `{Web-typography.fontweight-regular.value}`,
         };
         stepperJSONObject.stepper["optional-text-letter-spacing"] = {
           value: `{Web-typography.${value.nodes[
@@ -172,17 +168,102 @@ async function stepperStyles(value) {
         };
       });
     }
+    // inner unselected circle size
+    if (
+      variant.name ===
+      "Orientation=Horizontal, Location=Start, Type=Active, Label=TRUE, Optional text=TRUE, Bidirectional=FALSE"
+    ) {
+      var innerCircleSize = variant.children[0].children[0].children[1].children[0].children[0].children[0].size.x;
+      stepperJSONObject.stepper["unselected-inner-circle-size"] = {
+        value: `${Math.floor(innerCircleSize)}px`,
+      };
+    }
+    // disabled stepper styles
+    if (variant.name === "Orientation=Horizontal, Location=Start, Type=Disabled, Label=TRUE, Optional text=TRUE, Bidirectional=FALSE") {
+      // disabled dash border width
+      stepperJSONObject.stepper["disabled-dash-border-width"] = {
+        value: `${variant.children[0].children[0].children[2].children[0].strokeWeight}px`,
+      };
+      // disabled dash color
+      var disabledDashColorID =
+      variant.children[0].children[0].children[2].children[0]
+          .styles.stroke;
+      await coreFigmaFunctions
+        .getFigmaTokenNameByID(
+          coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+          coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+          disabledDashColorID
+        )
+        .then((value) => {
+          stepperJSONObject.stepper["disabled-dash-color"] = {
+            value: `{color.${value.nodes[
+              disabledDashColorID
+            ].document.name.toLowerCase()}.value}`,
+          };
+        });
+      // disabled indicator border color
+      var disabledIndicatorColorID =
+      variant.children[0].children[0].children[1].children[0].children[0]
+          .styles.strokes;
+          await coreFigmaFunctions
+          .getFigmaTokenNameByID(
+            coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+            coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+            disabledIndicatorColorID
+          )
+          .then((value) => {
+            stepperJSONObject.stepper["disabled-indicator-color"] = {
+              value: `{color.${value.nodes[
+                disabledIndicatorColorID
+              ].document.name.toLowerCase()}.value}`,
+            };
+          });
+        // disabled indicator border width
+        stepperJSONObject.stepper["disabled-indicator-border-width"] = {
+          value: `${variant.children[0].children[0].children[1].children[0].children[0].strokeWeight}px`,
+        };
+        // disabled main text font color
+      var disabledMainTextFontColor = variant.children[0].children[1].children[0].styles.fill
+      await coreFigmaFunctions
+      .getFigmaTokenNameByID(
+        coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+        coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+        disabledMainTextFontColor
+      )
+      .then((value) => {
+        stepperJSONObject.stepper["disabled-main-text-font-color"] = {
+          value: `{color.${value.nodes[
+            disabledMainTextFontColor
+          ].document.name.toLowerCase()}.value}`,
+        };
+      });
+       // disabled optional text font color
+       var disabledOptionalTextFontColor = variant.children[0].children[1].children[1].styles.fill
+       await coreFigmaFunctions
+       .getFigmaTokenNameByID(
+         coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+         coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+         disabledOptionalTextFontColor
+       )
+       .then((value) => {
+         stepperJSONObject.stepper["disabled-optional-text-font-color"] = {
+           value: `{color.${value.nodes[
+            disabledOptionalTextFontColor
+           ].document.name.toLowerCase()}.value}`,
+         };
+       });
+    }
   }
 
-  console.log(stepperJSONObject);
-  // await fs
-  //   .writeFile(
-  //     '../properties/components/avatar.json',
-  //     JSON.stringify(avatarJSONObject)
-  //   )
-  //   .then(function () {
-  //     console.log('avatar.json created');
-  //   });
+  // console.log(stepperJSONObject);
+  await fs
+    .writeFile(
+      '../properties/components/stepper.json',
+      JSON.stringify(stepperJSONObject)
+    )
+    .then(function () {
+      console.log('stepperc.json created');
+    });
 }
 
 exports.stepperStyles = stepperStyles

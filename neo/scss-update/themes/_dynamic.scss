@@ -751,3 +751,25 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --toast-elevation-color: #{$token-shadows-elevationdark-300-color};
   }
 }
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --stepper-background-color: #{$token-stepper-background-color};
+    --stepper-main-font-color: #{$token-stepper-main-text-font-color};
+    --stepper-optional-font-color: #{$token-stepper-optional-text-font-color};
+    --stepper-disabled-dash-color: #{$token-stepper-disabled-dash-color};
+    --stepper-disabled-indicator-color: #{$token-stepper-disabled-indicator-color};
+    --stepper-disabled-main-text-font-color: #{$token-stepper-disabled-main-text-font-color};
+    --stepper-disabled-optional-text-font-color: #{$token-stepper-disabled-optional-text-font-color};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --stepper-background-color: #{$token-color-green-400};
+    --stepper-main-font-color: #{$token-color-base-100};
+    --stepper-optional-font-color: #{$token-color-base-400};
+    --stepper-disabled-dash-color: #{$token-color-base-600};
+    --stepper-disabled-indicator-color: #{$token-color-base-500};
+    --stepper-disabled-main-text-font-color: #{$token-color-base-400};
+    --stepper-disabled-optional-text-font-color: #{$token-color-base-400};
+  }
+}
