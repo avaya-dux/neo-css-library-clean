@@ -27,6 +27,7 @@ const skipNavStyles = require("./components-functions/skipnav_variants.js");
 const treeviewStyles = require("./components-functions/treeview_variants.js");
 const shimmerStyles = require("./components-functions/shimmer_variants.js");
 const toastStyles = require("./components-functions/toast_variants.js");
+const stepperStyles = require("./components-functions/stepper_variants.js")
 
 coreFigmaFunctions
   .getComponentPages(
@@ -63,13 +64,14 @@ coreFigmaFunctions
     // await sheetStyles.sheetStyles(value);
     // await modalStyles.modalStyles(value);
     // await tableStyles.tableStyles(value);
-    await dropdownStyles.dropdownStyles(value);
+    // await dropdownStyles.dropdownStyles(value);
     // await channelIconVariants.channelIconVariants(value);
     // await breadcrumbStyles.breadcrumbStyles(value);
     // await skipNavStyles.skipNavStyles(value);
     // await treeviewStyles.treeviewStyles(value);
     // await shimmerStyles.shimmerStyles(value);
     // await toastStyles.toastStyles(value);
+    await stepperStyles.stepperStyles(value)
   });
 
 // coreFigmaFunctions

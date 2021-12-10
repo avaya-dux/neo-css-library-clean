@@ -21,6 +21,15 @@
           }
         },
         {
+          "destination": "_stepper.scss",
+          "format": "scss/variables",
+          "filter": {
+            "attributes": {
+              "category": "stepper"
+            }
+          }
+        },
+        {
           "destination": "_typography.scss",
           "format": "scss/variables",
           "filter": {
