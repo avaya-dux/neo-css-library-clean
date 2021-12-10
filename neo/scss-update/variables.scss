@@ -1,7 +1,8 @@
-@import "mixins";
 @import "helpers";
+@import "mixins";
 @import "tokens-import";
 @import "themes/theme";
+
 // Variables
 //
 // Variables should follow the `$component-state-property` formula for consistent naming,
@@ -2318,6 +2319,7 @@ $stepper-icon-name: $token-stepper-icon-name;
 $stepper-text-spacing: $token-stepper-text-spacing !default;
 $stepper-main-text-font-size: $token-stepper-main-text-font-size !default;
 $stepper-main-text-font-weight: $token-stepper-main-text-font-weight !default;
+$stepper-main-text-complete-font-weight: $token-stepper-main-text-complete-font-weight !default;
 $stepper-main-text-letter-spacing: $token-stepper-main-text-letter-spacing !default;
 $stepper-main-text-line-height: $token-stepper-main-text-line-height !default;
 $stepper-optional-text-font-size: $token-stepper-optional-text-font-size !default;

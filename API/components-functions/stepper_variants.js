@@ -125,7 +125,7 @@ async function stepperStyles(value) {
             mainTextFontTokenID
           ].document.name.toLowerCase()}.fontSize.value}`,
         };
-        stepperJSONObject.stepper['main-text-font-weight'] = {
+        stepperJSONObject.stepper['main-text-complete-font-weight'] = {
           value: `{Web-typography.fontweight-regular.value}`,
         };
         stepperJSONObject.stepper["main-text-letter-spacing"] = {
@@ -167,6 +167,14 @@ async function stepperStyles(value) {
           ].document.name.toLowerCase()}.lineHeight.value}`,
         };
       });
+    }
+    if (
+      variant.name ===
+      "Orientation=Horizontal, Location=Center, Type=Active, Label=TRUE, Optional text=TRUE, Bidirectional=FALSE"
+    ) {
+      stepperJSONObject.stepper['main-text-font-weight'] = {
+        value: `{Web-typography.fontweight-semibold.value}`,
+      };
     }
     // inner unselected circle size
     if (
