@@ -1,19 +1,6 @@
 const fs = require("fs").promises;
 const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
-/*
-
-Stepper Component styles:
-
-Color
-Icon
-Font styles - title and subtext
-Spacing
-Lines?
-
-
-*/
-
 async function stepperStyles(value) {
   const stepperJSONObject = {
     stepper: {},
