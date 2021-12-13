@@ -250,14 +250,13 @@ async function stepperStyles(value) {
     }
   }
 
-  // console.log(stepperJSONObject);
   await fs
     .writeFile(
       '../properties/components/stepper.json',
       JSON.stringify(stepperJSONObject)
     )
     .then(function () {
-      console.log('stepperc.json created');
+      console.log('stepper.json created');
     });
 }
 
