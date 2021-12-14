@@ -4,7 +4,8 @@
   "description": "Testing the Figma API",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "jest --config ./jest.config.json --watchAll=true",
     "start": "node -r esm server.js",
     "icongen": "cd API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js",
     "neo-update-site": "cd API && node -r esm design-system-functions.js && node -r esm server.js && npx icon-font-generator ../properties/assets/icons/svgs/*.svg -o ../properties/ --name 'neo-icon-font' --types 'woff' -c false --html false --json false --normalize true --height 1000 && node -r esm ./icons-functions/icon-css-generator.js && node -r esm ./icons-functions/icon-file-replacer.js && cd .. && node -r esm styleDicExt.js && node -r esm neo-icon-combine.js && node-sass neo/scss-update/main.scss ../Avaya_Design_Portal_proto/src/global_styles/neo.css",
@@ -24,6 +25,8 @@
     "axios": "^0.21.1",
     "cssnano": "^4.1.10",
     "esm": "^3.2.25",
+    "jest": "^27.4.5",
+    "jest-fetch-mock": "^3.0.3",
     "lodash": "^4.17.21",
     "node-fetch": "^2.6.1",
     "node-sass": "^5.0.0",

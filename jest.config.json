@@ -1,0 +1,8 @@
+{
+    "testRegex": "((\\.|/*.)(spec))\\.js?$",
+    "testEnvironment": "node",
+    "automock": false,
+    "setupFiles": [
+        "./setupJest.js"
+    ]
+}
