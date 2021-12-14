@@ -1,5 +1,2111 @@
-# 3.45.0
+# Changelog
 
-## New Features
+### 3.47.0
 
-### Added new shortcut text styles to Dropdown component
+#### New Features - New features that have recently been added
+
+- Added new styles for shortcut text to [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Components
+
+### 3.46.0
+#### New Features - New features that have recently been added
+
+- Added the following new [Icons](https://design.avayacloud.com/components/icons/)
+  - conference-call
+  - conference-screen
+  - coach-off
+#### Bugs Report - List of bugs that have been updated
+
+- Reset display property on [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) Components from 'table' to 'inline-block' in order to avoid text truncation issues.
+- Added absolute positioning and the necessary attributes to chevrons in [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) Components to avoid issues on resizing.
+
+### 3.45.2
+
+#### Bugs Report - List of bugs that have been updated
+
+- Fixed Text Overflow to have ellipsis in [LeftNav](https://design.avayacloud.com/components/web/left-nav-web) Components
+
+### 3.45.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added necessary style properties to accommodate loading spinner in [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Fixed color discrepancy in hover style between default and multiple [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Added correct width to [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) content area
+
+### 3.45.0
+
+#### New Features - New features that have recently been added
+
+- Created new CSS class for disabled <li> elements in [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) to avoid erroneous use of disabled HTML attribute
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added RTL styles to [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) to ensure correct placement of chevron in action/link element
+- Adjusted alignment and color of helper text in disabled [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) elements
+- Updated hover color on [Accordion](https://design.avayacloud.com/components/web/accordion-web), [List](https://design.avayacloud.com/components/web/list-web) and [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Components
+
+### 3.44.0
+
+#### New Features - New features that have recently been added
+
+- Added the following new [Icons](https://design.avayacloud.com/components/icons/)
+  - dashboard-filled
+  - bridged-line-appearance
+  - ic-conference-wifi
+  - bounce
+  - forward
+- Added new Component styles for nested Dropdowns in [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Created new '.expanded' CSS class to remove border on [Table](https://design.avayacloud.com/components/web/tables-web) rows that toggle nested ones for correct border styling
+
+#### Bugs Report - List of bugs that have been updated
+
+- Adjusted display property on Neo form control element to avoid issue with Tooltip placement on [Checkbox](https://design.avayacloud.com/components/web/checkbox-web) groups
+- Adjusted styling of [Checkbox](https://design.avayacloud.com/components/web/checkbox-web) Components for consistency across states
+- Added correct hover color to [Table](https://design.avayacloud.com/components/web/tables-web) header row cells with filters
+- Adjusted height of condensed nested[Table](https://design.avayacloud.com/components/web/tables-web) header rows
+- Added correct outline styles to [Icons](https://design.avayacloud.com/components/icons/) in 'span' elements when these are made focusable
+
+### 3.43.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Adjusted padding on [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) sub-items to prevent them coming right up to the border of the sidebar
+- Changed whitespace property on [Chips](https://design.avayacloud.com/components/web/chip-web) to avoid unwanted sizing issues
+
+### 3.43.0
+
+#### New Features - New features that have recently been added
+
+- Added the following new [Icons](https://design.avayacloud.com/components/icons/)
+  - line-straight
+  - text
+  - erase
+  - shape-circle
+  - shape-square
+  - shape-circle-filled
+  - shape-square-filled
+  - select
+
+#### Bugs Report - List of bugs that have been updated
+
+- Adjusted text link style in [Notification](https://design.avayacloud.com/components/web/notifications-web) to be consistent with other Components
+
+### 3.42.0
+
+#### New Features - New features that have recently been added
+
+- Added new classes to permit scroll behaviour in Collapsible [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) Component
+- Added example of new 'preferences' dropdown to [Table](https://design.avayacloud.com/components/web/tables-web) Component examples
+- Added new classes to toggle between 'default' and 'compact' [Table](https://design.avayacloud.com/components/web/tables-web) row heights
+
+#### Bugs Report - List of bugs that have been updated
+
+- Re-added the necessary global margin and padding resets
+- Adjusted styles of Input elements in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) to accommodate extra long strings
+- Updated padding on [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) items with icon
+- Adjusted padding of [Badge](https://design.avayacloud.com/components/web/badge-web) Components
+- Adjusted the color on [Table](https://design.avayacloud.com/components/web/tables-web) row selected/hover states from blue/100 to base/100
+- Adjusted the color on [Table](https://design.avayacloud.com/components/web/tables-web) row disabled states from base/100 to base/0
+- Adjusted the color on [Table](https://design.avayacloud.com/components/web/tables-web) inset rows from blue/100 to base/100
+
+### 3.41.1
+
+- Updated package license text in LICENSE.md
+
+#### Breaking Changes - the following Components are broken and need immediate attention
+
+- Updated HTML structure and CSS styling of Collapsible [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) Component
+
+#### Bugs Report - List of bugs that have been updated
+
+- Updated margins/padding on Input elements in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) to avoid scrollbar cutting off element
+
+### 3.41.0
+
+#### New Features - New features that have recently been added
+
+- Added 'audio-jack' and 'clean' [Icons](https://design.avayacloud.com/components/icons/)
+- Added underline text-decoration styles to free [anchor](https://design.avayacloud.com/components/tokens/) elements on hover
+
+#### Breaking Changes - the following Components are broken and need immediate attention
+
+- Updated HTML structure and CSS styling of [Breadcrumb](https://design.avayacloud.com/components/web/breadcrumbs-web) Components
+
+#### Bugs Report - List of bugs that have been updated
+
+- Updated width of Tooltips around [Radio](https://design.avayacloud.com/components/web/radio-web) Button Components
+- Tweaked focus states on [Switch](https://design.avayacloud.com/components/web/switch-web) elements to only show on Tab
+
+### 3.40.3
+
+#### Bugs Report - List of bugs that have been updated
+
+- Updated appearance of 'collapse-all' and 'expand-all' [Icons](https://design.avayacloud.com/components/icons/)
+- Tweaked padding on checked state of [Checkboxes](https://design.avayacloud.com/components/web/checkbox-web) to avoid unintended position shift
+- Added property to prevent unintended margin on read-only text in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Components
+- Added property to expand width of inputs in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Components
+
+### 3.40.2
+
+#### Bugs Report - List of bugs that have been updated
+
+- Reverted to 'border' property from 'box-shadow' property on focus for [Input](https://design.avayacloud.com/components/web/input-web) Components
+- Reverted to 'border' property from 'box-shadow' property on focus for [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+
+### 3.40.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Tweaked global focus styles to prevent unwanted focus ring appearing on mouse click
+- Added missing RTL styles and spacing to [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) sub-elements
+- Tweaked visibility of Clear button in [Inputs](https://design.avayacloud.com/components/web/input-web) to avoid unwanted transparency effect
+- Adjusted width of Text [Inputs](https://design.avayacloud.com/components/web/input-web) to take width of container
+- Adjusted line height on [Input](https://design.avayacloud.com/components/web/input-web) Group Label elements
+- Adjusted colour of [Table](https://design.avayacloud.com/components/web/tables-web) row dividers on hover/select
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Added appropriate 'role' attribute to [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Inputs
+
+### 3.40.0
+
+#### New Features - New features that have recently been added
+
+- Added styles for Inputs without associated button and read-only text to [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component
+
+### 3.39.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Changed [Input](https://design.avayacloud.com/components/web/input-web) Component styles on focus from border to box-shadow and disabled transition on Input elements mitigate unwanted visual effects
+- Further tightened incorrect spacing between label and text elements in read-only [Input](https://design.avayacloud.com/components/web/input-web) Components
+- Updated colours on new Event [Button](https://design.avayacloud.com/components/web/buttons-web) Components
+- Removed styling on ‘More’ button in [Tab](https://design.avayacloud.com/components/web/tabs-web) with Carousel Component to allow for correct spacing
+
+### 3.39.0
+
+#### New Features - New features that have recently been added
+
+- Added classes for new Event [Button](https://design.avayacloud.com/components/web/buttons-web) Components
+- Added new 'audio-filled', 'audio-on-1', 'audio-on-2', and 'audio-on-3' [Icons](https://design.avayacloud.com/components/icons/)
+
+#### Bugs Report - List of bugs that have been updated
+
+- Restored correct size to close button element in text [Input](https://design.avayacloud.com/components/web/input-web) Components
+- Added selector for correct text alignment for RTL text in [Accordion](https://design.avayacloud.com/components/web/accordion-web) Component header elements
+- Removed selector which set padding to '0' on Label elements in custom [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Fixed incorrect spacing between label and text elements in read-only [Input](https://design.avayacloud.com/components/web/input-web) Components
+- Changed the colour on label elements for all [Form](https://design.avayacloud.com/web/form-layout-web) Components to base-800
+- Updated appearance of all custom [Icons](https://design.avayacloud.com/components/icons/)
+- Added margin to message element in [Notification](https://design.avayacloud.com/components/web/notifications-web) Components to preserve correct spacing
+
+### 3.38.0
+
+#### New Features - New features that have recently been added
+
+- Added new [Toast](https://design.avayacloud.com/components/web/toast-web) Components
+- Added new ‘play-filled,’ ‘stop-filled,’ and ‘usb’ [Icons](https://design.avayacloud.com/components/icons/)
+
+#### Bugs Report - List of bugs that have been updated
+
+- Changed global font color back from base-900 to base-1000
+- Added updated focus style to border on custom [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Added correct focus styles to [Checkbox](https://design.avayacloud.com/components/web/checkboxes-web) Components in Safari browser
+- Changed error color on [Form](https://design.avayacloud.com/components/web/form-layout-web) elements from red-500 to red-600
+- Removed unintended margin bottom from [Typography](https://design.avayacloud.com/components/tokens/) utility classes
+- Added correct focus styles to [Accordion](https://design.avayacloud.com/components/web/accordion-web) header element in Safari browser
+
+### 3.37.0
+
+#### New Features - New features that have recently been added
+
+- Added classes for new [Shimmer](https://design.avayacloud.com/components/web/shimmer-web) Components
+- Added the following new [Icons](https://design.avayacloud.com/components/icons/):
+  - format-predefined-ja
+  - font-highlight-he
+  - format-predefined-ar
+  - format-collapse-ko
+  - font-family-zh
+  - format-collapse-ar
+  - font-highlight-zh
+  - font-family-ko
+  - font-family-ja
+  - format-predefined-zh
+  - format-remove-ko
+  - font-family-he
+  - font-color-ko
+  - font-color-ja
+  - font-family-ar
+  - font-color-zh
+  - format-remove-zh
+  - font-color-he
+  - format-expand-ko
+  - font-color-ar
+  - format-expand-zh
+  - format-expand-ja
+  - format-expand-ar
+  - format-predefined-ko
+  - format-expand-he
+  - format-remove-he
+  - format-collapse-ja
+  - font-highlight-ja
+  - format-collapse-zh
+  - font-highlight-ar
+  - font-highlight-ko
+  - format-predefined-he
+  - format-remove-ar
+  - format-remove-ja
+  - format-collapse-he
+  - font-size-ar
+  - font-size-ja
+  - font-size-ko
+  - font-size-zh
+  - font-size-he
+- Added new '.neo-switch--multine' class to preserve text alignment when a [Switch](https://design.avayacloud.com/components/web/switch-web)'s label extends to more than one line
+
+#### Bugs Report - List of bugs that have been updated
+
+- Changed white-space property on Multiline [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to re-enable line breaks
+- Added word-break property to [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) anchor elements to avoid overflow issue with longer strings
+- Changed global [font](https://design.avayacloud.com/components/tokens/) color to base-900 from base-1000
+- Exchanged box-shadow with hard outline in [Checkbox](https://design.avayacloud.com/components/web/checkboxes-web), [Switch](https://design.avayacloud.com/components/web/switch-web) and [Radio](https://design.avayacloud.com/components/web/radio-web) focus styles for improved accessibility
+- Tweaked focus style on text [Inputs](https://design.avayacloud.com/components/web/input-web) for improved visibility
+
+### 3.36.0
+
+#### New Features - New features that have recently been added
+
+- Added new classes and styles to [Checkboxes](https://design.avayacloud.com/components/web/checkboxes-web) to enable additional functionality while disabled
+- Added new styles to [Radios](https://design.avayacloud.com/components/web/radio-web) to enable additional functionality while disabled
+
+### 3.35.0
+
+#### Breaking Changes - the following Components are broken and need immediate attention
+
+- Re-formatted HTML structure of [Accordion](https://design.avayacloud.com/components/web/accordion-web) Components to comply with correct accessibility standards and guidelines
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Removed need for distinct hoverable classes for correct hover styling on [Accordion](https://design.avayacloud.com/components/web/accordion-web) Components
+
+#### New Features - New features that have recently been added
+
+- Added new 'mobile-paired', 'mobile-not-paired', and 'mobile-wireless' [Icons](https://design.avayacloud.com/components/icons/)
+- Added example of Chips in Combobox [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+
+#### Bugs Report - List of bugs that have been updated
+
+- Removed 'width' and 'max-width' properties from [Modal](https://design.avayacloud.com/components/web/modal-web) Components
+- Removed universal '\*' selector from global Body styles
+- Added missing hover state styles to secondary [Button](https://design.avayacloud.com/components/web/buttons-web) disabled utility class
+- Added necessary styles for disabled utility class on the following:
+  - [Navbar](https://design.avayacloud.com/components/web/navbar-web) buttons
+  - [Tabs](https://design.avayacloud.com/components/web/tabs-web)
+  - [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) items
+  - [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) items
+  - [Pagination](https://design.avayacloud.com/components/web/pagination-web) items
+
+### 3.34.0
+
+#### New Features - New features that have recently been added
+
+- Added separate disabled class to [Buttons](https://design.avayacloud.com/components/web/buttons-web) to enable additional functionality while disabled
+- Added a separate ‘.neo-paragraph-spacing’ class for paragraph spacing on [Typography](https://design.avayacloud.com/components/tokens/) elements
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Updated accessibility markup in [Spinner](https://design.avaya.com/components/web/spinner-web) Components
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added missing Data Viz [Colors](https://design.avayacloud.com/components/tokens/) as CSS variables
+- Added missing pseudo-element selector to Avatars within Dropdown in [Navbars](https://design.avayacloud.com/components/web/navbar-web) to prevent distortion
+- Added CSS media queries to distinguish Safari styles for:
+  - [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) width
+  - [Avatar](https://design.avayacloud.com/components/web/avatar-web) unneeded background
+  - Unnecessary border outline on Tertiary Circle [Buttons](https://design.avayacloud.com/components/web/buttons-web)
+- Added explicit height to Arrow pseudo-elements to avoid issues with [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) on Firefox
+- Removed text wrap property from [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) Main Links
+- Tweaked focus styles on [Chips](https://design.avayacloud.com/components/web/chip-web) to correct for display issue
+
+### 3.33.0
+
+#### New Features - New features that have recently been added
+
+- Added new '.neo-code' class for correct [font](https://design.avayacloud.com/components/tokens) styling on code samples
+- Added new 'label' [Icon](https://design.avayacloud.com/components/icons/)
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Added missing disabled attribute to appropriate Buttons in [Navbar](https://design.avayacloud.com/components/web/navbar-web) Components
+- Updated accessibility markup in [List](https://design.avaya.com/components/web/list-web) Components
+- Updated accessibility markup in [Widget](https://design.avaya.com/components/web/widget-web) Components
+- Updated accessibility markup in [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) Components
+- Updated accessibility markup in [Table](https://design.avayacloud.com/components/web/tables-web) Component
+- Updated accessibility markup in [Tooltip](https://design.avayacloud.com/components/web/tooltip-web) Component
+
+#### Bugs Report - List of bugs that have been updated
+
+- Fixed typos in colors/neo-colors.css file that was rendering base-1000 as base-100, and base-0 as orange-600
+- Tweaked focus styles on the following Components:
+  - [Buttons](https://design.avayacloud.com/components/web/buttons-web)
+  - Buttons in [Navbars](https://design.avayacloud.com/components/web/navbar-web)
+  - [Tabs](https://design.avayacloud.com/components/web/tabs-web)
+  - [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) links
+  - [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) main and sub links
+  - Buttons in [Table](https://design.avayacloud.com/components/web/tables-web) Action rows
+  - Multiselects in [Table](https://design.avayacloud.com/components/web/tables-web) header rows
+  - Expandable [Chips](https://design.avayacloud.com/components/web/chip-web) and Chips with Close
+  - [Accordion](https://design.avayacloud.com/components/web/accordion-web) header element
+- Tweaked selectors for '.neo-avatar--navbar-nested' class in Dropdown Avatar in [Navbars](https://design.avayacloud.com/components/web/navbar-web) to correct lack of pseudo-element styles
+- Adjusted styles to display border correctly on Sticky [Table](https://design.avayacloud.com/components/web/tables-web) header rows
+
+### 3.32.0
+
+#### New Features - New features that have recently been added
+
+- Added new Condensed [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) Component
+- Added separate color files to Neo npm package under neo/dist/css/colors/
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Updated attributes for correct accessibility compliance to [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Component HTML examples
+- Updated attributes for correct accessibility compliance to [Form](https://design.avayacloud.com/components/web/form-layout-web) Component HTML examples
+- Updated attributes for correct accessibility compliance to [Navigation](https://design.avayacloud.com/components/web/notifications-web) Component HTML examples
+- Updated attributes for correct accessibility compliance to [Checkbox](https://design.avayacloud.com/components/web/checkbox-web) Component HTML examples
+- Updated attributes for correct accessibility compliance to [Switch](https://design.avayacloud.com/components/web/switch-web) Component HTML examples
+- Added additional '.neo-avatar--navbar-nested' class to Avatar elements within Dropdowns in [Navbar](https://design.avayacloud.com/components/web/navbar-web) Components for additional flexibility when nested
+- Updated the accessibility attributes and aria attributes for the [LeftNav](https://design.avayacloud.com/components/web/left-nav-web) Component for screen reader purposes
+
+#### Bugs Report - List of bugs that have been updated
+
+- Removed unintended animation on [Button](https://design.avayacloud.com/components/web/buttons-web) focus/active state
+- Added additional padding to Dropdown in [Navbar](https://design.avayacloud.com/components/web/navbar-web) Component
+- Changed display property of [Avatar](https://design.avayacloud.com/components/web/avatar-web) Components from 'flex' to 'inline-flex' to avoid alignment issues
+- Changed orientation of chevron icons in [Accordion](https://design.avayacloud.com/components/web/accordion-web) Components
+- Changed orientation of chevron icons in [Table](https://design.avayacloud.com/components/web/tables-web) Components
+- Adjusted background color and padding of nested Widgets in Table Components
+- Added missing border-top to header rows in Table Components
+- Added provisional support for focus-visible CSS selector
+
+### 3.31.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Reverted change in pointer-events style that prevented access to [Checkboxes](https://design.avayacloud.com/components/web/checkbox-web) and [Radio](https://design.avayacloud.com/components/web/radio-web) Components
+
+### 3.31.0
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Added role="menu" and for the dropdown divs containing the nested dropdown and added role="menuitem" for each individual dropdown content for the [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component
+- Removed the role="menu" and "menuitem" from the [LeftNav](https://design.avayacloud.com/components/web/left-nav-web) component
+- Fixed spacing on the example for the [Badge](https://design.avayacloud.com/components/web/badge-web) with button component
+- Added aria attributes (aria-label) for the [Badge](https://design.avayacloud.com/components/web/badge-web) component
+- Updated the accessibility attributes, aria attributes and removed role and title for screen reader purpose for the button on [Modal](https://design.avayacloud.com/components/web/modal-web) component
+- Updated the aria attributes for screen reader on [Chip](https://design.avayacloud.com/components/web/chip-web) component
+- Added aria attributes (role=dialog, aria-labelledby="idOfHeader" and arian-label) on the [Sheet](https://design.avayacloud.com/components/web/sheet-web) component
+- Added correct aria-label to [Tabs](https://design.avayacloud.com/components/web/tabs-web) Carousel Dropdown button
+- Added 'required' attribute as neccesary to required [Input](https://design.avayacloud.com/components/web/input-web) examples
+- Removed redundant accessibility-related attributes from [Radio](https://design.avayacloud.com/components/web/radio-web) buttons
+
+#### New Features - New features that have recently been added
+
+- Added new icon for Camera ext ON / OFF [Icons](https://design.avayacloud.com/components/icons/)
+- Removed icon for Camera lens ON / OFF
+
+#### Bugs Report - List of bugs that have been updated
+
+- Removed unnecessary padding from buttons in [Modal](https://design.avayacloud.com/components/web/modal-web) footer
+- Added supporting styles to allow for additional icon in Buttons used as [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) headers
+- Removed unnecessary inverse global font color style from Dropdown Component
+- Added correct RTL styles to brand name h4 element in [Navigation](https://design.avayacloud.com/components/web/navbar-web) Component
+- Added correct styles for Avatars without associated images to be used as Dropdowns in Navigation Component
+- Decreased value of z-index property on [Checkboxes](https://design.avayacloud.com/components/web/checkbox-web) and Radios to avoid issue where element is unreachable
+- Removed explicit cursor style from square [Button](https://design.avayacloud.com/components/web/buttons-web) Components to avoid unintended cursor flickering
+- Added 200-series colored borders to [Notification](https://design.avayacloud.com/web/components/web/notifications-web) Components
+- Adjusted opacity of Input placeholder text to account for difference when rendered in Firefox
+- Added correct styles to display close/clear button when hovered over in Inputs
+- Fixed bug where close/clear button was displayed on disabled Inputs
+- Removed unintentional pointer events from Label element in Input Groups
+
+### 3.30.1
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Added correct styles to [Modal](https://design.avayacloud.com/components/web/modal-web) button spacing, changed title element from <h4> to <h2> to align with Figma designs
+- Changed 'htmlFor' to 'for' in Basic [Input](https://design.avayacloud.com/components/web/input-web) HTML example
+- Updated accessibility attributes on Input Combination HTML examples
+- Updated aria attributes and ids for hint and counter text on Inputs and [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) pages HTML examples
+
+#### Bugs Report - List of bugs that have been updated
+
+- Amended styles on multi-line [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to fix overly-aggressive string truncation
+- Restored correct font-weight to [Table](https://design.avayacloud.com/components/web/tables-web) header filter options
+- Added correct RTL styles to [Breadcrumb](https://design.avayacloud.com/components/web/breadcrumbs-web) Components to amend button spacing
+- Added styles to hide Editable Input close button and reveal it on hover/focus
+- Amended padding on [Switches](https://design.avayacloud.com/components/web/switch-web) to align with original designs
+
+### 3.30.0
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Added examples of .neo-chip class in [List](https://design.avayacloud.com/components/web/list-web) Sections with Actions Components
+- Corrected spelling of tab index attribute in Sticky [Navbar](https://design.avayacloud.com/components/web/navbar-web) HTML example
+- Added role=“button” attribute to [Tabs](https://design.avayacloud.com/components/web/tabs-web) with Close HTML examples
+- Removed role/title attributes from buttons in [Tab](https://design.avayacloud.com/components/web/tabs-web) Carousels and added appropriate aria-label attributes
+- Removed unnecessary tab index attribute from parent div element in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Components
+- Removed unnecessary tab index attribute from Read Only [Inputs](https://design.avayacloud.com/components/web/input-web)
+- Added aria-label="open navigation" to collapsable menu button on [Navigation](https://design.avayacloud.com/components/web/navbar-web) component
+- Removed Navbar collapsible menu tabindex on disabled items on [Navigation](https://design.avayacloud.com/components/web/navbar-web) component
+- Removed role="navigation" from [Pagination](https://design.avayacloud.com/components/web/pagination-web) since its redundant
+- Removed role="button" from [Pagination](https://design.avayacloud.com/components/web/pagination-web) since its redundant
+- Added aria-label="go to previous/next page" on the [Pagination](https://design.avayacloud.com/components/web/pagination-web) arrows
+
+#### New Features - New features that have recently been added
+
+- Added new icon for Camera lens ON / OFF [Icons](https://design.avayacloud.com/components/icons/)
+- Added new .neo-group-list--actions\_\_item--clickable class to [List](https://design.avayacloud.com/components/web/list-web) Sections with Actions Components
+- Added new disabled class styles to custom-, multi- and combo- [Selectbox](https://design.avayacloud.com/components/web/selectbox-web)
+
+#### Bugs Report - List of bugs that have been updated
+
+- Removed unintended margin-top on nested .neo-input class within .neo-form--inline class in [Form](https://design.avayacloud.com/components/web/form-layout-web) Components
+- Restored correct hover colour to .neo-dropdown\_\_link class in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component items
+- Restored correct hover colour to [Skipnav](https://design.avayacloud.com/components/web/skipNav) Component
+- Edited properties of text in multi-line [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to resolve issue with long single-word strings overflowing the element
+- Removed explicit cursor style declaration on [Buttons](https://design.avayacloud.com/components/web/buttons-web) to avoid cursor flickering on change
+- Added new text-indent and padding to [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component items with icons to fix text alignment
+
+### 3.29.0
+
+#### New Features - New features that have recently been added
+
+- Added new classes and styles for [Tree View](https://design.avayacloud.com/components/web/treeview-web) Component
+- Added new classes and styles for hint text under checkboxes in [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Added the following [Icons](https://design.avayacloud.com/components/icons/):
+  content/link-remove
+  editor/font-color
+  editor/font-family
+  editor/font-highlight
+  editor/format-predefined
+  editor/format-remove
+  editor/indent-decrease
+  editor/indent-increase
+  editor/line-break
+  editor/special-character
+  editor/superscript
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added -2px offset to global focus style outline
+- Fixed incorrect disabled state color in [Checkbox](https://design.avayacloud.com/components/web/checkbox-web) Components
+- Fixed issue with incorrect hover color on checkboxes in Multiselect Components
+- Reset text-wrap property on multiline [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to resolve issue with cut-off text in different languages
+
+### 3.28.0
+
+#### Breaking Changes - the following Components are broken and need immediate attention
+
+- Reformatted search elements in [Navbar](https://design.avayacloud.com/components/web/form-layout-web) Components for consistency across use cases and correct accessibility guidance
+- Reformatted search elements in [Tables](https://design.avayacloud.com/components/web/tables-web) Components for consistency across use cases and correct accessibility guidance
+
+#### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+
+- Added note re: correct use of tabindex attribute in filters on Table Components to avoid unnecessary tabbing.
+- Added note re: correct aria-label attribute in Circular and Square [Button](https://design.avayacloud.com/components/web/buttons-web) Components
+- Added correct aria-label and tabindex attributes on editable [Input](https://design.avayacloud.com/components/web/input-web) Components
+- Added disabled attribute to Buttons in editable Input Components as necessary
+
+#### New Features - New features that have recently been added
+
+- Added classes to style new compact Button Components
+
+#### Bugs Report - List of bugs that have been updated
+
+- Removed unintended margin-right on checkboxes in [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Restored correct cursor state to disabled [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component items
+
+### 3.27.0
+
+#### Features
+
+- Added classes to style new [Skip Navigation](https://design.avayacloud.com/components/web/skipNav) Component
+- Added classes and configuration to support Avatar with Dropdown in [Navbar](https://design.avayacloud.com/components/web/form-layout-web)
+- Added correct styles to support vertical alignment of product title in Navbar Component
+
+#### Bugs
+
+- Added height: inherit for correct styling of collapsible [Left Nav](https://design.avayacloud.com/components/web/left-nav-web) Component
+- Corrected chevron colour in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component
+- Corrected focus styles of hidden buttons in [Table](https://design.avayacloud.com/components/web/tables-web) Component rows
+- Added missing accessibility attributes to [Tabs](https://design.avayacloud.com/components/web/tabs-web) Components
+- Added missing class names to Buttons in Tab Carousel Component
+- Updated [Checkbox](https://design.avayacloud.com/components/web/checkbox-web) examples to remove unnecessary 'checked' class name
+- Corrected typo in aria-labelledby attribute of [Tooltip](https://design.avayacloud.com/components/web/tooltip-web) Components
+
+### 3.26.1
+
+#### Bugs
+
+- Restored correct hover colour on [Table](https://design.avayacloud.com/components/web/tables-web) Component rows
+
+### 3.26.0
+
+#### Features
+
+- Added the following [Icons](https://design.avayacloud.com/components/icons/)
+
+  - collapse-all
+  - expand-all
+
+- **_Breaking Change_** Reformatted [Tabs](https://design.avayacloud.com/components/web/tabs-web) to conform with accessibility standards and best practices
+- Added new [Breadcrumbs](https://design.avayacloud.com/components/web/breadcrumbs-web) Component
+
+#### Bugs
+
+- Corrected padding in [Modal](https://design.avaya.com/components/web/modal-web) Component footer
+- Updated the 'dtmf' Icon with new design
+- Updated text wrapping properties in [Notification](https://design.avayacloud.com/components/web/notifications-web) Components to resolve issues with alignment and overflow
+- Increased specificity of selectors to correct padding on Multiple [Selectbox](https://design.avayacloud.com/components/web/selectbox-web)
+- Removed fixed height on [Buttons](https://design.avayacloud.com/components/web/buttons-web)
+- Added correct line-height property to all [Heading](https://design.avayacloud.com/components/tokens/) elements
+
+### 3.25.0
+
+#### Features
+
+- New beta Dark Mode theme added in the [Themes](https://design.avayacloud.com/components/web/themes) page
+- Added new Combobox version of [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Component
+- **_Breaking Change_** Reformatted [Chips](https://design.avayacloud.com/components/web/chip-web) with Close Icon to include HTML Button element
+
+#### Bugs
+
+- Mapped the following [Icons](https://design.avayacloud.com/components/icons/) to 'neo-icon-not-available':
+
+  - office-365
+  - salesforce
+  - google-drive
+  - apple
+  - asana
+
+- Mapped the following icons to 'neo-icon-social':
+
+  - twitter
+  - wechat
+  - whatsapp
+  - youtube
+  - instagram
+  - fb
+  - fbm
+
+- Mapped the following icons to 'neo-icon-speaker-wireless':
+
+  - bluetooth
+  - speaker-bluetooth
+  - speaker-bluetooth-rtl
+
+- Mapped 'neo-icon-headphones-bluetooth' icon to 'neo-icons-headphones-wireless'
+
+- Re-formatted style properties on [Notifications](https://design.avayacloud.com/components/web/notifications-web) to resolve issue with alignment, wrapping, and overflow
+- Added correct class name for Selectbox Components within [Inputs Addons](https://design.avayacloud.comcomponents/web/input-web) Components
+- Added correct hover styles for expandable/closable Chips Components
+- Fixed the focus accessibility for switch button on [List](https://design.avaya.com/components/web/list-web) ComponentContainer
+- Removed extra paddings from the [Modal](https://design.avaya.com/components/web/modal-web) Component
+
+### 3.24.0
+
+#### Features
+
+- Added the following [Icons](https://design.avayacloud.com/components/web/icon-states-web): speakers-wireless, headphones-wireless
+
+#### Bugs
+
+- Added correct font-weight to disabled [Tab](https://design.avayacloud.com/components/web/tabs-web) hover style
+- Added RTL styles to positionable [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) classes
+- Tweaked arrow position on multi-directional, multi-line [Tooltips](https://design.avayacloud.com/components/web/tooltip-web)
+
+### 3.23.0
+
+#### Features
+
+- Created new [Icon State](https://design.avayacloud.com/components/web/icon-states-web) Components
+- Added the following [Icons](https://design.avayacloud.com/components/web/icon-states-web): lock-filled, warning-filled, error-filled, connected-filled, inbound-filled, outbound-filled, missed-filled
+- Created new active styles for [Left Nav](https://design.avayacloud.com/components/web/left-nav-web) sub items, created new '--no-icon' class prefix for sub items who's parents have no associated icon
+
+#### Bugs
+
+- Added focus styles for accessibility guidance on pagination of [Navigation](https://design.avayacloud.com/components/web/pagination-web) Component
+- Added focus styles for accessibility guidance on Input clear button of Text Input of [Input Web](https://design.avayacloud.com/components/web/input-web) Component
+- Removed extra padding in Modal body [Modal](https://design.avayacloud.com/components/web/modal-web)
+- Added global-outline-color variable instead of hard coded color variable for focus outline
+- Corrected font-weight on [Table](https://design.avayacloud.com/components/web/tables-web) header cells to semi-bold
+- Changed focus styles on [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to use focus-within property for smoother tabbing
+- Removed behaviour which caused undesired text mirroring in dual-direction Tooltips in RTL
+- Added missing disabled state styles to Buttons in [Navbar](https://design.avayacloud.com/components/components/web/navbar-web)
+- Added missing RTL styles to margins in [Form](https://design.avayacloud.com/web/components/form-layout-web) Components
+- Removed undesired word-break property from Counter in [Notification](https://design.avayacloud.com/web/components/web/notifications-web)
+- - Added correct spacing for buttons in [List](https://design.avayacloud.com/web/components/web/list-web) Sections with Actions
+
+### 3.22.0
+
+#### Features
+
+- Changed properties on [Dropdowns](https://design.avayacloud.com/components/web/dropdown-web) to match updated styling
+- Changed properties on [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to reflect updated styling
+- Added —fit-content utility class to [Tooltips](https://design.avayacloud.com/components/web/tooltip-web)
+- Removed the following [Icon](https://design.avayacloud.com/components/icons/) from Neo:
+  - bluetooth
+  - headphones-bluetooth
+  - speaker-bluetooth
+  - speaker-bluetooth-rtl
+  - google-drive
+  - office-365
+  - apple
+  - asana
+  - salesforce
+  - fb
+  - instagram
+  - line
+  - twitter
+  - wechat
+  - whatsapp
+  - youtube
+- Added the 'message-read' Icon
+- Added new paragraph spacing token into margin-bottom property on Typography elements
+- Added correct styles and support for 'h1.jumbo' CSS class
+
+#### Bugs
+
+- Changed display property from ‘flex’ to ‘inline-block’ for Avatars in Dropdowns to correct alignment issues
+- Added the correct letter-spacing value to '—large' [Avatar](https://design.avayacloud.com/components/web/avatar-web) Components
+- Re-sized Generic Avatars
+- Removed border and outline style from custom Selectbox in [Input](https://design.avayacloud.com/components/web/input-web) Addons
+- Restored correct colour to icon Buttons in [Widget](https://design.avayacloud.com/components/web/widget-web) header class
+- Updated appearance of neo-icon-bot and neo-control-request Icons
+- Fixed bug in .neo-italic class property
+- Tweaked text alignment in Widget header class after change in global Typography style properties
+
+### 3.21.0
+
+#### Features
+
+- Added new Generic and Bot variants to [Avatar](https://design.avayacloud.com/components/web/avatar-web) Components
+- Added new class for correct styling of Inputs with Buttons in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web)
+
+#### Bugs
+
+- Removed auto-capitalization text-transform property from [Tabs](https://design.avayacloud.com/components/web/tabs-web)
+- Aligned styles of [Widget](https://design.avayacloud.com/components/web/widget-web)
+- Added correct background-color to [Table](https://design.avayacloud.com/components/web/tables-web)
+- Added correct border-radius to custom [Select](https://design.avayacloud.com/components/web/selectbox-web)
+- Added correct color to [Modal](https://design.avayacloud.com/components/web/modal-web) Components
+- Corrected bug in the inclusion of global focus styles where applicable
+- Added focus styles for accessibilty guidance on buttons of [Navbar](https://design.avayacloud.com/components/web/navbar-web) Component
+- Added focus styles for accessibilty guidance on Header buttons of [Sheet](https://design.avayacloud.com/components/web/sheet-web) Component
+- Changed behaviour of focus style on Tabs to wrap around entire Component
+
+### 3.20.0
+
+#### Features
+
+- Added new animation styles for [Modal](https://design.avayacloud.com/components/web/modal-web) Component -- added in 3.19.0
+- Added new disabled and active/disabled styles to actions in [Navbar](https://design.avayacloud.com/components/web/navbar-web) Component
+- Added new styles for tabs in Navbar Component
+- Created new .neo-leftnav—collapsible class for use with Navbar & collapsible [Left Nav](https://design.avayacloud.com/components/web/left-nav-web) Component
+- Added new code-cloud [Icon](https://design.avayacloud.com/components/icons/)
+- Added new RTL styles for [Tooltip](https://design.avayacloud.com/components/web/tooltip-web) Components
+
+#### Bugs
+
+- Changed padding-bottom property on Label elements in .neo-form-control class of [Form](https://design.avayacloud.com/components/web/form-layout-web)
+- Fixed height and width styles for actions on left-hand side of Navbar Component
+- Added correct background-color variable to [Table](https://design.avayacloud.com/components/web/tables-web) Actions & Filters rows
+- Added correct font-color variable to arrow in [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) Component
+- Added correct font-color variable to [Pagination](https://design.avayacloud.com/components/web/pagination-web) arrow buttons
+- Added correct font-color variable to Custom Multiselect content area
+- Added centred flex styles to circle and square icon [Buttons](https://design.avayacloud.com/components/web/buttons-web)
+
+### 3.19.0
+
+#### Features
+
+- Added new focus styles to [Radio](https://design.avayacloud.com/components/web/radio-web), [Checkbox](https://design.avayacloud.com/components/web/checkbox-web) and [Switch](https://design.avayacloud.com/components/web/switch-web) Components
+
+- Added new 'noise-off' [Icon](https://design.avayacloud.com/components/icons/)
+
+#### Bugs
+
+- Tweaked padding and margins of Input elements in inline [Forms](https://design.avayacloud.com/components/web/form-layout-web) to preserve alignment
+
+- Removed flex-wrap as default property of inline [Forms](https://design.avayacloud.com/components/web/form-layout-web) and added a new '.neo-form--inline--wrap' class to include it as needed
+
+- Tweaked positioning of [Radio](https://design.avayacloud.com/components/web/radio-web) Components to preserve alignment
+
+- Tweaked positioning of diagonal [Tooltip](https://design.avayacloud.com/components/web/tooltip-web) Components to improve dynamic positioning
+
+### 3.18.0
+
+#### Features
+
+- Created new classes and styles for [Table](https://design.avayacloud.com/components/web/tables-web) Components
+
+- Created new classes and styles for [Pagination](https://design.avayacloud.com/components/web/pagination-web) Components
+
+- Added the following [Icons](https://design.avayacloud.com/components/icons/)
+
+  - notifications-alerting
+  - notifications-on-filled
+  - filter-filled
+
+- Updated global focus state, provided correct accessibilty guidance on HTML structure of all Components on their respective pages, with the exception of Checkboxes, Radios and Switches
+
+#### Bugs
+
+- Added correct styles to Inputs in [Dropdowns](https://design.avayacloud.com/components/web/dropdown-web) and provided appropriate examples on Component page
+
+- Amended hover states on [Tabs](https://design.avayacloud.com/components/web/tabs-web) to correctly display cursor and remove background on disabled states
+
+- Amended spacing and background colour on .neo-multiselect\_\_header class on [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Components
+
+- Amended [Chip](https://design.avayacloud.com/components/web/chip-web) classes and styles to remove hover states from non-interactive versions
+
+### 3.17.0
+
+#### Features
+
+- Created new classes for custom [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) and multiple Selectbox styling
+
+#### Bugs
+
+- Added missing commas in [Icons](https://design.avayacloud.com/components/icons) .css file that may have produced errors in certain product environments
+
+- Amended styles to ensure correct positioning of Positioned [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) on a variety of Components
+
+- Added text wrap styles to [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) link elements
+
+### 3.16.1
+
+#### Features
+
+- Added new classes to support Positioned [Tooltip](https://design.avayacloud.com/components/web/tooltip-web) Components
+
+- Added new Interactivity [Tokens](https://design.avayacloud.com/components/tokens/):
+  - motion-fast
+  - motion-medium
+  - motion-slow
+  - ease-in
+  - ease
+  - ease-out
+- Changed default transition duration and timing function to ‘medium’ and ‘ease’ and applied to all relevant animated states
+
+- Added the following [Icons](https://design.avayacloud.com/components/icons):
+  - messaging
+  - messaging-alerting
+  - messaging-connected
+  - messaging-forwarded
+  - messaging-inbound
+  - messaging-missed
+  - messaging-not-ready
+  - messaging-outbound
+  - messaging-pending
+  - messaging-ready
+  - custom-connected
+  - custom-ready
+  - social-connected
+  - social-ready
+
+#### Bugs
+
+- Amended padding on .neo-dropdown\_\_link-header class in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component
+
+- Amended RTL styles on [Buttons](https://design.avayacloud.com/components/web/buttons-web) so that attribute does not have to be directly on element
+
+- Added height: 100% and flex styles to .neo-widget\_\_content class on [Widget](https://design.avayacloud.com/components/web/widget-web) Component to resolve issues with Component height and scroll behaviour
+
+### 3.15.1
+
+#### Bugs
+
+- Fixed erroneous padding on .neo-leftnav\_\_sub class in [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) Component
+
+### 3.15.0
+
+#### Features
+
+- Added the following [Icons](https://design.avayacloud.com/components/icons):
+  - save
+  - call-ready
+  - chat-connected
+  - chat-ready
+  - email-connected
+  - email-ready
+  - sms-connected
+  - sms-ready
+  - video-ready
+  - video-connected
+  - network-quality-0
+  - legal
+
+#### Bugs
+
+- Removed height: 100% from .neo-widget\_\_content class in [Widget](https://design.avayacloud.com/components/web/widget-web) Component
+- Added overflow: auto and width: auto to .neo-widget\_\_body class in Widget Component
+
+- Re-added 'Info' state colour to [Chip](https://design.avayacloud.com/components/web/chip-web) Components
+
+- Adjusted padding on .neo-leftnav\_\_sub class in [Left Navigation](https://design.avayacloud.com/components/web/left-nav-web) to align with other elements in Component
+
+### 3.14.0
+
+#### Features
+
+- Standardized use of .neo-form, .neo-form-control, and .neo-input-group classes across all [Form](https://design.avayacloud.com/components/web/form-layout-web) elements
+
+- Added .neo-form--inline and .neo-input-group--inline classes for horizontally-aligned Form elements
+
+- Created the .neo-input-group--addons to ensure correct border styling of relevant [Text Input](https://design.avayacloud.com/components/web/input-web) Components
+
+#### Bugs
+
+- Amended HTML structure of text input element in [Navbar](https://design.avayacloud.com/components/web/form-layout-web) Component to reflect above changes to Form elements
+
+- Removed .neo-radio-group class added in 3.12.0 of [radio button Component](https://design.avayacloud.com/components/web/radio-web) wrapper to standardize appearance of input element groups in Forms
+
+- Added padding to .neo-dropdown\_\_link class in [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Components to avoid text overlap with arrow icon
+
+### 3.13.1
+
+#### Bugs
+
+- Removed overflow property from .neo-widget\_\_content class in [Widget](https://design.avayacloud.com/components/web/widget-web) Component
+
+- Added necessary styles for correct expand/collapse behaviour in [Accordion](https://design.avayacloud.com/components/web/accordion-web) Component
+
+- Adjusted word-break property on text in [Notification](https://design.avayacloud.com/components/web/notifications-web) Components to avoid issues with overflowing text
+
+- Tweaked margin property on text element in Widget Component header to avoid redundant spacing when no icon present
+
+### 3.13.0
+
+#### Features
+
+- Added separate .css stylesheet for Neo icon set in npm package
+
+- Aligned [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Component styles/states with general Input styles/states
+
+- Added styles for [Tab](https://design.avayacloud.com/components/web/tabs-web) Components with close Button
+
+- Added classes to allow individual [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Component menus to be aligned
+
+- Added styles to allow for separate element to attach event handlers in [Sheet](https://design.avayacloud.com/components/web/sheet-web) Components
+
+#### Bugs
+
+- Fixed bug with Spinners in Selectbox Components
+
+- Added background colour to Sheet Components to avoid transparency issues
+- Removed min-height from Sheet Components, set width to auto
+
+- Removed min-width from [Notification](https://design.avayacloud.com/components/web/notifications-web), fixed issue with text overlap
+
+### 3.12.0
+
+#### Features
+
+- Added new hover and pressed states to [Button Components](https://design.avayacloud.com/components/web/buttons-web)
+
+- Re-configured input and textarea Components to reflect new structural and stylistic changes:
+  - Inputs should be wrapped in .neo-form-control class with --disabled, --error & --required suffixes for form validation
+  - .neo-input-icon, .neo-input-group and .neo-input -editable\_\_wrapper classes should be used for positioning
+  - neo-form-control—textarea, neo-input-textarea\_\_helper and neo-input-textarea—locked classes should be used for textarea styling and positioning
+  - Further [documentation at](https://design.avayacloud.com/components/web/input-web)
+
+#### Bugs
+
+- Fixed issue with hover state on disabled tertiary button Components
+- Fixed issue with disabled state background color of secondary button Components
+
+- Changed class name of [radio button Component](https://design.avayacloud.com/components/web/radio-web) wrapper to .neo-radio-group to avoid style conflicts with other input Component wrapper elements
+
+- Switched names of .neo-dropdown--left & .neo-dropdow--right classes to reflect direction of content opening, rather than alignment of parent element on [Dropdown Components](https://design.avayacloud.com/components/web/dropdown-web)
+
+### 3.11.0
+
+#### Features
+
+- Consolidated Label Component and Chip Component into single [Chip Component](https://design.avayacloud.com/components/web/chip-web) and added the following configurations:
+  - Static Chip
+  - Chip with Icon
+  - Chip with Avatar
+
+#### Bugs
+
+- Fixed vertical alignment on Spinner Component
+- Fixed bug in small Avatar Component letter-spacing property
+- Updated screenshare-on, headphones-bluetooth, history-search and communication/av-block
+
+### 3.10.0
+
+#### Features
+
+- [Notifications](https://design.avayacloud.com/components/web/notifications-web):
+
+  - Added new Notification Component variants to accomodate different properties
+  - Added new 'Event' state to Notifications
+  - Added new elevated style to Notifications
+
+- Added new 'indeterminate' [Checkbox Component](https://design.avayacloud.com/components/web/checkbox-web) state
+
+- Added new 'Typing' indicator [Icon](https://design.avayacloud.com/components/icons)
+- Added new 'Spinner' Icon
+
+#### Bugs/updates
+
+- Adjusted chevrons in [Dropdown Component](https://design.avayacloud.com/components/web/dropdown-web)
+- Amended RTL styles for Dropdown Component using the '--right' class suffix
+- Changed name of [Button](https://design.avayacloud.com/components/web/buttons-web) default state to 'default' instead of 'primary' to avoid unnecessary redundancy in class names -- N.B: 'primary' will continue to be supported to maintain fault tolerance
+- Added border to [Modal](https://design.avayacloud.com/components/web/modal-web)/[Widget](https://design.avayacloud.com/components/web/widget-web)/Dropdown Components
+- Updated [Spinner](https://design.avayacloud.com/components/web/spinner-web) to use and animate new 'spinner' icon
+
+### 3.9.0
+
+#### Features
+
+**_Retroactive additions to Changelog from previous changes to Buttons in 3.7.0_**
+
+- Updated disabled state styles of Button Components
+- Updated hover state of Button Components
+
+- Added new [Left Navigation Component](https://design.avayacloud.com/components/web/left-nav-web)
+
+- Added 'emergency' and 'speaker-none' buttons
+
+#### Bugs
+
+- Fixed RTL issues on Input Components with Icons
+- Changed 'margin-left' property on RTL Tabs from 'auto' to 'initial'
+- Changed RTL properties of badges on Navbar icon buttons to re-position badge correctly
+- Fixed text alignment on Accordion Header text
+- Fixed 'apple', 'speaker-medium' and 'speaker-low' icons
+
+### 3.8.0
+
+#### Features
+
+- Added support for Arabic, Hebrew, Japanese, Korean, Chinese, Cyrillic and Greek language fonts. Font support bundled as separate stylesheets for each within Neo npm package, or available for download on the [Setup](https://design.avayacloud.com/components/web/setup-web) page
+
+- Added new [Avatar Status Component](https://design.avayacloud.com/components/web/avatar-web)
+
+- Added the following new icons:
+  - contact-filled
+  - noise-1
+  - noise-2
+  - noise-3
+  - network-quality-1
+  - network-quality-2
+  - network-quality-3
+  - chat-filled
+  - spaces-filled
+  - line
+  - wechat
+  - whatsapp
+  - social-alerting
+  - social-inbound
+  - social-not-ready
+  - social-missed
+  - social-outbound
+  - social-pending
+  - apple
+
+#### Bugs
+
+- Adjusted position property of Navbar Component and z-index of badges inside Navbar Component to resolve issue of Tooltips not overlapping Navbar
+- Changed specificity of buttons in Navbar to avoid issues with nested buttons
+- Changed margin between List Section with Actions Component from 12px to 8px
+
+- Updated network quality & noise icons
+
+### 3.7.1
+
+#### Bugs
+
+- Misc:
+
+  - Removed styling for Avatars in Chip Components
+  - Corrected colour of disabled links in Table Components
+  - Adjusted margin-bottom on Floating Badge Component in List Items
+  - Adjusted margin on Span elements in List Items
+
+- RTL:
+
+  - Added RTL-specific properties to Sheet Components to preserve styling
+  - Added RTL-specific properties to Chip Components to preserve styling
+  - Added RTL-specific properties to Select Elements in Table Components to preserve styling
+  - Added RTL-specific properties to Table Components to preserve styling
+  - Added RTL-specific properties to Pagination Components to preserve styling
+  - Adjusted border on Vertical Tabs for RTL styling
+
+- Tabs
+
+  - Added additional elements to HTML structure of Tabs Carousel and adjusted style properties accordingly to adjust position of 'More' button and align with potential JS implementation
+
+### 3.7.0
+
+**_Retroactively versioning up to reflect additional icons added in 3.6.3_**
+
+#### Bugs
+
+- Re-instituted support for pre-3.6.3 icon naming for adidtional stability and fault tolerance
+
+### 3.6.3
+
+- Typography:
+
+  - Removed faulty value of margin-bottom on list items
+
+- List:
+
+  - Switched left/right margins on nested Span elements inside .neo-group-list\_\_actions-left class for RTL
+  - Added styling for Floating Badges in List Item Components
+
+- Widget:
+
+  - Switched left/right margins on nested Span elements inside .neo-widget\_\_header-left class for RTL
+
+- Badge:
+
+  - Switched left/right positioning for Badge element in RTL
+  - Reverted to 'data-badge' attribute from 'bind-data-badge'
+
+- Button:
+
+  - Aligned focus/active states on Buttons with hover state
+  - Aligned Button hover states with design files
+
+- Tab:
+
+  - Created separate class for .neo-tabs\_\_carousel top-level Div element
+  - Added additional flex-grow and overflow styles to .neo-tabs\_\_carousel top-level element
+
+- Navbar:
+
+  - Switched left/right margins on .neo-nav class for RTL
+  - Switched left/right margins on .neo-nav-status-info for RTL
+  - Removed padding on .neo-navbar for RTL
+
+- Aligned icon names to design files according to the following list:
+
+  - ACCOUNT:
+
+    - add-member —> user-add
+    - conference —> user-conference
+    - customer-details —> user-details
+    - customer-details-rtl —> user-details-rtl
+    - waiting —> user-waiting
+
+  - ACTION:
+
+    - capture —> camera
+    - flip —> camera-flip
+    - fullscreen —> fullscreen-on
+    - customer-history —> history
+    - maximize —> screen-max
+    - minimize —> screen-min
+    - swap-screen —> screen-swap
+    - close-screenpop —> screenpop-off
+    - screenpop —> screenpop-on
+    - start-work —> work-start
+    - end-work —> work-end
+    - Send-chat —> send
+    - adding-columns —> preferences
+    - defer-interaction —> time-extend
+
+  - ALERT:
+
+    - error-outline —> error
+    - info-outline —> info
+    - notifications —> notifications-on
+    - warning-outline —> warning
+
+  - COMMUNICATION:
+
+    - audio —> audio-on
+    - bot-avatar —> bot
+    - add-call —> call-add
+    - end-call —> call-end
+    - make-call —> call-make
+    - Phone-mute —> call-mute
+    - Phone-call-logs —> call-logs
+    - Phone-call-logs-rtl —> call-logs-rtl
+    - phone-dial-in —> call-dial-in
+    - split-call —> call-split
+    - voice-alerting —> call-alerting
+    - voice-inbound —> call-inbound
+    - voice-missed —> call-missed
+    - voice-not-ready —> call-not-ready
+    - voice-outbound —> call-outbound
+    - voice-pending —> call-pending
+    - Voice —> call
+    - request-control —> control-request
+    - release-control —> control-release
+    - send-to-queue —> queue-send-to
+    - sound —> speaker-high
+    - video —> video-on
+    - hold —> hold-on
+    - video-in-video —> picture-in-picture
+    - email-outline —> email
+
+  - CONTENT:
+
+    - accept —> check
+    - Worklog —> clipboard
+    - custom-layout —> layout-custom
+    - observe —> view-on
+    - stop-observing —> view-off
+    - reply-all-to-chat —> reply-all
+    - reply-to-chat —> reply
+    - historical-reports —> history-reports
+    - star-outline —> star
+    - suggested-content —> suggested
+    - End —> close
+    - chart-billboard —> billboard-chart
+
+  - EDITOR:
+
+    - center-alignment —> alignment-center
+    - left-alignment —> alignment-left
+    - right-alignment —> alignment-right
+    - bullet-list —> list-bullet
+    - rtl-num-list —> list-number-rtl
+    - numbered-list —> list-number
+    - rich-text-expanded —> format-expand
+    - email-format —> format-collapse
+
+  - FILE:
+
+    - Broken-image —> image-broken
+    - filetype-avi —> file-avi
+    - filetype-doc —> file-doc
+    - filetype-html —> file-html
+    - filetype-jpg —> file-jpg
+    - filetype-json —> file-json
+    - filetype-mp4 —> file-mp4
+    - filetype-pdf —> file-pdf
+    - filetype-png —> file-png
+    - filetype-ppt —> file-ppt
+    - filetype-txt —> file-txt
+    - filetype-xls —> file-xls
+    - filetype-zip —> file-zip
+
+  - NAVIGATION:
+
+    - more —> ellipses-horizontal
+    - last-page —> page-last
+    - first-page —> page-first
+
+  - SOCIAL:
+
+    - social-active —> social
+
+  - STATUS:
+
+    - clock —> away
+    - go-not-ready —> busy
+    - go-ready —> available
+
+  - WEATHER:
+    - scattered-clouds —> cloudy-scattered
+    - few-clouds —> cloudy-few
+
+#### Bugs
+
+### 3.6.2
+
+#### Bugs
+
+- Navbar
+  - Removed faulty focus state on Navbar buttons
+  - Resolved Navbar button sizing issues when used with Tooltip Component
+  - Re-sized all Navbar buttons uniformly
+- Tabs
+  - Added styling for amended HTML structure of Tabs Carousel Component
+- Badge:
+  - Raised z-index on Badges to avoid overlap
+  - Changed 'data-badge' attribute to 'bind-data-badge' for increased compatibility with Angular framework
+- Pagination
+  - Fixed hover states (pointer/color) on Pagination buttons
+
+### 3.6.1
+
+#### Bugs
+
+- Fixed issue with Accordion dimensions
+
+### 3.6.0
+
+#### Bugs
+
+- Tabs:
+  - Adjusted color and background color of disabled and active/disabled tabs on focus
+- Navbar:
+  - Adjusted margin-bottom of text in Navar Component status section
+  - Fixed maximum width of Navbar Component status section to allow for graceful sizing with content
+  - Adjusted height of Navbar Component
+  - Adjusted size of icons in Navbar Component
+- Buttons:
+  - Adjusted icon size in square and circle buttons
+- List sections:
+  - Reduced padding on List Section Components
+- Adjusted margin-right on icons before p elements
+
+#### Features
+
+- Buttons:
+  - Added class to animate buttons with pulsing animation
+- Tabs:
+  - Added classes to create a Tabs Carousel
+- List Items:
+  - Added classes to create List Item Components
+- Icons:
+  - Added the following icons: available-filled, away-filled, busy-filled, do-not-disturb-filled, offline-filled
+
+### 3.5.2
+
+#### Bugs
+
+- Updated height, width, positioning and disabled color for Switch components
+- Updated height, width, positioning and disabled color for Radio components
+
+### 3.5.1
+
+#### Bugs
+
+- Fixed faulty icons in Components after 3.5.0 push
+
+### 3.5.0
+
+#### Features
+
+- Added the following icons:
+
+  - user-group
+  - align-top
+  - align-bottom
+  - align-left
+  - align-right
+  - align-center-horizontal
+  - align-distribute-horizontal
+  - align-distribute-vertical
+  - thumbs-down
+  - task-incomplete
+  - reason-codes
+
+- Re-created the following icons:
+
+  - add-member
+  - customer-details
+  - go-ready
+  - go-not-ready
+  - do-not-disturb
+  - clock
+  - offline
+
+- Tooltips
+
+  - Added .neo-tooltip\_\_content--multiline class for multiline tooltips
+
+#### Bugs
+
+- Fixed the following icons:
+
+  - end-work
+  - start-work
+  - error-outline
+  - audio-warning
+  - bluetooth
+  - dtmf
+  - headphones-bluetooth
+  - layout-concert
+  - speaker-bluetooth
+  - speaker-bluetooth-rtl
+  - address-book
+  - posts
+  - chart-billboard
+  - bubbles
+  - filter
+  - gif
+  - layout-custom
+  - signature
+  - file-rtl
+  - folder
+  - google-drive
+
+- Tooltip
+
+  - Added properties for default tooltip to expand with content
+
+- List Section
+
+  - Increased margin between left-hand icon and text to 8px
+
+### 3.4.1
+
+#### Bugs
+
+- Reverted to previous alignment on right-aligned Dropdown Component
+- Added 100% height to Widget Component
+
+### 3.4.0
+
+#### Bugs
+
+- Dropdown:
+  - Fixed broken .css on Dropdown Components
+- Widget:
+  - Updated Widget Component width to assume 100% of its container element
+  - Re-centered content in Widget Component header to match above change
+- Tabs:
+  - Removed minimum height on Tab Components
+  - Changed max-height and padding on Tab Component items
+  - Changed padding on link elements inside Tab Component
+- Notifications:
+  - Fixed text vertical alignment in Notifications
+- Icons:
+  - Fixed scaling issue with email-format icon
+  - Updated video-warning and audio-warning icons for consistent warning appearance
+
+#### Features
+
+- Tabs
+  - Created new vertical tab component
+  - Added scroll functionality to vertical tab component
+  - Added new disabled active state to Tab items
+  - Added new hover and active states to Tab items
+- Dropdowns:
+  - Re-formatted right-aligned dropdown to properly display flipped icons
+- Navbar:
+  - Added new hover states to icon buttons in Navbar
+  - Added new active state class to icon buttons in Navbar
+
+### 3.3.1
+
+#### Bugs
+
+- Fixed bug in .neo-icon-audio-lock
+- Fixed pagination dots positioning and used correct icon
+
+### 3.3.0
+
+#### Features
+
+- Added the following icons
+  - customer-details-rtl
+  - idea
+  - audit-rtl
+  - recording-off
+  - audio-warning
+  - audio-lock
+  - video-warning
+  - speaker-bluetooth-rtl
+  - email-forwarded-rtl
+  - phone-call-logs-rtl
+  - qr-code
+  - invoice
+  - credit-card
+  - awfos-rtl
+  - file-rtl
+  - social-integrations
+  - layout-automatic
+  - layout-grid
+  - layout-active-speaker
+  - layout-concert
+  - layout-thumbnail-horizontal
+  - layout-thumbnail-vertical
+  - call-transfer
+- Updated the following icons:
+  - video-alerting
+  - video-inbound
+  - video-outbound
+  - video-missed
+  - video-not-ready
+  - video-pending
+  - dialpad
+  - swapped name of recording-on and -off to reflect correct states
+- Improved support for design tokens in .css file as per the following:
+  - Color tokens are available as .css variables
+  - Typography:
+    - Body font style tokens available as variables in .css file
+    - Typography utility classes created as follows:
+      - .neo-underline
+      - .neo-italic
+      - .neo-light
+      - .neo-regular
+      - .neo-semibold
+      - .neo-bold
+      - .neo-body-tiny
+      - .neo-body-small
+      - .neo-body-regular
+      - .neo-body-large
+  - Spacer tokens are available as variables in .css file
+  - Border utility classes created as follows:
+    - .neo\_\_border-1px
+    - .neo\_\_border-2px
+    - .neo\_\_border-3px
+    - .neo--border-radius-2px
+    - .neo--border-radius-4px
+    - .neo--border-radius-16px
+    - .neo--border-radius-100
+  - Interactivity tokens are available as variables in .css file
+  - Elevation utility classes created as follows:
+    - .neo\_\_shadow--elevation-400
+    - .neo-\_shadow--elevation-300
+    - .neo\_\_shadow--elevation-200
+    - .neo\_\_shadow--elevation-100
+
+## 3.2.0
+
+#### Bugs
+
+- Changed width of element with .neo-label class inside .neo-nav-status in Navbar Component to 'auto'
+- Changed icon in .neo-close to correct version
+- Changed icon in Expandable Chips to correct version
+
+#### Features
+
+- Added List Section Component
+- Added wide Buttons
+- Created Sheet Component
+- Created specific animations for elements sliding in from left & right:
+  - neo-slide--in-right / neo-slide--out-right
+  - neo-slide--in-left / neo-slide--out-left
+
+### 3.1.1
+
+#### Bugs
+
+- Fixed bug in font color of Tabs disabled state
+- Added correct font-family and icon content in Accordion, Selectbox & Checkbox components
+- Added disabled class to Selectbox to correct colour of icon disabled state
+- Added correct border radius and padding to editable input Component button
+- Changed maximum height of editable input Component
+- Centered vertical alignment of elements in primary, secondary and tertiary button variants
+- Displayed correct icons in Dropdown
+
+### 3.1.0
+
+#### Features
+
+##### Colors
+
+- Redesigned color scheme with new variants, including:
+
+###### Base
+
+- base-0: #FFFFFF
+- base-100: #F1F1F1
+- base-200: #C9C9C9
+- base-400: #939393
+- base-500: #757474
+- base-600: #5E5E5E
+- base-800: #323232
+- base-900: #242424
+- base-1000: #000000
+
+###### Red
+
+- red-100: #FCECEB
+- red-200: #EDBFBB
+- red-400: #E56960
+- red-500: #D93D32
+- red-600: #A6332B
+- red-800: #591F1B
+- red-900: #3D1815
+
+###### Orange
+
+- orange-100: #FCEEE8
+- orange-200: #F7BBA3
+- orange-400: #F76125
+- orange-500: #CC4D1B
+- orange-600: #A63B11
+- orange-800: #59230D
+- orange-900: #3D1809
+
+###### Green
+
+- green-100: #E4F7E4
+- green-200: #9CD99C
+- green-400: #51A651
+- green-500: #088A08
+- green-600: #2B6B2B
+- green-800: #173B17
+- green-900: #102910
+
+###### Blue
+
+- blue-100: #E8F1FC
+- blue-200: #ABCCF5
+- blue-400: #4C94ED
+- blue-500: #1473E6
+- blue-600: #125AB3
+- blue-800: #0B3363
+- blue-900: #092547
+
+###### Purple
+
+- purple-100: #F7EDFC
+- purple-200: #E0BBF2
+- purple-400: #BF73E5
+- purple-500: #AB3FE0
+- purple-600: #8832B3
+- purple-800: #4C1D63
+- purple-900: #371547
+
+###### Data Visualization Categorical
+
+- green: #029E73
+- red: #E31A1C
+- purple-light: #8A82F7
+- purple: #8E4B88
+- blue-dark: #3851D0
+- blue-mid: #0173B2
+- teal: #36A3AB
+- orange: #E67300
+- pink: #CC78BC
+
+- Removed old colours
+
+##### Typography
+
+- Removed H5 and H6
+
+#### Components
+
+- Updated color treatment across all components using new colors
+
+- Added border radius across components for consistent treatment
+
+##### Avatar
+
+- Removed x-small variant
+- Resized others to 28, 36 and 48px
+- Removed secondary border variant
+
+##### Button
+
+- Added secondary style variants
+- Added tertiary variants
+- Renamed icon variant to square
+- Removed button group
+- Removed secondary color variant
+
+##### Navbar
+
+- Added .neo-nav-status class for navigation status element on right side of navbar
+- Added .neo-nav-status-info class for displaying information within navbar status element
+- Added .neo-nav--left class for positioning form elements on left side of navbar as per design spec
+
+##### Tabs
+
+- Removed tab sizing to have one default
+- Removed bordered tabs
+- Removed vertical tabs
+
+##### Dropdown
+
+- Added support for Avatar variant
+
+##### Pagination
+
+- Removed pagination lists on left and right
+
+##### Label
+
+- Removed secondary variant
+
+##### Input
+
+- Modified Basic variant to be top aligned variant
+- Removed right and top aligned variants
+- Added disabled state
+
+##### Text area
+
+- Added disabled state
+
+##### Selectbox
+
+- Removed icon in select variant
+
+##### Table
+
+- Removed bordered variant
+- Removed striped variant
+- Removed vertical header variant
+- Removed vertical sticky header variant
+- Removed table responsive variant
+- Modified filtering and sorting appearance
+- Added .neo-table-sortable class to style sortable table elements
+- Added .neo-table-filter\_\_wrapper and .neo-table-filter class to correctly position and style filter element
+- Removed editable table variant
+
+##### Notification
+
+- Removed primary and secondary variants
+
+##### Modal
+
+- Added info variant
+
+##### Tooltip
+
+- Restructured associated elements to include arrow
+- Removed colored variant
+
+##### Badge
+
+- Created .neo-badge\_\_icon class for use in Navbar component
+
+##### Accordion
+
+- Removed colored variant
+- Removed borderless variant
+
+##### Widget
+
+- Set basic flat variant as default
+- Removed buttons
+- Created .neo-shimmer--loading class for loading state in Widgets
+
+##### Chip
+
+- Removed primary and secondary variants
+- Added neo-chip—expandable class
+
+##### List
+
+- Removed color variant
+- Removed borderless variant
+
+##### Footer
+
+- Removed component
+
+- Removed support for themeing
+
+### 3.0.1
+
+#### Bugs
+
+- Fixed error in H1 Jumbo size class name
+
+- Changed icon in Accordion to use new icon set
+
+- Icon fixes:
+
+- Fixed custom06-alerting icon class name
+- Fixed custom06-inbound icon class name
+- Fixed custom06-outbound icon class name
+- Fixed custom06-missed icon class name
+- Fixed deletion of "social" keyword in icon class name
+
+- Changed name of URL in changelog for 3.0 to reflect updated site URL
+
+#### Features
+
+- Removed support for previous version of NEO/namespaces in 3.0
+
+### 3.0
+
+#### Changes
+
+- Updated values for Typography, Color and Spacing across all Components
+- Please visit the ['Design Tokens' section of our updated website](https://design.avayacloud.com/components/tokens/) for a description of newly-implemented values
+- Updated Icon library included with NEO .css files
+- Please visit the ['Icons' page of our updated website](https://design.avayacloud.com/components/icons) for more information on updated icon library
+- Updated stylesheet to simultaneously support both previous and updated beta versions of NEO
+- Please visit the ['What's New' section of our updated website](https://design.avayacloud.com/components/whats-new) for a description of namespaces and how to use them in your code
+- Removed support for Workspaces .css file
+
+### 2.90.4
+
+#### Changes
+
+- Updated Workspaces .css file to mirror features added in 2.90.3
+
+### 2.90.3
+
+#### Features
+
+- Specified [Typography](pages/components/typography) styles for the following:
+  - tiny, small, regular, and large-classed body elements
+  - italic small and regular-classed body elements
+  - light small-classed body elements
+  - underlined and semibold regular-classed body elements
+  - h1 through h4 elements
+  - underlined and bold h2 elements
+
+### 2.90.2
+
+#### Bugs
+
+- Fixed wrong colors in Navbar, Dropdown, and disabled buttons. This was introduced in 2.90.1
+
+#### Features
+
+### 2.90.1
+
+#### Features
+
+- Added hover state for [Accordion](pages/components/accordion?id=hoverable-accordion) and [Group list](pages/components/group-list?id=hoverable-group-list).
+
+#### Breaking changes
+
+- Moved disabled state for [Accordion](pages/components/accordion?id=basic-accordion) item from item to header level. Modifier is now `neo-accordion__header--disabled` instead of `neo-accordion__item--disabled`.
+
+## 2.89.1
+
+#### Features
+
+- Added disabled state for [Widget](pages/components/widget?id=disabled-widget).
+- Added filetype [Icons](pages/basics/icons?id=icons) to Neo Workspaces CSS file.
+
+#### Bug Fixes
+
+- Removed `cursor: pointer` from [Tooltip](pages/basics/tooltip).
+- Fixed RTL support for compressed [Footer](pages/components/footer?id=compressed-footer).
+- Added min-width for [Dropdown](pages/components/dropdown) and [Popover](pages/components/popover).
+
+## 2.88.2
+
+#### Bug Fixes
+
+- Fix the input width in [Dropdown](pages/components/dropdown?id=basic-dropdown).
+
+## 2.88.1
+
+#### Features
+
+- Added positions for [Popover](pages/components/popover?id=Сolored-and-aligned-popover).
+- Added [Input](pages/form/input?id=input-with-icons) with icons.
+- Added support for inputs in [Dropdown](pages/components/dropdown?id=basic-dropdown).
+- Added `neo-input-group--rounded` style for [Input](pages/form/input?id=input-group).
+
+#### Bug Fixes
+
+- Fixed disable states for Neo elements and components.
+
+## 2.87.2
+
+#### Features
+
+- Added info state color (Mid Blue #0066FF)[Colors](/pages/theme/colors).
+
+## 2.87.1
+
+#### Features
+
+- Added compressed [Footer](pages/components/footer?id=compressed-footer) component.
+
+## 2.86.2
+
+#### Features
+
+- Added [Footer](pages/components/footer) component.
+
+## 2.86.1
+
+#### Features
+
+- Added [Icons](pages/basics/icons?id=icons) to Neo Workspaces CSS file.
+
+## 2.83.2
+
+#### Features
+
+- Added cursor pointer on [Tooltip](pages/basics/tooltip).
+
+## 2.83.1
+
+#### Features
+
+- Added bottom border on [Tab](pages/components/tab?id=basic-tabs).
+
+#### Bug Fixes
+
+- Set width of input to 100% on editable [Chip](pages/basics/chip?id=add-edit-and-remove-chips-example).
+
+## 2.82.1
+
+#### Features
+
+- Added positions (left, right and bottom) on [Tooltip](pages/basics/tooltip?id=tooltip-position).
+- Removed opacity on [Tooltip](pages/basics/tooltip).
+
+#### Bug Fixes
+
+- Empty [Tooltip](pages/basics/tooltip) should not be shown.
+- Fixed multiline [Tooltip](pages/basics/tooltip?id=multiline-tooltip) with a short text.
+
+#### Breaking changes
+
+- Simplified [Tooltip](pages/basics/tooltip?id=tooltip-wrapper) usage on elements that already have `:after` pseudo element taken.
+
+## 2.81.2
+
+#### Features
+
+- Added hover state on [Chips](pages/basics/chip).
+
+## 2.81.1
+
+#### Features
+
+- Added new [Icons](pages/basics/icons?id=icons).
+
+## 2.80.2
+
+#### Features
+
+- Added new [Icons](pages/basics/icons?id=icons).
+
+#### Bug Fixes
+
+- Fixed z-index on [Input](pages/form/input?id=input-group).
+
+## 2.80.1
+
+#### Features
+
+- Updated styles of [Modal](pages/components/modal). Added `neo-modal__message` class for bigger font-size in the modal than default.
+
+#### Bug Fixes
+
+- [Validation text](pages/form/input?id=required-input) should get red color when child of a `.neo-form-control--error` element.
+
+## 2.79.3
+
+#### Bug Fixes
+
+- Minor improvements to input elements
+
+## 2.79.2
+
+#### Features
+
+- Set center vertical-align on [Table](pages/basics/table) row as default.
+- Introduced `.neo-form-control--required` as an extension to `.neo-form-control`. It will add a [red asterix](pages/form/input?id=required-input) to label elements found next to input elements. Please note that this class replaces `.neo-input-group--required-state` which will be deprecated soon.
+- Introduced `.neo-form-control--success` and `.neo-form-control--error`, also as an extension to `.neo-form-control`. These should be used when a [form is validated](pages/form/form-validation?id=form-validation). You can still use the `.neo-input--sucess` and `.neo-input--error` in `.neo-input` element.
+
+#### Bug Fixes
+
+- Fixed sortable icon issue on [Table](pages/basics/table?id=table-with-filtering-and-sorting).
+- Set width of [Select](pages/form/selectbox) to 100%.
+- Fixed the behaviour of `.neo-input-hint` when used next to `.neo-switch`, `.neo-select`, and `.neo-check` elements.
+
+## 2.79.1
+
+#### Breaking changes
+
+- Buttons, switches, text fields, and select boxes no longer have `margin-bottom` applied. For achieving the similar behaviour it is recommended to wrap the element with `.neo-form-control`. As the class name suggests, the use case scenario would be when having a form with multiple input fields.
+
+## 2.78.1
+
+#### Features
+
+- Update [Table](pages/basics/table?id=default-table) header color to Light Grey (#dce1e6).
+- Update [Table](pages/basics/table?id=hoverable-table-rows) hover color to Light Blue (#a0c9e9).
+
+#### Bug Fixes
+
+- Fix striped [Table](pages/basics/table?id=striped-table)
+- Fix [Input](pages/form/input?id=required-input) required color
+
+## 2.77.2
+
+#### Breaking changes
+
+- Change icons `neo-icon-error-filled` and `neo-icon-error-outline` with `neo-icon-warning-filled` and `neo-icon-warning-outline`.
+
+## 2.77.1
+
+#### Features
+
+- Add support for multiple [Select](pages/form/selectbox?id=multiple-select).
+
+#### Bug Fixes
+
+- Fix `alert` and `warning` colors.
+
+#### Breaking changes
+
+- Simplify using of icon on [Select](pages/form/selectbox?id=icon-in-select).
+- Simplify using of loading icon on [Select](pages/form/selectbox?id=loading-select).
+- Replace right aligned [Dropdown](pages/components/dropdown?id=dropdown-right-aligned) class from `neo-dropdown--left` to `neo-dropdown--right`.
+
+## 2.76.1
+
+#### Features
+
+- Added arrow option for [Popover](pages/components/popover?id=popover).
+- Added `left`, `right`, `up` and `down` positions for [Popover](pages/components/popover?id=%d0%a1olored-and-aligned-popover).
+
+## 2.75.1
+
+#### Features
+
+- Added group option for [Button](pages/form/button?id=button-group).
+
+## 2.74.1
+
+#### Features
+
+- Added JS example for editable [Table](pages/basics/table?id=editable-table).
+
+## 2.73.3
+
+#### Features
+
+- Added [Popover](pages/components/popover).
+
+#### Bug Fixes
+
+- Fixed the badge misalignment
+
+## 2.73.2
+
+#### Features
+
+- Added [Accordion](pages/components/accordion).
+
+## 2.73.1
+
+#### Bug Fixes
+
+- Fixed RTL support for checkbox and radio elements.
+
+## 2.72.2
+
+- Fixed the issue with not all files being included in the package content when doing `npm install` or manually downloading the zipped file.
+
+## 2.72.1
+
+#### Features
+
+- Added JS example to close [Modal](pages/components/modal.md) with Esc key.
+- Added JS example for editable [Chip](pages/basics/chip?id=add-edit-and-remove-chips-example).
+- Added [Vertical tabs](pages/components/tab?id=vertical-tabs).
+- Added [Navbar](pages/components/navbar).
+
+## 2.71.2
+
+#### Features
+
+- Added support for [Theming](pages/theming).
+- Added [Tooltip](pages/basics/tooltip.md).
+
+## 2.71.1
+
+#### Features
+
+- Added support for RTL languages.
+
+## 2.70.5
+
+#### Features
+
+- Added sticky headers [Table](pages/basics/table?id=sticky-header).
+- Added select rows per page and count of rows for [Pagination](pages/components/pagination.md).
+
+## 2.70.4
+
+#### Features
+
+- Changed the `border-bottom-color` of the active tab to `Presence Yellow`.
+- Show `close` button only on tab item hover.
+- Added `borde-radius` to `.neo-widget` so they have more "card" like look.
+
+## 2.70.3
+
+#### Features
+
+- [Badge](pages/basics/badge) component.
+- Added example for [Table](pages/basics/table?id=table-with-multi-select) with multi-select.
+
+## 2.70.2
+
+#### Bug Fixes
+
+- Use `overflow: auto` on the `.neo-widget__content` so the scrollbar appears when content exceeds the container's width or height.
+
+## 2.70.1
+
+#### Features
+
+- Added example of Action Buttons to [Group list](pages/components/group-list.md).
+- Lightened `border-color` for [Tabs](pages/components/tab) and [Widget](pages/components/widget).
+
+#### Bug Fixes
+
+- Fixed the dropdown items active state issue.
+- Removed `margin` setting from `.neo-widget`.
+
+## 2.69.1
+
+#### Features
+
+- Added `Title`, `Icon`, and `Counter` elements to [Notification](pages/components/notification).
+- Updated [Colors](pages/theme/colors) `Mid Gray` from `#96A0AA` to `#6A788A` and `Light Blue` from `#CAE5ff` to `#A0C9E9`.
+- Added icon on the right for [Selectbox](pages/form/selectbox?id=icon-in-select).
+- Added JS example for [Pagination](pages/components/pagination.md).
+- Added JS example for [Dropdown](pages/components/dropdown?id=dropdown-shown-on-click).
+- Added JS example for [Chip](pages/basics/chip?id=add-edit-and-remove-chips-example).
+- Change class names for [Icons](pages/basics/icons.md) from `aoc-` to `neo-icon-`. But, into current version of NEO-framework icons created by `aoc-` will work too.
+
+#### Bug Fixes
+
+- Change position for pagination-list element of [Pagination](pages/components/pagination.md) which should align on right and left.
+- Bottom border for active tab is removed [Tab](pages/components/tab?id=bordered-tabs)
+
+#### Breaking changes
+
+- [Notification](pages/components/notification) text should be wrapped with `.neo-notification__message`, due to new elements added.
+- Renamed `.close` class to `.neo-close` to follow the BEM naming convention.
+
+## 2.68.1
+
+#### Features
+
+- Added JS filter example for [Table columns](pages/basics/table?id=table-with-filtering-and-sorting).
+- Added JS slider example for [Tab](pages/components/tab.md?id=javascript-example).
+- Added option to show extra content with JS example for [Tab](pages/components/tab.md?id=javascript-example).
+- Added `ghost` [Button](pages/form/button.md). Can be used with `.neo-btn---ghost` class.
+
+#### Breaking changes
+
+- `img` tags are not styled anymore unless added `.neo-img` as a class name.
+- Changed the [Group list item](pages/components/group-list.md) class name from `.neo-group-list-item` to `.neo-group-list__item`.
+- Changed the class name in the [Spinner](pages/basics/spinner.md) section from `.neo-spin-ring` to `.neo-spinner`.
+- Changed the class name in the [Tab](pages/components/tab.md) section from `.neo-tab` to `.neo-tabs__item`. The parent container with class `neo-tabs` is required.
+- Class names for [Pagination](pages/components/pagination.md) and [Modal](pages/components/modal.md) was updated according to BEM naming convention.
+- Added examples of error input and required input for [Input](pages/form/input.md).
+
+#### Bug Fixes
+
+- Added global `border-radius` for input group.
+
+## 2.67.1
+
+#### Features
+
+- Added [Modal](pages/components/modal.md) component
+- Added [Pagination](pages/components/pagination.md) component with JS examples.
+- Added JS examples for [Tab](pages/components/tab.md?id=javascript-example) component.
+- Added sort icon for [Table columns](pages/basics/table?id=table-with-filtering-and-sorting) with JS examples.
+- Added the following [button](pages/form/button.md) types: `primary`, `secondary`, `success`, `warning`, and `alert`.
+- Changed the hover color of [Dropdown](pages/components/dropdown.md) items to `$neo-mid-blue`.
+
+#### Bug Fixes
+
+- Fixed the checkbox icon misalignment
