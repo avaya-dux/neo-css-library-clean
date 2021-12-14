@@ -58,7 +58,7 @@
       border: 5px solid $stepper-background-color;
       border-radius: $stepper-indicator-border-radius;
       position: relative;
-      margin: 1rem auto 0;
+      margin: 0 auto 0;
       z-index: 1;
     }
     &.neo-stepper__item--complete {
@@ -87,7 +87,7 @@
       height: $stepper-dash-border-width;
       background-color: $stepper-background-color;
       position: relative;
-      top: 30%;
+      top: 12px;
       // add half the width of the circle and add desired spacing
       left: calc(50% + 12px + 8px);
       order: -1;
