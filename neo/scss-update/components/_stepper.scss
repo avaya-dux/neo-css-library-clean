@@ -1,4 +1,5 @@
 @mixin neo-stepper-text {
+
   p:first-child {
     color: $stepper-main-font-color;
     font-size: $stepper-main-text-font-size;
@@ -6,6 +7,7 @@
     letter-spacing: $stepper-main-text-letter-spacing;
     line-height: $stepper-main-text-line-height;
   }
+
   p:last-child {
     color: $stepper-optional-font-color;
     font-size: $stepper-optional-text-font-size;
@@ -13,6 +15,7 @@
     letter-spacing: $stepper-optional-text-letter-spacing;
     line-height: $stepper-optional-text-line-height;
   }
+
   &.neo-stepper__item--disabled {
     p:first-child {
       color: $stepper-disabled-main-text-font-color;
@@ -21,24 +24,30 @@
       color: $stepper-optional-font-color;
     }
   }
+
   &.neo-stepper__item--complete {
     p:first-child {
       font-weight: $stepper-main-text-complete-font-weight;
     }
   }
+
 }
 
 @mixin neo-stepper-button-cursor {
+
   &[role="button"] {
     &::before {
       cursor: pointer;
     }
   }
+
 }
 
 .neo-stepper {
+
   display: flex;
   list-style: none;
+
   &__item {
     flex: 1;
     display: flex;
@@ -46,9 +55,11 @@
     text-align: center;
     @include neo-stepper-button-cursor();
     @include neo-stepper-text();
+
     p:first-child {
       margin-top: $stepper-text-spacing;
     }
+
     &::before {
       content: "";
       display: block;
@@ -61,6 +72,7 @@
       margin: 0 auto 0;
       z-index: 1;
     }
+
     &.neo-stepper__item--complete {
       &::before {
         font-family: "updated-neo-icons";
@@ -73,6 +85,7 @@
         display: flex;
       }
     }
+
     &.neo-stepper__item--disabled {
       &::before {
         color: white;
@@ -82,35 +95,43 @@
         cursor: not-allowed;
       }
     }
+
     &:not(:last-child):after {
       content: "";
       height: $stepper-dash-border-width;
       background-color: $stepper-background-color;
       position: relative;
       top: 12px;
+      order: -1;
+
       // add half the width of the circle and add desired spacing
       left: calc(50% + 12px + 8px);
-      order: -1;
+
       // subtract full width of circle and twice the desired spacing
       width: calc(100% - 24px - 16px);
     }
+
     &.neo-stepper__item--disabled-next:not(:last-child):after {
       height: $stepper-disabled-dash-border-width;
       background-color: $stepper-disabled-dash-color;
     }
+
   }
 }
 
 .neo-stepper--vertical {
+
   display: flex;
   list-style: none;
   flex-direction: column;
+
   &__item {
     display: flex;
     position: relative;
     padding-bottom: $stepper-dash-width;
     @include neo-stepper-button-cursor();
     @include neo-stepper-text();
+
     &::before {
       content: "";
       display: block;
@@ -124,10 +145,13 @@
       flex: 0 0 $stepper-indicator-size;
       top: $stepper-dash-spacing;
     }
+
     &.neo-stepper--vertical__item--complete {
+
       p:first-child {
         font-weight: $stepper-main-text-font-weight;
       }
+
       &::before {
         font-family: "updated-neo-icons";
         content: $token-icons-neo-icon-check;
@@ -139,7 +163,9 @@
         justify-content: center;
         display: flex;
       }
+
     }
+
     &.neo-stepper--vertical__item--disabled {
       &::before {
         color: white;
@@ -150,6 +176,7 @@
         cursor: not-allowed;
       }
     }
+
     &:not(:last-child):after {
       content: "";
       width: $stepper-dash-border-width;
@@ -160,11 +187,14 @@
       bottom: 0;
       transform: translateX(11px);
     }
+
     &.neo-stepper--vertical__item--disabled-next:not(:last-child):after {
       width: $stepper-disabled-dash-border-width;
       background-color: $stepper-disabled-dash-color;
     }
+
   }
+
   &__content {
     margin-left: $stepper-text-spacing;
   }

@@ -27,7 +27,7 @@ const skipNavStyles = require("./components-functions/skipnav_variants.js");
 const treeviewStyles = require("./components-functions/treeview_variants.js");
 const shimmerStyles = require("./components-functions/shimmer_variants.js");
 const toastStyles = require("./components-functions/toast_variants.js");
-const stepperStyles = require("./components-functions/stepper_variants.js")
+import * as stepperStyles from './components-functions/stepper_variants.js'
 
 coreFigmaFunctions
   .getComponentPages(
