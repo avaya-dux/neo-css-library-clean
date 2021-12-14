@@ -4,6 +4,7 @@ describe("coreFigmaFunctions", () => {
   beforeEach(() => {
     fetch.resetMocks();
   });
+
   it("getFigmaObjTree success", async () => {
     fetch.mockResponseOnce(JSON.stringify({ data: "12345" }));
 
