@@ -1,5 +1,16 @@
 # Changelog
+### 3.49.0
+#### New Features - New features that have recently been added
 
+- Added new utility display class names: `neo-display-none` and `neo-hidden`
+### 3.48.1
+#### Bugs Report - List of bugs that have been updated
+
+- Fixed typo in filename of minified Neo CSS file
+### 3.48.0
+#### New Features - New features that have recently been added
+
+- Added new 'calendar-filled' [Icons](https://design.avayacloud.com/components/icons/)
 ### 3.47.0
 
 #### New Features - New features that have recently been added
