@@ -19,9 +19,7 @@ async function stepperStyles(FigmaObjects) {
     "Orientation=Horizontal, Location=Start, Type=Disabled, Label=TRUE, Optional text=TRUE, Bidirectional=FALSE";
 
   for (const variant of stepperArray) {
-
     if (variant.name === completedStepperVariant) {
-
       const stepperColorID =
         variant.children[0].children[0].children[1].children[0].children[0]
           .styles.fills;
@@ -166,7 +164,6 @@ async function stepperStyles(FigmaObjects) {
     }
 
     if (variant.name === currentStepperVariant) {
-
       const innerCircleSize =
         variant.children[0].children[0].children[1].children[0].children[0]
           .children[0].size.x;
@@ -248,7 +245,7 @@ async function stepperStyles(FigmaObjects) {
             ].document.name.toLowerCase()}.value}`,
           };
         });
-        
+
       stepperJSONObject.stepper["main-text-font-weight"] = {
         value: `{Web-typography.fontweight-semibold.value}`,
       };
@@ -258,9 +255,9 @@ async function stepperStyles(FigmaObjects) {
   fs.writeFile(
     "../properties/components/stepper.json",
     JSON.stringify(stepperJSONObject)
-  ).catch(error => {
-    console.log(error)
-  })
+  ).catch((error) => {
+    console.log(error);
+  });
 }
 
 exports.stepperStyles = stepperStyles;
