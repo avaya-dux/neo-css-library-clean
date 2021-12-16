@@ -23,7 +23,7 @@ async function stepperStyles(FigmaObjects) {
       const stepperColorID =
         variant.children[0].children[0].children[1].children[0].children[0]
           .styles.fills;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -74,7 +74,7 @@ async function stepperStyles(FigmaObjects) {
 
       const mainTextFontColor =
         variant.children[0].children[1].children[0].styles.fill;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -90,7 +90,7 @@ async function stepperStyles(FigmaObjects) {
 
       const optionalTextFontColor =
         variant.children[0].children[1].children[1].styles.fill;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -106,7 +106,7 @@ async function stepperStyles(FigmaObjects) {
 
       const mainTextFontTokenID =
         variant.children[0].children[1].children[0].styles.text;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -135,7 +135,7 @@ async function stepperStyles(FigmaObjects) {
 
       const optionalTextFontTokenID =
         variant.children[0].children[1].children[0].styles.text;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -179,7 +179,7 @@ async function stepperStyles(FigmaObjects) {
 
       const disabledDashColorID =
         variant.children[0].children[0].children[2].children[0].styles.stroke;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -196,7 +196,7 @@ async function stepperStyles(FigmaObjects) {
       const disabledIndicatorColorID =
         variant.children[0].children[0].children[1].children[0].children[0]
           .styles.strokes;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -216,7 +216,7 @@ async function stepperStyles(FigmaObjects) {
 
       const disabledMainTextFontColor =
         variant.children[0].children[1].children[0].styles.fill;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -232,7 +232,7 @@ async function stepperStyles(FigmaObjects) {
 
       const disabledOptionalTextFontColor =
         variant.children[0].children[1].children[1].styles.fill;
-      coreFigmaFunctions
+      await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
           coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
@@ -256,7 +256,7 @@ async function stepperStyles(FigmaObjects) {
     "../properties/components/stepper.json",
     JSON.stringify(stepperJSONObject)
   ).catch((error) => {
-    console.log(error);
+    console.error(error);
   });
 }
 

@@ -34,6 +34,6 @@ coreFigmaFunctions
     coreFigmaFunctions.figmaCredentials.figmaAPIKey,
     coreFigmaFunctions.figmaCredentials.varaintComponentsFileID
   )
-  .then(async (value) => {
-    await stepperStyles.stepperStyles(value)
+  .then(value => {
+    stepperStyles.stepperStyles(value)
   });
