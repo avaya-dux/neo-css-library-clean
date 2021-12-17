@@ -27,54 +27,13 @@ const skipNavStyles = require("./components-functions/skipnav_variants.js");
 const treeviewStyles = require("./components-functions/treeview_variants.js");
 const shimmerStyles = require("./components-functions/shimmer_variants.js");
 const toastStyles = require("./components-functions/toast_variants.js");
+import * as stepperStyles from './components-functions/stepper_variants.js'
 
 coreFigmaFunctions
   .getComponentPages(
     coreFigmaFunctions.figmaCredentials.figmaAPIKey,
     coreFigmaFunctions.figmaCredentials.varaintComponentsFileID
   )
-  .then(async (value) => {
-    // const varFunctions = [
-    //   switchStyles.switchStyles,
-    //   radioStyles.radioStyles,
-    //   navbarStyles.navbarStyles,
-    //   buttonStyles.buttonStyles,
-    // avatarStyles.avatarStyles(value),
-    // ];
-    // for (const functions of varFunctions) {
-    //   await functions(value);
-    // }
-    // await switchStyles.switchStyles(value);
-    // await radioStyles.radioStyles(value);
-    // await tabStyles.tabStyles(value);
-    // await navbarStyles.navbarStyles(value);
-    // await buttonStyles.buttonStyles(value);
-    // await avatarStyles.avatarStyles(value);
-    // await checkboxStyles.checkBoxStyles(value);
-    // await leftnavStyles.leftnavStyles(value);
-    // await notificationStyles.notificationStyles(value);
-    // await listItemStyles.listItemStyles(value);
-    // await listSectionStyles.listSectionStyles(value);
-    // await chipStyles.chipStyles(value);
-    // await inputStyles.inputStyles(value);
-    // await widgetStyles.widgetStyles(value);
-    // await tooltipStyles.tooltipStyles(value);
-    // await accordionStyles.accordionStyles(value);
-    // await sheetStyles.sheetStyles(value);
-    // await modalStyles.modalStyles(value);
-    // await tableStyles.tableStyles(value);
-    await dropdownStyles.dropdownStyles(value);
-    // await channelIconVariants.channelIconVariants(value);
-    // await breadcrumbStyles.breadcrumbStyles(value);
-    // await skipNavStyles.skipNavStyles(value);
-    // await treeviewStyles.treeviewStyles(value);
-    // await shimmerStyles.shimmerStyles(value);
-    // await toastStyles.toastStyles(value);
+  .then(value => {
+    stepperStyles.stepperStyles(value)
   });
-
-// coreFigmaFunctions
-//   .getComponentPages(
-//     coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-//     coreFigmaFunctions.figmaCredentials.varaintComponentsFileID
-//   )
-//   .then(async (value) => {});

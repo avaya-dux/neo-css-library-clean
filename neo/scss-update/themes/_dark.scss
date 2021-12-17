@@ -315,3 +315,13 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --toast-background-color: #{$token-color-base-100};
   --toast-elevation-color: #{$token-shadows-elevationdark-300-color};
 }
+
+:root .neo-dark {
+  --stepper-background-color: #{$token-color-green-400};
+  --stepper-main-font-color: #{$token-color-base-100};
+  --stepper-optional-font-color: #{$token-color-base-400};
+  --stepper-disabled-dash-color: #{$token-color-base-600};
+  --stepper-disabled-indicator-color: #{$token-color-base-500};
+  --stepper-disabled-main-text-font-color: #{$token-color-base-400};
+  --stepper-disabled-optional-text-font-color: #{$token-color-base-400};
+}
