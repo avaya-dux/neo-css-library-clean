@@ -1,11 +1,11 @@
 <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M2.05005 2.05005H12.8V3.55005H3.55005V13H2.05005V2.05005Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M15.25 2.05005H29.9501V16.75H19.2001V15.25H28.4501V3.55005H16.75V29.9501H2.05005V15.25H12.8V16.75H3.55005V28.4501H15.25V2.05005Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M19.25 5.95005H26.3V7.45005H20.75V11.25H26.3V12.75H19.25V5.95005Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 20.75H5.70005V19.25H12.75V26.05H5.70005V24.55H11.25V20.75Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M6.05005 5.70005H7.55005V11.25H12.8V12.75H6.05005V5.70005Z" fill="black"/>
-<path d="M12.8 5.70005H9.60005V8.90005H12.8V5.70005Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M28.4501 28.4501V19H29.9501V29.9501H19.2001V28.4501H28.4501Z" fill="black"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2001 19.25H25.9501V26.3H24.4501V20.75H19.2001V19.25Z" fill="black"/>
-<path d="M19.1943 26.3062H22.3942V23.1063H19.1943V26.3062Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M2.05005 2.0498H12.8V3.5498H3.55005V12.9998H2.05005V2.0498Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M15.25 2.0498H29.9501V16.7498H19.2001V15.2498H28.4501V3.5498H16.75V29.9498H2.05005V15.2498H12.8V16.7498H3.55005V28.4498H15.25V2.0498Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.25 5.9498H26.3V7.4498H20.75V11.2498H26.3V12.7498H19.25V5.9498Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M11.25 20.7498H5.70005V19.2498H12.75V26.0498H5.70005V24.5498H11.25V20.7498Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M6.05005 5.6998H7.55005V11.2498H12.8V12.7498H6.05005V5.6998Z" fill="black"/>
+<path d="M12.8 5.6998H9.60005V8.89981H12.8V5.6998Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M28.4501 28.4498V18.9998H29.9501V29.9498H19.2001V28.4498H28.4501Z" fill="black"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M19.2001 19.2498H25.9501V26.2998H24.4501V20.7498H19.2001V19.2498Z" fill="black"/>
+<path d="M19.1943 26.306H22.3942V23.106H19.1943V26.306Z" fill="black"/>
 </svg>

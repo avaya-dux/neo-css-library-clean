@@ -546,7 +546,9 @@ const unicodes = {
   "forward": 0xf3e2,
   "conference-screen": 0xf3e4,
   "coach-off": 0xf3e5,
-  "calendar-filled": 0xf3e6
+  "calendar-filled": 0xf3e6,
+  "incognito": 0xf3e7,
+  "incognito-off": 0xf3e8
 };
 
 // .neo-icon-legal:before {

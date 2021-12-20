@@ -33,7 +33,7 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["calendar-filled"]
+      ["incognito", "incognito-off"]
     )
   )
   .catch((error) => console.log(error));
