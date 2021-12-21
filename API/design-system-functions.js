@@ -33,7 +33,7 @@ pullAllDesignTokens()
     iconFunctions.pullIcons(
       coreFigmaFunctions.figmaCredentials.figmaAPIKey,
       coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["incognito", "incognito-off"]
+      ["layout-immersive"]
     )
   )
   .catch((error) => console.log(error));

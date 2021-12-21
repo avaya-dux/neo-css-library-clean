@@ -548,7 +548,8 @@ const unicodes = {
   "coach-off": 0xf3e5,
   "calendar-filled": 0xf3e6,
   "incognito": 0xf3e7,
-  "incognito-off": 0xf3e8
+  "incognito-off": 0xf3e8,
+  "layout-immersive": 0xf3e9,
 };
 
 // .neo-icon-legal:before {

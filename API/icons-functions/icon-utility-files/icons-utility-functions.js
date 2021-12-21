@@ -104,16 +104,6 @@ async function getIconInformationNextGen(string, bidirectional) {
     "./icons-functions/icon-utility-files/iconInfoNextGen.js",
     `['${iconName}', ${bidirectional && true}, '${iconCategory}'],`
   );
-
-  // functionality to log icon names to console
-  // this line logs the icon names to console for inclusion in the Design Portal
-  // TO-DO - create a seperate file to hold this information
-
-  if (iconOutlineType != "fill") {
-    // console.log(`"${iconName.replace(/-/g, '')}",`);
-    console.log(`"${iconName}",`);
-    // console.log(iconCategory);
-  }
 }
 
 // test function to generate a list of icon names for use in our Design System portal
