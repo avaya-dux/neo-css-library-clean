@@ -215,11 +215,14 @@
       margin: -1px -1px;
       // border-color: transparent;
       // box-shadow: 0 0 0 2px $input-focus-border-color;
+      .neo-input-editable__wrapper .neo-input-edit__icon {
+        padding: 8px 13px;
+      }
       & .neo-input-group__addon {
         &:first-child {
           border-right-color: $input-focus-border-color;
           border-right-width: 2px;
-          // margin-left: -1px;
+          // margin-right: -1px;
           // border-color: transparent;
           // box-shadow: 0 0 0 2px $input-focus-border-color;
           @include rtl-selector {
@@ -232,6 +235,8 @@
         &:last-child {
           border-left-color: $input-focus-border-color;
           border-left-width: 2px;
+          // margin-left: 2px;
+          padding: 8px 10px;
           // border-color: transparent;
           // box-shadow: 0 0 0 2px $input-focus-border-color;
           @include rtl-selector {

@@ -61,3 +61,10 @@
     margin-left: auto;
   }
 }
+
+textarea:focus {
+  border: $input-border-width $input-border-style $input-focus-border-color;
+  border-width: 2px;
+  outline: none;
+  margin: -1px -1px;
+}

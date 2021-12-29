@@ -208,6 +208,9 @@
     }
 
     & .neo-widget__header-right {
+      & .neo-multiselect__header {
+        padding: 8px 24px 8px 12px
+      }
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
