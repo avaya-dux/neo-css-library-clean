@@ -133,6 +133,9 @@
     color: $input-label-color;
     padding-bottom: 4px;
   }
+  & input + label:not(.neo-switch) {
+    padding-bottom: 4px;
+  }
   & .neo-check + label:before {
     line-height: 1.5;
   }

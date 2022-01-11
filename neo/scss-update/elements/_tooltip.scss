@@ -295,6 +295,9 @@
   @include NeoLinkStyles;
   // alignment utility class
 
+    width: fit-content;
+    height: fit-content;
+
   &--fit-content {
     height: fit-content;
     width: fit-content;
