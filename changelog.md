@@ -5,6 +5,7 @@
 #### New Features - New features that have recently been added
 
 - Added new 'incognito', 'incognito-off' and 'layout-immersive' [Icons](https://design.avayacloud.com/components/icons/)
+- Made `neo-display-none` important
 
 ### 3.49.0
 #### New Features - New features that have recently been added
