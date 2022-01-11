@@ -1,24 +1,24 @@
-// new input icon classes
-
-// icon wrapper
-
-.neo-input-icon {
+.neo-input-icon__wrapper {
+  display: flex;
   position: relative;
-  color: $input-font-color;
 
-  // new class name of div
-  .neo-input-icon__wrapper {
-    display: flex;
-    // margin-top: $input-in-label-margin-top;
-    // margin-bottom: $input-in-label-margin-top;
-    position: relative;
+  &:not(.neo-input-editable__wrapper):focus-within {
+    border-color: $input-focus-border-color;
+    border-width: 2px;
+    margin: -1px -1px;
+    & > *[class*="neo-icon"]:not(.neo-input-edit__icon) {
+      margin: -1px 0 1px 1px;
+    }
+    & .neo-input + *[class*="neo-icon"]:not(.neo-input-edit__icon) {
+      margin: -1px 1px 1px 0px;
+    }
   }
 
   .neo-input {
     flex-grow: 1;
 
     &:focus {
-      // margin: -1px -1px;
+      outline: none;
     }
 
     &:first-child {
@@ -49,8 +49,8 @@
     }
   }
 
-  [class*="aoc-"],
-  [class*="neo-icon"] {
+  [class*="aoc-"]:not(.neo-input-edit__icon),
+  [class*="neo-icon"]:not(.neo-input-edit__icon) {
     align-items: center;
     display: inline-flex;
     height: $input-height;
@@ -69,32 +69,4 @@
       }
     }
   }
-
-  // rtl code
-
-  // &[dir='rtl'] {
-  //   .neo-input {
-  //     &:first-child {
-  //       padding-right: $input-padding-x;
-  //       padding-left: $input-padding-x + $input-icon-size;
-  //     }
-  //     &:not(:first-child) {
-  //       padding-right: $input-padding-x + $input-icon-size;
-  //       padding-left: $input-padding-x;
-  //     }
-
-  //     &:not(:last-child):not(:first-child) {
-  //       padding-left: $input-padding-x + $input-icon-size;
-  //       padding-right: $input-padding-x + $input-icon-size;
-  //     }
-  //   }
-  //   .neo-input + [class*='neo-icon']:not(:first-child) {
-  //     left: 0;
-  //     right: auto;
-  //   }
-  //   [class*='aoc-'],
-  //   [class*='neo-icon'] {
-  //     @include position(absolute, auto, 0, 0, auto);
-  //   }
-  // }
 }

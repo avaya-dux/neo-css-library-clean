@@ -96,6 +96,7 @@
     border-color: $input-focus-border-color;
     // // hard-coded for now
     border-width: 2px;
+    margin: -1px;
     // border-color: transparent;
     // box-shadow: 0 0 0 2px $input-focus-border-color;
   }
@@ -281,6 +282,7 @@
     white-space: normal;
     max-height: 200px;
     overflow-y: auto;
+    margin-top: 1px;
     & *:not(:last-child) {
       // margin-bottom: 8px;
     }
@@ -415,12 +417,14 @@
       outline: 0;
       border-color: $input-focus-border-color;
       border-width: 2px;
+      margin: -1px;
       // border-color: transparent;
       // box-shadow: 0 0 0 2px $input-focus-border-color;
     }
     & .neo-multiselect-combo__header {
       border-color: $input-focus-border-color;
       border-width: 2px;
+      margin: -1px;
       // border-color: transparent;
       // box-shadow: 0 0 0 2px $input-focus-border-color;
       & .neo-input {

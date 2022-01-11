@@ -64,12 +64,12 @@
 
     &--textarea {
       width: fit-content;
-      textarea {
-        // margin-top: $input-in-label-margin-top;
-        // margin-bottom: $input-in-label-margin-top;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-      }
+      // textarea {
+      //   // margin-top: $input-in-label-margin-top;
+      //   // margin-bottom: $input-in-label-margin-top;
+      //   margin-left: 0 !important;
+      //   margin-right: 0 !important;
+      // }
     }
 
     .neo-input-icon__wrapper {
@@ -272,9 +272,9 @@
       white-space: nowrap;
     }
 
-    .neo-input-group > label:not(.neo-switch) {
-      padding-bottom: 0px;
-    }
+    // .neo-input-group > label:not(.neo-switch) {
+    //   padding-bottom: 0px;
+    // }
 
 
     .neo-form-control {
