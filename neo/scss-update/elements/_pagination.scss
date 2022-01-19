@@ -1,5 +1,3 @@
-// updated pagination styles
-
 %pagination {
   align-content: space-between;
   align-items: center;
@@ -9,12 +7,46 @@
   text-align: center;
 }
 
+@mixin pagination-select {
+  .neo-multiselect {
+    margin-right: 8px;
+    @include rtl-selector {
+      margin-left: 8px;
+    }
+    &:focus-within .neo-multiselect__header {
+      /* subtracting 1px from border width to avoid layout shifting on focus*/
+      padding: 7px 23px 7px 11px;
+      margin: 0;
+    }
+    .neo-multiselect__header {
+      min-width: 70px;
+      & ul li {
+        padding: 8px 8px;
+      }
+    }
+  }
+}
+
+@mixin pagination-input {
+  .neo-input {
+    max-width: 40px;
+    &:not(last-child) {
+      margin-right: 32px;
+      @include rtl-selector {
+        margin-left: 32px;
+      }
+    }
+    &:focus {
+       /* subtracting 1px from border width to avoid layout shifting on focus*/
+      margin: -1px 32px -1px 0px;
+    }
+  }
+}
+
 @mixin pagination-item {
   &__item {
     @extend %button;
     background-color: $pagination-btn-background;
-    // border: $pagination-border;
-    // border-radius: $pagination-border-radius;
     color: $pagination-color;
     margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
@@ -28,11 +60,10 @@
       align-self: flex-end;
     }
   }
+
   &__item-arrow {
     @extend %button;
     background-color: $pagination-btn-background;
-    // border: $pagination-border;
-    // border-radius: $pagination-border-radius;
     color: $pagination-color;
     margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
@@ -45,39 +76,10 @@
       color: $pagination-active-color;
     }
 
-    // @include pagination-item--hover;
     @include pagination-item--disabled;
     @include pagination-item--active;
   }
 }
-
-// @mixin pagination-list-position {
-//   &--is-right {
-//     .neo-pagination__list {
-//       margin-left: auto;
-
-//       @include rtl-selector {
-//         margin: {
-//           left: initial;
-//           right: auto;
-//         }
-//       }
-//     }
-//   }
-
-//   &--is-left {
-//     .neo-pagination__list {
-//       margin-right: auto;
-
-//       @include rtl-selector {
-//         margin: {
-//           left: auto;
-//           right: initial;
-//         }
-//       }
-//     }
-//   }
-// }
 
 @mixin pagination-item--hover {
   &:hover {
@@ -104,14 +106,9 @@
 @mixin pagination-item--active {
   &--active {
     background-color: $pagination-hover-background-color;
-    // border-color: $pagination-border-color-hover;
     color: $pagination-active-color;
-    // font-weight: bold;
 
     &:hover {
-      // background-color: lighten($pagination-item-color-current, 5%);
-      // border-color: darken($pagination-item-color-current, 5%);
-      // color: $neo-white;
       cursor: pointer;
     }
   }
@@ -157,14 +154,8 @@
   }
 }
 
-// Basic class
-//
-// Easily usable on <nav>.
-
 .neo-pagination {
-  @include NeoLinkStyles;
   @extend %pagination;
-  // font-size: $pagination-font-size;
 
   > .neo-pagination__select {
     width: auto;
@@ -173,15 +164,13 @@
   @include pagination-list;
   @include pagination-item;
   @include pagination-dots;
-  // @include pagination-list-position;
   @include pagination-label;
+  @include pagination-select;
+  @include NeoLinkStyles;
 }
-// pagination styles
 
 .neo-pagination__arrow-btn {
-  // Figma
   color: $global-text-color;
-  // background-color: #ffffff;
   border: none;
   &:focus {
     outline: $global-outline-color auto 2px;
@@ -210,31 +199,20 @@
     cursor: pointer;
     background-position: 0% 100%;
   }
-  //   &--#{$name}:active,
-  //   &--#{$name}:focus {
-  //     color: map-get($value, pressed-color);
-  //     background-color: $button-tertiary-hover-background-color;
-  //     background-image: none;
-  //   }
+
   &[disabled],
   &--disabled {
     background-image: none;
     color: $token-color-base-400;
-    // added to fix issue with disabled state
     background-color: transparent;
     &:hover {
       cursor: not-allowed;
       box-shadow: none;
       background-image: none;
       color: $token-color-base-400;
-      // added to fix issue with disabled state
       background-color: transparent;
     }
-    &:focus {
-      // outline: none;
-    }
   }
-  // }
   &:before {
     @include rtl-selector {
       transform: rotate(180deg);
@@ -246,4 +224,19 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  .neo-form-control {
+    margin: 0px;
+    .neo-input-group--inline {
+      flex-direction: row;
+      align-items: center;
+      label {
+        padding: 0px;
+        margin-right: 8px;
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+  @include pagination-select;
+  @include pagination-input;
 }
