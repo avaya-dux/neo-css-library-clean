@@ -195,6 +195,7 @@
     cursor: pointer;
     position: absolute;
     right: 8px;
+    background-color: $input-background-color;
 
     @include rtl-selector {
       right: 0;
