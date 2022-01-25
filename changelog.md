@@ -1,5 +1,21 @@
 # Changelog
 
+### 3.51.0
+
+### New Features - List of bugs that have been updated
+
+- Added styles for new [Pagination](https://design.avayacloud.com/components/web/pagination-web) variant Components.
+
+### Bugs Report - List of bugs that have been updated
+
+- Removed minimum width restriction on [Select](https://design.avayacloud.com/components/web/selectbox-web) Components
+### 3.50.1
+
+### Bugs Report - List of bugs that have been updated
+
+- Updated focus styles on [Text Input](https://design.avayacloud.com/components/web/input-web) Components to avoid layout shifts
+- Updated styles on [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to fix positioning errors on Checkbox groups
+- Made `neo-display-none` important
 ### 3.50.0
 
 #### New Features - New features that have recently been added

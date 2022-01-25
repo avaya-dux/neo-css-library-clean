@@ -1,5 +1,3 @@
-// updated select styles
-
 %neo-select {
   background-color: $select-background-color;
   display: inline-block;
@@ -9,13 +7,10 @@
 
 @mixin neo-select-element {
   > select {
-    /* stylelint-disable-next-line property-no-vendor-prefix */
     -webkit-appearance: none;
-    /* stylelint-disable-next-line property-no-vendor-prefix */
     -moz-appearance: none;
     background-color: $select-background-color;
     border: $select-border-width $select-border-style $select-border-color;
-    // border-radius: $select-border-radius;
     box-shadow: $select-box-shadow;
     color: $select-font-color;
     cursor: pointer;
@@ -23,10 +18,8 @@
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
-    // min-height: $select-height;
     padding: $select-padding-y $select-offset-x $select-padding-y
       $select-padding-x;
-    min-width: $select-width;
     width: 100%;
 
     @include rtl-selector {
@@ -59,7 +52,6 @@
 
       &::before {
         font-family: "updated-neo-icons";
-        // neo-close
         content: $select-multiple-unselected-icon;
         width: 1.3em;
         text-align: center;
@@ -68,7 +60,6 @@
       }
       &:checked::before {
         font-family: "updated-neo-icons";
-        // neo-check
         content: $select-multiple-selected-icon;
       }
       @include rtl-selector {
@@ -91,14 +82,9 @@
 
 @mixin neo-select-focus {
   &:focus {
-    // box-shadow: $input-focus-shadow;
-    // outline: 0;
     border-color: $input-focus-border-color;
-    // // hard-coded for now
     border-width: 2px;
     margin: -1px;
-    // border-color: transparent;
-    // box-shadow: 0 0 0 2px $input-focus-border-color;
   }
 }
 
@@ -110,7 +96,6 @@
     align-items: center;
     font-family: "updated-neo-icons";
     color: $select-font-color;
-    // chevron-down
     content: $select-expand-icon;
     display: inline-flex;
     justify-content: center;
@@ -119,8 +104,6 @@
     right: $select-padding-x;
     top: 50%;
     transform: translateY(-50%);
-    // cursor: pointer;
-    // transition: $select-transition;
     font-size: $select-icon-font-size;
     vertical-align: middle;
     @include rtl-selector {
@@ -135,7 +118,9 @@
 
 @mixin neo-select-spinner {
   &__spinner {
-    & select, & > div.neo-multiselect__header, & > div.neo-multiselect-combo__header {
+    & select,
+    & > div.neo-multiselect__header,
+    & > div.neo-multiselect-combo__header {
       padding-left: $select-offset-x;
     }
 
@@ -149,7 +134,6 @@
       left: $select-padding-x;
       top: 25%;
       transform: translateY(-50%);
-      // transition: $select-transition;
       font-size: $select-icon-font-size;
 
       @include spinner-animation;
@@ -163,58 +147,26 @@
   width: 100%;
 
   &:not(.neo-select--multiple)::after {
-    // height: $select-icon-height;
     left: auto;
     margin: 0;
     top: $select-icon-font-size / 2;
-    // width: $select-icon-width;
     font-size: $select-icon-font-size;
     content: "";
     @include spinner-animation;
   }
 }
 
-// @mixin neo-select-icon {
-//   &__icon {
-//     align-items: center;
-//     display: inline-flex;
-//     height: $select-height;
-//     justify-content: center;
-//     left: $select-padding-x;
-//     position: absolute;
-
-//     @include rtl-selector {
-//       left: auto;
-//       right: $select-padding-x;
-//     }
-
-//     + select {
-//       padding-left: $select-offset-x;
-
-//       @include rtl-selector {
-//         padding: {
-//           right: $select-offset-x;
-//         }
-//       }
-//     }
-//   }
-// }
-
 .neo-select {
   border-radius: $select-border-radius;
-  // margin: $select-vertical-margin 0px;
   min-height: 38px;
   label > &,
   label + & {
-    // margin: $select-vertical-margin 0px;
   }
   &:hover {
-    // transition: $input-hover-transition;
     &:after {
       color: $input-border-hover-color;
     }
     select {
-      // transition: $input-hover-transition;
       border-color: $input-border-hover-color;
     }
   }
@@ -228,14 +180,10 @@
   @include neo-select-multiple;
   @include neo-select-arrow;
   @include neo-select-spinner;
-  // @include neo-select-icon;
 }
 
-// new mmultiple select styles
-
 @mixin neo-multiselect-arrow(
-  // chevron-down
-    $arrow-icon: $dropdown-expand-icon,
+  $arrow-icon: $dropdown-expand-icon,
   $color: $global-text-color,
   $padding-left: $dropdown-padding-x
 ) {
@@ -243,15 +191,15 @@
     font-family: "updated-neo-icons";
     color: $color;
     content: $arrow-icon;
-    // padding: 0 0 0 $padding-left;
     vertical-align: middle;
     cursor: pointer;
     position: absolute;
     right: 8px;
+    background-color: $input-background-color;
 
     @include rtl-selector {
-     right: 0;
-     left: 8px;
+      right: 0;
+      left: 8px;
     }
   }
   @include rtl-selector {
@@ -274,18 +222,12 @@
     transition-timing-function: $global-transition-timing;
     left: 100%;
     top: -1px;
-    // overrides box-shadow parameter in below mixin
     box-shadow: $dropdown-box-shadow;
-    // padding: 8px 0 !important;
-    // max-width: 300px;
     overflow-wrap: break-word;
     white-space: normal;
     max-height: 200px;
     overflow-y: auto;
     margin-top: 1px;
-    & *:not(:last-child) {
-      // margin-bottom: 8px;
-    }
     @include rtl-selector {
       left: initial;
       right: 100%;
@@ -297,18 +239,17 @@
       margin-right: 0px;
     }
 
-    // multiselect with checkbox styles
-
     & .neo-check ~ label {
       padding: 8px 16px !important;
     }
 
     & .neo-check:not(input:disabled) + label {
-      &:hover, &.neo-multiselect__content__item--hover, &.neo-multiselect__content__item--focus, &.neo-multiselect__content__item--focus {
-        // need to replace with correct token from Figma
+      &:hover,
+      &.neo-multiselect__content__item--hover,
+      &.neo-multiselect__content__item--focus,
+      &.neo-multiselect__content__item--focus {
         background-color: $group-list-item-hover;
       }
-      // hint styles for checkboxes
     }
 
     & .neo-check + label + .neo-input-hint {
@@ -321,49 +262,49 @@
         padding-left: 40px !important;
       }
     }
-    }
+  }
 
-    & input[type="checkbox"]:disabled + label + .neo-input-hint {
-     color: $checkbox-label-disabled-font-color;
-    }
+  & input[type="checkbox"]:disabled + label + .neo-input-hint {
+    color: $checkbox-label-disabled-font-color;
+  }
 
-    // styles for hover on groups
-    & .neo-input-group {
-      padding-bottom: 8px;
-      &:hover, &.neo-multiselect__content__item--hover, &.neo-multiselect__content__item--focus, &.neo-multiselect__content__item--focus {
-        background-color: $navbar-background-color-hover;;
+  & .neo-input-group {
+    padding-bottom: 8px;
+    &:hover,
+    &.neo-multiselect__content__item--hover,
+    &.neo-multiselect__content__item--focus,
+    &.neo-multiselect__content__item--focus {
+      background-color: $navbar-background-color-hover;
+    }
+  }
+
+  & ul {
+    margin: 0;
+  }
+
+  & ul li {
+    color: $global-text-color;
+    padding: 8px 16px;
+    list-style: none;
+    &::before {
+      margin-right: 8px;
+    }
+    &[disabled],
+    &.neo-multiselect__content__item--disabled {
+      color: $checkbox-label-disabled-font-color;
+      &:hover {
+        cursor: not-allowed;
       }
     }
-
-    //  multiselect with list styles
-
-    & ul {
-      margin: 0;
+    &:not([disabled]):hover,
+    &.neo-multiselect__content__item--hover:not([disabled]),
+    &.neo-multiselect__content__item--focus:not([disabled]),
+    &.neo-multiselect__content__item--focus:not([disabled]) {
+      cursor: pointer;
+      background-color: $navbar-background-color-hover;
     }
+  }
 
-    & ul li {
-      color: $global-text-color;
-      padding: 8px 16px;
-      list-style: none;
-      &::before {
-        margin-right: 8px;
-      }
-      &[disabled], &.neo-multiselect__content__item--disabled {
-        color: $checkbox-label-disabled-font-color;
-        &:hover {
-          cursor: not-allowed;
-        }
-      }
-      &:not([disabled]):hover, &.neo-multiselect__content__item--hover:not([disabled]), &.neo-multiselect__content__item--focus:not([disabled]), &.neo-multiselect__content__item--focus:not([disabled]) {
-        cursor: pointer;
-        // need to replace with correct token from Figma
-        background-color: $navbar-background-color-hover;
-      }
-    }
-  
-
-  //hard-coded border for now
-  //animation is show-element, which toggles opacity
   @include neo-popover-content(
     none,
     $global-background,
@@ -372,32 +313,12 @@
     none,
     0 0,
     $dropdown-content-z,
-    $dropdown-min-width
+    0
   );
 }
 
-// @mixin neo-dropdown-input {
-//   .neo-input {
-//     border: $dropdown-input-border;
-//     margin: $dropdown-input-offset;
-//     width: calc(100% - #{$dropdown-input-offset} * 2);
-//   }
-
-//   .neo-input-icon {
-//     margin: $dropdown-input-offset;
-
-//     .neo-input {
-//       margin: 0;
-//       width: 100%;
-//     }
-//   }
-// }
-
 @mixin neo-multiselect-states {
-  // &:active > &__content,
-  &--active > &__content
-  // &:focus > &__content {
-  {
+  &--active > &__content {
     display: block;
     position: absolute;
   }
@@ -406,10 +327,7 @@
 .neo-multiselect {
   box-sizing: border-box;
   display: inline-block;
-  // display: table;
   position: relative;
-
-  // margin-bottom: 1px;
   &:focus,
   &:focus-within {
     outline: 0;
@@ -418,22 +336,16 @@
       border-color: $input-focus-border-color;
       border-width: 2px;
       margin: -1px;
-      // border-color: transparent;
-      // box-shadow: 0 0 0 2px $input-focus-border-color;
     }
     & .neo-multiselect-combo__header {
       border-color: $input-focus-border-color;
       border-width: 2px;
       margin: -1px;
-      // border-color: transparent;
-      // box-shadow: 0 0 0 2px $input-focus-border-color;
       & .neo-input {
         box-shadow: none;
       }
     }
   }
-
-  // styles for disabled multiselect
 
   &--disabled {
     &:focus {
@@ -470,7 +382,7 @@
     border: $select-border-width $select-border-style $select-border-color;
     @include neo-multiselect-arrow();
 
-    padding: 8px 12px 8px 12px;
+    padding: 8px 24px 8px 12px;
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
@@ -508,26 +420,29 @@
   @include neo-multiselect-content;
 }
 
-
-.neo-multiselect-combo__dropdown + .neo-multiselect__content, .neo-multiselect__dropdown + .neo-multiselect__content {
+.neo-multiselect-combo__dropdown + .neo-multiselect__content,
+.neo-multiselect__dropdown + .neo-multiselect__content {
   width: 100%;
   max-width: initial;
-    ul li.neo-multiselect__dropdown__item {
-      display: flex;
-      &::after {
-        align-self: flex-end;
-        font-family: "updated-neo-icons";
-        content: $token-icons-neo-icon-chevron-right;
-        position: absolute;
-        right: 12px;
-      }
-      &::before {
-        margin-right: 8px;
-      }
+  ul li.neo-multiselect__dropdown__item {
+    display: flex;
+    &::after {
+      align-self: flex-end;
+      font-family: "updated-neo-icons";
+      content: $token-icons-neo-icon-chevron-right;
+      position: absolute;
+      right: 12px;
     }
+    &::before {
+      margin-right: 8px;
+    }
+  }
 }
 
-.neo-multiselect__content + .neo-dropdown .neo-dropdown__content .neo-dropdown__link {
+.neo-multiselect__content
+  + .neo-dropdown
+  .neo-dropdown__content
+  .neo-dropdown__link {
   padding: 8px 16px;
 }
 
