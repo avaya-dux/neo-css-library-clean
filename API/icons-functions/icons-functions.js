@@ -29,20 +29,6 @@ async function getIconsComponents(figmaId, figmaApiKey) {
   );
   let figmaFileComponents = await result.json();
 
-  // code to help debug stale API data
-
-  // figmaFileComponents.meta.components.forEach((component) => {
-  //   if (component.name === 'outline/content/billboard-chart') {
-  //     console.log(component);
-  //   }
-  //   if (component.name === 'outline/content/chart-billboard') {
-  //     console.log(component);
-  //   }
-  //   if (component.node_id === '849:87') {
-  //     console.log(component);
-  //   }
-  // });
-
   const iconsOnAll = figmaFileComponents.meta.components.filter((component) => {
     return component.containing_frame.pageName === "Icons";
   });
@@ -141,17 +127,6 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
 
     var iconName = component.name.toLowerCase().replace(/\/|\s+/g, "");
 
-    // temporarily skip over 'fill' icons
-    // TO-DO: separate this out
-
-    // if (
-    //   iconName.includes('fill') &&
-    //   !iconName.includes('star') &&
-    //   !iconName.includes('arrow')
-    // ) {
-    //   return;
-    // }
-
     // we check to see whether any names in the Figma file are duplicated
 
     if (iconsArrays.figmaIconNames.includes(iconName)) {
@@ -178,7 +153,7 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
       .getIconInformationNextGen(compName, bidirectional)
       .then(async () => {
         if (iconsOnAll.indexOf(component) === iconsOnAll.length - 1) {
-          console.log("last component")
+          console.log("last component");
           await fs.appendFile(
             "./icons-functions/icon-utility-files/iconInfoNextGen.js",
             "]"
