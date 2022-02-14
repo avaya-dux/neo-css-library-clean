@@ -1,0 +1,198 @@
+@mixin treeview-item {
+  &__item {
+    min-height: $treeview-min-height;
+    padding-left: $treeview-default-padding;
+    padding-right: $treeview-default-padding;
+    background-color: $treeview-default-bg-color;
+    color: $treeview-default-font-color;
+    font-weight: $treeview-default-font-weight;
+    line-height: $treeview-line-height;
+    letter-spacing: $token-treeview-default-letter-spacing;
+    font-size: $treeview-font-size;
+    border-left: $treeview-selected-border-width solid transparent;
+    @include rtl-selector {
+      border-right: $treeview-selected-border-width solid transparent;
+      border-left: none;
+    }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &:focus {
+      outline-offset: -1px;
+    }
+    // hiding uls
+
+    & + ul {
+      display: none;
+      // max-height: 0;
+    }
+
+    // expandable styles
+
+    &--expandable {
+      margin-right: $treeview-item-spacing;
+      @include rtl-selector {
+        margin-right: 0;
+        margin-left: $treeview-item-spacing;
+      }
+      transition: $accordion-icon-transition;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      // hard-coded
+      width: 16px;
+      &::before {
+        font-family: "updated-neo-icons";
+        content: $treeview-expandable-icon;
+        @include rtl-selector {
+          transform: rotate(90deg);
+        }
+        color: $treeview-default-font-color;
+      }
+    }
+    // hover styles
+
+    &:hover {
+      background-color: $treeview-hover-bg-color;
+      color: $treeview-hover-font-color;
+      cursor: pointer;
+      & P {
+        color: $treeview-hover-font-color;
+      }
+      & .neo-treeview__item--draggable {
+        visibility: initial;
+      }
+    }
+
+    // left-side styles
+
+    & .neo-treeview__item-left {
+      display: flex;
+      align-items: center;
+      position: relative;
+      padding: 8px $treeview-default-padding 8px 0px;
+      @include rtl-selector {
+        padding: 8px 0px 8px $treeview-default-padding;
+      }
+      // expandable item
+      // checkbox style
+      & > input.neo-check {
+        left: -5px;
+        @include rtl-selector {
+          left: auto;
+          right: -5px;
+        }
+      }
+      &:focus {
+        // outline: #1473e6 auto 2px;
+        outline-offset: -1px;
+      }
+    }
+
+    & p {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0px;
+    }
+
+    // right-side styles
+
+    & .neo-treeview__item-right {
+      display: flex;
+      align-items: center;
+      & > *:not(:last-child) {
+        // hard-coded space between items
+        margin-right: 8px;
+        @include rtl-selector {
+          margin-left: 8px;
+          margin-right: 0px;
+        }
+      }
+      .neo-switch {
+        padding: 0;
+      }
+      button {
+        outline-offset: -1px;
+      }
+    }
+
+    // draggable styles
+
+    & .neo-treeview__item--draggable {
+      visibility: hidden;
+      display: flex;
+      align-items: center;
+      margin-right: 8px;
+      @include rtl-selector {
+        margin-left: 8px;
+        margin-right: 0px;
+      }
+      width: 16px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .neo-treeview__item--draggable + .neo-treeview__item-left,
+    .neo-treeview__item--expandable + .neo-treeview__item-left {
+      flex-grow: 1;
+    }
+
+    // selected styles -- different than expanded
+
+    &--selected {
+      & .neo-treeview__item--draggable {
+        visibility: initial;
+      }
+      & .neo-treeview__item-left p {
+        color: $treeview-selected-font-color;
+        font-weight: $treeview-selected-font-weight;
+      }
+      border-left: $treeview-selected-border-width solid
+        $treeview-selected-font-color;
+      @include rtl-selector {
+        border-right: $treeview-selected-border-width solid
+          $treeview-selected-font-color;
+        border-left: none;
+      }
+    }
+
+    &--expanded {
+      & .neo-treeview__item--expandable {
+        transition: $accordion-icon-transition;
+        transform: rotate(90deg);
+      }
+      & + ul {
+        display: initial;
+        // max-height: 100%;
+        // transition: max-height $global-transition-duration;
+      }
+    }
+
+    // disabled styles
+
+    &--disabled {
+      &:hover {
+        cursor: not-allowed;
+        background-color: $treeview-default-bg-color;
+      }
+      & .neo-treeview__item-left p {
+        color: $treeview-disabled-font-color;
+      }
+    }
+  }
+}
+
+.neo-treeview {
+  @include NeoLinkStyles;
+  ul {
+    margin: 0;
+  }
+  ul,
+  li {
+    list-style: none;
+  }
+  @include treeview-item;
+}

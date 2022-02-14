@@ -1,0 +1,598 @@
+// updated navbar styles
+
+// @mixin navbar-default-color {
+//   .neo-btn {
+//     // background-color: $navbar-background-color;
+//     color: $navbar-default-icon-color;
+
+//     &:hover {
+//       background-color: $navbar-background-color-hover;
+//       box-shadow: none;
+//     }
+
+//     .neo-form--inline .neo-btn {
+//       background-color: $navbar-background-color;
+
+//       &:hover {
+//         background-color: $navbar-background-color-hover;
+//       }
+//     }
+//   }
+// }
+
+@mixin navbar-form {
+  .neo-form {
+    margin-left: $navbar-padding-x;
+    align-self: center;
+
+    & .neo-form-control {
+      margin-bottom: 0px;
+    }
+
+    @include rtl-selector {
+      margin: {
+        right: $navbar-padding-x;
+      }
+    }
+  }
+
+  @include navbar-button;
+}
+
+@mixin navbar-tabs {
+  .neo-tabs {
+    height: 100%;
+    margin-left: $navbar-padding-x;
+    align-self: center;
+    @include rtl-selector {
+      margin: {
+        right: $navbar-padding-x;
+      }
+    }
+    & .neo-tabs__nav {
+      height: 100%;
+    }
+    & .neo-tabs__item {
+      padding-top: $token-navbar-navbar-tab-padding-y;
+      padding-left: $token-navbar-navbar-tab-padding-x;
+      padding-right: $token-navbar-navbar-tab-padding-x;
+      max-height: initial;
+      & a {
+        font-size: $navbar-tabs-font-size;
+        padding-bottom: $token-navbar-navbar-tab-padding-y;
+      }
+    }
+  }
+}
+
+@mixin navbar-button {
+  .neo-btn:empty {
+    font-size: $navbar-button-font-size;
+    // background: $navbar-background-color !important;
+  }
+}
+
+.neo-navbar {
+  height: $navbar-height;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $navbar-background-color;
+  display: flex;
+  flex: 1;
+  min-height: $navbar-height;
+  z-index: $navbar-z;
+  max-width: 100vw;
+  border-bottom: $navbar-border-width $navbar-border-style
+    $navbar-border-bottom-color;
+
+  // @include navbar-default-color;
+  @include navbar-form;
+  @include navbar-tabs;
+
+  & .neo-badge__navbutton--content::before {
+    font-size: $navbar-icon-size !important;
+  }
+}
+
+.neo-navbar__brand {
+  align-items: center;
+  color: $navbar-text-color;
+  display: flex;
+  font-size: $navbar-brand-font-size;
+  min-height: $navbar-height;
+  padding: 0;
+  text-decoration: none;
+  text-indent: $navbar-brand-offset-x;
+  white-space: nowrap;
+
+  @include rtl-selector {
+    margin: {
+      left: $navbar-brand-offset-x;
+      right: 0;
+    }
+  }
+
+  & img {
+    max-height: $navbar-height;
+  }
+
+  &:hover {
+    color: $navbar-brand-color;
+  }
+}
+
+.neo-navbar__logo {
+  max-height: $navbar-brand-height;
+}
+
+.neo-navbar__heading {
+  color: $navbar-brand-color;
+}
+
+.neo-nav {
+  @include NeoLinkStyles;
+  // avatar dropdown in Navbar
+  // TO-DO: extend these styles to Avatar dropdowns more generally
+  & .neo-dropdown {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 12px;
+    @include rtl-selector {
+      margin-right: 0px;
+      margin-left: 16px;
+      padding-right: 0px;
+      padding-left: 12px;
+    }
+
+    & .neo-dropdown__link-header {
+      padding: 0px;
+      &::after {
+        color: $global-text-color;
+        padding: 0 0 0 8px;
+      }
+    }
+
+    & > .neo-avatar,
+    & .neo-avatar--navbar-nested {
+      margin-left: 12px;
+      margin-right: 24px;
+      @include rtl-selector {
+        margin-left: 24px;
+        margin-right: 12px;
+      }
+      &:not(:empty) {
+        background: none;
+      }
+      // &.neo-avatar--empty {
+      //   &.neo-avatar--small::after {
+      //     padding: 0 0 0 36px;
+      //     @include rtl-selector {
+      //       padding: 0 36px 0 0;
+      //     }
+      //   }
+      //   &.neo-avatar--medium::after {
+      //     padding: 0 0 0 44px;
+      //     @include rtl-selector {
+      //       padding: 0 44px 0 0;
+      //     }
+      //   }
+      //   &.neo-avatar--large::after {
+      //     padding: 0 0 0 56px;
+      //     @include rtl-selector {
+      //       padding: 0 56px 0 0;
+      //     }
+      //   }
+      // }
+      &--small:empty::after,
+      &.neo-avatar--small:empty::after {
+        padding: 0 0 0 36px;
+        @include rtl-selector {
+          padding: 0 36px 0 0;
+        }
+      }
+      &--medium:empty::after,
+      &.neo-avatar--medium:empty::after {
+        // &::after {
+        padding: 0 0 0 44px;
+        @include rtl-selector {
+          padding: 0 44px 0 0;
+        }
+        // }
+      }
+      &--large:empty::after,
+      &.neo-avatar--large:empty::after {
+        padding: 0 0 0 56px;
+        @include rtl-selector {
+          padding: 0 56px 0 0;
+        }
+      }
+      display: flex;
+      justify-content: initial;
+    }
+  }
+
+  // align-items: center;
+  display: flex;
+  list-style: none;
+  padding: 0;
+  height: 100%;
+
+  margin: {
+    bottom: 0;
+    left: $navbar-padding-x;
+    right: 0;
+  }
+  @include rtl-selector {
+    margin: {
+      left: 0;
+      right: $navbar-brand-offset-x;
+      bottom: 0;
+    }
+  }
+  // experimental nested class
+  &--nested {
+    margin: 0px;
+  }
+  & .neo-badge__navbutton {
+    height: 100%;
+    // hard-coded for now
+    width: $navbar-icon-button-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // testing new class for higher specificity
+    & .neo-badge__navbutton--content {
+      height: 100% !important;
+      width: $navbar-icon-button-width !important;
+      background-color: $navbar-background-color;
+      &:focus,
+      &:focus-visible {
+        outline-offset: -2px !important;
+        box-shadow: none;
+        // outline: rgba(20, 115, 230, 1) auto 2px;
+      }
+      &::before {
+        color: $navbar-default-icon-color;
+      }
+    }
+    &:hover,
+    // &:not(.neo-badge__navbutton--active-disabled):focus-within,
+    &:not(.neo-badge__navbutton--active-disabled):not(.neo-badge__navbutton--disabled):focus-within {
+      transition: $button-transition;
+      // background-color: $navbar-background-color-hover;
+      & .neo-badge__navbutton--content,
+      & .neo-badge__navbutton--content:active,
+      & .neo-badge__navbutton--content:target {
+        transition: $button-transition;
+        background-color: $navbar-background-color-hover;
+        &::before {
+          transition: color $global-transition-duration
+            $global-transition-timing;
+          color: $navbar-icon-hover-color;
+        }
+      }
+    }
+    &--active {
+      border-bottom: $navbar-action-border-width $navbar-action-border-style
+        $navbar-icon-selected-color;
+      &:hover {
+        transition: $button-transition;
+        border-bottom-color: $navbar-icon-hover-color;
+        & .neo-badge__navbutton--content {
+          &::before {
+            color: $navbar-icon-hover-color;
+          }
+        }
+      }
+
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-icon-selected-color;
+      }
+    }
+    &--active-disabled {
+      border-bottom: $navbar-action-border-width $navbar-action-border-style
+        $navbar-item-selected-disabled-color;
+      &:hover {
+        cursor: not-allowed;
+        background-color: $navbar-background-color;
+        border-bottom-color: $navbar-item-selected-disabled-color;
+
+        // testing new class for higher specificity
+        & .neo-badge__navbutton--content,
+        & .neo-badge__navbutton--content:active {
+          cursor: not-allowed;
+          background-color: $navbar-background-color;
+          &::before {
+            color: $navbar-item-selected-disabled-color;
+          }
+        }
+      }
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-item-selected-disabled-color;
+      }
+    }
+    &--disabled {
+      &:hover {
+        cursor: not-allowed;
+        background-color: $navbar-background-color;
+        // testing new class for higher specificity
+        & .neo-badge__navbutton--content,
+        & .neo-badge__navbutton--content:active {
+          cursor: not-allowed;
+          background-color: $navbar-background-color;
+          &::before {
+            color: $navbar-item-disabled-color;
+          }
+        }
+      }
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-item-disabled-color;
+      }
+    }
+    .neo-badge__icon::after {
+      font-family: "noto-sans", sans-serif;
+      background: $badge-background-color;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: $badge-color;
+      content: attr(data-badge);
+      display: flex;
+      font-size: 10px;
+      height: 16px;
+      justify-content: center;
+      line-height: 16px;
+      min-width: 16px;
+      padding: 0px 4px;
+      position: absolute;
+      right: 19px;
+      top: 21px;
+      transform: translate(65%, -65%);
+      z-index: 49;
+      @include rtl-selector {
+        left: 0;
+        right: auto;
+        transform: translate(35%, -65%);
+      }
+    }
+  }
+
+  & [class*="neo-icon-"].neo-btn:empty::before {
+    font-size: $navbar-icon-size;
+  }
+  & .neo-nav-status {
+    padding: $navbar-agentcard-padding;
+    @each $name, $color in $neo-navbar-colors {
+      &--#{$name} {
+        background-color: $color !important;
+      }
+    }
+
+    & .neo-nav-status-info {
+      display: flex;
+      flex-direction: column;
+      // max-width: 77%;
+      margin-right: $token-navbar-agent-card-left-margin-left;
+      margin-left: 0;
+      & p {
+        font-size: $navbar-agentcard-name-font-size;
+        line-height: $navbar-agentcard-name-line-height;
+        letter-spacing: $navbar-agentcard-name-letter-spacing;
+        color: $navbar-agentcard-name-font-color;
+        margin-bottom: $navbar-agentcard-text-margin;
+        font-weight: $navbar-agentcard-name-font-weight;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      @include rtl-selector {
+        margin: {
+          left: $token-navbar-agent-card-left-margin-left;
+          right: 0;
+        }
+      }
+    }
+
+    & .neo-label {
+      font-size: $navbar-agentcard-status-font-size;
+      line-height: $navbar-agentcard-status-line-height;
+      letter-spacing: $navbar-agentcard-status-letter-spacing;
+      font-weight: $navbar-agentcard-status-font-weight;
+      width: fit-content;
+      // hard-coded for now
+      padding: 2px 8px;
+      border-radius: 16px !important;
+      color: $global-text-inverse-color;
+      @each $name, $color in $neo-navbar-pill-colors {
+        &--#{$name} {
+          background-color: $color !important;
+        }
+      }
+    }
+
+    & button {
+      &:hover {
+        background-color: $navbar-background-color;
+      }
+    }
+    & .neo-avatar {
+      border: $navbar-agentcard-avatar-border-width
+        $navbar-agentcard-avatar-border-style
+        $navbar-agentcard-avatar-border-color !important;
+      margin: 0px;
+    }
+    height: 100%;
+    min-width: 215px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    & [class*="neo-icon-"].neo-btn:empty::before {
+      font-size: 12px;
+    }
+  }
+}
+
+.neo-nav__link {
+  border-radius: $navbar-item-border-radius;
+  color: $navbar-item-color;
+  cursor: pointer;
+  display: block;
+  line-height: $navbar-item-line-height;
+  padding: $navbar-item-padding;
+  text-decoration: none;
+
+  // @include navbar-states;
+}
+
+.neo-navbar--sticky {
+  position: sticky;
+  top: 0;
+}
+
+.neo-navbar--spacer {
+  margin-right: auto;
+}
+
+.neo-nav--left {
+  display: flex;
+  // & [class*='neo-icon-'].neo-btn:empty::before {
+  //   font-size: 32px;
+  // }
+  align-items: center;
+  & h4 {
+    margin: 0;
+    margin-left: 16px;
+    // @include rtl-selector {
+    //   margin-left: 0px;
+    //   margin-right: 16px;
+    // }
+  }
+  height: 100%;
+  & .neo-badge__navbutton {
+    height: 100%;
+    // hard-coded for now
+    width: $navbar-icon-button-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    // testing new class for higher specificity
+    & .neo-badge__navbutton--content {
+      height: 100% !important;
+      width: $navbar-icon-button-width !important;
+      background-color: $navbar-background-color;
+      &:focus {
+        box-shadow: none;
+        outline: rgba(20, 115, 230, 1) auto 2px;
+      }
+      &::before {
+        color: $navbar-default-icon-color;
+      }
+    }
+    &:hover {
+      transition: $button-transition;
+      // background-color: $navbar-background-color-hover;
+      & .neo-badge__navbutton--content {
+        transition: $button-transition;
+        background-color: $navbar-background-color-hover;
+        &::before {
+          transition: color $global-transition-duration
+            $global-transition-timing;
+          color: $navbar-icon-hover-color;
+        }
+      }
+    }
+    &--active {
+      border-bottom: $navbar-action-border-width $navbar-action-border-style
+        $navbar-icon-selected-color;
+      &:hover {
+        transition: $button-transition;
+        border-bottom-color: $navbar-icon-hover-color;
+        & .neo-badge__navbutton--content {
+          &::before {
+            color: $navbar-icon-hover-color;
+          }
+        }
+      }
+
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-icon-selected-color;
+      }
+    }
+    &--active-disabled {
+      border-bottom: $navbar-action-border-width $navbar-action-border-style
+        $navbar-item-selected-disabled-color;
+      &:hover {
+        cursor: not-allowed;
+        background-color: $navbar-background-color;
+        border-bottom-color: $navbar-item-selected-disabled-color;
+
+        // testing new class for higher specificity
+        & .neo-badge__navbutton--content {
+          cursor: not-allowed;
+          background-color: $navbar-background-color;
+          &::before {
+            color: $navbar-item-selected-disabled-color;
+          }
+        }
+      }
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-item-selected-disabled-color;
+      }
+    }
+    &--disabled {
+      &:hover {
+        cursor: not-allowed;
+        background-color: $navbar-background-color;
+        // testing new class for higher specificity
+        & .neo-badge__navbutton--content {
+          cursor: not-allowed;
+          background-color: $navbar-background-color;
+          &::before {
+            color: $navbar-item-disabled-color;
+          }
+        }
+      }
+      // testing new class for higher specificity
+      & .neo-badge__navbutton--content::before {
+        color: $navbar-item-disabled-color;
+      }
+    }
+    .neo-badge__icon::after {
+      font-family: "noto-sans", sans-serif;
+      background: $badge-background-color;
+      border-radius: 8px;
+      box-sizing: border-box;
+      color: $badge-color;
+      content: attr(data-badge);
+      display: flex;
+      font-size: 10px;
+      height: 16px;
+      justify-content: center;
+      line-height: 16px;
+      min-width: 16px;
+      padding: 0px 4px;
+      position: absolute;
+      right: 19px;
+      top: 21px;
+      transform: translate(65%, -65%);
+      z-index: 49;
+      @include rtl-selector {
+        left: 0;
+        right: auto;
+        transform: translate(35%, -65%);
+      }
+    }
+  }
+
+  & [class*="neo-icon-"].neo-btn:empty::before {
+    font-size: $navbar-icon-size;
+  }
+}

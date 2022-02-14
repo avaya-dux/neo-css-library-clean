@@ -1,0 +1,432 @@
+// updated avatar styles
+
+@mixin neo-avatar-img {
+  .neo-img {
+    border-radius: $avatar-border-radius;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    z-index: 4;
+  }
+}
+
+@mixin neo-avatar-initials {
+  &[#{$avatar-initials-selector}]::before {
+    content: attr(#{$avatar-initials-selector});
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+}
+
+@mixin neo-avatar-sizes {
+  &--small {
+    font-size: $avatar-small-font-size;
+    line-height: $avatar-small-line-height;
+    letter-spacing: $avatar-small-letter-spacing;
+    height: $avatar-small-size;
+    width: $avatar-small-size;
+    // & .neo-avatar-status {
+    //   &:after {
+    //     width: $avatar-status-size-small;
+    //     height: $avatar-status-size-small;
+    //     font-size: $avatar-status-size-small - 2;
+    //     z-index: 5;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 70%;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     padding-top: 0px;
+    //     padding-bottom: 0px;
+    //     padding-left: 0px;
+    //     padding-right: 0px;
+    //     @include rtl-selector {
+    //       left: -15%;
+    //     }
+    //   }
+    //   @include neo-avatar-status;
+    // }
+    &--generic {
+      background: $avatar-font-color;
+      &:before {
+        position: absolute;
+        // top: -1px;
+        // font-size: $avatar-large-size - 2;
+        // font-size: $avatar-large-size;
+        font-size: 32px;
+        content: $avatar-generic-icon;
+        font-family: "updated-neo-icons";
+        color: $avatar-background-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 32px;
+        top: -3px;
+        left: -2px;
+      }
+    }
+    &--bot {
+      // background: $avatar-font-color;
+      &:before {
+        position: absolute;
+        // top: -1px;
+        font-size: $avatar-small-size - 2;
+        content: $avatar-bot-icon;
+        font-family: "updated-neo-icons";
+        // color: $avatar-background-color;
+      }
+    }
+  }
+
+  &--large {
+    font-size: $avatar-large-font-size;
+    line-height: $avatar-large-line-height;
+    letter-spacing: $avatar-large-letter-spacing;
+    height: $avatar-large-size;
+    width: $avatar-large-size;
+    // &.neo-avatar-status {
+    //   &:after {
+    //     width: $avatar-status-size-large;
+    //     height: $avatar-status-size-large;
+    //     font-size: $avatar-status-size-large - 3;
+    //     z-index: 5;
+    //     position: absolute;
+    //     top: 50%;
+    //     left: 70%;
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: center;
+    //     align-items: center;
+    //     padding: 1px;
+    //     @include rtl-selector {
+    //       left: -15%;
+    //     }
+    //   }
+    //   @include neo-avatar-status;
+    // }
+    &--generic {
+      background: $avatar-font-color;
+      &:before {
+        position: absolute;
+        // top: -1px;
+        // font-size: $avatar-large-size - 2;
+        // font-size: $avatar-large-size;
+        font-size: 54.86px;
+        content: $avatar-generic-icon;
+        font-family: "updated-neo-icons";
+        color: $avatar-background-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 54.86px;
+        top: -4.16px;
+        left: -3.46px;
+      }
+    }
+    &--bot {
+      // background: $avatar-font-color;
+      &:before {
+        position: absolute;
+        // top: -1px;
+        font-size: $avatar-large-size - 2;
+        content: $avatar-bot-icon;
+        font-family: "updated-neo-icons";
+        // color: $avatar-background-color;
+      }
+    }
+  }
+}
+
+@mixin avatar-border-color() {
+  @each $name, $color in $neo-avatar-colors {
+    &--#{$name} {
+      border-color: $color;
+      border-style: $avatar-border-style;
+      border-width: $avatar-border-width;
+    }
+  }
+}
+
+@mixin neo-avatar-as-thumbnail {
+  &.neo-thumbnail {
+    background: $global-background;
+  }
+}
+
+@mixin neo-avatar-status {
+  @each $name, $state in $neo-avatar-status {
+    &--#{$name}::after {
+      font-family: "updated-neo-icons";
+      border-radius: $avatar-border-radius;
+      content: map-get($state, icon);
+      color: map-get($state, color);
+      background-color: $avatar-font-color;
+      -webkit-font-feature-settings: "liga";
+      -moz-font-feature-settings: "liga=1";
+      -moz-font-feature-settings: "liga";
+      -ms-font-feature-settings: "liga" 1;
+      font-feature-settings: "liga";
+      -webkit-font-variant-ligatures: discretionary-ligatures;
+      font-variant-ligatures: discretionary-ligatures;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1.2;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      display: inline-block;
+      height: auto;
+      width: auto;
+      letter-spacing: 0;
+      min-height: 0;
+      speak: none;
+      text-align: center;
+      text-transform: none;
+      vertical-align: middle;
+      @if $name == "offline" {
+        padding: 0 !important;
+      }
+      @if $name == "away" {
+        line-height: 3 !important;
+      }
+    }
+  }
+}
+
+.neo-avatar {
+  box-sizing: initial;
+  background: $avatar-background-color;
+  border-radius: $avatar-border-radius;
+  color: $avatar-font-color;
+  display: inline-block;
+  font-size: $avatar-medium-font-size;
+  font-weight: $avatar-font-weight;
+  height: $avatar-medium-size;
+  width: $avatar-medium-size;
+  line-height: $avatar-medium-line-height;
+  letter-spacing: $avatar-medium-letter-spacing;
+  margin: 0;
+  position: relative;
+  vertical-align: middle;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--generic {
+    background: $avatar-font-color;
+    &:before {
+      position: absolute;
+      // top: -1px;
+      // font-size: $avatar-large-size - 2;
+      // font-size: $avatar-large-size;
+      font-size: 41.14px;
+      content: $avatar-generic-icon;
+      font-family: "updated-neo-icons";
+      color: $avatar-background-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 41.14px;
+      top: -3.7px;
+      left: -2.8px;
+    }
+  }
+  &--bot {
+    // background: $avatar-font-color;
+    &:before {
+      position: absolute;
+      // top: -1px;
+      font-size: $avatar-medium-size - 2;
+      content: $avatar-bot-icon;
+      font-family: "updated-neo-icons";
+      // color: $avatar-background-color;
+    }
+  }
+  &--large .neo-avatar-status {
+    height: 22px !important;
+    width: 22px !important;
+    top: 32px !important;
+    left: 32px !important;
+    @include rtl-selector {
+      top: 32px !important;
+      right: 32px !important;
+    }
+    &:before {
+      font-size: 18px !important;
+      line-height: 18px !important;
+    }
+  }
+  &--small .neo-avatar-status {
+    height: 16px !important;
+    width: 16px !important;
+    top: 16px !important;
+    left: 18px !important;
+    @include rtl-selector {
+      top: 16px !important;
+      right: 18px !important;
+    }
+    &:before {
+      font-size: 9px !important;
+      line-height: 9px !important;
+    }
+  }
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) {
+      &:not(:empty) {
+        background: none;
+      }
+    }
+  }
+  .neo-avatar-status {
+    height: 18px;
+    width: 18px;
+    top: 22px;
+    left: 25px;
+    @include rtl-selector {
+      top: 22px;
+      right: 25px;
+    }
+    &:before {
+      font-size: 14px;
+      line-height: 14px;
+      padding: 1px;
+    }
+    @each $name, $state in $neo-avatar-status {
+      &--#{$name}::before {
+        font-family: "updated-neo-icons";
+        border-radius: 50px;
+        content: map-get($state, icon);
+        color: map-get($state, color);
+        background-color: $avatar-font-color;
+        -webkit-font-feature-settings: "liga";
+        -moz-font-feature-settings: "liga=1";
+        -moz-font-feature-settings: "liga";
+        -ms-font-feature-settings: "liga" 1;
+        font-feature-settings: "liga";
+        -webkit-font-variant-ligatures: discretionary-ligatures;
+        font-variant-ligatures: discretionary-ligatures;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        text-align: center;
+        text-transform: none;
+        vertical-align: middle;
+      }
+    }
+
+    position: absolute;
+    z-index: 7;
+    // padding-bottom: 50%;
+    border-radius: 50px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    &:before {
+      border-radius: 50px;
+      // height: 100%;
+      // width: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      margin: 0;
+    }
+  }
+  // &.neo-avatar-status {
+  //   &:after {
+  //     width: $avatar-status-size-medium;
+  //     height: $avatar-status-size-medium;
+  //     font-size: $avatar-status-size-medium - 2;
+  //     z-index: 5;
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 70%;
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: center;
+  //     align-items: center;
+  //     padding: 1px;
+  //     @include rtl-selector {
+  //       left: -15%;
+  //     }
+  //   }
+  // @include neo-avatar-status;
+  // }
+
+  // @include neo-avatar-status;
+  @include neo-avatar-as-thumbnail;
+  @include neo-avatar-img;
+  @include neo-avatar-sizes;
+  @include neo-avatar-initials;
+  @include avatar-border-color();
+}
+
+// .neo-avatar-status {
+//   @each $name, $state in $neo-avatar-status {
+//     &--#{$name}::before {
+//       font-family: 'updated-neo-icons';
+//       border-radius: 50px;
+//       content: map-get($state, icon);
+//       color: map-get($state, color);
+//       background-color: $avatar-font-color;
+//       -webkit-font-feature-settings: 'liga';
+//       -moz-font-feature-settings: 'liga=1';
+//       -moz-font-feature-settings: 'liga';
+//       -ms-font-feature-settings: 'liga' 1;
+//       font-feature-settings: 'liga';
+//       -webkit-font-variant-ligatures: discretionary-ligatures;
+//       font-variant-ligatures: discretionary-ligatures;
+//       font-style: normal;
+//       font-weight: normal;
+//       font-variant: normal;
+//       text-transform: none;
+//       text-align: center;
+//       text-transform: none;
+//       vertical-align: middle;
+//     }
+//   }
+//   .neo-avatar--large & {
+//     height: 20px;
+//     width: 20px;
+//     &:before {
+//       font-size: 18px;
+//       line-height: 20px;
+//     }
+//   }
+//   .neo-avatar--small & {
+//     height: 12px;
+//     width: 12px;
+//     &:before {
+//       font-size: 9px;
+//       line-height: 10px;
+//       width: auto;
+//     }
+//   }
+//   position: absolute;
+//   top: 50%;
+//   left: 70%;
+//   z-index: 7;
+//   padding-bottom: 50%;
+//   border-radius: 50px;
+//   text-align: center;
+//   display: inline-flex;
+//   justify-content: center;
+//   align-items: center;
+//   &:before {
+//     border-radius: 50px;
+//     // height: 100%;
+//     width: 100%;
+//     position: absolute;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+//     margin: 0;
+//   }
+// }

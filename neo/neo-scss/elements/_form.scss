@@ -1,0 +1,318 @@
+// new form classes
+
+@mixin form--states {
+  @each $state-color-name, $state-color-value in $input-state-color-map {
+    &--#{$state-color-name} {
+      > .neo-input-group ~ label,
+      > .neo-input ~ label,
+      > .neo-select ~ label,
+      > .neo-radio ~ label,
+      > .neo-check ~ label,
+      > .neo-switch,
+      .neo-input-hint {
+        color: $state-color-value;
+      }
+      .neo-input-textarea__counter {
+        color: $state-color-value;
+      }
+
+      .neo-input,
+      .neo-chips,
+      .neo-select select {
+        border-color: $state-color-value;
+      }
+    }
+  }
+}
+
+@mixin form--required {
+  &--required {
+    > label,
+    > .neo-input-group ~ label,
+    > .neo-input-group > label {
+      &::after {
+        color: $input-asterix-required-color;
+        content: " *";
+        // padding-left: $token-input-label-letter-spacing;
+      }
+    }
+  }
+}
+
+.neo-form {
+  &-control--checkboxes {
+    margin-bottom: 0px !important;
+    // width: auto;
+    // line-height: 20px;
+    display: flex;
+  }
+  &-control {
+    // margin-bottom: $form-control-margin-bottom;
+    margin-bottom: 12px;
+    // width: fit-content;
+    & > label:not(.neo-switch) {
+      font-size: $token-input-label-font-size;
+      line-height: $token-input-label-line-height;
+      letter-spacing: $token-input-label-letter-spacing;
+      font-weight: $token-input-label-font-weight;
+      color: $input-label-color;
+      // padding-bottom: $input-padding-y;
+    }
+
+    @include form--states;
+    @include form--required;
+
+    &--textarea {
+      width: fit-content;
+      // textarea {
+      //   // margin-top: $input-in-label-margin-top;
+      //   // margin-bottom: $input-in-label-margin-top;
+      //   margin-left: 0 !important;
+      //   margin-right: 0 !important;
+      // }
+    }
+
+    .neo-input-icon__wrapper {
+      color: $input-font-color;
+    }
+
+    &--disabled {
+      // selectbox styles
+      .neo-select:after,
+      .neo-select:hover:after {
+        color: $select-disabled-color !important;
+      }
+
+      .neo-select select,
+      .neo-select:hover select {
+        border-color: $select-disabled-color;
+        background-color: $select-disabled-bg;
+        color: $select-disabled-color !important;
+        cursor: not-allowed;
+      }
+
+      .neo-multiselect {
+        background-color: $select-disabled-bg;
+      }
+
+      .neo-multiselect .neo-multiselect__header,
+      .neo-multiselect .neo-multiselect-combo__header {
+        border-color: $select-disabled-color !important;
+        cursor: not-allowed;
+        color: $select-disabled-color !important;
+        &:after {
+          color: $select-disabled-color !important;
+        }
+      }
+
+      .neo-input-editable__wrapper {
+        & .neo-input-edit__icon,
+        & .neo-input-editable__close {
+          color: $input-disabled-color;
+          background-color: $input-disabled-bg;
+          &:hover {
+            cursor: not-allowed;
+          }
+        }
+      }
+      &:hover {
+        .neo-input-editable__wrapper {
+          border-color: $input-border-disabled-color !important;
+        }
+        .neo-input-group__addon {
+          border-color: $input-border-disabled-color !important;
+        }
+      }
+      &[dir="rtl"] {
+        .neo-input-group .neo-input-group__addon,
+        .neo-input-group:hover .neo-input-group__addon {
+          &:first-child {
+            border-left-color: $input-border-disabled-color !important;
+            &:hover {
+              border-left-color: $input-border-disabled-color !important;
+            }
+          }
+          &:last-child {
+            border-right-color: $input-border-disabled-color !important;
+            &:hover {
+              border-right-color: $input-border-disabled-color !important;
+            }
+          }
+        }
+      }
+
+      .neo-input-group .neo-input-group--addons {
+        border-color: $input-border-disabled-color !important;
+        &:hover {
+          border-color: $input-border-disabled-color !important;
+        }
+        &:focus-within {
+          .neo-input-group__addon {
+            border-color: $input-border-disabled-color !important;
+          }
+        }
+      }
+      .neo-input-group .neo-input-group__addon,
+      .neo-input-group:hover .neo-input-group__addon {
+        &:first-child {
+          border-right-color: $input-border-disabled-color !important;
+          &:hover {
+            border-right-color: $input-border-disabled-color !important;
+          }
+        }
+        &:last-child {
+          border-left-color: $input-border-disabled-color !important;
+          &:hover {
+            border-left-color: $input-border-disabled-color !important;
+          }
+        }
+      }
+      .neo-input-group:hover .neo-input {
+        border-color: $input-border-disabled-color !important;
+      }
+      .neo-input-group .neo-input,
+      .neo-input-group .neo-input-group__addon {
+        background-color: $input-disabled-bg;
+        color: $input-disabled-color;
+        cursor: not-allowed;
+      }
+      .neo-input-icon__wrapper {
+        background-color: $input-disabled-bg;
+        color: $input-disabled-color;
+        cursor: not-allowed;
+        & .neo-input {
+          background-color: $input-disabled-bg;
+          border-color: $input-border-disabled-color;
+          color: $input-disabled-color;
+          cursor: not-allowed;
+        }
+      }
+      textarea {
+        border-color: $input-border-disabled-color;
+        background-color: $input-disabled-bg;
+        &:hover {
+          border-color: $input-border-disabled-color;
+          cursor: not-allowed;
+        }
+      }
+    }
+    &--error {
+      .neo-multiselect .neo-multiselect__header,
+      .neo-multiselect .neo-multiselect-combo__header {
+        border-color: $input-border-error-color;
+      }
+      &[dir="rtl"] {
+        .neo-input-group--addons .neo-input-group__addon {
+          &:first-child {
+            border-left-color: $input-border-error-color;
+          }
+          &:last-child {
+            border-right-color: $input-border-error-color;
+          }
+        }
+      }
+      .neo-input-group .neo-input-group--addons {
+        border: 1px solid $input-border-error-color;
+
+        // &:hover {
+        //   border-color: $input-border-error-color;
+        // }
+      }
+      .neo-input-group--addons .neo-input-group__addon {
+        &:first-child {
+          border-right-color: $input-border-error-color;
+          @include rtl-selector {
+            border-left-color: $input-border-error-color;
+          }
+          // &:hover {
+          //   border-right-color: $input-border-error-color;
+          // }
+        }
+        &:last-child {
+          border-left-color: $input-border-error-color;
+          @include rtl-selector {
+            border-right-color: $input-border-error-color;
+          }
+          // &:hover {
+          //   border-left-color: $input-border-error-color;
+          // }
+        }
+      }
+      .neo-input-group--addons:hover .neo-input {
+        border-color: $input-border-disabled-color;
+      }
+      .neo-input-editable__wrapper {
+        border-color: $input-border-error-color;
+      }
+      textarea {
+        border-color: $input-border-error-color;
+      }
+    }
+  }
+
+  &--inline {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    // flex-wrap: wrap;
+    &--wrap {
+      flex-wrap: wrap;
+    }
+    & > label {
+      color: $global-text-color;
+      margin-right: 8px;
+      padding-bottom: 0px !important;
+      // pagination styles
+      @include rtl-selector {
+        margin-right: 0px;
+        margin-left: 8px;
+      }
+    }
+    label {
+      white-space: nowrap;
+    }
+
+    // .neo-input-group > label:not(.neo-switch) {
+    //   padding-bottom: 0px;
+    // }
+
+
+    .neo-form-control {
+      margin-bottom: 0px;
+      // margin-right: 12px;
+      & .neo-input-group {
+        & > label {
+          // padding-bottom: 0px !important;
+        }
+      }
+    }
+
+    .neo-form-control:not(:last-child) {
+      margin-right: 12px;
+      @include rtl-selector {
+        margin-left: 12px;
+        margin-right: 0px;
+      }
+    }
+
+    // .neo-form-control .neo-input:only-child {
+    //   margin-top: $token-web-typography-web-body-regular-line-height + 4px;
+    //   margin-bottom: $input-hint-line-height + 4px;
+    // }
+
+    .neo-form-control .neo-input {
+      // margin-top: 12px;
+    }
+
+    .neo-select {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    .neo-radio + label:not(last-child),
+    .neo-switch:not(last-child),
+    .neo-check + label:not(last-child) {
+      margin-right: 8px;
+    }
+  }
+}

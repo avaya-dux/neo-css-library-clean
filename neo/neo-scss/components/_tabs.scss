@@ -1,0 +1,572 @@
+// update tab styles
+
+%tab-nav {
+  align-items: flex-end;
+  display: flex;
+  list-style: none;
+  margin-bottom: 0;
+  margin-left: 0;
+  // transition: $tab-transition;
+  @include rtl-selector {
+    margin: {
+      left: initial;
+      right: 0;
+    }
+  }
+}
+
+@mixin tab-nav {
+  &__nav {
+    @extend %tab-nav;
+    &--vertical {
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
+}
+
+// vertical tab styles
+
+@mixin tab-item-vertical {
+  &__item--vertical {
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-height: $tab-item-max-height;
+    padding: $tab-padding-default;
+    border-left: $tab-action-border-bottom-width solid transparent;
+    background-color: $tab-background-color;
+    display: flex;
+
+    &:focus-within {
+      outline: $global-outline-color auto 2px;
+      outline-offset: -4px;
+    }
+
+    // @include rtl-selector {
+    //   margin: {
+    //     left: $tab-offset;
+    //     right: initial;
+    //   }
+    // }
+
+    // &:last-child {
+    //   margin-right: 0;
+
+    //   @include rtl-selector {
+    //     margin-left: 0;
+    //   }
+    // }
+    &:focus {
+      // outline: none;
+    }
+    a {
+      &:not(:last-child) {
+        margin-right: 5px;
+        @include rtl-selector {
+          margin-left: 5px;
+          margin-right: 0px;
+        }
+      }
+      color: $tab-default-color;
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding-bottom: 8px;
+      text-decoration: none;
+      // text-transform: capitalize;
+
+      &:focus {
+        outline: none;
+      }
+
+      &:before {
+        margin-right: 5px;
+        color: $tab-default-color;
+        @include rtl-selector {
+          margin-left: 5px;
+          margin-right: 0;
+        }
+      }
+    }
+    .neo-icon-end {
+      color: $tab-default-color;
+    }
+    // hover states that affect whole Component
+    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):hover,
+    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):focus-within {
+      background-color: $tab-hover-bg-color;
+    }
+    &:hover,
+    &:focus-within {
+      transition: $tab-hover-transition;
+      a {
+        &:before {
+          color: $tab-item-hover-color;
+        }
+        color: $tab-item-hover-color;
+      }
+      .neo-icon-end {
+        cursor: pointer;
+        &:before {
+          color: $tab-item-hover-color;
+        }
+        color: $tab-item-hover-color;
+      }
+    }
+
+    @include tab--active-vertical;
+    @include tab--disabled;
+  }
+}
+@mixin tab--active-vertical {
+  &--active {
+    background-color: $tab-background-color;
+    border-width: 2px;
+    border-left-color: $tab-action-active-border-color;
+    &:hover {
+      transition: $tab-hover-transition;
+      border-left-color: $tab-item-hover-color;
+      cursor: pointer;
+      a {
+        color: $tab-item-hover-color;
+        font-weight: $tab-hover-font-weight;
+        &:before {
+          color: $tab-item-hover-color;
+          font-weight: $tab-hover-font-weight;
+        }
+      }
+      .neo-icon-end {
+        cursor: pointer;
+        color: $tab-item-hover-color;
+      }
+    }
+    @include rtl-selector {
+      border-left: none;
+      border-right: 2px solid $tab-action-active-border-color;
+      &:hover {
+        transition: border-color $global-transition-duration
+          $global-transition-timing;
+        border-right: 2px solid $tab-item-hover-color;
+      }
+    }
+    a {
+      color: $tab-action-active-color;
+      font-weight: $tab-hover-font-weight;
+      &:before {
+        color: $tab-action-active-color;
+        font-weight: $tab-hover-font-weight;
+      }
+    }
+    .neo-icon-end {
+      color: $tab-action-active-color;
+    }
+  }
+}
+
+@mixin tab-item {
+  &__item {
+    background-color: $tab-background-color;
+    position: relative;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-height: $tab-item-max-height;
+    padding: 8px 16px 0px 16px;
+    display: flex;
+
+    &:focus-within {
+      outline: $global-outline-color auto 2px;
+      outline-offset: -3px;
+    }
+
+    // &:last-child {
+    //   margin-right: 0;
+
+    //   @include rtl-selector {
+    //     margin-left: 0;
+    //     margin-right: 16px;
+    //   }
+    // }
+
+    // rtl style to space a from close button
+    @include rtl-selector {
+      a:not(:last-child) {
+        padding-left: 5px;
+        padding-right: 0px;
+      }
+    }
+
+    a {
+      color: $tab-default-color;
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      // padding-top of tab item minus 2px for border
+      padding-bottom: 6px;
+      text-decoration: none;
+      // text-transform: capitalize;
+      border-bottom: $tab-action-border-bottom-width solid transparent;
+      &:not(:last-child) {
+        padding-right: 5px;
+      }
+      &:focus {
+        outline: none;
+      }
+      &:before {
+        margin-right: 5px;
+        color: $tab-default-color;
+        @include rtl-selector {
+          margin: {
+            left: 5px;
+            right: 0;
+          }
+        }
+      }
+
+      // &[dir='rtl']:before {
+      //   margin-left: 5px;
+      //   color: $tab-default-color;
+      // }
+
+      // &::after {
+      //   display: block;
+      //   content: attr(title);
+      //   font-weight: bold;
+      //   height: 0;
+      //   overflow: hidden;
+      //   visibility: hidden;
+      // }
+    }
+
+    .neo-icon-end {
+      border-bottom: $tab-action-border-bottom-width solid transparent;
+      color: $tab-default-color;
+      // &:hover {
+      //   cursor: pointer;
+      //   color: $tab-item-hover-color;
+      //   // color: $input-hover-color;
+      // }
+    }
+
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(.neo-tabs__item--vertical-active-disabled):hover,
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(.neo-tabs__item--vertical-active-disabled):focus-within {
+      transition: $tab-hover-transition;
+      background-color: $tab-hover-bg-color;
+    }
+
+    &:hover,
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):focus-within {
+      cursor: pointer;
+      // transition: $tab-hover-transition;
+      a {
+        &:before {
+          color: $tab-item-hover-color;
+        }
+        // border-width: 2px;
+        // border-bottom-color: $tab-item-hover-color;
+        color: $tab-item-hover-color;
+        // text-shadow: 1px 0 0 $tab-item-hover-color;
+      }
+      .neo-icon-end {
+        cursor: pointer;
+        color: $tab-item-hover-color;
+        // color: $input-hover-color;
+      }
+    }
+
+    @include tab--active;
+    @include tab--disabled;
+  }
+
+  // @include tab--bordered;
+}
+
+@mixin tab--active {
+  &--active {
+    // property related to carousel
+    opacity: 1;
+    background-color: $tab-background-color;
+    a {
+      color: $tab-action-active-color;
+      font-weight: $tab-hover-font-weight;
+      border-bottom-color: $tab-action-active-border-color;
+      &:before {
+        color: $tab-action-active-color;
+        font-weight: $tab-hover-font-weight;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    .neo-icon-end {
+      border-bottom-color: $tab-action-active-border-color;
+      color: $tab-action-active-color;
+    }
+    &:hover {
+      cursor: pointer;
+      transition: $tab-hover-transition;
+      a {
+        color: $tab-item-hover-color;
+        // text-shadow: 0.5px 0 0 $tab-item-hover-color;
+        font-weight: $tab-hover-font-weight;
+        border-bottom-color: $tab-item-hover-color;
+        &:before {
+          color: $tab-item-hover-color;
+          // text-shadow: 0.5px 0 0 $tab-item-hover-color;
+          font-weight: $tab-hover-font-weight;
+        }
+      }
+      .neo-icon-end {
+        cursor: pointer;
+        color: $tab-item-hover-color;
+        border-bottom-color: $tab-item-hover-color;
+      }
+    }
+  }
+}
+
+@mixin tab--disabled {
+  &--disabled {
+    background-color: $tab-background-color;
+    box-shadow: none;
+    color: $tab-disabled-color;
+    cursor: not-allowed;
+    a {
+      color: $tab-disabled-color;
+      &:before {
+        color: $tab-disabled-color;
+      }
+      &:focus {
+        box-shadow: none;
+        color: $tab-disabled-color;
+        background-color: $tab-background-color;
+      }
+    }
+    .neo-icon-end {
+      color: $tab-disabled-color;
+    }
+    &:hover {
+      cursor: not-allowed;
+      a {
+        cursor: not-allowed;
+        color: $tab-disabled-color;
+        // font-weight: normal;
+        &:before {
+          color: $tab-disabled-color;
+          // font-weight: normal;
+        }
+      }
+      .neo-icon-end {
+        cursor: not-allowed;
+        color: $tab-disabled-color;
+        &:before {
+          color: $tab-disabled-color;
+        }
+      }
+    }
+  }
+
+  &--active-disabled {
+    background-color: $tab-background-color;
+    box-shadow: none;
+    color: $tab-action-disabled-color;
+    font-weight: $tab-hover-font-weight;
+    cursor: not-allowed;
+    &:hover {
+      cursor: not-allowed;
+    }
+    a {
+      cursor: not-allowed;
+      color: $tab-action-disabled-color;
+      border-width: 2px;
+      border-bottom-color: $tab-action-disabled-color;
+      &:before {
+        color: $tab-action-disabled-color;
+        font-weight: $tab-hover-font-weight;
+      }
+    }
+    &:focus {
+      box-shadow: none;
+      color: $tab-action-disabled-color;
+      background-color: $tab-background-color;
+    }
+    .neo-icon-end {
+      color: $tab-action-disabled-color;
+      border-bottom-color: $tab-action-disabled-color;
+      &:before {
+        color: $tab-action-disabled-color;
+      }
+    }
+    &:hover {
+      a {
+        cursor: not-allowed;
+        color: $tab-action-disabled-color;
+        font-weight: $tab-hover-font-weight;
+        border-width: 2px;
+        border-bottom-color: $tab-action-disabled-color;
+        &:before {
+          color: $tab-action-disabled-color;
+          font-weight: $tab-hover-font-weight;
+        }
+      }
+      .neo-icon-end {
+        cursor: not-allowed;
+        &:hover {
+          cursor: not-allowed;
+          color: $tab-action-disabled-color;
+        }
+      }
+    }
+  }
+
+  &--vertical-active-disabled {
+    background-color: $tab-background-color;
+    box-shadow: none;
+    font-weight: $tab-hover-font-weight;
+    color: $tab-action-disabled-color !important;
+    cursor: not-allowed !important;
+    border-left: 2px solid $tab-action-disabled-color !important;
+    @include rtl-selector {
+      border-left: none !important;
+      border-right: 2px solid $tab-action-disabled-color !important;
+      &:hover {
+        border-right: 2px solid $tab-action-disabled-color !important;
+      }
+    }
+    &:focus {
+      box-shadow: none;
+      color: $tab-disabled-color;
+      background-color: $tab-background-color;
+    }
+    a {
+      cursor: not-allowed !important;
+      color: $tab-action-disabled-color !important;
+      &:before {
+        color: $tab-action-disabled-color;
+        font-weight: $tab-hover-font-weight;
+      }
+    }
+    .neo-icon-end {
+      cursor: not-allowed !important;
+      color: $tab-action-disabled-color;
+      &:before {
+        color: $tab-action-disabled-color !important;
+      }
+    }
+    &:hover {
+      background-color: $tab-background-color !important;
+      cursor: not-allowed !important;
+      a {
+        cursor: not-allowed !important;
+        color: $tab-action-disabled-color;
+        font-weight: $tab-hover-font-weight;
+        border-width: 2px;
+        border-left-color: $tab-action-disabled-color;
+
+        &:before {
+          color: $tab-action-disabled-color;
+          font-weight: $tab-hover-font-weight;
+        }
+      }
+      .neo-icon-end {
+        cursor: not-allowed !important;
+        color: $tab-action-disabled-color;
+      }
+    }
+  }
+}
+
+@mixin tab-container {
+  &__container {
+    display: none;
+    padding-top: $global-spacer-large;
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}
+
+@mixin tab-slider() {
+  .neo-tabs__nav-scroll {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+  }
+}
+
+@mixin tab-carousel() {
+  &__carousel {
+    display: flex;
+  }
+  &__carousel--scroll {
+    display: flex;
+    overflow: hidden;
+  }
+  &__carousel--button {
+    border: 0;
+    background-color: $tab-background-color;
+    &:before {
+      color: $tab-carousel-button-color;
+    }
+    &:hover {
+      cursor: pointer;
+      &:before {
+        color: $tab-item-hover-color;
+      }
+    }
+  }
+  &__carousel--more {
+    flex-grow: 1;
+    display: flex;
+    // justify-content: flex-end;
+  }
+}
+
+@mixin tab-close-btn {
+  & .neo-icon-end {
+    background: none;
+    &:before {
+      font-size: $notification-close-icon-size;
+    }
+  }
+  // & .neo-tabs__nav :not(.neo-tabs__item--active) .neo-icon-end,
+  // & .neo-tabs__nav :not(.neo-tabs__item--disabled) .neo-icon-end {
+  //   color: $tab-default-color;
+  // }
+}
+
+@mixin extra-content {
+  &__extra-content {
+    align-items: center;
+    display: flex;
+
+    .neo-dropdown {
+      .neo-btn {
+        border: 0;
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.neo-tabs {
+  @include NeoLinkStyles;
+  &--wrapper {
+    height: inherit;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  @include tab-container;
+  @include tab-nav;
+  @include tab-close-btn;
+  @include extra-content;
+  @include tab-item;
+  @include tab-item-vertical;
+  @include tab-carousel;
+}

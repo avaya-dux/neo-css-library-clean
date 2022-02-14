@@ -1,0 +1,73 @@
+// new hint classes
+
+// @mixin hint-states {
+//   @each $hint-color-name, $hint-color-value in $input-state-color-map {
+//     .neo-input--#{$hint-color-name} + &,
+//     .neo-input-group--#{$hint-color-name} + & {
+//       color: $hint-color-value;
+//     }
+//   }
+// }
+
+// @mixin hint-muted {
+//   &--muted {
+//     color: $input-hint-muted-color;
+//   }
+// }
+
+@mixin hint-positioning {
+  .neo-input + &,
+  .neo-select + &,
+  .neo-input-group + &,
+  .neo-input-editable__wrapper + &,
+  .neo-input-icon__wrapper + &,
+  .neo-input-group--addons + &,
+  .neo-input-group--inline + &,
+  .neo-switch + &,
+  .neo-check ~ &,
+  .neo-multiselect + & {
+    margin-top: $input-in-label-margin-top;
+  }
+
+  // .neo-chec ~ & {
+  //   margin-left: $checkbox-size + $checkbox-label-indent;
+  // }
+
+  .neo-switch + & {
+    margin-left: $switch-width + $input-padding-x;
+  }
+}
+
+.neo-input-hint,
+.neo-input-textarea__counter {
+  font-size: $input-hint-font-size;
+  font-weight: $input-hint-font-weight;
+  line-height: $input-hint-line-height;
+  letter-spacing: $input-hint-letter-spacing;
+  color: $input-hint-color;
+
+  @include hint-positioning;
+  // @include hint-muted;
+  // @include hint-states;
+}
+
+// RTL specific code
+
+.neo-form-control--error {
+  &:not([dir='rtl']) .neo-input-hint:before {
+    font-family: 'updated-neo-icons';
+    content: $token-icons-neo-icon-error;
+    font-size: $token-input-error-icon-size;
+    margin-right: $token-input-error-helper-spacing;
+    line-height: $token-input-label-line-height;
+    vertical-align: sub;
+  }
+  &[dir='rtl'] .neo-input-hint:after {
+    font-family: 'updated-neo-icons';
+    content: $token-icons-neo-icon-error;
+    font-size: $token-input-error-icon-size;
+    margin-left: $token-input-error-helper-spacing;
+    line-height: $token-input-label-line-height;
+    vertical-align: sub;
+  }
+}

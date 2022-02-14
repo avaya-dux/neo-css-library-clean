@@ -6,7 +6,7 @@
   "scripts": {
     "test": "jest --config ./jest.config.json",
     "test:watch": "jest --config ./jest.config.json --watchAll=true",
-    "pull-icons": "cd API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js",
+    "pull-icons": "cd figma-API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js",
     "update-site": "node-sass neo/scss/main.scss $PATHTOPORTAL"
   },
   "keywords": [

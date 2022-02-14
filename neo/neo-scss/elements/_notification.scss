@@ -1,0 +1,202 @@
+// updated notification styles
+
+@mixin notification-close-btn {
+  /* stylelint-disable-next-line selector-class-pattern */
+  > .neo-icon-end {
+    &:hover {
+      cursor: pointer;
+    }
+    background: none;
+    border: none;
+    &:before {
+      font-size: $notification-close-icon-size;
+    }
+    // position: absolute;
+    align-self: center;
+    right: $notification-padding-x;
+    @include rtl-selector {
+      left: $notification-padding-x;
+      right: initial;
+    }
+    // @include position(absolute, 35%, $notification-padding-x);
+  }
+}
+
+@mixin notification-message {
+  &__message {
+    color: $global-text-color;
+    display: flex;
+    flex-direction: column;
+    // font-size: $notification-font-size;
+    justify-content: center;
+    flex-grow: 1;
+    margin-right: 16px;
+    @include rtl-selector {
+      margin-left: 16px;
+    }
+  }
+}
+
+@mixin notification-title {
+  &__title {
+    font-size: $notification-header-font-size;
+    font-weight: $notification-header-font-weight;
+    letter-spacing: $notification-header-letter-spacing;
+    line-height: $notification-header-line-height;
+    margin: 0;
+    // white-space: pre-wrap;
+    word-break: break-word;
+  }
+}
+
+@mixin notification-description {
+  &__description {
+    font-size: $notification-description-font-size;
+    line-height: $notification-description-line-height;
+    letter-spacing: $notification-description-letter-spacing;
+    font-weight: $notification-description-font-weight;
+    // white-space: pre-wrap;
+    word-break: break-word;
+    &:not(:first-child) {
+      margin-top: $notification-text-spacing;
+    }
+  }
+}
+
+@mixin notification-icon {
+  &__icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: $notification-large-icon-size;
+    line-height: 1;
+    margin-right: $notification-icon-offset;
+
+    // experimental Tooltip mix-in
+
+    // @include TooltipMargin($notification-icon-offset);
+
+    @include rtl-selector {
+      margin: {
+        left: $notification-icon-offset;
+        right: initial;
+      }
+    }
+  }
+}
+
+@mixin notification-counter {
+  &__counter {
+    color: $global-text-color;
+    font-size: $notification-counter-font-size;
+    line-height: $notification-counter-line-height;
+    letter-spacing: $notification-counter-letter-spacing;
+    font-weight: $notification-counter-font-weight;
+    // text-align: center;
+    // position: absolute;
+    align-self: center;
+    right: $notification-padding-x;
+    white-space: pre-wrap;
+    // word-break: break-word;
+    & p {
+      margin: 0px;
+    }
+    @include rtl-selector {
+      left: $notification-padding-x;
+      right: initial;
+    }
+    // @include rtl-selector {
+    //   left: $notification-icon-offset-x;
+    //   right: initial;
+    // }
+
+    // @include position(
+    //   absolute,
+    //   null,
+    //   $notification-icon-offset-x,
+    //   $notification-icon-offset-y
+    // );
+  }
+}
+
+@mixin notification-elevated {
+  &__elevated {
+    box-shadow: $notification-elevation-x-offset
+      $notification-elevation-y-offset $notification-elevation-radius
+      $notification-elevation-color;
+  }
+}
+
+@mixin notification-options {
+  &__options {
+    // position: absolute;
+    // right: $notification-padding-x;
+    align-self: center;
+    @include rtl-selector {
+      left: $notification-padding-x;
+      right: initial;
+    }
+    display: flex;
+    & > button:first-child {
+      margin-right: $notification-option-spacing;
+    }
+  }
+}
+
+.neo-notification {
+  // background-color: $notification-background;
+  border-width: $notification-border-width;
+  border-style: $notification-border-style;
+  border-radius: $notification-border-radius;
+  color: $notification-font-color;
+  display: flex;
+  min-height: $notification-min-height;
+  // min-width: $notification-min-width;
+  margin-bottom: $notification-margin-bottom;
+  padding: $notification-padding-y $notification-padding-x;
+  position: relative;
+
+  @each $name, $color in $neo-notification-colors {
+    &--#{$name} {
+      background-color: $color;
+    }
+  }
+
+  @each $name, $color in $neo-icon-colors {
+    &--#{$name} .neo-notification__icon {
+      color: $color;
+    }
+  }
+  @each $name, $icon in $neo-notification-icons {
+    &--#{$name} .neo-notification__icon:before {
+      font-family: "updated-neo-icons";
+      content: $icon;
+    }
+  }
+  @each $name, $color in $neo-notification-border-colors {
+    &--#{$name} {
+      border-color: $color;
+    }
+  }
+
+  /* stylelint-disable-next-line selector-class-pattern */
+  a:not(.neo-close) {
+    color: $link-color;
+    // text-decoration: underline;
+  }
+
+  button.neo-icon-end {
+    color: $global-text-color;
+    padding: 0;
+  }
+
+  @include notification-message;
+  @include notification-title;
+  @include notification-description;
+  @include notification-icon;
+  @include notification-close-btn;
+  @include notification-counter;
+  @include notification-elevated;
+  @include notification-options;
+  @include NeoLinkStyles;
+}

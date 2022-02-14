@@ -1,0 +1,280 @@
+// updated input styles
+
+@mixin input--states {
+  @each $state-color-name, $state-color-value in $input-state-color-map {
+    &--#{$state-color-name} {
+      border-color: $state-color-value;
+
+      &:focus {
+        border-color: $input-focus-border-color;
+      }
+    }
+  }
+}
+
+.neo-input {
+  background-image: none;
+  background-color: $input-background-color;
+  border: $input-border-width $input-border-style $input-border-color;
+  border-radius: $input-border-radius;
+  // box-shadow: $input-box-shadow;
+  box-sizing: border-box;
+  color: $input-font-color;
+  display: block;
+  font-family: inherit;
+  font-size: $input-font-size;
+  line-height: $input-line-height;
+  letter-spacing: $input-letter-spacing;
+  min-height: $input-height;
+  padding: $input-padding-y $input-padding-x;
+  min-width: $input-width;
+  // width: 100%;
+
+  &:hover {
+    // transition: $input-hover-transition;
+    border-color: $input-border-hover-color;
+  }
+
+  // hover to display close button
+
+  &:not(:disabled):hover + .neo-input-edit__icon,
+  &:not(:disabled):hover + .neo-input-editable__close {
+    &:before {
+      visibility: visible;
+    }
+  }
+
+  // focus to display close button
+
+  &:not(:disabled):focus + .neo-input-edit__icon,
+  &:not(:disabled):focus + .neo-input-editable__close {
+    &:before {
+      visibility: visible;
+    }
+  }
+
+  &:not(:disabled) + .neo-input-edit__icon:focus,
+  &:not(:disabled) + .neo-input-editable__close:focus {
+    &:before {
+      visibility: visible;
+    }
+  }
+
+  &:disabled + .neo-input-edit__icon,
+  &:disabled + .neo-input-editable__close {
+    display: none;
+  }
+
+  &[readonly],
+  &-readonly {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    min-height: auto;
+    @include rtl-selector {
+      padding-right: 0;
+      padding-left: auto;
+    }
+    &:active,
+    &:focus {
+      border: none;
+      // border-color: transparent;
+      box-shadow: none;
+    }
+    // input placeholder wrapper
+  }
+  // &-readonly ~ label {
+  //   line-height: 16px;
+  // }
+
+  &[disabled] {
+    background-color: $input-disabled-bg;
+    border-color: $input-border-disabled-color;
+    color: $input-disabled-color;
+    cursor: not-allowed;
+  }
+
+  label > &,
+  label + & {
+    // margin-top: $input-in-label-margin-top;
+  }
+
+  &:focus {
+    border: $input-border-width $input-border-style $input-focus-border-color;
+    // //hard-coded for now
+    border-width: 2px;
+    // margin: -1px -1px;
+    outline: none;
+    // margin: -1px -1px;
+    // border-color: transparent;
+    // box-shadow: 0 0 0 2px $input-focus-border-color;
+  }
+
+
+  &[disabled] {
+    &::-webkit-input-placeholder {
+      color: $input-disabled-color;
+    }
+    &::-moz-placeholder {
+      color: $input-disabled-color;
+    }
+    &:-ms-input-placeholder {
+      color: $input-disabled-color;
+    }
+    &::placeholder {
+      color: $input-disabled-color;
+    }
+  }
+
+  &::-webkit-input-placeholder {
+    font-size: $input-placeholder-font-size;
+    font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
+    opacity: 1;
+  }
+  &::-moz-placeholder {
+    font-size: $input-placeholder-font-size;
+    font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder {
+    font-size: $input-placeholder-font-size;
+    font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
+    opacity: 1;
+  }
+  &::placeholder {
+    font-size: $input-placeholder-font-size;
+    font-style: $input-placeholder-font-style;
+    letter-spacing: $input-placeholder-letter-spacing;
+    line-height: $input-placeholder-line-height;
+    color: $input-placeholder-font-color;
+    opacity: 1;
+  }
+
+  // @include input--editable;
+  @include input--states;
+}
+
+//  input error validation wrapper and input
+
+// .neo-input-error__wrapper {
+//   display: flex;
+//   flex-direction: row;
+//   border: $input-border-style $input-border-width $input-asterix-required-color;
+//   width: $input-width;
+//   min-height: $input-height;
+//   border-radius: 2px;
+//   & input,
+//   & textarea {
+//     border: none;
+//   }
+//   & .neo-input-error__icon {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     color: $input-asterix-required-color;
+//     //hard-coded for now
+//     padding-right: 11px;
+//   }
+// }
+
+// .neo-input-hint-error {
+//   // hard-coded margin for now
+//   margin-top: 4px;
+//   color: $input-asterix-required-color;
+// }
+
+// editable input style
+
+.neo-input-editable__wrapper {
+  label + & {
+    // margin-top: $input-in-label-margin-top;
+    // margin-bottom: $input-in-label-margin-top;
+  }
+
+  border-radius: $input-border-radius;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // need to work on border styles for whole input wrapper
+  border: $input-border-width $input-border-style $input-border-color;
+  &:focus-within {
+    border-color: $input-focus-border-color;
+    // hard-coded for now
+    border-width: 2px;
+    // padding: 1px;
+    // border-color: transparent;
+    // box-shadow: 0 0 0 2px $input-focus-border-color;
+    margin: -1px -1px;
+  }
+  .neo-form-control:not(.neo-form-control--disabled)
+    &:hover:not(:focus-within) {
+    border-color: $input-border-hover-color;
+  }
+  // test styles to display close buttons on hover
+
+  &:hover .neo-input-edit__icon,
+  &:hover .neo-input-editable__close {
+    &:before {
+      visibility: visible;
+    }
+  }
+  min-height: $input-height;
+  width: $input-width;
+  & input,
+  & textarea {
+    flex-grow: 1;
+    border: none;
+    min-width: 0;
+    padding-right: 0px;
+    @include rtl-selector {
+      padding-left: 0px;
+      padding-right: $input-padding-x;
+    }
+    &:focus {
+      border: none;
+      // margin: -1px -1px;
+      // outline: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+  & .neo-input-edit__icon,
+  & .neo-input-editable__close {
+    border-radius: $input-border-radius;
+    &:before {
+      visibility: hidden;
+    }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: none;
+    background-color: $input-background-color;
+    color: $input-clear-button-color;
+    // hard-coded for now
+    padding: $input-padding-y $input-padding-x;
+    &:hover {
+      cursor: pointer;
+    }
+    &:not(:disabled):focus {
+      outline: $global-outline-color auto 2px;
+      margin: -1px -1px;
+    }
+    &::before {
+      // font-size: $token-input-input-close-button-size;
+    }
+  }
+  // &:hover .neo-input-edit__icon,
+  // &:hover .neo-input-editable__close {
+  //   visibility: visible;
+  // }
+}

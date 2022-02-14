@@ -1,0 +1,46 @@
+// updated group list styles
+
+.neo-group-list {
+  @include NeoLinkStyles;
+  @extend %list;
+
+  // new 3.6.0 style
+  &__wrapper {
+    @extend %list-item-wrapper;
+    &:focus-within {
+      background-color: $group-list-item-hover;
+    }
+  }
+
+  &__item {
+    @extend %list-item;
+    // @extend %list-radius;
+
+    // @include list-item-colors;
+    // @include list-item-button;
+    // @include list-item--disabled;
+  }
+
+  @include list--hover("wrapper");
+  // @include list--borderless;
+}
+
+// Neo 3.2.0 list sections w/ actions
+
+.neo-group-list--actions {
+  @extend %list;
+
+  &__item {
+    &--clickable {
+      transition: background-color $global-transition-duration
+        $global-transition-timing;
+      &:hover {
+        background-color: $group-list-section-hover;
+        cursor: pointer;
+      }
+    }
+    @extend %list-action-item;
+
+    @include list-actions;
+  }
+}

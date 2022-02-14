@@ -1,0 +1,20 @@
+.neo__shadow--elevation-400 {
+  box-shadow: $token-shadows-elevation-400-x-offset
+    $token-shadows-elevation-400-y-offset $token-shadows-elevation-400-radius
+    $token-shadows-elevation-400-color;
+}
+.neo__shadow--elevation-300 {
+  box-shadow: $token-shadows-elevation-300-x-offset
+    $token-shadows-elevation-300-y-offset $token-shadows-elevation-300-radius
+    $token-shadows-elevation-300-color;
+}
+.neo__shadow--elevation-200 {
+  box-shadow: $token-shadows-elevation-200-x-offset
+    $token-shadows-elevation-200-y-offset $token-shadows-elevation-200-radius
+    $token-shadows-elevation-200-color;
+}
+.neo__shadow--elevation-100 {
+  box-shadow: $token-shadows-elevation-100-x-offset
+    $token-shadows-elevation-100-y-offset $token-shadows-elevation-100-radius
+    $token-shadows-elevation-100-color;
+}

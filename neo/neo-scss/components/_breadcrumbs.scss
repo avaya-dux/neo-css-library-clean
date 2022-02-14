@@ -1,0 +1,107 @@
+// <nav aria-label="Breadcrumb" class="neo-breadcrumbs">
+//   <ol>
+//     <li>
+//       <a href="../../">
+//         WAI-ARIA Authoring Practices 1.1
+//       </a>
+//     </li>
+//     <li>
+//       <a href="../../#aria_ex">
+//         Design Patterns
+//       </a>
+//     </li>
+//     <li>
+//       <a href="../../#breadcrumb">
+//         Breadcrumb Pattern
+//       </a>
+//     </li>
+//     <li>
+//       <a href="./index.html" aria-current="page">
+//         Breadcrumb Example
+//       </a>
+//     </li>
+//   </ol>
+// </nav>
+
+//   nav.breadcrumb li + li::before {
+//     display: inline-block;
+//     margin: 0 0.25em;
+//     transform: rotate(15deg);
+//     border-right: 0.1em solid currentColor;
+//     height: 0.8em;
+//     content: '';
+//   }
+
+.neo-breadcrumbs {
+  @include NeoLinkStyles;
+  display: flex;
+  justify-content: space-between;
+  & .neo-breadcrumbs__wrapper {
+    display: flex;
+    flex-direction: column;
+    & .neo-breadcrumbs__description {
+      color: $breadcrumbs-default-color;
+      font-size: $breadcrumbs-subtext-font-size;
+      font-weight: $breadcrumbs-subtext-font-weight;
+      letter-spacing: $breadcrumbs-subtext-letter-spacing;
+      line-height: $breadcrumbs-subtext-line-height;
+      margin: $breadcrumbs-subtext-spacing 0px 0px 0px;
+    }
+  }
+  & ol {
+    flex-grow: 1;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    & .neo-breadcrumbs__link {
+      display: inline;
+      & + .neo-breadcrumbs__link::before {
+        display: inline-block;
+        margin: 0px $breadcrumb-slash-spacing;
+        content: "/";
+        // @include rtl-selector {
+        //   content: "\\";
+        // }
+        font-size: $breadcrumbs-link-font-size;
+        font-weight: $breadcrumbs-link-font-weight;
+        letter-spacing: $breadcrumbs-link-letter-spacing;
+        line-height: $breadcrumbs-link-line-height;
+      }
+      & a {
+        // color: $breadcrumbs-default-color;
+        font-size: $breadcrumbs-link-font-size;
+        font-weight: $breadcrumbs-link-font-weight;
+        letter-spacing: $breadcrumbs-link-letter-spacing;
+        line-height: $breadcrumbs-link-line-height;
+        text-decoration: none;
+        &:hover {
+          color: $breadcrumbs-hover-color;
+        }
+      }
+      &--current a {
+        // color: $breadcrumbs-active-color;
+        color: $breadcrumbs-default-color;
+        font-size: $breadcrumbs-link-font-size;
+        font-weight: $breadcrumbs-link-font-weight;
+        letter-spacing: $breadcrumbs-link-letter-spacing;
+        line-height: $breadcrumbs-link-line-height;
+        text-decoration: none;
+        &:hover {
+          color: $breadcrumbs-default-color;
+        }
+      }
+    }
+  }
+
+  & .neo-breadcrumbs__actions {
+    display: flex;
+    align-self: center;
+    & .neo-btn:not(:last-child) {
+      margin-right: $token-breadcrumb-breadcrumb-button-spacing;
+      @include rtl-selector {
+        margin-right: 0px;
+        margin-left: $token-breadcrumb-breadcrumb-button-spacing;
+      }
+    }
+  }
+}

@@ -1,0 +1,70 @@
+// .neo-input-textarea__editable {
+//   margin-top: $input-in-label-margin-top;
+//   margin-bottom: $input-in-label-margin-top;
+//   // position: relative;
+//   resize: both;
+//   overflow: auto;
+//   border: $input-border-width $input-border-style $input-border-color;
+//   display: flex;
+//   justify-content: space-between;
+//   &--locked {
+//     resize: none;
+//   }
+//   &:hover {
+//     border-color: $token-input-border-hover-color;
+//   }
+//   &:focus-within {
+//     border-color: $input-focus-border-color;
+//   }
+//   // &::-webkit-resizer {
+//   //   // border: 2px solid yellow;
+//   //   // background: blue;
+//   //   // box-shadow: 0 0 2px 5px red;
+//   //   // outline: 2px dashed green;
+//   //   position: absolute;
+//   //   right: 0;
+//   //   bottom: 0;
+//   // }
+//   & .neo-input {
+//     border: none;
+//     height: 100%;
+//     width: 95%;
+//     overflow-wrap: break-word;
+//     resize: none;
+//   }
+//   & .neo-input-edit__icon {
+//     // position: absolute;
+//     border: none;
+//     background-color: $global-background;
+//     color: $input-clear-button-color;
+//     margin-right: $input-padding-x;
+//     margin-left: $input-padding-x;
+//     align-self: center;
+//     cursor: pointer;
+//     &:before {
+//       font-size: 16px;
+//     }
+//   }
+// }
+
+.neo-input-textarea--locked {
+  resize: none;
+}
+
+.neo-input-textarea__helper {
+  margin-top: 8px;
+  display: flex;
+  .neo-input-hint {
+    align-self: flex-start;
+  }
+  .neo-input-textarea__counter {
+    margin-left: auto;
+  }
+}
+
+textarea:focus {
+  border: $input-border-width $input-border-style $input-focus-border-color;
+  border-width: 2px;
+  outline: none;
+  margin: -1px -1px;
+}

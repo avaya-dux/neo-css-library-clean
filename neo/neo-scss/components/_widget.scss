@@ -1,0 +1,345 @@
+// new widget styles
+
+// experimental shimmer style -- credit to https://webdevtrick.com/pure-css-shimmer-text-effect/
+
+@mixin neo-shimmer {
+  &--loading > * {
+    text-align: center;
+    color: transparent;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#f1f1f1),
+      to(#f1f1f1),
+      color-stop(0.5, #fff)
+    );
+    background: -moz-gradient(
+      linear,
+      left top,
+      right top,
+      from(#f1f1f1),
+      to(#f1f1f1),
+      color-stop(0.5, #fff)
+    );
+    background: gradient(
+      linear,
+      left top,
+      right top,
+      from(#f1f1f1),
+      to(#f1f1f1),
+      color-stop(0.5, #fff)
+    );
+    -webkit-background-size: 125px 100%;
+    -moz-background-size: 125px 100%;
+    background-size: 125px 100%;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+    -webkit-animation-name: shimmer;
+    -moz-animation-name: shimmer;
+    animation-name: shimmer;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #f1f1f1;
+    // height: 50px;
+  }
+  .dark &--loading > * {
+    text-align: center;
+    color: transparent;
+    background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#323232),
+      to(#323232),
+      color-stop(0.5, #242424)
+    );
+    background: -moz-gradient(
+      linear,
+      left top,
+      right top,
+      from(#323232),
+      to(#323232),
+      color-stop(0.5, #242424)
+    );
+    background: gradient(
+      linear,
+      left top,
+      right top,
+      from(#323232),
+      to(#323232),
+      color-stop(0.5, #242424)
+    );
+    -webkit-background-size: 125px 100%;
+    -moz-background-size: 125px 100%;
+    background-size: 125px 100%;
+    -webkit-background-clip: content-box;
+    -moz-background-clip: content-box;
+    background-clip: content-box;
+    -webkit-animation-name: shimmer;
+    -moz-animation-name: shimmer;
+    animation-name: shimmer;
+    -webkit-animation-duration: 2s;
+    -moz-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: #323232;
+    // height: 50px;
+  }
+}
+@-moz-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-webkit-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@-o-keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+@keyframes shimmer {
+  0% {
+    background-position: top left;
+  }
+  100% {
+    background-position: top right;
+  }
+}
+
+@mixin widget-element($value, $border-position: false) {
+  background-color: $global-background;
+  padding: $value;
+
+  // @if ($border-position) {
+  //   border-#{$border-position}: $modal-divider;
+  // }
+}
+
+.neo-widget__content {
+  @include NeoLinkStyles;
+  // animation: animation-modal-content $modal-animation-time;
+  color: $global-text-color;
+  // padding: 0 16px;
+  background-color: $widget-background-color;
+  border: $widget-border-width $widget-border-style $widget-border-color;
+  // border: $modal-border;
+  border-radius: $widget-border-radius;
+  // box-shadow: $modal-shadow;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+  height: 100%;
+  // padding: 0 $modal-padding-y;
+  position: relative;
+  width: auto;
+  // z-index: $modal-content-z;
+
+  // test overflow styles
+  // overflow: visible;
+
+  .neo-widget__header {
+    // @include widget-element(16px);
+    padding: $widget-heading-padding;
+    background-color: $global-background;
+    min-height: $widget-heading-min-height + $token-widgets-padding-y * 2;
+    // text-align: center;
+    width: 100%;
+    // vertical-align: middle;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    color: $widget-heading-color;
+    // hard-coded for now
+    // &::before {
+    //   margin-right: 10px;
+    // }
+
+    & .neo-widget__header-left {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      & [class^="neo-icon-"]:before,
+      & [class*="neo-icon-"]:before {
+        font-size: $token-widgets-header-icon-size;
+      }
+      & p {
+        align-self: center;
+        font-size: $widget-heading-font-size;
+        font-weight: $widget-heading-font-weight;
+        line-height: $widget-heading-line-height;
+        margin-bottom: 0px;
+        &:not(:only-child) {
+          margin-left: $widget-heading-font-margin-left;
+          margin-right: 0;
+          @include rtl-selector {
+            margin-left: 0;
+            margin-right: $widget-heading-font-margin-left;
+          }
+        }
+        color: $widget-heading-color;
+      }
+    }
+
+    & .neo-widget__header-right {
+      & .neo-multiselect__header {
+        padding: 8px 24px 8px 12px
+      }
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      flex: auto;
+      & .neo-input {
+        margin-top: 0px;
+      }
+      & .neo-switch {
+        padding-left: 0px;
+        margin-right: 0px;
+      }
+      & button[class^="neo-icon-"]:not([class^="neo-btn"]),
+      & button[class*="neo-icon-"]:not([class*="neo-btn"]) {
+        &:before {
+          font-size: $widget-heading-icon-button-size;
+        }
+        // NEEDS TO BE ADDED IN FIGMA
+        color: $token-widgets-header-font-color;
+        // background-color: #ffffff;
+        border: none;
+        background-image: linear-gradient(
+          50deg,
+          $button-tertiary-hover-background-color 0%,
+          $button-tertiary-hover-background-color 50%,
+          $button-secondary-background-color 50%,
+          $button-secondary-background-color 100%
+        );
+        background-repeat: no-repeat;
+        background-size: 300%;
+        background-position: 100% 0%;
+        transition: background-position $global-transition-duration
+          $global-transition-timing;
+        transition-delay: 0s, 0.15s;
+
+        &:hover {
+          transition-property: background-position, background-color, color;
+          transition-timing-function: $global-transition-timing;
+          transition-duration: $global-transition-duration;
+          transition-delay: 0s, 0.15s;
+          color: #000000;
+          background-color: $button-tertiary-hover-background-color;
+          cursor: pointer;
+          background-position: 0% 100%;
+        }
+        //   &--#{$name}:active,
+        //   &--#{$name}:focus {
+        //     color: map-get($value, pressed-color);
+        //     background-color: $button-tertiary-hover-background-color;
+        //     background-image: none;
+        //   }
+        &[disabled] {
+          background-image: none;
+          color: $global-disabled-color;
+          // added to fix issue with disabled state
+          background-color: transparent;
+          &:hover {
+            cursor: not-allowed;
+            box-shadow: none;
+          }
+        }
+        // }
+      }
+    }
+
+    &-disabled {
+      background-color: $global-disabled-bg;
+      color: $global-disabled-color;
+
+      & p {
+        color: $global-disabled-color !important;
+      }
+
+      & > * {
+        color: $global-disabled-color;
+      }
+    }
+  }
+
+  .neo-widget__body {
+    overflow: auto;
+    width: auto;
+    min-height: $modal-body-height;
+    background-color: $global-background;
+    padding: $widget-content-padding;
+    // @include widget-element(16px, top);
+    @include neo-shimmer;
+    &-disabled {
+      background-color: $global-disabled-bg;
+      color: $global-disabled-color;
+    }
+  }
+
+  .neo-widget__message {
+    font-size: $modal-message-font-size;
+    margin-bottom: $modal-message-margin-bottom;
+    &-disabled {
+      background-color: $global-disabled-bg;
+      color: $global-disabled-color;
+    }
+  }
+
+  // .neo-widget__footer {
+  //   display: flex;
+  //   justify-content: flex-end;
+  //   background-color: $global-background;
+  //   &-disabled {
+  //     background-color: $global-disabled-bg;
+  //     color: $global-disabled-color;
+  //   }
+
+  //   .neo-btn {
+  //     margin-bottom: 0;
+  //     &-secondary[disabled] {
+  //       border: none;
+  //     }
+
+  //     /* stylelint-disable max-nesting-depth */
+  //     &:not(:last-child) {
+  //       margin-right: $modal-margin;
+
+  //       @include rtl-selector {
+  //         margin: {
+  //           left: $modal-margin;
+  //           right: initial;
+  //         }
+  //       }
+  //     }
+  //   }
+
+  //   @include widget-element(16px, top);
+  // }
+}

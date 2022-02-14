@@ -1,0 +1,40 @@
+.neo-action {
+  border: 0;
+  //   border-radius: 100%;
+  cursor: pointer;
+  display: inline-block;
+  flex-grow: 0;
+  flex-shrink: 0;
+  //   font-size: 0;
+  background: transparent;
+  outline: none;
+  padding: 0;
+  pointer-events: auto;
+  position: relative;
+  text-align: center;
+  //   vertical-align: top;
+
+  //   &::after,
+  //   &::before {
+  //     content: '';
+  //     display: block;
+  //     left: 50%;
+  //     position: absolute;
+  //     top: 50%;
+  //     transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  //     transform-origin: center center;
+  //   }
+  &:focus {
+    // box-shadow: $input-focus-shadow;
+  }
+
+  //   &::before {
+  //     height: 1px;
+  //     width: 70%;
+  //   }
+
+  //   &::after {
+  //     height: 70%;
+  //     width: 1px;
+  //   }
+}

@@ -1,0 +1,256 @@
+// updated checkbox styles
+
+.neo-check {
+  opacity: 0;
+  // display: none;
+  position: absolute;
+  z-index: -1;
+
+  &:focus-visible {
+    + label:not(:empty) {
+      // &:before {
+      // box-shadow: 0 0px 8px $radio-background-active-color;
+      outline: rgba(20, 115, 230, 1) auto 2px;
+      // outline-offset: -2px;
+      // }
+    }
+    + label:empty {
+      &:before {
+        outline: rgba(20, 115, 230, 1) auto 2px;
+        outline-offset: 2px;
+      }
+    }
+  }
+
+  // &:focus {
+  //   + label:not(:empty) {
+  //     // &:before {
+  //     // box-shadow: 0 0px 8px $radio-background-active-color;
+  //     outline: rgba(20, 115, 230, 1) auto 2px;
+  //     // outline-offset: -2px;
+  //     // }
+  //   }
+  //   + label:empty {
+  //     &:before {
+  //       outline: rgba(20, 115, 230, 1) auto 2px;
+  //       outline-offset: 2px;
+  //     }
+  //   }
+  // }
+
+  + label {
+    color: $checkbox-label-font-color;
+    cursor: pointer;
+    display: inline-block;
+    // line-height: $checkbox-size;
+    // hard-coded for now
+    line-height: 22px !important;
+    padding: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px !important;
+
+    &::before {
+      background: $checkbox-icon-color;
+      border: $checkbox-border-width $checkbox-border-style
+        $checkbox-border-color;
+      content: "";
+      display: inline-block;
+      height: $checkbox-size;
+      margin-right: $checkbox-label-indent;
+      vertical-align: text-top;
+      min-width: $checkbox-size;
+      border-radius: $checkbox-border-radius;
+      // transition: $global-hover-transition;
+
+      /* stylelint-disable max-nesting-depth */
+      @include rtl-selector {
+        margin-left: $checkbox-label-indent;
+        margin-right: 0;
+      }
+    }
+  }
+
+  // &:hover + label::before {
+  //   background: $checkbox-checked-background;
+  // }
+
+  &:focus + label::before {
+    background: $checkbox-background;
+    // box-shadow: $input-focus-shadow; // need to specify style for this in Figma?
+  }
+
+  &:checked + label::before {
+    background: $checkbox-checked-background;
+    font-family: "updated-neo-icons" !important;
+    // neo-check
+    content: $checkbox-checked-icon;
+    font-size: $checkbox-icon-font-size;
+    color: $checkbox-color;
+    padding-left: 1px;
+    // padding-right: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // transition: $global-hover-transition;
+  }
+
+  &--indeterminate:checked + label::before {
+    background: $checkbox-checked-background;
+    font-family: "updated-neo-icons" !important;
+    // neo-check
+    content: $checkbox-indeterminate-icon;
+    color: $checkbox-color;
+    // hard-coded for now
+    font-size: 12px;
+    padding-left: 1px;
+    padding-right: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &:disabled + label,
+  &--disabled + label {
+    color: $checkbox-label-disabled-font-color;
+    cursor: not-allowed;
+
+    &--indeterminate:checked:disabled {
+      font-family: "updated-neo-icons" !important;
+      content: $checkbox-indeterminate-icon;
+      color: $checkbox-color;
+      // hard-coded for now
+      font-size: 12px;
+      padding-left: 1px;
+      padding-right: 0px;
+    }
+
+    &::before {
+      border: $checkbox-border-width $checkbox-border-style
+        $checkbox-disabled-border-color;
+      box-shadow: none;
+      cursor: not-allowed;
+    }
+    &::before {
+      // background-color: $checkbox-disabled-background;
+    }
+  }
+  &:checked:disabled + label {
+    // font-family: "updated-neo-icons" !important;
+    content: $checkbox-checked-icon;
+    font-size: $checkbox-icon-font-size;
+    // color: $checkbox-color;
+    // padding-left: 2px;
+    padding-right: 2px;
+    &::before {
+      background-color: $checkbox-disabled-background;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // utility styles for CSS-disabled checkboxes
+
+  &--disabled:checked + label {
+    &::before {
+      background: $checkbox-icon-color;
+      border: $checkbox-border-width $checkbox-border-style
+        $checkbox-disabled-border-color;
+      content: "";
+      height: $checkbox-size;
+      margin-right: $checkbox-label-indent;
+      vertical-align: text-top;
+      min-width: $checkbox-size;
+      border-radius: $checkbox-border-radius;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      // transition: $global-hover-transition;
+
+      /* stylelint-disable max-nesting-depth */
+      @include rtl-selector {
+        margin-left: $checkbox-label-indent;
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--disabled--checked:checked,
+  &--disabled--checked {
+    &:focus {
+      + label {
+        &:before {
+          // box-shadow: 0 0px 8px $radio-background-active-color;
+        }
+      }
+    }
+    & + label {
+      &::before {
+        border: $checkbox-border-width $checkbox-border-style
+          $checkbox-disabled-border-color;
+        // display: inline-block;
+        display: flex;
+      align-items: center;
+      justify-content: center;
+        height: $checkbox-size;
+        margin-right: $checkbox-label-indent;
+        vertical-align: text-top;
+        min-width: $checkbox-size;
+        border-radius: $checkbox-border-radius;
+        font-family: "updated-neo-icons" !important;
+        content: $checkbox-checked-icon;
+        font-size: $checkbox-icon-font-size;
+        color: $checkbox-color;
+        padding-left: 2px;
+        // padding-right: 2px;
+        background-color: $checkbox-disabled-background;
+        background: $checkbox-disabled-background !important;
+
+        @include rtl-selector {
+          margin-left: $checkbox-label-indent;
+          margin-right: 0;
+        }
+      }
+    }
+    // &--indeterminate + label,
+    &.neo-check--disabled--checked--indeterminate + label {
+      &::before {
+        font-family: "updated-neo-icons" !important;
+        content: $checkbox-indeterminate-icon;
+        color: $checkbox-color;
+        // hard-coded for now
+        font-size: 12px;
+        padding-left: 1px;
+        padding-right: 0px;
+      }
+    }
+  }
+
+  // useless code?
+
+  + label::after {
+    border: solid $token-color-base-0;
+    border-width: 0 2px 2px 0;
+    content: "";
+    display: none;
+    height: $checkbox-icon-height;
+    left: ($checkbox-size - $checkbox-icon-width) / 2;
+    position: absolute;
+    top: ($checkbox-size - $checkbox-icon-height) / 4;
+    transform: rotate(45deg);
+    width: $checkbox-icon-width;
+
+    @include rtl-selector {
+      left: auto;
+      right: ($checkbox-size - $checkbox-icon-width) / 2;
+    }
+  }
+
+  // removing default checkbox
+
+  // &:checked + label::after {
+  //   display: block;
+  // }
+}

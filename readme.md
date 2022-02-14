@@ -1,65 +1,69 @@
-This is the program that generates the Neo UI Component library
+# This is a document to explain how to contribute to the CSS for Neo
 
-This program is comprised of a collection of related modules that work together in various capacities to pull the UX Team's designs from our design software, Figma.
+The purpose of this document is to explain, in broad strokes, the process for adding to Neo's base CSS library.
 
-The salient elements of the source code file structure can be described as follows:
+This process is flexible and open to discussion/amendments per consensus.
 
-API --> These are the files associated with pulling the information related to our designs from Figma, process them, and converting them to the desired format across platforms. These are the most important files in the project.
+## Basic information
 
-components-functions --> This folder contains individual files related to each Component in Figma
+Neo's CSS is compiled from SCSS
 
-figma-functions --> This folder contains information related to Figma's API itself, including authentication and file information. It also includes files generated each time we pull our Design Tokens, which are then processed as necessary.
+The SCSS files are contained in the **neo/scss-update** folder
 
-icons-functions --> This folder contains files related to pulling our icons from Figma, generating the necessary icon font files and converting these into unicode values for use as CSS class name values.
+The SCSS files import the necessary variables for each Component from the **/build/scss** folder, which contains all the .scss files generated from the information pulled for each Component from Figma
 
-tokens-functions --> This folder contains the individual files associated with pulling each of our Design Tokens.
+**Note that these files should not be edited directly**
 
-firebase-functions --> This is a parallel development environment which represents the implementation of our Firebase server. It includes the functions for distributing our icon library as png/svg assets, as well as the code used to sign users up to our automated e-mail notification service.
+## Particular files of note:
 
-fonts --> Includes all the relevant font and CSS files for our multi-lingual font support
+The most important file to note in the **/scss-update folder** is 'variables.scss'
 
-neo --> This folder includes all the .scss files associated with the web version of our Neo UI Kit.
+This file contains all the variables that are used throughout the rest of the .scss files for each Component
 
-original-neo-styles --> The original, unaltered .css and .scss files as received by UX team as Neo v.2.x
+These are then referenced in each separate .scss file as necessary
 
-scss-update --> The current collection of .scss files being used to generate each new iteration of our Neo UI Kit
+the **/themes** folder contains alternate versions of the colour variables for use with light, dark, and dynamic colour modes
 
-neo_zip --> These are the files that are compressed and uploaded to our site for download each time a new version of Neo is released. Currently updated and compressed manually.
+the **/tokens** folder contains code to expose individual design tokens as CSS variables
 
-properties --> This folder contains the raw .json data generated from pulling our design information from Figma before it is run through style-dictionary and translated for each platform.
+## A note regarding CSS class names
 
-templates --> This folder contains misc. templates used when generating our design files, including the .css template for our icon library
+We try as much as possible to stick with B.E.M. notation for our CSS files
 
-//////// TO-DO -- address individual files in the project as necessary ////////
+[Block Element Modifier](http://getbem.com/) is a syntax in which to write CSS classes, which generally functions as follows:
 
-Explanation of npm scripts:
+```CSS
+.block {}
+.block__element {}
+.block--modifier {}`
+```
 
-The following scripts, located in package.json, are responsible for generating our design system files. The critical ones are as follows:
+## Compiling the SCSS to CSS
 
-icongen --> This script pulls and generates .css files from our icon library -- NOTE: there are some necessary files that are run manually and which need to be included in this script for it to be complete.
-neo-update-site-fast --> This script generates a .css file from all the .scss files in the neo/scss-update folder and inserts them directly in our website file directory for rapid testing/updates
+Currently, the .scss files are compiled into CSS using 'node-sass', a 3rd-party dep that runs via npm script
 
-/////// TO-DO -- continue enumerating and explaining scripts
+In the package.json, you will find the 'neo-update-site-fast' script, which is used to output the Neo.css file directly into the directory for our website on my local machine
 
-Draft explanation of order of operations when updating Neo UI library:
+The purpose of this is to be able to test changes to the CSS quickly
 
-When updating to a new version of the Neo UI library, the following steps constitute the usual order of operations:
+Once satisfied with the changes, the Neo.css file is copied back from the website into the appropriate release version folder inside the neo/dist/ folder
 
-1. If a new Component is being created, a unique .js file is created in the /API/components-functions directory for the Component in question. This file will contain the code which pulls information from the relavant file in Figma
-2. Once the necessary properties are pulled as .json files, add the necessary configuration info to /config.json and run 'node -r esm styleDicExt.js' to generate the necessary .scss files
-3. Create the corresponding files and values in the /neo/scss-update folder -- these can be tested if the necessary HTML has been added to the '/updated-components' page on the website after running the 'neo-update-site-fast' script
-4. The file created by the above script can be added to an appropriate distribution folder ex. neo/dist/3.18.0
-5. Run 'postcss neo.css > neo.min.css' to create a minified version of the neo.css file for deployment
-6. The resulting files should also be added to the /neo_zip folder, along with the updated icons .css file, compressed, and then added to the website
+Then, the 'postcss' command is run in Terminal to minify the Neo.css file, as follows
 
-/////// TO-DO -- continue expanding on steps to update website
+`postcss neo.css > neo.min.css`
 
-In case icons need to be pulled:
+These files are then added to the appropriate branch in the repository for our Neo npm package, located [here](https://github.com/zang-cloud/neo-npm-package)
 
-1. Run the 'icongen' script referenced above
-   **_ Important note _** save the icon file before running the following commands - this will ensure it is formatted correctly
-2. Run 'node -r esm icon-file-reader.js' in the API/icons-functions folder to retrieve the unicode for icons used directly in Neo's .scss files, and save them to a .json file. Note that you will have to run 'node -r esm styleDicExt.js' again to make sure the appropriate .scss file is generated.
-3. Run 'node -r esm neo-icon-combine.js' in the root directory to copy the new icons .css file into the appropriate .scss file in the /neo/scss-update folder. Now the icons will be added to the Neo.css file each time this is generated.
-4. As a second step, you will need to export the new icons from Figma in svg and png formats. These should be added to the appropriate sub-folder in the /resized-icons folder in the root directory, and then uploaded to the Firebase database along with the relevant .zip folders
+Afterwards, they are documented as necessary in the Changelog and then published to npm
 
-//////// TO-DO -- continue writing out steps as necessary
+## Miscellaneous notes
+
+Note that the process for adding icons to Neo is different than what is described here and should be discussed seperately as necessary
+
+Also note that, as mentioned above, this process only involves making changes to CSS properties which are not pulled directly from Figma. The process by which this is done is also different than what is described here and should be discussed seperately as necessary
+
+## Contribution process suggestions/to-dos
+
+1. Discuss in more detail the role of individual .scss files
+2. Discuss the process by which code should be committed/tested for review?
+3. Discuss how to coordinate changes to the base CSS library with work to do on the React Components

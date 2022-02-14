@@ -1,0 +1,451 @@
+%neo-select {
+  background-color: $select-background-color;
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+
+@mixin neo-select-element {
+  > select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-color: $select-background-color;
+    border: $select-border-width $select-border-style $select-border-color;
+    box-shadow: $select-box-shadow;
+    color: $select-font-color;
+    cursor: pointer;
+    display: block;
+    font-size: $select-font-size;
+    line-height: $select-line-height;
+    letter-spacing: $select-letter-spacing;
+    padding: $select-padding-y $select-offset-x $select-padding-y
+      $select-padding-x;
+    width: 100%;
+
+    @include rtl-selector {
+      padding: {
+        left: $select-offset-x;
+        right: $select-padding-x;
+      }
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    @include neo-select--disabled;
+    @include neo-select-focus;
+  }
+}
+
+@mixin neo-select-multiple {
+  [multiple] {
+    padding: 0;
+
+    @include rtl-selector {
+      padding: 0;
+    }
+
+    option {
+      padding: $select-padding-y $select-offset-x $select-padding-y
+        $select-padding-x;
+
+      &::before {
+        font-family: "updated-neo-icons";
+        content: $select-multiple-unselected-icon;
+        width: 1.3em;
+        text-align: center;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      &:checked::before {
+        font-family: "updated-neo-icons";
+        content: $select-multiple-selected-icon;
+      }
+      @include rtl-selector {
+        padding: {
+          left: $select-offset-x;
+          right: $select-padding-x;
+        }
+      }
+    }
+  }
+}
+
+@mixin neo-select--disabled {
+  &:disabled {
+    background-color: $select-disabled-bg;
+    color: $select-disabled-color;
+    cursor: not-allowed;
+  }
+}
+
+@mixin neo-select-focus {
+  &:focus {
+    border-color: $input-focus-border-color;
+    border-width: 2px;
+    margin: -1px;
+  }
+}
+
+@mixin neo-select-arrow {
+  &--disabled:not(.neo-select--multiple)::after {
+    color: $select-disabled-color;
+  }
+  &:not(.neo-select--multiple)::after {
+    align-items: center;
+    font-family: "updated-neo-icons";
+    color: $select-font-color;
+    content: $select-expand-icon;
+    display: inline-flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    right: $select-padding-x;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: $select-icon-font-size;
+    vertical-align: middle;
+    @include rtl-selector {
+      left: $select-padding-x;
+      right: auto;
+    }
+  }
+  &[disabled]:not(.neo-select--multiple)::after {
+    color: $select-disabled-color;
+  }
+}
+
+@mixin neo-select-spinner {
+  &__spinner {
+    & select,
+    & > div.neo-multiselect__header,
+    & > div.neo-multiselect-combo__header {
+      padding-left: $select-offset-x;
+    }
+
+    &::before {
+      color: $spinner-ring-color;
+      font-family: "updated-neo-icons";
+      content: $spinner-icon;
+      display: inline-block;
+      vertical-align: middle;
+      position: absolute;
+      left: $select-padding-x;
+      top: 25%;
+      transform: translateY(-50%);
+      font-size: $select-icon-font-size;
+
+      @include spinner-animation;
+    }
+  }
+}
+
+@mixin neo-select-spinner-override {
+  animation: none;
+  height: auto;
+  width: 100%;
+
+  &:not(.neo-select--multiple)::after {
+    left: auto;
+    margin: 0;
+    top: $select-icon-font-size / 2;
+    font-size: $select-icon-font-size;
+    content: "";
+    @include spinner-animation;
+  }
+}
+
+.neo-select {
+  border-radius: $select-border-radius;
+  min-height: 38px;
+  label > &,
+  label + & {
+  }
+  &:hover {
+    &:after {
+      color: $input-border-hover-color;
+    }
+    select {
+      border-color: $input-border-hover-color;
+    }
+  }
+  & select {
+    border-radius: $select-border-radius;
+    min-height: 38px;
+  }
+  @extend %neo-select;
+
+  @include neo-select-element;
+  @include neo-select-multiple;
+  @include neo-select-arrow;
+  @include neo-select-spinner;
+}
+
+@mixin neo-multiselect-arrow(
+  $arrow-icon: $dropdown-expand-icon,
+  $color: $global-text-color,
+  $padding-left: $dropdown-padding-x
+) {
+  &::after {
+    font-family: "updated-neo-icons";
+    color: $color;
+    content: $arrow-icon;
+    vertical-align: middle;
+    cursor: pointer;
+    position: absolute;
+    right: 8px;
+    background-color: $input-background-color;
+
+    @include rtl-selector {
+      right: 0;
+      left: 8px;
+    }
+  }
+  @include rtl-selector {
+    &::after {
+      font-family: "updated-neo-icons";
+      color: $color;
+      content: $arrow-icon;
+      padding: 0 $padding-left 0 0;
+      vertical-align: middle;
+    }
+    &::before {
+      display: none;
+    }
+  }
+}
+
+@mixin neo-multiselect-content {
+  &__content {
+    width: 100%;
+    transition-timing-function: $global-transition-timing;
+    left: 100%;
+    top: -1px;
+    box-shadow: $dropdown-box-shadow;
+    overflow-wrap: break-word;
+    white-space: normal;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 1px;
+    @include rtl-selector {
+      left: initial;
+      right: 100%;
+    }
+
+    .neo-radio + label:not(last-child),
+    .neo-switch:not(last-child),
+    .neo-check + label:not(last-child) {
+      margin-right: 0px;
+    }
+
+    & .neo-check ~ label {
+      padding: 8px 16px !important;
+    }
+
+    & .neo-check:not(input:disabled) + label {
+      &:hover,
+      &.neo-multiselect__content__item--hover,
+      &.neo-multiselect__content__item--focus,
+      &.neo-multiselect__content__item--focus {
+        background-color: $group-list-item-hover;
+      }
+    }
+
+    & .neo-check + label + .neo-input-hint {
+      white-space: nowrap;
+      margin: 0px;
+      padding-left: 40px !important;
+      padding-right: 8px !important;
+      @include rtl-selector {
+        padding-right: 8px !important;
+        padding-left: 40px !important;
+      }
+    }
+  }
+
+  & input[type="checkbox"]:disabled + label + .neo-input-hint {
+    color: $checkbox-label-disabled-font-color;
+  }
+
+  & .neo-input-group {
+    padding-bottom: 8px;
+    &:hover,
+    &.neo-multiselect__content__item--hover,
+    &.neo-multiselect__content__item--focus,
+    &.neo-multiselect__content__item--focus {
+      background-color: $navbar-background-color-hover;
+    }
+  }
+
+  & ul {
+    margin: 0;
+  }
+
+  & ul li {
+    color: $global-text-color;
+    padding: 8px 16px;
+    list-style: none;
+    &::before {
+      margin-right: 8px;
+    }
+    &[disabled],
+    &.neo-multiselect__content__item--disabled {
+      color: $checkbox-label-disabled-font-color;
+      &:hover {
+        cursor: not-allowed;
+      }
+    }
+    &:not([disabled]):hover,
+    &.neo-multiselect__content__item--hover:not([disabled]),
+    &.neo-multiselect__content__item--focus:not([disabled]),
+    &.neo-multiselect__content__item--focus:not([disabled]) {
+      cursor: pointer;
+      background-color: $navbar-background-color-hover;
+    }
+  }
+
+  @include neo-popover-content(
+    none,
+    $global-background,
+    $modal-border,
+    $dropdown-radius,
+    none,
+    0 0,
+    $dropdown-content-z,
+    0
+  );
+}
+
+@mixin neo-multiselect-states {
+  &--active > &__content {
+    display: block;
+    position: absolute;
+  }
+}
+
+.neo-multiselect {
+  box-sizing: border-box;
+  display: inline-block;
+  position: relative;
+  &:focus,
+  &:focus-within {
+    outline: 0;
+    & .neo-multiselect__header {
+      outline: 0;
+      border-color: $input-focus-border-color;
+      border-width: 2px;
+      margin: -1px;
+    }
+    & .neo-multiselect-combo__header {
+      border-color: $input-focus-border-color;
+      border-width: 2px;
+      margin: -1px;
+      & .neo-input {
+        box-shadow: none;
+      }
+    }
+  }
+
+  &--disabled {
+    &:focus {
+      outline: none;
+      & .neo-multiselect__header,
+      & .neo-multiselect-combo__header {
+        border-color: $input-disabled-color !important;
+      }
+    }
+    & .neo-multiselect__header,
+    & .neo-multiselect-combo__header {
+      background-color: $select-disabled-bg !important;
+      color: $select-disabled-color !important;
+      cursor: not-allowed !important;
+      &:focus {
+        border-color: $input-disabled-color !important;
+        outline: none;
+      }
+      &:after {
+        color: $select-disabled-color !important;
+        cursor: not-allowed !important;
+      }
+    }
+  }
+
+  & .neo-multiselect__header {
+    border-radius: $select-border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $select-background-color;
+    cursor: pointer;
+    color: $select-font-color;
+    border: $select-border-width $select-border-style $select-border-color;
+    @include neo-multiselect-arrow();
+
+    padding: 8px 24px 8px 12px;
+    font-size: $select-font-size;
+    line-height: $select-line-height;
+    letter-spacing: $select-letter-spacing;
+  }
+  & .neo-multiselect-combo__header {
+    border-radius: $select-border-radius;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $select-background-color;
+    color: $select-font-color;
+    border: $select-border-width $select-border-style $select-border-color;
+    @include neo-multiselect-arrow();
+
+    & .neo-input {
+      border: none;
+      padding: 8px 0px 8px 12px;
+      width: 100%;
+    }
+
+    & .neo-chip {
+      &:first-child {
+        margin-left: 12px;
+      }
+      margin-left: 4px;
+    }
+
+    padding-right: 12px;
+    font-size: $select-font-size;
+    line-height: $select-line-height;
+    letter-spacing: $select-letter-spacing;
+  }
+
+  @include neo-multiselect-states;
+  @include neo-multiselect-content;
+}
+
+.neo-multiselect-combo__dropdown + .neo-multiselect__content,
+.neo-multiselect__dropdown + .neo-multiselect__content {
+  width: 100%;
+  max-width: initial;
+  ul li.neo-multiselect__dropdown__item {
+    display: flex;
+    &::after {
+      align-self: flex-end;
+      font-family: "updated-neo-icons";
+      content: $token-icons-neo-icon-chevron-right;
+      position: absolute;
+      right: 12px;
+    }
+    &::before {
+      margin-right: 8px;
+    }
+  }
+}
+
+.neo-multiselect__content
+  + .neo-dropdown
+  .neo-dropdown__content
+  .neo-dropdown__link {
+  padding: 8px 16px;
+}
+
+.neo-multiselect__content + .neo-dropdown {
+  display: block;
+}
