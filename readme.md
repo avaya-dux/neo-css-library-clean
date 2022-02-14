@@ -8,15 +8,15 @@ This process is flexible and open to discussion/amendments per consensus.
 
 Neo's CSS is compiled from SCSS
 
-The SCSS files are contained in the **neo/scss-update** folder
+The SCSS files are contained in the **neo/neo-scss** folder
 
-The SCSS files import the necessary variables for each Component from the **/build/scss** folder, which contains all the .scss files generated from the information pulled for each Component from Figma
+The SCSS files import the necessary variables for each Component from the **/generated-styles/scss** folder, which contains all the .scss files generated from the information pulled for each Component from Figma
 
 **Note that these files should not be edited directly**
 
 ## Particular files of note:
 
-The most important file to note in the **/scss-update folder** is 'variables.scss'
+The most important file to note in the **/neo-scss folder** is 'variables.scss'
 
 This file contains all the variables that are used throughout the rest of the .scss files for each Component
 
@@ -40,27 +40,33 @@ We try as much as possible to stick with B.E.M. notation for our CSS files
 
 ## Compiling the SCSS to CSS
 
-Currently, the .scss files are compiled into CSS using 'node-sass', a 3rd-party dep that runs via npm script
+Currently, the .scss files are compiled into CSS using `node-sass`, a 3rd-party dep that runs via npm script
 
-In the package.json, you will find the 'neo-update-site-fast' script, which is used to output the Neo.css file directly into the directory for our website on my local machine
+In the package.json, you will find the `update-site` script, which is used to output the Neo.css file directly into the directory for our website on your local machine
+
+The script should be called as follows: `npm run update-site <<path to root directory of site on your local machine/src/global-styles/neo.css>>` ex. `npm run update site ../Avaya_Portal_Nxt_Gen/src/global_styles/neo.css`
 
 The purpose of this is to be able to test changes to the CSS quickly
 
-Once satisfied with the changes, the Neo.css file is copied back from the website into the appropriate release version folder inside the neo/dist/ folder
-
-Then, the 'postcss' command is run in Terminal to minify the Neo.css file, as follows
+Once satisfied with the changes, copy the Neo.css file back from the website and run the 'postcss' command in Terminal to minify the Neo.css file, as follows
 
 `postcss neo.css > neo.min.css`
 
-These files are then added to the appropriate branch in the repository for our Neo npm package, located [here](https://github.com/zang-cloud/neo-npm-package)
+Both the original and minified files are then added to the appropriate branch in the repository for our Neo npm package, located [here](https://github.com/zang-cloud/neo-npm-package)
 
 Afterwards, they are documented as necessary in the Changelog and then published to npm
 
-## Miscellaneous notes
+## Adding icons to the CSS library
 
-Note that the process for adding icons to Neo is different than what is described here and should be discussed seperately as necessary
+Although icons are included in the Neo CSS library as a font-family, the process to add them is slightly different and includes several manual steps, as follows:
 
-Also note that, as mentioned above, this process only involves making changes to CSS properties which are not pulled directly from Figma. The process by which this is done is also different than what is described here and should be discussed seperately as necessary
+In the **figma-API/** folder in **design-system-functions.js**, input the name of the icons to be pulled from Figma ex. `layout-immersive`,
+
+Then, in **figma-API/icons-functions/icon-css-generator.js**, add a unique value for the unicode to be associated with the icon in question in the `unicodes` cost ex. `"layout-immersive": 0xf3e9`
+
+Afterwards, run the `pull-icons` script from terminal as follows: `npm run pull-icons`
+
+Then, once the script completes, you should be able to run the `update-site` script following the instructions above to have the icons added to Neo.css
 
 ## Contribution process suggestions/to-dos
 
