@@ -44,7 +44,7 @@ Currently, the .scss files are compiled into CSS using `node-sass`, a 3rd-party 
 
 In the package.json, you will find the `update-site` script, which is used to output the Neo.css file directly into the directory for our website on your local machine
 
-The script should be called as follows: `npm run update-site <<path to root directory of site on your local machine/src/global-styles/neo.css>>` ex. `npm run update site ../Avaya_Portal_Nxt_Gen/src/global_styles/neo.css`
+The script should be called as follows: `PATHTOPORTAL=<<path to root directory of site on your local machine/src/global-styles/neo.css>> npm run update-site` ex. `PATHTOPORTAL=../Avaya_Portal_Nxt_Gen/src/global_styles/neo.css npm run update-site`
 
 The purpose of this is to be able to test changes to the CSS quickly
 
