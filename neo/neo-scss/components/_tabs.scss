@@ -1,12 +1,9 @@
-// update tab styles
-
 %tab-nav {
   align-items: flex-end;
   display: flex;
   list-style: none;
   margin-bottom: 0;
   margin-left: 0;
-  // transition: $tab-transition;
   @include rtl-selector {
     margin: {
       left: initial;
@@ -25,8 +22,6 @@
   }
 }
 
-// vertical tab styles
-
 @mixin tab-item-vertical {
   &__item--vertical {
     position: relative;
@@ -42,24 +37,6 @@
       outline: $global-outline-color auto 2px;
       outline-offset: -4px;
     }
-
-    // @include rtl-selector {
-    //   margin: {
-    //     left: $tab-offset;
-    //     right: initial;
-    //   }
-    // }
-
-    // &:last-child {
-    //   margin-right: 0;
-
-    //   @include rtl-selector {
-    //     margin-left: 0;
-    //   }
-    // }
-    &:focus {
-      // outline: none;
-    }
     a {
       &:not(:last-child) {
         margin-right: 5px;
@@ -74,7 +51,6 @@
       margin: 0;
       padding-bottom: 8px;
       text-decoration: none;
-      // text-transform: capitalize;
 
       &:focus {
         outline: none;
@@ -92,7 +68,6 @@
     .neo-icon-end {
       color: $tab-default-color;
     }
-    // hover states that affect whole Component
     &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):hover,
     &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):focus-within {
       background-color: $tab-hover-bg-color;
@@ -179,16 +154,6 @@
       outline-offset: -3px;
     }
 
-    // &:last-child {
-    //   margin-right: 0;
-
-    //   @include rtl-selector {
-    //     margin-left: 0;
-    //     margin-right: 16px;
-    //   }
-    // }
-
-    // rtl style to space a from close button
     @include rtl-selector {
       a:not(:last-child) {
         padding-left: 5px;
@@ -201,10 +166,8 @@
       cursor: pointer;
       display: block;
       margin: 0;
-      // padding-top of tab item minus 2px for border
       padding-bottom: 6px;
       text-decoration: none;
-      // text-transform: capitalize;
       border-bottom: $tab-action-border-bottom-width solid transparent;
       &:not(:last-child) {
         padding-right: 5px;
@@ -222,30 +185,11 @@
           }
         }
       }
-
-      // &[dir='rtl']:before {
-      //   margin-left: 5px;
-      //   color: $tab-default-color;
-      // }
-
-      // &::after {
-      //   display: block;
-      //   content: attr(title);
-      //   font-weight: bold;
-      //   height: 0;
-      //   overflow: hidden;
-      //   visibility: hidden;
-      // }
     }
 
     .neo-icon-end {
       border-bottom: $tab-action-border-bottom-width solid transparent;
       color: $tab-default-color;
-      // &:hover {
-      //   cursor: pointer;
-      //   color: $tab-item-hover-color;
-      //   // color: $input-hover-color;
-      // }
     }
 
     &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(.neo-tabs__item--vertical-active-disabled):hover,
@@ -257,33 +201,25 @@
     &:hover,
     &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):focus-within {
       cursor: pointer;
-      // transition: $tab-hover-transition;
       a {
         &:before {
           color: $tab-item-hover-color;
         }
-        // border-width: 2px;
-        // border-bottom-color: $tab-item-hover-color;
         color: $tab-item-hover-color;
-        // text-shadow: 1px 0 0 $tab-item-hover-color;
       }
       .neo-icon-end {
         cursor: pointer;
         color: $tab-item-hover-color;
-        // color: $input-hover-color;
       }
     }
 
     @include tab--active;
     @include tab--disabled;
   }
-
-  // @include tab--bordered;
 }
 
 @mixin tab--active {
   &--active {
-    // property related to carousel
     opacity: 1;
     background-color: $tab-background-color;
     a {
@@ -307,12 +243,10 @@
       transition: $tab-hover-transition;
       a {
         color: $tab-item-hover-color;
-        // text-shadow: 0.5px 0 0 $tab-item-hover-color;
         font-weight: $tab-hover-font-weight;
         border-bottom-color: $tab-item-hover-color;
         &:before {
           color: $tab-item-hover-color;
-          // text-shadow: 0.5px 0 0 $tab-item-hover-color;
           font-weight: $tab-hover-font-weight;
         }
       }
@@ -350,10 +284,8 @@
       a {
         cursor: not-allowed;
         color: $tab-disabled-color;
-        // font-weight: normal;
         &:before {
           color: $tab-disabled-color;
-          // font-weight: normal;
         }
       }
       .neo-icon-end {
@@ -520,7 +452,6 @@
   &__carousel--more {
     flex-grow: 1;
     display: flex;
-    // justify-content: flex-end;
   }
 }
 
@@ -531,10 +462,6 @@
       font-size: $notification-close-icon-size;
     }
   }
-  // & .neo-tabs__nav :not(.neo-tabs__item--active) .neo-icon-end,
-  // & .neo-tabs__nav :not(.neo-tabs__item--disabled) .neo-icon-end {
-  //   color: $tab-default-color;
-  // }
 }
 
 @mixin extra-content {
