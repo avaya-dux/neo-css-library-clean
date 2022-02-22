@@ -161,6 +161,23 @@
       }
     }
 
+    @include rtl-selector-element {
+      a {
+        &:before {
+          margin: {
+            left: 5px;
+            right: 0;
+          }
+        }
+        &:not(:last-child) {
+          padding: {
+            left: 5px;
+            right: 0px;
+          }
+        }
+      }
+    }
+
     a {
       color: $tab-default-color;
       cursor: pointer;
