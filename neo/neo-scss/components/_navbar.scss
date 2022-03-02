@@ -1,25 +1,3 @@
-// updated navbar styles
-
-// @mixin navbar-default-color {
-//   .neo-btn {
-//     // background-color: $navbar-background-color;
-//     color: $navbar-default-icon-color;
-
-//     &:hover {
-//       background-color: $navbar-background-color-hover;
-//       box-shadow: none;
-//     }
-
-//     .neo-form--inline .neo-btn {
-//       background-color: $navbar-background-color;
-
-//       &:hover {
-//         background-color: $navbar-background-color-hover;
-//       }
-//     }
-//   }
-// }
-
 @mixin navbar-form {
   .neo-form {
     margin-left: $navbar-padding-x;
@@ -68,7 +46,6 @@
 @mixin navbar-button {
   .neo-btn:empty {
     font-size: $navbar-button-font-size;
-    // background: $navbar-background-color !important;
   }
 }
 
@@ -85,7 +62,6 @@
   border-bottom: $navbar-border-width $navbar-border-style
     $navbar-border-bottom-color;
 
-  // @include navbar-default-color;
   @include navbar-form;
   @include navbar-tabs;
 
@@ -131,8 +107,6 @@
 
 .neo-nav {
   @include NeoLinkStyles;
-  // avatar dropdown in Navbar
-  // TO-DO: extend these styles to Avatar dropdowns more generally
   & .neo-dropdown {
     display: flex;
     flex-direction: column;
@@ -164,26 +138,6 @@
       &:not(:empty) {
         background: none;
       }
-      // &.neo-avatar--empty {
-      //   &.neo-avatar--small::after {
-      //     padding: 0 0 0 36px;
-      //     @include rtl-selector {
-      //       padding: 0 36px 0 0;
-      //     }
-      //   }
-      //   &.neo-avatar--medium::after {
-      //     padding: 0 0 0 44px;
-      //     @include rtl-selector {
-      //       padding: 0 44px 0 0;
-      //     }
-      //   }
-      //   &.neo-avatar--large::after {
-      //     padding: 0 0 0 56px;
-      //     @include rtl-selector {
-      //       padding: 0 56px 0 0;
-      //     }
-      //   }
-      // }
       &--small:empty::after,
       &.neo-avatar--small:empty::after {
         padding: 0 0 0 36px;
@@ -212,7 +166,6 @@
     }
   }
 
-  // align-items: center;
   display: flex;
   list-style: none;
   padding: 0;
@@ -230,19 +183,16 @@
       bottom: 0;
     }
   }
-  // experimental nested class
   &--nested {
     margin: 0px;
   }
   & .neo-badge__navbutton {
     height: 100%;
-    // hard-coded for now
     width: $navbar-icon-button-width;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // testing new class for higher specificity
     & .neo-badge__navbutton--content {
       height: 100% !important;
       width: $navbar-icon-button-width !important;
@@ -251,17 +201,14 @@
       &:focus-visible {
         outline-offset: -2px !important;
         box-shadow: none;
-        // outline: rgba(20, 115, 230, 1) auto 2px;
       }
       &::before {
         color: $navbar-default-icon-color;
       }
     }
     &:hover,
-    // &:not(.neo-badge__navbutton--active-disabled):focus-within,
     &:not(.neo-badge__navbutton--active-disabled):not(.neo-badge__navbutton--disabled):focus-within {
       transition: $button-transition;
-      // background-color: $navbar-background-color-hover;
       & .neo-badge__navbutton--content,
       & .neo-badge__navbutton--content:active,
       & .neo-badge__navbutton--content:target {
@@ -287,7 +234,6 @@
         }
       }
 
-      // testing new class for higher specificity
       & .neo-badge__navbutton--content::before {
         color: $navbar-icon-selected-color;
       }
@@ -300,7 +246,6 @@
         background-color: $navbar-background-color;
         border-bottom-color: $navbar-item-selected-disabled-color;
 
-        // testing new class for higher specificity
         & .neo-badge__navbutton--content,
         & .neo-badge__navbutton--content:active {
           cursor: not-allowed;
@@ -310,7 +255,6 @@
           }
         }
       }
-      // testing new class for higher specificity
       & .neo-badge__navbutton--content::before {
         color: $navbar-item-selected-disabled-color;
       }
@@ -319,7 +263,6 @@
       &:hover {
         cursor: not-allowed;
         background-color: $navbar-background-color;
-        // testing new class for higher specificity
         & .neo-badge__navbutton--content,
         & .neo-badge__navbutton--content:active {
           cursor: not-allowed;
@@ -329,7 +272,6 @@
           }
         }
       }
-      // testing new class for higher specificity
       & .neo-badge__navbutton--content::before {
         color: $navbar-item-disabled-color;
       }
@@ -375,7 +317,6 @@
     & .neo-nav-status-info {
       display: flex;
       flex-direction: column;
-      // max-width: 77%;
       margin-right: $token-navbar-agent-card-left-margin-left;
       margin-left: 0;
       & p {
@@ -403,7 +344,6 @@
       letter-spacing: $navbar-agentcard-status-letter-spacing;
       font-weight: $navbar-agentcard-status-font-weight;
       width: fit-content;
-      // hard-coded for now
       padding: 2px 8px;
       border-radius: 16px !important;
       color: $global-text-inverse-color;
@@ -445,8 +385,6 @@
   line-height: $navbar-item-line-height;
   padding: $navbar-item-padding;
   text-decoration: none;
-
-  // @include navbar-states;
 }
 
 .neo-navbar--sticky {
@@ -460,28 +398,24 @@
 
 .neo-nav--left {
   display: flex;
-  // & [class*='neo-icon-'].neo-btn:empty::before {
-  //   font-size: 32px;
-  // }
   align-items: center;
-  & h4 {
+  & .neo-nav--left--heading {
     margin: 0;
     margin-left: 16px;
-    // @include rtl-selector {
-    //   margin-left: 0px;
-    //   margin-right: 16px;
-    // }
+    color: $heading-color;
+    font-size: $token-web-typography-web-heading-4-font-size;
+    line-height: $token-web-typography-web-heading-4-line-height;
+    color: $heading-color;
+    font-weight: $heading-font-weight;
   }
   height: 100%;
   & .neo-badge__navbutton {
     height: 100%;
-    // hard-coded for now
     width: $navbar-icon-button-width;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    // testing new class for higher specificity
     & .neo-badge__navbutton--content {
       height: 100% !important;
       width: $navbar-icon-button-width !important;
@@ -496,7 +430,6 @@
     }
     &:hover {
       transition: $button-transition;
-      // background-color: $navbar-background-color-hover;
       & .neo-badge__navbutton--content {
         transition: $button-transition;
         background-color: $navbar-background-color-hover;
@@ -520,7 +453,6 @@
         }
       }
 
-      // testing new class for higher specificity
       & .neo-badge__navbutton--content::before {
         color: $navbar-icon-selected-color;
       }
@@ -533,7 +465,6 @@
         background-color: $navbar-background-color;
         border-bottom-color: $navbar-item-selected-disabled-color;
 
-        // testing new class for higher specificity
         & .neo-badge__navbutton--content {
           cursor: not-allowed;
           background-color: $navbar-background-color;
@@ -542,7 +473,6 @@
           }
         }
       }
-      // testing new class for higher specificity
       & .neo-badge__navbutton--content::before {
         color: $navbar-item-selected-disabled-color;
       }
@@ -551,7 +481,6 @@
       &:hover {
         cursor: not-allowed;
         background-color: $navbar-background-color;
-        // testing new class for higher specificity
         & .neo-badge__navbutton--content {
           cursor: not-allowed;
           background-color: $navbar-background-color;
@@ -560,7 +489,6 @@
           }
         }
       }
-      // testing new class for higher specificity
       & .neo-badge__navbutton--content::before {
         color: $navbar-item-disabled-color;
       }
