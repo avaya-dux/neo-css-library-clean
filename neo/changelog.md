@@ -10,12 +10,13 @@
 
 ### Bugs Report - List of bugs that have been updated
 
-- Removed minimum width restriction on [Select](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Added appropriate RTL styles on [Tab](https://design.avayacloud.com/components/web/tabs-web) Components with icons
 
 ### 3.51.0
 
 ### New Features - List of bugs that have been updated
 
+- Added new version of 'info' [Icon](https://design.avayacloud.com/components/icons/)
 - Added styles for new [Pagination](https://design.avayacloud.com/components/web/pagination-web) variant Components.
 
 ### Bugs Report - List of bugs that have been updated
