@@ -1,5 +1,10 @@
 # Changelog
 
+### 3.51.1
+#### Bugs Report - List of bugs that have been updated
+
+- Added text-decoration:none inside Leftnav component anchor tags to elimate the default css applied by the storybook.
+
 ### 3.51.0
 
 ### New Features - List of bugs that have been updated
