@@ -1,5 +1,17 @@
 # Changelog
 
+### 3.51.2
+
+### Bugs Report - List of bugs that have been updated
+
+- Added a utility `neo-set-keyboard-focus` class to toggle :focus-visible style properties programatically
+
+### 3.51.1
+
+### Bugs Report - List of bugs that have been updated
+
+- Removed minimum width restriction on [Select](https://design.avayacloud.com/components/web/selectbox-web) Components
+
 ### 3.51.0
 
 ### New Features - List of bugs that have been updated
@@ -9,6 +21,7 @@
 ### Bugs Report - List of bugs that have been updated
 
 - Removed minimum width restriction on [Select](https://design.avayacloud.com/components/web/selectbox-web) Components
+
 ### 3.50.1
 
 ### Bugs Report - List of bugs that have been updated
@@ -16,6 +29,7 @@
 - Updated focus styles on [Text Input](https://design.avayacloud.com/components/web/input-web) Components to avoid layout shifts
 - Updated styles on [Tooltips](https://design.avayacloud.com/components/web/tooltip-web) to fix positioning errors on Checkbox groups
 - Made `neo-display-none` important
+
 ### 3.50.0
 
 #### New Features - New features that have recently been added
@@ -24,17 +38,23 @@
 - Made `neo-display-none` important
 
 ### 3.49.0
+
 #### New Features - New features that have recently been added
 
 - Added new utility display class names: `neo-display-none` and `neo-hidden`
+
 ### 3.48.1
+
 #### Bugs Report - List of bugs that have been updated
 
 - Fixed typo in filename of minified Neo CSS file
+
 ### 3.48.0
+
 #### New Features - New features that have recently been added
 
 - Added new 'calendar-filled' [Icons](https://design.avayacloud.com/components/icons/)
+
 ### 3.47.0
 
 #### New Features - New features that have recently been added
@@ -42,12 +62,14 @@
 - Added new styles for shortcut text to [Dropdown](https://design.avayacloud.com/components/web/dropdown-web) Components
 
 ### 3.46.0
+
 #### New Features - New features that have recently been added
 
 - Added the following new [Icons](https://design.avayacloud.com/components/icons/)
   - conference-call
   - conference-screen
   - coach-off
+
 #### Bugs Report - List of bugs that have been updated
 
 - Reset display property on [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) Components from 'table' to 'inline-block' in order to avoid text truncation issues.
