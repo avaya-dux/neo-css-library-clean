@@ -1,11 +1,9 @@
 # Changelog
 
-<<<<<<< HEAD
-### 3.51.1
+### 3.51.3
 #### Bugs Report - List of bugs that have been updated
 
 - Added text-decoration:none for [Leftnav component](https://design.avaya.com/components/web/left-nav-web) anchor tags to elimate the default css applied by the storybook.
-=======
 ### 3.51.2
 
 ### Bugs Report - List of bugs that have been updated
@@ -17,7 +15,6 @@
 ### Bugs Report - List of bugs that have been updated
 
 - Added appropriate RTL styles on [Tab](https://design.avayacloud.com/components/web/tabs-web) Components with icons
->>>>>>> 7a246effa58327f8988ede0aa585da71f90a7474
 
 ### 3.51.0
 
