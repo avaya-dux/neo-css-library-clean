@@ -1,5 +1,9 @@
 # Changelog
 
+### 3.51.3
+#### Bugs Report - List of bugs that have been updated
+
+- Added text-decoration:none for [Leftnav component](https://design.avaya.com/components/web/left-nav-web) anchor tags to elimate the default css applied by the storybook.
 ### 3.51.2
 
 ### Bugs Report - List of bugs that have been updated

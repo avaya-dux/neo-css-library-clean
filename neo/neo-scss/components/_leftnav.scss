@@ -237,6 +237,7 @@
       margin: 0;
       // hard-coded for now
       padding: 8px 28px 8px $leftnav-sub-padding-horizontal;
+      text-decoration: none;
       @include rtl-selector {
         padding: 8px $leftnav-sub-padding-horizontal 8px 0px;
       }
@@ -440,6 +441,7 @@
       }
       & > a {
         padding: 16px !important;
+        text-decoration: none;
         & span {
           flex-grow: 1;
           display: flex;
@@ -495,6 +497,7 @@
       bottom: 0;
       & > a {
         padding: 16px !important;
+        text-decoration: none;
         &:before {
           margin: 0px !important;
         }
