@@ -5,6 +5,11 @@
 ### New Features - List of bugs that have been updated
 
 - Added two new colors, `base-150` and `base-850` to [Design Tokens](https://design.avaya.com/components/tokens/#Colors)
+- Added new neo-leftnav__category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added text-decoration:none for [Leftnav component](https://design.avaya.com/components/web/left-nav-web) anchor tags to elimate the default css applied by the storybook.
 
 ### 3.51.2
 
