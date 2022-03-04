@@ -13,6 +13,8 @@
 //
 
 :root {
+  --neo-color-base-150: #{$token-color-base-150};
+  --neo-color-base-850: #{$token-color-base-850};
   --neo-color-data-viz-categorial-green: #{$token-color-data-viz-categorial-green};
   --neo-color-data-viz-categorial-purple-light: #{$token-color-data-viz-categorial-purple-light};
   --neo-color-data-viz-categorial-red: #{$token-color-data-viz-categorial-red};
@@ -341,7 +343,7 @@ $heading-font-sizes: map-merge(
     h3: $token-web-typography-web-heading-3-font-size,
     h4: $token-web-typography-web-heading-4-font-size,
     // we only go up to h4
-      h5: $global-font-size,
+    h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes
@@ -354,7 +356,7 @@ $heading-paragraph-spacing: map-merge(
     h3: $token-web-typography-web-heading-3-paragraph-spacing,
     h4: $token-web-typography-web-heading-4-paragraph-spacing,
     // we only go up to h4
-      h5: $global-font-size,
+    h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-font-sizes
@@ -367,7 +369,7 @@ $heading-line-heights: map-merge(
     h3: $token-web-typography-web-heading-3-line-height,
     h4: $token-web-typography-web-heading-4-line-height,
     // we only go up to h4
-      h5: $global-font-size,
+    h5: $global-font-size,
     h6: $global-font-size * 0.7,
   ),
   $heading-line-heights
@@ -2293,13 +2295,13 @@ $image-thumbnail-border-radius: $global-radius !default;
 // Stepper color variables
 
 :root {
---stepper-background-color: #{$token-stepper-background-color};
---stepper-main-font-color: #{$token-stepper-main-text-font-color};
---stepper-optional-font-color: #{$token-stepper-optional-text-font-color};
---stepper-disabled-dash-color: #{$token-stepper-disabled-dash-color};
---stepper-disabled-indicator-color: #{$token-stepper-disabled-indicator-color};
---stepper-disabled-main-text-font-color: #{$token-stepper-disabled-main-text-font-color};
---stepper-disabled-optional-text-font-color: #{$token-stepper-disabled-optional-text-font-color};
+  --stepper-background-color: #{$token-stepper-background-color};
+  --stepper-main-font-color: #{$token-stepper-main-text-font-color};
+  --stepper-optional-font-color: #{$token-stepper-optional-text-font-color};
+  --stepper-disabled-dash-color: #{$token-stepper-disabled-dash-color};
+  --stepper-disabled-indicator-color: #{$token-stepper-disabled-indicator-color};
+  --stepper-disabled-main-text-font-color: #{$token-stepper-disabled-main-text-font-color};
+  --stepper-disabled-optional-text-font-color: #{$token-stepper-disabled-optional-text-font-color};
 }
 
 $stepper-background-color: var(--stepper-background-color) !default;
