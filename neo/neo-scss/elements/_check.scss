@@ -22,6 +22,14 @@
     }
   }
 
+  + label:hover {
+    background-color: $token-color-base-100;
+  }
+
+  &:checked + label:hover {
+    background-color: $token-color-base-150;
+  }
+
   // &:focus {
   //   + label:not(:empty) {
   //     // &:before {
