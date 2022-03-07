@@ -132,6 +132,10 @@
     }
   }
 
+  &:checked + label {
+    font-weight: 600;
+  }
+
   &:checked + label::after,
   &:checked + .neo-tooltip > label::after {
     background-color: $radio-background-active-color;
