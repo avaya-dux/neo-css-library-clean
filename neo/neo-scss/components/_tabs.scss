@@ -151,7 +151,7 @@
 
     &:focus-within {
       outline: $global-outline-color auto 2px;
-      outline-offset: -3px;
+      outline-offset: -4px;
     }
 
     @include rtl-selector {
@@ -239,10 +239,11 @@
   &--active {
     opacity: 1;
     background-color: $tab-background-color;
+    border-bottom: $tab-action-border-bottom-width solid $tab-action-active-border-color;
+
     a {
       color: $tab-action-active-color;
       font-weight: $tab-hover-font-weight;
-      border-bottom-color: $tab-action-active-border-color;
       &:before {
         color: $tab-action-active-color;
         font-weight: $tab-hover-font-weight;
@@ -252,7 +253,6 @@
       }
     }
     .neo-icon-end {
-      border-bottom-color: $tab-action-active-border-color;
       color: $tab-action-active-color;
     }
     &:hover {
@@ -261,7 +261,6 @@
       a {
         color: $tab-item-hover-color;
         font-weight: $tab-hover-font-weight;
-        border-bottom-color: $tab-item-hover-color;
         &:before {
           color: $tab-item-hover-color;
           font-weight: $tab-hover-font-weight;
@@ -270,7 +269,6 @@
       .neo-icon-end {
         cursor: pointer;
         color: $tab-item-hover-color;
-        border-bottom-color: $tab-item-hover-color;
       }
     }
   }
