@@ -133,7 +133,7 @@
   }
 
   &:checked + label {
-    font-weight: 600;
+    font-weight: $token-web-typography-fontweight-semibold;
   }
 
   &:checked + label::after,
