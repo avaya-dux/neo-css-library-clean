@@ -319,14 +319,14 @@
     color: $tab-action-disabled-color;
     font-weight: $tab-hover-font-weight;
     cursor: not-allowed;
+    border-bottom: $tab-action-border-bottom-width solid $tab-action-disabled-color;
+
     &:hover {
       cursor: not-allowed;
     }
     a {
       cursor: not-allowed;
       color: $tab-action-disabled-color;
-      border-width: 2px;
-      border-bottom-color: $tab-action-disabled-color;
       &:before {
         color: $tab-action-disabled-color;
         font-weight: $tab-hover-font-weight;
@@ -339,7 +339,7 @@
     }
     .neo-icon-end {
       color: $tab-action-disabled-color;
-      border-bottom-color: $tab-action-disabled-color;
+
       &:before {
         color: $tab-action-disabled-color;
       }
@@ -349,8 +349,7 @@
         cursor: not-allowed;
         color: $tab-action-disabled-color;
         font-weight: $tab-hover-font-weight;
-        border-width: 2px;
-        border-bottom-color: $tab-action-disabled-color;
+
         &:before {
           color: $tab-action-disabled-color;
           font-weight: $tab-hover-font-weight;
