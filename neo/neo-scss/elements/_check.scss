@@ -71,6 +71,9 @@
       }
     }
   }
+  &:checked + label {
+    font-weight: $token-web-typography-fontweight-semibold;
+  }
 
   // &:hover + label::before {
   //   background: $checkbox-checked-background;
@@ -192,8 +195,8 @@
           $checkbox-disabled-border-color;
         // display: inline-block;
         display: flex;
-      align-items: center;
-      justify-content: center;
+        align-items: center;
+        justify-content: center;
         height: $checkbox-size;
         margin-right: $checkbox-label-indent;
         vertical-align: text-top;
