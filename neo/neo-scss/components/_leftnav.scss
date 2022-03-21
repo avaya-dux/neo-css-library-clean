@@ -79,8 +79,8 @@
         }
       }
     }
-    &--active,  & > .neo-leftnav__category {
-      & > a {
+    &--active {
+      & > a, & > .neo-leftnav__category {
         border-color: $leftnav-main-active-color;
         color: $leftnav-main-active-color;
         font-size: $leftnav-main-active-font-size;
