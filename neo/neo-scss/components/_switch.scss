@@ -1,6 +1,7 @@
 // pending fix for text alignment issue
 
 .neo-switch--multiline {
+  height: auto;
   padding-left: 38px !important;
   text-indent: -13px !important;
   .neo-switch__icon {
@@ -89,6 +90,10 @@
         transform: translate(-$switch-translate-distance, 0);
       }
     }
+  }
+
+  input:checked ~ span.neo-switch-children {
+    font-weight: $token-web-typography-fontweight-semibold;
   }
 }
 
