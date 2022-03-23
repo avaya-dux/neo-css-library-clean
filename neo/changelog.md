@@ -1,5 +1,10 @@
 # Changelog
 
+### 3.52.2
+
+#### Bugs Report - List of bugs that have been updated
+ - Added new class and selector for NavCategory component disabled state for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
+ 
 ### 3.52.1
 
 #### Bugs Report - List of bugs that have been updated
