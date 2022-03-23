@@ -1,27 +1,29 @@
 # Changelog
 
-### 3.52.2
-
-#### Bugs Report - List of bugs that have been updated
- - Added new class and selector for NavCategory component disabled state for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
- 
 ### 3.52.1
 
 #### Bugs Report - List of bugs that have been updated
- - Fixed selector for neo-leftnav__category class for  NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
+
+- Added new class and selector for NavCategory component disabled state for [Left Navigation](https://design.avaya.com/components/web/left-nav-web) Component
+- Fixed selector for `.neo-leftnav__category` class for NavCategory component for [Left Navigation](https://design.avaya.com/components/web/left-nav-web) Component
+- Adjusted position of filter sheet in [Table](https://design.avaya.com/components/web/tables-web) Component
+- Added 'semi-bold' font weight to [Checkbox](https://design.avayacloud.com/components/web/checkbox-web) and [Switch](https://design.avaya.com/components/web/switch-web) Components
+- Adjusted height of [Switch](https://design.avaya.com/components/web/switch-web) Components
+- Tweaked underline styles for [Tab](https://design.avayacloud.com/components/web/tabs-web) Components
 
 ### 3.52.0
 
 ### New Features - List of bugs that have been updated
 
 - Added two new colors, `base-150` and `base-850` to [Design Tokens](https://design.avaya.com/components/tokens/#Colors)
-- Added new neo-leftnav__category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
+- Added new neo-leftnav\_\_category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
 
 ### 3.51.3
 
 ### New Features -
 
-- Added new neo-leftnav__category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
+- Added new neo-leftnav\_\_category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
+
 #### Bugs Report - List of bugs that have been updated
 
 - Added text-decoration:none for [Leftnav component](https://design.avaya.com/components/web/left-nav-web) anchor tags to elimate the default css applied by the storybook.
