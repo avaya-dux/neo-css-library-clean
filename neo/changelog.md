@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.52.2
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added transparent border to [Tab](https://design.avayacloud.com/components/web/tabs-web) to avoid layout shift on active/hover
+
 ### 3.52.1
 
 #### Bugs Report - List of bugs that have been updated
