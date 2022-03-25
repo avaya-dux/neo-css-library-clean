@@ -148,6 +148,7 @@
     max-height: $tab-item-max-height;
     padding: 8px 16px 0px 16px;
     display: flex;
+    border-bottom: 2px solid transparent;
 
     &:focus-within {
       outline: $global-outline-color auto 2px;
@@ -239,7 +240,8 @@
   &--active {
     opacity: 1;
     background-color: $tab-background-color;
-    border-bottom: $tab-action-border-bottom-width solid $tab-action-active-border-color;
+    border-bottom: $tab-action-border-bottom-width solid
+      $tab-action-active-border-color;
 
     a {
       color: $tab-action-active-color;
@@ -319,7 +321,8 @@
     color: $tab-action-disabled-color;
     font-weight: $tab-hover-font-weight;
     cursor: not-allowed;
-    border-bottom: $tab-action-border-bottom-width solid $tab-action-disabled-color;
+    border-bottom: $tab-action-border-bottom-width solid
+      $tab-action-disabled-color;
 
     &:hover {
       cursor: not-allowed;
