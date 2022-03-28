@@ -5,6 +5,7 @@
 #### Bugs Report - List of bugs that have been updated
 
 - Added transparent border to [Tab](https://design.avayacloud.com/components/web/tabs-web) to avoid layout shift on active/hover
+- Added correct input height and active state styles for rows in [Table](https://design.avayacloud.com/components/web/tables-web) Components
 
 ### 3.52.1
 
