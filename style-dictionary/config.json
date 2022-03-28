@@ -3,7 +3,7 @@
   "platforms": {
     "scss": {
       "transformGroup": "scss",
-      "buildPath": "generated-styles/scss/",
+      "buildPath": "../generated-styles/scss/",
       "prefix": "token",
       "files": [
         {
