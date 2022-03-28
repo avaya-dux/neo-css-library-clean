@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.53.0
+
+### New Features - List of bugs that have been updated
+
+- Added new `acw` colors to [Navbar](https://design.avayacloud.com/components/web/navbar-web) Components
+
 ### 3.52.2
 
 #### Bugs Report - List of bugs that have been updated
