@@ -1,5 +1,3 @@
-// updated input styles
-
 @mixin input--states {
   @each $state-color-name, $state-color-value in $input-state-color-map {
     &--#{$state-color-name} {
@@ -17,7 +15,6 @@
   background-color: $input-background-color;
   border: $input-border-width $input-border-style $input-border-color;
   border-radius: $input-border-radius;
-  // box-shadow: $input-box-shadow;
   box-sizing: border-box;
   color: $input-font-color;
   display: block;
@@ -28,10 +25,8 @@
   min-height: $input-height;
   padding: $input-padding-y $input-padding-x;
   min-width: $input-width;
-  // width: 100%;
 
   &:hover {
-    // transition: $input-hover-transition;
     border-color: $input-border-hover-color;
   }
 
@@ -71,6 +66,7 @@
     border: none;
     padding: 0;
     min-height: auto;
+    padding-top: $input-read-only-label-padding;
     @include rtl-selector {
       padding-right: 0;
       padding-left: auto;
@@ -78,14 +74,9 @@
     &:active,
     &:focus {
       border: none;
-      // border-color: transparent;
       box-shadow: none;
     }
-    // input placeholder wrapper
   }
-  // &-readonly ~ label {
-  //   line-height: 16px;
-  // }
 
   &[disabled] {
     background-color: $input-disabled-bg;
@@ -94,22 +85,12 @@
     cursor: not-allowed;
   }
 
-  label > &,
-  label + & {
-    // margin-top: $input-in-label-margin-top;
-  }
-
   &:focus {
     border: $input-border-width $input-border-style $input-focus-border-color;
     // //hard-coded for now
     border-width: 2px;
-    // margin: -1px -1px;
     outline: none;
-    // margin: -1px -1px;
-    // border-color: transparent;
-    // box-shadow: 0 0 0 2px $input-focus-border-color;
   }
-
 
   &[disabled] {
     &::-webkit-input-placeholder {
@@ -159,47 +140,10 @@
     opacity: 1;
   }
 
-  // @include input--editable;
   @include input--states;
 }
 
-//  input error validation wrapper and input
-
-// .neo-input-error__wrapper {
-//   display: flex;
-//   flex-direction: row;
-//   border: $input-border-style $input-border-width $input-asterix-required-color;
-//   width: $input-width;
-//   min-height: $input-height;
-//   border-radius: 2px;
-//   & input,
-//   & textarea {
-//     border: none;
-//   }
-//   & .neo-input-error__icon {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     color: $input-asterix-required-color;
-//     //hard-coded for now
-//     padding-right: 11px;
-//   }
-// }
-
-// .neo-input-hint-error {
-//   // hard-coded margin for now
-//   margin-top: 4px;
-//   color: $input-asterix-required-color;
-// }
-
-// editable input style
-
 .neo-input-editable__wrapper {
-  label + & {
-    // margin-top: $input-in-label-margin-top;
-    // margin-bottom: $input-in-label-margin-top;
-  }
-
   border-radius: $input-border-radius;
   display: flex;
   flex-direction: row;
@@ -210,16 +154,12 @@
     border-color: $input-focus-border-color;
     // hard-coded for now
     border-width: 2px;
-    // padding: 1px;
-    // border-color: transparent;
-    // box-shadow: 0 0 0 2px $input-focus-border-color;
     margin: -1px -1px;
   }
   .neo-form-control:not(.neo-form-control--disabled)
     &:hover:not(:focus-within) {
     border-color: $input-border-hover-color;
   }
-  // test styles to display close buttons on hover
 
   &:hover .neo-input-edit__icon,
   &:hover .neo-input-editable__close {
@@ -241,8 +181,6 @@
     }
     &:focus {
       border: none;
-      // margin: -1px -1px;
-      // outline: none;
       &:focus {
         box-shadow: none;
       }
@@ -269,12 +207,5 @@
       outline: $global-outline-color auto 2px;
       margin: -1px -1px;
     }
-    &::before {
-      // font-size: $token-input-input-close-button-size;
-    }
   }
-  // &:hover .neo-input-edit__icon,
-  // &:hover .neo-input-editable__close {
-  //   visibility: visible;
-  // }
 }
