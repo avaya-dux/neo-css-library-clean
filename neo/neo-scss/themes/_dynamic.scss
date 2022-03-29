@@ -105,6 +105,7 @@
     // --table-nested-row-border-color: #{$token-color-blue-600};
     --table-sheet-border-color: #{$token-color-base-600};
     --table-filter-row-background-color: #{$token-color-base-900};
+    --table-hover-selected-row-background-color: #{$token-color-base-850};
   }
 }
 @media (prefers-color-scheme: light) {
@@ -120,6 +121,7 @@
     // --table-nested-row-border-color: #{$token-table-nested-row-border-color};
     --table-sheet-border-color: #{$token-table-sheet-border-color};
     --table-filter-row-background-color: #{$token-table-filters-row-background-color};
+    --table-hover-selected-row-background-color: #{$token-table-row-hover-selected-color};
   }
 }
 $button-color-primary-rgb-light: 20, 115, 230;

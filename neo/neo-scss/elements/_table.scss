@@ -1,339 +1,3 @@
-// // updated table styles
-
-// @mixin neo-table-children {
-//   // thead,
-//   // tbody,
-//   // tfoot {
-//   //   background-color: $table-background;
-//   //   // border: $table-border;
-//   // }
-
-//   // styles to center checkbox in head
-
-//   th label {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//   }
-
-//   td,
-//   th {
-//     padding: $table-padding;
-//     text-align: left;
-//     vertical-align: middle;
-//     text-align: center;
-//     @include rtl-selector {
-//       // text-align: right;
-//     }
-
-//     .neo-input,
-//     .neo-input-group,
-//     .neo-btn,
-//     .neo-button-group,
-//     .neo-label,
-//     .neo-chip,
-//     .neo-switch,
-//     .neo-group-list,
-//     .neo-form-control {
-//       margin-bottom: 0;
-//     }
-//   }
-
-//   .neo-table--disabled {
-//     cursor: not-allowed;
-//     opacity: 0.5;
-//     background-color: $table-disabled-bg-color;
-//     color: $table-disabled-text-color;
-//     & a {
-//       // color: $table-disabled-clickable-color;
-//       color: #757474;
-//       cursor: not-allowed;
-//     }
-//   }
-
-//   th {
-//     background-color: $table-head-background;
-//     color: $table-head-font-color;
-//     font-weight: 400 !important;
-//   }
-
-//   td {
-//     border-top: $table-border;
-//     &.neo-icon-more:before {
-//       font-size: 24px;
-//     }
-//     & .neo-form-control .neo-check + label {
-//       // display: block;
-//       display: flex;
-//       justify-content: center;
-//       align-items: center;
-//     }
-//   }
-
-//   thead th {
-//     vertical-align: bottom;
-//   }
-
-//   tfoot {
-//     background-color: $table-foot-background;
-//     color: $table-foot-font-color;
-//   }
-// }
-
-// @mixin neo-table--hover {
-//   &--hover {
-//     thead tr:hover {
-//       background-color: $table-head-hover;
-//     }
-
-//     tbody tr:hover {
-//       background-color: $table-row-hover;
-//       cursor: pointer;
-//     }
-
-//     tfoot tr:hover {
-//       background-color: $table-foot-row-hover;
-//     }
-//   }
-// }
-
-// @mixin neo-table--condensed {
-//   &--condensed {
-//     th,
-//     td {
-//       padding: $table-condensed-padding;
-//     }
-//   }
-// }
-
-// @mixin neo-table--sticky($axis, $position) {
-//   th {
-//     position: sticky;
-//     // Resolves issue with defined border-spacing
-//     #{$position}: -$table-border-width;
-//   }
-//   overflow-#{$axis}: auto;
-//   padding-#{$position}: 0;
-// }
-
-// @mixin table-sort-order($orderName, $orderIcon) {
-//   &.neo-table--#{$orderName} {
-//     background-color: $table-sortable-background-active;
-
-//     &::after {
-//       content: $orderIcon;
-//     }
-//   }
-// }
-
-// @mixin neo-table-buttons {
-//   :not(.neo-button-group) > .neo-btn {
-//     margin-right: $table-button-margin;
-
-//     @include rtl-selector {
-//       margin: {
-//         left: $table-button-margin;
-//         right: 0;
-//       }
-//     }
-
-//     &:last-child {
-//       margin-right: 0;
-
-//       @include rtl-selector {
-//         margin-left: 0;
-//       }
-//     }
-//   }
-// }
-
-// .neo-table__container--sticky {
-//   @include neo-table--sticky(x, top);
-// }
-
-// // .neo-table__container--vsticky {
-// //   @include neo-table--sticky(y, left);
-// // }
-
-// .neo-table {
-//   background-color: transparent;
-//   border-collapse: collapse;
-//   empty-cells: show;
-//   margin-bottom: $global-spacer;
-//   max-width: 100%;
-//   width: 100%;
-
-//   // new table select styles
-
-//   &-page-select {
-//     height: $table-page-select-height;
-//     width: $table-page-select-width;
-//     display: flex;
-//     flex-direction: row;
-//     align-items: center;
-
-//     & > label {
-//       margin-right: 8px;
-//       margin-left: auto;
-//       @include rtl-selector {
-//         margin-left: 8px;
-//         margin-right: auto;
-//       }
-//     }
-//     & > .neo-select {
-//       & > select {
-//         min-width: auto;
-//         // this is hard-coded for now
-//         width: $select-table-page-show-width;
-//         padding-left: $select-padding-left;
-//       }
-//       &:not(.neo-select--multiple)::after {
-//         // right: $select-padding-right;
-//         right: 8px;
-//       }
-//     }
-//   }
-
-//   // new filter select styles
-
-//   & ~ .neo-form-control {
-//     & .neo-table-filter {
-//       width: 116px;
-//       padding-left: $select-padding-left;
-//       // padding-right: auto;
-//       @include rtl-selector {
-//         // padding-left: auto;
-//         padding-right: $select-padding-left;
-//       }
-//       & ~ button {
-//         color: $global-text-color;
-//         background-color: #c9c9c9;
-//         // hard-coded padding for now
-//         // padding: 12px 0;
-//         &::before {
-//           font-size: 24px;
-//         }
-//         &:hover {
-//           box-shadow: none;
-//         }
-//       }
-
-//       // may not work on all browsers
-
-//       &::-webkit-input-placeholder {
-//         font-style: $input-placeholder-font-style;
-//       }
-//       &::-moz-placeholder {
-//         font-style: $input-placeholder-font-style;
-//       }
-//       &:-ms-input-placeholder {
-//         font-style: $input-placeholder-font-style;
-//       }
-//       &::placeholder {
-//         font-style: $input-placeholder-font-style;
-//       }
-//     }
-//   }
-
-//   @include neo-table-children;
-//   // @include neo-table--bordered;
-//   // @include neo-table--striped;
-//   @include neo-table--hover;
-//   @include neo-table--condensed;
-//   // @include neo-table--responsive;
-//   // @include neo-table--sortable;
-//   // @include neo-table--editable;
-//   @include neo-table-buttons;
-// }
-
-// // new date picker styles - only webkit version for now
-
-// // placeholder date picker styles - hard-coded for now
-
-// .neo-date-picker {
-//   padding: 4px 8px 4px 8px;
-//   border-radius: 4px;
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   width: 220px;
-//   height: 34px;
-//   font-size: 14px;
-//   font-style: italic;
-//   color: $table-date-picker-font-color;
-//   background-color: $table-date-picker-background-color;
-//   &::before {
-//     // hard-coded for now
-//     padding-right: 8px;
-//     content: 'MM DD YYYY';
-//   }
-//   &::after {
-//     // hard-coded for now
-//     padding-left: 8px;
-//     content: 'MM DD YYYY';
-//   }
-// }
-
-// // styles for sortable table heads -- WIP
-
-// .neo-table--sortable {
-//   & thead tr th.sort-asc {
-//     &::after {
-//       font-family: 'updated-neo-icons';
-//       content: $table-sortable-ascending-icon;
-//       vertical-align: middle;
-//     }
-//     @include rtl-selector {
-//       &::after {
-//         content: '';
-//       }
-//       &::before {
-//         font-family: 'updated-neo-icons';
-//         content: $table-sortable-ascending-icon;
-//         vertical-align: middle;
-//       }
-//     }
-//   }
-//   & thead tr th.sort-dsc {
-//     &::after {
-//       font-family: 'updated-neo-icons';
-//       content: $table-sortable-descending-icon;
-//       vertical-align: middle;
-//     }
-//     @include rtl-selector {
-//       &::after {
-//         content: '';
-//       }
-//       &::before {
-//         font-family: 'updated-neo-icons';
-//         content: $table-sortable-descending-icon;
-//         vertical-align: middle;
-//       }
-//     }
-//   }
-// }
-
-// .neo-table-filter__wrapper {
-//   display: flex;
-//   justify-content: flex-end;
-//   & .neo-form-control {
-//     & .neo-icon-filter {
-//       color: $global-text-color;
-//       background-color: #c9c9c9;
-//       // hard-coded padding for now
-//       // padding: 12px 0;
-//       &::before {
-//         font-size: 24px;
-//       }
-//       &:hover {
-//         box-shadow: none;
-//       }
-//     }
-//   }
-// }
-
-/// New Table styles
-
 .neo-table--sticky {
   overflow-x: auto;
   padding: 0;
@@ -349,9 +13,6 @@
     border-bottom: none !important;
     border-top: none !important;
   }
-  .neo-avatar .neo-img {
-    // z-index: 0;
-  }
 }
 
 .neo-table {
@@ -363,6 +24,10 @@
   width: 100%;
 
   &--compact {
+    tr td .neo-input {
+      min-height: initial;
+      height: 32px;
+    }
     tr:not(.neo-table__nested--wrapper) td,
     .neo-table__nested.show td,
     thead tr th {
@@ -377,10 +42,7 @@
     thead tr th .neo-check + label {
       display: flex;
     }
-    
   }
-
-  // Table headers
 
   th {
     color: var(--global-font-color);
@@ -410,7 +72,6 @@
     &.filters {
       padding: 0 8px !important;
       .neo-multiselect {
-        // should be th padding
         padding: $table-header-cell-padding-y $table-header-cell-padding-x !important;
         &:focus,
         &:focus-within {
@@ -438,7 +99,6 @@
       font-weight: 400;
       &:before {
         visibility: hidden;
-        // hard-coded value needs to change
         margin-right: $table-filter-icon-spacing;
         font-size: $table-filter-font-size;
         content: $token-icons-neo-icon-check;
@@ -463,7 +123,6 @@
         text-transform: none;
         vertical-align: middle;
         @include rtl-selector {
-          // hard-coded value needs to change
           margin-left: $table-filter-icon-spacing;
           margin-right: 0px;
         }
@@ -495,8 +154,6 @@
     }
   }
 
-  // Table rows
-
   tr {
     border-bottom: $table-row-border-width $table-row-border-style
       $table-row-border-color;
@@ -518,8 +175,6 @@
     }
     &:not(.disabled):hover,
     &:not(.disabled):focus-within {
-      // need colour transition animation
-      // FIGMA
       background-color: $table-row-hover-color;
       td .neo-check + label {
         display: flex;
@@ -528,14 +183,22 @@
         display: block;
       }
     }
+    & .neo-input {
+      height: 36px;
+      &:focus {
+        margin-left: -1px;
+        margin-right: -1px;
+      }
+    }
     &.active {
       background-color: $table-row-hover-color;
       border-bottom: $table-row-border-width $table-row-border-style
         $table-row-border-hover-active-color;
+      &:hover {
+        background-color: $table-row-hover-selected-color;
+      }
       td {
-        // FIGMA
         font-weight: $table-row-font-active-weight;
-        // text-shadow: 0.5px 0 0 currentColor;
       }
       td .neo-check + label {
         display: flex;
@@ -550,14 +213,10 @@
     }
   }
 
-  // Table cells
-
   td {
     color: $global-text-color;
     padding: $table-row-cell-padding-y $table-row-cell-padding-x;
     vertical-align: middle;
-    // background-color: $table-background-color;
-    // need better class name for cells with figures?
     &.disabled {
       background-color: $table-row-disabled-color;
       opacity: 0.5;
@@ -594,11 +253,9 @@
       }
     }
     .expand {
-      // may need to tweak speed as necessary
       transition: transform 0.15s ease;
     }
     .expand--active {
-      // may need to tweak speed as necessary
       transition: transform 0.15s ease;
       transform: rotate(90deg);
     }
@@ -613,14 +270,11 @@
         $token-table-nested-row-wrapper-padding-x
         $token-table-nested-row-wrapper-padding-x
         $token-table-nested-row-wrapper-padding-x !important;
-      // border-bottom: $table-nested-row-border-width solid;
-      // $table-nested-row-border-color;
     }
     .neo-table {
       visibility: initial !important;
     }
     div.neo-table__nested {
-      // arbitrary for now
       max-height: 500px;
     }
   }
@@ -629,7 +283,6 @@
     padding: 0;
   }
   .neo-table__nested {
-    // Figma?
     max-height: 0px;
     .neo-table {
       visibility: collapse;
@@ -655,7 +308,6 @@
   top: 38px;
 
   .neo-sheet__header--left h4 {
-    // minimum space between header and buttons - hard-coded for now
     margin-right: 12px;
     @include rtl-selector {
       margin-left: 12px;
@@ -664,12 +316,10 @@
   }
   .neo-form {
     flex-grow: 1;
-    // FIGMA
     margin-top: 8px;
     background-color: $sheet-background;
     .neo-form-control {
       width: 100%;
-      // FIGMA
       padding-bottom: 12px;
       border-bottom: $table-sheet-border-width $table-sheet-border-style
         $table-sheet-border-color;
@@ -690,7 +340,6 @@
   justify-content: space-between;
   align-items: center;
   background-color: $table-background-color;
-  // FIGMA
   padding-top: $table-actions-row-padding;
   padding-bottom: $table-actions-row-padding;
   &--left,
@@ -698,7 +347,6 @@
     display: flex;
   }
   &--left {
-    // FIGMA #1
     & > *:first-child {
       margin-right: $table-actions-bar-spacing;
       @include rtl-selector {
@@ -744,9 +392,7 @@
 .neo-table__filters {
   display: flex;
   flex-direction: row;
-  // FIGMA
   background-color: $table-filters-background-color;
-  // FIGMA
   & > .neo-form--inline {
     padding: $table-filters-row-padding-y $table-filters-row-padding-x;
     width: 100%;

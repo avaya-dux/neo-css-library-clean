@@ -733,48 +733,6 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
 
 // Table colour variables
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --table-header-cell-border-color: #{$token-color-base-600};
-//     --table-header-cell-hover-color: #{$token-color-blue-800};
-//     --table-background-color: #{$token-color-base-900};
-//     --table-row-disabled-color: #{$token-color-base-800};
-//     --table-row-border-color: #{$token-color-base-800};
-//     --table-row-hover-color: #{$token-color-blue-800};
-//     --table-row-font-active-color: #{$token-color-blue-200};
-//     --table-nested-row-background-color: #{$token-color-base-800};
-//     --table-nested-row-border-color: #{$token-color-blue-600};
-//     --table-sheet-border-color: #{$token-color-base-600};
-//     --table-filter-row-background-color: #{$token-color-base-900};
-//   }
-//   .neo-dark {
-//     --table-header-cell-border-color: #{$token-color-base-600};
-//     --table-header-cell-hover-color: #{$token-color-blue-800};
-//     --table-background-color: #{$token-color-base-900};
-//     --table-row-disabled-color: #{$token-color-base-800};
-//     --table-row-border-color: #{$token-color-base-800};
-//     --table-row-hover-color: #{$token-color-blue-800};
-//     --table-row-font-active-color: #{$token-color-blue-200};
-//     --table-nested-row-background-color: #{$token-color-base-800};
-//     --table-nested-row-border-color: #{$token-color-blue-600};
-//     --table-sheet-border-color: #{$token-color-base-600};
-//     --table-filter-row-background-color: #{$token-color-base-900};
-//   }
-//   .neo-light {
-//     --table-header-cell-border-color: #{$token-table-header-cell-border-color};
-//     --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
-//     --table-background-color: #{$token-table-background-color};
-//     --table-row-disabled-color: #{$token-table-row-disabled-color};
-//     --table-row-border-color: #{$token-table-row-border-color};
-//     --table-row-hover-color: #{$token-table-row-hover-color};
-//     --table-row-font-active-color: #{$token-table-row-font-active-color};
-//     --table-nested-row-background-color: #{$token-table-nested-row-background-color};
-//     --table-nested-row-border-color: #{$token-table-nested-row-border-color};
-//     --table-sheet-border-color: #{$token-table-sheet-border-color};
-//     --table-filter-row-background-color: #{$token-table-filters-row-background-color};
-//   }
-// }
-// @media (prefers-color-scheme: light) {
 :root {
   --table-header-cell-border-color: #{$token-table-header-cell-border-color};
   --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
@@ -785,38 +743,14 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-row-hover-color: #{$token-table-row-hover-color};
   --table-row-font-active-color: #{$token-table-row-font-active-color};
   --table-nested-row-background-color: #{$token-table-nested-row-background-color};
-  // --table-nested-row-border-color: #{$token-table-nested-row-border-color};
   --table-sheet-border-color: #{$token-table-sheet-border-color};
   --table-filter-row-background-color: #{$token-table-filters-row-background-color};
+  --table-hover-selected-row-background-color: #{$token-table-row-hover-selected-color};
 }
-//   .neo-light {
-//     --table-header-cell-border-color: #{$token-table-header-cell-border-color};
-//     --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
-//     --table-background-color: #{$token-table-background-color};
-//     --table-row-disabled-color: #{$token-table-row-disabled-color};
-//     --table-row-border-color: #{$token-table-row-border-color};
-//     --table-row-hover-color: #{$token-table-row-hover-color};
-//     --table-row-font-active-color: #{$token-table-row-font-active-color};
-//     --table-nested-row-background-color: #{$token-table-nested-row-background-color};
-//     --table-nested-row-border-color: #{$token-table-nested-row-border-color};
-//     --table-sheet-border-color: #{$token-table-sheet-border-color};
-//     --table-filter-row-background-color: #{$token-table-filters-row-background-color};
-//   }
-//   .neo-dark {
-//     --table-header-cell-border-color: #{$token-color-base-600};
-//     --table-header-cell-hover-color: #{$token-color-blue-800};
-//     --table-background-color: #{$token-color-base-900};
-//     --table-row-disabled-color: #{$token-color-base-800};
-//     --table-row-border-color: #{$token-color-base-800};
-//     --table-row-hover-color: #{$token-color-blue-800};
-//     --table-row-font-active-color: #{$token-color-blue-200};
-//     --table-nested-row-background-color: #{$token-color-base-800};
-//     --table-nested-row-border-color: #{$token-color-blue-600};
-//     --table-sheet-border-color: #{$token-color-base-600};
-//     --table-filter-row-background-color: #{$token-color-base-900};
-//   }
-// }
 
+$table-row-hover-selected-color: var(
+  --table-hover-selected-row-background-color
+);
 $table-filters-background-color: var(
   --table-filter-row-background-color
 ) !default;
@@ -860,7 +794,6 @@ $table-filters-row-padding-y: $token-table-filters-row-padding-y !default;
 $table-filters-row-padding-x: $token-table-filters-row-padding-x !default;
 $table-nested-row-padding-y: $token-table-nested-row-padding-y !default;
 $table-nested-row-padding-x: $token-table-nested-row-padding-x !default;
-// $table-nested-row-border-width: $token-table-nested-row-border-width !default;
 $table-nested-row-max-height: $token-table-nested-row-max-height !default;
 $table-filter-font-size: $token-table-filter-font-size !default;
 $table-filter-line-height: $token-table-filter-line-height !default;
@@ -2308,9 +2241,15 @@ $stepper-background-color: var(--stepper-background-color) !default;
 $stepper-main-font-color: var(--stepper-main-font-color) !default;
 $stepper-optional-font-color: var(--stepper-optional-font-color) !default;
 $stepper-disabled-dash-color: var(--stepper-disabled-dash-color) !default;
-$stepper-disabled-indicator-color: var(--stepper-disabled-indicator-color) !default;
-$stepper-disabled-main-text-font-color: var(--stepper-disabled-main-text-font-color) !default;
-$stepper-disabled-optional-text-font-color: var(--stepper-disabled-optional-text-font-color) !default;
+$stepper-disabled-indicator-color: var(
+  --stepper-disabled-indicator-color
+) !default;
+$stepper-disabled-main-text-font-color: var(
+  --stepper-disabled-main-text-font-color
+) !default;
+$stepper-disabled-optional-text-font-color: var(
+  --stepper-disabled-optional-text-font-color
+) !default;
 $stepper-dash-width: $token-stepper-dash-width !default;
 $stepper-dash-border-width: $token-stepper-dash-border-width !default;
 $stepper-dash-border-style: $token-stepper-dash-border-style !default;
