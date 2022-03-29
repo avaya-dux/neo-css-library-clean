@@ -1,5 +1,6 @@
 {
   "input": {
+    "read-only-label-padding": { "value": "12px" },
     "addon-text-color": { "value": "{color.base/600.value}" },
     "label-icon-size": { "value": "16px" },
     "label-icon-spacing": { "value": "8px" },
@@ -19,7 +20,7 @@
     "label-font-weight": {
       "value": "{Web-typography.fontweight-regular.value}"
     },
-    "label-color": { "value": "{color.base/1000.value}" },
+    "label-color": { "value": "{color.base/800.value}" },
     "helper-font-size": {
       "value": "{Web-typography.web/small body.fontSize.value}"
     },
