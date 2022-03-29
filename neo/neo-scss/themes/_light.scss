@@ -46,7 +46,6 @@
   --table-row-hover-color: #{$token-table-row-hover-color};
   --table-row-font-active-color: #{$token-table-row-font-active-color};
   --table-nested-row-background-color: #{$token-table-nested-row-background-color};
-  // --table-nested-row-border-color: #{$token-table-nested-row-border-color};
   --table-sheet-border-color: #{$token-table-sheet-border-color};
   --table-filter-row-background-color: #{$token-table-filters-row-background-color};
   --table-hover-selected-row-background-color: #{$token-table-row-hover-selected-color};
@@ -154,6 +153,8 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
   --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
   --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
+  --navbar-acw-color: #{$token-navbar-acw-card-background-color};
+  --navbar-pill-acw-color: #{$token-navbar-acw-card-status-color};
 }
 :root .neo-light {
   --list-hover: #{$token-list-hover};

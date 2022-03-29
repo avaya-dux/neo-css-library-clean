@@ -40,7 +40,6 @@ async function navbarStyles(value) {
 
   for (component of value.Navigation.children) {
     if (component.name === "navbar/action") {
-      // console.log(component);
       for (variant of component.children) {
         if (variant.name === "Icon=custom, Active=FALSE, State=default") {
           // action default color
@@ -105,7 +104,6 @@ async function navbarStyles(value) {
             );
         }
         if (variant.name === "Icon=custom, Active=TRUE, State=default") {
-          // console.log(variant.children[0].children[1]);
           // border styles
           // border width
           navbarJSONObject.navbar["action-border-width"] = {
@@ -221,7 +219,6 @@ async function navbarStyles(value) {
           };
           // font styles
           // agent card name font colour
-          // console.log(variant.children[0].children[0].children[0].children[0]);
           var agentCardNameFontColorID =
             variant.children[0].children[0].children[0].children[0].styles.fill;
           await coreFigmaFunctions
@@ -270,9 +267,6 @@ async function navbarStyles(value) {
               };
             });
           // agent card status font styles
-          // console.log(
-          //   variant.children[0].children[0].children[0].children[1].children[0]
-          // );
           var agentCardStatusFontTokenID =
             variant.children[0].children[0].children[0].children[1].children[0]
               .styles.text;
@@ -357,6 +351,42 @@ async function navbarStyles(value) {
                 })
             );
         }
+        if (variant.name === "State=acw") {
+          // acw status colour
+          var acwStatusColorID =
+            variant.children[0].children[0].children[0].children[1].styles
+              .fills;
+          await coreFigmaFunctions
+            .getFigmaTokenNameByID(
+              coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+              coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+              acwStatusColorID
+            )
+            .then(
+              (value) =>
+                (navbarJSONObject.navbar["acw-card-status-color"] = {
+                  value: `{color.${value.nodes[
+                    acwStatusColorID
+                  ].document.name.toLowerCase()}.value}`,
+                })
+            );
+          // acw background colour
+          var acwCardBackgroundColorID = variant.children[0].styles.fills;
+          await coreFigmaFunctions
+            .getFigmaTokenNameByID(
+              coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+              coreFigmaFunctions.figmaCredentials.varaintComponentsFileID,
+              acwCardBackgroundColorID
+            )
+            .then(
+              (value) =>
+                (navbarJSONObject.navbar["acw-card-background-color"] = {
+                  value: `{color.${value.nodes[
+                    acwCardBackgroundColorID
+                  ].document.name.toLowerCase()}.value}`,
+                })
+            );
+        }
         if (variant.name === "State=not-ready") {
           // not ready card status colour
           var notReadyCardStatusColorID =
@@ -432,18 +462,16 @@ async function navbarStyles(value) {
       }
     }
     if (component.name === "navbar/tab") {
-      // console.log(component.children[0].children[0]);
       // navbar tab padding
       navbarJSONObject.navbar["navbar-tab-padding-y"] = {
-        value: `${component.children[0].children[0].paddingTop}px`,
+        value: `${component.children[0].children[0].children[0].paddingTop}px`,
       };
       navbarJSONObject.navbar["navbar-tab-padding-x"] = {
-        value: `${component.children[0].children[0].paddingLeft}px`,
+        value: `${component.children[0].children[0].children[0].paddingLeft}px`,
       };
       // navbar tab font size
       var navbarTabFontTokenID =
-        component.children[0].children[0].children[0].children[0].children[0]
-          .styles.text;
+        component.children[0].children[0].children[0].children[0].styles.text;
       await coreFigmaFunctions
         .getFigmaTokenNameByID(
           coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -460,13 +488,11 @@ async function navbarStyles(value) {
         });
     }
     if (component.name === ".navbar-container-base") {
-      console.log(component.children[1]);
       // navbar max height
       navbarJSONObject.navbar["max-height"] = {
         value: `${component.size.y}px`,
       };
-      // console.log(component.children[0]);
-      // // navbar bottom border style
+      // navbar bottom border style
       // border width
       navbarJSONObject.navbar["bottom-border-width"] = {
         value: `${component.children[1].strokeWeight}px`,
@@ -494,10 +520,9 @@ async function navbarStyles(value) {
     }
   }
 
-  // console.log(navbarJSONObject);
   await fs
     .writeFile(
-      "../properties/components/navbar.json",
+      "../style-dictionary/properties/components/navbar.json",
       JSON.stringify(navbarJSONObject)
     )
     .then(function () {

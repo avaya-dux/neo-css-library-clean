@@ -325,6 +325,8 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --navbar-icon-disabled-color: #{$token-color-base-500};
     --navbar-active-disabled-color: #{$token-color-blue-600};
     --navbar-status-avatar-border-color: #{$token-color-base-900};
+    --navbar-acw-color: #{$token-color-blue-800};
+    --navbar-pill-acw-color: #{$token-color-blue-200};
   }
 }
 @media (prefers-color-scheme: light) {
@@ -344,6 +346,8 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
     --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
     --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
+    --navbar-acw-color: #{token-navbar-acw-card-background-color};
+    --navbar-pill-acw-color: #{$token-navbar-acw-card-status-color};
   }
 }
 @media (prefers-color-scheme: light) {

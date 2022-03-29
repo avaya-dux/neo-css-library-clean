@@ -1626,71 +1626,17 @@ $close-sizes: map-merge(
 // Location: src/scss/components/_navbar.scss
 //
 
-// Navbar color variables
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --navbar-border-bottom-color: #{$token-color-base-600};
-//     --navbar-status-pill-font-color: #{$token-color-base-900};
-//     --navbar-ready-color: #{$token-color-green-800};
-//     --navbar-not-ready-color: #{$token-color-orange-800};
-//     --navbar-connected-color: #{$token-color-base-800};
-//     --navbar-pill-ready-color: #{$token-color-green-200};
-//     --navbar-pill-not-ready-color: #{$token-color-orange-200};
-//     --navbar-pill-connected-color: #{$token-color-base-200};
-//     --navbar-bg-color-hover: #{$token-color-base-800};
-//     --navbar-default-icon-color: #{$token-color-base-100};
-//     --navbar-icon-hover-color: #{$token-color-blue-200};
-//     --navbar-icon-selected-color: #{$token-color-blue-400};
-//     --navbar-icon-disabled-color: #{$token-color-base-500};
-//     --navbar-active-disabled-color: #{$token-color-blue-600};
-//     --navbar-status-avatar-border-color: #{$token-color-base-900};
-//   }
-//   .neo-dark {
-//     --navbar-border-bottom-color: #{$token-color-base-600};
-//     --navbar-status-pill-font-color: #{$token-color-base-900};
-//     --navbar-ready-color: #{$token-color-green-800};
-//     --navbar-not-ready-color: #{$token-color-orange-800};
-//     --navbar-connected-color: #{$token-color-base-800};
-//     --navbar-pill-ready-color: #{$token-color-green-200};
-//     --navbar-pill-not-ready-color: #{$token-color-orange-200};
-//     --navbar-pill-connected-color: #{$token-color-base-200};
-//     --navbar-bg-color-hover: #{$token-color-base-800};
-//     --navbar-default-icon-color: #{$token-color-base-100};
-//     --navbar-icon-hover-color: #{$token-color-blue-200};
-//     --navbar-icon-selected-color: #{$token-color-blue-400};
-//     --navbar-icon-disabled-color: #{$token-color-base-500};
-//     --navbar-active-disabled-color: #{$token-color-blue-600};
-//     --navbar-status-avatar-border-color: #{$token-color-base-900};
-//   }
-//   .neo-light {
-//     --navbar-border-bottom-color: #{$token-navbar-bottom-border-color};
-//     --navbar-status-pill-font-color: #{$token-navbar-agent-card-name-font-color};
-//     --navbar-ready-color: #{$token-navbar-ready-card-background-color};
-//     --navbar-not-ready-color: #{$token-navbar-not-ready-card-background-color};
-//     --navbar-connected-color: #{$token-navbar-connected-card-background-color};
-//     --navbar-pill-ready-color: #{$token-navbar-ready-card-status-color};
-//     --navbar-pill-not-ready-color: #{$token-navbar-not-ready-card-status-color};
-//     --navbar-pill-connected-color: #{$token-navbar-connected-card-status-color};
-//     --navbar-bg-color-hover: #{$token-navbar-action-hover-background-color};
-//     --navbar-default-icon-color: #{$token-navbar-action-default-color};
-//     --navbar-icon-hover-color: #{$token-navbar-action-hover-color};
-//     --navbar-icon-selected-color: #{$token-navbar-action-active-color};
-//     --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
-//     --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
-//     --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
-//   }
-// }
-// @media (prefers-color-scheme: light) {
 :root {
   --navbar-border-bottom-color: #{$token-navbar-bottom-border-color};
   --navbar-status-pill-font-color: #{$token-navbar-agent-card-name-font-color};
   --navbar-ready-color: #{$token-navbar-ready-card-background-color};
   --navbar-not-ready-color: #{$token-navbar-not-ready-card-background-color};
   --navbar-connected-color: #{$token-navbar-connected-card-background-color};
+  --navbar-acw-color: #{$token-navbar-acw-card-background-color};
   --navbar-pill-ready-color: #{$token-navbar-ready-card-status-color};
   --navbar-pill-not-ready-color: #{$token-navbar-not-ready-card-status-color};
   --navbar-pill-connected-color: #{$token-navbar-connected-card-status-color};
+  --navbar-pill-acw-color: #{$token-navbar-acw-card-status-color};
   --navbar-bg-color-hover: #{$token-navbar-action-hover-background-color};
   --navbar-default-icon-color: #{$token-navbar-action-default-color};
   --navbar-icon-hover-color: #{$token-navbar-action-hover-color};
@@ -1699,41 +1645,6 @@ $close-sizes: map-merge(
   --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
   --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
 }
-//   .neo-light {
-//     --navbar-border-bottom-color: #{$token-navbar-bottom-border-color};
-//     --navbar-status-pill-font-color: #{$token-navbar-agent-card-name-font-color};
-//     --navbar-ready-color: #{$token-navbar-ready-card-background-color};
-//     --navbar-not-ready-color: #{$token-navbar-not-ready-card-background-color};
-//     --navbar-connected-color: #{$token-navbar-connected-card-background-color};
-//     --navbar-pill-ready-color: #{$token-navbar-ready-card-status-color};
-//     --navbar-pill-not-ready-color: #{$token-navbar-not-ready-card-status-color};
-//     --navbar-pill-connected-color: #{$token-navbar-connected-card-status-color};
-//     --navbar-bg-color-hover: #{$token-navbar-action-hover-background-color};
-//     --navbar-default-icon-color: #{$token-navbar-action-default-color};
-//     --navbar-icon-hover-color: #{$token-navbar-action-hover-color};
-//     --navbar-icon-selected-color: #{$token-navbar-action-active-color};
-//     --navbar-icon-disabled-color: #{$token-navbar-action-disabled-color};
-//     --navbar-active-disabled-color: #{$token-navbar-action-active-disabled-color};
-//     --navbar-status-avatar-border-color: #{$token-navbar-avatar-border-color};
-//   }
-//   .neo-dark {
-//     --navbar-border-bottom-color: #{$token-color-base-600};
-//     --navbar-status-pill-font-color: #{$token-color-base-900};
-//     --navbar-ready-color: #{$token-color-green-800};
-//     --navbar-not-ready-color: #{$token-color-orange-800};
-//     --navbar-connected-color: #{$token-color-base-800};
-//     --navbar-pill-ready-color: #{$token-color-green-200};
-//     --navbar-pill-not-ready-color: #{$token-color-orange-200};
-//     --navbar-pill-connected-color: #{$token-color-base-200};
-//     --navbar-bg-color-hover: #{$token-color-base-800};
-//     --navbar-default-icon-color: #{$token-color-base-100};
-//     --navbar-icon-hover-color: #{$token-color-blue-200};
-//     --navbar-icon-selected-color: #{$token-color-blue-400};
-//     --navbar-icon-disabled-color: #{$token-color-base-500};
-//     --navbar-active-disabled-color: #{$token-color-blue-600};
-//     --navbar-status-avatar-border-color: #{$token-color-base-900};
-//   }
-// }
 
 $neo-navbar-colors: () !default;
 
@@ -1742,6 +1653,7 @@ $neo-navbar-colors: map-merge(
     ready: var(--navbar-ready-color),
     not-ready: var(--navbar-not-ready-color),
     connected: var(--navbar-connected-color),
+    acw: var(--navbar-acw-color),
   ),
   $neo-navbar-colors
 );
@@ -1753,6 +1665,7 @@ $neo-navbar-pill-colors: map-merge(
     ready: var(--navbar-pill-ready-color),
     not-ready: var(--navbar-pill-not-ready-color),
     connected: var(--navbar-pill-connected-color),
+    acw: var(--navbar-pill-acw-color),
   ),
   $neo-navbar-pill-colors
 );
