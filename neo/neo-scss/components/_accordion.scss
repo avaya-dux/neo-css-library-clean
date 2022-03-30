@@ -3,8 +3,6 @@
 @mixin accordion-header {
   &__header {
     @extend %list-item;
-    // display: block !important;
-    // padding: $token-accordion-padding-y $token-accordion-padding-x !important;
     margin-right: 0 !important;
     border: none;
     cursor: pointer;
@@ -26,16 +24,12 @@
       margin: initial !important;
     }
 
-    &:hover {
-      // background-color: $group-list-item-hover;
-    }
-
     &:focus,
     &:focus-visible {
       outline-offset: 0px;
     }
 
-    &::after {
+    & &-text::after {
       // chevron-up
       content: $accordion-contracted-icon;
       font-family: "updated-neo-icons";
@@ -52,7 +46,6 @@
       }
     }
 
-    // @include list-item-colors;
     @include list-item-button;
     @include list-item--disabled;
   }
@@ -67,11 +60,12 @@
 .neo-accordion {
   @extend %list;
 
+  $parent-selector: &;
+
   &__item {
     @extend %list-radius;
     margin-bottom: 24px;
     border: 1px solid $accordion-border-color;
-    // border-bottom: 0;
     display: flex;
     flex-direction: column;
     list-style: none;
@@ -101,10 +95,10 @@
   }
 
   &__item--active {
-    .neo-accordion__header::after {
+    #{$parent-selector}__header #{$parent-selector}__header-text::after {
       transform: translate(0, -50%) $accordion-active-icon-animation-left-down;
     }
-    .neo-accordion__body {
+    #{$parent-selector}__body {
       height: auto;
     }
   }
@@ -112,5 +106,4 @@
   @include list--hover("header");
   @include accordion-header;
   @include NeoLinkStyles;
-  // @include list--borderless;
 }
