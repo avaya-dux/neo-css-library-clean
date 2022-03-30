@@ -11,6 +11,7 @@
 - Added transparent border to [Tab](https://design.avayacloud.com/components/web/tabs-web) to avoid layout shift on active/hover
 - Added correct input height and active state styles for rows in [Table](https://design.avayacloud.com/components/web/tables-web) Components
 - Increased padding on label of read-only text [Input](https://design.avayacloud.com/components/web/input-web) Components
+- Moved style properties in [Accordion](https://design.avayacloud.com/components/web/accordion-web) Components for correct behaviour of chevron
 
 ### 3.52.1
 
