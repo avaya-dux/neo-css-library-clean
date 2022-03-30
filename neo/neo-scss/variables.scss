@@ -469,59 +469,6 @@ $form-control-margin-bottom: $global-spacer-x-large !default;
 //           src/scss/elements/_input-hint.scss
 //
 
-// Input color variables
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --input-asterix-color: #{$token-color-red-400};
-//     --input-background-color: #{$token-color-base-900};
-//     --input-border-color: #{$token-color-base-500};
-//     --input-focus-border-color: #{$token-color-blue-400};
-//     --input-font-color: #{$token-color-base-100};
-//     --input-placeholder-font-color: #{$token-color-base-400};
-//     --input-hint-color: #{$token-color-base-400};
-//     --input-disabled-bg: #{$token-color-base-800};
-//     --input-disabled-color: #{$token-color-base-500};
-//     --input-border-error-color: #{$token-color-red-400};
-//     --input-label-color: #{$token-color-base-100};
-//     --input-border-disabled-color: #{$token-color-base-500};
-//     --input-border-hover-color: #{$token-color-base-100};
-//     --input-addon-font-color: #{$token-color-base-200};
-//   }
-//   .neo-dark {
-//     --input-asterix-color: #{$token-color-red-400};
-//     --input-background-color: #{$token-color-base-900};
-//     --input-border-color: #{$token-color-base-500};
-//     --input-focus-border-color: #{$token-color-blue-400};
-//     --input-font-color: #{$token-color-base-100};
-//     --input-placeholder-font-color: #{$token-color-base-400};
-//     --input-hint-color: #{$token-color-base-400};
-//     --input-disabled-bg: #{$token-color-base-800};
-//     --input-disabled-color: #{$token-color-base-500};
-//     --input-border-error-color: #{$token-color-red-400};
-//     --input-label-color: #{$token-color-base-100};
-//     --input-border-disabled-color: #{$token-color-base-500};
-//     --input-border-hover-color: #{$token-color-base-100};
-//     --input-addon-font-color: #{$token-color-base-200};
-//   }
-//   .neo-light {
-//     --input-asterix-color: #{$token-input-error-helper-color};
-//     --input-background-color: #{$token-color-base-0};
-//     --input-border-color: #{$token-color-base-400};
-//     --input-focus-border-color: #{$token-input-border-active-color};
-//     --input-font-color: #{$token-input-filled-color};
-//     --input-placeholder-font-color: #{$token-input-placeholder-color};
-//     --input-hint-color: #{$token-input-helper-color};
-//     --input-disabled-bg: #{$token-input-disabled-bg-color};
-//     --input-disabled-color: #{$token-input-disabled-text-color};
-//     --input-border-error-color: #{$token-input-border-error-color};
-//     --input-label-color: #{$token-input-label-color};
-//     --input-border-disabled-color: #{$token-color-base-400};
-//     --input-border-hover-color: #{$token-input-border-hover-color};
-//     --input-addon-font-color: #{$token-color-base-600};
-//   }
-// }
-// @media (prefers-color-scheme: light) {
 :root {
   --input-asterix-color: #{$token-input-error-helper-color};
   --input-background-color: #{$token-color-base-0};
@@ -538,40 +485,9 @@ $form-control-margin-bottom: $global-spacer-x-large !default;
   --input-border-hover-color: #{$token-input-border-hover-color};
   --input-addon-font-color: #{$token-color-base-600};
 }
-//   .neo-light {
-//     --input-asterix-color: #{$token-input-error-helper-color};
-//     --input-background-color: #{$token-color-base-0};
-//     --input-border-color: #{$token-color-base-400};
-//     --input-focus-border-color: #{$token-input-border-active-color};
-//     --input-font-color: #{$token-input-filled-color};
-//     --input-placeholder-font-color: #{$token-input-placeholder-color};
-//     --input-hint-color: #{$token-input-helper-color};
-//     --input-disabled-bg: #{$token-input-disabled-bg-color};
-//     --input-disabled-color: #{$token-input-disabled-text-color};
-//     --input-border-error-color: #{$token-input-border-error-color};
-//     --input-label-color: #{$token-input-label-color};
-//     --input-border-disabled-color: #{$token-color-base-400};
-//     --input-border-hover-color: #{$token-input-border-hover-color};
-//     --input-addon-font-color: #{$token-color-base-600};
-//   }
-//   .neo-dark {
-//     --input-asterix-color: #{$token-color-red-400};
-//     --input-background-color: #{$token-color-base-900};
-//     --input-border-color: #{$token-color-base-500};
-//     --input-focus-border-color: #{$token-color-blue-400};
-//     --input-font-color: #{$token-color-base-100};
-//     --input-placeholder-font-color: #{$token-color-base-400};
-//     --input-hint-color: #{$token-color-base-400};
-//     --input-disabled-bg: #{$token-color-base-800};
-//     --input-disabled-color: #{$token-color-base-500};
-//     --input-border-error-color: #{$token-color-red-400};
-//     --input-label-color: #{$token-color-base-100};
-//     --input-border-disabled-color: #{$token-color-base-500};
-//     --input-border-hover-color: #{$token-color-base-100};
-//     --input-addon-font-color: #{$token-color-base-200};
-//   }
-// }
 
+$input-read-only-label-padding: #{$token-input-read-only-label-padding -
+  $token-input-vertical-margin} !default;
 $input-label-color: var(--input-label-color) !default;
 $input-asterix-required-color: var(--input-asterix-color) !default;
 $input-background-color: var(--input-background-color) !default;

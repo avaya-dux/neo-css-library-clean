@@ -6,12 +6,11 @@
 
 - Added new `acw` colors to [Navbar](https://design.avayacloud.com/components/web/navbar-web) Components
 
-### 3.52.2
-
 #### Bugs Report - List of bugs that have been updated
 
 - Added transparent border to [Tab](https://design.avayacloud.com/components/web/tabs-web) to avoid layout shift on active/hover
 - Added correct input height and active state styles for rows in [Table](https://design.avayacloud.com/components/web/tables-web) Components
+- Increased padding on label of read-only text [Input](https://design.avayacloud.com/components/web/input-web) Components
 
 ### 3.52.1
 

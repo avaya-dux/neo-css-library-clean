@@ -1,5 +1,5 @@
-const fs = require('fs').promises;
-const coreFigmaFunctions = require('../figma-functions/core-figma-functions.js');
+const fs = require("fs").promises;
+const coreFigmaFunctions = require("../figma-functions/core-figma-functions.js");
 
 /*
 /////////////////
@@ -52,32 +52,36 @@ async function inputStyles(value) {
   };
 
   const inputVariants = value.Form.children.filter(
-    (comps) => comps.name === 'input'
+    (comps) => comps.name === "input"
   )[0].children;
-  //   console.log(inputVariants);
+
+  const readOnlyInputComp = value.Form.children.filter(
+    (comps) => comps.name === "input-read-only"
+  )[0];
+
+  inputJSONObject.input["read-only-label-padding"] = {
+    value: `${readOnlyInputComp.itemSpacing}px`,
+  };
 
   for (variant of inputVariants) {
     if (
       variant.name ===
-      'Label=optional, Left Side=none, Right Side=none, Helper Text=TRUE, State=default, Text=filled'
+      "Label=optional, Left Side=none, Right Side=none, Helper Text=TRUE, State=default, Text=filled"
     ) {
-      //   console.log(variant);
-      //   console.log(variant.children[0].children);
-      //   console.log(variant.children[0].children[1].children[0]);
       // input minimum height
-      inputJSONObject.input['min-height'] = {
+      inputJSONObject.input["min-height"] = {
         value: `${variant.children[0].children[1].children[0].size.y}px`,
       };
       // input padding-y
-      inputJSONObject.input['padding-y'] = {
+      inputJSONObject.input["padding-y"] = {
         value: `${variant.children[0].children[1].children[0].paddingTop}px`,
       };
       // input padding-x
-      inputJSONObject.input['padding-x'] = {
+      inputJSONObject.input["padding-x"] = {
         value: `${variant.children[0].children[1].children[0].paddingRight}px`,
       };
       // vertical item spacing
-      inputJSONObject.input['vertical-margin'] = {
+      inputJSONObject.input["vertical-margin"] = {
         value: `${variant.children[0].itemSpacing}px`,
       };
       // label font styles
@@ -90,30 +94,29 @@ async function inputStyles(value) {
           labelFontTokenID
         )
         .then((value) => {
-          var labelFontTokenName = value.nodes[
-            labelFontTokenID
-          ].document.name.toLowerCase();
+          var labelFontTokenName =
+            value.nodes[labelFontTokenID].document.name.toLowerCase();
           // label-font-size
-          inputJSONObject.input['label-font-size'] = {
+          inputJSONObject.input["label-font-size"] = {
             value: `{Web-typography.${labelFontTokenName}.fontSize.value}`,
           };
           // label-line-height
-          inputJSONObject.input['label-line-height'] = {
+          inputJSONObject.input["label-line-height"] = {
             value: `{Web-typography.${labelFontTokenName}.lineHeight.value}`,
           };
           // label-letter-spacing
-          inputJSONObject.input['label-letter-spacing'] = {
+          inputJSONObject.input["label-letter-spacing"] = {
             value: `{Web-typography.${labelFontTokenName}.letterSpacing.value}`,
           };
           // label-font-weight
-          inputJSONObject.input['label-font-weight'] = {
+          inputJSONObject.input["label-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
         });
       // label color
       var labelColorTokenID =
         variant.children[0].children[0].children[0].styles.fill;
-      inputJSONObject.input['label-color'] = {
+      inputJSONObject.input["label-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -137,30 +140,29 @@ async function inputStyles(value) {
           helperFontTokenID
         )
         .then((value) => {
-          var helperFontTokenName = value.nodes[
-            helperFontTokenID
-          ].document.name.toLowerCase();
+          var helperFontTokenName =
+            value.nodes[helperFontTokenID].document.name.toLowerCase();
           // helper-font-size
-          inputJSONObject.input['helper-font-size'] = {
+          inputJSONObject.input["helper-font-size"] = {
             value: `{Web-typography.${helperFontTokenName}.fontSize.value}`,
           };
           // helper-line-height
-          inputJSONObject.input['helper-line-height'] = {
+          inputJSONObject.input["helper-line-height"] = {
             value: `{Web-typography.${helperFontTokenName}.lineHeight.value}`,
           };
           // helper-letter-spacing
-          inputJSONObject.input['helper-letter-spacing'] = {
+          inputJSONObject.input["helper-letter-spacing"] = {
             value: `{Web-typography.${helperFontTokenName}.letterSpacing.value}`,
           };
           // helper-font-weight
-          inputJSONObject.input['helper-font-weight'] = {
+          inputJSONObject.input["helper-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
         });
       // helper color
       var helperColorTokenID =
         variant.children[0].children[2].children[0].styles.fill;
-      inputJSONObject.input['helper-color'] = {
+      inputJSONObject.input["helper-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -185,23 +187,22 @@ async function inputStyles(value) {
           filledFontTokenID
         )
         .then((value) => {
-          var filledFontTokenName = value.nodes[
-            filledFontTokenID
-          ].document.name.toLowerCase();
+          var filledFontTokenName =
+            value.nodes[filledFontTokenID].document.name.toLowerCase();
           // filled-font-size
-          inputJSONObject.input['filled-font-size'] = {
+          inputJSONObject.input["filled-font-size"] = {
             value: `{Web-typography.${filledFontTokenName}.fontSize.value}`,
           };
           // filled-line-height
-          inputJSONObject.input['filled-line-height'] = {
+          inputJSONObject.input["filled-line-height"] = {
             value: `{Web-typography.${filledFontTokenName}.lineHeight.value}`,
           };
           // filled-letter-spacing
-          inputJSONObject.input['filled-letter-spacing'] = {
+          inputJSONObject.input["filled-letter-spacing"] = {
             value: `{Web-typography.${filledFontTokenName}.letterSpacing.value}`,
           };
           // filled-font-weight
-          inputJSONObject.input['filled-font-weight'] = {
+          inputJSONObject.input["filled-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
         });
@@ -209,7 +210,7 @@ async function inputStyles(value) {
       var filledColorTokenID =
         variant.children[0].children[1].children[0].children[0].children[2]
           .children[0].styles.fill;
-      inputJSONObject.input['filled-color'] = {
+      inputJSONObject.input["filled-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -224,17 +225,18 @@ async function inputStyles(value) {
           ),
       };
       // border width
-      inputJSONObject.input['border-width'] = {
+      inputJSONObject.input["border-width"] = {
         value: `${variant.children[0].children[1].children[0].strokeWeight}px`,
       };
       // border style
-      inputJSONObject.input['border-style'] = {
-        value: variant.children[0].children[1].children[0].strokes[0].type.toLowerCase(),
+      inputJSONObject.input["border-style"] = {
+        value:
+          variant.children[0].children[1].children[0].strokes[0].type.toLowerCase(),
       };
       // border-color
       var borderColorTokenID =
         variant.children[0].children[1].children[0].styles.strokes;
-      inputJSONObject.input['border-color'] = {
+      inputJSONObject.input["border-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -249,35 +251,35 @@ async function inputStyles(value) {
           ),
       };
       // border radius
-      inputJSONObject.input['border-radius'] = {
+      inputJSONObject.input["border-radius"] = {
         value: `${variant.children[0].children[1].children[0].cornerRadius}px`,
       };
     }
     if (
       variant.name ===
-      'Label=none, Left Side=icon, Right Side=none, Helper Text=TRUE, State=default, Text=filled'
+      "Label=none, Left Side=icon, Right Side=none, Helper Text=TRUE, State=default, Text=filled"
     ) {
       // icon size
-      inputJSONObject.input['label-icon-size'] = {
+      inputJSONObject.input["label-icon-size"] = {
         value: `${variant.children[0].children[1].children[0].children[0].children[0].size.x}px`,
       };
       // label/icon spacing
-      inputJSONObject.input['label-icon-spacing'] = {
+      inputJSONObject.input["label-icon-spacing"] = {
         value: `${variant.children[0].children[1].children[0].itemSpacing}px`,
       };
     }
     if (
       variant.name ===
-      'Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=hover, Text=filled'
+      "Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=hover, Text=filled"
     ) {
       // close button
-      inputJSONObject.input['input-close-button-size'] = {
+      inputJSONObject.input["input-close-button-size"] = {
         value: `${variant.children[0].children[1].children[0].children[1].size.x}px`,
       };
       // border-hover-color
       var borderColorTokenID =
         variant.children[0].children[1].children[0].styles.strokes;
-      inputJSONObject.input['border-hover-color'] = {
+      inputJSONObject.input["border-hover-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -294,12 +296,12 @@ async function inputStyles(value) {
     }
     if (
       variant.name ===
-      'Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=active, Text=filled'
+      "Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=active, Text=filled"
     ) {
       // border-active-color
       var borderColorTokenID =
         variant.children[0].children[1].children[0].styles.strokes;
-      inputJSONObject.input['border-active-color'] = {
+      inputJSONObject.input["border-active-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -316,12 +318,12 @@ async function inputStyles(value) {
     }
     if (
       variant.name ===
-      'Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=error, Text=filled'
+      "Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=error, Text=filled"
     ) {
       // border-error-color
       var borderColorTokenID =
         variant.children[0].children[1].children[0].styles.strokes;
-      inputJSONObject.input['border-error-color'] = {
+      inputJSONObject.input["border-error-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -338,7 +340,7 @@ async function inputStyles(value) {
       // error helper color
       var helperColorTokenID =
         variant.children[0].children[2].children[1].styles.fill;
-      inputJSONObject.input['error-helper-color'] = {
+      inputJSONObject.input["error-helper-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -353,22 +355,22 @@ async function inputStyles(value) {
           ),
       };
       // icon/helper spacing
-      inputJSONObject.input['error-helper-spacing'] = {
+      inputJSONObject.input["error-helper-spacing"] = {
         value: `${variant.children[0].children[2].itemSpacing}px`,
       };
       // error icon size
-      inputJSONObject.input['error-icon-size'] = {
+      inputJSONObject.input["error-icon-size"] = {
         value: `${variant.children[0].children[2].children[0].size.x}px`,
       };
     }
     if (
       variant.name ===
-      'Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=disabled, Text=filled'
+      "Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=disabled, Text=filled"
     ) {
       // disabled border color
       var borderColorTokenID =
         variant.children[0].children[1].children[0].styles.strokes;
-      inputJSONObject.input['border-disabled-color'] = {
+      inputJSONObject.input["border-disabled-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -385,7 +387,7 @@ async function inputStyles(value) {
       // disabled background color
       var disabledBackgroundColorTokenID =
         variant.children[0].children[1].children[0].styles.fills;
-      inputJSONObject.input['disabled-bg-color'] = {
+      inputJSONObject.input["disabled-bg-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -403,7 +405,7 @@ async function inputStyles(value) {
       var disabledTextColorTokenID =
         variant.children[0].children[1].children[0].children[0].children[2]
           .children[0].styles.fill;
-      inputJSONObject.input['disabled-text-color'] = {
+      inputJSONObject.input["disabled-text-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -420,20 +422,16 @@ async function inputStyles(value) {
     }
     if (
       variant.name ===
-      'Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=default, Text=placeholder'
+      "Label=none, Left Side=none, Right Side=none, Helper Text=TRUE, State=default, Text=placeholder"
     ) {
-      // console.log(
-      //   variant.children[0].children[1].children[0].children[0].children[2]
-      //     .children[0]
-      // );
       // placeholder styles
       // placeholder text style
       if (
         variant.children[0].children[1].children[0].children[0].children[2]
           .children[0].style.italic
       ) {
-        inputJSONObject.input['placeholder-font-style'] = {
-          value: 'italic',
+        inputJSONObject.input["placeholder-font-style"] = {
+          value: "italic",
         };
       }
       var placeholderFontTokenID =
@@ -446,23 +444,22 @@ async function inputStyles(value) {
           placeholderFontTokenID
         )
         .then((value) => {
-          var placeholderFontTokenName = value.nodes[
-            placeholderFontTokenID
-          ].document.name.toLowerCase();
+          var placeholderFontTokenName =
+            value.nodes[placeholderFontTokenID].document.name.toLowerCase();
           // placeholder-font-size
-          inputJSONObject.input['placeholder-font-size'] = {
+          inputJSONObject.input["placeholder-font-size"] = {
             value: `{Web-typography.${placeholderFontTokenName}.fontSize.value}`,
           };
           // placeholder-line-height
-          inputJSONObject.input['placeholder-line-height'] = {
+          inputJSONObject.input["placeholder-line-height"] = {
             value: `{Web-typography.${placeholderFontTokenName}.lineHeight.value}`,
           };
           // placeholder-letter-spacing
-          inputJSONObject.input['placeholder-letter-spacing'] = {
+          inputJSONObject.input["placeholder-letter-spacing"] = {
             value: `{Web-typography.${placeholderFontTokenName}.letterSpacing.value}`,
           };
           // placeholder-font-weight
-          inputJSONObject.input['placeholder-font-weight'] = {
+          inputJSONObject.input["placeholder-font-weight"] = {
             value: `{Web-typography.fontweight-regular.value}`,
           };
         });
@@ -470,7 +467,7 @@ async function inputStyles(value) {
       var placeholderColorTokenID =
         variant.children[0].children[1].children[0].children[0].children[2]
           .children[0].styles.fill;
-      inputJSONObject.input['placeholder-color'] = {
+      inputJSONObject.input["placeholder-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -488,12 +485,12 @@ async function inputStyles(value) {
     /////////////// Input Groups /////////////////
     if (
       variant.name ===
-      'Label=none, Left Side=prefix, Right Side=suffix, Helper Text=TRUE, State=default, Text=filled'
+      "Label=none, Left Side=prefix, Right Side=suffix, Helper Text=TRUE, State=default, Text=filled"
     ) {
       var addonTextColorTokenID =
         variant.children[0].children[1].children[0].children[0].children[1]
           .children[0].styles.fill;
-      inputJSONObject.input['addon-text-color'] = {
+      inputJSONObject.input["addon-text-color"] = {
         value: await coreFigmaFunctions
           .getFigmaTokenNameByID(
             coreFigmaFunctions.figmaCredentials.figmaAPIKey,
@@ -511,15 +508,13 @@ async function inputStyles(value) {
     }
   }
 
-  console.log(inputJSONObject);
-
   await fs
     .writeFile(
-      '../properties/components/inputs.json',
+      "../style-dictionary/properties/components/inputs.json",
       JSON.stringify(inputJSONObject)
     )
     .then(function () {
-      console.log('inputs.json created');
+      console.log("inputs.json created");
     });
 }
 
