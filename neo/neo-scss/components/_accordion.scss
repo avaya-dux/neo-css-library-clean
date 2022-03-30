@@ -60,6 +60,8 @@
 .neo-accordion {
   @extend %list;
 
+  $parent-selector: &;
+
   &__item {
     @extend %list-radius;
     margin-bottom: 24px;
@@ -93,10 +95,10 @@
   }
 
   &__item--active {
-    .neo-accordion__header .neo-accordion__header-text::after {
+    #{$parent-selector}__header #{$parent-selector}__header-text::after {
       transform: translate(0, -50%) $accordion-active-icon-animation-left-down;
     }
-    .neo-accordion__body {
+    #{$parent-selector}__body {
       height: auto;
     }
   }
