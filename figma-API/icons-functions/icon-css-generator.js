@@ -1,15 +1,12 @@
 const fs = require("fs").promises;
+
+const path = require("path");
+
 const webfontsGenerator = require("webfonts-generator");
-
-const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functions.js");
-
-// const iconInfo = require('./icon-utility-files/iconInfo.js');
-const { includes } = require("lodash");
 
 const Handlebars = require("handlebars");
 
 const replace = require("./icon-utility-files/icon-replacement-string");
-
 const replacelib = require("replace-in-file");
 
 const prettier = require("prettier");
@@ -20,19 +17,11 @@ Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
   return amendedArg === arg2 ? options.fn(this) : options.inverse(this);
 });
 
+const buildDir = "../../generated-styles/css/";
+
 // Code to generate .css file for icons -- THIS CODE TO BE RUN AFTER ICONGEN SCRIPT
 
-// This function converts our icon font .woff file to base64
-
-async function convertIconFontToBase64() {
-  const base64FileBuffer = await fs.readFile(
-    "../properties/neo-icon-font.woff"
-  );
-
-  const contents_in_base64 = await base64FileBuffer.toString("base64");
-
-  return contents_in_base64.toString();
-}
+// Unicode for each icon must be set manually to preserve value at each execution
 
 const unicodes = {
   "add-circle": 0xf101,
@@ -542,147 +531,101 @@ const unicodes = {
   "dashboard-filled": 0xf3d7,
   "bridged-line-appearance": 0xf3d8,
   "ic-conference-wifi": 0xf3d9,
-  "bounce": 0xf3e1,
-  "forward": 0xf3e2,
+  bounce: 0xf3e1,
+  forward: 0xf3e2,
   "conference-screen": 0xf3e4,
   "coach-off": 0xf3e5,
   "calendar-filled": 0xf3e6,
-  "incognito": 0xf3e7,
+  incognito: 0xf3e7,
   "incognito-off": 0xf3e8,
   "layout-immersive": 0xf3e9,
 };
 
-// .neo-icon-legal:before {
-//   content: "\f1e8";
-// }
-
-// We call the above function to generate the base64 String that we will be inserting into our css
-
-// convertIconFontToBase64().then(async (result) => {
-// We get an array of the file names in our icons folder
-
 const generateIcons = async () => {
-  var IconsArray = await fs
-    .readdir("../properties/assets/icons/svgs")
-    .then(async (files) => {
-      // utility function to create file with copyable SVG code
+  const styleDictionaryDir = path.resolve(
+    __dirname,
+    "../../style-dictionary/properties/assets/icons/svgs"
+  );
 
-      await iconUtilityFunctions.createCopyableSVG(files);
+  let iconsSVGDir = [];
 
-      // we temporarily filter out 'fill' type icons
-
-      var unfilteredArray = files.map((file) => {
-        // if (
-        //   file.includes('fill') &&
-        //   !file.includes('star') &&
-        //   !file.includes('arrow')
-        // ) {
-        //   return;
-        // } else {
-        return `../properties/assets/icons/svgs/${file}`;
-        // }
-      });
-
-      return unfilteredArray.filter((icon) => {
-        return icon != undefined;
-      });
-    });
-
-  /*// NOTE:
-
-    -- Icon unicode needs to be manually updated when specified in Neo code. This is the case for the following components:
-    * Accordions
-    * Checkboxes
-    * Dropdown
-    * Selectbox
-    * Expandable Chip
-    //*/
-
-  // We pass both the above array and the base64 String into the webfontsGenerator function
+  try {
+    iconsSVGDir = await fs.readdir(styleDictionaryDir);
+  } catch (error) {
+    console.log(`Reading icon SVGs file directory failed with error: ${error}`);
+  }
+  const iconsSVGFiles = iconsSVGDir.map(
+    (file) => `${styleDictionaryDir}/${file}`
+  );
 
   webfontsGenerator(
     {
-      // files: ["../properties/assets/images/generic-avatar.svg"],
-      files: IconsArray,
-      dest: "../build/css",
+      files: iconsSVGFiles,
+      dest: buildDir,
       fontName: "updated-neo-icons",
       types: ["woff"],
-      cssTemplate: "../templates/css.hbs",
+      cssTemplate: "../../style-dictionary/templates/css.hbs",
       templateOptions: {
-        // src: `url(data:application/font-woff;base64,${result}) format('woff')`,
-        // temporary class prefix for the purposes of side-by-side demo
-        // TO-DO: replace this with universal class name when using namespaces
         classPrefix: "neo-icon-",
-        // codepoints: unicodes,
       },
       html: false,
-      // htmlTemplate: '../templates/html.hbs',
       normalize: true,
       fontHeight: 1000,
       codepoints: unicodes,
     },
-    async function (error, result) {
+    async function (error) {
       if (error) {
-        console.log("Fail!", error);
-      } else {
-        // console.log(result);
+        console.log(`webFontsGenerator failed with error: ${error}`);
+        return;
+      }
+
+      try {
+        await fs.unlink(`${buildDir}/updated-neo-icons.svg`);
+        await fs.unlink(`${buildDir}/updated-neo-icons.ttf`);
+
+        const CSSFileDir = `${buildDir}/updated-neo-icons.css`;
+
+        const regEx = new RegExp("replaceMe", "g");
 
         const base64FileBuffer = await fs.readFile(
-          "../build/css/updated-neo-icons.woff"
+          `${buildDir}/updated-neo-icons.woff`
         );
 
-        const contents_in_base64 = await base64FileBuffer.toString("base64");
-        // console.log(contents_in_base64.toString());
-
-        // create variable for ':root' RegEx
-
-        var regEx = new RegExp("replaceMe", "g");
-
-        // create Object to use as function parameter
+        const contentsInBase64 = await base64FileBuffer.toString("base64");
 
         const replaceSource = {
-          files: "../build/css/updated-neo-icons.css",
+          files: `${buildDir}/updated-neo-icons.css`,
           from: regEx,
-          to: `url(data:application/font-woff;base64,${contents_in_base64.toString()}) format('woff')`,
+          to: `url(data:application/font-woff;base64,${contentsInBase64.toString()}) format('woff')`,
         };
 
-        replacelib(replaceSource).then(async (results) => {
-          console.log("Replacement results:", results);
-          const prettierConfig = await prettier.resolveConfig(
-            "../build/css/updated-neo-icons.css"
-          );
-          await fs
-            .readFile("../build/css/updated-neo-icons.css")
-            .then(async (fileContent) => {
-              await fs
-                .writeFile(
-                  "../build/css/updated-neo-icons.css",
-                  prettier.format(fileContent.toString(), {
-                    ...prettierConfig,
-                    filepath: "../build/css/updated-neo-icons.css",
-                  })
-                )
-                .then(async () => {
-                  await fs
-                    .readFile("../build/css/updated-neo-icons.css")
-                    .then(async (result) => {
-                      //   console.log(result.toString());
-                      await fs.writeFile(
-                        "../neo/scss-update/icons.scss",
-                        result.toString()
-                      );
-                    })
-                    .catch((error) => {
-                      console.log(error);
-                    });
-                });
-            });
-          console.log("updated-neo-icons.css generated in build/ folder");
-        });
+        const replaceResults = await replacelib(replaceSource);
+
+        console.log("Replacement results:", replaceResults);
+
+        const prettierConfig = await prettier.resolveConfig(CSSFileDir);
+
+        const iconsCSSFile = await fs.readFile(CSSFileDir);
+
+        await fs.writeFile(
+          CSSFileDir,
+          prettier.format(iconsCSSFile.toString(), {
+            ...prettierConfig,
+            filepath: CSSFileDir,
+          })
+        );
+
+        await fs.writeFile(
+          "../../neo/neo-scss/icons.scss",
+          iconsCSSFile.toString()
+        );
+
+        console.log("updated-neo-icons.css successfully generated");
+      } catch (error) {
+        console.log(`webFontsGenerator callback failed with error: ${error}`);
       }
     }
   );
 };
-// });
 
 generateIcons();
