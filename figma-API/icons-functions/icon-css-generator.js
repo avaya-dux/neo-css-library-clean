@@ -580,6 +580,9 @@ const generateIcons = async () => {
       }
 
       try {
+        await fs.unlink(`${buildDir}/updated-neo-icons.svg`);
+        await fs.unlink(`${buildDir}/updated-neo-icons.ttf`);
+
         const CSSFileDir = `${buildDir}/updated-neo-icons.css`;
 
         const regEx = new RegExp("replaceMe", "g");
