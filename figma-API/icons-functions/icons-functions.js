@@ -26,7 +26,7 @@ async function getIconsComponentsFromFigma(figmaId, figmaApiKey) {
       return component.containing_frame.pageName === "Icons";
     });
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 }
 
@@ -54,7 +54,7 @@ async function getIconURLFromFigma(
 
     return figmaIconURL;
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 }
 
@@ -72,7 +72,7 @@ async function writeIconContentFromURL(URL, imagePath) {
         .on("error", (e) => reject(e));
     });
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 }
 
@@ -122,7 +122,7 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
 
     return iconsArrays;
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 }
 
@@ -139,7 +139,7 @@ async function generateIconFiles(iconIds, URLs, fileType) {
       console.log(`${iconFileName} created`);
     });
   } catch (error) {
-    console.log(`Error generating ${Object.keys(tag)[0]}: $${error}`);
+    console.error(`Error generating ${Object.keys(tag)[0]}: $${error}`);
   }
 }
 
@@ -173,7 +173,7 @@ async function pullAllIcons(figmaApiKey, figmaId) {
       "svg"
     );
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 }
 
@@ -213,7 +213,7 @@ async function pullIcons(figmaApiKey, figmaId, iconNames) {
 
     await generateIconFiles(iconIdsToGen, iconSVGContent, "svg");
   } catch (error) {
-    console.log(`Error: ${error}`);
+    console.error(`Error: ${error}`);
   }
 }
 
