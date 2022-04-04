@@ -80,7 +80,7 @@ async function getIconInformation(string, bidirectional) {
 
 // function to generate a streamlined version of our iconInfo file for use in our Next Gen portal
 
-async function getIconInformationNextGen(string, bidirectional) {
+async function getIconInformationForDesignPortal(string, bidirectional) {
   // file to record icon names for DS Portal
 
   await fs.writeFile(
@@ -113,5 +113,5 @@ async function getIconInformationNextGen(string, bidirectional) {
 // }
 
 exports.getIconInformation = getIconInformation;
-exports.getIconInformationNextGen = getIconInformationNextGen;
+exports.getIconInformationForDesignPortal = getIconInformationForDesignPortal;
 exports.createCopyableSVG = createCopyableSVG;

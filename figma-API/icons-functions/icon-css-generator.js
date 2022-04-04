@@ -542,20 +542,19 @@ const unicodes = {
 };
 
 const generateIcons = async () => {
-  const styleDictionaryDir = path.resolve(
-    __dirname,
-    "../../style-dictionary/properties/assets/icons/svgs"
-  );
+  const styleDictionaryDir = path.resolve(__dirname, "../../style-dictionary");
 
   let iconsSVGDir = [];
 
   try {
-    iconsSVGDir = await fs.readdir(styleDictionaryDir);
+    iconsSVGDir = await fs.readdir(
+      `${styleDictionaryDir}/properties/assets/icons/svgs`
+    );
   } catch (error) {
     console.log(`Reading icon SVGs file directory failed with error: ${error}`);
   }
   const iconsSVGFiles = iconsSVGDir.map(
-    (file) => `${styleDictionaryDir}/${file}`
+    (file) => `${styleDictionaryDir}/properties/assets/icons/svgs/${file}`
   );
 
   webfontsGenerator(
@@ -564,7 +563,7 @@ const generateIcons = async () => {
       dest: buildDir,
       fontName: "updated-neo-icons",
       types: ["woff"],
-      cssTemplate: "../../style-dictionary/templates/css.hbs",
+      cssTemplate: `${styleDictionaryDir}/templates/css.hbs`,
       templateOptions: {
         classPrefix: "neo-icon-",
       },
@@ -616,7 +615,7 @@ const generateIcons = async () => {
         );
 
         await fs.writeFile(
-          "../../neo/neo-scss/icons.scss",
+          path.resolve(__dirname, "../../neo/neo-scss/icons.scss"),
           iconsCSSFile.toString()
         );
 
