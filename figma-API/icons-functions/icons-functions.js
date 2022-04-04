@@ -118,8 +118,6 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
       }
     });
 
-    console.log(`Total number of icons is: ${iconsArrays.totalIcons}`);
-
     return iconsArrays;
   } catch (error) {
     console.error(`Error: ${error}`);
