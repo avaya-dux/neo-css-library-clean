@@ -17,7 +17,7 @@ Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
   return amendedArg === arg2 ? options.fn(this) : options.inverse(this);
 });
 
-const buildDir = "../../generated-styles/css/";
+const buildDir = "../generated-styles/css/";
 
 // Code to generate .css file for icons -- THIS CODE TO BE RUN AFTER ICONGEN SCRIPT
 
