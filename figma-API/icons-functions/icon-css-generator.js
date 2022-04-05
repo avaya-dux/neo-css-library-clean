@@ -622,6 +622,8 @@ const generateIcons = async () => {
           })
         );
 
+        await fs.unlink(`${buildDir}/updated-neo-icons.woff`);
+
         console.log("updated-neo-icons.css successfully generated");
       } catch (error) {
         console.log(`webFontsGenerator callback failed with error: ${error}`);
