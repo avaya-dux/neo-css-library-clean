@@ -616,7 +616,10 @@ const generateIcons = async () => {
 
         await fs.writeFile(
           path.resolve(__dirname, "../../neo/neo-scss/icons.scss"),
-          iconsCSSFile.toString()
+          prettier.format(iconsCSSFile.toString(), {
+            ...prettierConfig,
+            filepath: path.resolve(__dirname, "../../neo/neo-scss/icons.scss"),
+          })
         );
 
         console.log("updated-neo-icons.css successfully generated");
