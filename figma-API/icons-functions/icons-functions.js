@@ -75,14 +75,9 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
   try {
     const iconsOnAll = await getIconsComponentsFromFigma(figmaId, figmaApiKey);
 
-    let iconsArrays = {
-      totalIcons: 0,
-      figmaIconNodeIds: [],
-    };
+    const figmaIconNodeIds = [];
 
     iconsOnAll.forEach(async (component) => {
-      iconsArrays.totalIcons++;
-
       const compName = component.name.toLowerCase();
       if (compName === "template") {
         return;
@@ -96,7 +91,7 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
 
       const iconName = compName.replace(/\/|\s+/g, "");
 
-      iconsArrays.figmaIconNodeIds.push({
+      figmaIconNodeIds.push({
         [iconName]: component.node_id,
       });
 
@@ -113,7 +108,7 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
       }
     });
 
-    return iconsArrays;
+    return figmaIconNodeIds;
   } catch (error) {
     console.error(`Error: ${error}`);
   }
@@ -182,12 +177,9 @@ async function pullIcons(figmaApiKey, figmaId, iconNames) {
       recursive: true,
     });
 
-    const iconFunctionArrays = await makeIconFunctionArrays(
-      figmaApiKey,
-      figmaId
-    );
+    const figmaIconNodeIds = await makeIconFunctionArrays(figmaApiKey, figmaId);
 
-    const iconIdsToGen = iconFunctionArrays.figmaIconNodeIds
+    const iconIdsToGen = figmaIconNodeIds
       .map((nodeId) => {
         let foundId;
         formattedIconNames.forEach((iconName) => {
