@@ -6,7 +6,7 @@ const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functio
 
 const replace = require("./icon-utility-files/icon-replacement-string");
 
-async function getIconsComponentsFromFigma(figmaId, figmaApiKey) {
+async function getIconComponentsFromFigma(figmaId, figmaApiKey) {
   try {
     const result = await fetch(
       "https://api.figma.com/v1/files/" + figmaId + "/components",
@@ -73,7 +73,7 @@ async function writeIconContentFromURL(URL, imagePath) {
 
 async function makeIconFunctionArrays(figmaApiKey, figmaId) {
   try {
-    const iconsOnAll = await getIconsComponentsFromFigma(figmaId, figmaApiKey);
+    const iconsOnAll = await getIconComponentsFromFigma(figmaId, figmaApiKey);
 
     const figmaIconNodeIds = [];
 
@@ -206,4 +206,4 @@ exports.pullIcons = pullIcons;
 
 exports.pullAllIcons = pullAllIcons;
 
-exports.getIconsComponentsFromFigma = getIconsComponentsFromFigma;
+exports.getIconComponentsFromFigma = getIconComponentsFromFigma;
