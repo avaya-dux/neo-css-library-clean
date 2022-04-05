@@ -1,7 +1,6 @@
 const fs = require("fs").promises;
 const fsdefault = require("fs");
 const fetch = require("node-fetch");
-const axios = require("axios");
 
 const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functions.js");
 
@@ -59,13 +58,10 @@ async function getIconURLFromFigma(
 
 async function writeIconContentFromURL(URL, imagePath) {
   try {
-    const figmaIconContent = await axios({
-      url: URL,
-      responseType: "stream",
-    });
+    const figmaIconContent = await fetch(URL, { responseType: "stream" });
 
     return new Promise(async (resolve, reject) => {
-      figmaIconContent.data
+      figmaIconContent.body
         .pipe(await fsdefault.createWriteStream(imagePath))
         .on("finish", () => resolve())
         .on("error", (e) => reject(e));
