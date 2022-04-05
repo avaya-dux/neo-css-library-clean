@@ -83,11 +83,7 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
         return;
       }
 
-      let bidirectional = false;
-
-      if (component.description.includes("RTL")) {
-        bidirectional = true;
-      }
+      const bidirectional = component.description.includes("RTL");
 
       const iconName = compName.replace(/\/|\s+/g, "");
 
