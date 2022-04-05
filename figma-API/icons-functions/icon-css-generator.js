@@ -17,7 +17,7 @@ Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
   return amendedArg === arg2 ? options.fn(this) : options.inverse(this);
 });
 
-const buildDir = "../../generated-styles/css/";
+const buildDir = "../generated-styles/css/";
 
 // Code to generate .css file for icons -- THIS CODE TO BE RUN AFTER ICONGEN SCRIPT
 
@@ -539,23 +539,23 @@ const unicodes = {
   incognito: 0xf3e7,
   "incognito-off": 0xf3e8,
   "layout-immersive": 0xf3e9,
+  user: 0xf3f1,
 };
 
 const generateIcons = async () => {
-  const styleDictionaryDir = path.resolve(
-    __dirname,
-    "../../style-dictionary/properties/assets/icons/svgs"
-  );
+  const styleDictionaryDir = path.resolve(__dirname, "../../style-dictionary");
 
   let iconsSVGDir = [];
 
   try {
-    iconsSVGDir = await fs.readdir(styleDictionaryDir);
+    iconsSVGDir = await fs.readdir(
+      `${styleDictionaryDir}/properties/assets/icons/svgs`
+    );
   } catch (error) {
     console.log(`Reading icon SVGs file directory failed with error: ${error}`);
   }
   const iconsSVGFiles = iconsSVGDir.map(
-    (file) => `${styleDictionaryDir}/${file}`
+    (file) => `${styleDictionaryDir}/properties/assets/icons/svgs/${file}`
   );
 
   webfontsGenerator(
@@ -564,7 +564,7 @@ const generateIcons = async () => {
       dest: buildDir,
       fontName: "updated-neo-icons",
       types: ["woff"],
-      cssTemplate: "../../style-dictionary/templates/css.hbs",
+      cssTemplate: `${styleDictionaryDir}/templates/css.hbs`,
       templateOptions: {
         classPrefix: "neo-icon-",
       },
@@ -616,9 +616,14 @@ const generateIcons = async () => {
         );
 
         await fs.writeFile(
-          "../../neo/neo-scss/icons.scss",
-          iconsCSSFile.toString()
+          path.resolve(__dirname, "../../neo/neo-scss/icons.scss"),
+          prettier.format(iconsCSSFile.toString(), {
+            ...prettierConfig,
+            filepath: path.resolve(__dirname, "../../neo/neo-scss/icons.scss"),
+          })
         );
+
+        await fs.unlink(`${buildDir}/updated-neo-icons.woff`);
 
         console.log("updated-neo-icons.css successfully generated");
       } catch (error) {

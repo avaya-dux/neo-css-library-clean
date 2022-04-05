@@ -1,297 +1,205 @@
 const fs = require("fs").promises;
 const fsdefault = require("fs");
 const fetch = require("node-fetch");
-const axios = require("axios");
 
 const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functions.js");
 
 const replace = require("./icon-utility-files/icon-replacement-string");
 
-// functions to pull icons from Icon file
-// TODO - check why API call is sometimes failing -- probably to do with several calls at once
-// see get IconContentFromURL function
+async function getIconComponentsFromFigma(figmaId, figmaApiKey) {
+  try {
+    const result = await fetch(
+      "https://api.figma.com/v1/files/" + figmaId + "/components",
+      {
+        method: "GET",
+        headers: {
+          "X-Figma-Token": figmaApiKey,
+          pragma: "no-cache",
+          "cache-control": "no-store, no-cache, must-revalidate",
+        },
+      }
+    );
+    const figmaFileComponents = await result.json();
 
-// #region getIconsComponents
-
-// get all icons as components from Figma file
-
-async function getIconsComponents(figmaId, figmaApiKey) {
-  let result = await fetch(
-    "https://api.figma.com/v1/files/" + figmaId + "/components",
-    {
-      method: "GET",
-      headers: {
-        "X-Figma-Token": figmaApiKey,
-        pragma: "no-cache",
-        "cache-control": "no-store, no-cache, must-revalidate",
-      },
-    }
-  );
-  let figmaFileComponents = await result.json();
-
-  const iconsOnAll = figmaFileComponents.meta.components.filter((component) => {
-    return component.containing_frame.pageName === "Icons";
-  });
-
-  return iconsOnAll;
+    return figmaFileComponents.meta.components.filter((component) => {
+      return component.containing_frame.pageName === "Icons";
+    });
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 }
 
-// #endregion getIconsComponents
+async function getIconURLFromFigma(
+  figmaApiKey,
+  figmaId,
+  figmaIconNodeIds,
+  fileType
+) {
+  const imageNodeIds = figmaIconNodeIds.map((nodeId) => Object.values(nodeId));
 
-// #region getIconURLs
+  try {
+    const result = await fetch(
+      "https://api.figma.com/v1/images/" +
+        figmaId +
+        `/?ids=${imageNodeIds}&format=${fileType}`,
+      {
+        method: "GET",
+        headers: {
+          "X-Figma-Token": figmaApiKey,
+        },
+      }
+    );
 
-// function to get particular icon URL from nodeID in required format
-
-async function getIconURL(figmaApiKey, figmaId, imageNodeId, fileType) {
-  let result = await fetch(
-    "https://api.figma.com/v1/images/" +
-      figmaId +
-      `/?ids=${imageNodeId}&format=${fileType}`,
-    {
-      method: "GET",
-      headers: {
-        "X-Figma-Token": figmaApiKey,
-      },
-    }
-  );
-  let figmaIconURL = await result.json();
-
-  return figmaIconURL;
+    return await result.json();
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 }
-
-// #endregion
-
-// #region writeIconContentFromURL
-
-// function to get Icon image content data from URL and write to directory
-// TO-DO this might be why API call is failing
-// We are calling each URL seperately instead of batching the call in one
 
 async function writeIconContentFromURL(URL, imagePath) {
-  await axios({
-    url: URL,
-    responseType: "stream",
-  }).then((response) => {
-    new Promise(async (resolve, reject) => {
-      response.data
+  try {
+    const figmaIconContent = await fetch(URL, { responseType: "stream" });
+
+    return new Promise(async (resolve, reject) => {
+      figmaIconContent.body
         .pipe(await fsdefault.createWriteStream(imagePath))
         .on("finish", () => resolve())
         .on("error", (e) => reject(e));
     });
-  });
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 }
 
-// #endregion
+async function makeIconFunctionArrays(figmaApiKey, figmaId) {
+  try {
+    const iconsOnAll = await getIconComponentsFromFigma(figmaId, figmaApiKey);
 
-// #region makeIconFunctionArrays
+    const figmaIconNodeIds = [];
 
-// this function is to seperate out the functionality that generates the Arrays of information necessary to pull icon content from Figma
-
-async function makeIconFunctionArrays(figmaApiKey, figmaId, iconNames) {
-  // we get all icon Components
-  var iconsOnAll = await getIconsComponents(figmaId, figmaApiKey);
-
-  // we initialize variables to hold the information required to make the API calls
-
-  let iconsArrays = {
-    totalIcons: 0,
-    figmaIconTags: [],
-    figmaFileNodes: [],
-    figmaIconNames: [],
-  };
-
-  iconsOnAll.forEach(async (component) => {
-    // we create an object to associate particular icon names with their node id
-
-    iconsArrays.totalIcons++;
-
-    // checking whether icon admits RTL/bidirectionality
-
-    var bidirectional = false;
-
-    if (component.description.includes("RTL")) {
-      // console.log(component.description);
-      bidirectional = true;
-    }
-
-    var compName = component.name.toLowerCase();
-    // we skip over the template icon
-    // TO-DO: Make it so that function requests only new or updated icons
-    if (compName === "template" || !iconNames.includes(compName)) {
+    iconsOnAll.forEach(async (component) => {
+      const compName = component.name.toLowerCase();
       if (compName === "template") {
         return;
       }
-    }
 
-    // we seperate out '-' and '/' from icon name
+      const bidirectional = component.description.includes("RTL");
 
-    var iconName = component.name.toLowerCase().replace(/\/|\s+/g, "");
+      const iconName = compName.replace(/\/|\s+/g, "");
 
-    // we check to see whether any names in the Figma file are duplicated
+      figmaIconNodeIds.push({
+        [iconName]: component.node_id,
+      });
 
-    if (iconsArrays.figmaIconNames.includes(iconName)) {
-      console.log(`${iconName} exists more than once in the Figma file`);
-    } else {
-      iconsArrays.figmaIconNames.push(iconName);
-    }
+      await iconUtilityFunctions.getIconInformationForDesignPortal(
+        compName,
+        bidirectional
+      );
 
-    // we create an array of objects, with the icon name as key and the node id as value
-
-    iconsArrays.figmaIconTags.push({
-      [iconName]: component.node_id,
+      if (iconsOnAll.indexOf(component) === iconsOnAll.length - 1) {
+        await fs.appendFile(
+          "./icons-functions/icon-utility-files/iconInfoNextGen.js",
+          "]"
+        );
+      }
     });
 
-    // then we get and store all individual icon component node ids in a seperate array
-    // this is to make it easier to insert these directly in the below function calls
-
-    iconsArrays.figmaFileNodes.push(component.node_id);
-
-    // this is function to get icon information for design system portal
-
-    await iconUtilityFunctions
-      // .getIconInformation(compName, bidirectional)
-      .getIconInformationNextGen(compName, bidirectional)
-      .then(async () => {
-        if (iconsOnAll.indexOf(component) === iconsOnAll.length - 1) {
-          console.log("last component");
-          await fs.appendFile(
-            "./icons-functions/icon-utility-files/iconInfoNextGen.js",
-            "]"
-          );
-        }
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  });
-
-  console.log(`Total number of icons is: ${iconsArrays.totalIcons}`);
-
-  return iconsArrays;
+    return figmaIconNodeIds;
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 }
 
-// #endregion
+async function generateIconFiles(iconIds, URLs, fileType) {
+  try {
+    iconIds.map(async (tag) => {
+      const iconURL = URLs.images[tag[Object.keys(tag)]];
 
-// #region generateIconFiles
-
-// this code allows us to pull icon content from an Array of URLs while dealing with potential errors
-
-async function generateIconFiles(iconArrays, URLs, fileType) {
-  await Promise.all(
-    iconArrays.figmaIconTags.map(async (tag) => {
-      // this is code meant to allow us to loop over icons that were not pulled correctly from Figma
-      // we create a variable that will toggle to false if any of the API calls does not succeed
-      var success = true;
-
-      // the code below gets the component id by pulling via the icon name-as-Object key
-
-      var iconURL = URLs.images[tag[Object.keys(tag)]];
-
-      var iconFileName = `../properties/assets/icons/${fileType}s/${Object.keys(
+      const iconFileName = `../style-dictionary/properties/assets/icons/${fileType}s/${Object.keys(
         tag
       )[0].replace(replace.stringsToReplace, "")}.${fileType}`;
 
-      var iconName = Object.keys(tag)[0]
-        .slice(Object.keys(tag)[0].lastIndexOf("/") + 1)
-        .replace(/\-|\/|\s+/g, "");
-
-      await writeIconContentFromURL(iconURL, iconFileName).catch((error) => {
-        // if there was an error pulling icon content from the URL, we switch success to false
-        if (error) {
-          success = false;
-        }
-        // we then log that there was an error on our first attempt to pull the icon content from this URL
-        console.log(
-          `!!!!!THIS WAS AN ERROR ON FIRST ATTEMPT TO PULL ${
-            Object.keys(tag)[0]
-          } as ${fileType}: $${error}`
-        );
-      });
-
-      // we return an array that contains a nested array with the name and URL of each icon and whether we had successfully pulled it
-      return [success, iconURL, iconFileName];
-    })
-  )
-    .then((values) => {
-      values.forEach(async (value) => {
-        // we set a similar variable to see whether our second attempt at pulling the icon content is successful
-        // NOTE -- assumes a probable error threshold of two attemps
-        var retry = true;
-
-        var successfulPull = value[0];
-        var iconURL = value[1];
-        var iconFileName = value[2];
-
-        // if first attempt was unsuccessful, we re-try the API call here
-        if (successfulPull == false) {
-          await writeIconContentFromURL(iconURL, iconFileName)
-            // if successful, we switch our retry variable to false
-            .then(() => (retry = false))
-            .catch((error) => {
-              // in the unlikely event of a third error, we log it to console
-              console.log(`!!!!!ERROR ON RETRY for ${iconFileName}: ${error}`);
-            });
-          if (retry == false) {
-            // if we were successful, log that the icon file has been created
-            console.log(`${iconFileName} created ON SECOND ATTEMPT`);
-          }
-        } else {
-          // if we were successful, log that the icon file has been created
-          console.log(`${iconFileName} created`);
-        }
-      });
-    })
-    .catch((error) => {
-      console.log(error);
+      await writeIconContentFromURL(iconURL, iconFileName);
+      console.info(`${iconFileName} created`);
     });
+  } catch (error) {
+    console.error(`Error generating ${Object.keys(tag)[0]}: $${error}`);
+  }
 }
 
-// #endregion
+async function pullAllIcons(figmaApiKey, figmaId) {
+  const styleDicDir = "../style-dictionary/properties/assets/icons";
 
-// #region pullIcons
+  try {
+    await fs.mkdir(`${styleDicDir}/svgs`, {
+      recursive: true,
+    });
 
-// this function combines all the above functionality to get icon URLs, pull data from them and write that data to file
+    const iconFunctionArrays = await makeIconFunctionArrays(
+      figmaApiKey,
+      figmaId
+    );
+
+    const imageNodeIds = iconFunctionArrays.figmaIconNodeIds.map((nodeId) =>
+      Object.values(nodeId)
+    );
+
+    const iconSVGContent = await getIconURLFromFigma(
+      figmaApiKey,
+      figmaId,
+      imageNodeIds,
+      "svg"
+    );
+
+    await generateIconFiles(
+      iconFunctionArrays.figmaIconNodeIds,
+      iconSVGContent,
+      "svg"
+    );
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
+}
 
 async function pullIcons(figmaApiKey, figmaId, iconNames) {
-  // make directories for both svgs and pngs
+  const styleDicDir = "../style-dictionary/properties/assets/icons";
 
-  await fs.mkdir("../properties/assets/icons/svgs", {
-    recursive: true,
-  });
-
-  await fs.mkdir("../properties/assets/icons/pngs", {
-    recursive: true,
-  });
-
-  const iconFunctionArrays = await makeIconFunctionArrays(
-    figmaApiKey,
-    figmaId,
-    iconNames
+  const formattedIconNames = iconNames.map((iconName) =>
+    iconName.replace("/", "")
   );
 
-  // we get the iconSVG URLs and pull content from them
+  try {
+    await fs.mkdir(`${styleDicDir}/svgs`, {
+      recursive: true,
+    });
 
-  await getIconURL(
-    figmaApiKey,
-    figmaId,
-    iconFunctionArrays.figmaFileNodes.toString(),
-    "svg"
-  ).then(async (iconSVGURLs) => {
-    await generateIconFiles(iconFunctionArrays, iconSVGURLs, "svg");
-  });
+    const figmaIconNodeIds = await makeIconFunctionArrays(figmaApiKey, figmaId);
 
-  // we get the iconPNG URLs and pull content from them
+    const iconIdsToGen = figmaIconNodeIds
+      .map((nodeId) => {
+        let foundId;
+        formattedIconNames.forEach((iconName) => {
+          if (nodeId[iconName]) foundId = nodeId;
+        });
+        return foundId;
+      })
+      .filter((id) => id != undefined);
 
-  await getIconURL(
-    figmaApiKey,
-    figmaId,
-    iconFunctionArrays.figmaFileNodes.toString(),
-    "png"
-  ).then(async (iconPNGURLs) => {
-    await generateIconFiles(iconFunctionArrays, iconPNGURLs, "png");
-  });
+    const iconSVGContent = await getIconURLFromFigma(
+      figmaApiKey,
+      figmaId,
+      iconIdsToGen,
+      "svg"
+    );
+
+    await generateIconFiles(iconIdsToGen, iconSVGContent, "svg");
+  } catch (error) {
+    console.error(`Error: ${error}`);
+  }
 }
 
 exports.pullIcons = pullIcons;
 
-exports.getIconsComponents = getIconsComponents;
+exports.pullAllIcons = pullAllIcons;
+
+exports.getIconComponentsFromFigma = getIconComponentsFromFigma;
