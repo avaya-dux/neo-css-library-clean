@@ -539,6 +539,7 @@ const unicodes = {
   incognito: 0xf3e7,
   "incognito-off": 0xf3e8,
   "layout-immersive": 0xf3e9,
+  user: 0xf3f1,
 };
 
 const generateIcons = async () => {
