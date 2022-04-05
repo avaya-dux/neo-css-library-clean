@@ -50,9 +50,8 @@ async function getIconURLFromFigma(
         },
       }
     );
-    const figmaIconURL = await result.json();
 
-    return figmaIconURL;
+    return await result.json();
   } catch (error) {
     console.error(`Error: ${error}`);
   }
