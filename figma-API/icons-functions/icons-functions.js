@@ -124,7 +124,7 @@ async function generateIconFiles(iconIds, URLs, fileType) {
       )[0].replace(replace.stringsToReplace, "")}.${fileType}`;
 
       await writeIconContentFromURL(iconURL, iconFileName);
-      console.log(`${iconFileName} created`);
+      console.info(`${iconFileName} created`);
     });
   } catch (error) {
     console.error(`Error generating ${Object.keys(tag)[0]}: $${error}`);
