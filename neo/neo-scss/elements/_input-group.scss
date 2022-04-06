@@ -1,21 +1,11 @@
-// update input group styles
-
 %input-group-error {
   background-color: $input-background-color;
   display: flex;
 }
 
-// @mixin neo-input-group--inline-children {
-
-// }
-
 @mixin neo-input-group-children {
   label:not(.neo-switch):not(.neo-label):not() {
     line-height: $input-line-height;
-    // line-height: 20px;
-    // padding: $input-padding-y 0;
-    // padding-bottom: $input-padding-y;
-    /// PADDING HERE PROBLEMATIC???
     padding-bottom: 4px;
     pointer-events: none;
   }
@@ -33,19 +23,10 @@
   .neo-check,
   .neo-btn {
     border-radius: 0;
-    // margin-bottom: 0;
-    // margin-top: 0;
   }
-
-  // & ~ .neo-input {
-  //   border: $input-border-width $input-border-style $input-border-color;
-  // }
-
-  // .neo-radio
 
   .neo-input {
     flex-grow: 1;
-    // border: none;
   }
 
   .neo-btn {
@@ -54,16 +35,13 @@
     padding-top: $input-padding-y;
   }
 
-  // @include neo-group-border-radius($global-radius);
   @include neo-input-group-addon;
 }
 
 @mixin neo-input-group-addon {
-  /* stylelint-disable-next-line selector-class-pattern */
   .neo-input-group__addon {
     align-items: center;
     background: $input-background-color;
-    // border-radius: $input-border-radius;
     display: flex;
     line-height: $input-line-height;
     padding: $input-padding-y $input-padding-x;
@@ -98,38 +76,14 @@
   }
 }
 
-// @mixin neo-input-group--float-grid {
-//   &.#{$row-class-name} {
-//     display: block;
-//   }
-// }
-
-// @mixin neo-input-group-icon {
-//   &__icon {
-//     color: $token-color-red-500;
-//     display: flex;
-//     font-size: $input-icon-size;
-//     position: absolute;
-//     right: $input-space-right;
-//     z-index: 1;
-//   }
-// }
-
 .neo-input-group {
-  // border-radius: $input-border-radius;
-
-  // possibly one solution to input group issue
   display: flex;
   flex-direction: column;
   min-height: 58px;
   justify-content: flex-end;
-  & label:last-child:not(:nth-child(2)) {
-    // padding-bottom: 0px !important;
-  }
   & > label:not(.neo-switch) {
     font-size: $token-input-label-font-size;
     line-height: $token-input-label-line-height;
-    // line-height: 20px;
     letter-spacing: $token-input-label-letter-spacing;
     font-weight: $token-input-label-font-weight;
     color: $input-label-color;
@@ -141,17 +95,10 @@
   & .neo-check + label:before {
     line-height: 1.5;
   }
-  // &--inline {
-  //   flex-direction: row;
-  //   align-items: center;
-  //   @include neo-input-group--inline-children();
-  // }
   .neo-input-group--addons {
     display: flex;
     vertical-align: middle;
     width: 100%;
-    // transition: border-color $global-transition-duration
-    //   $global-transition-timing;
     border: $input-border-width $input-border-style $input-border-color;
     border-radius: $input-border-radius;
     .neo-input {
@@ -196,7 +143,6 @@
       }
     }
     &:hover {
-      // transition: $input-hover-transition;
       border-color: $token-input-border-hover-color;
       & .neo-input-group__addon {
         &:first-child {
@@ -215,11 +161,8 @@
     }
     &:focus-within {
       border-color: $input-focus-border-color;
-      // // hard-coded for now
       border-width: 2px;
       margin: -1px -1px;
-      // border-color: transparent;
-      // box-shadow: 0 0 0 2px $input-focus-border-color;
       .neo-input-editable__wrapper .neo-input-edit__icon {
         padding: 8px 13px;
       }
@@ -227,28 +170,18 @@
         &:first-child {
           border-right-color: $input-focus-border-color;
           border-right-width: 2px;
-          // margin-right: -1px;
-          // border-color: transparent;
-          // box-shadow: 0 0 0 2px $input-focus-border-color;
           @include rtl-selector {
             border-left-color: $input-focus-border-color;
             border-left-width: 2px;
-            // border-color: transparent;
-            // box-shadow: 0 0 0 2px $input-focus-border-color;
           }
         }
         &:last-child {
           border-left-color: $input-focus-border-color;
           border-left-width: 2px;
-          // margin-left: 2px;
           padding: 8px 10px;
-          // border-color: transparent;
-          // box-shadow: 0 0 0 2px $input-focus-border-color;
           @include rtl-selector {
             border-right-color: $input-focus-border-color;
             border-right-width: 2px;
-            // border-color: transparent;
-            // box-shadow: 0 0 0 2px $input-focus-border-color;
           }
         }
       }
@@ -257,15 +190,6 @@
       margin-bottom: 0;
     }
   }
-
-  // mixed input types
-
-  // &.neo-input-group--inline {
-  //   flex-direction: row;
-  //   label {
-  //     align-self: center;
-  //   }
-  // }
 
   .neo-input-group--inline {
     min-height: 37px;
@@ -306,7 +230,5 @@
   }
 
   @include neo-input-group-children;
-  // @include neo-input-group-icon;
   @include neo-input-group-label-positioning;
-  // @include neo-input-group--float-grid;
 }
