@@ -48,7 +48,10 @@
   }
   &-control {
     // margin-bottom: $form-control-margin-bottom;
+    min-height: 79px;
     margin-bottom: 12px;
+    // flex-direction: column;
+    // justify-content: center;
     // width: fit-content;
     & > label:not(.neo-switch) {
       font-size: $token-input-label-font-size;
@@ -254,6 +257,8 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    /* NEO-744 */
+    // min-height: 79px;
     // flex-wrap: wrap;
     &--wrap {
       flex-wrap: wrap;
@@ -276,13 +281,22 @@
     //   padding-bottom: 0px;
     // }
 
-
     .neo-form-control {
       margin-bottom: 0px;
       // margin-right: 12px;
+      min-height: 79px;
+      display: flex;
+      flex-direction: column;
+
       & .neo-input-group {
+        min-height: 58px;
+        width: fit-content;
+        justify-content: flex-end;
         & > label {
           // padding-bottom: 0px !important;
+        }
+        & .neo-input-editable__wrapper:only-child {
+          margin: 20px auto;
         }
       }
     }
