@@ -1,3 +1,9 @@
+$input-group-height: $token-input-min-height + $token-label-line-height +
+  $token-input-vertical-margin + (2 * $token-input-border-width);
+
+$form-control-height: $input-group-height + $token-input-vertical-margin +
+  $token-input-helper-line-height + 1px; //rounding up to account for decimal height increase caused by icon in helper text
+
 @mixin form--states {
   @each $state-color-name, $state-color-value in $input-state-color-map {
     &--#{$state-color-name} {
@@ -42,7 +48,7 @@
     display: flex;
   }
   &-control {
-    min-height: 79px;
+    min-height: $form-control-height;
     margin-bottom: 12px;
     & > label:not(.neo-switch) {
       font-size: $token-input-label-font-size;
@@ -251,12 +257,12 @@
     .neo-form-control {
       margin-bottom: 0px;
 
-      min-height: 79px;
+      min-height: $form-control-height;
       display: flex;
       flex-direction: column;
 
       & .neo-input-group {
-        min-height: 58px;
+        min-height: $input-group-height;
         width: fit-content;
         justify-content: flex-end;
         & .neo-input-editable__wrapper:only-child {
