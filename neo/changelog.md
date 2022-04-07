@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.53.1
+
+### Bugs Report
+
+- Added styles to [Form](https://design.avaya.com/components/web/form-layout-web) Components to avoid layout shift issues when adding/removing helper text
+
 ### 3.53.0
 
 ### New Features - List of bugs that have been updated
