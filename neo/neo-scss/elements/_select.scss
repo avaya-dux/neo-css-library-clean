@@ -348,7 +348,7 @@
     }
   }
 
-  &--disabled {
+  &.neo-multiselect--disabled {
     &:focus {
       outline: none;
       & .neo-multiselect__header,
@@ -358,7 +358,7 @@
     }
     & .neo-multiselect__header,
     & .neo-multiselect-combo__header {
-      background-color: $select-disabled-bg !important;
+      background-color: $select-disabled-bg;
       color: $select-disabled-color !important;
       cursor: not-allowed !important;
       &:focus {
@@ -366,6 +366,7 @@
         outline: none;
       }
       &:after {
+        background-color: $select-disabled-bg;
         color: $select-disabled-color !important;
         cursor: not-allowed !important;
       }
