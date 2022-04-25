@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.53.2
+
+### Bugs Report
+
+- Removed redundant 'height' and 'width' properties from [Tooltip](https://design.avaya.com/components/web/form-layout-web) Components causing alignment issues when used in Navbar
+
 ### 3.53.1
 
 ### Bugs Report
