@@ -465,6 +465,7 @@
   }
   &__category, &__disabled {
     height: inherit;
+    justify-content: left;
   }
 
   @include leftnav-main;
