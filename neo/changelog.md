@@ -1,20 +1,22 @@
 # Changelog
 
-### 3.53.2
+### 3.54.1
 
-### Bugs Report
+#### Bugs Report - List of bugs that have been updated
 
 - Removed redundant 'height' and 'width' properties from [Tooltip](https://design.avaya.com/components/web/form-layout-web) Components causing alignment issues when used in Navbar
+- Fixed background color issue on chevron in disabled [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Component
+- Added new `justify-content` property to Category items in [Left Navigation](https://design.avaya.com/components/web/left-nav-web) Component.
 
-### 3.53.1
+### 3.54.0
 
-### Bugs Report
+### New Features - New features that have recently been added
 
-- Added styles to [Form](https://design.avaya.com/components/web/form-layout-web) Components to avoid layout shift issues when adding/removing helper text
+- Added new `user` [Icon](https://design.avayacloud.com/components/icons/)
 
 ### 3.53.0
 
-### New Features - List of bugs that have been updated
+### New Features - New features that have recently been added
 
 - Added new `acw` colors to [Navbar](https://design.avayacloud.com/components/web/navbar-web) Components
 
@@ -38,7 +40,7 @@
 
 ### 3.52.0
 
-### New Features - List of bugs that have been updated
+### New Features - New features that have recently been added
 
 - Added two new colors, `base-150` and `base-850` to [Design Tokens](https://design.avaya.com/components/tokens/#Colors)
 - Added new neo-leftnav\_\_category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
@@ -67,7 +69,7 @@
 
 ### 3.51.0
 
-### New Features - List of bugs that have been updated
+### New Features - New features that have recently been added
 
 - Added new version of 'info' [Icon](https://design.avayacloud.com/components/icons/)
 - Added styles for new [Pagination](https://design.avayacloud.com/components/web/pagination-web) variant Components.
