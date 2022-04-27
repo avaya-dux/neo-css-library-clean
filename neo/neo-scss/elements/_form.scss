@@ -49,7 +49,6 @@
       letter-spacing: $token-input-label-letter-spacing;
       font-weight: $token-input-label-font-weight;
       color: $input-label-color;
-      // padding-bottom: $input-padding-y;
     }
 
     @include form--states;
