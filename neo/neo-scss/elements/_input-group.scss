@@ -79,8 +79,6 @@
 .neo-input-group {
   display: flex;
   flex-direction: column;
-  min-height: 58px;
-  justify-content: flex-end;
   & > label:not(.neo-switch) {
     font-size: $token-input-label-font-size;
     line-height: $token-input-label-line-height;
