@@ -9,7 +9,7 @@
   transition-timing-function: $sheet-transition-timing-function;
   display: flex;
   flex-direction: column;
-  z-index: 9999 !important;
+  z-index: 9999;
   box-shadow: $sheet-shadow;
   background-color: $sheet-background;
 }
