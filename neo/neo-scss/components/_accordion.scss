@@ -62,6 +62,12 @@
 
   $parent-selector: &;
 
+  &__header-text:hover:not(.neo-accordion__header-text--disabled) {
+    background-color:var(--neo-color-base-100);
+    cursor: pointer;
+    transition: $group-list-transition;
+  }
+
   &__item {
     @extend %list-radius;
     margin-bottom: 24px;
@@ -103,7 +109,6 @@
     }
   }
 
-  @include list--hover("header");
   @include accordion-header;
   @include NeoLinkStyles;
 }
