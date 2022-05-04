@@ -22,13 +22,13 @@
 
 ### 3.54.0
 
-### New Features - List of bugs that have been updated
+### New Features - New features that have recently been added
 
 - Added new `user` [Icon](https://design.avayacloud.com/components/icons/)
 
 ### 3.53.0
 
-### New Features - List of bugs that have been updated
+### New Features - New features that have recently been added
 
 - Added new `acw` colors to [Navbar](https://design.avayacloud.com/components/web/navbar-web) Components
 
@@ -52,14 +52,14 @@
 
 ### 3.52.0
 
-### New Features - List of bugs that have been updated
+### New Features - New features that have recently been added
 
 - Added two new colors, `base-150` and `base-850` to [Design Tokens](https://design.avaya.com/components/tokens/#Colors)
 - Added new neo-leftnav\_\_category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
 
 ### 3.51.3
 
-### New Features -
+### New Features - New features that have recently been added
 
 - Added new neo-leftnav\_\_category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
 
@@ -81,7 +81,7 @@
 
 ### 3.51.0
 
-### New Features - List of bugs that have been updated
+### New Features - New features that have recently been added
 
 - Added new version of 'info' [Icon](https://design.avayacloud.com/components/icons/)
 - Added styles for new [Pagination](https://design.avayacloud.com/components/web/pagination-web) variant Components.
