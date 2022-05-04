@@ -1,5 +1,16 @@
 # Changelog
 
+### 3.54.2
+
+### Breaking Changes - the following Components are broken and need immediate attention
+
+- Available May 11, 2022: Changed naming convention for all data visualization colors, added additional colors for light and dark mode
+
+#### Bugs Report - List of bugs that have been updated
+
+- Reverted changes to Form Layout elements that caused layout issues
+- Corrected hover color on Accordions
+
 ### 3.54.1
 
 #### Bugs Report - List of bugs that have been updated
