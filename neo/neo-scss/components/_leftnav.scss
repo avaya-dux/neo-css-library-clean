@@ -156,7 +156,7 @@
       transition: max-height $global-transition-duration
         $global-transition-timing;
     }
-    &--expand > a,  & > .neo-leftnav__category {
+    &--expand > a,  &--expand > .neo-leftnav__category {
       &.expandable:after {
         transition: $accordion-icon-transition;
         transform: rotate(90deg) $accordion-active-icon-animation;
