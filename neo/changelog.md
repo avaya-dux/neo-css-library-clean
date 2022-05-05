@@ -1,11 +1,23 @@
 # Changelog
 
+### 3.54.2
+
+### Breaking Changes - the following Components are broken and need immediate attention
+
+- Available May 11, 2022: Changed naming convention for all data visualization colors, added additional colors for light and dark mode
+
+#### Bugs Report - List of bugs that have been updated
+
+- Reverted changes to [Form Layout](https://design.avaya.com/components/web/form-layout-web) elements that caused layout issues
+- Corrected hover color on [Accordions](https://design.avaya.com/components/web/accordion-web)
+
 ### 3.54.1
 
 #### Bugs Report - List of bugs that have been updated
 
-- Removed redundant 'height' and 'width' properties from [Tooltip](https://design.avaya.com/components/web/form-layout-web) Components causing alignment issues when used in Navbar
-- Fixed background color issue on chevron in disabled [Selectbox](https://design.avayacloud.com/components/web/selectbox-web) Component
+- Fixed background color issue on chevron in disabled [Select](https://design.avayacloud.com/components/web/selectbox-web) Components
+- Added styles to [Form](https://design.avaya.com/components/web/form-layout-web) Components to avoid layout shift issues when adding/removing helper text
+- Removed redundant 'height' and 'width' properties from [Tooltip](https://design.avaya.com/components/web/tooltip-web) Components causing alignment issues when used in Navbar
 - Added new `justify-content` property to Category items in [Left Navigation](https://design.avaya.com/components/web/left-nav-web) Component.
 
 ### 3.54.0
@@ -47,7 +59,7 @@
 
 ### 3.51.3
 
-### New Features -
+### New Features - New features that have recently been added
 
 - Added new neo-leftnav\_\_category class and selector for NavCategory component for [Leftnav component](https://design.avaya.com/components/web/left-nav-web).
 
