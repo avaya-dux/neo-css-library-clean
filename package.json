@@ -17,6 +17,7 @@
   "devDependencies": {
     "axios": "^0.21.1",
     "cssnano": "^4.1.10",
+    "dotenv": "^16.0.1",
     "esm": "^3.2.25",
     "figma-transformer": "^2.1.0",
     "jest": "^27.4.5",
