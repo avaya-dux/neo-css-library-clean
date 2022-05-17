@@ -73,3 +73,5 @@ Then, once the script completes, you should be able to run the `update-site` scr
 1. Discuss in more detail the role of individual .scss files
 2. Discuss the process by which code should be committed/tested for review?
 3. Discuss how to coordinate changes to the base CSS library with work to do on the React Components
+
+## [Link to CodeSee](https://app.codesee.io/maps/public/267b4490-d552-11ec-bab4-dbed0529e43a)
