@@ -1,0 +1,27 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper__component-group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.wrapper__component-group--column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 50px;
+}
+
+.main-navigation {
+    padding: 20px;
+}
+
+.text-spacing {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
