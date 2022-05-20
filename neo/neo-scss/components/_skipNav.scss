@@ -5,8 +5,10 @@
   align-items: flex-start;
   background-color: $skipNav-background-color;
   border-radius: $skipNav-border-radius;
-  height: max-content;
-  width: max-content;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
   margin: $skipNav-margin;
   position: absolute;
   /* TODO z-index value needs to revisted */
@@ -16,6 +18,7 @@
   font-weight: $skipNav-font-weight;
   color: $skipNav-font-color;
   font-size: $skipNav-font-size;
+  overflow: hidden;
   @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) {
       width: auto;
@@ -25,6 +28,10 @@
 
   &:focus {
     outline: $global-outline-color auto 2px;
+    width: auto;
+    height: auto;
+    left: 30px;
+    top: 37px;
   }
   &:active {
     outline: $global-outline-color auto 2px;
