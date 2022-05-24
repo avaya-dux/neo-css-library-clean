@@ -12121,6 +12121,11 @@ span.neo-badge {
       margin-right: 0px;
       margin-left: 8px; }
 
+.neo-accordion__header-text:hover:not(.neo-accordion__header-text--disabled) {
+  background-color: var(--neo-color-base-100);
+  cursor: pointer;
+  transition: background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); }
+
 .neo-accordion__item {
   margin-bottom: 24px;
   border: 1px solid var(--accordion-border-color);
@@ -12150,11 +12155,6 @@ span.neo-badge {
 
 .neo-accordion__item--active .neo-accordion__body {
   height: auto; }
-
-.neo-accordion--hover .neo-accordion__header:hover:not(.neo-accordion__header--disabled) {
-  background-color: var(--list-hover);
-  cursor: pointer;
-  transition: background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); }
 
 .neo-accordion__header {
   margin-right: 0 !important;
@@ -12207,8 +12207,7 @@ span.neo-badge {
     [dir="rtl"] .neo-accordion__header > .neo-accordion__header-text {
       text-align: right; }
     .neo-accordion__header > .neo-accordion__header-text:hover {
-      cursor: pointer;
-      background-color: var(--list-hover) !important; }
+      cursor: pointer; }
   .neo-accordion__header.neo-accordion__header--disabled > .neo-accordion__header-text {
     color: var(--list-disabled-hover-color);
     opacity: 0.5; }

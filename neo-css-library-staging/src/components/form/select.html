@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" type="text/css" href="../../styles.css" />
+  <link rel="stylesheet" type="text/css" href="../../neo.css" />
+  <title>Selects</title>
+</head>
+<style>
+  .neo-dropdown {
+    left: 100%;
+  }
+  #lastwrapper {
+    margin-bottom: 100px;
+  }
+</style>
+<body>
+  <h1>Selects</h1>
+  <button class="neo-btn neo-btn--primary neo-btn-primary--primary" id="togglebutton">
+    Toggle RTL
+  </button>
+  <div id="rtlwrapper">
+    <h2>Default Select</h2>
+    <div class="wrapper">
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control">
+          <div class="neo-input-group">
+            <label for="color1"> Colors </label>
+            <div class="neo-select">
+              <select class="neo-icon-chevron-down" id="color1" aria-describedby="select-hint">
+                <option defaultselected="true">Loading...</option>
+                <option value="1">red</option>
+                <option value="2">orange</option>
+                <option value="3">yellow</option>
+                <option value="4">green</option>
+                <option value="5">blue</option>
+              </select>
+            </div>
+          </div>
+          <div class="neo-input-hint" id="select-hint">
+            Please choose a color.
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Select States</h2>
+    <div class="wrapper">
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control neo-form-control--disabled">
+          <div class="neo-input-group">
+            <label for="color2"> Disabled select </label>
+            <div class="neo-select">
+              <select id="color2" disabled="disabled">
+                <option defaultselected="true" disabled>Disabled</option>
+                <option value="1">red</option>
+                <option value="2">orange</option>
+                <option value="3">yellow</option>
+                <option value="4">green</option>
+                <option value="5">blue</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control neo-form-control--error">
+          <div class="neo-input-group">
+            <label for="color3"> Error select </label>
+            <div class="neo-select">
+              <select id="color3" aria-describedby="error-select-hint">
+                <option defaultselected="true">Select...</option>
+                <option value="1">red</option>
+                <option value="2">orange</option>
+                <option value="3">yellow</option>
+                <option value="4">green</option>
+                <option value="5">blue</option>
+              </select>
+            </div>
+          </div>
+          <div class="neo-input-hint" id="error-select-hint">
+            Please choose one.
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control neo-form-control--required">
+          <div class="neo-input-group">
+            <label for="color4"> Required select </label>
+            <div class="neo-select">
+              <select id="color4" aria-describedby="required-select-hint" required="true">
+                <option defaultselected="true">Select...</option>
+                <option value="1">red</option>
+                <option value="2">orange</option>
+                <option value="3">yellow</option>
+                <option value="4">green</option>
+                <option value="5">blue</option>
+              </select>
+            </div>
+          </div>
+          <div class="neo-input-hint" id="required-select-hint">
+            Please choose one.
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Loading Select</h2>
+    <div class="wrapper">
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-select-container">
+          <div class="neo-select neo-select__spinner">
+            <select aria-label="color5">
+              <option defaultValue>Loading...</option>
+              <option value="1">red</option>
+              <option value="2">orange</option>
+              <option value="3">yellow</option>
+              <option value="4">green</option>
+              <option value="5">blue</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Custom Select</h2>
+    <div class="wrapper">
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control">
+          <div class="neo-input-group">
+            <label for="customSelect1"> Choose one </label>
+            <div class="neo-multiselect" tabindex="0" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+              aria-labelledby="customSelect">
+              <div class="neo-multiselect__header">Select one</div>
+              <div class="neo-multiselect__content">
+                <ul role="listbox">
+                  <li disabled>Option 1</li>
+                  <li tabindex="-1">Option 2</li>
+                  <li tabindex="-1">Option 3</li>
+                  <li tabindex="-1">Option 4</li>
+                  <li tabindex="-1">Option 5</li>
+                  <li tabindex="-1">Option 6</li>
+                  <li tabindex="-1">Option 7</li>
+                  <li tabindex="-1">Option 8</li>
+                  <li tabindex="-1">Option 9</li>
+                  <li tabindex="-1">Option 10</li>
+                  <li tabindex="-1">Option 11</li>
+                </ul>
+              </div>
+            </div>
+            <div class="neo-input-hint" id="custom-select-hint">
+              Please choose one.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control">
+          <div class="neo-input-group">
+            <label for="customSelect1"> Choose one </label>
+            <div class="neo-multiselect" tabindex="0" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+              aria-labelledby="customSelect">
+              <div class="neo-multiselect__header">Select one</div>
+              <div class="neo-multiselect__content">
+                <ul role="listbox">
+                  <li disabled>Option 1</li>
+                  <li tabindex="-1">Option 2</li>
+                  <li tabindex="-1">Option 3</li>
+                  <li tabindex="-1">Option 4</li>
+                  <li tabindex="-1">Option 5</li>
+                  <li tabindex="-1">Option 6</li>
+                  <li tabindex="-1">Option 7</li>
+                  <li tabindex="-1">Option 8</li>
+                  <li tabindex="-1">Option 9</li>
+                  <li tabindex="-1">Option 10</li>
+                  <li tabindex="-1">Option 11</li>
+                </ul>
+              </div>
+            </div>
+            <div class="neo-input-hint" id="custom-select-hint">
+              Please choose one.
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control">
+          <div class="neo-input-group">
+            <label for="customSelect1"> Choose one </label>
+            <div class="neo-multiselect neo-multiselect--disabled" aria-expanded="false" role="combobox"
+              aria-haspopup="listbox" aria-labelledby="customSelect1" aria-describedby="custom-select-hint-2">
+              <div class="neo-multiselect__header">Select one</div>
+              <div class="neo-multiselect__content">
+                <ul role="listbox">
+                  <li disabled>Option 1</li>
+                  <li tabindex="-1">Option 2</li>
+                  <li tabindex="-1">Option 3</li>
+                  <li tabindex="-1">Option 4</li>
+                  <li tabindex="-1">Option 5</li>
+                  <li tabindex="-1">Option 6</li>
+                  <li tabindex="-1">Option 7</li>
+                  <li tabindex="-1">Option 8</li>
+                  <li tabindex="-1">Option 9</li>
+                  <li tabindex="-1">Option 10</li>
+                  <li tabindex="-1">Option 11</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Multiple Select</h2>
+    <div class="wrapper">
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control">
+          <div class="neo-input-group">
+            <label for="customSelect"> Choose one </label>
+            <div class="neo-multiselect" tabindex="0" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+              aria-labelledby="customSelect" aria-describedby="custom-multiselect-hint">
+              <div class="neo-multiselect__header">Select one</div>
+              <div class="neo-multiselect__content" role="listbox">
+                <div class="neo-input-group">
+                  <input class="neo-check" type="checkbox" id="somecheck1" value="somecheck1" tabindex="-1"
+                    aria-describedby="check-hint-1" />
+                  <label for="somecheck1">Check 1</label>
+                  <p class="neo-input-hint" id="check-hint-1">
+                    Hint text for option 1
+                  </p>
+                </div>
+                <input class="neo-check" type="checkbox" id="checkgroup2" value="checkgroup2" tabindex="-1" />
+                <label for="checkgroup2">Check 2</label>
+                <input class="neo-check" type="checkbox" id="checkgroup1" value="checkgroup1" role="checkbox"
+                  aria-checked="false" tabindex="-1" />
+                <label for="checkgroup3">Check 3 (disabled)</label>
+              </div>
+            </div>
+            <div class="neo-input-hint" id="custom-multiselect-hint">
+              Please choose one.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2>Combobox</h2>
+    <div class="wrapper">
+      <div class="wrapper__component-group--fixed-width">
+        <div class="neo-form-control">
+          <div class="neo-input-group">
+            <label for="combobox">
+              Choose one
+            </label>
+            <div class="neo-multiselect" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+              aria-describedby="neo-multiselect-input-hint-3">
+              <div class="neo-multiselect-combo__header">
+                <input class="neo-input " placeholder="Select One" id="combobox"></input>
+              </div>
+              <div class="neo-multiselect__content">
+                <ul role="listbox">
+                  <li class="neo-multiselect__content__item--disabled" tabindex="-1">Option 1</li>
+                  <li tabindex="-1">Option 2</li>
+                  <li tabindex="-1">Option 3</li>
+                </ul>
+              </div>
+            </div>
+            <div class="neo-input-hint" id="neo-multiselect-input-hint-3">Please choose one.</div>
+          </div>
+        </div>
+      </div>
+      <h2>Chips in Combobox</h2>
+      <div class="wrapper">
+        <div class="wrapper__component-group--fixed-width">
+          <div class="neo-form-control">
+            <div class="neo-input-group">
+              <label for="combobox">
+                Choose one
+              </label>
+              <div class="neo-multiselect" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+                aria-describedby="neo-multiselect-input-hint-3">
+                <div class="neo-multiselect-combo__header">
+                  <div class="neo-chip neo-chip--default neo-chip--close neo-chip--close--default" tabindex="0"
+                    role="button">
+                    Option 2
+                    <button class="neo-close neo-close--clear" aria-label="remove Physical Education"></button>
+                  </div>
+                  <div class="neo-chip neo-chip--default neo-chip--close neo-chip--close--default" tabindex="0"
+                    role="button">
+                    Option 3
+                    <button class="neo-close neo-close--clear" aria-label="remove Physical Education"></button>
+                  </div>
+                  <div class="neo-chip neo-chip--default neo-chip--close neo-chip--close--default" tabindex="0"
+                    role="button">
+                    Option 4
+                    <button class="neo-close neo-close--clear" aria-label="remove Physical Education"></button>
+                  </div>
+                  <div class="neo-chip neo-chip--default neo-chip--close neo-chip--close--default" tabindex="0"
+                    role="button">
+                    Option 5
+                    <button class="neo-close neo-close--clear" aria-label="remove Physical Education"></button>
+                  </div>
+                  <div class="neo-chip neo-chip--default neo-chip--close neo-chip--close--default" tabindex="0"
+                    role="button">
+                    Option 6
+                    <button class="neo-close neo-close--clear" aria-label="remove Physical Education"></button>
+                  </div>
+                  <input class="neo-input " placeholder="Select One" id="combobox"></input>
+                </div>
+                <div class="neo-multiselect__content">
+                  <ul role="listbox">
+                    <li class="neo-multiselect__content__item--disabled" tabindex="-1">Option 1</li>
+                    <li tabindex="-1">Option 2</li>
+                    <li tabindex="-1">Option 3</li>
+                    <li tabindex="-1">Option 4</li>
+                    <li tabindex="-1">Option 5</li>
+                    <li tabindex="-1">Option 6</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Dropdown in Multiselect/Combobox</h2>
+      <div class="wrapper" id="lastwrapper">
+        <div class="wrapper__component-group--fixed-width">
+          <div class="neo-form-control">
+            <div class="neo-input-group">
+              <div class="neo-multiselect">
+                <div class="neo-multiselect-combo__header neo-multiselect-combo__dropdown">
+                  <input class="neo-input" placeholder="Select One"></input>
+                </div>
+                <div class="neo-multiselect__content">
+                  <ul>
+                    <li tabindex="-1" class="neo-icon-accept">
+                      Option 1
+                    </li>
+                    <li tabindex="-1">Option 2</li>
+                    <li tabindex="-1">Option 3</li>
+                  </ul>
+                </div>
+                <div class="neo-dropdown">
+                  <div class="neo-dropdown__content" role="menu" aria-expanded="true">
+                    <div class="neo-dropdown--input" role="menuitem">
+                      <div class="neo-form-control neo-input-icon">
+                        <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+                          <span class="neo-icon-search"></span>
+                          <input class="neo-input" id="input-no-label" placeholder="Search" type="text" />
+                          <button aria-label="clear input" tabindex="-1"
+                            class="neo-input-edit__icon neo-icon-end"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <a tabindex="-1" class="neo-dropdown__link" role="menuitem">
+                      Option 1
+                    </a>
+                    <a tabindex="-1" class="neo-dropdown__link" role="menuitem">
+                      Option 2
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="wrapper__component-group--fixed-width">
+          <div class="neo-form-control">
+            <div class="neo-input-group">
+              <div class="neo-multiselect">
+                <div class="neo-multiselect__header neo-multiselect__dropdown">Select One
+                </div>
+                <div class="neo-multiselect__content">
+                  <ul>
+                    <li tabindex="-1" class="neo-icon-accept">
+                      Option 1
+                    </li>
+                    <li tabindex="-1">Option 2</li>
+                    <li tabindex="-1">Option 3</li>
+                  </ul>
+                </div>
+                <div class="neo-dropdown">
+                  <div class="neo-dropdown__content" role="menu" aria-expanded="true">
+                    <div class="neo-dropdown--input" role="menuitem">
+                      <div class="neo-form-control neo-input-icon">
+                        <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+                          <span class="neo-icon-search"></span>
+                          <input class="neo-input" id="input-no-label" placeholder="Search" type="text" />
+                          <button aria-label="clear input" tabindex="-1"
+                            class="neo-input-edit__icon neo-icon-end"></button>
+                        </div>
+                      </div>
+                    </div>
+                    <a tabindex="-1" class="neo-dropdown__link" role="menuitem">
+                      Option 1
+                    </a>
+                    <a tabindex="-1" class="neo-dropdown__link" role="menuitem">
+                      Option 2
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script type="text/javascript" src="../../scripts/toggle-rtl.js"></script>
+<script>
+  let allCustomSelects = document.querySelectorAll(
+    ".neo-multiselect:not(.neo-multiselect--disabled)"
+  );
+
+  allCustomSelects.forEach((el) => {
+    el.addEventListener("click", toggleSelect);
+  });
+
+  function toggleSelect(event) {
+    let parentDiv = event.target.closest(".neo-multiselect");
+    if (!parentDiv.classList.contains("neo-multiselect--active")) {
+      parentDiv.classList.add("neo-multiselect--active");
+    } else {
+      parentDiv.classList.remove("neo-multiselect--active");
+    }
+  }
+
+  let allOptionsWithDropdowns = document.querySelectorAll(".neo-icon-accept");
+
+  allOptionsWithDropdowns.forEach((el) => {
+    el.addEventListener("mouseover", toggleDropdown);
+  })
+
+  function toggleDropdown(event) {
+    let closestParent = event.target.closest('.neo-multiselect__content');
+    let closestDropdown = closestParent.nextElementSibling;
+    console.log(closestDropdown)
+    if (!closestDropdown.classList.contains('neo-dropdown--active')) {
+      closestDropdown.classList.add("neo-dropdown--active");
+    } else {
+      closestDropdown.classList.remove("neo-dropdown--active");
+    }
+
+  }
+</script>
+
+</html>

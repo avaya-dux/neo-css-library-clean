@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../neo.css" />
+    <title>Text Inputs</title>
+</head>
+
+<body>
+    <h1>Text Inputs</h1>
+    <button class="neo-btn neo-btn--primary neo-btn-primary--primary" id="togglebutton">Toggle RTL</button>
+    <div id="rtlwrapper">
+        <h2>Basic Input</h2>
+        <div class="wrapper">
+            <div class="wrapper__component-group--fixed-width">
+                <div class="neo-form-control">
+                    <div class="neo-input-group">
+                        <label htmlFor="input1">
+                            Name
+                        </label>
+                        <div class="neo-input-editable__wrapper">
+                            <input class="neo-input" id="input1" placeholder="Placeholder text" type="text"></input>
+                            <button aria-label="clear input" tabindex='-1'
+                                class="neo-input-edit__icon neo-icon-end"></button>
+                        </div>
+                    </div>
+                    <div class="neo-input-hint">Enter your name.</div>
+                </div>
+            </div>
+        </div>
+        <h2>Inputs Without A Label</h2>
+        <div class="wrapper">
+            <div class="wrapper__component-group--fixed-width">
+                <div class="neo-form-control">
+                    <div class="neo-input-editable__wrapper">
+                        <input class="neo-input" id="input-no-label" placeholder="Input With No Label"
+                            type="text"></input>
+                        <button aria-label="clear input" tabindex='-1'
+                            class="neo-input-edit__icon neo-icon-end"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Input Addons</h2>
+        <div class="wrapper">
+            <div class="wrapper__component-group--fixed-width">
+                <div class="neo-form-control">
+                    <div class="neo-input-group">
+                        <label for="input-group-prefix">
+                            Input group with prefix
+                        </label>
+                        <div class="neo-input-group--addons neo-input-editable__wrapper">
+                            <div class="neo-input-group__addon">$</div>
+                            <input class="neo-input" id="input-group-prefix" placeholder="Domain" type="text" />
+                            <button aria-label="clear input" tabindex="-1"
+                                class="neo-input-edit__icon neo-icon-end"></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="neo-form-control">
+                    <div class="neo-input-group">
+                        <label for="input-group-suffix">
+                            Input group with suffix
+                        </label>
+                        <div class="neo-input-group--addons neo-input-editable__wrapper">
+                            <input class="neo-input" id="input-group-suffix" placeholder="Domain" type="text" />
+                            <button aria-label="clear input" tabindex="-1"
+                                class="neo-input-edit__icon neo-icon-end"></button>
+                            <div class="neo-input-group__addon">.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="neo-form-control">
+                    <div class="neo-input-group">
+                        <label for="input-group-prefix-suffix">
+                            Input group with both prefix and suffix
+                        </label>
+                        <div class="neo-input-group--addons neo-input-editable__wrapper">
+                            <div class="neo-input-group__addon">http://example.</div>
+                            <input class="neo-input" id="input-group-prefix-suffix" placeholder="Domain" type="text" />
+                            <button aria-label="clear input" tabindex="-1"
+                                class="neo-input-edit__icon neo-icon-end"></button>
+                            <div class="neo-input-group__addon">.com</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h2>Read-only Input</h2>
+        <div class="wrapper">
+            <div class="wrapper__component-group--fixed-width">
+                <div class="neo-form-control">
+                    <div class="neo-input-group">
+                        <label for="readOnlyInput">
+                            Name
+                        </label>
+                        <input class="neo-input neo-input-readonly" id="readOnlyInput" placeholder="Read-only"
+                            type="text" defaultValue="Read-only" readOnly></input>
+                    </div>
+                </div>
+            </div>
+            <h2>Input With Icons</h2>
+            <div class="wrapper">
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-input-icon">
+                        <div class="neo-input-group">
+                            <label for="input-icons-both">Input with left and right icons</label>
+                            <div class="neo-input-icon__wrapper">
+                                <span class="neo-icon-analytics"></span>
+                                <input id="input-icons-both" class="neo-input" placeholder="Left & right icons"
+                                    type="text" />
+                                <span class="neo-icon-accept"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-input-icon">
+                        <div class="neo-input-group">
+                            <label for="input-icon-left">Input with left icon</label>
+                            <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+                                <span class="neo-icon-messaging-not-ready"></span>
+                                <input id="input-icon-left" class="neo-input" placeholder="Left icon" type="text" />
+                                <button aria-label="clear input" tabindex="-1"
+                                    class="neo-input-edit__icon neo-icon-end"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-input-icon">
+                        <div class="neo-input-group">
+                            <label for="input-icon-right">Input with right icon</label>
+                            <div class="neo-input-icon__wrapper">
+                                <input id="input-icon-right" class="neo-input" placeholder="Right icon" type="text" />
+                                <span class="neo-icon-signature"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Input Combinations</h2>
+            <div class="wrapper">
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-input-icon">
+                        <div class="neo-input-group">
+                            <label for="input with icons">Input with icons editable</label>
+                            <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+                                <span class="neo-icon-analytics"></span>
+                                <input class="neo-input" placeholder="Input with icons" id="input with icons" />
+                                <button aria-label="clear input" tabindex="-1"
+                                    class="neo-input-edit__icon neo-icon-end"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-input-icon">
+                        <div class="neo-input-group">
+                            <label for="input with icons and add on editable">
+                                Input with icons & add on editable
+                            </label>
+                            <div class="neo-input-group--addons">
+                                <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+                                    <span class="neo-icon-analytics"></span>
+                                    <input class="neo-input" placeholder="Input with icons"
+                                        id="input with icons and add on editable" />
+                                    <button aria-label="clear input" tabindex="-1"
+                                        class="neo-input-edit__icon neo-icon-end"></button>
+                                </div>
+                                <div class="neo-input-group__addon">.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-form-control--disabled neo-input-icon">
+                        <div class="neo-input-group">
+                            <label for="input with icons & add on editable & disabled">
+                                Input with icons & add on editable & disabled
+                            </label>
+                            <div class="neo-input-group--addons">
+                                <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+                                    <span class="neo-icon-analytics"></span>
+                                    <input class="neo-input" placeholder="Input with icons" disabled
+                                        id="input with icons & add on editable & disabled" />
+                                    <button disabled aria-label="clear input" tabindex="-1"
+                                        class="neo-input-edit__icon neo-icon-end"></button>
+                                </div>
+                                <div class="neo-input-group__addon">.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-form-control--error neo-form-control--required neo-input-icon">
+                        <div class="neo-input-group">
+                            <label for="input with icons & add on editable & error">
+                                Input with icons & add on editable & error
+                            </label>
+                            <div class="neo-input-group--addons">
+                                <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+                                    <span class="neo-icon-analytics"></span>
+                                    <input class="neo-input" placeholder="Input with icons"
+                                        id="input with icons & add on editable & error"
+                                        aria-describedby="input-with-icons-hint" required="true" />
+                                    <button aria-label="clear input" tabindex="-1"
+                                        class="neo-input-edit__icon neo-icon-end"></button>
+                                </div>
+                                <div class="neo-input-group__addon">.com</div>
+                            </div>
+                            <div class="neo-input-hint" id="input-with-icons-hint">
+                                Enter your phone number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control">
+                        <div class="neo-input-group">
+                            <label for="addon on the left (icon included) and right editable">
+                                Addon on the left (icon included) and right editable
+                            </label>
+                            <div class="neo-input-group--addons">
+                                <div class="neo-input-group__addon neo-icon-call"></div>
+                                <div class="neo-input-editable__wrapper">
+                                    <input class="neo-input" defaultValue=""
+                                        id="addon on the left (icon included) and right editable"
+                                        placeholder="Type a number..." />
+                                    <button aria-label="clear input" tabindex="-1"
+                                        class="neo-input-edit__icon neo-icon-end"></button>
+                                </div>
+                                <div class="neo-input-group__addon">.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-form-control--disabled">
+                        <div class="neo-input-group">
+                            <label for="addon on the left (icon included) and right editable disabled">
+                                Addon on the left (icon included) and right editable disabled
+                            </label>
+                            <div class="neo-input-group--addons">
+                                <div class="neo-input-group__addon neo-icon-call"></div>
+                                <div class="neo-input-editable__wrapper">
+                                    <input class="neo-input" defaultValue=""
+                                        id="addon on the left (icon included) and right editable disabled"
+                                        placeholder="Type a number..." disabled />
+                                    <button disabled aria-label="clear input" tabindex="-1"
+                                        class="neo-input-edit__icon neo-icon-end"></button>
+                                </div>
+                                <div class="neo-input-group__addon">.com</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="wrapper__component-group--fixed-width">
+                    <div class="neo-form-control neo-form-control--error neo-form-control--required">
+                        <div class="neo-input-group">
+                            <label for="addon on the left (icon included) and right editable error">
+                                Addon on the left (icon included) and right editable error
+                            </label>
+                            <div class="neo-input-group--addons">
+                                <div class="neo-input-group__addon neo-icon-call"></div>
+                                <div class="neo-input-editable__wrapper">
+                                    <input class="neo-input" defaultValue=""
+                                        id="addon on the left (icon included) and right editable error"
+                                        placeholder="Type a number..." aria-describedby="addon-on-the-left-hint"
+                                        required="true" />
+                                    <button aria-label="clear input" tabindex="-1"
+                                        class="neo-input-edit__icon neo-icon-end"></button>
+                                </div>
+                                <div class="neo-input-group__addon">.com</div>
+                            </div>
+                            <div class="neo-input-hint" id="addon-on-the-left-hint">
+                                Enter your phone number.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <h2>Text Areas</h2>
+            <div class="wrapper">
+                <div class="neo-form-control neo-form-control--textarea">
+                    <div class="neo-input-group">
+                        <label for="textarea">Text area</label>
+                        <textarea id="textarea" class="neo-input" placeholder="Text area" type="text"
+                            aria-describedby="textarea-hint textarea-counter"></textarea>
+                    </div>
+                    <div class="neo-input-textarea__helper">
+                        <div class="neo-input-hint" id="textarea-hint">Helper text</div>
+                        <div class="neo-input-textarea__counter" id="textarea-counter">
+                            31/100
+                        </div>
+                    </div>
+                </div>
+                <div class="neo-form-control neo-form-control--textarea neo-form-control--disabled">
+                    <div class="neo-input-group">
+                        <label for="textarea-disabled">Text area in disabled state</label>
+                        <textarea id="textarea-disabled" class="neo-input" placeholder="Text area in disabled state"
+                            type="text" disabled></textarea>
+                    </div>
+                </div>
+                <div
+                    class="neo-form-control neo-form-control--textarea neo-form-control--error neo-form-control--required">
+                    <div class="neo-input-group">
+                        <label for="textarea-required-error">Required text area in error state</label>
+                        <textarea required="true" id="textarea-required-error" class="neo-input"
+                            placeholder="Required text area in error state" type="text"
+                            aria-describedby="required-textarea-hint required-textarea-counter"></textarea>
+                    </div>
+                    <div class="neo-input-textarea__helper">
+                        <div class="neo-input-hint" id="required-textarea-hint">Helper text</div>
+                        <div class="neo-input-textarea__counter" id="required-textarea-counter">
+                            101/100
+                        </div>
+                    </div>
+                </div>
+                <div class="neo-form-control neo-form-control--textarea">
+                    <div class="neo-input-group">
+                        <label for="textarea-locked">Locked/unresizable text area</label>
+                        <textarea class="neo-input neo-input-textarea--locked"
+                            placeholder="Locked/unresizable text area" type="text"
+                            aria-describedby="locked-textarea-counter"></textarea>
+                    </div>
+                    <div class="neo-input-textarea__helper">
+                        <div class="neo-input-textarea__counter" id="locked-textarea-counter">
+                            101/100
+                        </div>
+                    </div>
+                </div>
+            </div>
+</body>
+<script type="text/javascript" src="../../scripts/toggle-rtl.js"></script>
+</html>
