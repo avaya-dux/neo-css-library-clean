@@ -198,8 +198,8 @@
     background-color: $input-background-color;
 
     @include rtl-selector {
-      right: 0;
-      left: 8px;
+      right: auto;
+      left: 12px;
     }
   }
   @include rtl-selector {
@@ -207,7 +207,6 @@
       font-family: "updated-neo-icons";
       color: $color;
       content: $arrow-icon;
-      padding: 0 $padding-left 0 0;
       vertical-align: middle;
     }
     &::before {
@@ -384,6 +383,9 @@
     @include neo-multiselect-arrow();
 
     padding: 8px 24px 8px 12px;
+    @include rtl-selector {
+      padding: 8px 12px 8px 24px;
+    }
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
