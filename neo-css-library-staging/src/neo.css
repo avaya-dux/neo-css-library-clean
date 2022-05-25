@@ -8963,6 +8963,11 @@ textarea:focus {
   .neo-select__spinner > div.neo-multiselect__header,
   .neo-select__spinner > div.neo-multiselect-combo__header {
     padding-left: 32px; }
+    [dir="rtl"] .neo-select__spinner select, [dir="rtl"]
+    .neo-select__spinner > div.neo-multiselect__header, [dir="rtl"]
+    .neo-select__spinner > div.neo-multiselect-combo__header {
+      padding-left: 12px;
+      padding-right: 32px; }
   .neo-select__spinner::before {
     color: var(--spinner-color);
     font-family: "updated-neo-icons";
@@ -8970,11 +8975,13 @@ textarea:focus {
     display: inline-block;
     vertical-align: middle;
     position: absolute;
-    left: 12px;
     top: 25%;
     transform: translateY(-50%);
     font-size: 16px;
     animation: spinner-animation 500ms infinite; }
+    [dir="rtl"] .neo-select__spinner::before {
+      left: auto;
+      right: 12px; }
 
 .neo-multiselect {
   box-sizing: border-box;

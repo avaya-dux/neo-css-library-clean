@@ -122,6 +122,10 @@
     & > div.neo-multiselect__header,
     & > div.neo-multiselect-combo__header {
       padding-left: $select-offset-x;
+      @include rtl-selector() {
+        padding-left: 12px;
+        padding-right: $select-offset-x;
+      }
     }
 
     &::before {
@@ -131,10 +135,14 @@
       display: inline-block;
       vertical-align: middle;
       position: absolute;
-      left: $select-padding-x;
+
       top: 25%;
       transform: translateY(-50%);
       font-size: $select-icon-font-size;
+      @include rtl-selector() {
+        left: auto;
+        right: $select-padding-x;
+      }
 
       @include spinner-animation;
     }

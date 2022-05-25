@@ -4,7 +4,7 @@
 
 #### Bugs Report - List of bugs that have been updated
 
-- Fixed incorrect property in RTL style of [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) chevron causing placeholder and positioning issues
+- Fixed incorrect property in RTL style of [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) chevron causing placeholder, spinner and positioning issues
 
 ### 3.54.2
 
