@@ -8975,6 +8975,7 @@ textarea:focus {
     display: inline-block;
     vertical-align: middle;
     position: absolute;
+    left: 12px;
     top: 25%;
     transform: translateY(-50%);
     font-size: 16px;
@@ -9121,9 +9122,9 @@ textarea:focus {
       white-space: nowrap;
       margin: 0px;
       padding-left: 40px !important;
-      padding-right: 8px !important; }
+      padding-right: 12px !important; }
       [dir="rtl"] .neo-multiselect__content .neo-check + label + .neo-input-hint {
-        padding-right: 8px !important;
+        padding-right: 12px !important;
         padding-left: 40px !important; }
   .neo-multiselect input[type="checkbox"]:disabled + label + .neo-input-hint {
     color: var(--checkbox-disabled-font-color); }
