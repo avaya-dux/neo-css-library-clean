@@ -4922,15 +4922,32 @@ textarea:focus {
     margin-left: 8px;
     margin-right: 0; }
 
-.neo-btn--wide {
-  width: 100%;
-  display: flex;
-  justify-content: center; }
-
-.neo-btn--compact {
-  min-height: 24px;
-  padding: 4px 8px;
-  font-size: 12px; }
+.neo-btn {
+  position: relative; }
+  .neo-btn--wide {
+    width: 100%;
+    display: flex;
+    justify-content: center; }
+  .neo-btn--compact {
+    min-height: 24px;
+    padding: 4px 8px;
+    font-size: 12px; }
+  .neo-btn:hover::before, .neo-btn:hover::after {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 2px;
+    bottom: 2px;
+    width: 4px;
+    border-top: 2px solid;
+    border-bottom: 2px solid;
+    border-radius: 0 2px 2px 0; }
+  .neo-btn:hover::before {
+    left: 2px;
+    border-left: 2px solid; }
+  .neo-btn:hover::after {
+    right: 2px;
+    border-right: 2px solid; }
 
 .neo-btn-primary--primary {
   background-color: var(--button-hover-color-default-info);
@@ -8946,6 +8963,11 @@ textarea:focus {
   .neo-select__spinner > div.neo-multiselect__header,
   .neo-select__spinner > div.neo-multiselect-combo__header {
     padding-left: 32px; }
+    [dir="rtl"] .neo-select__spinner select, [dir="rtl"]
+    .neo-select__spinner > div.neo-multiselect__header, [dir="rtl"]
+    .neo-select__spinner > div.neo-multiselect-combo__header {
+      padding-left: 12px;
+      padding-right: 32px; }
   .neo-select__spinner::before {
     color: var(--spinner-color);
     font-family: "updated-neo-icons";
@@ -8958,6 +8980,9 @@ textarea:focus {
     transform: translateY(-50%);
     font-size: 16px;
     animation: spinner-animation 500ms infinite; }
+    [dir="rtl"] .neo-select__spinner::before {
+      left: auto;
+      right: 12px; }
 
 .neo-multiselect {
   box-sizing: border-box;
@@ -9018,16 +9043,17 @@ textarea:focus {
       right: 8px;
       background-color: var(--input-background-color); }
       [dir="rtl"] .neo-multiselect .neo-multiselect__header::after {
-        right: 0;
-        left: 8px; }
+        right: auto;
+        left: 12px; }
     [dir="rtl"] .neo-multiselect .neo-multiselect__header::after {
       font-family: "updated-neo-icons";
       color: var(--global-font-color);
       content: "";
-      padding: 0 8px 0 0;
       vertical-align: middle; }
     [dir="rtl"] .neo-multiselect .neo-multiselect__header::before {
       display: none; }
+    [dir="rtl"] .neo-multiselect .neo-multiselect__header {
+      padding: 8px 12px 8px 24px; }
   .neo-multiselect .neo-multiselect-combo__header {
     border-radius: 2px;
     display: flex;
@@ -9050,13 +9076,12 @@ textarea:focus {
       right: 8px;
       background-color: var(--input-background-color); }
       [dir="rtl"] .neo-multiselect .neo-multiselect-combo__header::after {
-        right: 0;
-        left: 8px; }
+        right: auto;
+        left: 12px; }
     [dir="rtl"] .neo-multiselect .neo-multiselect-combo__header::after {
       font-family: "updated-neo-icons";
       color: var(--global-font-color);
       content: "";
-      padding: 0 8px 0 0;
       vertical-align: middle; }
     [dir="rtl"] .neo-multiselect .neo-multiselect-combo__header::before {
       display: none; }
@@ -9097,9 +9122,9 @@ textarea:focus {
       white-space: nowrap;
       margin: 0px;
       padding-left: 40px !important;
-      padding-right: 8px !important; }
+      padding-right: 12px !important; }
       [dir="rtl"] .neo-multiselect__content .neo-check + label + .neo-input-hint {
-        padding-right: 8px !important;
+        padding-right: 12px !important;
         padding-left: 40px !important; }
   .neo-multiselect input[type="checkbox"]:disabled + label + .neo-input-hint {
     color: var(--checkbox-disabled-font-color); }
@@ -12489,10 +12514,10 @@ span.neo-badge {
   .neo-leftnav__main--expand > .neo-leftnav__nav {
     max-height: 100vh;
     transition: max-height 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); }
-  .neo-leftnav__main--expand > a.expandable:after, .neo-leftnav__main > .neo-leftnav__category.expandable:after {
+  .neo-leftnav__main--expand > a.expandable:after, .neo-leftnav__main--expand > .neo-leftnav__category.expandable:after {
     transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
     transform: rotate(90deg) rotate(-180deg); }
-    [dir="rtl"] .neo-leftnav__main--expand > a.expandable:after, [dir="rtl"] .neo-leftnav__main > .neo-leftnav__category.expandable:after {
+    [dir="rtl"] .neo-leftnav__main--expand > a.expandable:after, [dir="rtl"] .neo-leftnav__main--expand > .neo-leftnav__category.expandable:after {
       transform: rotate(90deg); }
 
 .neo-leftnav__sub {
@@ -12752,8 +12777,10 @@ span.neo-badge {
   align-items: flex-start;
   background-color: var(--skipNav-background-color);
   border-radius: 2px;
-  height: max-content;
-  width: max-content;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
   margin: 10px;
   position: absolute;
   /* TODO z-index value needs to revisted */
@@ -12762,7 +12789,8 @@ span.neo-badge {
   line-height: 20px;
   font-weight: 400;
   color: var(--skipNav-font-color);
-  font-size: 14px; }
+  font-size: 14px;
+  overflow: hidden; }
   .neo-skipnav a:hover {
     text-decoration: none; }
   @media not all and (min-resolution: 0.001dpcm) {
@@ -12771,7 +12799,11 @@ span.neo-badge {
         width: auto;
         height: auto; } } }
   .neo-skipnav:focus {
-    outline: var(--global-outline-color) auto 2px; }
+    outline: var(--global-outline-color) auto 2px;
+    width: auto;
+    height: auto;
+    left: 30px;
+    top: 37px; }
   .neo-skipnav:active {
     outline: var(--global-outline-color) auto 2px; }
   .neo-skipnav:hover {

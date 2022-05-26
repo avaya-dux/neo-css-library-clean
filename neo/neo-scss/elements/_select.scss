@@ -122,6 +122,10 @@
     & > div.neo-multiselect__header,
     & > div.neo-multiselect-combo__header {
       padding-left: $select-offset-x;
+      @include rtl-selector() {
+        padding-left: $token-input-padding-x;
+        padding-right: $select-offset-x;
+      }
     }
 
     &::before {
@@ -135,6 +139,10 @@
       top: 25%;
       transform: translateY(-50%);
       font-size: $select-icon-font-size;
+      @include rtl-selector() {
+        left: auto;
+        right: $select-padding-x;
+      }
 
       @include spinner-animation;
     }
@@ -194,12 +202,12 @@
     vertical-align: middle;
     cursor: pointer;
     position: absolute;
-    right: 8px;
+    right: $token-input-padding-y;
     background-color: $input-background-color;
 
     @include rtl-selector {
-      right: 0;
-      left: 8px;
+      right: auto;
+      left: 12px;
     }
   }
   @include rtl-selector {
@@ -207,7 +215,6 @@
       font-family: "updated-neo-icons";
       color: $color;
       content: $arrow-icon;
-      padding: 0 $padding-left 0 0;
       vertical-align: middle;
     }
     &::before {
@@ -240,7 +247,7 @@
     }
 
     & .neo-check ~ label {
-      padding: 8px 16px !important;
+      padding: $token-input-padding-y $token-input-padding-y * 2 !important;
     }
 
     & .neo-check:not(input:disabled) + label {
@@ -256,9 +263,9 @@
       white-space: nowrap;
       margin: 0px;
       padding-left: 40px !important;
-      padding-right: 8px !important;
+      padding-right: $token-input-padding-x !important;
       @include rtl-selector {
-        padding-right: 8px !important;
+        padding-right: $token-input-padding-x !important;
         padding-left: 40px !important;
       }
     }
@@ -284,7 +291,7 @@
 
   & ul li {
     color: $global-text-color;
-    padding: 8px 16px;
+    padding: $token-input-padding-y $token-input-padding-y * 2;
     list-style: none;
     &::before {
       margin-right: 8px;
@@ -383,7 +390,12 @@
     border: $select-border-width $select-border-style $select-border-color;
     @include neo-multiselect-arrow();
 
-    padding: 8px 24px 8px 12px;
+    padding: $token-input-padding-y $token-input-padding-x * 2
+      $token-input-padding-y $token-input-padding-x;
+    @include rtl-selector {
+      padding: $token-input-padding-y $token-input-padding-x
+        $token-input-padding-y $token-input-padding-x * 2;
+    }
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
@@ -400,7 +412,8 @@
 
     & .neo-input {
       border: none;
-      padding: 8px 0px 8px 12px;
+      padding: $token-input-padding-y 0px $token-input-padding-y
+        $token-input-padding-x;
       width: 100%;
     }
 
@@ -411,7 +424,7 @@
       margin-left: 4px;
     }
 
-    padding-right: 12px;
+    padding-right: $token-input-padding-x;
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
@@ -432,7 +445,7 @@
       font-family: "updated-neo-icons";
       content: $token-icons-neo-icon-chevron-right;
       position: absolute;
-      right: 12px;
+      right: $token-input-padding-x;
     }
     &::before {
       margin-right: 8px;
