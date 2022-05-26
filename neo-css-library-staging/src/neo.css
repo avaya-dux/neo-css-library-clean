@@ -4922,32 +4922,15 @@ textarea:focus {
     margin-left: 8px;
     margin-right: 0; }
 
-.neo-btn {
-  position: relative; }
-  .neo-btn--wide {
-    width: 100%;
-    display: flex;
-    justify-content: center; }
-  .neo-btn--compact {
-    min-height: 24px;
-    padding: 4px 8px;
-    font-size: 12px; }
-  .neo-btn:hover::before, .neo-btn:hover::after {
-    position: absolute;
-    content: "";
-    display: block;
-    top: 2px;
-    bottom: 2px;
-    width: 4px;
-    border-top: 2px solid;
-    border-bottom: 2px solid;
-    border-radius: 0 2px 2px 0; }
-  .neo-btn:hover::before {
-    left: 2px;
-    border-left: 2px solid; }
-  .neo-btn:hover::after {
-    right: 2px;
-    border-right: 2px solid; }
+.neo-btn--wide {
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
+.neo-btn--compact {
+  min-height: 24px;
+  padding: 4px 8px;
+  font-size: 12px; }
 
 .neo-btn-primary--primary {
   background-color: var(--button-hover-color-default-info);
