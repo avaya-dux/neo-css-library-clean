@@ -29,7 +29,8 @@ span.neo-badge {
     right: 0;
     top: 0;
     transform: translate($badge-offset, -$badge-offset);
-    z-index: 50;
+    // z-index: 50;
+    z-index: map-get($indexes-map, "badge");
 
     @include rtl-selector {
       left: 0;
@@ -59,7 +60,8 @@ span.neo-badge {
     right: 0;
     top: 0;
     transform: translate($badge-offset, -$badge-offset);
-    z-index: 50;
+    // z-index: 50;
+    z-index: map-get($indexes-map, "badge-icon");
 
     @include rtl-selector {
       left: auto;

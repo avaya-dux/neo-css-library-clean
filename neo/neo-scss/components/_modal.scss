@@ -22,8 +22,8 @@
       background-color: $modal-scrim-color;
       height: 100%;
       width: 100%;
-      z-index: $modal-z;
-
+      // z-index: $modal-z;
+      z-index: map-get($indexes-map, "modal-background"); //need review from Mo
       @include position(fixed, 0, 0, 0, 0);
     }
   }
@@ -45,7 +45,8 @@
   padding: $token-modal-padding-y;
   position: relative;
   // width: $modal-width;
-  z-index: $modal-content-z;
+  // z-index: $modal-content-z;
+  z-index: map-get($indexes-map, "modal-content"); //need review from Mo
 
   .neo-modal__header {
     // @include modal-element($modal-header-padding);

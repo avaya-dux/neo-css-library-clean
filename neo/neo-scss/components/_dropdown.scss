@@ -20,7 +20,7 @@
 
 @mixin neo-dropdown-arrow(
   // chevron-down
-    $arrow-icon: $dropdown-expand-icon,
+  $arrow-icon: $dropdown-expand-icon,
   $color: $dropdown-color,
   $padding-left: $dropdown-padding-x
 ) {
@@ -296,7 +296,7 @@
     $dropdown-radius,
     none,
     0px,
-    $dropdown-content-z,
+    map-get($indexes-map, "dropdown-content-z"),
     200px
   );
 }

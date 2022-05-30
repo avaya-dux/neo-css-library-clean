@@ -12,7 +12,8 @@
   margin: $skipNav-margin;
   position: absolute;
   /* TODO z-index value needs to revisted */
-  z-index: 32;
+  // z-index: 32;
+  z-index: map-get($indexes-map, "skipnav");
   padding: $skipNav-padding;
   line-height: $skipNav-line-height;
   font-weight: $skipNav-font-weight;
