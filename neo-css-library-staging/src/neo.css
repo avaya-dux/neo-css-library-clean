@@ -10453,7 +10453,10 @@ span.neo-badge {
   flex-direction: column; }
 
 .neo-tabs .neo-icon-end {
-  background: none; }
+  background: none;
+  padding: 8px 16px 0 6px; }
+  [dir="rtl"] .neo-tabs .neo-icon-end {
+    padding: 8px 6px 0px 16px; }
   .neo-tabs .neo-icon-end:before {
     font-size: 16px; }
 
@@ -10470,31 +10473,26 @@ span.neo-badge {
   text-overflow: ellipsis;
   white-space: nowrap;
   max-height: 35px;
-  padding: 8px 16px 0px 16px;
   display: flex;
   border-bottom: 2px solid transparent; }
   .neo-tabs__item:focus-within {
     outline: var(--global-outline-color) auto 2px;
     outline-offset: -4px; }
-  [dir="rtl"] .neo-tabs__item a:not(:last-child) {
-    padding-left: 5px;
-    padding-right: 0px; }
   .neo-tabs__item[dir="rtl"] a:before {
     margin-left: 5px;
     margin-right: 0; }
-  .neo-tabs__item[dir="rtl"] a:not(:last-child) {
-    padding-left: 5px;
-    padding-right: 0px; }
   .neo-tabs__item a {
     color: var(--tab-default-color);
     cursor: pointer;
     display: block;
     margin: 0;
-    padding-bottom: 6px;
+    padding: 8px 16px 0px 16px;
     text-decoration: none;
     border-bottom: 2px solid transparent; }
     .neo-tabs__item a:not(:last-child) {
-      padding-right: 5px; }
+      padding: 8px 0px 0px 16px; }
+      [dir="rtl"] .neo-tabs__item a:not(:last-child) {
+        padding: 8px 16px 0px 0px; }
     .neo-tabs__item a:focus {
       outline: none; }
     .neo-tabs__item a:before {
@@ -10654,7 +10652,6 @@ span.neo-badge {
   text-overflow: ellipsis;
   white-space: nowrap;
   max-height: 35px;
-  padding: 8px 16px 0px 16px;
   border-left: 2px solid transparent;
   background-color: var(--tab-background-color);
   display: flex; }
@@ -10666,13 +10663,8 @@ span.neo-badge {
     cursor: pointer;
     display: block;
     margin: 0;
-    padding-bottom: 8px;
+    padding: 8px 16px 0px 16px;
     text-decoration: none; }
-    .neo-tabs__item--vertical a:not(:last-child) {
-      margin-right: 5px; }
-      [dir="rtl"] .neo-tabs__item--vertical a:not(:last-child) {
-        margin-left: 5px;
-        margin-right: 0px; }
     .neo-tabs__item--vertical a:focus {
       outline: none; }
     .neo-tabs__item--vertical a:before {
@@ -10688,6 +10680,7 @@ span.neo-badge {
   .neo-tabs__item--vertical:hover, .neo-tabs__item--vertical:focus-within {
     transition: background-color 0.4s cubic-bezier(0.25, 0.1, 0.25, 1); }
     .neo-tabs__item--vertical:hover a, .neo-tabs__item--vertical:focus-within a {
+      text-decoration: none;
       color: var(--tab-item-hover-color); }
       .neo-tabs__item--vertical:hover a:before, .neo-tabs__item--vertical:focus-within a:before {
         color: var(--tab-item-hover-color); }
@@ -10844,6 +10837,8 @@ span.neo-badge {
   background-color: var(--tab-background-color); }
   .neo-tabs__carousel--button:before {
     color: var(--tab-carousel-button-color); }
+    [dir="rtl"] .neo-tabs__carousel--button:before {
+      transform: rotate(180deg); }
   .neo-tabs__carousel--button:hover {
     cursor: pointer; }
     .neo-tabs__carousel--button:hover:before {

@@ -28,7 +28,6 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     max-height: $tab-item-max-height;
-    padding: $tab-padding-default;
     border-left: $tab-action-border-bottom-width solid transparent;
     background-color: $tab-background-color;
     display: flex;
@@ -38,18 +37,11 @@
       outline-offset: -4px;
     }
     a {
-      &:not(:last-child) {
-        margin-right: 5px;
-        @include rtl-selector {
-          margin-left: 5px;
-          margin-right: 0px;
-        }
-      }
       color: $tab-default-color;
       cursor: pointer;
       display: block;
       margin: 0;
-      padding-bottom: 8px;
+      padding: 8px 16px 0px 16px;
       text-decoration: none;
 
       &:focus {
@@ -76,6 +68,7 @@
     &:focus-within {
       transition: $tab-hover-transition;
       a {
+        text-decoration: none;
         &:before {
           color: $tab-item-hover-color;
         }
@@ -146,20 +139,12 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     max-height: $tab-item-max-height;
-    padding: 8px 16px 0px 16px;
     display: flex;
     border-bottom: 2px solid transparent;
 
     &:focus-within {
       outline: $global-outline-color auto 2px;
       outline-offset: -4px;
-    }
-
-    @include rtl-selector {
-      a:not(:last-child) {
-        padding-left: 5px;
-        padding-right: 0px;
-      }
     }
 
     @include rtl-selector-element {
@@ -170,12 +155,6 @@
             right: 0;
           }
         }
-        &:not(:last-child) {
-          padding: {
-            left: 5px;
-            right: 0px;
-          }
-        }
       }
     }
 
@@ -184,12 +163,15 @@
       cursor: pointer;
       display: block;
       margin: 0;
-      padding-bottom: 6px;
+      padding: 8px 16px 0px 16px;
+      &:not(:last-child) {
+        padding: 8px 0px 0px 16px;
+        @include rtl-selector {
+          padding: 8px 16px 0px 0px;
+        }
+      }
       text-decoration: none;
       border-bottom: $tab-action-border-bottom-width solid transparent;
-      &:not(:last-child) {
-        padding-right: 5px;
-      }
       &:focus {
         outline: none;
       }
@@ -458,6 +440,9 @@
     background-color: $tab-background-color;
     &:before {
       color: $tab-carousel-button-color;
+      @include rtl-selector {
+        transform: rotate(180deg);
+      }
     }
     &:hover {
       cursor: pointer;
@@ -475,6 +460,10 @@
 @mixin tab-close-btn {
   & .neo-icon-end {
     background: none;
+    padding: 8px 16px 0 6px;
+    @include rtl-selector {
+      padding: 8px 6px 0px 16px;
+    }
     &:before {
       font-size: $notification-close-icon-size;
     }

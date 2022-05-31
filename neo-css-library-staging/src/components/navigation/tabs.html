@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="../../styles.css" />
+    <link rel="stylesheet" type="text/css" href="../../neo.css" />
+    <title>Tabs</title>
+  </head>
+
+  <style>
+    #withScroll {
+      height: 200px;
+    }
+  </style>
+
+  <body>
+    <button
+      class="neo-btn neo-btn--primary neo-btn-primary--primary"
+      id="togglebutton"
+    >
+      Toggle RTL
+    </button>
+    <div id="rtlwrapper">
+      <h1>Tabs</h1>
+      <h2>Basic Tabs</h2>
+      <div class="wrapper__component-group">
+        <div class="neo-tabs">
+          <ul class="neo-tabs__nav" role="tablist">
+            <li
+              role="tab"
+              aria-selected="true"
+              class="neo-tabs__item neo-tabs__item--active"
+              tabindex="0"
+            >
+              <a>Tab 1</a>
+            </li>
+            <li role="tab" class="neo-tabs__item neo-tabs__item--disabled">
+              <a>Tab 2</a>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item neo-tabs__item--active-disabled"
+            >
+              <a>Tab 3</a>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item"
+              aria-selected="false"
+              tabindex="0"
+            >
+              <a>Tab 4</a>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item neo-tabs__item--disabled"
+              tabindex="0"
+            >
+              <a>Tab 5</a>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item neo-tabs__item--active-disabled"
+              tabindex="0"
+            >
+              <a>Tab 6</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>Tabs With Icons</h2>
+      <div class="wrapper__component-group">
+        <div class="neo-tabs">
+          <ul class="neo-tabs__nav" role="tablist">
+            <li
+              role="tab"
+              aria-selected="true"
+              class="neo-tabs__item neo-tabs__item--active"
+              tabindex="0"
+            >
+              <a class="neo-icon-settings">Tab 1</a>
+            </li>
+            <li role="tab" class="neo-tabs__item neo-tabs__item--disabled">
+              <a class="neo-icon-chat">Tab 2</a>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item neo-tabs__item--active-disabled"
+            >
+              <a class="neo-icon-agents">Tab 3</a>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item"
+              aria-selected="false"
+              tabindex="0"
+            >
+              <a class="neo-icon-email">Tab 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>Tabs With Close Button</h2>
+      <div class="wrapper__component-group">
+        <div class="neo-tabs">
+          <ul class="neo-tabs__nav" role="tablist">
+            <li
+              role="tab"
+              class="neo-tabs__item neo-tabs__item--active"
+              aria-selected="true"
+              tabindex="0"
+            >
+              <a>Tab 1</a>
+              <span
+                role="button"
+                class="neo-icon-end"
+                aria-label="close tab"
+              ></span>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item neo-tabs__item--active-disabled"
+            >
+              <a>Tab 2</a>
+              <span
+                role="button"
+                class="neo-icon-end"
+                aria-label="close tab"
+              ></span>
+            </li>
+            <li role="tab" class="neo-tabs__item neo-tabs__item--disabled">
+              <a>Tab 3</a>
+              <span
+                role="button"
+                class="neo-icon-end"
+                aria-label="close tab"
+              ></span>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item"
+              aria-selected="false"
+              tabindex="0"
+            >
+              <a>Tab 4</a>
+              <span
+                role="button"
+                class="neo-icon-end"
+                aria-label="close tab"
+              ></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>Vertical Tabs</h2>
+      <div class="wrapper__component-group">
+        <div class="neo-tabs">
+          <ul class="neo-tabs__nav neo-tabs__nav--vertical" role="tablist">
+            <li
+              class="neo-tabs__item neo-tabs__item--vertical neo-tabs__item--vertical--active"
+              role="tab"
+              aria-selected="true"
+              tabindex="0"
+            >
+              <a>Tab 1</a>
+            </li>
+            <li role="tab" class="neo-tabs__item neo-tabs__item--disabled">
+              <a>Tab 2</a>
+            </li>
+            <li
+              role="tab"
+              class="neo-tabs__item neo-tabs__item--vertical-active-disabled"
+            >
+              <a>Tab 3</a>
+            </li>
+            <li
+              role="tab"
+              aria-selected="false"
+              class="neo-tabs__item neo-tabs__item--vertical"
+              tabindex="0"
+            >
+              <a>Tab 4</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>Vertical Tabs With Scroll</h2>
+      <div class="wrapper__component-group" id="withScroll">
+        <div class="neo-tabs--wrapper">
+          <div class="neo-tabs">
+            <ul class="neo-tabs__nav neo-tabs__nav--vertical" role="tablist">
+              <li
+                class="neo-tabs__item neo-tabs__item--vertical neo-tabs__item--vertical--active"
+                tabindex="0"
+                role="tab"
+                aria-selected="true"
+              >
+                <a>Tab 1</a>
+              </li>
+              <li role="tab" class="neo-tabs__item neo-tabs__item--disabled">
+                <a>Tab 2</a>
+              </li>
+              <li
+                role="tab"
+                class="neo-tabs__item neo-tabs__item--vertical-active-disabled"
+              >
+                <a>Tab 3</a>
+              </li>
+              <li
+                role="tab"
+                aria-selected="false"
+                class="neo-tabs__item neo-tabs__item--vertical"
+                tabindex="0"
+              >
+                <a>Tab 4</a>
+              </li>
+              <li
+                role="tab"
+                aria-selected="false"
+                class="neo-tabs__item neo-tabs__item--vertical"
+                tabindex="0"
+              >
+                <a>Tab 5</a>
+              </li>
+              <li role="tab" class="neo-tabs__item neo-tabs__item--disabled">
+                <a>Tab 6</a>
+              </li>
+              <li
+                role="tab"
+                class="neo-tabs__item neo-tabs__item--vertical-active-disabled"
+              >
+                <a>Tab 7</a>
+              </li>
+              <li
+                role="tab"
+                aria-selected="false"
+                class="neo-tabs__item neo-tabs__item--vertical"
+                tabindex="0"
+              >
+                <a>Tab 8</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <h2>Tabs Carousel With Dropdown</h2>
+      <div class="wrapper__component-group">
+        <div class="neo-tabs__carousel">
+          <button
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--default neo-icon-chevron-left neo-tabs__carousel--button"
+            aria-label="move to previous tab"
+          ></button>
+          <div class="neo-tabs__carousel--scroll">
+            <ul class="neo-tabs__nav" role="tablist">
+              <li
+                role="tab"
+                aria-selected="true"
+                class="neo-tabs__item neo-tabs__item--active"
+                tabindex="0"
+              >
+                <a>Tab 1</a>
+              </li>
+              <li
+                role="tab"
+                class="neo-tabs__item neo-tabs__item--active-disabled"
+              >
+                <a>Tab 2</a>
+              </li>
+              <li role="tab" class="neo-tabs__item neo-tabs__item--disabled">
+                <a>Tab 3</a>
+              </li>
+              <li
+                role="tab"
+                aria-selected="false"
+                class="neo-tabs__item"
+                tabindex="0"
+              >
+                <a>Tab 4</a>
+              </li>
+            </ul>
+          </div>
+          <button
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--default neo-icon-chevron-right neo-tabs__carousel--button"
+            aria-label="move to next tab"
+          ></button>
+          <div class="neo-tabs__carousel--more">
+            <div class="neo-dropdown neo-dropdown--active neo-dropdown--left">
+              <button
+                class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--default neo-icon-ellipses-horizontal neo-tabs__carousel--button"
+                aria-label="open dropdown"
+              ></button>
+              <div class="neo-dropdown__content">
+                <a class="neo-dropdown__link neo-icon-accept">Tab 1</a>
+                <a class="neo-dropdown__link">Tab 2</a>
+                <a class="neo-dropdown__link">Tab 3</a>
+                <a class="neo-dropdown__link">Tab 4</a>
+                <a class="neo-dropdown__link">Tab 5</a>
+                <a class="neo-dropdown__link">Tab 6</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./tabs.js"></script>
+  <script src="../../scripts/toggle-rtl.js"></script>
+</html>
