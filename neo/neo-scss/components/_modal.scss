@@ -22,8 +22,7 @@
       background-color: $modal-scrim-color;
       height: 100%;
       width: 100%;
-      // z-index: $modal-z;
-      z-index: map-get($indexes-map, "modal-background"); //need review from Mo
+      z-index: map-get($indexes-map, "modal-background");
       @include position(fixed, 0, 0, 0, 0);
     }
   }

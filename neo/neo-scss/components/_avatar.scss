@@ -323,7 +323,6 @@
     }
 
     position: absolute;
-    // z-index: 7;
     z-index: map-get($indexes-map, "avatar-status");
     // padding-bottom: 50%;
     border-radius: 50px;
