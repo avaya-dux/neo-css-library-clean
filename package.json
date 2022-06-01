@@ -6,6 +6,9 @@
     "test:watch": "jest --config ./jest.config.json --watchAll=true",
     "build": "parcel build neo/neo-scss/neo.scss",
     "build:to": "parcel build neo/neo-scss/neo.scss --dist-dir",
+    "build:for-publish": "npm run build:package && npm run build:package-old",
+    "build:package": "parcel build neo/neo-scss/neo.scss --dist-dir neo-npm-package/neo",
+    "build:package-old": "parcel build neo/neo-scss/neo.scss --dist-dir neo-npm-package/neo/dist/css/neo",
     "watch": "parcel watch neo/neo-scss/neo.scss",
     "pull-icons": "cd figma-API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js"
   },

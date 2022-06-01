@@ -1,8 +1,9 @@
 # Changelog
 
-### 3.54.3
+### 3.55.0
 
-### New Features - New features that have recently been added
+#### New Features - New features that have recently been added
+
 - Added new neo-table--medium class to set a table row height to 38px in [Table](https://design.avayacloud.com/components/web/tables-web) Components
 
 #### Bugs Report - List of bugs that have been updated
@@ -10,10 +11,11 @@
 - Fixed incorrect property in RTL style of [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) chevron causing placeholder, spinner and positioning issues
 - Reworked [Tab](https://design.avayacloud.com/components/web/tabs-web) style properties for improved accessibility
 - Added correct RTL styles for Tab Carousel arrows
+- [Tweak "Skip Nav" positioning](https://design.avayacloud.com/components/web/skipnav-web)
 
 ### 3.54.2
 
-### Breaking Changes - the following Components are broken and need immediate attention
+#### Breaking Changes - the following Components are broken and need immediate attention
 
 - Available May 11, 2022: Changed naming convention for all data visualization colors, added additional colors for light and dark mode
 
