@@ -4,7 +4,7 @@
 }
 
 @mixin neo-input-group-children {
-  label:not(.neo-switch):not(.neo-label):not() {
+  label:not(.neo-switch):not(.neo-label) {
     line-height: $input-line-height;
     padding-bottom: 4px;
     pointer-events: none;

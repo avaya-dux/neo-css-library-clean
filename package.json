@@ -1,22 +1,17 @@
 {
-  "name": "Neo-CSS-library",
-  "version": "1.0.0",
-  "description": "Code to generate the Neo CSS library",
-  "main": "./figma-API/design-system-functions.js",
+  "name": "neo-css-library",
+  "author": "Mohammad Razian",
   "scripts": {
     "test": "jest --config ./jest.config.json",
     "test:watch": "jest --config ./jest.config.json --watchAll=true",
-    "pull-icons": "cd figma-API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js",
-    "update-site": "node-sass neo/neo-scss/main.scss $PATHTOPORTAL"
+    "build": "parcel build neo/neo-scss/neo.scss",
+    "build:to": "parcel build neo/neo-scss/neo.scss --dist-dir",
+    "watch": "parcel watch neo/neo-scss/neo.scss",
+    "pull-icons": "cd figma-API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js"
   },
-  "keywords": [
-    "Figma"
-  ],
-  "author": "Mohammad Razian",
-  "license": "ISC",
   "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.0",
     "axios": "^0.21.1",
-    "cssnano": "^4.1.10",
     "cypress": "^4.12.1",
     "cypress-image-snapshot": "^4.0.1",
     "dotenv": "^16.0.1",
@@ -26,7 +21,8 @@
     "jest-fetch-mock": "^3.0.3",
     "lodash": "^4.17.21",
     "node-fetch": "^2.6.1",
-    "node-sass": "^6.0.1",
+    "parcel": "^2.6.0",
+    "postcss": "^8.4.14",
     "prettier": "^2.3.0",
     "replace-in-file": "^6.2.0",
     "style-dictionary": "^2.10.3",
