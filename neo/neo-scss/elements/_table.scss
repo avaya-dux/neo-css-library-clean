@@ -23,6 +23,27 @@
   max-width: 100%;
   width: 100%;
 
+  &--medium {
+    tr td .neo-input {
+        min-height: initial;
+        height: 38px;
+      }
+      tr:not(.neo-table__nested--wrapper) td,
+      .neo-table__nested.show td,
+      thead tr th {
+        padding: 9px $table-condensed-row-cell-padding-x;
+      }
+      .neo-table__nested.show thead tr th {
+        padding: 7px $table-condensed-row-cell-padding-x;
+      }
+      thead tr th {
+        padding: 7px 16px;
+      }
+      thead tr th .neo-check+label {
+        display: flex;
+      }
+  }
+
   &--compact {
     tr td .neo-input {
       min-height: initial;
@@ -31,7 +52,7 @@
     tr:not(.neo-table__nested--wrapper) td,
     .neo-table__nested.show td,
     thead tr th {
-      padding: 3px $table-condensed-row-cell-padding-x;
+      padding: 6px $table-condensed-row-cell-padding-x;
     }
     .neo-table__nested.show thead tr th {
       padding: 7px $table-condensed-row-cell-padding-x;

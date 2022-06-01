@@ -2,6 +2,9 @@
 
 ### 3.54.3
 
+### New Features - New features that have recently been added
+- Added new neo-table--medium class to set a table row height to 38px in [Table](https://design.avayacloud.com/components/web/tables-web) Components
+
 #### Bugs Report - List of bugs that have been updated
 
 - Fixed incorrect property in RTL style of [Multiselect](https://design.avayacloud.com/components/web/selectbox-web) chevron causing placeholder, spinner and positioning issues
