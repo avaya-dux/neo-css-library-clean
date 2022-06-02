@@ -12,7 +12,7 @@
 - Reworked [Tab](https://design.avayacloud.com/components/web/tabs-web) style properties for improved accessibility
 - Added correct RTL styles for Tab Carousel arrows
 - [Tweak "Skip Nav" positioning](https://design.avayacloud.com/components/web/skipnav-web)
-- Fixed padding according to figma changes and removed widget-title min-height of [Widget component](https://design.avayacloud.com/components/web/widget-web).
+- Fixed padding according to figma changes and removed widget-header min-height of [Widget component](https://design.avayacloud.com/components/web/widget-web).
 
 ### 3.54.2
 
