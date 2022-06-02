@@ -130,7 +130,6 @@
     position: absolute;
     top: 100%;
     z-index: $content-z;
-
     @include rtl-selector {
       left: initial;
       right: 0;

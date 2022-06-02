@@ -1,0 +1,52 @@
+$indexes-map: (
+  "team-masonry-mobile": -9,
+  "team-masonry-member-card": -9,
+  "check": -1,
+  "sheet-hide": -1,
+  "radio": -1,
+  "component-container-avatar": 0,
+  "sheet-custom": 0,
+  "component-container-navbar-not": 0,
+  "landing-page-sheet": 0,
+  "stepper": 1,
+  "sidebar": 1,
+  "stepper-vertical": 1,
+  "avatar-initials": 1,
+  "test-banner": 2,
+  "sticky-header": 2,
+  "avatar-img": 4,
+  "avatar-status": 7,
+  "icon-copy-button": 9,
+  "team-masonry-mobile-opaque": 9,
+  "table": 10,
+  "dropdown-content-z": 20,
+  "badge": 10,
+  "sticky-header-normal": 21,
+  "skipnav": 32,
+  "navbar": 30,
+  "nav-left-badge-icon": 49,
+  "nav-badge-icon": 49,
+  "badge-icon": 50,
+  "tooltip-content-z": 50,
+  "hero-panel": 99,
+  "team-masonry-mobile-member-quote": 99,
+  "header": 99,
+  "footer-wrapper": 998,
+  // TODO: z-index values which are >100 should be reviewed.
+  "modal-background": 999,
+  // TODO: z-index values which are >100 should be reviewed.
+  "sidebar-mobile-background": 999,
+  // TODO: z-index values which are >100 should be reviewed.
+  "sheet": 9999,
+  // TODO: z-index values which are >100 should be reviewed.
+  "modal-content": 1000,
+  // TODO: z-index values which are >100 should be reviewed.
+  "scroll-feedbackBtn": 1000,
+  // TODO: z-index values which are >100 should be reviewed.
+  "sidebar-mobile-wrapper": 1000,
+  // TODO: z-index values which are >100 should be reviewed.
+  "layout-download-popup": 9999,
+  // TODO: z-index values which are >100 should be reviewed.
+  "feedback-widget-button": 999999,
+  // TODO: z-index values which are >100 should be reviewed.
+);

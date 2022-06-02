@@ -1,5 +1,4 @@
 @mixin neo-stepper-text {
-
   p:first-child {
     color: $stepper-main-font-color;
     font-size: $stepper-main-text-font-size;
@@ -30,21 +29,17 @@
       font-weight: $stepper-main-text-complete-font-weight;
     }
   }
-
 }
 
 @mixin neo-stepper-button-cursor {
-
   &[role="button"] {
     &::before {
       cursor: pointer;
     }
   }
-
 }
 
 .neo-stepper {
-
   display: flex;
   list-style: none;
 
@@ -70,7 +65,8 @@
       border-radius: $stepper-indicator-border-radius;
       position: relative;
       margin: 0 auto 0;
-      z-index: 1;
+      // z-index: 1;
+      z-index: map-get($indexes-map, "stepper");
     }
 
     &.neo-stepper__item--complete {
@@ -115,12 +111,10 @@
       height: $stepper-disabled-dash-border-width;
       background-color: $stepper-disabled-dash-color;
     }
-
   }
 }
 
 .neo-stepper--vertical {
-
   display: flex;
   list-style: none;
   flex-direction: column;
@@ -141,13 +135,13 @@
       border: 5px solid $stepper-background-color;
       border-radius: $stepper-indicator-border-radius;
       position: relative;
-      z-index: 1;
+      // z-index: 1;
+      z-index: map-get($indexes-map, "stepper-vertical");
       flex: 0 0 $stepper-indicator-size;
       top: $stepper-dash-spacing;
     }
 
     &.neo-stepper--vertical__item--complete {
-
       p:first-child {
         font-weight: $stepper-main-text-font-weight;
       }
@@ -163,7 +157,6 @@
         justify-content: center;
         display: flex;
       }
-
     }
 
     &.neo-stepper--vertical__item--disabled {
@@ -192,7 +185,6 @@
       width: $stepper-disabled-dash-border-width;
       background-color: $stepper-disabled-dash-color;
     }
-
   }
 
   &__content {

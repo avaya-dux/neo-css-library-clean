@@ -5,7 +5,7 @@
   $radius: $tooltip-border-radius,
   $content-shadow: $popover-content-shadow,
   $content-padding: $tooltip-padding,
-  $content-z: $tooltip-z,
+  $content-z: map-get($indexes-map, "tooltip-content-z"),
   $content-min-width: $popover-min-width
 ) {
   &__content {
