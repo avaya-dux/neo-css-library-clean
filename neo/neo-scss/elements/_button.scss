@@ -45,6 +45,8 @@
 // wide button styles
 
 .neo-btn {
+  position: relative;
+
   &--wide {
     width: 100%;
     display: flex;
@@ -56,6 +58,30 @@
     font-size: $compact-circle-button-font-size;
   }
   @extend %button;
+
+  // add brackets on hover when not disabled and not an icon button
+  &:not(:disabled, [class*="neo-icon-"], [class*="neo-badge"]) {
+    &:hover::before,
+    &:hover::after {
+      position: absolute;
+      content: "";
+      display: block;
+      top: 2px;
+      bottom: 2px;
+      width: 4px;
+      border-top: 2px solid;
+      border-bottom: 2px solid;
+      border-radius: 0 2px 2px 0;
+    }
+    &:hover::before {
+      left: 2px;
+      border-left: 2px solid;
+    }
+    &:hover::after {
+      right: 2px;
+      border-right: 2px solid;
+    }
+  }
 }
 
 @mixin button-animations() {
