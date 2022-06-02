@@ -293,7 +293,7 @@
     width: auto;
     min-height: $modal-body-height;
     background-color: $global-background;
-    padding: $widget-content-padding;
+    padding: $widget-content-padding-top;
     // @include widget-element(16px, top);
     @include neo-shimmer;
     &-disabled {
