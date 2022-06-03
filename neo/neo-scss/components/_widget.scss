@@ -157,6 +157,7 @@
   // padding: 0 $modal-padding-y;
   position: relative;
   width: auto;
+  padding: $widget-heading-padding;
   // z-index: $modal-content-z;
 
   // test overflow styles
@@ -164,9 +165,7 @@
 
   .neo-widget__header {
     // @include widget-element(16px);
-    padding: $widget-heading-padding;
     background-color: $global-background;
-    min-height: $widget-heading-min-height + $token-widgets-padding-y * 2;
     // text-align: center;
     width: 100%;
     // vertical-align: middle;
@@ -209,7 +208,7 @@
 
     & .neo-widget__header-right {
       & .neo-multiselect__header {
-        padding: 8px 24px 8px 12px
+        padding: 8px 24px 8px 12px;
       }
       display: flex;
       flex-direction: row;
@@ -294,7 +293,7 @@
     width: auto;
     min-height: $modal-body-height;
     background-color: $global-background;
-    padding: $widget-content-padding;
+    padding-top: $widget-content-padding-top;
     // @include widget-element(16px, top);
     @include neo-shimmer;
     &-disabled {
