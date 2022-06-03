@@ -127,3 +127,7 @@ neo/dist
 neo_zip/
 resized-icons/
 neo-npm-package/neo/
+
+neo-css-library-staging/cypress/integration
+neo-css-library-staging/cypress/screenshots
+neo-css-library-staging/cypress/videos

@@ -15,7 +15,9 @@
 
 ## development linking
 
-TODO: add
+TODO: improve
+
+- see the staging environment [how to dev](../neo-css-library-staging/readmes/how-to-dev.md) doc for example usage
 
 ## to run in 'develop' mode with hot module reloading
 
