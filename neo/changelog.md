@@ -5,6 +5,9 @@
 #### Bugs Report - List of bugs that have been updated
 
 - Fixed padding according to figma changes and removed widget-header min-height of [Widget component](https://design.avayacloud.com/components/web/widget-web).
+#### New Features - New features that have recently been added
+
+- Updated the on-hover selector for buttons to add side brackets to the button, thus improving the visibility and accessibility of the buttons
 
 ### 3.55.0
 

@@ -42,3 +42,23 @@ Once that is complete, the next step is to add the release to our GitHub
 - from the root of the `neo-npm-package` folder (`neo-css-library/neo-npm-package`), run `npm pack`
 - attach the binary generated from the "pack" (tgz file)
 - click: "Publish release"
+
+### add documentation to the Design Portal
+
+Once the publishing is completed, we must then update the Design Portal with an updated ZIP file
+- TODO: check to see if we can just use the already generated "pack" TGZ file (from `npm pack`)
+- navigate to the root of the css-library project
+- create (verify existince of) `neo/neo_zip` folder exists
+- copy over the contents of the sub-project folder `neo-npm-package` into the `neo/neo_zip` folder
+- `node neo/neo-file-archiver.js`: generate the zip file
+- `npm view @avaya/neo time --json`: get the timestamp of the latest published package
+- - copy the date+hour+min, eg: `2022-06-01T19:20`
+- go to the design portal project
+- delete the existing zip file (at `static/documents/neo_zip*.zip`)
+- add newly created zip file to that same location
+- go to `src/site_components/constants/version_number.js`
+- - add the next version
+- - add the datetime in the same format
+- - update the `latest` key
+- - update the `neoLatestVersion` variable
+- open a PR into `develop`, merge, then open a PR into `main` and merge
