@@ -59,27 +59,84 @@
   }
   @extend %button;
 
-  // add brackets on hover when not disabled and not an icon button
-  &:not(:disabled, [class*="neo-icon-"], [class*="neo-badge"]) {
-    &:hover::before,
-    &:hover::after {
-      position: absolute;
-      content: "";
-      display: block;
-      top: 2px;
-      bottom: 2px;
-      width: 4px;
-      border-top: 2px solid;
-      border-bottom: 2px solid;
-      border-radius: 0 2px 2px 0;
+  // add brackets on hover when not disabled
+  &:not(:disabled) {
+    // "normal" buttons hover state
+    &:not([class*="neo-icon-"], [class*="neo-badge"]) {
+      &:hover,
+      &:focus {
+        &::before,
+        &::after {
+          position: absolute;
+          content: "";
+          display: block;
+          top: 2px;
+          bottom: 2px;
+          width: 16px;
+          border-radius: 100%;
+        }
+        &::before {
+          left: 2px;
+          border-left: 2px solid;
+        }
+        &::after {
+          right: 2px;
+          border-right: 2px solid;
+        }
+      }
     }
-    &:hover::before {
-      left: 2px;
-      border-left: 2px solid;
-    }
-    &:hover::after {
-      right: 2px;
-      border-right: 2px solid;
+
+    // icon buttons hover state
+    &[class*="neo-icon-"] {
+      &:hover,
+      &:focus {
+        // wide icon buttons are little odd, handle those edge cases
+        &[class*="neo-btn--wide"]::before,
+        &[class*="neo-btn--wide"]::after {
+          min-height: calc($compact-button-height - 4px);
+        }
+        &:not([class*="neo-btn--wide"]) {
+          padding: 1px 2px;
+        }
+
+        &::before,
+        &::after {
+          display: flex;
+          height: -webkit-fill-available;
+          align-items: center;
+          border-radius: 100%;
+        }
+
+        &:not([dir="rtl"]) {
+          &::before {
+            padding-left: 12px;
+            border-left: 2px solid;
+          }
+          &::after {
+            content: "";
+
+            // HACK: to make the hover/focus border curve be the same on both sides, we need to account for the space the icon takes in the padding, and then counter that unnecessary space by using a negative margin
+            padding-right: 24px;
+            margin-left: -12px;
+            border-right: 2px solid;
+          }
+        }
+
+        &[dir="rtl"] {
+          &::before {
+            padding-right: 12px;
+            border-right: 2px solid;
+          }
+          &::after {
+            content: "";
+
+            // HACK: to make the hover/focus border curve be the same on both sides, we need to account for the space the icon takes in the padding, and then counter that unnecessary space by using a negative margin
+            padding-left: 24px;
+            margin-right: -12px;
+            border-left: 2px solid;
+          }
+        }
+      }
     }
   }
 }
