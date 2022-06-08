@@ -25,23 +25,23 @@
 
   &--medium {
     tr td .neo-input {
-        min-height: initial;
-        height: 38px;
-      }
-      tr:not(.neo-table__nested--wrapper) td,
-      .neo-table__nested.show td,
-      thead tr th {
-        padding: 9px $table-condensed-row-cell-padding-x;
-      }
-      .neo-table__nested.show thead tr th {
-        padding: 7px $table-condensed-row-cell-padding-x;
-      }
-      thead tr th {
-        padding: 7px 16px;
-      }
-      thead tr th .neo-check+label {
-        display: flex;
-      }
+      min-height: initial;
+      height: 38px;
+    }
+    tr:not(.neo-table__nested--wrapper) td,
+    .neo-table__nested.show td,
+    thead tr th {
+      padding: 9px $table-condensed-row-cell-padding-x;
+    }
+    .neo-table__nested.show thead tr th {
+      padding: 7px $table-condensed-row-cell-padding-x;
+    }
+    thead tr th {
+      padding: 7px 16px;
+    }
+    thead tr th .neo-check + label {
+      display: flex;
+    }
   }
 
   &--compact {
@@ -66,8 +66,12 @@
   }
 
   th {
-    color: var(--global-font-color);
     text-align: left;
+    @include rtl-selector {
+      text-align: right;
+    }
+
+    color: var(--global-font-color);
     vertical-align: middle;
 
     background-color: $table-background-color;
