@@ -13,10 +13,12 @@
   .neo-dropdown {
     left: 100%;
   }
+
   #lastwrapper {
     margin-bottom: 100px;
   }
 </style>
+
 <body>
   <h1>Selects</h1>
   <button class="neo-btn neo-btn--primary neo-btn-primary--primary" id="togglebutton">
@@ -128,10 +130,10 @@
       <div class="wrapper__component-group--fixed-width">
         <div class="neo-form-control">
           <div class="neo-input-group">
-            <label for="customSelect1"> Choose one </label>
-            <div class="neo-multiselect" tabindex="0" aria-expanded="false" role="combobox" aria-haspopup="listbox"
-              aria-labelledby="customSelect">
-              <div class="neo-multiselect__header">Select one</div>
+            <label id="labelForCustomSelect1" for="customSelect1">Choose one</label>
+            <div class="neo-multiselect" tabindex="0" aria-describedby="custom-select-hint">
+              <div class="neo-multiselect__header" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+                aria-labelledby="labelForCustomSelect1" id="customSelect1">Select one</div>
               <div class="neo-multiselect__content">
                 <ul role="listbox">
                   <li disabled>Option 1</li>
@@ -157,10 +159,10 @@
       <div class="wrapper__component-group--fixed-width">
         <div class="neo-form-control">
           <div class="neo-input-group">
-            <label for="customSelect1"> Choose one </label>
-            <div class="neo-multiselect" tabindex="0" aria-expanded="false" role="combobox" aria-haspopup="listbox"
-              aria-labelledby="customSelect">
-              <div class="neo-multiselect__header">Select one</div>
+            <label id="labelForCustomSelect2" for="customSelect2"> Choose one </label>
+            <div class="neo-multiselect" tabindex="0" aria-describedby="custom-select-hint-2">
+              <div class="neo-multiselect__header" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+                aria-labelledby="labelForCustomSelect2" id="customSelect2">Select one</div>
               <div class="neo-multiselect__content">
                 <ul role="listbox">
                   <li disabled>Option 1</li>
@@ -177,7 +179,7 @@
                 </ul>
               </div>
             </div>
-            <div class="neo-input-hint" id="custom-select-hint">
+            <div class="neo-input-hint" id="custom-select-hint-2">
               Please choose one.
             </div>
           </div>
@@ -186,10 +188,10 @@
       <div class="wrapper__component-group--fixed-width">
         <div class="neo-form-control">
           <div class="neo-input-group">
-            <label for="customSelect1"> Choose one </label>
-            <div class="neo-multiselect neo-multiselect--disabled" aria-expanded="false" role="combobox"
-              aria-haspopup="listbox" aria-labelledby="customSelect1" aria-describedby="custom-select-hint-2">
-              <div class="neo-multiselect__header">Select one</div>
+            <label id="labelForCustomSelect3" for="customSelect3"> Choose one </label>
+            <div class="neo-multiselect neo-multiselect--disabled" tabindex="0">
+              <div class="neo-multiselect__header" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+                aria-labelledby="labelForCustomSelect3" id="customSelect3">Select one</div>
               <div class="neo-multiselect__content">
                 <ul role="listbox">
                   <li disabled>Option 1</li>
@@ -215,10 +217,10 @@
       <div class="wrapper__component-group--fixed-width">
         <div class="neo-form-control">
           <div class="neo-input-group">
-            <label for="customSelect"> Choose one </label>
-            <div class="neo-multiselect" tabindex="0" aria-expanded="false" role="combobox" aria-haspopup="listbox"
-              aria-labelledby="customSelect" aria-describedby="custom-multiselect-hint">
-              <div class="neo-multiselect__header">Select one</div>
+            <label id="labelForMultipleSelect" for="multipleSelect"> Choose one </label>
+            <div class="neo-multiselect" tabindex="0" aria-describedby="custom-multiselect-hint">
+              <div class="neo-multiselect__header" aria-expanded="false" role="combobox" aria-haspopup="listbox"
+                aria-labelledby="labelForMultipleSelect" id="multipleSelect">Select one</div>
               <div class="neo-multiselect__content" role="listbox">
                 <div class="neo-input-group">
                   <input class="neo-check" type="checkbox" id="somecheck1" value="somecheck1" tabindex="-1"
@@ -247,13 +249,12 @@
       <div class="wrapper__component-group--fixed-width">
         <div class="neo-form-control">
           <div class="neo-input-group">
-            <label for="combobox">
+            <label for="combobox" id="labelForCombobox">
               Choose one
             </label>
-            <div class="neo-multiselect" aria-expanded="false" role="combobox" aria-haspopup="listbox"
-              aria-describedby="neo-multiselect-input-hint-3">
-              <div class="neo-multiselect-combo__header">
-                <input class="neo-input " placeholder="Select One" id="combobox"></input>
+            <div class="neo-multiselect" aria-describedby="neo-multiselect-input-hint-3" tabindex="0">
+              <div class="neo-multiselect-combo__header" aria-expanded="false" role="combobox" aria-haspopup="listbox" aria-labelledby="labelForCombobox" id="combobox">
+                <input class="neo-input " placeholder="Select One" id="combobox-input"></input>
               </div>
               <div class="neo-multiselect__content">
                 <ul role="listbox">
@@ -272,12 +273,11 @@
         <div class="wrapper__component-group--fixed-width">
           <div class="neo-form-control">
             <div class="neo-input-group">
-              <label for="combobox">
+              <label id="labelForCombobox2" for="combobox2">
                 Choose one
               </label>
-              <div class="neo-multiselect" aria-expanded="false" role="combobox" aria-haspopup="listbox"
-                aria-describedby="neo-multiselect-input-hint-3">
-                <div class="neo-multiselect-combo__header">
+              <div class="neo-multiselect" tabindex="0">
+                <div class="neo-multiselect-combo__header" aria-expanded="false" role="combobox" aria-haspopup="listbox" aria-labelledby="labelForCombobox2" id="combobox2">
                   <div class="neo-chip neo-chip--default neo-chip--close neo-chip--close--default" tabindex="0"
                     role="button">
                     Option 2
@@ -303,7 +303,7 @@
                     Option 6
                     <button class="neo-close neo-close--clear" aria-label="remove Physical Education"></button>
                   </div>
-                  <input class="neo-input " placeholder="Select One" id="combobox"></input>
+                  <input class="neo-input " placeholder="Select One" id="combobox3"></input>
                 </div>
                 <div class="neo-multiselect__content">
                   <ul role="listbox">
@@ -325,8 +325,8 @@
         <div class="wrapper__component-group--fixed-width">
           <div class="neo-form-control">
             <div class="neo-input-group">
-              <div class="neo-multiselect">
-                <div class="neo-multiselect-combo__header neo-multiselect-combo__dropdown">
+              <div class="neo-multiselect" tabindex="0">
+                <div class="neo-multiselect-combo__header neo-multiselect-combo__dropdown" aria-expanded="false" role="combobox" aria-haspopup="listbox">
                   <input class="neo-input" placeholder="Select One"></input>
                 </div>
                 <div class="neo-multiselect__content">
@@ -365,8 +365,8 @@
         <div class="wrapper__component-group--fixed-width">
           <div class="neo-form-control">
             <div class="neo-input-group">
-              <div class="neo-multiselect">
-                <div class="neo-multiselect__header neo-multiselect__dropdown">Select One
+              <div class="neo-multiselect" tabindex="0">
+                <div class="neo-multiselect__header neo-multiselect__dropdown" aria-expanded="false" role="combobox" aria-haspopup="listbox" title="Select One">Select One
                 </div>
                 <div class="neo-multiselect__content">
                   <ul>
@@ -383,7 +383,7 @@
                       <div class="neo-form-control neo-input-icon">
                         <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
                           <span class="neo-icon-search"></span>
-                          <input class="neo-input" id="input-no-label" placeholder="Search" type="text" />
+                          <input class="neo-input" id="input-no-label-2" placeholder="Search" type="text" />
                           <button aria-label="clear input" tabindex="-1"
                             class="neo-input-edit__icon neo-icon-end"></button>
                         </div>
