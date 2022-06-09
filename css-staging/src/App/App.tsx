@@ -1,6 +1,7 @@
 import { useState } from "react";
+import { Routes, Route, Link } from "react-router-dom";
 
-import { Table } from "../components";
+import { Buttons, Table } from "../components";
 
 import "./App.css";
 import "css-library/dist/neo.css";
@@ -9,10 +10,16 @@ export const App = () => {
   const [dir, setDir] = useState<"ltr" | "rtl" | "auto">("auto");
 
   return (
-    <div className="app" dir={dir}>
+    <main className="app" dir={dir}>
       <h1>CSS Staging</h1>
 
-      <div>
+      <nav className="navigation">
+        <Link to="/">Home</Link>
+        <Link to="/table">Table</Link>
+        <Link to="/buttons">Buttons</Link>
+      </nav>
+
+      <section>
         <div>
           Current root <code>dir={dir}</code>
         </div>
@@ -26,13 +33,30 @@ export const App = () => {
         <button onClick={() => setDir("auto")} disabled={dir === "auto"}>
           auto
         </button>
-      </div>
+      </section>
 
       <div>
-        <h2>Table</h2>
-
-        <Table />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="table" element={<Table />} />
+          <Route path="buttons" element={<Buttons />} />
+        </Routes>
       </div>
+    </main>
+  );
+};
+
+const Home = () => {
+  return (
+    <div>
+      <h2>Home</h2>
+
+      <p>
+        This repository is meant to facilitate local development work on the Neo
+        CSS library, as well as provide a way to do visual diff testing when
+        changes are made. It is a work in progress and is meant to be iterated
+        on and improved.
+      </p>
     </div>
   );
 };
