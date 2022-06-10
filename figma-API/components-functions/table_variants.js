@@ -560,7 +560,7 @@ async function tableStyles(value) {
 
   await fs
     .writeFile(
-      "../style-dictionary/properties/components/table.json",
+      "../css-library/style-dictionary/properties/components/table.json",
       JSON.stringify(tableJSONObject)
     )
     .then(function () {

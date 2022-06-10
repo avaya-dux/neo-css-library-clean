@@ -522,7 +522,7 @@ async function navbarStyles(value) {
 
   await fs
     .writeFile(
-      "../style-dictionary/properties/components/navbar.json",
+      "../css-library/style-dictionary/properties/components/navbar.json",
       JSON.stringify(navbarJSONObject)
     )
     .then(function () {

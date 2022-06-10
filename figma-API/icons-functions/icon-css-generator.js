@@ -17,7 +17,7 @@ Handlebars.registerHelper("ifEquals", function (arg1, arg2, options) {
   return amendedArg === arg2 ? options.fn(this) : options.inverse(this);
 });
 
-const buildDir = "../generated-styles/css/";
+const buildDir = "../css-library/generated-styles/css/";
 
 // Code to generate .css file for icons -- THIS CODE TO BE RUN AFTER ICONGEN SCRIPT
 
@@ -543,7 +543,7 @@ const unicodes = {
 };
 
 const generateIcons = async () => {
-  const styleDictionaryDir = path.resolve(__dirname, "../../style-dictionary");
+  const styleDictionaryDir = path.resolve(__dirname, "../../css-library/style-dictionary");
 
   let iconsSVGDir = [];
 
@@ -615,11 +615,12 @@ const generateIcons = async () => {
           })
         );
 
+        const iconsScssFile = "../../css-library/neo/neo-scss/icons.scss";
         await fs.writeFile(
-          path.resolve(__dirname, "../../neo/neo-scss/icons.scss"),
+          path.resolve(__dirname, iconsScssFile),
           prettier.format(iconsCSSFile.toString(), {
             ...prettierConfig,
-            filepath: path.resolve(__dirname, "../../neo/neo-scss/icons.scss"),
+            filepath: path.resolve(__dirname, iconsScssFile),
           })
         );
 

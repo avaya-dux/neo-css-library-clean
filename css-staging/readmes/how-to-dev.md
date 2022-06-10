@@ -6,21 +6,13 @@
 
 ## to run locally
 
-### initial one time setup
-
-> You must first add a symlink to the css-library (the root project), and then connecting it to the `css-staging` project. You only need to run these two commands **_once_** to setup the symlink.
-
-`yarn link`: run this in the repo root (`/neo-css-library`)
-
-`yarn link "css-library"`: run the provided command in the `/neo-css-library/css-staging` folder
-
-### run w/ hot-module reloading
-
-> Once the symlink is in place on your local machine, you only need to run the commands to "watch" for updates to the CSS Library and the Staging project.
-
-`yarn watch`: from the repo root (`/neo-css-library`)
-
+To start the staging environment by itself, run:
 `yarn start`: from the css-staging root (`/neo-css-library/css-staging`)
+
+Note that unless you are "watching" the CSS Library, the above command will _only_ pickup the staging environment changes. To have CSS changes reflected in staging, you can run:
+`yarn watch`: from the CSS Library project root (`/neo-css-library/css-library`)
+
+Alternatively, you can run both/either commands from the repo root. See the repo roots [how-to-dev.md](../../readmes/how-to-dev.md) for how to do this.
 
 ## running tests
 

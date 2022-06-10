@@ -510,7 +510,7 @@ async function inputStyles(value) {
 
   await fs
     .writeFile(
-      "../style-dictionary/properties/components/inputs.json",
+      "../css-library/style-dictionary/properties/components/inputs.json",
       JSON.stringify(inputJSONObject)
     )
     .then(function () {

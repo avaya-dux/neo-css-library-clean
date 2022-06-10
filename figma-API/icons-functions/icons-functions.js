@@ -128,7 +128,7 @@ async function generateIconFiles(iconIds, URLs, fileType) {
 }
 
 async function pullAllIcons(figmaApiKey, figmaId) {
-  const styleDicDir = "../style-dictionary/properties/assets/icons";
+  const styleDicDir = "../css-library/style-dictionary/properties/assets/icons";
 
   try {
     await fs.mkdir(`${styleDicDir}/svgs`, {
@@ -162,7 +162,7 @@ async function pullAllIcons(figmaApiKey, figmaId) {
 }
 
 async function pullIcons(figmaApiKey, figmaId, iconNames) {
-  const styleDicDir = "../style-dictionary/properties/assets/icons";
+  const styleDicDir = "../css-library/style-dictionary/properties/assets/icons";
 
   const formattedIconNames = iconNames.map((iconName) =>
     iconName.replace("/", "")

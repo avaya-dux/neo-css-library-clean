@@ -1,19 +1,16 @@
 {
   "name": "@avaya/neo",
   "version": "3.55.0",
-  "description": "Avaya NEO UI Kit",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "author": "Avaya, Inc.",
+  "license": "MIT",
+  "description": "Avaya NEO CSS Library",
   "keywords": [
     "Avaya",
-    "UX",
-    "UI",
+    "CSS",
     "Design",
+    "NEO",
     "System",
-    "NEO"
-  ],
-  "author": "Avaya, Inc.",
-  "license": "MIT"
+    "UI",
+    "UX"
+  ]
 }
