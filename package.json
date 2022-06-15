@@ -5,9 +5,12 @@
   "author": "Mohammad Razian",
   "license": "UNLICENSED",
   "scripts": {
+    "build": "yarn build:css && yarn build:staging",
+    "build:css": "yarn workspace css-library build",
+    "build:staging": "yarn workspace css-staging build",
     "dev": "yarn dev:css & yarn dev:staging",
-    "dev:css": "yarn --cwd ./css-library watch",
-    "dev:staging": "yarn --cwd ./css-staging start",
+    "dev:css": "yarn workspace css-library watch",
+    "dev:staging": "yarn workspace css-staging start",
     "test": "jest --config ./jest.config.json",
     "test:watch": "jest --config ./jest.config.json --watchAll=true",
     "pull-icons": "cd figma-API && node -r esm design-system-functions.js && node -r esm ./icons-functions/icon-css-generator.js"
