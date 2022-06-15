@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Routes, Route, Link } from "react-router-dom";
 
-import { Buttons, Table } from "../components";
+import { Buttons, Select, Table } from "../components";
 
 import "./App.css";
 import "css-library/dist/neo.css";
@@ -17,6 +17,7 @@ export const App = () => {
         <Link to="/">Home</Link>
         <Link to="/table">Table</Link>
         <Link to="/buttons">Buttons</Link>
+        <Link to="/select">Select</Link>
       </nav>
 
       <section>
@@ -40,6 +41,7 @@ export const App = () => {
           <Route path="/" element={<Home />} />
           <Route path="table" element={<Table />} />
           <Route path="buttons" element={<Buttons />} />
+          <Route path="select" element={<Select />} />
         </Routes>
       </div>
     </main>

@@ -403,8 +403,9 @@
   & .neo-multiselect-combo__header {
     border-radius: $select-border-radius;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     background-color: $select-background-color;
     color: $select-font-color;
     border: $select-border-width $select-border-style $select-border-color;
@@ -412,19 +413,15 @@
 
     & .neo-input {
       border: none;
-      padding: $token-input-padding-y 0px $token-input-padding-y
-        $token-input-padding-x;
-      width: 100%;
+      padding: 0 0 0 8px;
     }
 
     & .neo-chip {
-      &:first-child {
-        margin-left: 12px;
-      }
-      margin-left: 4px;
+      margin: 2px 2px;
     }
 
-    padding-right: $token-input-padding-x;
+    padding-left: $token-input-padding-x;
+    padding-right: $token-input-padding-x + 12px;
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
