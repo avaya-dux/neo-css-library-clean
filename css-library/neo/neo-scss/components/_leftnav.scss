@@ -9,7 +9,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    & > a, & > .neo-leftnav__category {
+    & > a,
+    & > .neo-leftnav__category {
       &:not(.neo-icon-page-first):focus,
       &:not(.neo-icon-page-first):focus-visible {
         outline-offset: -4px;
@@ -80,7 +81,8 @@
       }
     }
     &--active {
-      & > a, & > .neo-leftnav__category {
+      & > a,
+      & > .neo-leftnav__category {
         border-color: $leftnav-main-active-color;
         color: $leftnav-main-active-color;
         font-size: $leftnav-main-active-font-size;
@@ -111,7 +113,8 @@
     &--active[disabled] {
       cursor: not-allowed;
       // background-color: $leftnav-background-color;
-      & > a,  & > .neo-leftnav__category {
+      & > a,
+      & > .neo-leftnav__category {
         cursor: not-allowed;
         background-color: $leftnav-background-color;
         color: $leftnav-main-active-disabled-color !important;
@@ -127,11 +130,13 @@
     }
     &[disabled],
     &[disabled]:focus-within,
-    &.neo-leftnav__disabled, &.neo-leftnav__disabled:hover {
+    &.neo-leftnav__disabled,
+    &.neo-leftnav__disabled:hover {
       cursor: not-allowed;
 
       // background-color: $leftnav-background-color;
-      & > a,  & > .neo-leftnav__category {
+      & > a,
+      & > .neo-leftnav__category {
         cursor: not-allowed;
         background-color: $leftnav-background-color;
         color: $leftnav-main-default-disabled-color;
@@ -156,7 +161,8 @@
       transition: max-height $global-transition-duration
         $global-transition-timing;
     }
-    &--expand > a,  &--expand > .neo-leftnav__category {
+    &--expand > a,
+    &--expand > .neo-leftnav__category {
       &.expandable:after {
         transition: $accordion-icon-transition;
         transform: rotate(90deg) $accordion-active-icon-animation;
@@ -459,11 +465,18 @@
       width: 0;
     }
   }
+  &--wrapper-tooltip {
+    overflow: inherit;
+  }
   &__nav {
     margin: 0;
     overflow: hidden;
   }
-  &__category, &__disabled {
+  &__nav--tooltip {
+    overflow: inherit;
+  }
+  &__category,
+  &__disabled {
     height: inherit;
     justify-content: left;
   }
