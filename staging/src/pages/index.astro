@@ -5,29 +5,57 @@ import Card from '../components/Card.astro';
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<h1>Welcome to <span class="text-gradient">CSS Staging</span></h1>
+
 		<p class="instructions">
-			Check out the <code>src/pages</code> directory to get started.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+			This project shows the latest changes available in the Neo CSS Library. It does <i>not</i> use the NPM version of
+			the CSS Library, but builds the CSS from the source files directly.
 		</p>
-		<ul role="list" class="link-card-grid">
-			<Card href="https://docs.astro.build/" title="Docs"
-				body="Learn how Astro works and explore the official API docs." />
 
-			<Card href="https://astro.build/integrations/" title="Integrations"
-				body="Supercharge your project with new frameworks and libraries." />
+		<section>
+			<h2>
+				Neo CSS Library Examples:
+			</h2>
 
-			<Card href="https://astro.build/chat/" title="Chat" body="Come say hi to our amazing Discord community. ❤️" />
+			<ul role="list" class="link-card-grid">
+				<Card href="buttons" title="Buttons" body="Plethora of button examples" />
 
-			<Card href="buttons" title="Buttons" body="Plethora of button examples" />
+				<Card href="select" title="Select" body="Plethora of select examples" />
 
-			<Card href="select" title="Select" body="Plethora of select examples" />
+				<Card href="table" title="Table" body="Some table examples" />
+			</ul>
+		</section>
 
 			<Card href="table" title="Table" body="Some table examples" />
 
 			<Card href="leftnav" title="LefNav" body="Some leftnav examples" />
 
 		</ul>
+		<section>
+			<h2>
+				Astro Framework Examples:
+			</h2>
+
+			<ul role="list" class="link-card-grid">
+				<Card href="examples" title="Examples" body="Some examples using different frameworks." />
+			</ul>
+		</section>
+
+		<section>
+			<h2>
+				Astro Documentation:
+			</h2>
+
+			<ul role="list" class="link-card-grid">
+				<Card href="https://docs.astro.build/" title="Docs"
+					body="Learn how Astro works and explore the official API docs." />
+
+				<Card href="https://astro.build/integrations/" title="Integrations"
+					body="Supercharge your project with new frameworks and libraries." />
+
+				<Card href="https://astro.build/chat/" title="Chat" body="Come say hi to our amazing Discord community. ❤️" />
+			</ul>
+		</section>
 	</main>
 </Layout>
 
@@ -43,7 +71,7 @@ import Card from '../components/Card.astro';
 	main {
 		margin: auto;
 		padding: 1em;
-		max-width: 60ch;
+		max-width: 70ch;
 	}
 
 	.text-gradient {
