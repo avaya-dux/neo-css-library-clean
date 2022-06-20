@@ -449,6 +449,12 @@
       & .neo-leftnav__main {
         min-width: initial;
       }
+      & .neo-tooltip {
+        width:52px;
+      }
+      & .neo-tooltip--right .neo-tooltip__content{
+        transform: translate(0, -118%);
+      }
     }
   }
 }
