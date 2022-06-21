@@ -6,9 +6,11 @@
 
 - Fixed padding according to figma changes and removed widget-header min-height of [Widget component](https://design.avayacloud.com/components/web/widget-web).
 - Fixed [Table](https://design.avayacloud.com/components/web/tables-web) header issue where text was not right-aligned when `dir='rtl'`
+- Fixed [Combobox](https://design.avayacloud.com/components/web/select-web#ChipsinComboboxes) to expand vertically when many chips are present
+
 #### New Features - New features that have recently been added
 
-- Updated the on-hover selector for buttons to add side brackets to the button, thus improving the visibility and accessibility of the buttons
+- Updated the on-focus selector for buttons to add a border to the button, thus improving the visibility and accessibility of the buttons
 
 ### 3.55.0
 
