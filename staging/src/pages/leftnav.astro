@@ -1,10 +1,7 @@
 ---
 import NeoLayout from '../layouts/NeoLayout.astro';
 import Card from '../components/Card.astro';
-
-import {
-  LeftNavWithSimpleJS, CondensedLeftNavWithScroll
-} from '../components'
+import { LeftNavWithSimpleJS, CondensedLeftNavWithScroll } from '../components';
 ---
 
 <NeoLayout title="Leftnav">
@@ -24,25 +21,26 @@ import {
       <h4>Condensed LeftNav with scroll</h4>
       <CondensedLeftNavWithScroll client:load />
     </div>
+
   </div>
 
 </NeoLayout>
 
 <style>
-
   .custom-main {
-    display:flex
+    display: flex
   }
+
   .custom-leftnav {
     display: inline-block;
     margin: 2em;
     border: 1px solid #ccc;
     padding: 2em;
   }
+
   .custom-leftnav h4 {
     text-transform: capitalize;
     font-weight: 700;
     padding: 0 0 1em;
   }
-
 </style>

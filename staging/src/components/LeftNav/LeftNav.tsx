@@ -22,7 +22,6 @@ export const LeftNavWithSimpleJS = () => {
             }
           >
             <a
-              tabIndex="0"
               className="neo-icon-contact expandable"
               onClick={() => onExpand(1)}
               aria-labelledby="tooltip1"
@@ -35,7 +34,7 @@ export const LeftNavWithSimpleJS = () => {
             </div>
             <ul className="neo-leftnav__nav" role="menu">
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <a tabIndex="0">Overview</a>
+                <a>Overview</a>
               </li>
 
               <li className="neo-leftnav__sub" disabled>
@@ -43,7 +42,7 @@ export const LeftNavWithSimpleJS = () => {
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex="0">Billing</a>
+                <a>Billing</a>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -63,7 +62,6 @@ export const LeftNavWithSimpleJS = () => {
           >
             <a
               role="menuitem"
-              tabIndex="0"
               className="expandable"
               onClick={() => onExpand(2)}
               aria-labelledby="tooltip2"
@@ -78,15 +76,15 @@ export const LeftNavWithSimpleJS = () => {
 
             <ul className="neo-leftnav__nav" role="menu">
               <li className="neo-leftnav__sub neo-leftnav__sub--active neo-leftnav__sub--no-icon">
-                <a tabIndex="0">RBAC</a>
+                <a>RBAC</a>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--no-icon">
-                <a tabIndex="0">SIP Trunking</a>
+                <a>SIP Trunking</a>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--no-icon">
-                <a tabIndex="0">Directory Services</a>
+                <a>Directory Services</a>
               </li>
             </ul>
           </li>
@@ -99,7 +97,6 @@ export const LeftNavWithSimpleJS = () => {
             }
           >
             <a
-              tabIndex="0"
               className="neo-icon-address-book expandable"
               onClick={() => onExpand(3)}
               aria-labelledby="tooltip3"
@@ -123,11 +120,11 @@ export const LeftNavWithSimpleJS = () => {
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex="0">Transfer Destinations</a>
+                <a>Transfer Destinations</a>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex="0">Work Assignments</a>
+                <a>Work Assignments</a>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -188,7 +185,6 @@ export const CondensedLeftNavWithScroll = () => {
           >
             <a
               aria-label="Accounts"
-              tabIndex="0"
               className="neo-icon-contact"
               onClick={() => onExpand(1)}
             >
@@ -219,55 +215,55 @@ export const CondensedLeftNavWithScroll = () => {
           </li>
 
           <li className="neo-leftnav__main neo-leftnav__main--active" disabled>
-            <a tabIndex="0" className="neo-icon-address-book">
+            <a className="neo-icon-address-book">
               Contact Center
             </a>
           </li>
 
           <li className="neo-leftnav__main" disabled>
-            <a tabIndex="0" className="neo-icon-user-group">
+            <a className="neo-icon-user-group">
               Groups
             </a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a tabIndex="0" className="neo-icon-settings">
+            <a className="neo-icon-settings">
               Settings
             </a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a tabIndex="0" className="neo-icon-global">
+            <a className="neo-icon-global">
               Menu 1
             </a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a tabIndex="0" className="neo-icon-configure">
+            <a className="neo-icon-configure">
               Menu 2
             </a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a tabIndex="0" className="neo-icon-idea">
+            <a className="neo-icon-idea">
               Menu 3
             </a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a tabIndex="0" className="neo-icon-chart-gauge">
+            <a className="neo-icon-chart-gauge">
               Menu 4
             </a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a tabIndex="0" className="neo-icon-view-tiles">
+            <a className="neo-icon-view-tiles">
               Menu 5
             </a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a tabIndex="0" className="neo-icon-pie-chart">
+            <a className="neo-icon-pie-chart">
               Menu 6
             </a>
           </li>
@@ -278,7 +274,6 @@ export const CondensedLeftNavWithScroll = () => {
         <a
           role="button"
           aria-label="expand navigation"
-          tabIndex="0"
           className="neo-icon-page-first neo-leftnav--condensed__toggle"
           aria-labelledby="tooltip3"
           onClick={(e) => setCondensed(!condensed)}
