@@ -20,7 +20,7 @@ export const CheckboxWithReadOnly = () => {
               defaultChecked
             />
             <label for="checkbox1">Check 1</label>
-            <br/>
+            <br />
             <p>Readonly Checkbox</p>
             <input
               className="neo-check neo-check-readonly"
