@@ -6,7 +6,7 @@ export const NeoForm = () => {
       <form className="neo-form">
         <div className="neo-form-control">
           <div className="neo-input-group">
-            <label for="textInput" aria-label="phoneNumberInput">
+            <label htmlFor="textInput" aria-label="phoneNumberInput">
               Input group label
             </label>
             <div className="neo-input-editable__wrapper">
@@ -21,7 +21,7 @@ export const NeoForm = () => {
                   e.preventDefault();
                 }}
                 aria-label="clear input"
-                tabIndex="-1"
+                tabIndex={-1}
                 className="neo-input-edit__icon neo-icon-end"
               ></button>
             </div>
@@ -49,7 +49,7 @@ export const InputStates = () => {
       <form className="neo-form">
         <div className="neo-form-control neo-form-control--disabled">
           <div className="neo-input-group">
-            <label for="disabledInput" aria-label="disabledInput">
+            <label htmlFor="disabledInput" aria-label="disabledInput">
               Disabled input
             </label>
             <div className="neo-input-editable__wrapper">
@@ -58,7 +58,6 @@ export const InputStates = () => {
                 defaultValue=""
                 id="disabledInput"
                 placeholder="This input is disabled"
-                role="textbox"
                 aria-label="disabledInput"
                 disabled
               />
@@ -67,7 +66,7 @@ export const InputStates = () => {
         </div>
         <div className="neo-form-control neo-form-control--required">
           <div className="neo-input-group">
-            <label for="requiredInput" aria-label="requiredInput">
+            <label htmlFor="requiredInput" aria-label="requiredInput">
               Required input
             </label>
             <div className="neo-input-editable__wrapper">
@@ -76,7 +75,6 @@ export const InputStates = () => {
                 defaultValue=""
                 id="requiredInput"
                 placeholder="This input is required"
-                role="textbox"
                 aria-label="requiredInput"
               />
             </div>
@@ -84,7 +82,7 @@ export const InputStates = () => {
         </div>
         <div className="neo-form-control neo-form-control--error">
           <div className="neo-input-group">
-            <label for="errorInput" aria-label="requiredInput">
+            <label htmlFor="errorInput" aria-label="requiredInput">
               Error input
             </label>
             <div className="neo-input-editable__wrapper">
@@ -93,7 +91,6 @@ export const InputStates = () => {
                 defaultValue=""
                 id="errorInput"
                 placeholder="This input has an error"
-                role="textbox"
                 aria-label="errorInput"
               />
             </div>
@@ -113,7 +110,7 @@ export const FormAlignment = () => {
       <form className="neo-form neo-form--inline">
         <div className="neo-form-control">
           <div className="neo-input-group neo-input-group--inline">
-            <label for="textInput" aria-label="phoneNumberInput">
+            <label htmlFor="textInput" aria-label="phoneNumberInput">
               Input group label
             </label>
             <div className="neo-input-editable__wrapper">
@@ -122,7 +119,6 @@ export const FormAlignment = () => {
                 id="textInput"
                 placeholder="Text Input"
                 aria-label="textInput"
-                role="textbox"
               />
             </div>
           </div>
@@ -133,14 +129,13 @@ export const FormAlignment = () => {
             <input
               className="neo-input"
               placeholder="Input with No Label"
-              role="textbox"
               aria-label="inputNoLabel"
             />
           </div>
         </div>
         <div className="neo-form-control neo-form-control--error neo-form-control--required">
           <div className="neo-input-group">
-            <label for="radioMixedExample" aria-label="Addon on the right">
+            <label htmlFor="radioMixedExample" aria-label="Addon on the right">
               Radios
             </label>
             <div className="neo-input-group--inline">
@@ -150,8 +145,6 @@ export const FormAlignment = () => {
                 name="radioMixedExample"
                 value="1"
                 id="radioMixedExample1"
-                role="radio"
-                aria-checked="false"
               />
               <label htmlFor="radioMixedExample1">Radio 1</label>
               <input
@@ -160,8 +153,6 @@ export const FormAlignment = () => {
                 name="radioMixedExample"
                 value="2"
                 id="radioMixedExample2"
-                role="radio"
-                aria-checked="false"
               />
               <label htmlFor="radioMixedExample2">Radio 2</label>
               <input
@@ -170,8 +161,6 @@ export const FormAlignment = () => {
                 name="radioMixedExample"
                 value="3"
                 id="radioMixedExample3"
-                role="radio"
-                aria-checked="false"
               />
               <label htmlFor="radioMixedExample3">Radio 3</label>
             </div>
@@ -182,7 +171,7 @@ export const FormAlignment = () => {
         </div>
         <div className="neo-form-control">
           <div className="neo-input-group">
-            <label for="checkGroupExample" aria-label="Addon on the right">
+            <label htmlFor="checkGroupExample" aria-label="Addon on the right">
               Checks
             </label>
             <div className="neo-input-group--inline">
@@ -191,8 +180,6 @@ export const FormAlignment = () => {
                 type="checkbox"
                 id="checkgroup1"
                 value="checkgroup1"
-                role="checkbox"
-                aria-checked="false"
               />
               <label htmlFor="checkgroup1">Check 1</label>
               <input
@@ -200,8 +187,6 @@ export const FormAlignment = () => {
                 type="checkbox"
                 id="checkgroup2"
                 value="checkgroup2"
-                role="checkbox"
-                aria-checked="true"
                 defaultChecked
               />
               <label htmlFor="checkgroup2">Check 2</label>
@@ -210,8 +195,6 @@ export const FormAlignment = () => {
                 type="checkbox"
                 id="checkgroup3"
                 value="checkgroup3"
-                role="checkbox"
-                aria-checked="false"
                 disabled
               />
               <label htmlFor="checkgroup3">Check 3 (disabled)</label>
@@ -228,7 +211,10 @@ export const MixedInputs = () => {
     <form className="neo-form">
       <div className="neo-form-control neo-form-control--error neo-form-control--required">
         <div className="neo-input-group">
-          <label for="input-group-addon-on-left" aria-label="Addon on the left">
+          <label
+            htmlFor="input-group-addon-on-left"
+            aria-label="Addon on the left"
+          >
             First input field
           </label>
           <div className="neo-input-group--addons">
@@ -237,7 +223,6 @@ export const MixedInputs = () => {
               className="neo-input"
               id="input-group-addon-on-left"
               placeholder="URL"
-              role="textbox"
               aria-label="Addon on the left"
             />
           </div>
@@ -248,7 +233,10 @@ export const MixedInputs = () => {
       </div>
       <div className="neo-form-control neo-form-control--disabled">
         <div className="neo-input-group">
-          <label for="input-group-addon-on-left" aria-label="Addon on the left">
+          <label
+            htmlFor="input-group-addon-on-left"
+            aria-label="Addon on the left"
+          >
             Second input field
           </label>
           <div className="neo-input-group--addons">
@@ -257,7 +245,6 @@ export const MixedInputs = () => {
               className="neo-input"
               id="input-group-addon-on-left"
               placeholder="URL"
-              role="textbox"
               aria-label="Addon on the left"
               disabled
             />
@@ -266,12 +253,12 @@ export const MixedInputs = () => {
       </div>
       <div className="neo-form-control neo-form-control--error">
         <div className="neo-input-group">
-          <label for="input-name-grid3" aria-label="name">
+          <label htmlFor="input-name-grid3" aria-label="name">
             Select
           </label>
           <div className="neo-select">
             <select className="neo-icon-chevron-down" name="color">
-              <option defaultselected="true">Loading...</option>
+              <option selected>Loading...</option>
               <option value="1">red</option>
               <option value="2">orange</option>
               <option value="3">yellow</option>
@@ -287,7 +274,7 @@ export const MixedInputs = () => {
       <div className="neo-form-control">
         <div className="neo-input-group">
           <label
-            for="input-group-addon-on-right"
+            htmlFor="input-group-addon-on-right"
             aria-label="Addon on the right"
           >
             Third input field
@@ -297,7 +284,6 @@ export const MixedInputs = () => {
               className="neo-input"
               id="input-group-addon-on-right"
               placeholder="Domain name"
-              role="textbox"
               aria-label="Addon on the right"
             />
             <div className="neo-input-group__addon">.com</div>
@@ -306,7 +292,7 @@ export const MixedInputs = () => {
       </div>
       <div className="neo-form-control neo-form-control--error neo-form-control--required">
         <div className="neo-input-group">
-          <label for="radioMixedExample" aria-label="Addon on the right">
+          <label htmlFor="radioMixedExample" aria-label="Addon on the right">
             Radios
           </label>
           <div className="neo-input-group--inline">
@@ -316,8 +302,6 @@ export const MixedInputs = () => {
               name="radioMixedExample"
               value="1"
               id="radioMixedExample1"
-              role="radio"
-              aria-checked="false"
             />
             <label htmlFor="radioMixedExample1">Radio 1</label>
             <input
@@ -326,8 +310,6 @@ export const MixedInputs = () => {
               name="radioMixedExample"
               value="2"
               id="radioMixedExample2"
-              role="radio"
-              aria-checked="false"
             />
             <label htmlFor="radioMixedExample2">Radio 2</label>
             <input
@@ -336,8 +318,6 @@ export const MixedInputs = () => {
               name="radioMixedExample"
               value="3"
               id="radioMixedExample3"
-              role="radio"
-              aria-checked="false"
             />
             <label htmlFor="radioMixedExample3">Radio 3</label>
           </div>
@@ -348,7 +328,7 @@ export const MixedInputs = () => {
       </div>
       <div className="neo-form-control">
         <div className="neo-input-group">
-          <label for="checkGroupExample" aria-label="Addon on the right">
+          <label htmlFor="checkGroupExample" aria-label="Addon on the right">
             Checks
           </label>
           <div className="neo-input-group--inline">
@@ -357,8 +337,6 @@ export const MixedInputs = () => {
               type="checkbox"
               id="checkgroup1"
               value="checkgroup1"
-              role="checkbox"
-              aria-checked="false"
             />
             <label htmlFor="checkgroup1">Check 1</label>
             <input
@@ -366,8 +344,6 @@ export const MixedInputs = () => {
               type="checkbox"
               id="checkgroup2"
               value="checkgroup2"
-              role="checkbox"
-              aria-checked="true"
               defaultChecked
             />
             <label htmlFor="checkgroup2">Check 2</label>
@@ -376,8 +352,6 @@ export const MixedInputs = () => {
               type="checkbox"
               id="checkgroup3"
               value="checkgroup3"
-              role="checkbox"
-              aria-checked="false"
               disabled
             />
             <label htmlFor="checkgroup3">Check 3 (disabled)</label>
@@ -388,23 +362,14 @@ export const MixedInputs = () => {
         <div className="neo-input-group">
           <label htmlFor="checkgroup3">Switches</label>
           <div className="neo-input-group--inline">
-            <label tabIndex="0" className="neo-switch" htmlFor="switchGroup1">
-              <input
-                id="switchGroup1"
-                type="checkbox"
-                role="checkbox"
-                aria-checked="false"
-              />
+            <label className="neo-switch" htmlFor="switchGroup1">
+              <input id="switchGroup1" type="checkbox" />
               <i className="neo-switch__icon"></i>
               Switch group 1
             </label>
-            <label tabIndex="0" className="neo-switch" htmlFor="switchGroup2">
-              <input
-                id="switchGroup2"
-                type="checkbox"
-                role="checkbox"
-                aria-checked="false"
-              />
+
+            <label className="neo-switch" htmlFor="switchGroup2">
+              <input id="switchGroup2" type="checkbox" />
               <i className="neo-switch__icon"></i>
               Switch group 2
             </label>
@@ -417,7 +382,7 @@ export const MixedInputs = () => {
       <div className="neo-form-control">
         <div className="neo-input-group">
           <label
-            for="input-group-addon-on-left-plus-icon2"
+            htmlFor="input-group-addon-on-left-plus-icon2"
             aria-label="Addon on the left plus icon"
           >
             Addon on the left (icon included) and right editable
@@ -430,10 +395,12 @@ export const MixedInputs = () => {
                 defaultValue=""
                 id="input-group-addon-on-left-plus-icon3"
                 placeholder="Type a number..."
-                role="textbox"
                 aria-label="Addon on the left plus icon"
               />
-              <button className="neo-input-editable__close neo-icon-end"></button>
+              <button
+                className="neo-input-editable__close neo-icon-end"
+                aria-label="clear input"
+              />
             </div>
             <div className="neo-input-group__addon">.com</div>
           </div>
@@ -441,12 +408,12 @@ export const MixedInputs = () => {
       </div>
       <div className="neo-form-control neo-form-control--textarea">
         <div className="neo-input-group">
-          <label aria-label="Icon form">Editable text area label</label>
+          <label htmlFor="editable-textarea">Editable text area label</label>
           <div>
             <textarea
+              id="editable-textarea"
               className="neo-input"
               placeholder="Input with right icon"
-              role="textbox"
               aria-label="Input with right icon"
             />
             <div className="neo-input-textarea__helper">

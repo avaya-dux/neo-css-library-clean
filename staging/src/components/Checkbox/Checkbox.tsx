@@ -9,7 +9,7 @@ export const Checkbox = () => {
             id="checkbox1"
             value="Checkbox 1"
           />
-          <label for="checkbox1">Check 1</label>
+          <label htmlFor="checkbox1">Check 1</label>
           <input
             className="neo-check"
             type="checkbox"
@@ -17,7 +17,7 @@ export const Checkbox = () => {
             value="Checkbox 2"
             defaultChecked
           />
-          <label for="checkbox2">Check 2</label>
+          <label htmlFor="checkbox2">Check 2</label>
           <input
             className="neo-check"
             type="checkbox"
@@ -25,7 +25,7 @@ export const Checkbox = () => {
             value="Checkbox 3"
             disabled
           />
-          <label for="checkbox3">Check 3 (disabled)</label>
+          <label htmlFor="checkbox3">Check 3 (disabled)</label>
           <input
             className="neo-check"
             type="checkbox"
@@ -34,7 +34,7 @@ export const Checkbox = () => {
             defaultChecked
             disabled
           />
-          <label for="checkbox4">Check 4 (disabled)</label>
+          <label htmlFor="checkbox4">Check 4 (disabled)</label>
           <input
             className="neo-check neo-check--indeterminate"
             type="checkbox"
@@ -42,7 +42,7 @@ export const Checkbox = () => {
             value="Checkbox 5"
             defaultChecked
           />
-          <label for="checkbox5">Check 5 (indeterminate)</label>
+          <label htmlFor="checkbox5">Check 5 (indeterminate)</label>
           <input
             className="neo-check neo-check--indeterminate"
             type="checkbox"
@@ -51,7 +51,7 @@ export const Checkbox = () => {
             defaultChecked
             disabled
           />
-          <label for="checkbox6">Check 6 (indeterminate disabled)</label>
+          <label htmlFor="checkbox6">Check 6 (indeterminate disabled)</label>
         </div>
       </div>
     </form>

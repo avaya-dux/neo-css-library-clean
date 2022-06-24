@@ -4,29 +4,16 @@ export const Switch = () => {
   return (
     <form className="neo-form">
       <div className="neo-form-control">
-        <label className="neo-switch" for="uncheckedCheckbox">
-          <input
-            id="uncheckedCheckbox"
-            type="checkbox"
-            role="checkbox"
-            aria-checked="false"
-            tabIndex="0"
-          />
-          <i className="neo-switch__icon"></i>
+        <label className="neo-switch" htmlFor="uncheckedCheckbox">
+          <input id="uncheckedCheckbox" type="checkbox" />
+          <i className="neo-switch__icon" />
           I'm initially unchecked
         </label>
       </div>
       <div className="neo-form-control">
-        <label className="neo-switch" for="checkedCheckbox">
-          <input
-            id="checkedCheckbox"
-            type="checkbox"
-            role="checkbox"
-            defaultChecked
-            aria-checked="true"
-            tabIndex="0"
-          />
-          <i className="neo-switch__icon"></i>
+        <label className="neo-switch" htmlFor="checkedCheckbox">
+          <input id="checkedCheckbox" type="checkbox" defaultChecked />
+          <i className="neo-switch__icon" />
           I'm initially checked
         </label>
       </div>
@@ -48,33 +35,25 @@ export const DisabledSwitch = () => {
       <div className="neo-form-control">
         <label
           className="neo-switch neo-switch--disabled"
-          for="uncheckedDisabledCheckbox"
+          htmlFor="uncheckedDisabledCheckbox"
         >
-          <input
-            id="uncheckedDisabledCheckbox"
-            type="checkbox"
-            role="checkbox"
-            aria-checked="false"
-            disabled
-          />
-          <i className="neo-switch__icon"></i>
+          <input id="uncheckedDisabledCheckbox" type="checkbox" disabled />
+          <i className="neo-switch__icon" />
           I'm initially unchecked
         </label>
       </div>
       <div className="neo-form-control">
         <label
           className="neo-switch neo-switch--disabled"
-          for="checkedDisabledCheckbox"
+          htmlFor="checkedDisabledCheckbox"
         >
           <input
             id="checkedDisabledCheckbox"
             type="checkbox"
-            role="checkbox"
             defaultChecked
-            aria-checked="true"
             disabled
           />
-          <i className="neo-switch__icon"></i>
+          <i className="neo-switch__icon" />
           I'm initially checked
         </label>
       </div>
