@@ -5,13 +5,13 @@
 
 @mixin neo-input-group-children {
   label:not(.neo-switch):not(.neo-label) {
-    line-height: $input-line-height;
+    line-height:  16px;
     padding-bottom: 4px;
     pointer-events: none;
   }
 
-  .neo-radio + label,
-  .neo-check + label {
+  .neo-radio:not(.neo-radio-readonly) + label,
+  .neo-check:not(.neo-check-readonly) + label {
     pointer-events: initial !important;
   }
 
