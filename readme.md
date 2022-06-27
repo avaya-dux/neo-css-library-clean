@@ -75,3 +75,8 @@ Then, once the script completes, you should be able to run the `update-site` scr
 3. Discuss how to coordinate changes to the base CSS library with work to do on the React Components
 
 ## [Link to CodeSee](https://app.codesee.io/maps/public/267b4490-d552-11ec-bab4-dbed0529e43a)
+
+## other readme files
+
+- [how to dev](./readmes/how-to-dev.md)
+- [how to publish](./readmes/how-to-publish.md)

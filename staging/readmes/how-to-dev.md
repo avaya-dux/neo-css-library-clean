@@ -14,6 +14,13 @@ Note that unless you are "watching" the CSS Library, the above command will _onl
 
 Alternatively, you can run both/either commands from the repo root. See the repo roots [how-to-dev.md](../../readmes/how-to-dev.md) for how to do this.
 
+## other useful commands
+
+- `yarn build`: builds a production version of the site
+- `yarn preview`: runs the files in the `dist` folder (_does not_ use hot reloading)
+- `yarn lint`: runs linting on `src`
+- `yarn all`: installs deps, cleans temp files, runs linting, runs build
+
 ## running tests
 
 TODO: add

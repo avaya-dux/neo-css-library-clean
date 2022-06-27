@@ -19,13 +19,15 @@
 - `yarn dev`: will startup and "watch" both projects
 - - NOTE: this starts two parallel processes, so you will have to `ctrl+c` twice to exit them both
 
-## development linking
-
-TODO: add
-
 ## linting
 
-TODO: add
+- `yarn workspace staging lint`: runs linting in the "staging" project
+- TODO: setup other workspaces/projects/folders for linting
+
+## helpful commands
+
+- `yarn workspace staging _command_`: run a command/script in the "staging" project (eg, `yarn workspace staging add prettier -D`)
+- `yarn workspace css-library _command_`: run a command/script in the "css-library" project (eg, `yarn workspace css-library build`)
 
 ## before commiting to this repo, please read:
 
@@ -36,3 +38,9 @@ TODO: add
 ## publishing this repo
 
 see [how to publish readme](./how-to-publish.md)
+
+## a note on Yarn Workspaces
+
+We use Yarn Workspaces in this repo. Specifically, we use Yarn v1 as v2+v3 are not supported by Netlify. Yarn v2+v3 are better at supporting a mono-repo with workspaces, but as it's not currently supported in our CICD pipeline, we're stuck on v1 for now. With that, if you want to share one project/workspace output with another one, you simply add that project as a "workspace" in the root `package.json`, run `yarn` at root, and then you import where necessary.
+
+For example, the folder/project `css-library` is marked as a "workspace" in the root `package.json`, and the folder/project `staging` (also a "workspace") _does not_ import `css-library` in it's `package.json`, but does `import "css-library/dist/neo.css";` in its `src/layouts/NeoLayout.astro` file.
