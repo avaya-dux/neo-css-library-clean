@@ -12,7 +12,14 @@
     // Add type definitions for our Vite runtime.
     "types": [
       "vite/client"
-    ]
+    ],
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noUnusedParameters": true,
+    "strict": true,
+    "strictNullChecks": true
   },
   "include": [
     "src"

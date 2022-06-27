@@ -1,10 +1,13 @@
-import React, { useState, useEffect } from "react";
+/* eslint-disable */
+import { useEffect, useState } from "react";
+
+// TODO: This file is a mess of a11y issues. Need to fix ASAP.
 
 export const LeftNavWithSimpleJS = () => {
   const [activate, setActivate] = useState([1]);
-  const onExpand = (number) => {
+  const onExpand = (number: number) => {
     if (activate.includes(number)) {
-      setActivate((prevState) => prevState.filter((numb) => numb != number));
+      setActivate((prevState) => prevState.filter((numb) => numb !== number));
     } else {
       setActivate((prevState) => [...prevState, number]);
     }
@@ -29,7 +32,7 @@ export const LeftNavWithSimpleJS = () => {
               Accounts
             </a>
             <div className="neo-tooltip__content" id="tooltip1">
-              <div className="neo-arrow"></div>
+              <div className="neo-arrow" />
               Accounts
             </div>
             <ul className="neo-leftnav__nav" role="menu">
@@ -37,7 +40,7 @@ export const LeftNavWithSimpleJS = () => {
                 <a>Overview</a>
               </li>
 
-              <li className="neo-leftnav__sub" disabled>
+              <li className="neo-leftnav__sub">
                 <a role="menuitem">Manage Users</a>
               </li>
 
@@ -46,7 +49,7 @@ export const LeftNavWithSimpleJS = () => {
               </li>
 
               <li className="neo-leftnav__sub">
-                <a role="menuitem" tabIndex="-1">
+                <a role="menuitem" tabIndex={-1}>
                   Payments
                 </a>
               </li>
@@ -70,7 +73,7 @@ export const LeftNavWithSimpleJS = () => {
             </a>
 
             <div className="neo-tooltip__content" id="tooltip2">
-              <div className="neo-arrow"></div>
+              <div className="neo-arrow" />
               Configuration
             </div>
 
@@ -105,16 +108,13 @@ export const LeftNavWithSimpleJS = () => {
             </a>
 
             <div className="neo-tooltip__content" id="tooltip3">
-              <div className="neo-arrow"></div>
+              <div className="neo-arrow" />
               Contact Center
             </div>
 
             <ul className="neo-leftnav__nav" role="menu">
-              <li
-                className="neo-leftnav__sub neo-leftnav__sub--active"
-                disabled
-              >
-                <a role="menuitem" tabIndex="-1">
+              <li className="neo-leftnav__sub neo-leftnav__sub--active">
+                <a role="menuitem" tabIndex={-1}>
                   Customer Identifiers
                 </a>
               </li>
@@ -128,15 +128,15 @@ export const LeftNavWithSimpleJS = () => {
               </li>
 
               <li className="neo-leftnav__sub">
-                <a role="menuitem" tabIndex="-1">
+                <a role="menuitem" tabIndex={-1}>
                   Contacts
                 </a>
               </li>
             </ul>
           </li>
 
-          <li className="neo-leftnav__main" disabled>
-            <a role="menuitem" className="neo-icon-user-group" tabIndex="-1">
+          <li className="neo-leftnav__main">
+            <a role="menuitem" className="neo-icon-user-group" tabIndex={-1}>
               Groups
             </a>
           </li>
@@ -150,9 +150,9 @@ export const CondensedLeftNavWithScroll = () => {
   const [activate, setActivate] = useState([1]);
   const [condensed, setCondensed] = useState(true);
 
-  const onExpand = (number) => {
+  const onExpand = (number: number) => {
     if (activate.includes(number)) {
-      setActivate((prevState) => prevState.filter((numb) => numb != number));
+      setActivate((prevState) => prevState.filter((numb) => numb !== number));
     } else {
       setActivate((prevState) => [...prevState, number]);
     }
@@ -189,83 +189,62 @@ export const CondensedLeftNavWithScroll = () => {
               onClick={() => onExpand(1)}
             >
               Accounts
-              <span className="neo-icon-chevron-left"></span>
+              <span className="neo-icon-chevron-left" />
             </a>
 
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub">
-                <a tabIndex="-1">Overview</a>
+                <a tabIndex={-1}>Overview</a>
               </li>
 
-              <li className="neo-leftnav__sub" disabled>
-                <a tabIndex="-1">Manage Users</a>
+              <li className="neo-leftnav__sub">
+                <a tabIndex={-1}>Manage Users</a>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <a tabIndex="-1">Billing</a>
+                <a tabIndex={-1}>Billing</a>
               </li>
 
-              <li
-                className="neo-leftnav__sub neo-leftnav__sub--active"
-                disabled
-              >
-                <a tabIndex="-1">Payments</a>
+              <li className="neo-leftnav__sub neo-leftnav__sub--active">
+                <a tabIndex={-1}>Payments</a>
               </li>
             </ul>
           </li>
 
-          <li className="neo-leftnav__main neo-leftnav__main--active" disabled>
-            <a className="neo-icon-address-book">
-              Contact Center
-            </a>
-          </li>
-
-          <li className="neo-leftnav__main" disabled>
-            <a className="neo-icon-user-group">
-              Groups
-            </a>
+          <li className="neo-leftnav__main neo-leftnav__main--active">
+            <a className="neo-icon-address-book">Contact Center</a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a className="neo-icon-settings">
-              Settings
-            </a>
+            <a className="neo-icon-user-group">Groups</a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a className="neo-icon-global">
-              Menu 1
-            </a>
+            <a className="neo-icon-settings">Settings</a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a className="neo-icon-configure">
-              Menu 2
-            </a>
+            <a className="neo-icon-global">Menu 1</a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a className="neo-icon-idea">
-              Menu 3
-            </a>
+            <a className="neo-icon-configure">Menu 2</a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a className="neo-icon-chart-gauge">
-              Menu 4
-            </a>
+            <a className="neo-icon-idea">Menu 3</a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a className="neo-icon-view-tiles">
-              Menu 5
-            </a>
+            <a className="neo-icon-chart-gauge">Menu 4</a>
           </li>
 
           <li className="neo-leftnav__main">
-            <a className="neo-icon-pie-chart">
-              Menu 6
-            </a>
+            <a className="neo-icon-view-tiles">Menu 5</a>
+          </li>
+
+          <li className="neo-leftnav__main">
+            <a className="neo-icon-pie-chart">Menu 6</a>
           </li>
         </ul>
       </nav>
@@ -276,11 +255,11 @@ export const CondensedLeftNavWithScroll = () => {
           aria-label="expand navigation"
           className="neo-icon-page-first neo-leftnav--condensed__toggle"
           aria-labelledby="tooltip3"
-          onClick={(e) => setCondensed(!condensed)}
-        ></a>
+          onClick={() => setCondensed(!condensed)}
+        />
 
         <div className="neo-tooltip__content" id="tooltip3">
-          <div className="neo-arrow"></div>
+          <div className="neo-arrow" />
           Expand/Collapse
         </div>
       </div>

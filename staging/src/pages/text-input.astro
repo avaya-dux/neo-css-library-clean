@@ -1,0 +1,96 @@
+---
+import NeoLayout from '../layouts/NeoLayout.astro';
+import Card from '../components/Card.astro';
+
+import { TextAreaCounter } from '../components'
+
+const loremipsum = "Lorem ipsum dolor sit amet";
+---
+
+<NeoLayout title="Text Area">
+  <ul role="list" class="link-card-grid">
+    <Card href="/" title="Home" body="Return home" />
+  </ul>
+
+  <section>
+    <h2>Text Area Input Examples</h2>
+
+    <h3>Interactive example w/ both "error" options</h3>
+    <TextAreaCounter client:load />
+
+    <h3>Static examples</h3>
+    <div class="flex-space-between">
+      <div class="neo-form-control neo-form-control--textarea">
+        <div class="neo-input-group">
+          <label for="textarea">Basic Example</label>
+
+          <textarea id="textarea" class="neo-input" type="text">{loremipsum}</textarea>
+        </div>
+
+        <div class="neo-input-textarea__helper">
+          <div class="neo-input-hint">Helper text</div>
+
+          <div class="neo-input-textarea__counter">{100 - loremipsum.length} remaining / 100</div>
+        </div>
+      </div>
+
+      <div class="neo-form-control neo-form-control--textarea neo-form-control--disabled" style="width: 15rem">
+        <div class="neo-input-group">
+          <label for="textarea-disabled">Text area in disabled state</label>
+
+          <textarea id="textarea-disabled" class="neo-input" type="text" disabled>{loremipsum}</textarea>
+
+          <div class="neo-input-hint">
+            A disabled text area can still be resized, and text can still be highlighted and
+            copied
+          </div>
+        </div>
+      </div>
+
+      <div class="neo-form-control neo-form-control--textarea neo-form-control--error neo-form-control--required">
+        <div class="neo-input-group">
+          <label for="textarea-required-error">
+            Required and in error state w/ "short" counter
+          </label>
+
+          <textarea id="textarea-required-error" class="neo-input" type="text" aria-invalid="true"
+            aria-describedby="required-example-hint required-example-counter">{loremipsum}</textarea>
+        </div>
+
+        <div class="neo-input-textarea__helper">
+          <div class="neo-input-hint" id="required-example-hint" aria-live="assertive">
+            Note the use of the `aria` attributes on the textarea
+          </div>
+
+          <div class="neo-input-textarea__counter" id="required-example-counter">{10 - loremipsum.length}/10</div>
+        </div>
+      </div>
+
+      <div class="neo-form-control neo-form-control--textarea">
+        <div class="neo-input-group">
+          <label for="textarea-locked">Locked/unresizable</label>
+
+          <textarea class="neo-input neo-input-textarea--locked" type="text" />
+        </div>
+
+        <div class="neo-input-textarea__helper">
+          <div class="neo-input-textarea__counter">100/100</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</NeoLayout>
+
+<style>
+  h3 {
+    margin-top: 1rem;
+  }
+
+  .flex-space-between {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+</style>
