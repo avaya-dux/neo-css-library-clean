@@ -1,7 +1,7 @@
 ---
 import NeoLayout from '../layouts/NeoLayout.astro';
 import Card from '../components/Card.astro';
-import { BasicInput, CheckboxWithReadOnly, Radio, ReadOnlyInput } from '../components';
+import { BasicInput, CheckboxWithReadOnly, RadioWithReadOnly, ReadOnlyInput } from '../components';
 ---
 
 <NeoLayout title="form">
@@ -11,12 +11,8 @@ import { BasicInput, CheckboxWithReadOnly, Radio, ReadOnlyInput } from '../compo
   </ul>
 
   <CheckboxWithReadOnly />
-  <Radio/>
-  <BasicInput/>
-  <ReadOnlyInput/>
+  <RadioWithReadOnly />
+  <BasicInput />
+  <ReadOnlyInput />
 
 </NeoLayout>
-
-<style>
-
-</style>

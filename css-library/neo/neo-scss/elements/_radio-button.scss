@@ -51,8 +51,8 @@
   opacity: 0;
   position: absolute;
   z-index: map-get($indexes-map, "radio");
-  &-readonly{
-    + label{
+  &-readonly {
+    + label {
       &:before {
         border: 1px solid var(--neo-color-base-400);
       }
@@ -61,9 +61,9 @@
       background-color: var(--neo-color-base-400);
     }
   }
-  &:not(&-readonly){
-    + label{
-      &:before{
+  &:not(&-readonly) {
+    + label {
+      &:before {
         border: 1px solid $radio-border;
       }
     }
@@ -81,47 +81,47 @@
       }
     }
     // &:focus:not(.neo-radio--disabled) + .neo-tooltip .neo-tooltip__content {
-      //   display: block;
-      // }
-    }
-    
-    .neo-input-group--inline & + label {
-      text-indent: $radio-text-offset;
-      padding-left: 0px !important;
-    }
-    
-    + .neo-tooltip {
-      margin-top: 8px;
-      width: fit-content;
-    }
-    
-    + .neo-tooltip > label {
-      padding-left: 24px;
-      pointer-events: initial !important;
-    }
-    
-    + .neo-tooltip > label,
-    + label {
-      color: $global-text-color;
-      cursor: pointer;
-      // margin-right: $radio-label-offset-x;
-      // padding-left: $radio-text-offset;
-      position: relative;
-      text-indent: $radio-text-offset;
-      margin-top: 8px;
-      font-size: 14px !important;
-      
-      @include rtl-selector {
-        margin: {
-          // left: $radio-label-offset-x;
-          right: 0;
-        }
+    //   display: block;
+    // }
+  }
+
+  .neo-input-group--inline & + label {
+    text-indent: $radio-text-offset;
+    padding-left: 0px !important;
+  }
+
+  + .neo-tooltip {
+    margin-top: 8px;
+    width: fit-content;
+  }
+
+  + .neo-tooltip > label {
+    padding-left: 24px;
+    pointer-events: initial !important;
+  }
+
+  + .neo-tooltip > label,
+  + label {
+    color: $global-text-color;
+    cursor: pointer;
+    // margin-right: $radio-label-offset-x;
+    // padding-left: $radio-text-offset;
+    position: relative;
+    text-indent: $radio-text-offset;
+    margin-top: 8px;
+    font-size: 14px !important;
+
+    @include rtl-selector {
+      margin: {
+        // left: $radio-label-offset-x;
+        right: 0;
       }
-      
-      &::after {
-        border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
-        background-color: $radio-background;
-        content: "";
+    }
+
+    &::after {
+      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      background-color: $radio-background;
+      content: "";
       display: block;
       height: $radio-active-ellipse-size;
       width: $radio-active-ellipse-size;
@@ -129,14 +129,14 @@
       top: $radio-ellipse-position-top;
       position: absolute;
       // transition: $global-hover-transition;
-      
+
       @include rtl-selector {
         left: auto;
         right: $radio-ellipse-position-left;
       }
       background-color: $radio-background;
     }
-    
+
     &::before {
       background-color: $radio-background;
       border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
@@ -149,7 +149,6 @@
       // transition: $global-hover-transition;
     }
   }
-
 
   &:checked + label::after,
   &:checked + .neo-tooltip > label::after {
