@@ -51,7 +51,26 @@
   opacity: 0;
   position: absolute;
   z-index: map-get($indexes-map, "radio");
-
+  &-readonly {
+    + label {
+      &:before {
+        border: 1px solid var(--neo-color-base-400);
+      }
+    }
+    &:checked + label::after {
+      background-color: var(--neo-color-base-400);
+    }
+  }
+  &:not(&-readonly) {
+    + label {
+      &:before {
+        border: 1px solid $radio-border;
+      }
+    }
+    &:checked + label::after {
+      background-color: $radio-background-active-color;
+    }
+  }
   &:focus {
     + label,
     &:focus:not(.neo-radio--disabled) + .neo-tooltip > label {
@@ -100,8 +119,8 @@
     }
 
     &::after {
-      background-color: $radio-background;
       border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      background-color: $radio-background;
       content: "";
       display: block;
       height: $radio-active-ellipse-size;
@@ -120,7 +139,6 @@
 
     &::before {
       background-color: $radio-background;
-      border: 1px solid $radio-border;
       border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
       content: "";
       display: block;
@@ -132,13 +150,8 @@
     }
   }
 
-  &:checked + label {
-    font-weight: $token-web-typography-fontweight-semibold;
-  }
-
   &:checked + label::after,
   &:checked + .neo-tooltip > label::after {
-    background-color: $radio-background-active-color;
     border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
     content: "";
     display: block;

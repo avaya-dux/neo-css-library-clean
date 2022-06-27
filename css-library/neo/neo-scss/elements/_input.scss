@@ -66,7 +66,7 @@
     border: none;
     padding: 0;
     min-height: auto;
-    padding-top: $input-read-only-label-padding;
+    padding: $input-read-only-label-padding 0;
     @include rtl-selector {
       padding-right: 0;
       padding-left: auto;
