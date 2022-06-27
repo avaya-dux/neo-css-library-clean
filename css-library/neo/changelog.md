@@ -1,5 +1,16 @@
 # Changelog
 
+### 3.56.0
+
+#### Bugs Report - List of bugs that have been updated
+
+
+#### New Features - New features that have recently been added
+
+- Added new feature of wraping tooltip on expand/collapse button of [Condensed LeftNav Component](https://design.avaya.com/components/web/left-nav-web)
+- Added new feature of wraping tooltip for li element in [LeftNav](https://design.avaya.com/components/web/left-nav-web) when li is collapsed.
+- Added readonly version of [Select Component](https://design.avaya.com/components/web/checkbox-web) and [Radio Component](https://design.avaya.com/components/web/radio-web).
+
 ### 3.55.1
 
 #### Bugs Report - List of bugs that have been updated
