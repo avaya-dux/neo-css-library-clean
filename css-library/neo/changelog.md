@@ -11,8 +11,8 @@
 #### New Features - New features that have recently been added
 
 - Updated the on-focus selector for buttons to add a border to the button, thus improving the visibility and accessibility of the buttons
-- Added new feature of wraping tooltip on expand/collapse button of [Condensed LeftNav Component](https://design.avaya.com/components/web/left-nav-web)
-- Added new feature of wraping tooltip for li element in [LeftNav](https://design.avaya.com/components/web/left-nav-web) when li is collapsed.
+- Added new feature of wrapping tooltip on expand/collapse button of [Condensed LeftNav Component](https://design.avaya.com/components/web/left-nav-web)
+- Added new feature of wrapping tooltip for li element in [LeftNav](https://design.avaya.com/components/web/left-nav-web) when li is collapsed.
 - Added readonly version of [Select Component](https://design.avaya.com/components/web/checkbox-web) and [Radio Component](https://design.avaya.com/components/web/radio-web).
 
 ### 3.55.0
