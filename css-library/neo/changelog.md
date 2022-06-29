@@ -7,6 +7,7 @@
 - Fixed padding according to figma changes and removed widget-header min-height of [Widget component](https://design.avayacloud.com/components/web/widget-web).
 - Fixed [Table](https://design.avayacloud.com/components/web/tables-web) header issue where text was not right-aligned when `dir='rtl'`
 - Fixed [Combobox](https://design.avayacloud.com/components/web/select-web#ChipsinComboboxes) to expand vertically when many chips are present
+- Updated [Skip Nav](https://design.avayacloud.com/components/web/skipnav-web) position
 
 #### New Features - New features that have recently been added
 
@@ -14,6 +15,8 @@
 - Added new feature of wrapping tooltip on expand/collapse button of [Condensed LeftNav Component](https://design.avaya.com/components/web/left-nav-web)
 - Added new feature of wrapping tooltip for li element in [LeftNav](https://design.avaya.com/components/web/left-nav-web) when li is collapsed.
 - Added readonly version of [Select Component](https://design.avaya.com/components/web/checkbox-web) and [Radio Component](https://design.avaya.com/components/web/radio-web).
+- Added better view many selected [Chips in Multi Select](https://design.avayacloud.com/components/web/select-web#ChipsinComboboxes)
+- Added new character count for [Textarea](https://design.avayacloud.com/components/web/input-web#TextAreas)
 
 ### 3.55.0
 
