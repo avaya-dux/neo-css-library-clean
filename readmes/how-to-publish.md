@@ -65,5 +65,6 @@ Once the publishing is completed, we must then update the Design Portal with an 
 - copy over changelog updates from the css-library into the design portal file `neo-design-portal/src/docs/whats-new/css-changes.mdx`
 - - be sure to use the same styling as currently exists in this file
 - - NOTE: we _will_ be adding scripts to take care of most (hopefully all :crossed_fingers:)
+- update `package.json` (and `package-lock.json`) to use the latest version of the css-library (`@avaya/neo`)
 - open a PR into `develop`, merge, then open a PR into `main` and merge
 - - *IMPORTANT NOTE:* do _not_ skip this step, it is imperitive that we update the Design Portal with the latest changes _at the same time_ as we update the css-library

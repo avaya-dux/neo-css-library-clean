@@ -60,7 +60,7 @@ export const RadioWithReadOnly = () => {
             name="radioExample"
             value="Blue"
             id="radio2"
-            checked
+            defaultChecked
           />
 
           <label htmlFor="radio2">Radio 2</label>
@@ -88,7 +88,7 @@ export const RadioWithReadOnly = () => {
             name="radioExample"
             value="Red"
             id="radioReadOnly2"
-            checked
+            defaultChecked
             readOnly
           />
 
