@@ -11,14 +11,15 @@ from the root of the directory
 
 - update `neo-npm-package/package.json` version number
 - `npm login`: to ensure that you are properly logged in to the NPM network
-- - **TEMP**: see Joe or Mo about login creds
-- `npm run build:for-publish`: to build a production version of the library in the folder `neo-npm-publish`
+- `yarn workspace css-library build:for-publish`: to build a production version of the library in the folder `neo-npm-publish`
 - - **TEMP**: duplicate file and rename to `neo.min.css`
 - - **TEMP**: format `neo.css`
 - - **TEMP**: ensure all supporting files exist (`colors/*`, `fonts/*`, `icons/*`)
+- copy-paste the contents of `css-library/neo/changelog.md` to `neo-npm-package/CHANGELOG.md`
+- - *DO NOT* check-in this change to `CHANGELOG.md`
 - `cd neo-npm-package`: navigate to the root of the packaging sub-project
-- - **TODO**: add a "pack" method here (eventually)
-- `npm publish`: publishes the generated tarball to our registry
+- `npm pack`: packages the contents of `neo-npm-package` into a tarball
+- `npm publish`: creates and publishes a tarball to our registry
 
 ### post-publish steps
 
@@ -46,7 +47,7 @@ Once that is complete, the next step is to add the release to our GitHub
 ### add documentation to the Design Portal
 
 Once the publishing is completed, we must then update the Design Portal with an updated ZIP file
-- TODO: check to see if we can just use the already generated "pack" TGZ file (from `npm pack`)
+- TODO: improve these steps as they're... not great...
 - navigate to the root of the css-library project
 - create (verify existince of) `neo/neo_zip` folder exists
 - copy over the contents of the sub-project folder `neo-npm-package` into the `neo/neo_zip` folder
@@ -61,4 +62,8 @@ Once the publishing is completed, we must then update the Design Portal with an 
 - - add the datetime in the same format
 - - update the `latest` key
 - - update the `neoLatestVersion` variable
+- copy over changelog updates from the css-library into the design portal file `neo-design-portal/src/docs/whats-new/css-changes.mdx`
+- - be sure to use the same styling as currently exists in this file
+- - NOTE: we _will_ be adding scripts to take care of most (hopefully all :crossed_fingers:)
 - open a PR into `develop`, merge, then open a PR into `main` and merge
+- - *IMPORTANT NOTE:* do _not_ skip this step, it is imperitive that we update the Design Portal with the latest changes _at the same time_ as we update the css-library
