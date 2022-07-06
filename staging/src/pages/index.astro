@@ -1,123 +1,146 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Card from '../components/Card.astro';
+import Layout from "../layouts/Layout.astro";
+import Card from "../components/Card.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main>
-		<h1>Welcome to <span class="text-gradient">CSS Staging</span></h1>
+  <main>
+    <h1>Welcome to <span class="text-gradient">CSS Staging</span></h1>
 
-		<p class="instructions">
-			This project shows the latest changes available in the Neo CSS Library. It does <i>not</i> use the NPM version of
-			the CSS Library, but builds the CSS from the source files directly.
-		</p>
+    <p class="instructions">
+      This project shows the latest changes available in the Neo CSS Library. It
+      does <i>not</i> use the NPM version of the CSS Library, but builds the CSS
+      from the source files directly.
+    </p>
 
-		<section>
-			<h2>
-				Neo CSS Library Examples:
-			</h2>
+    <section>
+      <h2>Neo CSS Library Examples:</h2>
 
-			<ul role="list" class="link-card-grid">
-				<Card href="buttons" title="Buttons" body="Plethora of button examples" />
+      <ul role="list" class="link-card-grid">
+        <Card href="buttons" title="Buttons" body="Plethora of button examples"
+        />
 
-				<Card href="select" title="Select" body="Plethora of select examples" />
+        <Card href="select" title="Select" body="Plethora of select examples" />
 
-				<Card href="table" title="Table" body="Some table examples" />
+        <Card href="table" title="Table" body="Some table examples" />
 
-				<Card href="leftnav" title="Left Nav" body="Some leftnav examples" />
+        <Card href="leftnav" title="LefNav" body="Some leftnav examples" />
 
-				<Card href="form" title="Form" body="Form Component examples" />
+        <Card href="leftnav" title="Left Nav" body="Some leftnav examples" />
 
-				<Card href="textarea-input" title="Textarea Input" body="Textarea Input examples" />
-			</ul>
-		</section>
+        <Card href="form" title="Form" body="Form Component examples" />
 
-		<section>
-			<h2>
-				Astro Framework Examples:
-			</h2>
+        <Card href="text-input" title="Text Input" body="Text Input examples" />
 
-			<ul role="list" class="link-card-grid">
-				<Card href="examples" title="Examples" body="Some examples using different frameworks." />
-			</ul>
-		</section>
+        <Card
+          href="textarea-input"
+          title="Textarea Input"
+          body="Textarea Input examples"
+        />
+      </ul>
+    </section>
 
-		<section>
-			<h2>
-				Astro Documentation:
-			</h2>
+    <Card href="checkbox" title="Checkbox" body="Some Checkbox examples" />
 
-			<ul role="list" class="link-card-grid">
-				<Card href="https://docs.astro.build/" title="Docs"
-					body="Learn how Astro works and explore the official API docs." />
+    <Card href="switch" title="Switch" body="Some Switch examples" />
 
-				<Card href="https://astro.build/integrations/" title="Integrations"
-					body="Supercharge your project with new frameworks and libraries." />
+    <Card href="radio" title="Radio" body="Some Radio examples" />
 
-				<Card href="https://astro.build/chat/" title="Chat" body="Come say hi to our amazing Discord community. ❤️" />
-			</ul>
-		</section>
-	</main>
+    <section>
+      <h2>Astro Framework Examples:</h2>
+
+      <ul role="list" class="link-card-grid">
+        <Card
+          href="examples"
+          title="Examples"
+          body="Some examples using different frameworks."
+        />
+      </ul>
+    </section>
+
+    <section>
+      <h2>Astro Documentation:</h2>
+
+      <ul role="list" class="link-card-grid">
+        <Card
+          href="https://docs.astro.build/"
+          title="Docs"
+          body="Learn how Astro works and explore the official API docs."
+        />
+
+        <Card
+          href="https://astro.build/integrations/"
+          title="Integrations"
+          body="Supercharge your project with new frameworks and libraries."
+        />
+
+        <Card
+          href="https://astro.build/chat/"
+          title="Chat"
+          body="Come say hi to our amazing Discord community. ❤️"
+        />
+      </ul>
+    </section>
+  </main>
 </Layout>
 
 <style>
-	:root {
-		--astro-gradient: linear-gradient(0deg, #4F39FA, #DA62C4);
-	}
+  :root {
+    --astro-gradient: linear-gradient(0deg, #4f39fa, #da62c4);
+  }
 
-	h1 {
-		margin: 2rem 0;
-	}
+  h1 {
+    margin: 2rem 0;
+  }
 
-	main {
-		margin: auto;
-		padding: 1em;
-		max-width: 70ch;
-	}
+  main {
+    margin: auto;
+    padding: 1em;
+    max-width: 70ch;
+  }
 
-	.text-gradient {
-		font-weight: 900;
-		background-image: var(--astro-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 100% 200%;
-		background-position-y: 100%;
-		border-radius: 0.4rem;
-		animation: pulse 4s ease-in-out infinite;
-	}
+  .text-gradient {
+    font-weight: 900;
+    background-image: var(--astro-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 100% 200%;
+    background-position-y: 100%;
+    border-radius: 0.4rem;
+    animation: pulse 4s ease-in-out infinite;
+  }
 
-	@keyframes pulse {
+  @keyframes pulse {
+    0%,
+    100% {
+      background-position-y: 0%;
+    }
 
-		0%,
-		100% {
-			background-position-y: 0%;
-		}
+    50% {
+      background-position-y: 80%;
+    }
+  }
 
-		50% {
-			background-position-y: 80%;
-		}
-	}
+  .instructions {
+    line-height: 1.6;
+    margin: 1rem 0;
+    background: #4f39fa;
+    padding: 1rem;
+    border-radius: 0.4rem;
+    color: var(--color-bg);
+  }
 
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		background: #4F39FA;
-		padding: 1.0rem;
-		border-radius: 0.4rem;
-		color: var(--color-bg);
-	}
+  .instructions code {
+    font-size: 0.875em;
+    border: 0.1em solid var(--color-border);
+    border-radius: 4px;
+    padding: 0.15em 0.25em;
+  }
 
-	.instructions code {
-		font-size: 0.875em;
-		border: 0.1em solid var(--color-border);
-		border-radius: 4px;
-		padding: 0.15em 0.25em;
-	}
-
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
+  .link-card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+    gap: 1rem;
+    padding: 0;
+  }
 </style>

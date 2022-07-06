@@ -5,7 +5,7 @@
 
 @mixin neo-input-group-children {
   label:not(.neo-switch):not(.neo-label) {
-    line-height:  16px;
+    line-height: 16px;
     padding-bottom: 4px;
     pointer-events: none;
   }
@@ -196,24 +196,24 @@
     width: 100%;
     align-items: center;
     .neo-check + label {
-      margin-right: $global-spacer;
+      margin-right: 24px;
       padding: 0 !important;
       @include rtl-selector {
         margin-right: 0px;
-        margin-left: $global-spacer;
+        margin-left: 24px;
       }
       &:before {
         line-height: 1.5;
       }
     }
     .neo-radio + label {
-      margin-right: $global-spacer;
+      margin-right: 24px;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
       @include rtl-selector {
         margin-right: 0px;
-        margin-left: $global-spacer;
+        margin-left: 24px;
       }
     }
     .neo-switch {

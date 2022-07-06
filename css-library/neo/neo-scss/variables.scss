@@ -541,6 +541,10 @@ $input-hint-line-height: $token-input-helper-line-height !default;
 $input-hint-letter-spacing: $token-input-helper-letter-spacing !default;
 $input-hover-transition: border-color $global-transition-duration
   $global-transition-timing !default;
+$input-label-padding-bottom: 4px !default;
+$input-label-height: $input-hint-line-height + $input-label-padding-bottom;
+$input-helper-text-height: $input-hint-margin-top + $input-hint-line-height +
+  1px;
 
 //
 // Element name: Shimmer

@@ -37,18 +37,29 @@
 }
 
 .neo-form {
-  &-control--checkboxes {
+  & &-control--checkboxes {
     margin-bottom: 0px !important;
     display: flex;
   }
-  &-control {
-    margin-bottom: 12px;
+  & &-control {
+    margin-bottom: 16px;
+    display: flex;
+    flex-direction: column;
     & > label:not(.neo-switch) {
       font-size: $token-input-label-font-size;
       line-height: $token-input-label-line-height;
       letter-spacing: $token-input-label-letter-spacing;
       font-weight: $token-input-label-font-weight;
       color: $input-label-color;
+    }
+
+    & .neo-switch:only-child {
+      margin-top: $input-label-height;
+      margin-bottom: $input-helper-text-height;
+    }
+
+    & .neo-switch {
+      margin-bottom: 6px;
     }
 
     @include form--states;
@@ -246,9 +257,8 @@
     }
 
     .neo-form-control {
+      min-height: $input-label-height + 39px + $input-helper-text-height;
       margin-bottom: 0px;
-      & .neo-input-group {
-      }
     }
 
     .neo-form-control:not(:last-child) {

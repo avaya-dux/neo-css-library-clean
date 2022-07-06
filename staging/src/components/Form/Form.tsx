@@ -1,4 +1,5 @@
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
+import clsx from "clsx";
 
 export const NeoForm = () => {
   return (
@@ -104,11 +105,28 @@ export const InputStates = () => {
   );
 };
 
-export const FormAlignment = () => {
+export const FormAlignment = ({ orientation }) => {
+  const [error, setError] = useState(false);
+
   return (
     <Fragment>
-      <form className="neo-form neo-form--inline">
-        <div className="neo-form-control">
+      <button
+        style={{ marginBottom: "16px" }}
+        className="neo-btn neo-btn-primary neo-btn-primary--primary"
+        onClick={() => setError(!error)}
+      >
+        Toggle Error State
+      </button>
+      <form
+        className={clsx("neo-form", orientation && "neo-form--inline")}
+        style={{ marginBottom: "16px" }}
+      >
+        <div
+          className={clsx(
+            "neo-form-control",
+            error && "neo-form-control--error"
+          )}
+        >
           <div className="neo-input-group neo-input-group--inline">
             <label htmlFor="textInput" aria-label="phoneNumberInput">
               Input group label
@@ -122,9 +140,18 @@ export const FormAlignment = () => {
               />
             </div>
           </div>
-          <div className="neo-input-hint">Input group helper text</div>
+          {error && (
+            <div className="neo-input-hint" aria-live="assertive">
+              Error message.
+            </div>
+          )}
         </div>
-        <div className="neo-form-control">
+        <div
+          className={clsx(
+            "neo-form-control",
+            error && "neo-form-control--error"
+          )}
+        >
           <div className="neo-input-editable__wrapper">
             <input
               className="neo-input"
@@ -132,8 +159,18 @@ export const FormAlignment = () => {
               aria-label="inputNoLabel"
             />
           </div>
+          {error && (
+            <div className="neo-input-hint" aria-live="assertive">
+              Error message.
+            </div>
+          )}
         </div>
-        <div className="neo-form-control neo-form-control--error neo-form-control--required">
+        <div
+          className={clsx(
+            "neo-form-control",
+            error && "neo-form-control--error"
+          )}
+        >
           <div className="neo-input-group">
             <label htmlFor="radioMixedExample" aria-label="Addon on the right">
               Radios
@@ -164,12 +201,19 @@ export const FormAlignment = () => {
               />
               <label htmlFor="radioMixedExample3">Radio 3</label>
             </div>
-            <div className="neo-input-hint" aria-live="assertive">
-              Please select at least one.
-            </div>
+            {error && (
+              <div className="neo-input-hint" aria-live="assertive">
+                Error message.
+              </div>
+            )}
           </div>
         </div>
-        <div className="neo-form-control">
+        <div
+          className={clsx(
+            "neo-form-control",
+            error && "neo-form-control--error"
+          )}
+        >
           <div className="neo-input-group">
             <label htmlFor="checkGroupExample" aria-label="Addon on the right">
               Checks
@@ -199,6 +243,11 @@ export const FormAlignment = () => {
               />
               <label htmlFor="checkgroup3">Check 3 (disabled)</label>
             </div>
+            {error && (
+              <div className="neo-input-hint" aria-live="assertive">
+                Error message.
+              </div>
+            )}
           </div>
         </div>
       </form>

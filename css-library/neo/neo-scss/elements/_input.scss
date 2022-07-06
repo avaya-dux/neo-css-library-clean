@@ -143,6 +143,28 @@
   @include input--states;
 }
 
+.neo-form--inline .neo-form-control .neo-input-editable__wrapper {
+  &:only-child {
+    margin-top: $input-label-height;
+    margin-bottom: $input-helper-text-height;
+    &:focus-within {
+      margin-top: $input-label-height - 1px;
+      margin-bottom: $input-helper-text-height - 1px;
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+  }
+  &:first-child {
+    margin-top: $input-label-height;
+    &:focus-within {
+      margin-top: $input-label-height - 1px;
+      // margin-bottom: $input-helper-text-height - 1px;
+      margin-left: -1px;
+      margin-right: -1px;
+    }
+  }
+}
+
 .neo-input-editable__wrapper {
   border-radius: $input-border-radius;
   display: flex;
@@ -154,7 +176,7 @@
     border-color: $input-focus-border-color;
     // hard-coded for now
     border-width: 2px;
-    margin: -1px -1px;
+    margin: -1px;
   }
   .neo-form-control:not(.neo-form-control--disabled)
     &:hover:not(:focus-within) {
