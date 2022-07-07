@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.55.2
+
+#### Bugs Report - List of bugs that have been updated
+
+- Updated [Skip Nav](https://design.avayacloud.com/components/web/skipnav-web) to work with `dir="rtl"`
+
 ### 3.55.1
 
 #### Bugs Report - List of bugs that have been updated
