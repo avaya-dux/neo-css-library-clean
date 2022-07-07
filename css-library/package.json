@@ -9,7 +9,7 @@
     "build:for-publish": "npm run build:package && npm run build:package-old",
     "build:package": "parcel build neo/neo-scss/neo.scss --dist-dir ../neo-npm-package",
     "build:package-old": "parcel build neo/neo-scss/neo.scss --dist-dir ../neo-npm-package/neo/dist/css/neo",
-    "watch": "parcel watch neo/neo-scss/neo.scss"
+    "watch": "parcel watch neo/neo-scss/*.scss"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
