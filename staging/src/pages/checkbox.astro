@@ -1,13 +1,8 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
-import Card from "../components/Card.astro";
 import { Checkbox } from "../components";
 ---
 
 <NeoLayout title="Checkbox">
-  <ul role="list" class="link-card-grid">
-    <Card href="/" title="Home" body="Return home" />
-  </ul>
-
   <Checkbox client:load />
 </NeoLayout>

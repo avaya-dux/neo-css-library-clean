@@ -1,26 +1,45 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
-import Card from "../components/Card.astro";
-import { Switch } from "../components";
 ---
 
 <NeoLayout title="Switch">
-  <ul role="list" class="link-card-grid">
-    <Card href="/" title="Home" body="Return home" />
-  </ul>
-
   <form class="neo-form">
     <div class="neo-form-control">
       <label class="neo-switch" for="uncheckedCheckbox">
         <input id="uncheckedCheckbox" type="checkbox" />
-        <i class="neo-switch__icon"></i>
+
+        <i class="neo-switch__icon" />
+
         I'm initially unchecked
       </label>
+
       <label class="neo-switch" for="checkedCheckbox">
         <input id="checkedCheckbox" type="checkbox" checked />
-        <i class="neo-switch__icon"></i>
+
+        <i class="neo-switch__icon" />
+
         I'm initially checked
       </label>
     </div>
   </form>
+
+  <div class="neo-form-control">
+    <label class="neo-switch neo-switch--disabled" for="uncheckedDisabledCheckbox">
+      <input id="uncheckedDisabledCheckbox" type="checkbox" disabled />
+
+      <i class="neo-switch__icon" />
+
+      I'm initially unchecked
+    </label>
+  </div>
+
+  <div class="neo-form-control">
+    <label class="neo-switch neo-switch--disabled" for="checkedDisabledCheckbox">
+      <input id="checkedDisabledCheckbox" type="checkbox" checked disabled />
+
+      <i class="neo-switch__icon" />
+
+      I'm initially checked
+    </label>
+  </div>
 </NeoLayout>

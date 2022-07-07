@@ -1,6 +1,5 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
-import Card from "../components/Card.astro";
 import {
   FormAlignment,
   BasicInput,
@@ -16,40 +15,36 @@ import {
 <NeoLayout title="form">
   <h1>Form Input Examples</h1>
 
-  <NeoLayout title="form">
-    <ul role="list" class="link-card-grid">
-      <Card href="/" title="Home" body="Return home" />
-    </ul>
+  <h3>Checkbox With Read Only</h3>
+  <CheckboxWithReadOnly />
 
-    <h3>Checkbox With Read Only</h3>
-    <CheckboxWithReadOnly />
+  <h3>Radio Input Groups With Read Only</h3>
+  <RadioWithReadOnly />
 
-    <h3>Radio Input Groups With Read Only</h3>
-    <RadioWithReadOnly />
+  <h3>Basic Text Input</h3>
+  <BasicInput />
 
-    <h3>Basic Text Input</h3>
-    <BasicInput />
+  <h3>Read Only Text Input</h3>
+  <ReadOnlyInput />
 
-    <h3>Read Only Text Input</h3>
-    <ReadOnlyInput />
+  <h3 class="example__header">Horizontal Form Alignment</h3>
+  <div class="example__wrapper">
+    <FormAlignment orientation="horizontal" client:load />
+  </div>
 
-    <h3 class="example__header">Horizontal Form Alignment</h3>
-    <div class="example__wrapper">
-      <FormAlignment orientation client:load />
-    </div>
+  <h3 class="section-header">Vertical Form Alignment</h3>
+  <div class="example__wrapper">
+    <FormAlignment client:load />
+  </div>
 
-    <h3 class="section-header">Vertical Form Alignment</h3>
-    <div class="example__wrapper"><FormAlignment client:load /></div>
+  <h3>Text Input w/ Addons</h3>
+  <InputAddons />
 
-    <h3>Text Input w/ Addons</h3>
-    <InputAddons />
+  <h3>Text Input w/ Icons</h3>
+  <InputWithIcons />
 
-    <h3>Text Input w/ Icons</h3>
-    <InputWithIcons />
-
-    <h3>Text Input w/ Combinations of addons+icons</h3>
-    <InputCombinations />
-  </NeoLayout>
+  <h3>Text Input w/ Combinations of addons+icons</h3>
+  <InputCombinations />
 </NeoLayout>
 
 <style>

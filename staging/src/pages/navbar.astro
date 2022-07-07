@@ -1,88 +1,162 @@
 ---
-import NeoLayout from '../layouts/NeoLayout.astro';
-import Card from '../components/Card.astro';
+import NeoLayout from "../layouts/NeoLayout.astro";
 ---
 
 <NeoLayout title="Nav Bar">
-  <ul role="list" class="link-card-grid">
-    <Card href="/" title="Home" body="Return home" />
-  </ul>
+  <h2>Nav Bar</h2>
 
-  <section>
-    <h2>Nav Bar</h2>
+  <nav class="neo-navbar">
+    <div class="neo-nav--left">
+      <a class="neo-skipnav" href="#content">Skip to main content</a>
 
-    <nav class="neo-navbar">
-      <div class="neo-nav--left">
-        <a class="neo-navbar__brand" title="Neo Framework">
-          <img src="https://via.placeholder.com/76x57?text=LOGO" />
-        </a>
+      <a class="neo-navbar__brand" title="Neo Framework">
+        <img src="https://via.placeholder.com/76x57?text=LOGO" />
+      </a>
 
-        <div class="neo-nav--left--heading" role="heading">
-          Product Name
-        </div>
+      <div class="neo-nav--left--heading" role="heading">Product Name</div>
 
-        <div class="neo-search-input neo-input-group neo-input-icon__wrapper neo-input-editable__wrapper">
-          <span class="neo-icon-search" />
+      <div
+        class="neo-search-input neo-input-group neo-input-icon__wrapper neo-input-editable__wrapper"
+      >
+        <span class="neo-icon-search" />
 
-          <input class="neo-input" placeholder="Smart search" />
+        <input class="neo-input" placeholder="Smart search" />
 
-          <button aria-label="clear search" class="neo-input-editable__close neo-icon-end" tabindex={-1} />
-        </div>
+        <button
+          aria-label="clear search"
+          class="neo-input-editable__close neo-icon-end"
+          tabindex={-1}
+        />
+      </div>
+    </div>
+
+    <div class="neo-nav">
+      <div class="neo-badge__navbutton neo-badge__navbutton--active">
+        <button class="neo-badge__navbutton--content neo-btn neo-icon-dashboard" />
       </div>
 
-      <div class="neo-nav">
-        <div class="neo-badge__navbutton neo-badge__navbutton--active">
-          <button class="neo-badge__navbutton--content neo-btn neo-icon-dashboard" />
-        </div>
+      <div class="neo-badge__navbutton neo-badge__navbutton--disabled">
+        <button
+          class="neo-badge__navbutton--content neo-btn neo-icon-star"
+          disabled
+        />
+      </div>
 
-        <div class="neo-badge__navbutton neo-badge__navbutton--disabled">
-          <button class="neo-badge__navbutton--content neo-btn neo-icon-star" disabled />
-        </div>
+      <div class="neo-badge__navbutton">
+        <button
+          class="neo-badge__navbutton--content neo-btn neo-icon-notifications-on"
+        />
 
-        <div class="neo-badge__navbutton">
-          <button class="neo-badge__navbutton--content neo-btn neo-icon-notifications-on" />
+        <span class="neo-badge__icon" data-badge="2"></span>
+      </div>
 
-          <span class="neo-badge__icon" data-badge="2" />
-        </div>
+      <div class="neo-badge__navbutton neo-badge__navbutton--active-disabled">
+        <button
+          class="neo-badge__navbutton--content neo-btn neo-icon-settings"
+          disabled
+        />
+      </div>
 
-        <div class="neo-badge__navbutton neo-badge__navbutton--active-disabled">
-          <button class="neo-badge__navbutton--content neo-btn neo-icon-settings" disabled />
-        </div>
+      <div class="neo-dropdown neo-dropdown--onhover neo-dropdown--left">
+        <figure
+          class="neo-avatar neo-avatar--medium neo-dropdown__link-header"
+          data-initials="SM"
+        />
 
-        <div class="neo-dropdown neo-dropdown--onhover neo-dropdown--left">
-          <figure class="neo-avatar neo-avatar--medium neo-dropdown__link-header" data-initials="SM" />
-
-          <div class="neo-dropdown__content">
-            <div class="neo-dropdown__item">
-              <a class="neo-dropdown__link">
-                Something else. Extra long to test text overlap.
-              </a>
-            </div>
-
-            <a class="neo-dropdown__link neo-dropdown--disabled">
-              Disabled action
-            </a>
-
-            <a class="neo-dropdown__link">Separator link</a>
-
-            <hr class="neo-dropdown__separator" />
-
+        <div class="neo-dropdown__content">
+          <div class="neo-dropdown__item">
             <a class="neo-dropdown__link">
-              <figure class="neo-avatar neo-avatar--small" data-initials="SM">
-                <img class="neo-img" src="/images/avatar.svg" alt="Small avatar" />
-              </figure>
-
-              Another action
+              Something else. Extra long to test text overlap.
             </a>
           </div>
+
+          <a class="neo-dropdown__link neo-dropdown--disabled">
+            Disabled action
+          </a>
+
+          <a class="neo-dropdown__link">Separator link</a>
+
+          <hr class="neo-dropdown__separator" />
+
+          <a class="neo-dropdown__link">
+            <figure class="neo-avatar neo-avatar--small" data-initials="SM">
+              <img class="neo-img" src="/images/avatar.svg" alt="Small avatar" />
+            </figure>
+
+            Another action
+          </a>
         </div>
       </div>
-    </nav>
-  </section>
+    </div>
+  </nav>
+
+  <div id="content">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Felis eget nunc
+      lobortis mattis aliquam faucibus purus in. Nibh cras pulvinar mattis nunc
+      sed. Amet facilisis magna etiam tempor orci eu. Eget mauris pharetra et
+      ultrices neque ornare aenean. Turpis massa tincidunt dui ut ornare lectus.
+      Suspendisse faucibus interdum posuere lorem. Et magnis dis parturient
+      montes nascetur. Sagittis eu volutpat odio facilisis mauris sit. Fusce id
+      velit ut tortor. Fusce id velit ut tortor pretium viverra suspendisse
+      potenti nullam. Semper viverra nam libero justo laoreet. Eu tincidunt
+      tortor aliquam nulla facilisi cras fermentum. Massa ultricies mi quis
+      hendrerit. A cras semper auctor neque vitae. Tincidunt lobortis feugiat
+      vivamus at. Tempus quam pellentesque nec nam. In ante metus dictum at
+      tempor commodo. Dignissim diam quis enim lobortis scelerisque fermentum.
+      Dolor sit amet consectetur adipiscing elit duis tristique sollicitudin.
+    </p>
+
+    <p>
+      Etiam sit amet nisl purus in mollis nunc sed id. Lobortis elementum nibh
+      tellus molestie nunc. Ac turpis egestas sed tempus urna et pharetra. Eu
+      augue ut lectus arcu. Pharetra pharetra massa massa ultricies mi. Purus
+      non enim praesent elementum facilisis. Ultricies mi eget mauris pharetra
+      et ultrices. Praesent tristique magna sit amet purus gravida quis blandit
+      turpis. Urna et pharetra pharetra massa massa ultricies. Sed tempus urna
+      et pharetra pharetra massa massa ultricies. Adipiscing vitae proin
+      sagittis nisl rhoncus mattis rhoncus urna. Consequat id porta nibh
+      venenatis.
+    </p>
+
+    <p>
+      Sit amet consectetur adipiscing elit pellentesque. Arcu dictum varius duis
+      at consectetur lorem. Volutpat lacus laoreet non curabitur gravida arcu ac
+      tortor. Ut pharetra sit amet aliquam id diam maecenas ultricies mi.
+      Pellentesque elit eget gravida cum sociis natoque penatibus et. Imperdiet
+      massa tincidunt nunc pulvinar sapien. Sed enim ut sem viverra aliquet eget
+      sit amet. Scelerisque purus semper eget duis at tellus at. Est ultricies
+      integer quis auctor. Enim diam vulputate ut pharetra sit amet aliquam. Ac
+      placerat vestibulum lectus mauris ultrices eros. Posuere urna nec
+      tincidunt praesent semper feugiat. Mi eget mauris pharetra et ultrices
+      neque ornare. Fermentum et sollicitudin ac orci phasellus. Eu feugiat
+      pretium nibh ipsum consequat nisl. Elementum eu facilisis sed odio morbi
+      quis. Eget lorem dolor sed viverra ipsum nunc aliquet bibendum. Bibendum
+      at varius vel pharetra. Adipiscing bibendum est ultricies integer quis.
+      Sem integer vitae justo eget.
+    </p>
+
+    <p>
+      Quam elementum pulvinar etiam non quam lacus suspendisse. Quis viverra
+      nibh cras pulvinar mattis nunc sed blandit. Nisl suscipit adipiscing
+      bibendum est ultricies integer quis auctor. Id eu nisl nunc mi ipsum
+      faucibus vitae aliquet. Pellentesque id nibh tortor id. Faucibus a
+      pellentesque sit amet porttitor. Diam vel quam elementum pulvinar etiam
+      non quam lacus suspendisse. Ut venenatis tellus in metus vulputate eu
+      scelerisque felis imperdiet. Eu turpis egestas pretium aenean pharetra
+      magna ac placerat vestibulum. Eget magna fermentum iaculis eu non diam
+      phasellus. Turpis tincidunt id aliquet risus feugiat in ante metus.
+    </p>
+  </div>
 </NeoLayout>
 
 <style>
   h2 {
     margin-bottom: 2rem;
+  }
+
+  p {
+    margin-top: 1rem;
   }
 </style>

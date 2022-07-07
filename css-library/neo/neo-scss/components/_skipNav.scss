@@ -1,3 +1,17 @@
+*[dir="rtl"] .neo-skipnav {
+  right: -10000px;
+  left: unset;
+
+  &:focus {
+    outline: $global-outline-color auto 2px;
+    width: auto;
+    height: auto;
+    top: 12px;
+    left: auto;
+    right: 37px;
+  }
+}
+
 .neo-skipnav {
   @include NeoLinkStyles;
   display: flex;
@@ -31,6 +45,7 @@
     height: auto;
     top: 12px;
     left: 37px;
+    right: auto;
   }
   &:active {
     outline: $global-outline-color auto 2px;

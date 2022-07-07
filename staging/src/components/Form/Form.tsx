@@ -105,7 +105,11 @@ export const InputStates = () => {
   );
 };
 
-export const FormAlignment = ({ orientation }) => {
+export const FormAlignment = ({
+  orientation = "vertical",
+}: {
+  orientation?: "horizontal" | "vertical";
+}) => {
   const [error, setError] = useState(false);
 
   return (
