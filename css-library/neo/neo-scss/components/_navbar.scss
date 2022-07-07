@@ -1,16 +1,9 @@
-@mixin navbar-form {
-  .neo-form {
+@mixin navbar-search {
+  .neo-search-input {
     margin-left: $navbar-padding-x;
-    align-self: center;
-
-    & .neo-form-control {
-      margin-bottom: 0px;
-    }
 
     @include rtl-selector {
-      margin: {
-        right: $navbar-padding-x;
-      }
+      margin-right: $navbar-padding-x;
     }
   }
 
@@ -62,7 +55,7 @@
   border-bottom: $navbar-border-width $navbar-border-style
     $navbar-border-bottom-color;
 
-  @include navbar-form;
+  @include navbar-search;
   @include navbar-tabs;
 
   & .neo-badge__navbutton--content::before {

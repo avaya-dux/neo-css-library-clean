@@ -1,0 +1,88 @@
+---
+import NeoLayout from '../layouts/NeoLayout.astro';
+import Card from '../components/Card.astro';
+---
+
+<NeoLayout title="Nav Bar">
+  <ul role="list" class="link-card-grid">
+    <Card href="/" title="Home" body="Return home" />
+  </ul>
+
+  <section>
+    <h2>Nav Bar</h2>
+
+    <nav class="neo-navbar">
+      <div class="neo-nav--left">
+        <a class="neo-navbar__brand" title="Neo Framework">
+          <img src="https://via.placeholder.com/76x57?text=LOGO" />
+        </a>
+
+        <div class="neo-nav--left--heading" role="heading">
+          Product Name
+        </div>
+
+        <div class="neo-search-input neo-input-group neo-input-icon__wrapper neo-input-editable__wrapper">
+          <span class="neo-icon-search" />
+
+          <input class="neo-input" placeholder="Smart search" />
+
+          <button aria-label="clear search" class="neo-input-editable__close neo-icon-end" tabindex={-1} />
+        </div>
+      </div>
+
+      <div class="neo-nav">
+        <div class="neo-badge__navbutton neo-badge__navbutton--active">
+          <button class="neo-badge__navbutton--content neo-btn neo-icon-dashboard" />
+        </div>
+
+        <div class="neo-badge__navbutton neo-badge__navbutton--disabled">
+          <button class="neo-badge__navbutton--content neo-btn neo-icon-star" disabled />
+        </div>
+
+        <div class="neo-badge__navbutton">
+          <button class="neo-badge__navbutton--content neo-btn neo-icon-notifications-on" />
+
+          <span class="neo-badge__icon" data-badge="2" />
+        </div>
+
+        <div class="neo-badge__navbutton neo-badge__navbutton--active-disabled">
+          <button class="neo-badge__navbutton--content neo-btn neo-icon-settings" disabled />
+        </div>
+
+        <div class="neo-dropdown neo-dropdown--onhover neo-dropdown--left">
+          <figure class="neo-avatar neo-avatar--medium neo-dropdown__link-header" data-initials="SM" />
+
+          <div class="neo-dropdown__content">
+            <div class="neo-dropdown__item">
+              <a class="neo-dropdown__link">
+                Something else. Extra long to test text overlap.
+              </a>
+            </div>
+
+            <a class="neo-dropdown__link neo-dropdown--disabled">
+              Disabled action
+            </a>
+
+            <a class="neo-dropdown__link">Separator link</a>
+
+            <hr class="neo-dropdown__separator" />
+
+            <a class="neo-dropdown__link">
+              <figure class="neo-avatar neo-avatar--small" data-initials="SM">
+                <img class="neo-img" src="/images/avatar.svg" alt="Small avatar" />
+              </figure>
+
+              Another action
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+</NeoLayout>
+
+<style>
+  h2 {
+    margin-bottom: 2rem;
+  }
+</style>

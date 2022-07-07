@@ -17,44 +17,35 @@ import Card from "../components/Card.astro";
       <h2>Neo CSS Library Examples:</h2>
 
       <ul role="list" class="link-card-grid">
-        <Card href="buttons" title="Buttons" body="Plethora of button examples"
-        />
+        <Card href="buttons" title="Buttons" body="Plethora of button examples" />
 
         <Card href="select" title="Select" body="Plethora of select examples" />
 
         <Card href="table" title="Table" body="Some table examples" />
 
-        <Card href="leftnav" title="LefNav" body="Some leftnav examples" />
-
         <Card href="leftnav" title="Left Nav" body="Some leftnav examples" />
 
         <Card href="form" title="Form" body="Form Component examples" />
 
+        <Card href="navbar" title="Nav Bar" body="Minimal Nav Bar examples" />
+
         <Card href="text-input" title="Text Input" body="Text Input examples" />
 
-        <Card
-          href="textarea-input"
-          title="Textarea Input"
-          body="Textarea Input examples"
-        />
+        <Card href="textarea-input" title="Textarea Input" body="Textarea Input examples" />
+
+        <Card href="checkbox" title="Checkbox" body="Some Checkbox examples" />
+
+        <Card href="switch" title="Switch" body="Some Switch examples" />
+
+        <Card href="radio" title="Radio" body="Some Radio examples" />
       </ul>
     </section>
-
-    <Card href="checkbox" title="Checkbox" body="Some Checkbox examples" />
-
-    <Card href="switch" title="Switch" body="Some Switch examples" />
-
-    <Card href="radio" title="Radio" body="Some Radio examples" />
 
     <section>
       <h2>Astro Framework Examples:</h2>
 
       <ul role="list" class="link-card-grid">
-        <Card
-          href="examples"
-          title="Examples"
-          body="Some examples using different frameworks."
-        />
+        <Card href="examples" title="Examples" body="Some examples using different frameworks." />
       </ul>
     </section>
 
@@ -62,23 +53,13 @@ import Card from "../components/Card.astro";
       <h2>Astro Documentation:</h2>
 
       <ul role="list" class="link-card-grid">
-        <Card
-          href="https://docs.astro.build/"
-          title="Docs"
-          body="Learn how Astro works and explore the official API docs."
-        />
+        <Card href="https://docs.astro.build/" title="Docs"
+          body="Learn how Astro works and explore the official API docs." />
 
-        <Card
-          href="https://astro.build/integrations/"
-          title="Integrations"
-          body="Supercharge your project with new frameworks and libraries."
-        />
+        <Card href="https://astro.build/integrations/" title="Integrations"
+          body="Supercharge your project with new frameworks and libraries." />
 
-        <Card
-          href="https://astro.build/chat/"
-          title="Chat"
-          body="Come say hi to our amazing Discord community. ❤️"
-        />
+        <Card href="https://astro.build/chat/" title="Chat" body="Come say hi to our amazing Discord community. ❤️" />
       </ul>
     </section>
   </main>
@@ -111,6 +92,7 @@ import Card from "../components/Card.astro";
   }
 
   @keyframes pulse {
+
     0%,
     100% {
       background-position-y: 0%;
