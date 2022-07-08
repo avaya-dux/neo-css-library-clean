@@ -1,0 +1,24 @@
+---
+import NeoLayout from '../layouts/NeoLayout.astro';
+import { StackedInteractiveAccordion } from '../components';
+---
+
+<NeoLayout title="Select">
+  <h2>Interactive Example of Stacked Accordion (Opens one at a time) For Design Portal</h2>
+  <div class="custom-accordion">
+    <StackedInteractiveAccordion client:load />
+  </div>
+</NeoLayout>
+
+<style>
+  .custom-accordion {
+    width: 500px;
+    border: 1px solid #ccc;
+    padding: 1em;
+    height: 300px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+</style>

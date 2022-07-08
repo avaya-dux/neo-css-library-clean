@@ -63,11 +63,28 @@
   $parent-selector: &;
 
   &__header-text:hover:not(.neo-accordion__header-text--disabled) {
-    background-color:var(--neo-color-base-100);
+    background-color: var(--neo-color-base-100);
     cursor: pointer;
     transition: $group-list-transition;
   }
-
+  &__stacked {
+    .neo-accordion__item {
+      margin-bottom: 0;
+      border: none;
+      border-bottom: 1px solid $accordion-border-color;
+      border-radius: 0;
+    }
+    .neo-accordion__item:hover {
+      background-color: var(--neo-color-base-100);
+      transition: background-color 0.4s;
+      .neo-accordion__header {
+        .neo-accordion__header-text {
+          background-color: var(--neo-color-base-100);
+          transition: background-color 0.4s;
+        }
+      }
+    }
+  }
   &__item {
     @extend %list-radius;
     margin-bottom: 24px;
@@ -82,7 +99,6 @@
   }
 
   &__body {
-    background-color: $accordion-body-background;
     list-style-type: none;
     height: 0px;
   }
