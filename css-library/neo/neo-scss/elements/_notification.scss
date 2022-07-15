@@ -135,6 +135,10 @@
     @include rtl-selector {
       left: $notification-padding-x;
       right: initial;
+
+      & > button:first-child {
+        margin-left: $notification-option-spacing;
+      }
     }
     display: flex;
     & > button:first-child {

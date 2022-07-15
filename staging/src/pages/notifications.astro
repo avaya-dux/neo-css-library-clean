@@ -1,0 +1,107 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Notification">
+  <h2>Notifications</h2>
+
+  <h3>Normal Example w/ "elevation" class (box-shadow)</h3>
+  <section>
+    <div
+      role="alert"
+      class="neo-notification neo-notification--info neo-notification__elevated"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon" />
+
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">
+          Informational Toast/Notification
+        </div>
+
+        <div class="neo-notification__description">
+          This component should be used to give the user "live" feedback. Eg,
+          "Form is being submitted"
+        </div>
+      </div>
+
+      <div class="neo-notification__options">
+        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info">
+          Secondary
+        </button>
+
+        <button class="neo-btn neo-btn-primary neo-btn-primary--info">
+          Primary
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <h3>Forced <code>dir="ltr"</code></h3>
+  <section dir="ltr">
+    <div
+      role="alert"
+      class="neo-notification neo-notification--info neo-notification__elevated"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon" />
+
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">
+          LTR notification
+        </div>
+
+        <div class="neo-notification__description">
+          Lorem ipsum dolor sit amet
+        </div>
+      </div>
+
+      <div class="neo-notification__options">
+        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info">
+          Secondary
+        </button>
+
+        <button class="neo-btn neo-btn-primary neo-btn-primary--info">
+          Primary
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <h3>Forced <code>dir="rtl"</code></h3>
+  <section dir="rtl">
+    <div
+      role="alert"
+      class="neo-notification neo-notification--info neo-notification__elevated"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon" />
+
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">
+          LTR notification
+        </div>
+
+        <div class="neo-notification__description">
+          Lorem ipsum dolor sit amet
+        </div>
+      </div>
+
+      <div class="neo-notification__options">
+        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info">
+          Secondary
+        </button>
+
+        <button class="neo-btn neo-btn-primary neo-btn-primary--info">
+          Primary
+        </button>
+      </div>
+    </div>
+  </section>
+</NeoLayout>
+
+<style>
+  h2 {
+    margin-bottom: 1rem;
+  }
+</style>
