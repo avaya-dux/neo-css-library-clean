@@ -1,10 +1,16 @@
 # Changelog
 
-### 3.55.2
+### 3.56.0
+
+#### New Features - New features that have recently been added
+
+- Added new classes for stacked [Accordion](https://design.avaya.com/components/web/accordion-web) Component
 
 #### Bugs Report - List of bugs that have been updated
 
 - Updated [Skip Nav](https://design.avayacloud.com/components/web/skipnav-web) to work with `dir="rtl"`
+- Fixed issue with layout shift when toggling error messages in [Form Layout](https://design.avaya.com/components/web/form-layout-web)
+- Fixed CSS issue with [Navbar](https://design.avaya.com/components/web/navbar-web) search input
 
 ### 3.55.1
 
