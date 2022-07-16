@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.56.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Updated [notifications](https://design.avayacloud.com/components/web/notifications-web) to work with `dir="rtl"`
+
 ### 3.56.0
 
 #### New Features - New features that have recently been added
