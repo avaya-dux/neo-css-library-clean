@@ -4,6 +4,7 @@
 
 #### Bugs Report - List of bugs that have been updated
 
+- Updated [pulse](https://design.avayacloud.com/components/web/buttons-web#PulsingButtons) width to 15px from 10px
 - Updated [notifications](https://design.avayacloud.com/components/web/notifications-web) to work with `dir="rtl"`
 
 ### 3.56.0
