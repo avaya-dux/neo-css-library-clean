@@ -1,37 +1,3 @@
-// <nav aria-label="Breadcrumb" class="neo-breadcrumbs">
-//   <ol>
-//     <li>
-//       <a href="../../">
-//         WAI-ARIA Authoring Practices 1.1
-//       </a>
-//     </li>
-//     <li>
-//       <a href="../../#aria_ex">
-//         Design Patterns
-//       </a>
-//     </li>
-//     <li>
-//       <a href="../../#breadcrumb">
-//         Breadcrumb Pattern
-//       </a>
-//     </li>
-//     <li>
-//       <a href="./index.html" aria-current="page">
-//         Breadcrumb Example
-//       </a>
-//     </li>
-//   </ol>
-// </nav>
-
-//   nav.breadcrumb li + li::before {
-//     display: inline-block;
-//     margin: 0 0.25em;
-//     transform: rotate(15deg);
-//     border-right: 0.1em solid currentColor;
-//     height: 0.8em;
-//     content: '';
-//   }
-
 .neo-breadcrumbs {
   @include NeoLinkStyles;
   display: flex;
@@ -59,16 +25,12 @@
         display: inline-block;
         margin: 0px $breadcrumb-slash-spacing;
         content: "/";
-        // @include rtl-selector {
-        //   content: "\\";
-        // }
         font-size: $breadcrumbs-link-font-size;
         font-weight: $breadcrumbs-link-font-weight;
         letter-spacing: $breadcrumbs-link-letter-spacing;
         line-height: $breadcrumbs-link-line-height;
       }
       & a {
-        // color: $breadcrumbs-default-color;
         font-size: $breadcrumbs-link-font-size;
         font-weight: $breadcrumbs-link-font-weight;
         letter-spacing: $breadcrumbs-link-letter-spacing;
@@ -79,13 +41,13 @@
         }
       }
       &--current a {
-        // color: $breadcrumbs-active-color;
         color: $breadcrumbs-default-color;
         font-size: $breadcrumbs-link-font-size;
         font-weight: $breadcrumbs-link-font-weight;
         letter-spacing: $breadcrumbs-link-letter-spacing;
         line-height: $breadcrumbs-link-line-height;
         text-decoration: none;
+        pointer-events: none;
         &:hover {
           color: $breadcrumbs-default-color;
         }

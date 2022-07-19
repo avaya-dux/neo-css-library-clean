@@ -1,0 +1,35 @@
+---
+import NeoLayout from '../layouts/NeoLayout.astro';
+---
+
+<NeoLayout title="Buttons">
+  <nav aria-label="Breadcrumb" class="neo-breadcrumbs">
+    <ol>
+      <li class="neo-breadcrumbs__link">
+        <a href="/buttons">Buttons</a>
+      </li>
+      <li class="neo-breadcrumbs__link">
+        <a href="/select">Select</a>
+      </li>
+      <li class="neo-breadcrumbs__link">
+        <a href="/table">Table</a>
+      </li>
+      <li class="neo-breadcrumbs__link neo-breadcrumbs__link--current">
+        <a href="/breadcrumbs" aria-current="page">
+          Breadcrumbs
+        </a>
+      </li>
+    </ol>
+    <div class="neo-breadcrumbs__actions">
+      <button class="neo-btn neo-btn-secondary neo-btn-secondary--default">
+        Cancel
+      </button>
+      <button class="neo-btn neo-btn-primary neo-btn-primary--default">
+        Save
+      </button>
+    </div>
+  </nav>
+  <p class="neo-breadcrumbs__description">
+    Breadcrumb Example page description
+  </p>
+</NeoLayout>
