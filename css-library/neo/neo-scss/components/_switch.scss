@@ -1,14 +1,36 @@
 // pending fix for text alignment issue
 
 .neo-switch--multiline {
-  height: auto;
-  padding-left: 38px !important;
-  text-indent: -13px !important;
+  height: auto !important;
+  padding-left: 40px !important;
+  left: -13px !important;
+
+  @include rtl-selector {
+    right: 0 !important;
+    padding-right: 25px !important;
+    padding-left: 0px !important;
+  }
+
   .neo-switch__icon {
     left: 13px !important;
     &::after {
-      left: -12px !important;
+      left: 1px !important;
     }
+  }
+
+  &.neo-switch input {
+    position: absolute;
+  }
+}
+.neo-switch-children {
+  height: auto !important;
+  white-space: pre-line;
+  float:left;
+  margin-left: 16px;
+  @include rtl-selector {
+   float:right !important;
+   margin-left: 0 !important;
+   margin-right: 18px !important;
   }
 }
 
@@ -140,7 +162,6 @@
   // padding-left: $switch-width + $input-padding-x;
   padding-left: 27px;
   position: relative;
-
   color: $input-label-color;
 
   @include rtl-selector {
@@ -164,4 +185,10 @@
   @include switch-icon;
   @include neo-switch--checked;
   @include neo-switch--disabled;
+}
+
+.neo-switch.neo-switch--multiline input+.neo-switch__icon:after {
+  @include rtl-selector {
+    right: 1px !important;
+  }
 }

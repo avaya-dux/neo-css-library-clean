@@ -2,6 +2,10 @@
 
 ### 3.56.1
 
+#### Breaking Changes - the following Components are broken and need immediate attention
+
+- Updated [ multiline switch ](https://design.avayacloud.com/components/web/switch-web) to work with `dir="rtl"`
+
 #### Bugs Report - List of bugs that have been updated
 
 - Updated [pulse](https://design.avayacloud.com/components/web/buttons-web#PulsingButtons) width to 15px from 10px
