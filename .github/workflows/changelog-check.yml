@@ -1,0 +1,23 @@
+name: Changelog check
+on: [pull_request]
+jobs:
+  build:
+    name: Changelog check
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Check for changes to SCSS files
+        id: verify-changed-files
+        uses: tj-actions/changed-files@v23.2
+        with:
+          files: |
+            css-library/neo/neo-scss/**/*.scss
+            css-library/neo/neo-scss/*.scss
+            css-library/neo/changelog.md
+      - name: exit with error if SCSS files changed without changelog update
+        if: steps.verify-changed-files.outputs.any_changed == 'true' && !contains(steps.verify-changed-files.outputs.modified_files, 'changelog.md')
+        run: |
+          echo "Please make sure you have updated `css-library/neo/changelog.md` if you have made changes to the Neo SCSS files"
+          exit 1
