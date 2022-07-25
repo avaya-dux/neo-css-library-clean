@@ -28,12 +28,8 @@ async function pullAllDesignTokens() {
   await spacerTokens.pullSpacerTokens();
 }
 
-pullAllDesignTokens()
-  .then(() =>
-    iconFunctions.pullIcons(
-      coreFigmaFunctions.figmaCredentials.figmaAPIKey,
-      coreFigmaFunctions.figmaCredentials.iconsFileID,
-      ["layout-immersive"]
-    )
-  )
-  .catch((error) => console.log(error));
+iconFunctions.pullIcons(
+  coreFigmaFunctions.figmaCredentials.figmaAPIKey,
+  coreFigmaFunctions.figmaCredentials.iconsFileID,
+  ["analytics-filled"]
+);

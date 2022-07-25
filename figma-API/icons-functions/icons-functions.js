@@ -6,6 +6,8 @@ const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functio
 
 const replace = require("./icon-utility-files/icon-replacement-string");
 
+const path = require("path");
+
 async function getIconComponentsFromFigma(figmaId, figmaApiKey) {
   try {
     const result = await fetch(
@@ -83,25 +85,13 @@ async function makeIconFunctionArrays(figmaApiKey, figmaId) {
         return;
       }
 
-      const bidirectional = component.description.includes("RTL");
-
-      const iconName = compName.replace(/\/|\s+/g, "");
+      const iconName = compName
+        .replace(replace.stringsToReplace, "")
+        .replace("/", "");
 
       figmaIconNodeIds.push({
         [iconName]: component.node_id,
       });
-
-      await iconUtilityFunctions.getIconInformationForDesignPortal(
-        compName,
-        bidirectional
-      );
-
-      if (iconsOnAll.indexOf(component) === iconsOnAll.length - 1) {
-        await fs.appendFile(
-          "./icons-functions/icon-utility-files/iconInfoNextGen.js",
-          "]"
-        );
-      }
     });
 
     return figmaIconNodeIds;
@@ -115,9 +105,12 @@ async function generateIconFiles(iconIds, URLs, fileType) {
     iconIds.map(async (tag) => {
       const iconURL = URLs.images[tag[Object.keys(tag)]];
 
-      const iconFileName = `../style-dictionary/properties/assets/icons/${fileType}s/${Object.keys(
-        tag
-      )[0].replace(replace.stringsToReplace, "")}.${fileType}`;
+      const iconFileName = path.join(
+        __dirname,
+        `../../css-library/style-dictionary/properties/assets/icons/${fileType}s/${Object.keys(
+          tag
+        )[0].replace(replace.stringsToReplace, "")}.${fileType}`
+      );
 
       await writeIconContentFromURL(iconURL, iconFileName);
       console.info(`${iconFileName} created`);
@@ -162,7 +155,8 @@ async function pullAllIcons(figmaApiKey, figmaId) {
 }
 
 async function pullIcons(figmaApiKey, figmaId, iconNames) {
-  const styleDicDir = "../css-library/style-dictionary/properties/assets/icons";
+  const styleDicDir =
+    "../../css-library/style-dictionary/properties/assets/icons";
 
   const formattedIconNames = iconNames.map((iconName) =>
     iconName.replace("/", "")

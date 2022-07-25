@@ -540,10 +540,14 @@ const unicodes = {
   "incognito-off": 0xf3e8,
   "layout-immersive": 0xf3e9,
   user: 0xf3f1,
+  "analytics-filled": 0xf3f2,
 };
 
 const generateIcons = async () => {
-  const styleDictionaryDir = path.resolve(__dirname, "../../css-library/style-dictionary");
+  const styleDictionaryDir = path.resolve(
+    __dirname,
+    "../../css-library/style-dictionary"
+  );
 
   let iconsSVGDir = [];
 
@@ -626,7 +630,9 @@ const generateIcons = async () => {
 
         await fs.unlink(`${buildDir}/updated-neo-icons.woff`);
 
-        console.log("updated-neo-icons.css successfully generated");
+        fs.unlink(`${buildDir}/updated-neo-icons.css`);
+
+        console.log("icons successfully generated");
       } catch (error) {
         console.log(`webFontsGenerator callback failed with error: ${error}`);
       }

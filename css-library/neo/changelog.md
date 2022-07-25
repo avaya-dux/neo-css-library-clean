@@ -1,6 +1,10 @@
 # Changelog
 
-### 3.56.1
+### 3.57.0
+
+#### New Features - New features that have recently been added
+
+- Added new analytics-filled [Icon](https://design.avaya.com/components/icons/)
 
 #### Breaking Changes - the following Components are broken and need immediate attention
 
