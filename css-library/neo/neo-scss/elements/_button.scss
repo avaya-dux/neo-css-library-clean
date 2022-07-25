@@ -16,7 +16,7 @@
   font-size: $button-font-size;
   color: $button-text-color;
 
-  &:hover {
+  &:hover:not(:disabled) {
     transition: $button-transition;
     transition-property: background-color, color, box-shadow;
 

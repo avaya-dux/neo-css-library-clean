@@ -61,6 +61,10 @@
   & .neo-badge__navbutton--content::before {
     font-size: $navbar-icon-size !important;
   }
+
+  & button.neo-btn:hover:not(:disabled) {
+    outline-offset: -2px;
+  }
 }
 
 .neo-navbar__brand {
