@@ -1,15 +1,34 @@
 ---
-import NeoLayout from '../layouts/NeoLayout.astro';
+import NeoLayout from "../layouts/NeoLayout.astro";
 ---
 
 <NeoLayout title="Buttons">
+  <section>
+    <p>Applicable code can be found in:</p>
+
+    <ul>
+      <li>
+        <code>
+          neo-css-library/css-library/neo/neo-scss/elements/_button.scss
+        </code>
+      </li>
+
+      <li>
+        <code>neo-css-library/css-library/neo/neo-scss/components/_navbar.scss</code>
+      </li>
+    </ul>
+  </section>
+
   <section>
     <h2>Buttons</h2>
 
     <h3>Primary Buttons</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button id="primarybutton" class="neo-btn neo-btn-primary neo-btn-primary--default">
+        <button
+          id="primarybutton"
+          class="neo-btn neo-btn-primary neo-btn-primary--default"
+        >
           Default
         </button>
         <button class="neo-btn neo-btn-primary neo-btn-primary--success">
@@ -72,31 +91,51 @@ import NeoLayout from '../layouts/NeoLayout.astro';
     <h3>Icon Buttons</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button class="neo-btn neo-btn-primary neo-btn-primary--default neo-icon-settings">
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--default neo-icon-settings"
+        >
           icon auto
         </button>
 
-        <button dir="ltr" class="neo-btn neo-btn-primary neo-btn-primary--default neo-icon-settings">
+        <button
+          dir="ltr"
+          class="neo-btn neo-btn-primary neo-btn-primary--default neo-icon-settings"
+        >
           icon left
         </button>
 
-        <button dir="rtl" class="neo-btn neo-btn-primary neo-btn-primary--default neo-icon-settings">
+        <button
+          dir="rtl"
+          class="neo-btn neo-btn-primary neo-btn-primary--default neo-icon-settings"
+        >
           icon right
         </button>
 
-        <button dir="ltr" class="neo-btn neo-btn-secondary neo-btn-secondary--warning neo-icon-settings">
+        <button
+          dir="ltr"
+          class="neo-btn neo-btn-secondary neo-btn-secondary--warning neo-icon-settings"
+        >
           icon left
         </button>
 
-        <button dir="rtl" class="neo-btn neo-btn-secondary neo-btn-secondary--warning neo-icon-settings">
+        <button
+          dir="rtl"
+          class="neo-btn neo-btn-secondary neo-btn-secondary--warning neo-icon-settings"
+        >
           icon right
         </button>
 
-        <button dir="ltr" class="neo-btn neo-btn-tertiary neo-btn-tertiary--success neo-icon-settings">
+        <button
+          dir="ltr"
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--success neo-icon-settings"
+        >
           icon left
         </button>
 
-        <button dir="rtl" class="neo-btn neo-btn-tertiary neo-btn-tertiary--success neo-icon-settings">
+        <button
+          dir="rtl"
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--success neo-icon-settings"
+        >
           icon right
         </button>
       </div>
@@ -105,16 +144,25 @@ import NeoLayout from '../layouts/NeoLayout.astro';
     <h3>Disabled Buttons</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button class="neo-btn neo-btn-primary neo-btn-primary--default" disabled>
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--default"
+          disabled
+        >
           Default
         </button>
-        <button class="neo-btn neo-btn-primary neo-btn-primary--success" disabled>
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--success"
+          disabled
+        >
           Success
         </button>
         <button class="neo-btn neo-btn-primary neo-btn-primary--alert" disabled>
           Alert
         </button>
-        <button class="neo-btn neo-btn-primary neo-btn-primary--warning" disabled>
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--warning"
+          disabled
+        >
           Warning
         </button>
         <button class="neo-btn neo-btn-primary neo-btn-primary--info" disabled>
@@ -122,36 +170,66 @@ import NeoLayout from '../layouts/NeoLayout.astro';
         </button>
       </div>
       <div class="wrapper__component-group">
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--default" disabled>
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--default"
+          disabled
+        >
           Default
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--success" disabled>
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--success"
+          disabled
+        >
           Success
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--alert" disabled>
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--alert"
+          disabled
+        >
           Alert
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--warning" disabled>
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--warning"
+          disabled
+        >
           Warning
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info" disabled>
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--info"
+          disabled
+        >
           Info
         </button>
       </div>
       <div class="wrapper__component-group">
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--default" disabled>
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--default"
+          disabled
+        >
           Default
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--success" disabled>
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--success"
+          disabled
+        >
           Success
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--alert" disabled>
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--alert"
+          disabled
+        >
           Alert
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--warning" disabled>
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--warning"
+          disabled
+        >
           Warning
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--info" disabled>
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--info"
+          disabled
+        >
           Info
         </button>
       </div>
@@ -178,13 +256,22 @@ import NeoLayout from '../layouts/NeoLayout.astro';
     <h3>Button With Badge</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button class="neo-btn neo-btn-primary neo-btn-primary--primary neo-badge" data-badge="99">
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--primary neo-badge"
+          data-badge="99"
+        >
           Badge in Button
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--primary neo-badge" data-badge="99">
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--primary neo-badge"
+          data-badge="99"
+        >
           Badge in Button
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--primary neo-badge" data-badge="99">
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--primary neo-badge"
+          data-badge="99"
+        >
           Badge in Button
         </button>
       </div>
@@ -193,24 +280,30 @@ import NeoLayout from '../layouts/NeoLayout.astro';
     <h3>Circular Buttons</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button class="neo-btn-circle neo-btn-circle-primary neo-btn-circle-primary--success neo-icon-settings"
-          aria-label="DESCRIPTION OF ICON/ACTION" />
-        <button class="neo-btn-circle neo-btn-circle-secondary neo-btn-circle-secondary--alert neo-icon-settings"
-          aria-label="DESCRIPTION OF ICON/ACTION" />
-        <button class="neo-btn-circle neo-btn-circle-tertiary neo-btn-circle-tertiary--info neo-icon-settings"
-          aria-label="DESCRIPTION OF ICON/ACTION" />
+        <button
+          class="neo-btn-circle neo-btn-circle-primary neo-btn-circle-primary--success neo-icon-settings"
+          aria-label="DESCRIPTION OF ICON/ACTION"></button>
+        <button
+          class="neo-btn-circle neo-btn-circle-secondary neo-btn-circle-secondary--alert neo-icon-settings"
+          aria-label="DESCRIPTION OF ICON/ACTION"></button>
+        <button
+          class="neo-btn-circle neo-btn-circle-tertiary neo-btn-circle-tertiary--info neo-icon-settings"
+          aria-label="DESCRIPTION OF ICON/ACTION"></button>
       </div>
     </div>
 
     <h3>Square Buttons</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button class="neo-btn-square neo-btn-square-primary neo-btn-square-primary--alert neo-icon-settings"
-          aria-label="DESCRIPTION OF ICON/ACTION" />
-        <button class="neo-btn-square neo-btn-square-secondary neo-btn-square-secondary--alert neo-icon-settings"
-          aria-label="DESCRIPTION OF ICON/ACTION" />
-        <button class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-settings"
-          aria-label="DESCRIPTION OF ICON/ACTION" />
+        <button
+          class="neo-btn-square neo-btn-square-primary neo-btn-square-primary--alert neo-icon-settings"
+          aria-label="DESCRIPTION OF ICON/ACTION"></button>
+        <button
+          class="neo-btn-square neo-btn-square-secondary neo-btn-square-secondary--alert neo-icon-settings"
+          aria-label="DESCRIPTION OF ICON/ACTION"></button>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-settings"
+          aria-label="DESCRIPTION OF ICON/ACTION"></button>
       </div>
     </div>
 
@@ -218,29 +311,41 @@ import NeoLayout from '../layouts/NeoLayout.astro';
     <div class="wrapper">
       <div class="wrapper__component-group">
         <div style="flex-grow: 1;">
-          <button class="neo-btn neo-btn--wide neo-btn-primary neo-btn-primary--default neo-icon-chat">
+          <button
+            class="neo-btn neo-btn--wide neo-btn-primary neo-btn-primary--default neo-icon-chat"
+          >
             Button
           </button>
 
-          <button class="neo-btn neo-btn--wide neo-btn-secondary neo-btn-secondary--default neo-icon-chat">
+          <button
+            class="neo-btn neo-btn--wide neo-btn-secondary neo-btn-secondary--default neo-icon-chat"
+          >
             Button
           </button>
 
-          <button class="neo-btn neo-btn--wide neo-btn-tertiary neo-btn-tertiary--default neo-icon-chat">
+          <button
+            class="neo-btn neo-btn--wide neo-btn-tertiary neo-btn-tertiary--default neo-icon-chat"
+          >
             Button
           </button>
         </div>
 
         <div style="flex-grow: 1;">
-          <button class="neo-btn neo-btn--wide neo-btn-primary neo-btn-primary--default">
+          <button
+            class="neo-btn neo-btn--wide neo-btn-primary neo-btn-primary--default"
+          >
             Button
           </button>
 
-          <button class="neo-btn neo-btn--wide neo-btn-secondary neo-btn-secondary--default">
+          <button
+            class="neo-btn neo-btn--wide neo-btn-secondary neo-btn-secondary--default"
+          >
             Button
           </button>
 
-          <button class="neo-btn neo-btn--wide neo-btn-tertiary neo-btn-tertiary--default">
+          <button
+            class="neo-btn neo-btn--wide neo-btn-tertiary neo-btn-tertiary--default"
+          >
             Button
           </button>
         </div>
@@ -250,101 +355,155 @@ import NeoLayout from '../layouts/NeoLayout.astro';
     <h3>Compact Buttons</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button class="neo-btn neo-btn--compact neo-btn--compact neo-btn-primary neo-btn-primary--primary">
+        <button
+          class="neo-btn neo-btn--compact neo-btn--compact neo-btn-primary neo-btn-primary--primary"
+        >
           Primary
         </button>
-        <button class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--primary">
+        <button
+          class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--primary"
+        >
           Primary
         </button>
-        <button class="neo-btn neo-btn--compact neo-btn-tertiary neo-btn-tertiary--primary">
+        <button
+          class="neo-btn neo-btn--compact neo-btn-tertiary neo-btn-tertiary--primary"
+        >
           Primary
         </button>
-        <button class="neo-btn neo-btn--compact neo-btn-primary neo-btn-primary--primary neo-icon-error">
+        <button
+          class="neo-btn neo-btn--compact neo-btn-primary neo-btn-primary--primary neo-icon-error"
+        >
           Primary icon left
         </button>
       </div>
       <div class="wrapper__component-group">
-        <button aria-label="DESCRIPTION OF ICON/ACTION"
-          class="neo-btn-circle neo-btn-circle--compact neo-btn-circle-primary neo-btn-circle-primary--success neo-icon-error" />
-        <button aria-label="DESCRIPTION OF ICON/ACTION"
-          class="neo-btn-circle neo-btn-circle--compact neo-btn-circle-secondary neo-btn-circle-secondary--alert neo-icon-error" />
-        <button aria-label="DESCRIPTION OF ICON/ACTION"
-          class="neo-btn-circle neo-btn-circle--compact neo-btn-circle-tertiary neo-btn-circle-tertiary--info neo-icon-error" />
-        <button aria-label="DESCRIPTION OF ICON/ACTION"
-          class="neo-btn-square neo-btn-square--compact neo-btn-square-primary neo-btn-square-primary--alert neo-icon-error" />
-        <button aria-label="DESCRIPTION OF ICON/ACTION"
-          class="neo-btn-square neo-btn-square--compact neo-btn-square-secondary neo-btn-square-secondary--alert neo-icon-error" />
-        <button aria-label="DESCRIPTION OF ICON/ACTION"
-          class="neo-btn-square neo-btn-square--compact neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-error" />
+        <button
+          aria-label="DESCRIPTION OF ICON/ACTION"
+          class="neo-btn-circle neo-btn-circle--compact neo-btn-circle-primary neo-btn-circle-primary--success neo-icon-error"
+        ></button>
+        <button
+          aria-label="DESCRIPTION OF ICON/ACTION"
+          class="neo-btn-circle neo-btn-circle--compact neo-btn-circle-secondary neo-btn-circle-secondary--alert neo-icon-error"
+        ></button>
+        <button
+          aria-label="DESCRIPTION OF ICON/ACTION"
+          class="neo-btn-circle neo-btn-circle--compact neo-btn-circle-tertiary neo-btn-circle-tertiary--info neo-icon-error"
+        ></button>
+        <button
+          aria-label="DESCRIPTION OF ICON/ACTION"
+          class="neo-btn-square neo-btn-square--compact neo-btn-square-primary neo-btn-square-primary--alert neo-icon-error"
+        ></button>
+        <button
+          aria-label="DESCRIPTION OF ICON/ACTION"
+          class="neo-btn-square neo-btn-square--compact neo-btn-square-secondary neo-btn-square-secondary--alert neo-icon-error"
+        ></button>
+        <button
+          aria-label="DESCRIPTION OF ICON/ACTION"
+          class="neo-btn-square neo-btn-square--compact neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-error"
+        ></button>
       </div>
     </div>
 
     <h3>Pulsing Buttons</h3>
     <div class="wrapper">
       <div class="wrapper__component-group">
-        <button class="neo-btn neo-btn-primary neo-btn-primary--default neo-pulse">
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--default neo-pulse"
+        >
           Default
         </button>
-        <button class="neo-btn neo-btn-primary neo-btn-primary--success neo-pulse">
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--success neo-pulse"
+        >
           Success
         </button>
-        <button class="neo-btn neo-btn-primary neo-btn-primary--alert neo-pulse">
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--alert neo-pulse"
+        >
           Alert
         </button>
-        <button class="neo-btn neo-btn-primary neo-btn-primary--warning neo-pulse">
+        <button
+          class="neo-btn neo-btn-primary neo-btn-primary--warning neo-pulse"
+        >
           Warning
         </button>
         <button class="neo-btn neo-btn-primary neo-btn-primary--info neo-pulse">
           Info
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--default neo-pulse">
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--default neo-pulse"
+        >
           Default
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--success neo-pulse">
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--success neo-pulse"
+        >
           Success
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--alert neo-pulse">
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--alert neo-pulse"
+        >
           Alert
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--warning neo-pulse">
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--warning neo-pulse"
+        >
           Warning
         </button>
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info neo-pulse">
+        <button
+          class="neo-btn neo-btn-secondary neo-btn-secondary--info neo-pulse"
+        >
           Info
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--default neo-pulse">
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--default neo-pulse"
+        >
           Default
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--success neo-pulse">
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--success neo-pulse"
+        >
           Success
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--alert neo-pulse">
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--alert neo-pulse"
+        >
           Alert
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--warning neo-pulse">
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--warning neo-pulse"
+        >
           Warning
         </button>
-        <button class="neo-btn neo-btn-tertiary neo-btn-tertiary--info neo-pulse">
+        <button
+          class="neo-btn neo-btn-tertiary neo-btn-tertiary--info neo-pulse"
+        >
           Info
         </button>
 
-        <button class="neo-btn-circle neo-btn-circle-primary neo-btn-circle-primary--success neo-pulse neo-icon-error"
-          aria-label="primary circle success error icon" />
+        <button
+          class="neo-btn-circle neo-btn-circle-primary neo-btn-circle-primary--success neo-pulse neo-icon-error"
+          aria-label="primary circle success error icon"></button>
 
-        <button class="neo-btn-circle neo-btn-circle-secondary neo-btn-circle-secondary--alert neo-pulse neo-icon-error"
-          aria-label="primary circle success error icon" />
+        <button
+          class="neo-btn-circle neo-btn-circle-secondary neo-btn-circle-secondary--alert neo-pulse neo-icon-error"
+          aria-label="primary circle success error icon"></button>
 
-        <button class="neo-btn-circle neo-btn-circle-tertiary neo-btn-circle-tertiary--info neo-pulse neo-icon-error"
-          aria-label="primary circle success error icon" />
+        <button
+          class="neo-btn-circle neo-btn-circle-tertiary neo-btn-circle-tertiary--info neo-pulse neo-icon-error"
+          aria-label="primary circle success error icon"></button>
 
-        <button class="neo-btn-square neo-btn-square-primary neo-btn-square-primary--alert neo-pulse neo-icon-error"
-          aria-label="primary circle success error icon" />
+        <button
+          class="neo-btn-square neo-btn-square-primary neo-btn-square-primary--alert neo-pulse neo-icon-error"
+          aria-label="primary circle success error icon"></button>
 
-        <button class="neo-btn-square neo-btn-square-secondary neo-btn-square-secondary--alert neo-pulse neo-icon-error"
-          aria-label="primary circle success error icon" />
+        <button
+          class="neo-btn-square neo-btn-square-secondary neo-btn-square-secondary--alert neo-pulse neo-icon-error"
+          aria-label="primary circle success error icon"></button>
 
-        <button class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-pulse neo-icon-error"
-          aria-label="primary circle success error icon" />
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-pulse neo-icon-error"
+          aria-label="primary circle success error icon"></button>
       </div>
     </div>
   </section>
@@ -353,5 +512,9 @@ import NeoLayout from '../layouts/NeoLayout.astro';
 <style>
   button {
     margin-right: 1rem;
+  }
+
+  ul {
+    margin-left: 2rem;
   }
 </style>
