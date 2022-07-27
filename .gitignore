@@ -133,3 +133,5 @@ neo-css-library-staging/cypress/integration
 neo-css-library-staging/cypress/screenshots
 neo-css-library-staging/cypress/videos
 css-staging/build
+
+neo-npm-package/CHANGELOG.md

@@ -12,6 +12,7 @@
 
 #### Bugs Report - List of bugs that have been updated
 
+- Updated cursor styles in Breadcrumbs component
 - Updated [pulse](https://design.avayacloud.com/components/web/buttons-web#PulsingButtons) width to 15px from 10px
 - Updated [notifications](https://design.avayacloud.com/components/web/notifications-web) to work with `dir="rtl"`
 - Updated [buttons](https://design.avayacloud.com/components/web/buttons-web) and [navbar](https://design.avayacloud.com/components/web/navbar-web) with improved btn hover styles
