@@ -45,13 +45,13 @@ If you made a mistake, you can simply `unpublish` the package via
 Once that is complete, the next step is to add the release to our GitHub
 
 1. navigate to our [GitHub releases page](https://github.com/avaya-dux/neo-css-library/releases)
-2. click: "Draft a new release" (top right corner)
-3. choose tag (or create a new tag on publish), using format `vX.X.X`
-4. target `main` branch
-5. add title using format: "v0.2.0 (Jan 18th 2022)"
-6. click: "Auto-generate release notes"
-7. from the root of the `neo-npm-package` folder (`neo-css-library/neo-npm-package`), run `npm pack`
-8. attach the binary generated from the "pack" (tgz file)
+2. make sure that you have merged any changes resulting from all previous steps into `main`
+3. click: "Draft a new release" (top right corner)
+4. choose tag (or create a new tag on publish), using format `vX.X.X`
+5. target `main` branch
+6. add title using format: "v0.2.0 (Jan 18th 2022)"
+7. click: "Auto-generate release notes"
+8. attach the binary generated from when you ran `npm pack` above (tgz file)
 9. click: "Publish release"
 
 ### add documentation to the Design Portal
@@ -64,14 +64,19 @@ Once the publishing is completed, we must then update the Design Portal with an 
 2. create (verify existince of) `neo/neo_zip` folder exists
 3. copy over the contents of the sub-project folder `neo-npm-package` into the `neo/neo_zip` folder
 4. `node neo/neo-file-archiver.js`: generate the zip file
+
+- - **TEMP**: on MacOS, you can right click on the `neo-npm-package` folder in Finder, and choose 'Compress "neo-npm-package"' from the contextual menu for the same result
+- - **TEMP**: if you do this, make sure you rename the .zip file to `neo.zip` before proceeding
+
 5. `npm view @avaya/neo time --json`: get the timestamp of the latest published package
 
 - - copy the date+hour+min, eg: `2022-06-01T19:20`
 
 6. go to the design portal project
-7. delete the existing zip file (at `static/documents/neo_zip*.zip`)
-8. add newly created zip file to that same location
-9. go to `src/site_components/constants/version_number.js`
+7. in this project, make sure you pull latest from `develop` branch and are working from it
+8. delete the existing zip file (at `static/documents/neo_zip*.zip`)
+9. add newly created zip file to that same location
+10. go to `src/site_components/constants/version_number.js`
 
 - - add the next version
 - - add the datetime in the same format
@@ -82,6 +87,7 @@ Once the publishing is completed, we must then update the Design Portal with an 
 
 - - be sure to use the same styling as currently exists in this file
 - - make sure you remove the `latestVersion` prop from the previous `ChangelogMarkdownComponent` and add it to the newest
+- - because .mdx files require very specific spacing, make sure there is a space after the opening `ChangelogMarkdownComponent` tag and before the closing tag
 - - NOTE: we _will_ be adding scripts to take care of most (hopefully all :crossed_fingers:)
 
 11. update `package.json` (and `package-lock.json`) to use the latest version of the css-library (`@avaya/neo`)
