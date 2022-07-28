@@ -2,17 +2,14 @@
 
 .neo-switch--multiline {
   height: auto !important;
-  padding-left: 40px !important;
-  left: -13px !important;
 
   @include rtl-selector {
     right: 0 !important;
-    padding-right: 25px !important;
+    padding-right: 27px !important;
     padding-left: 0px !important;
   }
 
   .neo-switch__icon {
-    left: 13px !important;
     &::after {
       left: 1px !important;
     }
@@ -25,12 +22,12 @@
 .neo-switch-children {
   height: auto !important;
   white-space: pre-line;
-  float:left;
-  margin-left: 16px;
+  float: left;
+  margin-left: 13px;
   @include rtl-selector {
-   float:right !important;
-   margin-left: 0 !important;
-   margin-right: 18px !important;
+    float: right !important;
+    margin-left: 0 !important;
+    margin-right: 13px !important;
   }
 }
 
@@ -152,7 +149,7 @@
 
 .neo-switch {
   @include NeoLinkStyles;
-  display: inline-block;
+  display: flex;
   height: $switch-label-height;
   line-height: $body-line-height;
   min-width: $switch-width;
@@ -187,7 +184,7 @@
   @include neo-switch--disabled;
 }
 
-.neo-switch.neo-switch--multiline input+.neo-switch__icon:after {
+.neo-switch.neo-switch--multiline input + .neo-switch__icon:after {
   @include rtl-selector {
     right: 1px !important;
   }

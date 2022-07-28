@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.57.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Fixed vertical misalignment of label texts between [ switches ](https://design.avayacloud.com/components/web/switch-web)
+
 ### 3.57.0
 
 #### New Features - New features that have recently been added
