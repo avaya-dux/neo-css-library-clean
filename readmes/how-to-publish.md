@@ -90,7 +90,7 @@ Once the publishing is completed, we must then update the Design Portal with an 
 - - because .mdx files require very specific spacing, make sure there is a space after the opening `ChangelogMarkdownComponent` tag and before the closing tag
 - - NOTE: we _will_ be adding scripts to take care of most (hopefully all :crossed_fingers:)
 
-11. update `package.json` (and `package-lock.json`) to use the latest version of the css-library (`@avaya/neo`)
+11. update `package.json` to use the latest version of the css-library (`@avaya/neo`); run `npm install --force` in design portal to update `package-lock.json`
 12. open a PR into `develop`, merge, then open a PR into `main` and merge. When this second PR is merged the site will be deployed to production.
 
 - - _IMPORTANT NOTE:_ do _not_ skip this step, it is imperitive that we update the Design Portal with the latest changes _at the same time_ as we update the css-library
