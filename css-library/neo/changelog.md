@@ -5,6 +5,7 @@
 #### Bugs Report - List of bugs that have been updated
 
 - Fixed vertical misalignment of label texts between [ switches ](https://design.avayacloud.com/components/web/switch-web)
+- Removed [Button](https://design.avayacloud.com/components/web/buttons-web) outline on mouse hover
 
 ### 3.57.0
 

@@ -16,14 +16,6 @@
   font-size: $button-font-size;
   color: $button-text-color;
 
-  &:hover:not(:disabled) {
-    transition: $button-transition;
-    transition-property: background-color, color, box-shadow;
-
-    outline: $global-outline-color auto 2px;
-    outline-offset: 3px;
-  }
-
   &:focus,
   &:focus-visible {
     outline-offset: 3px;
