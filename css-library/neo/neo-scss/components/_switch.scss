@@ -110,10 +110,6 @@
       }
     }
   }
-
-  input:checked ~ span.neo-switch-children {
-    font-weight: $token-web-typography-fontweight-semibold;
-  }
 }
 
 @mixin neo-switch--disabled {
