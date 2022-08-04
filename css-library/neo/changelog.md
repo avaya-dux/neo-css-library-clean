@@ -15,6 +15,7 @@
 #### Bugs Report - List of bugs that have been updated
 
 - Fixed vertical misalignment of label texts between [ switches ](https://design.avayacloud.com/components/web/switch-web)
+- Fixed bug related to border of [ Select as Pagination ](https://design.avaya.com/components/web/pagination-web)
 - Removed [Button](https://design.avayacloud.com/components/web/buttons-web) outline on mouse hover
 
 ### 3.57.0

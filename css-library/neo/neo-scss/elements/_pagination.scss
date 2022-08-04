@@ -31,7 +31,9 @@
       }
     }
     .neo-multiselect-combo__header {
-      max-width: 70px;
+      .neo-input{
+        max-width: 32px;
+      }
     }
   }
 }
