@@ -1,0 +1,6 @@
+{
+  $schema: "https://docs.renovatebot.com/renovate-schema.json",
+  extends: ["config:base", "group:allNonMajor"],
+  assignees: ["dux-devs"],
+  schedule: ["on monday before 5am"],
+}
