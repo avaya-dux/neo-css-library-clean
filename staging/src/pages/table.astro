@@ -1,9 +1,13 @@
 ---
-import NeoLayout from '../layouts/NeoLayout.astro';
+import NeoLayout from "../layouts/NeoLayout.astro";
 
-import { Table } from '../components'
+import { Table, TableWithSelectAllRow } from "../components";
 ---
 
 <NeoLayout title="Table">
   <Table />
+
+  <br />
+
+  <TableWithSelectAllRow client:load />
 </NeoLayout>

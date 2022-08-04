@@ -1,6 +1,10 @@
 # Changelog
 
-### 3.57.2
+### 3.58,0
+
+#### New Features - New features that have recently been added
+
+- Added new classes and styles for Select All row in [Tables](https://design.avaya.com/components/web/tables-web)
 
 #### Bugs Report - List of bugs that have been updated
 

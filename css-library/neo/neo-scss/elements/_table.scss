@@ -256,6 +256,16 @@
     .neo-check + label {
       display: none;
     }
+    &.select-all {
+      background-color: var(--neo-color-blue-100);
+      & > div {
+        display: flex;
+        & > p button {
+          border: none;
+          background-color: transparent;
+        }
+      }
+    }
     & > a {
       color: $link-color;
       &.active {
