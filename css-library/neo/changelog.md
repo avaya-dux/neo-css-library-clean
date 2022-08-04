@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.58,0
+### 3.58.0
 
 #### New Features - New features that have recently been added
 
@@ -8,11 +8,11 @@
 
 #### Bugs Report - List of bugs that have been updated
 
-- Multiline switch: no longer bold text when on  [ switches ](https://design.avayacloud.com/components/web/switch-web)
+- Multiline switch: no longer bold text when on [ switches ](https://design.avayacloud.com/components/web/switch-web)
 
 #### Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
 
-- Changed role to "switch" from default one, "checkbox"  [ switches ](https://design.avayacloud.com/components/web/switch-web)
+- Changed role to "switch" from default one, "checkbox" [ switches ](https://design.avayacloud.com/components/web/switch-web)
 
 ### 3.57.1
 
