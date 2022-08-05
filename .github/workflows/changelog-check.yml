@@ -21,3 +21,9 @@ jobs:
         run: |
           echo "Please make sure you have updated `css-library/neo/changelog.md` if you have made changes to the Neo SCSS files"
           exit 1
+      - name: request changes if SCSS files changed without using valid label on PR
+        uses: jesusvasquez333/verify-pr-label-action@v1.4.0
+        if: steps.verify-changed-files.outputs.any_changed == 'true'
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          valid-labels: "breaking-changes, additional-changes, bugs-report, new-features, ignore-for-release"

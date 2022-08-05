@@ -1,0 +1,17 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+  categories:
+    - title: Breaking Changes - the following Components are broken and need immediate attention
+      labels:
+        - breaking-changes
+    - title: New Features - New features that have recently been added
+      labels:
+        - new-features
+    - title: Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+      labels:
+        - additional-changes
+    - title: Bugs Report - List of bugs that have been updated
+      labels:
+        - bugs-report
