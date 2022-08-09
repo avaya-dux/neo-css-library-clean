@@ -80,3 +80,4 @@ Then, once the script completes, you should be able to run the `update-site` scr
 
 - [how to dev](./readmes/how-to-dev.md)
 - [how to publish](./readmes/how-to-publish.md)
+- [periphery tech](./readmes/periphery-tech.md)
