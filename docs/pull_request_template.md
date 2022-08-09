@@ -1,5 +1,14 @@
 [Link to updated components in Deploy Preview](UPDATEMEWITHALINK)
 
+**Before tagging the team for a review, I have done the following:**
+- [ ] updated the changelog file if any SCSS files have been updated
+- [ ] reviewed my code changes
+- [ ] ensured that all tests pass
+- [ ] updated the link at the top of this PR (or remove it if not applicable)
+- [ ] added any important information to this PR (description, images, GIFs, ect.)
+- [ ] tagged Matt if any visual changes have occurred
+- [ ] done an accessibility check on my work
+
 Put the most important information here. The content that any reviewer should see and read first (after the PR title).
 
 **EXAMPLE IMAGE(S):**
