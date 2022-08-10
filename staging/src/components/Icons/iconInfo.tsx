@@ -2677,6 +2677,12 @@ export const icons = [
     category: "action",
     animated: false,
   },
+  {
+    name: "after-call-work",
+    bidirectional: false,
+    category: "status",
+    animated: false,
+  },
 ];
 
 export const iconCategories = [

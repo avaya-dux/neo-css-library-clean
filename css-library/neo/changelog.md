@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.59.0
+
+#### New Features - New features that have recently been added
+
+- Added new 'after-call-work' [Icon](https://design.avaya.com/components/icons/)
+
 ### 3.58.0
 
 #### New Features - New features that have recently been added

@@ -541,6 +541,7 @@ const unicodes = {
   "layout-immersive": 0xf3e9,
   user: 0xf3f1,
   "analytics-filled": 0xf3f2,
+  "after-call-work": 0xf3f3,
 };
 
 const generateIcons = async () => {
