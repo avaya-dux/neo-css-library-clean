@@ -68,27 +68,13 @@ Once the publishing is completed, we must then update the Design Portal with an 
 - - **TEMP**: on MacOS, you can right click on the `neo-npm-package` folder in Finder, and choose 'Compress "neo-npm-package"' from the contextual menu for the same result
 - - **TEMP**: if you do this, make sure you rename the .zip file to `neo.zip` before proceeding
 
-5. `npm view @avaya/neo time --json`: get the timestamp of the latest published package
+5. go to the design portal project
+6. in this project, make sure you pull latest from `develop` branch and are working from it
+7. delete the existing zip file (at `static/documents/neo_zip*.zip`)
+8. add newly created zip file to that same location
 
-- - copy the date+hour+min, eg: `2022-06-01T19:20`
-
-6. go to the design portal project
-7. in this project, make sure you pull latest from `develop` branch and are working from it
-8. delete the existing zip file (at `static/documents/neo_zip*.zip`)
-9. add newly created zip file to that same location
-10. go to `src/site_components/constants/version_number.js`
-
-- - add the next version
-- - add the datetime in the same format
-- - update the `latest` key
-- - update the `neoLatestVersion` variable
-
-10. copy over changelog updates from the css-library into the design portal file `neo-design-portal/src/docs/whats-new/css-changes.mdx`
-
-- - be sure to use the same styling as currently exists in this file
-- - make sure you remove the `latestVersion` prop from the previous `ChangelogMarkdownComponent` and add it to the newest
-- - because .mdx files require very specific spacing, make sure there is a space after the opening `ChangelogMarkdownComponent` tag and before the closing tag
-- - NOTE: we _will_ be adding scripts to take care of most (hopefully all :crossed_fingers:)
+9. go to `src/site_components/constants/version_number.js`
+10. update the `neoLatestVersion` variable to the latest version number
 
 11. update `package.json` to use the latest version of the css-library (`@avaya/neo`); run `npm install --force` in design portal to update `package-lock.json`
 12. open a PR into `develop`, merge, then open a PR into `main` and merge. When this second PR is merged the site will be deployed to production.
