@@ -8,6 +8,7 @@ export * from "./Checkbox";
 export * from "./Radio";
 export * from "./Accordion";
 export * from "./Icons";
+export * from "./Widget";
 
 // svelte
 export * from "./RootDir";
