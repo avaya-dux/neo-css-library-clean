@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.59.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added 1px margin to .neo-form class when used in [Widget](https://design.avaya.com/components/web/widget-web) Component
+
 ### 3.59.0
 
 #### New Features - New features that have recently been added

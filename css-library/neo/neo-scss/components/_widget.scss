@@ -1,7 +1,3 @@
-// new widget styles
-
-// experimental shimmer style -- credit to https://webdevtrick.com/pure-css-shimmer-text-effect/
-
 @mixin neo-shimmer {
   &--loading > * {
     text-align: center;
@@ -48,7 +44,6 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-color: #f1f1f1;
-    // height: 50px;
   }
   .dark &--loading > * {
     text-align: center;
@@ -95,7 +90,6 @@
     background-repeat: no-repeat;
     background-position: 0 0;
     background-color: #323232;
-    // height: 50px;
   }
 }
 @-moz-keyframes shimmer {
@@ -134,50 +128,30 @@
 @mixin widget-element($value, $border-position: false) {
   background-color: $global-background;
   padding: $value;
-
-  // @if ($border-position) {
-  //   border-#{$border-position}: $modal-divider;
-  // }
 }
 
 .neo-widget__content {
   @include NeoLinkStyles;
-  // animation: animation-modal-content $modal-animation-time;
   color: $global-text-color;
-  // padding: 0 16px;
   background-color: $widget-background-color;
   border: $widget-border-width $widget-border-style $widget-border-color;
-  // border: $modal-border;
   border-radius: $widget-border-radius;
-  // box-shadow: $modal-shadow;
   display: flex;
   flex-direction: column;
   max-width: 100%;
   height: 100%;
-  // padding: 0 $modal-padding-y;
   position: relative;
   width: auto;
   padding: $widget-heading-padding;
-  // z-index: $modal-content-z;
-
-  // test overflow styles
-  // overflow: visible;
 
   .neo-widget__header {
-    // @include widget-element(16px);
     background-color: $global-background;
-    // text-align: center;
     width: 100%;
-    // vertical-align: middle;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     color: $widget-heading-color;
-    // hard-coded for now
-    // &::before {
-    //   margin-right: 10px;
-    // }
 
     & .neo-widget__header-left {
       display: flex;
@@ -226,9 +200,7 @@
         &:before {
           font-size: $widget-heading-icon-button-size;
         }
-        // NEEDS TO BE ADDED IN FIGMA
         color: $token-widgets-header-font-color;
-        // background-color: #ffffff;
         border: none;
         background-image: linear-gradient(
           50deg,
@@ -254,23 +226,15 @@
           cursor: pointer;
           background-position: 0% 100%;
         }
-        //   &--#{$name}:active,
-        //   &--#{$name}:focus {
-        //     color: map-get($value, pressed-color);
-        //     background-color: $button-tertiary-hover-background-color;
-        //     background-image: none;
-        //   }
         &[disabled] {
           background-image: none;
           color: $global-disabled-color;
-          // added to fix issue with disabled state
           background-color: transparent;
           &:hover {
             cursor: not-allowed;
             box-shadow: none;
           }
         }
-        // }
       }
     }
 
@@ -294,7 +258,9 @@
     min-height: $modal-body-height;
     background-color: $global-background;
     padding-top: $widget-content-padding-top;
-    // @include widget-element(16px, top);
+    & .neo-form {
+      margin: 1px;
+    }
     @include neo-shimmer;
     &-disabled {
       background-color: $global-disabled-bg;
@@ -310,35 +276,4 @@
       color: $global-disabled-color;
     }
   }
-
-  // .neo-widget__footer {
-  //   display: flex;
-  //   justify-content: flex-end;
-  //   background-color: $global-background;
-  //   &-disabled {
-  //     background-color: $global-disabled-bg;
-  //     color: $global-disabled-color;
-  //   }
-
-  //   .neo-btn {
-  //     margin-bottom: 0;
-  //     &-secondary[disabled] {
-  //       border: none;
-  //     }
-
-  //     /* stylelint-disable max-nesting-depth */
-  //     &:not(:last-child) {
-  //       margin-right: $modal-margin;
-
-  //       @include rtl-selector {
-  //         margin: {
-  //           left: $modal-margin;
-  //           right: initial;
-  //         }
-  //       }
-  //     }
-  //   }
-
-  //   @include widget-element(16px, top);
-  // }
 }
