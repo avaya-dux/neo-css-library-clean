@@ -249,7 +249,7 @@ export const CondensedLeftNavWithScroll = () => {
         </ul>
       </nav>
 
-      <div className="neo-tooltip neo-tooltip--right neo-tooltip--onhover">
+      <div className="neo-tooltip neo-tooltip-leftnav--condensed__toggle neo-tooltip--right neo-tooltip--onhover">
         <a
           role="button"
           aria-label="expand navigation"

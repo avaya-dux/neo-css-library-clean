@@ -449,10 +449,10 @@
       & .neo-leftnav__main {
         min-width: initial;
       }
-      & .neo-tooltip {
+      & .neo-tooltip.neo-tooltip-leftnav--condensed__toggle {
         width: 52px;
       }
-      & .neo-tooltip--right .neo-tooltip__content{
+      & .neo-tooltip--right .neo-tooltip__content {
         transform: translate(0, -118%);
       }
     }

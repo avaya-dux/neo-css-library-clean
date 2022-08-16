@@ -5,6 +5,7 @@
 #### Bugs Report - List of bugs that have been updated
 
 - Added 1px margin to .neo-form class when used in [Widget](https://design.avaya.com/components/web/widget-web) Component
+- Tweaked class name for tooltips to avoid issues with toggling collapsed [Left Navigation](https://design.avaya.com/components/web/left-nav-web)
 
 ### 3.59.0
 
