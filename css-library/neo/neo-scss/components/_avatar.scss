@@ -1,5 +1,3 @@
-// updated avatar styles
-
 @mixin neo-avatar-img {
   .neo-img {
     border-radius: $avatar-border-radius;
@@ -28,36 +26,11 @@
     letter-spacing: $avatar-small-letter-spacing;
     height: $avatar-small-size;
     width: $avatar-small-size;
-    // & .neo-avatar-status {
-    //   &:after {
-    //     width: $avatar-status-size-small;
-    //     height: $avatar-status-size-small;
-    //     font-size: $avatar-status-size-small - 2;
-    //     z-index: 5;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 70%;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     padding-top: 0px;
-    //     padding-bottom: 0px;
-    //     padding-left: 0px;
-    //     padding-right: 0px;
-    //     @include rtl-selector {
-    //       left: -15%;
-    //     }
-    //   }
-    //   @include neo-avatar-status;
-    // }
+
     &--generic {
       background: $avatar-font-color;
       &:before {
         position: absolute;
-        // top: -1px;
-        // font-size: $avatar-large-size - 2;
-        // font-size: $avatar-large-size;
         font-size: 32px;
         content: $avatar-generic-icon;
         font-family: "updated-neo-icons";
@@ -71,14 +44,11 @@
       }
     }
     &--bot {
-      // background: $avatar-font-color;
       &:before {
         position: absolute;
-        // top: -1px;
         font-size: $avatar-small-size - 2;
         content: $avatar-bot-icon;
         font-family: "updated-neo-icons";
-        // color: $avatar-background-color;
       }
     }
   }
@@ -89,33 +59,10 @@
     letter-spacing: $avatar-large-letter-spacing;
     height: $avatar-large-size;
     width: $avatar-large-size;
-    // &.neo-avatar-status {
-    //   &:after {
-    //     width: $avatar-status-size-large;
-    //     height: $avatar-status-size-large;
-    //     font-size: $avatar-status-size-large - 3;
-    //     z-index: 5;
-    //     position: absolute;
-    //     top: 50%;
-    //     left: 70%;
-    //     display: flex;
-    //     flex-direction: column;
-    //     justify-content: center;
-    //     align-items: center;
-    //     padding: 1px;
-    //     @include rtl-selector {
-    //       left: -15%;
-    //     }
-    //   }
-    //   @include neo-avatar-status;
-    // }
     &--generic {
       background: $avatar-font-color;
       &:before {
         position: absolute;
-        // top: -1px;
-        // font-size: $avatar-large-size - 2;
-        // font-size: $avatar-large-size;
         font-size: 54.86px;
         content: $avatar-generic-icon;
         font-family: "updated-neo-icons";
@@ -129,14 +76,11 @@
       }
     }
     &--bot {
-      // background: $avatar-font-color;
       &:before {
         position: absolute;
-        // top: -1px;
         font-size: $avatar-large-size - 2;
         content: $avatar-bot-icon;
         font-family: "updated-neo-icons";
-        // color: $avatar-background-color;
       }
     }
   }
@@ -221,9 +165,6 @@
     background: $avatar-font-color;
     &:before {
       position: absolute;
-      // top: -1px;
-      // font-size: $avatar-large-size - 2;
-      // font-size: $avatar-large-size;
       font-size: 41.14px;
       content: $avatar-generic-icon;
       font-family: "updated-neo-icons";
@@ -237,14 +178,11 @@
     }
   }
   &--bot {
-    // background: $avatar-font-color;
     &:before {
       position: absolute;
-      // top: -1px;
       font-size: $avatar-medium-size - 2;
       content: $avatar-bot-icon;
       font-family: "updated-neo-icons";
-      // color: $avatar-background-color;
     }
   }
   &--large .neo-avatar-status {
@@ -322,7 +260,6 @@
 
     position: absolute;
     z-index: map-get($indexes-map, "avatar-status");
-    // padding-bottom: 50%;
     border-radius: 50px;
     text-align: center;
     display: inline-flex;
@@ -330,8 +267,6 @@
     align-items: center;
     &:before {
       border-radius: 50px;
-      // height: 100%;
-      // width: 100%;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -339,94 +274,9 @@
       margin: 0;
     }
   }
-  // &.neo-avatar-status {
-  //   &:after {
-  //     width: $avatar-status-size-medium;
-  //     height: $avatar-status-size-medium;
-  //     font-size: $avatar-status-size-medium - 2;
-  //     z-index: 5;
-  //     position: absolute;
-  //     top: 50%;
-  //     left: 70%;
-  //     display: flex;
-  //     flex-direction: column;
-  //     justify-content: center;
-  //     align-items: center;
-  //     padding: 1px;
-  //     @include rtl-selector {
-  //       left: -15%;
-  //     }
-  //   }
-  // @include neo-avatar-status;
-  // }
-
-  // @include neo-avatar-status;
   @include neo-avatar-as-thumbnail;
   @include neo-avatar-img;
   @include neo-avatar-sizes;
   @include neo-avatar-initials;
   @include avatar-border-color();
 }
-
-// .neo-avatar-status {
-//   @each $name, $state in $neo-avatar-status {
-//     &--#{$name}::before {
-//       font-family: 'updated-neo-icons';
-//       border-radius: 50px;
-//       content: map-get($state, icon);
-//       color: map-get($state, color);
-//       background-color: $avatar-font-color;
-//       -webkit-font-feature-settings: 'liga';
-//       -moz-font-feature-settings: 'liga=1';
-//       -moz-font-feature-settings: 'liga';
-//       -ms-font-feature-settings: 'liga' 1;
-//       font-feature-settings: 'liga';
-//       -webkit-font-variant-ligatures: discretionary-ligatures;
-//       font-variant-ligatures: discretionary-ligatures;
-//       font-style: normal;
-//       font-weight: normal;
-//       font-variant: normal;
-//       text-transform: none;
-//       text-align: center;
-//       text-transform: none;
-//       vertical-align: middle;
-//     }
-//   }
-//   .neo-avatar--large & {
-//     height: 20px;
-//     width: 20px;
-//     &:before {
-//       font-size: 18px;
-//       line-height: 20px;
-//     }
-//   }
-//   .neo-avatar--small & {
-//     height: 12px;
-//     width: 12px;
-//     &:before {
-//       font-size: 9px;
-//       line-height: 10px;
-//       width: auto;
-//     }
-//   }
-//   position: absolute;
-//   top: 50%;
-//   left: 70%;
-//   z-index: 7;
-//   padding-bottom: 50%;
-//   border-radius: 50px;
-//   text-align: center;
-//   display: inline-flex;
-//   justify-content: center;
-//   align-items: center;
-//   &:before {
-//     border-radius: 50px;
-//     // height: 100%;
-//     width: 100%;
-//     position: absolute;
-//     top: 50%;
-//     left: 50%;
-//     transform: translate(-50%, -50%);
-//     margin: 0;
-//   }
-// }

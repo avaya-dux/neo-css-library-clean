@@ -6,6 +6,7 @@
 
 - Added 1px margin to .neo-form class when used in [Widget](https://design.avaya.com/components/web/widget-web) Component
 - Tweaked class name for tooltips to avoid issues with toggling collapsed [Left Navigation](https://design.avaya.com/components/web/left-nav-web)
+- Added properties to Avatars in [Navbar](https://design.avaya.com/components/web/navbar-web) Components to avoid issues in RTL
 
 ### 3.59.0
 
