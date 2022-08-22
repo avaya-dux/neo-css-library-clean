@@ -27,7 +27,7 @@
     "postcss": "8.4.16",
     "prettier": "2.7.1",
     "replace-in-file": "6.3.5",
-    "style-dictionary": "2.10.3",
+    "style-dictionary": "3.7.1",
     "susy": "3.0.7",
     "webfonts-generator": "0.4.0"
   }
