@@ -2,7 +2,9 @@
   "name": "figma-api",
   "version": "1.0.0",
   "scripts": {
-    "pull-icons": "node design-system-functions.js && node ./icons-functions/icon-css-generator.js"
+    "build-icons": "node icon-scripts",
+    "pull-icons": "node icon-pull.js",
+    "write-icons": "node ./icons-functions/icon-css-generator.js"
   },
   "license": "UNLICENSED",
   "devDependencies": {

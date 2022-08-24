@@ -2,7 +2,11 @@ const fs = require("fs").promises;
 const fsdefault = require("fs");
 const fetch = require("node-fetch");
 
+const util = require("node:util");
+
 const iconUtilityFunctions = require("./icon-utility-files/icons-utility-functions.js");
+
+const unicodes = require("./icon-utility-files/icon-unicodes.js").unicodes;
 
 const replace = require("./icon-utility-files/icon-replacement-string");
 
@@ -158,6 +162,9 @@ async function pullIcons(figmaApiKey, figmaId, iconNames) {
   const styleDicDir =
     "../../css-library/style-dictionary/properties/assets/icons";
 
+  const unicodesFile =
+    "../figma-API/icons-functions/icon-utility-files/icon-unicodes.js";
+
   const formattedIconNames = iconNames.map((iconName) =>
     iconName.replace("/", "")
   );
@@ -166,6 +173,25 @@ async function pullIcons(figmaApiKey, figmaId, iconNames) {
     await fs.mkdir(`${styleDicDir}/svgs`, {
       recursive: true,
     });
+
+    formattedIconNames.forEach((iconName) => {
+      if (unicodes[iconName]) {
+        return;
+      }
+
+      const lastUnicodeValue = Object.values(unicodes).pop();
+
+      const unicodeValueToAdd = lastUnicodeValue + 1;
+
+      unicodes[iconName] = unicodeValueToAdd;
+    });
+
+    await fs.writeFile(
+      unicodesFile,
+      `const unicodes = ${util.inspect(
+        unicodes
+      )}; module.exports.unicodes = unicodes`
+    );
 
     const figmaIconNodeIds = await makeIconFunctionArrays(figmaApiKey, figmaId);
 

@@ -7,7 +7,7 @@ require("dotenv").config();
 var figmaCredentials = {
   figmaAPIKey: process.env.FIGMA,
   designTokensFileID: process.env.TOKENS,
-  iconsFileID: process.env.ICONS,
+  iconsFileID: "fn3XUmvjzRHO7E4ezsUZdz",
   varaintComponentsFileID: process.env.COMPONENTS,
 };
 
