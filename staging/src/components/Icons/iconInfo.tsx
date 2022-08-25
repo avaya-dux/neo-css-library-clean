@@ -272,6 +272,12 @@ export const icons = [
     animated: false,
   },
   {
+    name: "bot-agent",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
     name: "filter",
     bidirectional: false,
     category: "content",

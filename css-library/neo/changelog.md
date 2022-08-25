@@ -1,6 +1,12 @@
 # Changelog
 
-### 3.59.2
+### 3.60.0
+
+#### New Features - New features that have recently been added
+
+- Added new bot-agent [Icon](https://design.avaya.com/components/icons/)
+
+### 3.59.1
 
 #### Bugs Report - List of bugs that have been updated
 
