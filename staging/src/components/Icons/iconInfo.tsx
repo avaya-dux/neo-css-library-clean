@@ -402,6 +402,12 @@ export const icons = [
     animated: false,
   },
   {
+    name: "hospitality",
+    bidirectional: false,
+    category: "content",
+    animated: false,
+  },
+  {
     name: "incognito",
     bidirectional: false,
     category: "content",

@@ -5,6 +5,8 @@
 #### New Features - New features that have recently been added
 
 - Added new bot-agent [Icon](https://design.avaya.com/components/icons/)
+- Added new hospitality [Icon](https://design.avaya.com/components/icons/)
+
 
 ### 3.59.1
 
