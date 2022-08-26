@@ -6,9 +6,9 @@
   "scripts": {
     "build": "parcel build neo/neo-scss/neo.scss",
     "build:to": "parcel build neo/neo-scss/neo.scss --dist-dir",
-    "build:for-publish": "npm run build:package && npm run build:package-old",
-    "build:package": "parcel build neo/neo-scss/neo.scss --dist-dir ../neo-npm-package",
-    "build:package-old": "parcel build neo/neo-scss/neo.scss --dist-dir ../neo-npm-package/neo/dist/css/neo",
+    "build:for-publish": "npm run build:package && npm run post-build",
+    "build:package": "parcel build neo/neo-scss/neo.scss --dist-dir ../neo-npm-package --no-cache",
+    "post-build": "shx cp ../neo-npm-package/neo.css ../neo-npm-package/neo.min.css && prettier --write ../neo-npm-package/neo.css && shx mv ../neo-npm-package/neo.css ../neo-npm-package/neo.min.css ../neo-npm-package/neo.css.map ../neo-npm-package/neo/dist/css/neo",
     "watch": "parcel watch neo/neo-scss/*.scss"
   },
   "devDependencies": {
@@ -24,9 +24,10 @@
     "lodash": "4.17.21",
     "node-fetch": "3.2.10",
     "parcel": "2.7.0",
-    "postcss": "8.4.16",
+    "postcss": "^8.4.16",
     "prettier": "2.7.1",
     "replace-in-file": "6.3.5",
+    "shx": "^0.3.4",
     "style-dictionary": "3.7.1",
     "susy": "3.0.7",
     "webfonts-generator": "0.4.0"

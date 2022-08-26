@@ -7,6 +7,7 @@
   "scripts": {
     "build": "yarn build:css && yarn build:staging",
     "build:css": "yarn workspace css-library build",
+    "build:for-publish": "yarn workspace css-library build:for-publish",
     "build:staging": "yarn workspace staging build",
     "dev": "yarn dev:css & yarn dev:staging",
     "dev:css": "yarn workspace css-library watch",
