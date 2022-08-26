@@ -13,17 +13,11 @@ from the root of the directory
 
 1. update `neo-npm-package/package.json` version number in main branch
 2. `npm login`: to ensure that you are properly logged in to the NPM network
-3. run the following command `yarn workspace css-library build:for-publish` to build a production version of neo.css in the folder `neo-npm-package`
+3. run the following command `yarn build:for-publish` to build a production version of neo.css in the folder `neo-npm-package`
 
-- - **TEMP**: duplicate `neo.css` file and rename to `neo.min.css`
-- - **TEMP**: format `neo.css` to unminify it
-- - **TEMP**: move `neo.css`, `neo.min.css` and `neo.css.map` to neo/dist/css/neo (will ovewrite neo.css and neo.css.map)
 - - **TEMP**: ensure all supporting files exist (`colors/*`, `fonts/*`, `icons/*`) inside neo/dist/css (get files from Mo)
 
 4. copy-paste the contents of `css-library/neo/changelog.md` to `neo-npm-package/CHANGELOG.md`
-
-- - _DO NOT_ check-in this change to `neo-npm-package/CHANGELOG.md`
-
 5. `cd neo-npm-package`: navigate to the root of the packaging sub-project
 6. `npm pack`: packages the contents of `neo-npm-package` into a tarball
 7. `npm publish`: creates and publishes a tarball to our registry
