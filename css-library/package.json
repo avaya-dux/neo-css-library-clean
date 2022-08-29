@@ -24,10 +24,10 @@
     "lodash": "4.17.21",
     "node-fetch": "3.2.10",
     "parcel": "2.7.0",
-    "postcss": "^8.4.16",
+    "postcss": "8.4.16",
     "prettier": "2.7.1",
     "replace-in-file": "6.3.5",
-    "shx": "^0.3.4",
+    "shx": "0.3.4",
     "style-dictionary": "3.7.1",
     "susy": "3.0.7",
     "webfonts-generator": "0.4.0"
