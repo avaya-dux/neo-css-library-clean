@@ -7,8 +7,8 @@
 - Added new bot-agent [Icon](https://design.avaya.com/components/icons/)
 - Added new hospitality [Icon](https://design.avaya.com/components/icons/)
 
-
-### 3.59.1
+### 3.59.2
+### 3.59.1 (reverted)
 
 #### Bugs Report - List of bugs that have been updated
 
