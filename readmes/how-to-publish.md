@@ -74,3 +74,9 @@ Once the publishing is completed, we must then update the Design Portal with an 
 12. open a PR into `develop`, merge, then open a PR into `main` and merge. When this second PR is merged the site will be deployed to production.
 
 - - _IMPORTANT NOTE:_ do _not_ skip this step, it is imperitive that we update the Design Portal with the latest changes _at the same time_ as we update the css-library
+
+### make sure version is marked as 'released' in JIRA
+
+- **TEMP**: Navigate to the [NEO CSS Framework JIRA project versions page](https://jira.forge.avaya.com/projects/NEO/versions/), find and click into the version you are publishing, mark it as 'Released' and date the release as necessary.
+
+- - Note: If you do not find the version that you are publishing among those listed, or if you have any other issues with the above step, please ping Mo or Jim
