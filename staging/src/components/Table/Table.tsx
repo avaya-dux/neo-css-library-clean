@@ -213,16 +213,29 @@ export const TableWithSelectAllRow = () => {
               )}
             >
               <td>
-                <input
-                  className="neo-check"
-                  type="checkbox"
-                  value="row1"
-                  id="row1"
-                  name="row1"
-                  checked={selectedRows.includes("row1") || selectAllOnPage}
-                  onChange={onCheckboxChange}
-                />
-                <label htmlFor="row1"></label>
+                <div
+                  className="neo-tooltip neo-tooltip--down neo-tooltip--onhover"
+                  aria-describedby="table-tooltip"
+                >
+                  <input
+                    className="neo-check"
+                    type="checkbox"
+                    value="row1"
+                    id="row1"
+                    name="row1"
+                    checked={selectedRows.includes("row1") || selectAllOnPage}
+                    onChange={onCheckboxChange}
+                  />
+                  <label htmlFor="row1"></label>
+                  <div
+                    className="neo-tooltip__content"
+                    role="tooltip"
+                    id="table-tooltip"
+                  >
+                    <div className="neo-arrow"></div>
+                    Test
+                  </div>
+                </div>
               </td>
               <td>Thomas</td>
               <td className="number">12345</td>

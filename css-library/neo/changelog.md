@@ -1,5 +1,12 @@
 # Changelog
 
+### 3.60.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Changed line-height and padding values on [Checkboxes](https://design.avayacloud.com/components/web/checkbox-web) to treat alignment issues
+- Changed margin property on Checkboxes in [Tables](https://design.avayacloud.com/components/web/tables-web) to correctly align Tooltips
+
 ### 3.60.0
 
 #### New Features - New features that have recently been added
@@ -8,6 +15,7 @@
 - Added new hospitality [Icon](https://design.avaya.com/components/icons/)
 
 ### 3.59.2
+
 ### 3.59.1 (reverted)
 
 #### Bugs Report - List of bugs that have been updated

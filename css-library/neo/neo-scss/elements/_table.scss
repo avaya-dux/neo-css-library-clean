@@ -118,7 +118,10 @@
 
     .neo-check + label {
       display: flex;
-      line-height: 16px !important;
+      line-height: 14px;
+      &:before {
+        margin: 0 4px;
+      }
     }
     .neo-multiselect__content ul li {
       font-weight: 400;
@@ -203,6 +206,9 @@
       background-color: $table-row-hover-color;
       td .neo-check + label {
         display: flex;
+        &:before {
+          margin: 0 4px;
+        }
       }
       td .neo-btn-square {
         display: block;
@@ -227,7 +233,7 @@
       }
       td .neo-check + label {
         display: flex;
-        line-height: 16px !important;
+        line-height: 14px;
       }
       td .neo-btn-square {
         display: block;
@@ -255,6 +261,9 @@
     }
     .neo-check + label {
       display: none;
+      &::before {
+        margin: 0 4px;
+      }
     }
     &.select-all {
       background-color: var(--neo-color-blue-100);
