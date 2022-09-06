@@ -11,15 +11,15 @@
     "all": "yarn && yarn clean && yarn lint && yarn build"
   },
   "devDependencies": {
-    "@astrojs/react": "1.1.0",
+    "@astrojs/react": "1.1.1",
     "@astrojs/svelte": "1.0.0",
     "@astrojs/vue": "1.0.0",
     "@astronomer/eslint-config-astro": "1.0.3",
-    "@types/react": "18.0.17",
+    "@types/react": "18.0.18",
     "@types/react-dom": "18.0.6",
-    "@typescript-eslint/eslint-plugin": "5.35.1",
-    "@typescript-eslint/parser": "5.35.1",
-    "astro": "1.1.1",
+    "@typescript-eslint/eslint-plugin": "5.36.2",
+    "@typescript-eslint/parser": "5.36.2",
+    "astro": "1.1.5",
     "clsx": "1.2.1",
     "eslint": "8.23.0",
     "eslint-config-prettier": "8.5.0",
@@ -30,14 +30,14 @@
     "eslint-plugin-n": "15.2.5",
     "eslint-plugin-prettier": "4.2.1",
     "eslint-plugin-promise": "6.0.1",
-    "eslint-plugin-react": "7.31.1",
+    "eslint-plugin-react": "7.31.7",
     "eslint-plugin-react-hooks": "4.6.0",
     "eslint-plugin-standard": "5.0.0",
     "prettier": "2.7.1",
-    "prettier-plugin-astro": "0.5.3",
+    "prettier-plugin-astro": "0.5.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "svelte": "3.49.0",
-    "vue": "3.2.37"
+    "svelte": "3.50.0",
+    "vue": "3.2.38"
   }
 }
