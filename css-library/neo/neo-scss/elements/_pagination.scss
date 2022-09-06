@@ -14,16 +14,9 @@
       margin-left: 8px;
     }
     &:focus-within .neo-multiselect__header {
-      /* subtracting 1px from border width to avoid layout shifting on focus*/
-      padding: 7px 23px 7px 11px;
       margin: 0;
     }
-    &:focus-within .neo-multiselect-combo__header {
-      margin:-1px 0;
-      & .neo-input {
-        padding: 7px 0px 7px 11px;
-      }
-    }
+
     .neo-multiselect__header {
       min-width: 70px;
       & ul li {
@@ -31,7 +24,7 @@
       }
     }
     .neo-multiselect-combo__header {
-      .neo-input{
+      .neo-input {
         max-width: 32px;
       }
     }
@@ -48,8 +41,7 @@
       }
     }
     &:focus {
-       /* subtracting 1px from border width to avoid layout shifting on focus*/
-      margin: -1px 32px -1px 0px;
+      margin: -1px 31px -1px 0px;
     }
   }
 }
@@ -59,7 +51,6 @@
     @extend %button;
     background-color: $pagination-btn-background;
     color: $pagination-color;
-    margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
     text-decoration: none;
     border-radius: 2px;
@@ -76,7 +67,6 @@
     @extend %button;
     background-color: $pagination-btn-background;
     color: $pagination-color;
-    margin: 0 $pagination-margin;
     min-width: $pagination-min-width-item;
     text-decoration: none;
     @include rtl-selector {
@@ -129,22 +119,23 @@
   &__list {
     @extend %pagination;
     list-style-type: none;
-    margin: $pagination-margin;
-    & li:not(:first-child):not(:last-child) {
-      button {
-        margin-right: 8px;
-        @include rtl-selector {
-          margin-left: 8px;
-          margin-right: 0px;
-        }
-      }
+    margin: $pagination-margin 0;
+    & .neo-btn-square {
+      width: 36px;
+      height: 36px;
+    }
+    & li {
+      height: 36px;
+      width: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
   }
 }
 
 @mixin pagination-dots {
   &__dots {
-    padding: $button-padding;
     color: $pagination-dots-color;
     font-size: $pagination-dots-size;
     pointer-events: none;

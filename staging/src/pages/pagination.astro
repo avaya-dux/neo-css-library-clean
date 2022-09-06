@@ -1,15 +1,23 @@
 ---
-import NeoLayout from '../layouts/NeoLayout.astro';
+import NeoLayout from "../layouts/NeoLayout.astro";
 ---
 
-<NeoLayout title="Select">
+<NeoLayout title="Pagination">
   <nav class="neo-pagination" role="navigation" aria-label="pagination">
-    <button class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-left" role="button"
+    <button
+      class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-left"
+      role="button"
       aria-label="previous"></button>
-    <div class="neo-multiselect" tabindex={0} aria-expanded="false" role="combobox" aria-haspopup="listbox"
-      aria-label="multiselect">
+    <div
+      class="neo-multiselect"
+      tabindex={0}
+      aria-expanded="false"
+      role="combobox"
+      aria-haspopup="listbox"
+      aria-label="multiselect"
+    >
       <div class="neo-multiselect-combo__header">
-        <input class="neo-input" id="combobox" />
+        <input class="neo-input" id="combobox" value="1" />
       </div>
       <div class="neo-multiselect__content">
         <ul role="listbox">
@@ -50,7 +58,129 @@ import NeoLayout from '../layouts/NeoLayout.astro';
       </div>
     </div>
     <div>/ 20 pages</div>
-    <button class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-right" role="button" aria-label="next"
-      disabled></button>
+    <button
+      class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-right"
+      role="button"
+      aria-label="next"></button>
+  </nav>
+
+  <br />
+
+  <nav class="neo-pagination" role="navigation" aria-label="pagination">
+    <button
+      class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-left"
+      role="button"
+      aria-label="previous"></button>
+    <ul class="neo-pagination__list">
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+          role="button"
+          aria-label="Page 1"
+        >
+          1
+        </button>
+      </li>
+      <li>
+        <span class="neo-pagination__dots">&hellip;</span>
+      </li>
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+          role="button"
+          aria-label="Page 49"
+        >
+          49
+        </button>
+      </li>
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-secondary neo-btn-square-secondary--info"
+          role="button"
+          aria-label="Page 50"
+        >
+          50
+        </button>
+      </li>
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+          role="button"
+          aria-label="Page 51"
+        >
+          51
+        </button>
+      </li>
+      <li>
+        <span class="neo-pagination__dots">&hellip;</span>
+      </li>
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+          role="button"
+          aria-label="Page 99"
+        >
+          99
+        </button>
+      </li>
+    </ul>
+    <button
+      class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-right"
+      role="button"
+      aria-label="next"></button>
+  </nav>
+
+  <br />
+
+  <nav class="neo-pagination" role="navigation" aria-label="pagination">
+    <button
+      class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-left"
+      role="button"
+      aria-label="previous"></button>
+    <ul class="neo-pagination__list">
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+          role="button"
+          aria-label="Page 1"
+        >
+          1
+        </button>
+      </li>
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+          role="button"
+          aria-label="Page 49"
+        >
+          2
+        </button>
+      </li>
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-secondary neo-btn-square-secondary--info"
+          role="button"
+          aria-label="Page 50"
+        >
+          3
+        </button>
+      </li>
+      <li>
+        <span class="neo-pagination__dots">&hellip;</span>
+      </li>
+      <li>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+          role="button"
+          aria-label="Page 99"
+        >
+          20
+        </button>
+      </li>
+    </ul>
+    <button
+      class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-right"
+      role="button"
+      aria-label="next"></button>
   </nav>
 </NeoLayout>

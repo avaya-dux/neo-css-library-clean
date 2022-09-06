@@ -6,6 +6,7 @@
 
 - Changed line-height and padding values on [Checkboxes](https://design.avayacloud.com/components/web/checkbox-web) to treat alignment issues
 - Changed margin property on Checkboxes in [Tables](https://design.avayacloud.com/components/web/tables-web) to correctly align Tooltips
+- Removed margins between [Pagination](https://design.avaya.com/components/web/pagination-web) items
 
 ### 3.60.0
 
