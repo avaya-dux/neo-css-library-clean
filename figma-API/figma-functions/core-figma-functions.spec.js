@@ -14,7 +14,7 @@ describe("coreFigmaFunctions", () => {
     );
 
     expect(response).toMatchInlineSnapshot(`
-      Object {
+      {
         "data": "12345",
       }
     `);
@@ -24,6 +24,7 @@ describe("coreFigmaFunctions", () => {
       "https://api.figma.com/v1/files/figmaId?geometry=paths"
     );
   });
+
   it("getFigmaObjTree failed", async () => {
     fetch.mockReject(new Error("fake error message"));
 
