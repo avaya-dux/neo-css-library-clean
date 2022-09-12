@@ -10,7 +10,7 @@ jobs:
           fetch-depth: 0
       - name: Check for changes to SCSS files
         id: verify-changed-files
-        uses: tj-actions/changed-files@v23.2
+        uses: tj-actions/changed-files@v26.1
         with:
           files: |
             css-library/neo/neo-scss/**/*.scss
