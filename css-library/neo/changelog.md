@@ -12,6 +12,8 @@
 - Changed margin property on Checkboxes in [Tables](https://design.avayacloud.com/components/web/tables-web) to correctly align Tooltips
 - Removed margins between [Pagination](https://design.avaya.com/components/web/pagination-web) items
 
+### 3.60.1 (reverted)
+
 ### 3.60.0
 
 #### New Features - New features that have recently been added
