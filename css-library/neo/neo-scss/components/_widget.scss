@@ -130,8 +130,15 @@
   padding: $value;
 }
 
+@mixin borderless-widget {
+  &--borderless {
+    border: none;
+  }
+}
+
 .neo-widget__content {
   @include NeoLinkStyles;
+  @include borderless-widget;
   color: $global-text-color;
   background-color: $widget-background-color;
   border: $widget-border-width $widget-border-style $widget-border-color;

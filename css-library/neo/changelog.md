@@ -1,6 +1,10 @@
 # Changelog
 
-### 3.60.1
+### 3.61.0
+
+#### New Features - New features that have recently been added
+
+- Added '.neo-widget\_\_content--borderless' utility class for borderless [Widget](https://design.avaya.com/components/web/widget-web) Component
 
 #### Bugs Report - List of bugs that have been updated
 

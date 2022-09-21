@@ -1,9 +1,11 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
 
-import { BasicWidget } from "../components";
+import { BasicWidget, BorderlessWidget } from "../components";
 ---
 
 <NeoLayout title="Widget">
   <BasicWidget client:load />
+  <br />
+  <BorderlessWidget client:load />
 </NeoLayout>
