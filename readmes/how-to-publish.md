@@ -3,7 +3,8 @@
 ### pre-publish checks (TEMP)
 
 1. ensure that you have pulled the latest from the `main` branch and are working from it
-2. ensure that the `neo/changelog.md` is up to date (will be deprecated in future releases)
+2. ensure that you have all necessary dependencies installed -- run `yarn all` if necessary
+3. ensure that the `neo/changelog.md` is up to date (will be deprecated in future releases)
 
 - - look back through the last few commits into the `main` branch to ensure that the `neo/changelog.md` was updated with every commit (as appropriate)
 
@@ -13,14 +14,12 @@ from the root of the directory
 
 1. update `neo-npm-package/package.json` version number in main branch
 2. `npm login`: to ensure that you are properly logged in to the NPM network
-3. run the following command `yarn build:for-publish` to build a production version of neo.css in the folder `neo-npm-package`
-
-- - **TEMP**: ensure all supporting files exist (`colors/*`, `fonts/*`, `icons/*`) inside neo/dist/css (get files from Mo)
-
-4. copy-paste the contents of `css-library/neo/changelog.md` to `neo-npm-package/CHANGELOG.md`
-5. `cd neo-npm-package`: navigate to the root of the packaging sub-project
-6. `npm pack`: packages the contents of `neo-npm-package` into a tarball
-7. `npm publish`: creates and publishes a tarball to our registry
+3. run the following command `yarn build:for-publish` to build a production version of neo.css in the folder `neo-npm-package`, as well as all supporting files
+4. Ensure all supporting files exist (`colors/*`, `fonts/*`, `icons/*`) inside neo/dist/css
+5. copy-paste the contents of `css-library/neo/changelog.md` to `neo-npm-package/CHANGELOG.md`
+6. `cd neo-npm-package`: navigate to the root of the packaging sub-project
+7. `npm pack`: packages the contents of `neo-npm-package` into a tarball
+8. `npm publish`: creates and publishes a tarball to our registry
 
 ### post-publish steps
 

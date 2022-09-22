@@ -6,8 +6,10 @@
   "scripts": {
     "build": "parcel build neo/neo-scss/neo.scss",
     "build:to": "parcel build neo/neo-scss/neo.scss --dist-dir",
-    "build:for-publish": "npm run build:package && npm run post-build",
+    "build:for-publish": "npm run build:package && npm run build:colors && npm run build:fonts && npm run post-build",
     "build:package": "parcel build neo/neo-scss/neo.scss --dist-dir ../neo-npm-package --no-cache",
+    "build:colors": "parcel build neo/neo-scss/base/_colors.scss --dist-dir ../neo-npm-package/neo/dist/css/colors --no-source-maps --no-cache && shx mv ../neo-npm-package/neo/dist/css/colors/_colors.css ../neo-npm-package/neo/dist/css/colors/neo-colors.css && shx cp neo/neo-scss/tokens/_colors.scss ../neo-npm-package/neo/dist/css/colors/neo-colors.scss",
+    "build:fonts": "shx mkdir -p ../neo-npm-package/neo/dist/css/fonts && cp neo/neo-fonts/* ../neo-npm-package/neo/dist/css/fonts",
     "post-build": "shx cp ../neo-npm-package/neo.css ../neo-npm-package/neo.min.css && prettier --write ../neo-npm-package/neo.css && shx mv ../neo-npm-package/neo.css ../neo-npm-package/neo.min.css ../neo-npm-package/neo.css.map ../neo-npm-package/neo/dist/css/neo",
     "watch": "parcel watch neo/neo-scss/*.scss"
   },

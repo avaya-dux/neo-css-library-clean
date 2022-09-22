@@ -109,8 +109,7 @@ const generateIcons = async () => {
         );
 
         await fs.unlink(`${buildDir}/updated-neo-icons.woff`);
-
-        fs.unlink(`${buildDir}/updated-neo-icons.css`);
+        await fs.unlink(`${buildDir}/updated-neo-icons.css`);
 
         console.log("icons successfully generated");
       } catch (error) {

@@ -1,80 +1,66 @@
-// @include define-color-hsl(
-//   "data-visualization-categorial-green",
-//   hex-to-hsl($token-color-data-viz-categorial-green)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-purple-Light",
-//   hex-to-hsl($token-color-data-viz-categorial-purple-light)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-pink",
-//   hex-to-hsl($token-color-data-viz-categorial-pink)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-red",
-//   hex-to-hsl($token-color-data-viz-categorial-red)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-real",
-//   hex-to-hsl($token-color-data-viz-categorial-teal)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-orange",
-//   hex-to-hsl($token-color-data-viz-categorial-orange)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-blue-mid",
-//   hex-to-hsl($token-color-data-viz-categorial-blue-mid)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-blue-dark",
-//   hex-to-hsl($token-color-data-viz-categorial-blue-dark)
-// );
-// @include define-color-hsl(
-//   "data-visualization-categorial-purple",
-//   hex-to-hsl($token-color-data-viz-categorial-purple)
-// );
-// @include define-color-hsl("base-0", hex-to-hsl($token-color-base-0));
-// @include define-color-hsl("base-100", hex-to-hsl($token-color-base-100));
-// @include define-color-hsl("base-200", hex-to-hsl($token-color-base-200));
-// @include define-color-hsl("base-400", hex-to-hsl($token-color-base-400));
-// @include define-color-hsl("base-500", hex-to-hsl($token-color-base-500));
-// @include define-color-hsl("base-600", hex-to-hsl($token-color-base-600));
-// @include define-color-hsl("base-800", hex-to-hsl($token-color-base-800));
-// @include define-color-hsl("base-900", hex-to-hsl($token-color-base-900));
-// @include define-color-hsl("base-1000", hex-to-hsl($token-color-base-1000));
-// @include define-color-hsl("blue-100", hex-to-hsl($token-color-blue-100));
-// @include define-color-hsl("blue-200", hex-to-hsl($token-color-blue-200));
-// @include define-color-hsl("blue-400", hex-to-hsl($token-color-blue-400));
-// @include define-color-hsl("blue-500", hex-to-hsl($token-color-blue-500));
-// @include define-color-hsl("blue-600", hex-to-hsl($token-color-blue-600));
-// @include define-color-hsl("blue-800", hex-to-hsl($token-color-blue-800));
-// @include define-color-hsl("blue-900", hex-to-hsl($token-color-blue-900));
-// @include define-color-hsl("red-100", hex-to-hsl($token-color-red-100));
-// @include define-color-hsl("red-200", hex-to-hsl($token-color-red-200));
-// @include define-color-hsl("red-400", hex-to-hsl($token-color-red-400));
-// @include define-color-hsl("red-500", hex-to-hsl($token-color-red-500));
-// @include define-color-hsl("red-600", hex-to-hsl($token-color-red-600));
-// @include define-color-hsl("red-800", hex-to-hsl($token-color-red-800));
-// @include define-color-hsl("red-900", hex-to-hsl($token-color-red-900));
-// @include define-color-hsl("green-100", hex-to-hsl($token-color-green-100));
-// @include define-color-hsl("green-200", hex-to-hsl($token-color-green-200));
-// @include define-color-hsl("green-400", hex-to-hsl($token-color-green-400));
-// @include define-color-hsl("green-500", hex-to-hsl($token-color-green-500));
-// @include define-color-hsl("green-600", hex-to-hsl($token-color-green-600));
-// @include define-color-hsl("green-800", hex-to-hsl($token-color-green-800));
-// @include define-color-hsl("green-900", hex-to-hsl($token-color-green-900));
-// @include define-color-hsl("purple-100", hex-to-hsl($token-color-purple-100));
-// @include define-color-hsl("purple-200", hex-to-hsl($token-color-purple-200));
-// @include define-color-hsl("purple-400", hex-to-hsl($token-color-purple-400));
-// @include define-color-hsl("purple-500", hex-to-hsl($token-color-purple-500));
-// @include define-color-hsl("purple-600", hex-to-hsl($token-color-purple-600));
-// @include define-color-hsl("purple-800", hex-to-hsl($token-color-purple-800));
-// @include define-color-hsl("purple-900", hex-to-hsl($token-color-purple-900));
-// @include define-color-hsl("orange-100", hex-to-hsl($token-color-orange-100));
-// @include define-color-hsl("orange-200", hex-to-hsl($token-color-orange-200));
-// @include define-color-hsl("orange-400", hex-to-hsl($token-color-orange-400));
-// @include define-color-hsl("orange-500", hex-to-hsl($token-color-orange-500));
-// @include define-color-hsl("orange-600", hex-to-hsl($token-color-orange-600));
-// @include define-color-hsl("orange-800", hex-to-hsl($token-color-orange-800));
-// @include define-color-hsl("orange-900", hex-to-hsl($token-color-orange-900));
+$token-color-base-150: #dddddd;
+$token-color-base-850: #2b2b2b;
+$token-color-data-viz-categorial-dark-pink: #c591bd;
+$token-color-data-viz-categorial-dark-teal: #2a7884;
+$token-color-data-viz-categorial-dark-green: #038761;
+$token-color-data-viz-categorial-dark-red: #e93f42;
+$token-color-data-viz-categorial-dark-purple-light: #746bf5;
+$token-color-data-viz-categorial-dark-blue-dark: #77addf;
+$token-color-data-viz-categorial-dark-blue-mid: #019bef;
+$token-color-data-viz-categorial-dark-orange: #cc6600;
+$token-color-data-viz-categorial-dark-purple: #b1439d;
+$token-color-border-elevation-dark: #f1f1f1;
+$token-color-border-elevation: #000000;
+$token-color-base-0: #ffffff;
+$token-color-base-100: #f1f1f1;
+$token-color-base-500: #757474;
+$token-color-base-900: #242424;
+$token-color-base-200: #c9c9c9;
+$token-color-base-600: #5e5e5e;
+$token-color-base-400: #939393;
+$token-color-base-1000: #000000;
+$token-color-base-800: #323232;
+$token-color-blue-500: #1473e6;
+$token-color-purple-500: #ab3fe0;
+$token-color-green-600: #2b6b2b;
+$token-color-orange-100: #fceee8;
+$token-color-blue-100: #e8f1fc;
+$token-color-purple-100: #f7edfc;
+$token-color-green-500: #088a08;
+$token-color-green-400: #51a651;
+$token-color-green-800: #173b17;
+$token-color-blue-800: #0b3363;
+$token-color-red-900: #3d1815;
+$token-color-green-900: #102910;
+$token-color-green-100: #e4f7e4;
+$token-color-green-200: #9cd99c;
+$token-color-data-viz-categorial-blue-dark: #3851d0;
+$token-color-data-viz-categorial-purple-light: #8a82f7;
+$token-color-data-viz-categorial-purple: #8e4b88;
+$token-color-data-viz-categorial-green: #029e73;
+$token-color-blue-900: #092547;
+$token-color-data-viz-categorial-blue-mid: #0173b2;
+$token-color-data-viz-categorial-red: #e31a1c;
+$token-color-data-viz-categorial-teal: #36a3ab;
+$token-color-data-viz-categorial-pink: #cc78bc;
+$token-color-red-100: #fceceb;
+$token-color-red-200: #edbfbb;
+$token-color-red-400: #e56960;
+$token-color-red-500: #d93d32;
+$token-color-red-600: #ab2c2c;
+$token-color-red-800: #591f1b;
+$token-color-blue-200: #abccf5;
+$token-color-blue-400: #4c94ed;
+$token-color-blue-600: #125ab3;
+$token-color-orange-200: #f7bba3;
+$token-color-orange-400: #f76125;
+$token-color-orange-500: #cc4d1b;
+$token-color-orange-600: #a63b11;
+$token-color-orange-800: #59230d;
+$token-color-orange-900: #3d1809;
+$token-color-purple-200: #e0bbf2;
+$token-color-purple-400: #bf73e5;
+$token-color-purple-600: #8832b3;
+$token-color-purple-800: #4c1d63;
+$token-color-purple-900: #371547;
+$token-color-data-viz-categorial-orange: #e67300;

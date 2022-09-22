@@ -4,12 +4,15 @@
   "scripts": {
     "build-icons": "node icon-scripts",
     "pull-icons": "node icon-pull.js",
-    "write-icons": "node ./icons-functions/icon-css-generator.js"
+    "write-icons": "node ./icons-functions/icon-css-generator.js",
+    "package-icons": "shx mkdir -p ../neo-npm-package/neo/dist/css/icons/ && shx cp ../css-library/neo/neo-scss/icons.scss ../neo-npm-package/neo/dist/css/icons/neo-icons.css"
   },
   "license": "UNLICENSED",
   "devDependencies": {
     "axios": "0.27.2",
     "dotenv": "16.0.2",
+    "replace-in-file": "^6.3.5",
+    "shx": "^0.3.4",
     "webfonts-generator": "0.4.0"
   }
 }
