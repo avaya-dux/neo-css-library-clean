@@ -210,6 +210,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-bottom: $navbar-action-border-width $navbar-action-border-style
+      transparent;
     & .neo-badge__navbutton--content {
       height: 100% !important;
       width: $navbar-icon-button-width !important;
@@ -249,6 +251,9 @@
             color: $navbar-icon-hover-color;
           }
         }
+      }
+      & .neo-badge__navbutton--content {
+        margin-top: 2px;
       }
 
       & .neo-badge__navbutton--content::before {

@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.61.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added transparent border to [Navbar](https://design.avayacloud.com/components/web/navbar-web) buttons to preserve alignment between buttons in active state
+
 ### 3.61.0
 
 #### New Features - New features that have recently been added
