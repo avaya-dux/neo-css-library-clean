@@ -66,7 +66,7 @@ import NeoLayout from "../layouts/NeoLayout.astro";
             disabled></button>
         </div>
 
-        <div class="neo-dropdown neo-dropdown--onhover neo-dropdown--left">
+        <div class="neo-dropdown neo-dropdown--left" role="button" tabindex="0">
           <figure
             class="neo-avatar neo-avatar--navbar-nested neo-avatar--medium  neo-dropdown__link-header"
             data-initials="MD"
@@ -155,7 +155,7 @@ import NeoLayout from "../layouts/NeoLayout.astro";
             disabled></button>
         </div>
 
-        <div class="neo-dropdown neo-dropdown--onhover neo-dropdown--left">
+        <div class="neo-dropdown neo-dropdown--left" role="button" tabindex="0">
           <figure
             class="neo-avatar neo-avatar--navbar-nested neo-avatar--medium  neo-dropdown__link-header"
             data-initials="MD"
@@ -185,6 +185,28 @@ import NeoLayout from "../layouts/NeoLayout.astro";
             </a>
           </div>
         </div>
+      </div>
+    </nav>
+
+    <nav class="neo-navbar">
+      <div class="neo-nav--left">
+        <a class="neo-skipnav" href="#content">Skip to main content</a>
+
+        <a class="neo-navbar__brand" title="Neo Framework">
+          <img src="https://via.placeholder.com/76x57?text=LOGO" />
+        </a>
+
+        <div class="neo-nav--left--heading" role="heading">Product Name</div>
+        <form class="neo-form">
+              <span class="neo-icon-call search-icon--small"></span>
+              <div class="neo-form-control">
+                <div class="neo-input-group">
+                  <div class="neo-input-editable__wrapper">
+                    <input role="textbox" class="neo-input input--number" tabindex="0" placeholder="Enter number" aria-disabled="false">
+                  </div>
+                </div>
+              </div>
+        </form>
       </div>
     </nav>
 
@@ -266,5 +288,20 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 
   ul {
     margin-left: 2rem;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+  }
+
+  .search-icon--small {
+    margin-right: 16px;
+    margin-left: 8px;
+    font-size: 20px;
+  }
+
+  .neo-input-icon__wrapper.neo-input-editable__wrapper:focus-within {
+    margin-left: 15px;
   }
 </style>

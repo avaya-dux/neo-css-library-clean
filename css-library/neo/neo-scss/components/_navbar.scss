@@ -10,6 +10,24 @@
   @include navbar-button;
 }
 
+@mixin navbar-form {
+  .neo-form {
+    margin-left: $navbar-padding-x;
+    align-self: center;
+
+    & .neo-form-control {
+      margin-bottom: 0px;
+    }
+
+    @include rtl-selector {
+      margin: {
+        right: $navbar-padding-x;
+      }
+    }
+  }
+
+  @include navbar-button;
+}
 @mixin navbar-tabs {
   .neo-tabs {
     height: 100%;
@@ -56,6 +74,7 @@
     $navbar-border-bottom-color;
 
   @include navbar-search;
+  @include navbar-form;
   @include navbar-tabs;
 
   & .neo-badge__navbutton--content::before {

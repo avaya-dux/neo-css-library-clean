@@ -4,6 +4,7 @@
 
 #### Bugs Report - List of bugs that have been updated
 
+- Add back .neo-form and .neo-form-control styles inside [Navbar](https://design.avaya.com/components/web/navbar-web)
 - Added transparent border to [Navbar](https://design.avayacloud.com/components/web/navbar-web) buttons to preserve alignment between buttons in active state
 
 ### 3.61.0
