@@ -9,6 +9,7 @@ export * from "./Radio";
 export * from "./Accordion";
 export * from "./Icons";
 export * from "./Widget";
+export * from "./Dropdown";
 
 // svelte
 export * from "./RootDir";

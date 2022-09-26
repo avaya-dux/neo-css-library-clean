@@ -1,11 +1,8 @@
-// updated dropdown styles
-
 @include neo-icon-context {
   &.neo-dropdown__link {
     $color: $dropdown-color;
     &::before {
       font-size: $global-font-size;
-      // margin-bottom: $dropdown-icon-margin-x;
       margin-right: $dropdown-icon-margin-x;
 
       @include rtl-selector {
@@ -19,24 +16,15 @@
 }
 
 @mixin neo-dropdown-arrow(
-  // chevron-down
   $arrow-icon: $dropdown-expand-icon,
   $color: $dropdown-color,
   $padding-left: $dropdown-padding-x
 ) {
   &::after {
     font-family: "updated-neo-icons";
-    // color: $global-text-inverse-color;
     content: $arrow-icon;
     padding: 0 0 0 $padding-left;
     vertical-align: middle;
-
-    // @include rtl-selector {
-    //   padding: {
-    //     left: initial;
-    //     right: $padding-left;
-    //   }
-    // }
   }
   &:not(.neo-dropdown__link-header)::after {
     color: $global-text-color;
@@ -44,21 +32,13 @@
     right: 0px;
     padding: 0 8px 0 0;
     vertical-align: middle;
-    // @include rtl-selector {
-    //   padding: {
-    //     left: 8px;
-    //     right: initial;
-    //   }
-    // }
   }
   @include rtl-selector {
     &::after {
-      // display: none;
       all: initial;
     }
     &::before {
       font-family: "updated-neo-icons";
-      // color: $global-text-inverse-color;
       content: $arrow-icon;
       padding: 0 $padding-left 0 0;
       vertical-align: middle;
@@ -74,24 +54,6 @@
   }
 }
 
-// flip icon for right-aligned dropdowns
-
-// @mixin neo-dropdown-arrow-left(
-//   // chevron-left
-//   $arrow-icon: $dropdown-expand-left-icon,
-//   $color: $global-text-color,
-//   $padding-right: $dropdown-padding-x
-// ) {
-//   &::before {
-//     font-family: 'updated-neo-icons';
-//     color: $color;
-//     content: $arrow-icon;
-//     padding: 0 $padding-right 0 0;
-//     vertical-align: middle;
-//     font-size: 16px;
-//   }
-// }
-
 @mixin neo-dropdown-item {
   $self: &;
 
@@ -104,14 +66,12 @@
     > #{$self}__link {
       color: $global-text-color;
 
-      // chevron-right
       @include neo-dropdown-arrow(
         $arrow-icon: $dropdown-expand-right-icon,
         $color: $global-text-color
       );
       &::after {
         font-size: 16px;
-        // color: $global-text-color;
         vertical-align: middle;
       }
     }
@@ -123,23 +83,12 @@
 
   & > &__link {
     display: inline-block;
-    // hard-coded for now
     @include neo-dropdown-arrow();
   }
 
-  // & > &__link-right {
-  //   display: inline-block;
-  //   @include neo-dropdown-arrow-left;
-  // }
-
   &__link {
-    // text-overflow: clip;
-    // white-space: pre-line;
-    // width: max-content;
-    // word-break: keep-all;
     overflow-wrap: break-word;
     white-space: normal;
-    // word-wrap: normal;
     color: $global-text-color;
     max-width: 300px;
     cursor: pointer;
@@ -162,7 +111,6 @@
     }
 
     text-decoration: none;
-    // white-space: nowrap;
 
     &:hover,
     &:focus,
@@ -173,20 +121,12 @@
       transition-property: background-color;
     }
     &-header {
-      // background: $dropdown-content-background-color;
-      // color: $dropdown-item-color;
       @include neo-dropdown-arrow();
-      &:hover {
-        // background-color: $dropdown-item-hover-background-color;
-        // color: $dropdown-item-hover-color;
-      }
     }
     &-active {
       background-color: $dropdown-item-hover-background-color;
       color: $dropdown-item-hover-color;
     }
-
-    // @include neo-icons;
   }
 }
 
@@ -196,7 +136,6 @@
     transition-timing-function: $global-transition-timing;
     left: 100%;
     top: -1px;
-    // overrides box-shadow parameter in below mixin
     box-shadow: $dropdown-box-shadow;
 
     @include rtl-selector {
@@ -223,8 +162,6 @@
     }
   }
 
-  // this doesn't work as we need the dropdowns to function independently of each other
-
   &__content--left-nested {
     left: auto !important;
     right: 100% !important;
@@ -243,52 +180,6 @@
     }
   }
 
-  // &__content--right {
-  //   // left: auto !important;
-  //   right: auto !important;
-  //   // top: -1px !important;
-  // }
-
-  // &__content--right > &__content--right {
-  //   left: 100% !important;
-  //   right: auto !important;
-  //   top: -1px !important;
-  // }
-
-  // &--left &__content {
-  //   left: auto;
-  //   right: 100%;
-
-  //   @include rtl-selector {
-  //     left: 100%;
-  //     right: auto;
-  //   }
-  // }
-
-  // &--left > &__content {
-  //   right: 0;
-
-  //   @include rtl-selector {
-  //     left: 0;
-  //     right: auto;
-  //   }
-  // }
-  // &--right &__content {
-  //   left: 100%;
-  //   right: auto;
-  // }
-
-  // &--right > &__content {
-  //   left: 0;
-
-  //   @include rtl-selector {
-  //     left: auto;
-  //     right: 0;
-  //   }
-  // }
-
-  //hard-coded border for now
-  //animation is show-element, which toggles opacity
   @include neo-popover-content(
     $dropdown-animation-duration,
     $global-background,
@@ -314,7 +205,6 @@
 
   &--disabled {
     cursor: not-allowed;
-    // opacity: 0.5;
     color: $tab-disabled-color;
 
     &:hover,
@@ -331,8 +221,7 @@
 
 @mixin neo-dropdown-avatar {
   .neo-avatar {
-    margin: 0 $dropdown-avatar-sm-margin-x 0 0; /* Custom margin-right for avatar within dropdown items */
-    // display: inline-block;
+    margin: 0 $dropdown-avatar-sm-margin-x 0 0;
     display: inline-flex;
 
     @include rtl-selector {
@@ -403,42 +292,6 @@
       right: 0;
     }
   }
-  // &--right &__content {
-  //   left: auto;
-  //   right: 100%;
-
-  //   @include rtl-selector {
-  //     left: 100%;
-  //     right: auto;
-  //   }
-  // }
-
-  // &--right > &__content {
-  //   right: 0;
-
-  //   @include rtl-selector {
-  //     left: 0;
-  //     right: auto;
-  //   }
-  // }
-  // &--left &__content {
-  //   left: 100%;
-  //   right: auto;
-  // }
-
-  // &--left > &__content {
-  //   left: 0;
-
-  //   @include rtl-selector {
-  //     left: auto;
-  //     right: 0;
-  //   }
-  // }
-
-  // &--right &__link,
-  // &--right &__link-right {
-  //   text-align: right;
-  // }
 }
 
 @mixin neo-dropdown-input {
@@ -453,37 +306,16 @@
     }
     .neo-btn-square {
       margin-left: 8px;
-      // margin-right: 8px;
-      // @include rtl-selector {
-      //   margin-left: 0px;
-      //   margin-right: 8px;
-      // }
+      @include rtl-selector {
+        margin-left: 0px;
+        margin-right: 8px;
+      }
     }
     .neo-form-control {
-      // padding: 0px 0px 0px 16px;
       margin: 0;
       flex-grow: 1;
-      // &:only-child {
-      //   flex-grow: 1;
-      //   // margin-right: 8px;
-      // }
     }
   }
-
-  // .neo-input {
-  //   border: $dropdown-input-border;
-  //   margin: $dropdown-input-offset;
-  //   width: calc(100% - #{$dropdown-input-offset} * 2);
-  // }
-
-  // .neo-input-icon {
-  //   margin: $dropdown-input-offset;
-
-  //   .neo-input {
-  //     margin: 0;
-  //     width: 100%;
-  //   }
-  // }
 }
 
 @mixin neo-dropdown-readonly-text {
@@ -509,7 +341,6 @@
 
   @include neo-dropdown-item;
   @include neo-dropdown-link;
-  // @include neo-dropdown-link-right;
   @include neo-dropdown-content;
   @include neo-dropdown-separator;
   @include neo-dropdown-disabled;
