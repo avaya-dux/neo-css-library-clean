@@ -7,6 +7,7 @@
 - Added missing RTL styles to buttons in [Dropdowns](https://design.avayacloud.com/components/web/dropdown-web) with Inputs to fix misalignment
 - Add back .neo-form and .neo-form-control styles inside [Navbar](https://design.avaya.com/components/web/navbar-web)
 - Added transparent border to [Navbar](https://design.avayacloud.com/components/web/navbar-web) buttons to preserve alignment between buttons in active state
+- Removed styles associated with :empty selector in Avatars in Navbar[https://design.avaya.com/components/web/navbar-web] that were causing unintentional layout issues
 
 #### New Features - New features that have recently been added
 

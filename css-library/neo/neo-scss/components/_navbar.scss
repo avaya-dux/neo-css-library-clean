@@ -176,27 +176,6 @@
         margin-left: 24px;
         margin-right: 12px;
       }
-      &--small:empty::after,
-      &.neo-avatar--small:empty::after {
-        padding: 0 0 0 36px;
-        @include rtl-selector {
-          padding: 0 36px 0 0;
-        }
-      }
-      &--medium:empty::after,
-      &.neo-avatar--medium:empty::after {
-        padding: 0 0 0 44px;
-        @include rtl-selector {
-          padding: 0 44px 0 0;
-        }
-      }
-      &--large:empty::after,
-      &.neo-avatar--large:empty::after {
-        padding: 0 0 0 56px;
-        @include rtl-selector {
-          padding: 0 56px 0 0;
-        }
-      }
       display: flex;
       justify-content: initial;
     }
