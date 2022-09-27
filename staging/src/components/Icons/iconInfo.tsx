@@ -875,6 +875,12 @@ export const icons = [
     animated: false,
   },
   {
+    name: "redial",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
     name: "noise-1",
     bidirectional: false,
     category: "communication",

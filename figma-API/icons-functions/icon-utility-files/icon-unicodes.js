@@ -515,5 +515,6 @@ const unicodes = {
   'analytics-filled': 62450,
   'after-call-work': 62451,
   'bot-agent': 62452,
-  hospitality: 62453
+  hospitality: 62453,
+  redial: 62454
 }; module.exports.unicodes = unicodes

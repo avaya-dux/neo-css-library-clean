@@ -8,6 +8,10 @@
 - Add back .neo-form and .neo-form-control styles inside [Navbar](https://design.avaya.com/components/web/navbar-web)
 - Added transparent border to [Navbar](https://design.avayacloud.com/components/web/navbar-web) buttons to preserve alignment between buttons in active state
 
+#### New Features - New features that have recently been added
+
+- Added redial icon [Icon](https://design.avaya.com/components/icons/)
+
 ### 3.61.0
 
 #### New Features - New features that have recently been added
