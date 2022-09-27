@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.61.1
+### 3.62.0
 
 #### Bugs Report - List of bugs that have been updated
 
