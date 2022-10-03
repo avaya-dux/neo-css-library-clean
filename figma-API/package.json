@@ -10,7 +10,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "axios": "0.27.2",
-    "dotenv": "16.0.2",
+    "dotenv": "16.0.3",
     "replace-in-file": "6.3.5",
     "shx": "0.3.4",
     "webfonts-generator": "0.4.0"
