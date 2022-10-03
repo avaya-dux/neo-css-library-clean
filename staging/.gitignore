@@ -11,6 +11,12 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 
+# cypress examples
+cypress/e2e/1-getting-started
+cypress/e2e/2-advanced-examples
+cypress/e2e/3-trial
+cypress/fixtures
+cypress/screenshots
 
 # environment variables
 .env

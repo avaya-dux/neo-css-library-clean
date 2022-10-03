@@ -1,0 +1,19 @@
+name: Cypress Visual tests
+on: [push]
+jobs:
+  e2e:
+    name: Cypress run
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Cypress run
+        uses: cypress-io/github-action@v4
+        with:
+          build: yarn build
+          project: ./staging
+          start: yarn dev:staging
+          wait-on: 'http://127.0.0.1:3000'
+          spec: staging/cypress/e2e/pages/*.cy.ts
+
+          

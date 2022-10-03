@@ -11,10 +11,10 @@
     "build:staging": "yarn workspace staging build",
     "dev": "yarn dev:css & yarn dev:staging",
     "dev:css": "yarn workspace css-library watch",
-    "dev:staging": "yarn workspace staging start",
+    "dev:staging": "yarn workspace staging dev",
     "test": "jest --config ./jest.config.json",
     "test:watch": "jest --config ./jest.config.json --watchAll=true",
-    "github": "yarn && yarn build:css && yarn workspace staging all"
+    "github": "yarn && yarn build:css && yarn workspace staging github"
   },
   "workspaces": [
     "css-library",
