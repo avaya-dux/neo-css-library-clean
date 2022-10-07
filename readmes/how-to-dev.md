@@ -2,6 +2,10 @@
 
 > For unit testing (TODO: add details on how to run/create tests)
 
+> For visual testing, run `yarn test:visual`
+
+> If snapshots need to be updated, refer to this [howto](../playwright/how-to-update-snapshots.md)
+
 > For linting we use [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
 
 > You can see an overview of [the libraries structure here](https://app.codesee.io/maps/public/267b4490-d552-11ec-bab4-dbed0529e43a). Generated via [CodeSee](https://www.codesee.io/).
@@ -44,3 +48,10 @@ see [how to publish readme](./how-to-publish.md)
 We use Yarn Workspaces in this repo. Specifically, we use Yarn v1 as v2+v3 are not supported by Netlify. Yarn v2+v3 are better at supporting a mono-repo with workspaces, but as it's not currently supported in our CICD pipeline, we're stuck on v1 for now. With that, if you want to share one project/workspace output with another one, you simply add that project as a "workspace" in the root `package.json`, run `yarn` at root, and then you import where necessary.
 
 For example, the folder/project `css-library` is marked as a "workspace" in the root `package.json`, and the folder/project `staging` (also a "workspace") _does not_ import `css-library` in it's `package.json`, but does `import "css-library/dist/neo.css";` in its `src/layouts/NeoLayout.astro` file.
+
+Note: playwright project is not a workspace because Docker can not find node modules if it is a yarn workspace.
+
+## a note on visual testing
+
+Snapshots are very sensitive to OS (e.g. fonts), browser diffrences.  Thus the baseline snapshots upload to github must be generated using the same docker image as the one used in CI pipeline. Do not generate snapshots using browsers on your dev machine.
+

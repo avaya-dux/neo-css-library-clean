@@ -1,0 +1,44 @@
+name: Visual Integration Test
+on: [push]
+jobs:
+  playwright:
+    name: 'Visual Tests using Playwright Docker Image'
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      - name: build
+        run: yarn github
+      - name: start server
+        run: |
+          yarn preview &
+          sleep 5
+          curl -I http://localhost:3000
+      - name: run playwright test using docker image
+        uses: kohlerdominik/docker-run-action@v1.0.2
+        with:
+          image: mcr.microsoft.com/playwright:v1.26.1-focal
+          shell: /bin/bash
+          workdir: /work/
+          environment: |
+            BASEURL=http://host.docker.internal:3000
+          volumes: |
+            ${{ github.workspace }}/playwright:/work
+          options: |
+            --add-host host.docker.internal:host-gateway
+          run: |
+            curl -I http://host.docker.internal:3000
+            yarn
+            yarn playwright test
+      - name: upload artifacts on test failure
+        uses: actions/upload-artifact@v2
+        if: failure()
+        with:
+          name: playwright-report
+          path: |
+            playwright/playwright-report/
+            playwright/test-results/
+          retention-days: 7
+      

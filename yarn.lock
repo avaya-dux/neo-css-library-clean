@@ -3703,7 +3703,7 @@ cubic2quad@^1.0.0:
   resolved "https://registry.yarnpkg.com/cubic2quad/-/cubic2quad-1.2.1.tgz#2442260b72c02ee4b6a2fe998fcc1c4073622286"
   integrity sha512-wT5Y7mO8abrV16gnssKdmIhIbA9wSkeMzhh27jAguKrV82i24wER0vL5TGhUJ9dbJNDcigoRZ0IAHFEEEI4THQ==
 
-cypress-image-snapshot@4.0.1, cypress-image-snapshot@^4.0.1:
+cypress-image-snapshot@4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/cypress-image-snapshot/-/cypress-image-snapshot-4.0.1.tgz#59084e713a8d03500c8e053ad7a76f3f18609648"
   integrity sha512-PBpnhX/XItlx3/DAk5ozsXQHUi72exybBNH5Mpqj1DVmjq+S5Jd9WE5CRa4q5q0zuMZb2V2VpXHth6MjFpgj9Q==
@@ -3715,12 +3715,7 @@ cypress-image-snapshot@4.0.1, cypress-image-snapshot@^4.0.1:
     pkg-dir "^3.0.0"
     term-img "^4.0.0"
 
-cypress-real-events@^1.7.1:
-  version "1.7.1"
-  resolved "https://registry.yarnpkg.com/cypress-real-events/-/cypress-real-events-1.7.1.tgz#8f430d67c29ea4f05b9c5b0311780120cbc9b935"
-  integrity sha512-/Bg15RgJ0SYsuXc6lPqH08x19z6j2vmhWN4wXfJqm3z8BTAFiK2MvipZPzxT8Z0jJP0q7kuniWrLIvz/i/8lCQ==
-
-cypress@10.9.0, cypress@^10.9.0:
+cypress@10.9.0:
   version "10.9.0"
   resolved "https://registry.yarnpkg.com/cypress/-/cypress-10.9.0.tgz#273a61a6304766f9d6423e5ac8d4a9a11ed8b485"
   integrity sha512-MjIWrRpc+bQM9U4kSSdATZWZ2hUqHGFEQTF7dfeZRa4MnalMtc88FIE49USWP2ZVtfy5WPBcgfBX+YorFqGElA==

@@ -1,0 +1,17 @@
+{
+  "name": "playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@playwright/test": "^1.26.1",
+    "start-server-and-test": "^1.14.0"
+  },
+  "scripts": {
+    "start": ". start_server.sh",
+    "test:docker": "docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 mcr.microsoft.com/playwright:v1.26.1-focal yarn playwright test",
+    "test:visual": "start-server-and-test 3000 test:docker",
+    "test:debug": "BASEURL='http://127.0.0.1:3000' playwright test --update-snapshots",
+    "test:update": "echo please refer to how-to-update-snapshots.md"
+  }
+}

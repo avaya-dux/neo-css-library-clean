@@ -1,0 +1,31 @@
+import { test, expect } from "@playwright/test"
+import {
+  clickRadioAndVerify,
+  getTestParameters,
+  gotoPageAndVerify,
+} from "./utils"
+
+const options = {
+  fullPage: true,
+  maxDiffPixelRatio: 0,
+}
+export const baseTests = (page: string) => {
+  const { title, titleRegex: regex, url } = getTestParameters(page)
+
+  test(`should match when dir is auto in ${title}`, async ({ page }) => {
+    await gotoPageAndVerify(page, url, regex)
+    await expect(page).toHaveScreenshot(options)
+  })
+
+  test(`should match when dir is rtl in ${title}`, async ({ page }) => {
+    await gotoPageAndVerify(page, url, regex)
+    await clickRadioAndVerify(page, "rtl")
+    await expect(page).toHaveScreenshot(options)
+  })
+
+  test(`should match when dir is lrt in ${title}`, async ({ page }) => {
+    await gotoPageAndVerify(page, url, regex)
+    await clickRadioAndVerify(page, "ltr")
+    await expect(page).toHaveScreenshot(options)
+  })
+}
