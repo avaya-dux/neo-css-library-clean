@@ -33,7 +33,7 @@ jobs:
             yarn
             yarn playwright test
       - name: upload artifacts on test failure
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         if: failure()
         with:
           name: playwright-report
