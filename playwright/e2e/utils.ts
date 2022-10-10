@@ -18,7 +18,7 @@ export const getTestParameters = (pagePath: string) => {
 }
 
 export const clickRadioAndVerify = async (page, dir: string) => {
-  const radio = page.locator(`text=${dir}`)
+  const radio = page.locator(`[id=${dir}]`)
   await radio.click()
 
   const main = page.locator("main")
