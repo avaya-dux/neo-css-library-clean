@@ -8,9 +8,10 @@ import {
 const options = {
   fullPage: true,
   maxDiffPixelRatio: 0,
+  timeout: 5000,
 }
-export const baseTests = (page: string) => {
-  const { title, titleRegex: regex, url } = getTestParameters(page)
+export const baseTests = (page: string, optionTitle?: string) => {
+  const { title, titleRegex: regex, url } = getTestParameters(page, optionTitle)
 
   test(`should match when dir is auto in ${title}`, async ({ page }) => {
     await gotoPageAndVerify(page, url, regex)
