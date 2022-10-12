@@ -7,15 +7,31 @@
 e.g. Playwright version used in this project currently is v1.27.0. Ubuntu version used in 20.04, which has a codename "focal".
 So the docker image version chosen should be v1.27.0-focal.
 
-> To update the snapshots, start staging server, create a docker container, and finally run yarn commands like below:
+> To update the snapshots, build css and staging, start staging server, start a docker container, and finally run yarn commands inside docker container like below:
 
-`yarn start`
+`yarn github`: do this under root
 
-`docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.27.0-focal /bin/bash`: login to docker container
+`yarn start`: do this under staging
 
-`yarn`
+`docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.27.0-focal /bin/bash`: do this under playwright
 
-`yarn playwright test --update-snapshots`
+
+Now inside docker container:
+
+`yarn`: install dependencies
+
+`yarn playwright test`: run all tests; fail if any screenshots are not matching; will create screenshots if not exist
+
+`yarn playwright test --update-snapshots`: run all tests, will update snapshots for those that are not matching
+
+`yarn playwright test navbar.spec.test`: run tests on only navbar page
+
+`yarn playwright test navaar.spec.test --update-snapshots`: run tests on navbar page; will update snapshots if not matching
+
+Outside of docker, under playwright:
+
+`yarn playwright show-report`: to see test report
+
 
 
 ## More information on [docker image](https://playwright.dev/docs/docker)
