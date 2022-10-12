@@ -9,7 +9,7 @@ function capitalize(s) {
   return s[0].toUpperCase() + s.slice(1)
 }
 
-export const getTestParameters = (pagePath: string, title?:string = capitalize(pagePath)) => {
+export const getTestParameters = (pagePath: string, title:string = capitalize(pagePath)) => {
   const regex = new RegExp(title)
   const baseURL = process.env.BASEURL || "http://127.0.0.1:3000"
   const url = `${baseURL}/${pagePath}`
