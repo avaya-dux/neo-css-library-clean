@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.63.0
+
+#### New Features - New features that have recently been added
+
+- Added new style properties for icon button [Dropdowns](https://design.avayacloud.com/components/web/dropdown-web)
+
 ### 3.62.0
 
 #### Bugs Report - List of bugs that have been updated

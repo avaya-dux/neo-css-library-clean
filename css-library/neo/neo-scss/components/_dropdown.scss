@@ -26,6 +26,11 @@
     padding: 0 0 0 $padding-left;
     vertical-align: middle;
   }
+  @include rtl-selector {
+    &::after {
+      padding: 0 $padding-left 0 0;
+    }
+  }
   &:not(.neo-dropdown__link-header)::after {
     color: $global-text-color;
     position: absolute;
@@ -34,16 +39,6 @@
     vertical-align: middle;
   }
   @include rtl-selector {
-    &::after {
-      all: initial;
-    }
-    &::before {
-      font-family: "updated-neo-icons";
-      content: $arrow-icon;
-      padding: 0 $padding-left 0 0;
-      vertical-align: middle;
-      transform: rotateY(180deg);
-    }
     &:not(.neo-dropdown__link-header)::before {
       color: $global-text-color;
       position: absolute;
@@ -122,6 +117,13 @@
     }
     &-header {
       @include neo-dropdown-arrow();
+
+      &.neo-btn:empty {
+        padding: 8px 6px;
+        &:before {
+          font-size: $button-circle-icon-size;
+        }
+      }
     }
     &-active {
       background-color: $dropdown-item-hover-background-color;

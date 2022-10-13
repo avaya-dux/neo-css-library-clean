@@ -1,10 +1,20 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
-import { DropdownWithInput } from "../components";
+import { DropdownWithInput, DropdownIconButton } from "../components";
 ---
 
 <NeoLayout title="dropdown">
   <h1>Dropdown With Input</h1>
 
-  <DropdownWithInput />
+  <div class="dropdown-spacer">
+    <DropdownWithInput />
+  </div>
+
+  <DropdownIconButton />
 </NeoLayout>
+
+<style>
+  .dropdown-spacer {
+    margin-bottom: 200px;
+  }
+</style>

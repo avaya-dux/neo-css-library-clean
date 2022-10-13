@@ -139,13 +139,17 @@
       padding: 0px;
       @include rtl-selector {
         &::before {
+          font-family: "updated-neo-icons";
           top: initial;
           left: initial;
           right: 100%;
           color: $global-text-color;
           padding: 0 0 0 8px;
+          content: $dropdown-expand-icon;
+          transform: rotateY(180deg);
         }
         &::after {
+          all: initial;
           font-family: noto-sans, sans-serif;
           content: attr(data-initials);
           left: 50%;
