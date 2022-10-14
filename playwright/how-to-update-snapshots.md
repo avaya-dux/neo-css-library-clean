@@ -15,7 +15,6 @@ So the docker image version chosen should be v1.27.0-focal.
 
 `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.27.0-focal /bin/bash`: do this under playwright
 
-
 Now inside docker container:
 
 `yarn`: install dependencies
@@ -28,10 +27,10 @@ Now inside docker container:
 
 `yarn playwright test navaar.spec.test --update-snapshots`: run tests on navbar page; will update snapshots if not matching
 
+NOTE: Make sure that you are not on VPN when udpating snapshots, as certain external resources (ex. images) may not load correctly
+
 Outside of docker, under playwright:
 
 `yarn playwright show-report`: to see test report
-
-
 
 ## More information on [docker image](https://playwright.dev/docs/docker)

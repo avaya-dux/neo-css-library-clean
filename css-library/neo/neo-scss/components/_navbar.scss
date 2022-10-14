@@ -138,7 +138,7 @@
     & .neo-dropdown__link-header {
       padding: 0px;
       @include rtl-selector {
-        &::before {
+        &.neo-avatar::before {
           font-family: "updated-neo-icons";
           top: initial;
           left: initial;
@@ -148,7 +148,7 @@
           content: $dropdown-expand-icon;
           transform: rotateY(180deg);
         }
-        &::after {
+        &.neo-avatar::after {
           all: initial;
           font-family: noto-sans, sans-serif;
           content: attr(data-initials);
@@ -225,6 +225,28 @@
       }
       &::before {
         color: $navbar-default-icon-color;
+      }
+      &.neo-dropdown__link-header {
+        padding: 8px 16px;
+        &::before {
+          margin-right: 4px;
+          @include rtl-selector {
+            margin-right: 0;
+            margin-left: 4px;
+          }
+        }
+        &::after {
+          position: initial;
+          padding: 0px;
+          font-size: 14px;
+        }
+        & + .neo-badge__icon::after {
+          right: 31px;
+          @include rtl-selector {
+            right: initial;
+            left: 15px;
+          }
+        }
       }
     }
     &:hover,
@@ -315,12 +337,12 @@
       min-width: 16px;
       padding: 0px 4px;
       position: absolute;
-      right: 19px;
+      right: 22px;
       top: 21px;
       transform: translate(65%, -65%);
       z-index: map-get($indexes-map, "nav-badge-icon");
       @include rtl-selector {
-        left: 0;
+        left: 6px;
         right: auto;
         transform: translate(35%, -65%);
       }
