@@ -9,7 +9,7 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "axios": "1.1.2",
+    "axios": "1.1.3",
     "dotenv": "16.0.3",
     "replace-in-file": "6.3.5",
     "shx": "0.3.4",
