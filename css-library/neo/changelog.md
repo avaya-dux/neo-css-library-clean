@@ -1,12 +1,5 @@
 # Changelog
 
-### 3.63.0
-
-#### New Features - New features that have recently been added
-
-- Added new style properties for icon button [Dropdowns](https://design.avayacloud.com/components/web/dropdown-web)
-- Added new style properties for [Navbar](https://design.avaya.com/components/web/navbar-web) icon button dropdown
-
 ### 3.62.0
 
 #### Bugs Report - List of bugs that have been updated
@@ -19,6 +12,8 @@
 #### New Features - New features that have recently been added
 
 - Added redial icon [Icon](https://design.avaya.com/components/icons/)
+- Added new style properties for icon button [Dropdowns](https://design.avayacloud.com/components/web/dropdown-web)
+- Added new style properties for [Navbar](https://design.avaya.com/components/web/navbar-web) icon button dropdown
 
 ### 3.61.0
 
