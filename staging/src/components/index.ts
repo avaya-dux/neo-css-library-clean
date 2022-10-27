@@ -12,4 +12,4 @@ export * from "./Widget";
 export * from "./Dropdown";
 
 // svelte
-export * from "./RootDir";
+export * from "./RootOptions";

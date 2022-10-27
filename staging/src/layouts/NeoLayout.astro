@@ -1,6 +1,6 @@
 ---
 import "css-library/dist/neo.css";
-import { RootDir } from "../components";
+import { RootOptions } from "../components";
 import Card from "../components/Card.astro";
 
 export interface Props {
@@ -28,9 +28,9 @@ const { title } = Astro.props as Props;
       <Card href="/" title="Home" body="Return home" />
     </ul>
 
-    <RootDir client:load>
+    <RootOptions client:load>
       <slot />
-    </RootDir>
+    </RootOptions>
   </body>
 </html>
 
