@@ -17,7 +17,7 @@ jobs:
             css-library/neo/neo-scss/*.scss
             css-library/neo/changelog.md
       - name: exit with error if SCSS files changed without changelog update
-        if: steps.verify-changed-files.outputs.any_changed == 'true' && !contains(steps.verify-changed-files.outputs.modified_files, 'changelog.md') && !contains( github.event.pull_request.labels.*.name, 'ignore-for-release')
+        if: steps.verify-changed-files.outputs.any_changed == 'true' && !contains(steps.verify-changed-files.outputs.modified_files, 'changelog.md') && !contains(toJson(github.event.pull_request.labels.*.name), 'ignore-for-release')
         run: |
           echo "Please make sure you have updated `css-library/neo/changelog.md` if you have made changes to the Neo SCSS files"
           exit 1
