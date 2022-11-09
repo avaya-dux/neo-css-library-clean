@@ -1,5 +1,15 @@
 # Changelog
 
+### 3.63.0
+
+#### Breaking Changes - the following Components are broken and need immediate attention
+
+- Updated SVGs for social icons, including social-outbound, social-inbound, social-ready, social-missed, social-alerting, social-pending, social-not-ready, and social-connected.  And moved these icons to communication category in [Icon](https://design.avaya.com/components/icons/)
+
+- Renamed icon other/social-integrations to communication/social in [Icon](https://design.avaya.com/components/icons/)
+
+- Renamed social/social icon (illustration of thumbs up) to social/social-media in [Icon](https://design.avaya.com/components/icons/)
+
 ### 3.62.0
 
 #### Bugs Report - List of bugs that have been updated

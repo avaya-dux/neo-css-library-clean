@@ -22,8 +22,8 @@ From inside docker container:
 - `yarn`: install dependencies
 - `yarn playwright test`: runs all tests; fails if any screenshots are not matching; will create screenshots if none exist
 - `yarn playwright test --update-snapshots`: runs all tests, will update snapshots for those that are not matching
-- `yarn playwright test navbar.spec.test`: runs tests on only navbar page
-- `yarn playwright test navaar.spec.test --update-snapshots`: runs tests on navbar page; will update snapshots if not matching
+- `yarn playwright test navbar.spec.ts`: runs tests on only navbar page
+- `yarn playwright test navaar.spec.ts --update-snapshots`: runs tests on navbar page; will update snapshots if not matching
 
 _NOTE_: Make sure that you are not on VPN when udpating snapshots, as certain external resources (ex. images) may not load correctly
 

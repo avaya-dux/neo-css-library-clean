@@ -176,6 +176,7 @@ async function pullIcons(figmaApiKey, figmaId, iconNames) {
 
     formattedIconNames.forEach((iconName) => {
       if (unicodes[iconName]) {
+        console.log(iconName, "exists")
         return;
       }
 
@@ -205,6 +206,8 @@ async function pullIcons(figmaApiKey, figmaId, iconNames) {
       })
       .filter((id) => id != undefined);
 
+    console.log(iconIdsToGen);
+    
     const iconSVGContent = await getIconURLFromFigma(
       figmaApiKey,
       figmaId,

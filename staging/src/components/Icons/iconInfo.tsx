@@ -791,7 +791,7 @@ export const icons = [
     category: "status",
     animated: false,
   },
-  { name: "social", bidirectional: false, category: "social", animated: false },
+  { name: "social-media", bidirectional: false, category: "social", animated: false },
   { name: "bold", bidirectional: false, category: "editor", animated: false },
   {
     name: "noise-off",
@@ -997,39 +997,57 @@ export const icons = [
     animated: false,
   },
   {
+    name: "social",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "social-ready",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
     name: "social-not-ready",
     bidirectional: false,
-    category: "social",
-    animated: false,
-  },
-  {
-    name: "social-outbound",
-    bidirectional: false,
-    category: "social",
-    animated: false,
-  },
-  {
-    name: "social-missed",
-    bidirectional: false,
-    category: "social",
+    category: "communication",
     animated: false,
   },
   {
     name: "social-inbound",
     bidirectional: false,
-    category: "social",
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "social-outbound",
+    bidirectional: false,
+    category: "communication",
     animated: false,
   },
   {
     name: "social-alerting",
     bidirectional: false,
-    category: "social",
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "social-connected",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "social-missed",
+    bidirectional: false,
+    category: "communication",
     animated: false,
   },
   {
     name: "social-pending",
     bidirectional: false,
-    category: "social",
+    category: "communication",
     animated: false,
   },
   {
@@ -1096,12 +1114,6 @@ export const icons = [
     name: "reason-codes",
     bidirectional: false,
     category: "content",
-    animated: false,
-  },
-  {
-    name: "social-integrations",
-    bidirectional: false,
-    category: "other",
     animated: false,
   },
   { name: "file-rtl", bidirectional: false, category: "file", animated: false },
@@ -2119,12 +2131,6 @@ export const icons = [
     animated: false,
   },
   {
-    name: "social-ready",
-    bidirectional: false,
-    category: "social",
-    animated: false,
-  },
-  {
     name: "messaging-missed",
     bidirectional: false,
     category: "communication",
@@ -2142,12 +2148,7 @@ export const icons = [
     category: "communication",
     animated: false,
   },
-  {
-    name: "social-connected",
-    bidirectional: false,
-    category: "social",
-    animated: false,
-  },
+
   {
     name: "messaging-ready",
     bidirectional: false,

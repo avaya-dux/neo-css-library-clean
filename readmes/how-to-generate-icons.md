@@ -7,6 +7,13 @@
   - `npm run build-icons after-call-work`
   - `npm run build-icons after-call-work settings`
 
+# how to rename icons
+
+- rename the icons in icons-unicode.js
+- run build-icons script above to create SVG file
+- remove SVG file of the old icon
+- rename the icon entry in iconInfo.tsx
+
 ## verifying that icons have been pulled and added successfully
 
 - Verify that the correct icon name and unicode value have been added to `neo-css-library/figma-api/icons-functions/icon-utility-files/icon-unicodes.js`
