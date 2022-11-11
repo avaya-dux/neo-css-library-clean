@@ -12,9 +12,8 @@
     "dev": "yarn dev:css & yarn dev:staging",
     "dev:css": "yarn workspace css-library watch",
     "dev:staging": "yarn workspace staging dev",
-    "test": "jest --config ./jest.config.json",
-    "test:watch": "jest --config ./jest.config.json --watchAll=true",
-    "github": "yarn && yarn build:css && yarn workspace staging github",
+    "test:api": "cd figma-API && yarn && yarn test",
+    "github": "yarn && yarn build:css && yarn test:api && yarn workspace staging github",
     "preview": "yarn workspace staging start",
     "test:playwright": "cd playwright && yarn test:docker",
     "test:visual": "start-server-and-test preview http://localhost:3000 test:playwright"

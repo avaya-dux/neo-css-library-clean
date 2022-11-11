@@ -1,42 +1,46 @@
-const coreFigmaFunctions = require("./core-figma-functions.js");
+import fetchMock from "jest-fetch-mock"
+fetchMock.enableMocks()
+
+const coreFigmaFunctions = require("./core-figma-functions.js")
 
 describe("coreFigmaFunctions", () => {
   beforeEach(() => {
-    fetch.resetMocks();
-  });
+    fetch.resetMocks()
+  })
 
   it("getFigmaObjTree success", async () => {
-    fetch.mockResponseOnce(JSON.stringify({ data: "12345" }));
+    fetch.mockResponseOnce(JSON.stringify({ data: "12345" }))
 
     const response = await coreFigmaFunctions.getFigmaObjTree(
       "figmaApiKey",
       "figmaId"
-    );
+    )
 
-    expect(response).toMatchInlineSnapshot(`
-      {
-        "data": "12345",
-      }
-    `);
-    expect(fetch.mock.calls.length).toEqual(1);
+    expect(response.data).toEqual("12345")
 
-    expect(fetch.mock.calls[0][0]).toEqual(
-      "https://api.figma.com/v1/files/figmaId?geometry=paths"
-    );
-  });
+    expect(fetch).toHaveBeenCalledTimes(1)
+    expect(fetch).toHaveBeenCalledWith(
+      "https://api.figma.com/v1/files/figmaId?geometry=paths",
+      { headers: { "X-Figma-Token": "figmaApiKey" }, method: "GET" }
+    )
+  })
 
   it("getFigmaObjTree failed", async () => {
-    fetch.mockReject(new Error("fake error message"));
+    const error = jest.spyOn(console, "error").mockImplementation(() => { })
+
+    fetch.mockReject(() => Promise.reject("API is down"))
 
     const response = await coreFigmaFunctions.getFigmaObjTree(
       "figmaApiKey",
       "figmaId"
-    );
+    )
 
-    expect(fetch.mock.calls.length).toEqual(1);
+    expect(fetch).toHaveBeenCalledTimes(1)
+    expect(fetch).toHaveBeenCalledWith(
+      "https://api.figma.com/v1/files/figmaId?geometry=paths",
+      { headers: { "X-Figma-Token": "figmaApiKey" }, method: "GET" }
+    )
 
-    expect(fetch.mock.calls[0][0]).toEqual(
-      "https://api.figma.com/v1/files/figmaId?geometry=paths"
-    );
-  });
-});
+    expect(error).toHaveBeenCalledTimes(1)
+  })
+})

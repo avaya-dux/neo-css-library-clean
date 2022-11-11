@@ -3,9 +3,9 @@
 - Navigate to the `figma-API` sub-project folder from the repository root
 - Make sure that you have a `.env` file with the necessary environment variables correctly defined, in this case:
   - FIGMA should be your individual Figma API key
-- From the command line, run the following: `npm run build-icons <<icon names here>>`, inserting the name of the icon you want to add, for example:
-  - `npm run build-icons after-call-work`
-  - `npm run build-icons after-call-work settings`
+- From the command line, run the following: `yarn build-icons <<icon names here>>`, inserting the name of the icon you want to add, for example:
+  - `yarn build-icons after-call-work`
+  - `yarn build-icons after-call-work settings`
 
 # how to rename icons
 

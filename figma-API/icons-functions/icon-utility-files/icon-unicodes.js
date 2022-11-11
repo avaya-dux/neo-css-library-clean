@@ -516,5 +516,21 @@ const unicodes = {
   'after-call-work': 62451,
   'bot-agent': 62452,
   hospitality: 62453,
-  redial: 62454
+  redial: 62454,
+  'audio-incoming': 62455,
+  'audio-outgoing': 62456,
+  'call-incoming': 62457,
+  'call-outgoing': 62458,
+  'chat-incoming': 62459,
+  'chat-outgoing': 62460,
+  'email-incoming': 62461,
+  'email-outgoing': 62462,
+  'messaging-incoming': 62463,
+  'messaging-outgoing': 62464,
+  'sms-incoming': 62465,
+  'sms-outgoing': 62466,
+  'video-incoming': 62467,
+  'video-outgoing': 62468,
+  'social-incoming': 62469,
+  'social-outgoing': 62470
 }; module.exports.unicodes = unicodes

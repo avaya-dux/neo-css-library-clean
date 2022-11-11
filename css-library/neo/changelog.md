@@ -2,6 +2,11 @@
 
 ### 3.63.0
 
+#### New Features - New features that have recently been added
+
+- Added new communication icons, including audio-incoming, audio-outgoing, call-incoming, call-outgoing, chat-incoming, chat-outgoing, email-incoming, email-outgoing, messaging-incoming, messaging-outgoing, sms-incoming, sms-outgoing, social-incoming, social-outgoing, video-incoming, and video-outgoing, to [Icon](https://design.avaya.com/components/icons/)
+
+
 #### Breaking Changes - the following Components are broken and need immediate attention
 
 - Updated SVGs for social icons, including social-outbound, social-inbound, social-ready, social-missed, social-alerting, social-pending, social-not-ready, and social-connected.  And moved these icons to communication category in [Icon](https://design.avaya.com/components/icons/)
