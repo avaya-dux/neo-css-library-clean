@@ -18,7 +18,7 @@ jobs:
           sleep 5
           curl -I http://localhost:3000
       - name: run playwright test using docker image
-        uses: kohlerdominik/docker-run-action@v1.0.2
+        uses: kohlerdominik/docker-run-action@v1.1.0
         with:
           image: mcr.microsoft.com/playwright:v1.27.1-focal
           shell: /bin/bash
