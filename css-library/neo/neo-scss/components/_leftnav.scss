@@ -184,7 +184,8 @@
     align-items: center;
     justify-content: space-between;
     // transition: max-height, min-height $global-transition-duration ease-in-out;
-    & > a {
+    & > a,
+    & .neo-leftnav__sub__item {
       word-break: break-word;
       // animation properties
       overflow: hidden;
@@ -225,7 +226,8 @@
       }
     }
     &--no-icon {
-      & > a {
+      & > a,
+      & .neo-leftnav__sub__item {
         padding: 8px 28px 8px $leftnav-sub-padding-no-icon-horizontal;
         @include rtl-selector {
           padding: 8px $leftnav-sub-padding-no-icon-horizontal 8px 0px;
@@ -237,14 +239,16 @@
       cursor: pointer;
       background-color: $leftnav-hover-background-color;
       transition: $tab-hover-transition;
-      & > a {
+      & > a,
+      & .neo-leftnav__sub__item {
         color: $leftnav-sub-active-hover-color;
         background-color: $leftnav-hover-background-color;
         transition: $tab-hover-transition;
       }
     }
     &--active {
-      & > a {
+      & > a,
+      & .neo-leftnav__sub__item {
         color: $leftnav-sub-active-color;
         font-size: $leftnav-sub-active-font-size;
         font-weight: $leftnav-sub-active-font-weight;
@@ -258,7 +262,8 @@
       &:hover {
         transition: $tab-hover-transition;
         background-color: $leftnav-hover-background-color;
-        & > a {
+        & > a,
+        & .neo-leftnav__sub__item {
           color: $leftnav-sub-active-hover-color;
           background-color: $leftnav-hover-background-color;
           transition: $tab-hover-transition;
@@ -268,7 +273,8 @@
     &--active[disabled] {
       background-color: $leftnav-background-color;
       cursor: not-allowed;
-      & > a {
+      & > a,
+      & .neo-leftnav__sub__item {
         cursor: not-allowed;
         background-color: $leftnav-background-color;
         color: $leftnav-sub-active-disabled-color !important;
@@ -285,7 +291,8 @@
     &[disabled]:focus {
       background-color: $leftnav-background-color;
       cursor: not-allowed;
-      & > a {
+      & > a,
+      & .neo-leftnav__sub__item {
         cursor: not-allowed;
         background-color: $leftnav-background-color;
         color: $leftnav-sub-default-disabled-color;

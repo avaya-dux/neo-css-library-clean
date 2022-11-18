@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.63.1
+
+#### Bugs Report - List of bugs that have been updated
+
+- Added .neo-leftnav__sub__item style to allow descendant anchor element in [Left Nav](https://design.avayacloud.com/components/web/left-nav-web)
+
 ### 3.63.0
 
 #### New Features - New features that have recently been added

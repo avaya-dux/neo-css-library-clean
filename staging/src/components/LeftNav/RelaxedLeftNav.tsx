@@ -1,7 +1,7 @@
 /* eslint-disable */
 import { useEffect, useState } from "react";
 
-export const LeftNavWithSimpleJS = () => {
+export const RelaxedLeftNavWithSimpleJS = () => {
   const [activate, setActivate] = useState([1]);
   const onExpand = (number: number) => {
     if (activate.includes(number)) {
@@ -25,31 +25,35 @@ export const LeftNavWithSimpleJS = () => {
             <a
               className="neo-icon-contact expandable"
               onClick={() => onExpand(1)}
-              aria-labelledby="tooltip1"
+              aria-labelledby="tooltip1r"
             >
               Accounts
             </a>
-            <div className="neo-tooltip__content" id="tooltip1">
+            <div className="neo-tooltip__content" id="tooltip1r">
               <div className="neo-arrow" />
               Accounts
             </div>
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <a>Overview</a>
+                <span className="neo-leftnav__sub__item">Overview</span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a>Manage Users</a>
+                <span>
+                  <span className="neo-leftnav__sub__item">Manage Users</span>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a>Billing</a>
+                <span><span><a className="neo-leftnav__sub__item">Billing</a></span></span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex={-1}>
-                  Payments
-                </a>
+                <span>
+                  <a className="neo-leftnav__sub__item" tabIndex={-1}>
+                    Payments
+                  </a>
+                </span>
               </li>
             </ul>
           </li>
@@ -64,27 +68,27 @@ export const LeftNavWithSimpleJS = () => {
             <a
               className="expandable"
               onClick={() => onExpand(2)}
-              aria-labelledby="tooltip2"
+              aria-labelledby="tooltip2r"
             >
               Configuration
             </a>
 
-            <div className="neo-tooltip__content" id="tooltip2">
+            <div className="neo-tooltip__content" id="tooltip2r">
               <div className="neo-arrow" />
               Configuration
             </div>
 
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub neo-leftnav__sub--active neo-leftnav__sub--no-icon">
-                <a>RBAC</a>
+                <span><a className="neo-leftnav__sub__item">RBAC</a></span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--no-icon">
-                <a>SIP Trunking</a>
+                <span><a className="neo-leftnav__sub__item">SIP Trunking</a></span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--no-icon">
-                <a>Directory Services</a>
+                <span><a className="neo-leftnav__sub__item">Directory Services</a></span>
               </li>
             </ul>
           </li>
@@ -99,35 +103,37 @@ export const LeftNavWithSimpleJS = () => {
             <a
               className="neo-icon-address-book expandable"
               onClick={() => onExpand(3)}
-              aria-labelledby="tooltip3"
+              aria-labelledby="tooltip3r"
             >
               Contact Center
             </a>
 
-            <div className="neo-tooltip__content" id="tooltip3">
+            <div className="neo-tooltip__content" id="tooltip3r">
               <div className="neo-arrow" />
               Contact Center
             </div>
 
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <a tabIndex={-1}>
+                <a tabIndex={-1} className="neo-leftnav__sub__item">
                   Customer Identifiers
                 </a>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a>Transfer Destinations</a>
+                <span><a className="neo-leftnav__sub__item">Transfer Destinations</a></span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a>Work Assignments</a>
+                <span><a className="neo-leftnav__sub__item">Work Assignments</a></span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex={-1}>
-                  Contacts
-                </a>
+                <span>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">
+                    Contacts
+                  </a>
+                </span>
               </li>
             </ul>
           </li>
@@ -143,7 +149,7 @@ export const LeftNavWithSimpleJS = () => {
   );
 };
 
-export const CondensedLeftNavWithScroll = () => {
+export const RelaxedCondensedLeftNavWithScroll = () => {
   const [activate, setActivate] = useState([1]);
   const [condensed, setCondensed] = useState(true);
 
@@ -174,11 +180,10 @@ export const CondensedLeftNavWithScroll = () => {
       >
         <ul className="neo-leftnav__nav">
           <li
-            className={`neo-leftnav__main neo-leftnav__main--active ${
-              activate.includes(1) && !condensed
-                ? "neo-leftnav__main--expand"
-                : ""
-            }`}
+            className={`neo-leftnav__main neo-leftnav__main--active ${activate.includes(1) && !condensed
+              ? "neo-leftnav__main--expand"
+              : ""
+              }`}
           >
             <a
               aria-label="Accounts"
@@ -191,19 +196,27 @@ export const CondensedLeftNavWithScroll = () => {
 
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub">
-                <a tabIndex={-1}>Overview</a>
+                <span>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">Overview</a>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex={-1}>Manage Users</a>
+                <span>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">Manage Users</a>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <a tabIndex={-1}>Billing</a>
+                <span>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">Billing</a>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <a tabIndex={-1}>Payments</a>
+                <span>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">Payments</a>
+                </span>
               </li>
             </ul>
           </li>
@@ -251,11 +264,11 @@ export const CondensedLeftNavWithScroll = () => {
           role="button"
           aria-label="expand navigation"
           className="neo-icon-page-first neo-leftnav--condensed__toggle"
-          aria-labelledby="tooltip4"
+          aria-labelledby="tooltip4r"
           onClick={() => setCondensed(!condensed)}
         />
 
-        <div className="neo-tooltip__content" id="tooltip4">
+        <div className="neo-tooltip__content" id="tooltip4r">
           <div className="neo-arrow" />
           Expand/Collapse
         </div>
