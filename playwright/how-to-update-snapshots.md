@@ -3,9 +3,9 @@
 ## prerequisites
 
 - install [Docker Desktop](https://www.docker.com/products/docker-desktop/) locally
-- match Playwright and Ubuntu version for Docker image (as of this update, that is `v1.27.1-focal`)
+- match Playwright and Ubuntu version for Docker image (as of this update, that is `v1.28.0-focal`)
 
-e.g. Playwright version used in this project currently is v1.27.1. Ubuntu version used in 20.04, which has a codename "focal". So the docker image version chosen should be v1.27.1-focal.
+e.g. Playwright version used in this project currently is v1.28.0. Ubuntu version used in 20.04, which has a codename "focal". So the docker image version chosen should be v1.28.0-focal.
 
 ## updating the snapshots and running tests
 
@@ -15,7 +15,7 @@ From root (`neo-css-library`): `yarn github`
 
 From staging (`neo-css-library/staging`): `yarn start`
 
-From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.27.1-focal /bin/bash`
+From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.28.0-focal /bin/bash`
 
 From inside docker container:
 
@@ -33,4 +33,4 @@ Outside of docker, under playwright:
 
 ### More information on [docker image](https://playwright.dev/docs/docker)
 
-### Note: when renovate updates playwright version, the docker image version needs to be udpated here and in playwright-container.yrml
+### Note: when renovate updates playwright version, the docker image version needs to be udpated here and in playwright-container.yml
