@@ -1,6 +1,10 @@
 # Changelog
 
-### 3.63.1
+### 3.64.0
+
+#### New Features - New features that have recently been added
+
+- Added new `.neo-panel` styles
 
 #### Bugs Report - List of bugs that have been updated
 

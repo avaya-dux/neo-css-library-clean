@@ -1,0 +1,132 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+import { PanelsWithMargins, LeftNavWithSimpleJS } from "../components";
+---
+
+<NeoLayout title="Panel">
+  <h2>Panel variants</h2>
+  <h3>No margin/padding</h3>
+  <div class="background-color panel-variants-example-height">
+    <div class="panel-box--padding">
+      <div class="neo-panel">Default Panel</div>
+      <div class="neo-panel neo-panel--bordered--top">
+        Bordered Top Panel
+      </div>
+      <div class="neo-panel neo-panel--bordered--bottom">
+        Bordered Bottom Panel
+      </div>
+      <div class="neo-panel neo-panel--bordered--side">
+        Bordered Side Panel
+      </div>
+    </div>
+  </div>
+  <h3>Padding</h3>
+  <div class="background-color panel-variants-example-height">
+    <div class="panel-box">
+      <div
+      class="neo-panel"
+      style={{ flexGrow: "1" }}
+    >
+      <div class="panel-variants-inner-div">No padding</div>
+    </div>
+      <div
+        class="neo-panel neo-panel--padding--8"
+        style={{ flexGrow: "1" }}
+      >
+        <div class="panel-variants-inner-div">Padding 8</div>
+      </div>
+      <div
+        class="neo-panel neo-panel--padding--16"
+        style={{ flexGrow: "1" }}
+      >
+        <div class="panel-variants-inner-div">Padding 16</div>
+      </div>
+      <div
+        class="neo-panel neo-panel--padding--24"
+        style={{ flexGrow: "1" }}
+      >
+        <div class="panel-variants-inner-div">Padding 24</div>
+      </div>
+    </div>
+  </div>
+  <h3>Margin</h3>
+  <div class="background-color panel-variants-example-height">
+    <div class="panel-box"><PanelsWithMargins client:load /></div>
+  </div>
+  <br />
+  <h2>Sample UI with Panels</h2>
+  <div class="background-color" style={{marginBottom: '12px'}}>
+    <div class="neo-panel neo-panel--bordered--bottom">
+      <nav class="neo-navbar">
+        <div class="neo-nav--left">
+          <a class="neo-skipnav" href="#content">Skip to main content</a>
+
+          <a class="neo-navbar__brand" title="Neo Framework">
+            <img src="https://via.placeholder.com/76x57?text=LOGO" />
+          </a>
+
+          <div class="neo-nav--left--heading" role="heading">Panels</div>
+        </div>
+
+        <div class="neo-nav">
+          <div class="neo-badge__navbutton">
+            <button
+              class="neo-badge__navbutton--content neo-btn neo-icon-settings"
+            ></button>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div style={{ display: "flex", height: "100%" }}>
+      <div class="neo-panel--bordered--side">
+        <LeftNavWithSimpleJS className="panel-left-nav" />
+      </div>
+      <div
+        class="neo-panel neo-panel--padding--8 neo-panel--margin--8--top neo-panel--margin--8--left neo-panel--margin--8--bottom neo-panel--margin--4--right"
+        style={{ flexGrow: "1" }}
+      >
+        Panel with padding 8 and margin 8 top, left, bottom and margin 4 right
+      </div>
+      <div
+        class="neo-panel neo-panel--padding--16 neo-panel--margin--8--top neo-panel--margin--8--right neo-panel--margin--8--bottom neo-panel--margin--4--left"
+        style={{ flexGrow: "1" }}
+      >
+      Panel with padding 16 and margin 8 top, right, bottom and margin 4 left
+      </div>
+    </div>
+  </div>
+</NeoLayout>
+
+<style>
+  .background-color {
+    background-color: rgba(0, 0, 0, 0.03);
+  }
+  .panel-variants-example-height {
+    height: 300px;
+  }
+  .panel-wrapper {
+    height: 100%;
+  }
+
+  .panel-box {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+  }
+
+  .panel-box--padding {
+    display: flex;
+    height: 100%;
+    justify-content: space-around;
+    padding: 16px;
+  }
+
+  .panel-variants-inner-div {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 100%;
+  }
+  .panel-left-nav {
+    height: 100%;
+    background-color: white;
+  }
+</style>

@@ -1,7 +1,12 @@
 /* eslint-disable */
 import { useEffect, useState } from "react";
+import clsx from "clsx";
 
-export const LeftNavWithSimpleJS = () => {
+type LeftNav = {
+  className: string;
+};
+
+export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
   const [activate, setActivate] = useState([1]);
   const onExpand = (number: number) => {
     if (activate.includes(number)) {
@@ -12,7 +17,7 @@ export const LeftNavWithSimpleJS = () => {
   };
 
   return (
-    <div className="neo-leftnav--wrapper neo-leftnav--wrapper-tooltip">
+    <div className={clsx("neo-leftnav--wrapper neo-leftnav--wrapper-tooltip", className)}>
       <nav className="neo-leftnav">
         <ul className="neo-leftnav__nav neo-leftnav__nav--tooltip">
           <li

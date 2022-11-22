@@ -10,6 +10,7 @@ export * from "./Accordion";
 export * from "./Icons";
 export * from "./Widget";
 export * from "./Dropdown";
+export * from "./Panel";
 
 // svelte
 export * from "./RootOptions";

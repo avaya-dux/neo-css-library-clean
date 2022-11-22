@@ -1,0 +1,85 @@
+.neo-panel {
+  background-color: var(--global-background);
+  border: 1px solid var(--neo-color-base-200);
+  border-radius: 4px;
+  max-width: 100%;
+  max-height: 100%;
+
+  .neo-navbar {
+    border-bottom: none;
+  }
+
+  &--bordered {
+    &--top {
+      border-radius: 0;
+      border: none;
+      border-top: 1px solid var(--neo-color-base-200);
+    }
+
+    &--bottom {
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid var(--neo-color-base-200);
+    }
+
+    &--side {
+      border-radius: 0;
+      border: none;
+      border-right: 1px solid var(--neo-color-base-200);
+      @include rtl-selector() {
+        border-right: none;
+        border-left: 1px solid var(--neo-color-base-200);
+      }
+    }
+  }
+
+  &--padding--8 {
+    padding: 8px;
+  }
+
+  &--padding--16 {
+    padding: 16px;
+  }
+
+  &--padding--24 {
+    padding: 24px;
+  }
+
+  &--margin {
+    &--4 {
+      margin: 4px;
+    }
+    &--4--bottom {
+      margin-bottom: 4px;
+    }
+    &--4--left {
+      margin-left: 4px;
+    }
+    &--4--top {
+      margin-top: 4px;
+    }
+    &--4--right {
+      margin-right: 4px;
+    }
+  }
+
+
+  &--margin {
+    &--8 {
+      margin: 8px;
+    }
+    &--8--bottom {
+      margin-bottom: 8px;
+    }
+    &--8--left {
+      margin-left: 8px;
+    }
+    &--8--top {
+      margin-top: 8px;
+    }
+    &--8--right {
+      margin-right: 8px;
+    }
+  }
+
+}
