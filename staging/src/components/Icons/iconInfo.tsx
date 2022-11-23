@@ -2784,7 +2784,7 @@ export const icons = [
     bidirectional: false,
     category: "communication",
     animated: false
-  },  
+  },
   { name: "user", bidirectional: false, category: "account", animated: false },
   {
     name: "analytics-filled",
@@ -2796,6 +2796,36 @@ export const icons = [
     name: "after-call-work",
     bidirectional: false,
     category: "status",
+    animated: false,
+  },
+  {
+    name: "cell",
+    bidirectional: true,
+    category: "content",
+    animated: false,
+  },
+  {
+    name: "row",
+    bidirectional: true,
+    category: "content",
+    animated: false,
+  },
+  {
+    name: "column",
+    bidirectional: true,
+    category: "content",
+    animated: false,
+  },
+  {
+    name: "table",
+    bidirectional: true,
+    category: "content",
+    animated: false,
+  },
+  {
+    name: "cut",
+    bidirectional: false,
+    category: "content",
     animated: false,
   },
 ];

@@ -371,7 +371,7 @@ const unicodes = {
   supervisor: 62065,
   'support-ticket': 62066,
   support: 62067,
-  table: 62068,
+  table: 62475,
   'task-incomplete': 62069,
   thresholds: 62070,
   'thumbs-down': 62071,
@@ -532,5 +532,9 @@ const unicodes = {
   'video-incoming': 62467,
   'video-outgoing': 62468,
   'social-incoming': 62469,
-  'social-outgoing': 62470
+  'social-outgoing': 62470,
+  cell: 62471,
+  column: 62472,
+  cut: 62473,
+  row: 62474
 }; module.exports.unicodes = unicodes

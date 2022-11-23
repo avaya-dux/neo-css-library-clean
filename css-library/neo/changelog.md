@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.65.0
+
+#### New Features - New features that have recently been added
+
+- Added new `cut`, `cell`, `column`, `row` and `table` [Icons](https://design.avaya.com/components/icons/)
+
 ### 3.64.0
 
 #### New Features - New features that have recently been added
