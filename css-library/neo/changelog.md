@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.67.0
+
+#### New Features - New features that have recently been added
+
+- Added new class and styles for small [Select](https://design.avayacloud.com/components/web/selectbox-web)
+
 ### 3.65.0
 
 #### New Features - New features that have recently been added

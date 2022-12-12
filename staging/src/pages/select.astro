@@ -1,9 +1,10 @@
 ---
-import NeoLayout from '../layouts/NeoLayout.astro';
+import NeoLayout from "../layouts/NeoLayout.astro";
 
-import { Select } from '../components'
+import { Select, SmallSelect } from "../components";
 ---
 
 <NeoLayout title="Select">
   <Select />
+  <SmallSelect client:load />
 </NeoLayout>

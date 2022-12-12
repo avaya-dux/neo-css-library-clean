@@ -354,6 +354,12 @@
     }
   }
 
+  &.neo-multiselect--small {
+    & .neo-multiselect__header {
+      padding: 2px 8px;
+    }
+  }
+
   &.neo-multiselect--disabled {
     &:focus {
       outline: none;

@@ -136,3 +136,31 @@ export const Select = () => {
     </section>
   );
 };
+
+export const SmallSelect = () => {
+  return (
+    <div style={{ width: 300 }}>
+      <h2>Small Select</h2>
+
+      <div className="neo-input-group">
+        <label htmlFor="combobox">Choose one</label>
+
+        <div className="neo-multiselect neo-multiselect--small neo-multiselect--active">
+          <div className="neo-multiselect__header">Select One</div>
+          <div className="neo-multiselect__content">
+            <ul aria-label="list of options">
+              <li
+                className="neo-multiselect__content__item--disabled"
+                tabIndex={-1}
+              >
+                Option 1
+              </li>
+              <li>Option 2</li>
+              <li>Option 3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
