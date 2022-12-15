@@ -1,4 +1,10 @@
 # Changelog
+
+### 3.67.1
+
+### Bugs Report - List of bugs that have been updated
+
+- Provide style tweaks for Dropdown in [Navbar](https://design.avaya.com/components/web/navbar-web)
 ### 3.65.0
 
 #### New Features - New features that have recently been added

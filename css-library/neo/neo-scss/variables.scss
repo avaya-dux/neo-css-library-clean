@@ -3049,6 +3049,7 @@ $dropdown-readonly-line-height: $token-dropdown-readonly-line-height !default;
 $dropdown-readonly-letter-spacing: $token-dropdown-readonly-letter-spacing !default;
 $dropdown-readonly-font-weight: $token-dropdown-readonly-font-weight !default;
 $dropdown-readonly-font-color: var(--dropdown-readonly-font-color) !default;
+$dropdown-active-icon: $token-icons-neo-icon-check !default;
 
 // Component name: Popover
 // Location: src/scss/components/_popover.scss
@@ -3368,7 +3369,7 @@ $badge-padding: $token-badge-padding !default;
 /**
   Component name: SkipNav
 
-  Location: src/scss/elements/_skipNav.scss 
+  Location: src/scss/elements/_skipNav.scss
   $token-skip-nav-padding-x: 16px;
   $token-skip-nav-padding-y: 12px;
   $token-skip-nav-border-radius: 2px;

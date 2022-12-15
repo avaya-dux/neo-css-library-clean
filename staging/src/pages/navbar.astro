@@ -41,7 +41,7 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 
       <div class="neo-nav">
         <div class="neo-dropdown neo-dropdown--onhover">
-          <div class="neo-badge__navbutton neo-badge__navbutton--active">
+          <div class="neo-badge__navbutton">
             <button
               class="neo-badge__navbutton--content neo-btn neo-icon-user neo-dropdown__link-header"
             ></button>
@@ -168,44 +168,47 @@ import NeoLayout from "../layouts/NeoLayout.astro";
       </div>
 
       <div class="neo-nav">
-        <div class="neo-dropdown neo-dropdown--onhover">
-          <div class="neo-badge__navbutton neo-badge__navbutton--active">
-            <button
-              class="neo-badge__navbutton--content neo-btn neo-icon-user neo-dropdown__link-header"
-            ></button>
-            <span class="neo-badge__icon" data-badge="5"></span>
-          </div>
-          <div class="neo-dropdown__content" role="menu">
-            <a
-              class="neo-dropdown__link neo-icon-settings"
-              role="menuitem"
-              href="placeholder"
-            >
-              Something else
-            </a>
-            <a
-              class="neo-dropdown__link neo-dropdown--disabled neo-icon-robot"
-              role="menuitem"
-              href="placeholder"
-            >
-              Disabled action
-            </a>
-            <div class="neo-dropdown--input">
-              <div class="neo-form-control">
-                <div class="neo-input-editable__wrapper">
-                  <input
-                    class="neo-input"
-                    id="input-no-label"
-                    placeholder="Input With No Label"
-                    type="text"
-                  />
-                </div>
-              </div>
+        <div class="neo-tooltip neo-tooltip--left neo-tooltip--onhover">
+          <div class="neo-dropdown neo-dropdown--onhover">
+            <div class="neo-badge__navbutton neo-badge__navbutton--active">
               <button
-                class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-voice"
+                class="neo-badge__navbutton--content neo-btn neo-icon-user neo-dropdown__link-header"
               ></button>
+              <span class="neo-badge__icon" data-badge="5"></span>
+            </div>
+            <div class="neo-dropdown__content" role="menu">
+              <a
+                class="neo-dropdown__link neo-icon-settings"
+                role="menuitem"
+                href="placeholder"
+              >
+                Something else
+              </a>
+              <a
+                class="neo-dropdown__link neo-dropdown--disabled neo-icon-robot"
+                role="menuitem"
+                href="placeholder"
+              >
+                Disabled action
+              </a>
+              <div class="neo-dropdown--input">
+                <div class="neo-form-control">
+                  <div class="neo-input-editable__wrapper">
+                    <input
+                      class="neo-input"
+                      id="input-no-label"
+                      placeholder="Input With No Label"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <button
+                  class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-voice"
+                ></button>
+              </div>
             </div>
           </div>
+          <div class="neo-tooltip__content" id="tooltip1"><div class="neo-arrow"></div>Tooltip</div>
         </div>
         <div class="neo-badge__navbutton">
           <button
