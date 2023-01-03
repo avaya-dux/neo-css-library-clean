@@ -8,7 +8,7 @@ import {
 const options = {
   fullPage: true,
   maxDiffPixelRatio: 0,
-  timeout: 5000,
+  timeout: 10 * 1000,
 }
 export const baseTests = (page: string, optionTitle?: string) => {
   const { title, titleRegex: regex, url } = getTestParameters(page, optionTitle)

@@ -5,6 +5,7 @@
   "author": "Mohammad Razian",
   "license": "UNLICENSED",
   "scripts": {
+    "all": "yarn github",
     "build": "yarn build:css && yarn build:staging",
     "build:css": "yarn workspace css-library build",
     "build:for-publish": "yarn workspace figma-api package-icons && yarn workspace css-library build:for-publish",
