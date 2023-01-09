@@ -16,7 +16,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "2.8.2",
     "axios": "1.2.2",
-    "cypress": "12.2.0",
+    "cypress": "12.3.0",
     "cypress-image-snapshot": "4.0.1",
     "dotenv": "16.0.3",
     "esm": "3.2.25",
@@ -26,11 +26,11 @@
     "lodash": "4.17.21",
     "node-fetch": "3.3.0",
     "parcel": "2.8.2",
-    "postcss": "8.4.20",
-    "prettier": "2.8.1",
+    "postcss": "8.4.21",
+    "prettier": "2.8.2",
     "replace-in-file": "6.3.5",
     "shx": "0.3.4",
-    "style-dictionary": "3.7.1",
+    "style-dictionary": "3.7.2",
     "susy": "3.0.8",
     "webfonts-generator": "0.4.0"
   }
