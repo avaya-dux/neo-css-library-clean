@@ -1,0 +1,44 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+
+const placeholderHref = '/links#link-examples'
+---
+
+<NeoLayout title="Links">
+  <h2 id="link-examples">Examples of default Neo Link/Anchor element styling</h2>
+
+  <div class="link-examples__wrapper">
+    <a href={placeholderHref}>Default anchor element</a>
+    <a href={placeholderHref} class="neo-link">Anchor element with explicit 'neo-link' class applied</a>
+    <p>
+      This text surrounds an<a href={placeholderHref} class="neo-link--inline">
+        Inline anchor element with '.neo-link--inline' class applied
+      </a>to show underline styles
+    </p>
+    <div class="link-examples__grouped-links">
+      <a href={placeholderHref}>Group link 1</a>
+      <a href={placeholderHref}>Group link 2</a>
+      <a href={placeholderHref}>Group link 3</a>
+      <a href={placeholderHref}>Group link 4</a>
+      <a href={placeholderHref}>Group link 5</a>
+    </div>
+  </div>
+</NeoLayout>
+
+<style>
+  .link-examples__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .link-examples__wrapper > a, .link-examples__wrapper > p {
+    margin-bottom: 3rem;
+  }
+
+  .link-examples__grouped-links {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

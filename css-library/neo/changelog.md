@@ -1,6 +1,10 @@
 # Changelog
 
-### 3.67.1
+### 3.66.0
+
+### New Features - New features that have recently been added
+
+- Added new `.neo-link--inline` class for correct styling of inline anchor elements
 
 ### Bugs Report - List of bugs that have been updated
 

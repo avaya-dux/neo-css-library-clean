@@ -209,34 +209,14 @@ $global-disabled-color: var(--global-disabled-color);
 $global-disabled-bg: var(--global-disabled-background);
 $global-outline-color: var(--global-outline-color);
 
-// link color variables
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --link-color: #{$token-color-blue-400};
-//   }
-//   .neo-dark {
-//     --link-color: #{$token-color-blue-400};
-//   }
-//   .neo-light {
-//     --link-color: #{$token-color-blue-500};
-//   }
-// }
-// @media (prefers-color-scheme: light) {
 :root {
   --link-color: #{$token-color-blue-500};
+  --link-hover-color: #{token-color-blue-600};
 }
-//   .neo-light {
-//     --link-color: #{$token-color-blue-500};
-//   }
-//   .neo-dark {
-//     --link-color: #{$token-color-blue-400};
-//   }
-// }
 
 // Link colors
 $link-color: var(--link-color) !default;
-$link-hover-color: var(--link-color) !default;
+$link-hover-color: var(--link-hover-color) !default;
 $link-hover-decoration: none !default;
 
 // Typography

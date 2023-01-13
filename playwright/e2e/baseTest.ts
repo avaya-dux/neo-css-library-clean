@@ -1,11 +1,8 @@
-import { test, expect } from "@playwright/test"
-import {
-  clickRadioAndVerify,
-  getTestParameters,
-  gotoPageAndVerify,
-} from "./utils"
+import { expect, test } from "@playwright/test"
 
-const options = {
+import { clickRadioAndVerify, getTestParameters, gotoPageAndVerify } from "./utils"
+
+export const options = {
   fullPage: true,
   maxDiffPixelRatio: 0,
   timeout: 10 * 1000,

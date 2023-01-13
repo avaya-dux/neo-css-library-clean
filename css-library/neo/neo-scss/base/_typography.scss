@@ -1,7 +1,6 @@
 // importing Noto Sans
 
 @import url("https://use.typekit.net/jyd4rjy.css");
-// @import url('https://storage.googleapis.com/test-ds-portal-db.appspot.com/fonts/noto_sans/noto_sans.css');
 
 // importing Roboto Mono Regular 400
 
@@ -22,14 +21,12 @@ h5,
 h6 {
   color: $heading-color;
   font-weight: $heading-font-weight;
-  // line-height: $heading-line-height;
   margin-top: 0;
 }
 
 @for $i from 1 through 6 {
   h#{$i} {
     font-size: map_get($heading-font-sizes, h#{$i});
-    // margin-bottom: map_get($heading-font-sizes, h#{$i}) * 0.4;
     line-height: map_get($heading-line-heights, h#{$i});
 
     &:last-child {
@@ -47,7 +44,6 @@ h1.jumbo {
   line-height: $token-web-typography-web-heading-1-jumbo-line-height;
   letter-spacing: $token-web-typography-web-heading-1-jumbo-letter-spacing;
   font-size: $token-web-typography-web-heading-1-jumbo-font-size;
-  // margin-bottom: $token-web-typography-web-heading-1-jumbo-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-heading-1-jumbo-paragraph-spacing;
   }
@@ -70,7 +66,6 @@ p {
   color: $global-text-color;
   font-weight: normal;
   letter-spacing: 0.05px;
-  // margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
   margin-top: 0;
   text-rendering: optimizeLEgibility;
   // hard-coded for now
@@ -90,7 +85,15 @@ p {
 a,
 .neo-link {
   color: $link-color;
-  //text-decoration: none;
+  text-decoration: none;
+
+  &.neo-link--inline {
+    text-decoration: underline;
+
+    &:hover:not([class*="disabled"]) {
+      text-decoration: none;
+    }
+  }
 
   &:hover:not([class*="disabled"]) {
     color: $link-hover-color;
@@ -108,12 +111,6 @@ ul {
   margin-left: $global-spacer;
   margin-top: 0;
   padding: 0;
-
-  // dl,
-  // ol,
-  // ul {
-  //   margin-bottom: 0;
-  // }
 }
 
 // Description lists
@@ -216,7 +213,6 @@ hr {
 .neo-body-tiny {
   font-size: $token-web-typography-web-tiny-body-font-size;
   line-height: $token-web-typography-web-tiny-body-line-height;
-  // margin-bottom: $token-web-typography-web-tiny-body-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-tiny-body-paragraph-spacing;
   }
@@ -225,7 +221,6 @@ hr {
 .neo-body-small {
   font-size: $token-web-typography-web-small-body-font-size;
   line-height: $token-web-typography-web-small-body-line-height;
-  // margin-bottom: $token-web-typography-web-small-body-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-small-body-paragraph-spacing;
   }
@@ -234,7 +229,6 @@ hr {
 .neo-body-regular {
   font-size: $token-web-typography-web-body-regular-font-size;
   line-height: $token-web-typography-web-body-regular-line-height;
-  // margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-body-regular-paragraph-spacing;
   }
@@ -243,17 +237,10 @@ hr {
 .neo-body-large {
   font-size: $token-web-typography-web-large-body-regular-font-size;
   line-height: $token-web-typography-web-large-body-regular-line-height;
-  // margin-bottom: $token-web-typography-web-large-body-regular-paragraph-spacing;
   &.neo-paragraph-spacing {
     margin-bottom: $token-web-typography-web-large-body-regular-paragraph-spacing;
   }
 }
-
-// element based text
-
-// #text {
-//   color: $global-text-color;
-// }
 
 .neo-apac-language {
   display: block !important;
