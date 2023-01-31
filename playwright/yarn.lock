@@ -14,7 +14,7 @@
   dependencies:
     "@hapi/hoek" "^9.0.0"
 
-"@playwright/test@^1.29.0":
+"@playwright/test@1.29.0":
   version "1.29.0"
   resolved "https://registry.yarnpkg.com/@playwright/test/-/test-1.29.0.tgz#c41155e6c43561653b235c32493aaeb0858df773"
   integrity sha512-gp5PVBenxTJsm2bATWDNc2CCnrL5OaA/MXQdJwwkGQtqTjmY+ZOqAdLqo49O9MLTDh2vYh+tHWDnmFsILnWaeA==
