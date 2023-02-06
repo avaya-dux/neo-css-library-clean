@@ -9,6 +9,7 @@
 ### Bugs Report - List of bugs that have been updated
 
 - Provide style tweaks for Dropdown in [Navbar](https://design.avaya.com/components/web/navbar-web)
+- Tweaked display and alignment styles for chevron in Table[https://design.avaya.com/components/web/tables-web] Headers with sorting icons
 ### 3.65.0
 
 #### New Features - New features that have recently been added

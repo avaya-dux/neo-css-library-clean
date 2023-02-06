@@ -1,9 +1,9 @@
+import clsx from "clsx";
 /* eslint-disable jsx-a11y/label-has-associated-control */
 
 // TO-DO: Fix a11y issues with Table checkbox labels
 
 import { useState } from "react";
-import clsx from "clsx";
 import * as React from "react";
 
 export const Table = () => {
@@ -86,6 +86,87 @@ export const Table = () => {
             <td>stephen@shelby.ltd</td>
             <td>
               <figure className="neo-avatar" data-initials="SA"></figure>
+            </td>
+            <td>
+              <div
+                className="neo-chip neo-chip--default"
+                aria-label="Placeholder"
+              >
+                Placeholder
+              </div>
+            </td>
+            <td>
+              <span className="neo-icon-error"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+  );
+};
+
+export const TableWithSortHeaders = () => {
+  return (
+    <section>
+      <h2>Table With Sort Headers</h2>
+
+      <table className="neo-table">
+        <thead>
+          <tr>
+            <th className="filters">
+              <div className="neo-multiselect">
+                First Name<span className="neo-icon-chevron-down"></span>
+                <div className="neo-multiselect__content">
+                  <ul>
+                    <li
+                    >
+                      A - Z
+                    </li>
+                    <li
+                    >
+                      Z - A
+                    </li>
+                    <li
+                    >
+                      Filter By
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </th>
+            <th>Number</th>
+            <th>Email</th>
+            <th>Avatar</th>
+            <th>Chip</th>
+            <th>Icon</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Thomas</td>
+            <td className="number">12345</td>
+            <td>thomas@shelby.ltd</td>
+            <td>
+              <figure className="neo-avatar" data-initials="TA"></figure>
+            </td>
+            <td>
+              <div
+                className="neo-chip neo-chip--default"
+                aria-label="Placeholder"
+              >
+                Placeholder
+              </div>
+            </td>
+            <td>
+              <span className="neo-icon-error"></span>
+            </td>
+          </tr>
+          <tr>
+            <td>Michael</td>
+            <td className="number">12345</td>
+            <td>michael@shelby.ltd</td>
+            <td>
+              <figure className="neo-avatar" data-initials="MD"></figure>
             </td>
             <td>
               <div

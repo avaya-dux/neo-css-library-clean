@@ -98,6 +98,8 @@
       padding: 0 8px !important;
       .neo-multiselect {
         padding: $table-header-cell-padding-y $table-header-cell-padding-x !important;
+        display: flex;
+        align-items: center;
         &:focus,
         &:focus-within {
           outline: rgba(20, 115, 230, 1) auto 2px;
