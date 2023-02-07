@@ -10,6 +10,7 @@
 
 - Provide style tweaks for Dropdown in [Navbar](https://design.avaya.com/components/web/navbar-web)
 - Tweaked display and alignment styles for chevron in Table[https://design.avaya.com/components/web/tables-web] Headers with sorting icons
+- Tweaked positioning of Radio Buttons in Widget Components[https://design.avaya.com/components/web/widget-web] to avoid border cut-off on focus
 ### 3.65.0
 
 #### New Features - New features that have recently been added

@@ -273,6 +273,28 @@
       background-color: $global-disabled-bg;
       color: $global-disabled-color;
     }
+
+    & .neo-input-group .neo-radio + label {
+      padding-left: 2px;
+      @include rtl-selector {
+        padding-left: 0px;
+        padding-right: 2px;
+      }
+
+      &::before {
+        left: 2px;
+        @include rtl-selector {
+          right: 2px;
+        }
+      }
+
+      &::after {
+        left: 5px;
+        @include rtl-selector {
+          right: 5px;
+        }
+      }
+    }
   }
 
   .neo-widget__message {
