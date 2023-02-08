@@ -2,15 +2,32 @@
 
 ### 3.66.0
 
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
 ### New Features - New features that have recently been added
 
-- Added new `.neo-link--inline` class for correct styling of inline anchor elements
+- Added new `.neo-link--inline` class for correct styling of inline anchor elements (NEO-1392)
 
 ### Bugs Report - List of bugs that have been updated
 
-- Provide style tweaks for Dropdown in [Navbar](https://design.avaya.com/components/web/navbar-web)
-- Tweaked display and alignment styles for chevron in Table[https://design.avaya.com/components/web/tables-web] Headers with sorting icons
-- Tweaked positioning of Radio Buttons in Widget Components[https://design.avaya.com/components/web/widget-web] to avoid border cut-off on focus
+- Provide style tweaks for Dropdown in [Navbar](https://design.avaya.com/components/web/navbar-web) (NEO-1262)
+- Tweaked display and alignment styles for chevron in Table[https://design.avaya.com/components/web/tables-web] Headers with sorting icons (NEO-1405)
+- Tweaked positioning of Radio Buttons in Widget Components[https://design.avaya.com/components/web/widget-web] to avoid border cut-off on focus (CCNXT-108310)
+
+### Sunsetting - Removing Full Support
+
+- Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
+
+### Work In Progress - Future Updates
+
+- Merging data visualization colors with Neo colors (NEO-903)
+
 ### 3.65.0
 
 #### New Features - New features that have recently been added
