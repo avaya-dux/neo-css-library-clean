@@ -536,5 +536,6 @@ const unicodes = {
   cell: 62471,
   column: 62472,
   cut: 62473,
-  row: 62474
+  row: 62474,
+  unlock: 62476
 }; module.exports.unicodes = unicodes

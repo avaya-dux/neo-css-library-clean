@@ -1,15 +1,8 @@
-import { icons, iconCategories } from "./iconInfo";
-
-interface icon {
-  name: string;
-  bidirectional: boolean;
-  category: string;
-  animated: boolean;
-}
+import { Icon, iconCategories, icons } from "./iconInfo";
 
 type iconCategoryContainer = {
   category: string;
-  icons: icon[];
+  icons: Icon[];
 };
 
 const IconCategoryContainer = (props: iconCategoryContainer) => {
@@ -57,7 +50,11 @@ export const IconComponent = () => {
         );
 
         return (
-          <IconCategoryContainer category={category} icons={iconsToRender} />
+          <IconCategoryContainer
+            key={index}
+            category={category}
+            icons={iconsToRender}
+          />
         );
       })}
     </>

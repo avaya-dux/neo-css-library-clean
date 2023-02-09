@@ -37,6 +37,7 @@
 
 - our [accessibility guidelines](https://github.com/avaya-dux/neo-library-react/tree/main/readmes/accessibility-guidelines.md)
 - our [coding guidelines](https://github.com/avaya-dux/neo-library-react/tree/main/readmes/coding-guidelines.md)
+- [when and how to update the changelog](./updating-the-changelog.md)
 - and the team's [PR best practices](https://github.com/avaya-dux/neo-library-react/tree/main/readmes/pr-best-practices.md)
 
 ## publishing this repo

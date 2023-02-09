@@ -3,9 +3,13 @@
 ## prerequisites
 
 - install [Docker Desktop](https://www.docker.com/products/docker-desktop/) locally
-- match Playwright and Ubuntu version for Docker image (as of this update, that is `v1.30.0-focal`)
 
-e.g. Playwright version used in this project currently is v1.30.0. Ubuntu version used in 20.04, which has a codename "focal". So the docker image version chosen should be v1.30.0-focal.
+**NOTE**:
+Playwright version: `v1.30.0`
+
+Ubuntu version: `20.04`, codenamed "focal".
+
+Thus, the docker image version chosen should be v1.30.0-focal.
 
 ## updating the snapshots and running tests
 
