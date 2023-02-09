@@ -172,6 +172,37 @@
   justify-content: space-between;
   // need to work on border styles for whole input wrapper
   border: $input-border-width $input-border-style $input-border-color;
+
+  &.neo-input-editable__wrapper--small {
+    &:focus-within {
+      margin: 0 -1px;
+
+      & .neo-input + .neo-input-edit__icon,
+      & .neo-input + .neo-input-editable__close {
+        margin: 0 0 2px 0;
+      }
+    }
+  }
+
+  &--small {
+    min-height: initial;
+    max-height: 24px;
+
+    & .neo-input {
+      min-height: initial;
+      max-height: 24px;
+      padding: 2px 8px;
+    }
+
+    & .neo-input + .neo-input-edit__icon,
+    & .neo-input + .neo-input-editable__close {
+      padding: 4px;
+      &:before {
+        line-height: initial;
+      }
+    }
+  }
+
   &:focus-within {
     border-color: $input-focus-border-color;
     // hard-coded for now
@@ -220,7 +251,6 @@
     border: none;
     background-color: $input-background-color;
     color: $input-clear-button-color;
-    // hard-coded for now
     padding: $input-padding-y $input-padding-x;
     &:hover {
       cursor: pointer;

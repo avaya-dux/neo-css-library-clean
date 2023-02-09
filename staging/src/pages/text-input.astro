@@ -1,0 +1,49 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Text Input">
+  <h1>Text Input Examples</h1>
+
+  <h3>Default Text Input</h3>
+
+  <div class="text-input__layout">
+    <div class="neo-form-control">
+      <div class="neo-input-group">
+        <label for="input1"> Name</label>
+        <div class="neo-input-editable__wrapper">
+          <input class="neo-input" id="input1" type="text" />
+          <button
+            aria-label="clear input"
+            class="neo-input-edit__icon neo-icon-end"></button>
+        </div>
+      </div>
+      <div class="neo-input-hint">Enter your name.</div>
+    </div>
+  </div>
+
+  <h3>Small Text Input</h3>
+
+  <div class="text-input__layout">
+    <div class="neo-form-control">
+      <div class="neo-input-group">
+        <label for="input1"> Name</label>
+        <div class="neo-input-editable__wrapper neo-input-editable__wrapper--small">
+          <input class="neo-input" id="input1" type="text" />
+          <button
+            aria-label="clear input"
+            class="neo-input-edit__icon neo-icon-end"></button>
+        </div>
+      </div>
+      <div class="neo-input-hint">Enter your name.</div>
+    </div>
+  </div>
+</NeoLayout>
+
+<style>
+
+.text-input__layout {
+  width: 40%;
+}
+
+</style>

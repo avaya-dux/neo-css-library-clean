@@ -12,7 +12,7 @@
 
 ### New Features - New features that have recently been added
 
-- Added new `.neo-input-editable__wrapper--small` class for correct styling of small Text Inputs (NEO-1402)
+- Added new `.neo-input-editable__wrapper--small` class name for correct styling of small Text Inputs (NEO-1402)
 
 ### Bugs Report - List of bugs that have been updated
 
