@@ -226,7 +226,7 @@
       background-color: $button-tertiary-hover-background-color;
       background-image: none;
     }
-    b &--#{$name}[disabled],
+    &--#{$name}[disabled],
     &--#{$name}--disabled {
       background-image: none;
       color: map-get($value, disabled-color);
@@ -314,7 +314,7 @@
         background-color: map-get($value, pressed-color);
         background-image: none;
       }
-      b &--#{$name}[disabled],
+      &--#{$name}[disabled],
       &--#{$name}--disabled {
         background-image: none;
         background-color: map-get($value, disabled-color);
