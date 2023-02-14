@@ -1,5 +1,5 @@
-import { Fragment, useState } from "react";
 import clsx from "clsx";
+import { Fragment, useState } from "react";
 
 export const NeoForm = () => {
   return (
@@ -105,6 +105,96 @@ export const InputStates = () => {
   );
 };
 
+export const HorizontalFormNoLabels = () => {
+  return (
+    <form
+      className="neo-form neo-form--inline"
+      style={{ marginBottom: "16px" }}
+    >
+      <div className="neo-form-control neo-form-control--no-label">
+        <div className="neo-input-group neo-input-group--inline">
+          <div className="neo-input-editable__wrapper">
+            <input
+              className="neo-input"
+              id="textInputNoLabel"
+              placeholder="Text Input"
+              aria-label="textInputNoLabel"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="neo-form-control neo-form-control--no-label">
+        <div className="neo-input-editable__wrapper">
+          <input
+            className="neo-input"
+            placeholder="Input with No Label"
+            aria-label="inputNoLabel"
+          />
+        </div>
+      </div>
+      <div className="neo-form-control neo-form-control--no-label">
+        <div className="neo-input-group">
+          <div className="neo-input-group--inline">
+            <input
+              className="neo-radio"
+              type="radio"
+              name="radioMixedExampleNoLabel"
+              value="1"
+              id="radioMixedExampleNoLabel"
+            />
+            <label htmlFor="radioMixedExampleNoLabel1">Radio 1</label>
+            <input
+              className="neo-radio"
+              type="radio"
+              name="radioMixedExampleNoLabel"
+              value="2"
+              id="radioMixedExampleNoLabel2"
+            />
+            <label htmlFor="radioMixedExampleNoLabel2">Radio 2</label>
+            <input
+              className="neo-radio"
+              type="radio"
+              name="radioMixedExampleNoLabel"
+              value="3"
+              id="radioMixedExampleNoLabel3"
+            />
+            <label htmlFor="radioMixedExampleNoLabel3">Radio 3</label>
+          </div>
+        </div>
+      </div>
+      <div className="neo-form-control neo-form-control--no-label">
+        <div className="neo-input-group">
+          <div className="neo-input-group--inline">
+            <input
+              className="neo-check"
+              type="checkbox"
+              id="checkgroupNoLabel1"
+              value="checkgroup1"
+            />
+            <label htmlFor="checkgroupNoLabel1">Check 1</label>
+            <input
+              className="neo-check"
+              type="checkbox"
+              id="checkgroupNoLabel2"
+              value="checkgroup2"
+              defaultChecked
+            />
+            <label htmlFor="checkgroupNoLabel2">Check 2</label>
+            <input
+              className="neo-check"
+              type="checkbox"
+              id="checkgroupNoLabel3"
+              value="checkgroup3"
+              disabled
+            />
+            <label htmlFor="checkgroupNoLabel3">Check 3 (disabled)</label>
+          </div>
+        </div>
+      </div>
+    </form>
+  );
+};
+
 export const FormAlignment = ({
   orientation = "vertical",
 }: {
@@ -122,7 +212,10 @@ export const FormAlignment = ({
         Toggle Error State
       </button>
       <form
-        className={clsx("neo-form", orientation && "neo-form--inline")}
+        className={clsx(
+          "neo-form",
+          orientation === "horizontal" && "neo-form--inline"
+        )}
         style={{ marginBottom: "16px" }}
       >
         <div

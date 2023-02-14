@@ -14,6 +14,7 @@
 
 - Added new `.neo-input-editable__wrapper--small` class name for correct styling of small Text Inputs (NEO-1402)
 - Added new icon "unlock"
+- Added new `.neo-form-control--no-label` class to remove minimum height on horizontal form elements (NEO-1438)
 
 ### Bugs Report - List of bugs that have been updated
 

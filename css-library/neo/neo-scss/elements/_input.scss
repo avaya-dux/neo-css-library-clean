@@ -143,7 +143,7 @@
   @include input--states;
 }
 
-.neo-form--inline .neo-form-control .neo-input-editable__wrapper {
+.neo-form--inline .neo-form-control:not(.neo-form-control--no-label) .neo-input-editable__wrapper {
   &:only-child {
     margin-top: $input-label-height;
     margin-bottom: $input-helper-text-height;

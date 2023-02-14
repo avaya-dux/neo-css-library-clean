@@ -261,6 +261,10 @@
       margin-bottom: 0px;
     }
 
+    .neo-form-control--no-label {
+      min-height: initial;
+    }
+
     .neo-form-control:not(:last-child) {
       margin-right: 12px;
       @include rtl-selector {
@@ -280,4 +284,9 @@
       margin-right: 8px;
     }
   }
+}
+
+.neo-form.neo-form--inline .neo-form-control.neo-form-control--no-label .neo-input-editable__wrapper {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }

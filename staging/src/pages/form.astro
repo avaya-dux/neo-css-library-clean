@@ -9,6 +9,7 @@ import {
   InputAddons,
   InputWithIcons,
   InputCombinations,
+  HorizontalFormNoLabels
 } from "../components";
 ---
 
@@ -27,6 +28,9 @@ import {
   <h3>Read Only Text Input</h3>
   <ReadOnlyInput />
 
+  <h3>Horizontal Form No Labels</h3>
+  <HorizontalFormNoLabels/>
+
   <h3 class="example__header">Horizontal Form Alignment</h3>
   <div class="example__wrapper">
     <FormAlignment orientation="horizontal" client:load />
@@ -34,7 +38,7 @@ import {
 
   <h3 class="section-header">Vertical Form Alignment</h3>
   <div class="example__wrapper">
-    <FormAlignment client:load />
+    <FormAlignment orientation="vertical" client:load />
   </div>
 
   <h3>Text Input w/ Addons</h3>
