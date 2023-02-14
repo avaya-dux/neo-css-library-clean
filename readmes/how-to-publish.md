@@ -45,7 +45,7 @@ Once that is complete, the next step is to add the release to our GitHub
 6. add title using format: "v0.2.0 (Jan 18th 2022)"
 7. click: "Auto-generate release notes"
 
--- **TEMP**: The auto-generated release notes in GitHub will still include artifacts from the commit (ex. commit message, contributor username). Please make sure you go through and manually add the correct notes as necessary
+-- **IMPORTANT**: The auto-generated release notes in GitHub will still include artifacts from the commit (ex. commit message, contributor username). Please make sure you go through and manually add the correct notes, backticks for code/class names, and JIRA tickets, following the examples from [previous releases](https://github.com/avaya-dux/neo-css-library/releases/tag/v3.66.0) as necessary
 
 8. attach the binary generated from when you ran `npm pack` above (tgz file)
 9. click: "Publish release"

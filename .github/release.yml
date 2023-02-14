@@ -3,15 +3,15 @@ changelog:
     labels:
       - ignore-for-release
   categories:
-    - title: Breaking Changes - the following Components are broken and need immediate attention
+    - title: Breaking Changes - Needs Immediate Attention
       labels:
         - breaking-changes
-    - title: New Features - New features that have recently been added
+    - title: New Features - Recently Added
       labels:
         - new-features
-    - title: Additional Changes - the following items have been updated. Please make these updates at your earliest convenience.
+    - title: Additional Changes - Update At Earliest Convenience
       labels:
         - additional-changes
-    - title: Bugs Report - List of bugs that have been updated
+    - title: Bugs Report - Updated List
       labels:
         - bugs-report
