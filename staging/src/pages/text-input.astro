@@ -27,9 +27,26 @@ import NeoLayout from "../layouts/NeoLayout.astro";
   <div class="text-input__layout">
     <div class="neo-form-control">
       <div class="neo-input-group">
-        <label for="input1"> Name</label>
+        <label for="input2"> Name</label>
         <div class="neo-input-editable__wrapper neo-input-editable__wrapper--small">
-          <input class="neo-input" id="input1" type="text" />
+          <input class="neo-input" id="input2" type="text" />
+          <button
+            aria-label="clear input"
+            class="neo-input-edit__icon neo-icon-end"></button>
+        </div>
+      </div>
+      <div class="neo-input-hint">Enter your name.</div>
+    </div>
+  </div>
+
+  <h3>Text Input with Placeholder text</h3>
+
+  <div class="text-input__layout">
+    <div class="neo-form-control">
+      <div class="neo-input-group">
+        <label for="input3"> Name</label>
+        <div class="neo-input-editable__wrapper">
+          <input class="neo-input" id="input3" type="text" placeholder="placeholder text"/>
           <button
             aria-label="clear input"
             class="neo-input-edit__icon neo-icon-end"></button>
