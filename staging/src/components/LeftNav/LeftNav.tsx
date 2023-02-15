@@ -17,7 +17,12 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
   };
 
   return (
-    <div className={clsx("neo-leftnav--wrapper neo-leftnav--wrapper-tooltip", className)}>
+    <div
+      className={clsx(
+        "neo-leftnav--wrapper neo-leftnav--wrapper-tooltip",
+        className
+      )}
+    >
       <nav className="neo-leftnav">
         <ul className="neo-leftnav__nav neo-leftnav__nav--tooltip">
           <li
@@ -38,9 +43,13 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
               <div className="neo-arrow" />
               Accounts
             </div>
-            <ul className="neo-leftnav__nav">
-              <li className="neo-leftnav__sub neo-leftnav__sub--active">
+            <ul className="neo-leftnav__nav neo-leftnav__nav--tooltip">
+              <li className="neo-leftnav__sub neo-leftnav__sub--active neo-tooltip neo-tooltip--right neo-tooltip--onhover">
                 <a>Overview</a>
+                <div className="neo-tooltip__content" id="tooltip1">
+                  <div className="neo-arrow"></div>
+                  Tooltip
+                </div>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -52,9 +61,7 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex={-1}>
-                  Payments
-                </a>
+                <a tabIndex={-1}>Payments</a>
               </li>
             </ul>
           </li>
@@ -116,9 +123,7 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
 
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <a tabIndex={-1}>
-                  Customer Identifiers
-                </a>
+                <a tabIndex={-1}>Customer Identifiers</a>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -130,9 +135,7 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
               </li>
 
               <li className="neo-leftnav__sub">
-                <a tabIndex={-1}>
-                  Contacts
-                </a>
+                <a tabIndex={-1}>Contacts</a>
               </li>
             </ul>
           </li>
