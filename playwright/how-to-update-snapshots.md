@@ -5,11 +5,11 @@
 - install [Docker Desktop](https://www.docker.com/products/docker-desktop/) locally
 
 **NOTE**:
-Playwright version: `v1.30.0`
+Playwright version: `v1.31.0`
 
 Ubuntu version: `20.04`, codenamed "focal".
 
-Thus, the docker image version chosen should be v1.30.0-focal.
+Thus, the docker image version chosen should be v1.31.0-focal.
 
 ## updating the snapshots and running tests
 
@@ -19,7 +19,7 @@ From root (`neo-css-library`): `yarn github`
 
 From staging (`neo-css-library/staging`): `yarn start`
 
-From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.30.0-focal /bin/bash`
+From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.31.0-focal /bin/bash`
 
 From inside docker container:
 
