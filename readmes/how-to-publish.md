@@ -43,7 +43,7 @@ Once that is complete, the next step is to add the release to our GitHub
 4. choose tag (or create a new tag on publish), using format `vX.X.X`
 5. target `main` branch
 6. add title using format: "v0.2.0 (Jan 18th 2022)"
-7. click: "Auto-generate release notes"
+7. Copy Paste contents from appropriate version in `neo-npm-package/CHANGELOG.md` to release notes
 
 -- **IMPORTANT**: The auto-generated release notes in GitHub will still include artifacts from the commit (ex. commit message, contributor username). Please make sure you go through and manually add the correct notes, backticks for code/class names, and JIRA tickets, following the examples from [previous releases](https://github.com/avaya-dux/neo-css-library/releases/tag/v3.66.0) as necessary
 
@@ -76,6 +76,13 @@ Once the publishing is completed, we must then update the Design Portal with an 
 12. open a PR into `develop`, merge, then open a PR into `main` and merge. When this second PR is merged the site will be deployed to production.
 
 - - _IMPORTANT NOTE:_ do _not_ skip this step, it is imperitive that we update the Design Portal with the latest changes _at the same time_ as we update the css-library
+
+### make "Post" in Avaya Spaces Space "[Neo Releases](https://spaces.avayacloud.com/spaces/63dc43746489f073ae069fca)"
+
+- Navigate to [Neo Releases](https://spaces.avayacloud.com/spaces/63dc43746489f073ae069fca)
+- Click "New Post"
+- Title: Changelog Updates
+- Description: add version and link to Design Portal Changelog page
 
 ### make sure version is marked as 'released' in JIRA
 
