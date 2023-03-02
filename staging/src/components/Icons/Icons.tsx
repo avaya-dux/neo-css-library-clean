@@ -60,3 +60,22 @@ export const IconComponent = () => {
     </>
   );
 };
+
+export const IconSizes = () => {
+  return (
+    <>
+      <h2>Icon sizes</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "1rem",
+        }}
+      >
+        <span className="neo-icon-error neo-icon--small"> Small</span>
+        <span className="neo-icon-error neo-icon--medium"> Medium</span>
+        <span className="neo-icon-error neo-icon--large"> Large</span>
+      </div>
+    </>
+  );
+};

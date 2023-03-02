@@ -13,7 +13,6 @@
 
         @include rtl-icons($custom-margin-right);
       }
-      // new code
       &::after {
         margin-left: $custom-margin-right;
 
@@ -23,7 +22,14 @@
   }
 }
 
-// [class^='neo-icon-']:before,
-// [class*='neo-icon-']:before {
-//   color: $global-icon-color;
-// }
+.neo-icon--small:before {
+  font-size: 16px;
+}
+
+.neo-icon--medium:before {
+  font-size: 24px;
+}
+
+.neo-icon--large:before {
+  font-size: 32px;
+}
