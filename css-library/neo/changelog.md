@@ -16,8 +16,7 @@
 
 ### Bugs Report - List of bugs that have been updated
 
-- Fixed below css selectors for disabled tertiary button and disabled circle primary buttons [https://design.avaya.com/components/web/buttons-web]: including .neo-btn-tertiary--primary[disabled], .neo-btn-tertiary--[status-code][disabled], neo-btn-circle-primary--primary[disabled], neo-btn-circle-primary--[status-code][disabled], where [status-code] could be one of the six codes: default, success, alert, warning, info, or event
-
+- N/A
 ### Sunsetting - Removing Full Support
 
 - Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
@@ -48,7 +47,7 @@
 
 ### Sunsetting - Removing Full Support
 
-- N/A
+- Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
 
 ### Work In Progress - Future Updates
 
