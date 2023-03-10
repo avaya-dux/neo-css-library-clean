@@ -1,4 +1,98 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+
+import clsx from "clsx";
+import { useState } from "react";
+
+export const Dropdown = () => {
+  const [separatorLinkIsActive, setSeparatorLinkIsActive] =
+    useState<boolean>(false);
+  const [anotherActionIsActive, setAnotherActionIsActive] =
+    useState<boolean>(false);
+
+  return (
+    <div className="neo-dropdown neo-dropdown--active">
+      <button className="neo-btn neo-btn-primary neo-btn-primary--primary neo-dropdown__link-header">
+        Action
+      </button>
+      <div className="neo-dropdown__content" role="menu">
+        <div className="neo-dropdown__item neo-dropdown--active">
+          <a
+            aria-expanded="true"
+            className="neo-dropdown__link"
+            role="menuitem"
+            href="#"
+          >
+            Something else
+          </a>
+          <div className="neo-dropdown__content" role="menu">
+            <div className="neo-dropdown__shortcut--wrapper">
+              <a className="neo-dropdown__link" href="/dropdown#">
+                Action
+              </a>
+              <p className="neo-dropdown__shortcut">Shortcut text</p>
+            </div>
+            <a
+              className={clsx(
+                "neo-dropdown__link neo-icon-settings",
+                anotherActionIsActive && "neo-dropdown__link--active"
+              )}
+              role="menuitem"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                setAnotherActionIsActive(!anotherActionIsActive);
+              }}
+            >
+              Click to Activate
+            </a>
+            <div className="neo-dropdown__item neo-dropdown--active">
+              <a
+                className="neo-dropdown__link"
+                role="menuitem"
+                href="/dropdown#"
+              >
+                Action
+              </a>
+            </div>
+          </div>
+        </div>
+        <a
+          className="neo-dropdown__link neo-dropdown--disabled"
+          role="menuitem"
+          href="/dropdown#"
+        >
+          Disabled action
+        </a>
+        <a
+          className={clsx(
+            "neo-dropdown__link neo-icon-settings",
+            separatorLinkIsActive && "neo-dropdown__link--active"
+          )}
+          role="menuitem"
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setSeparatorLinkIsActive(!separatorLinkIsActive);
+          }}
+        >
+          Click to Activate
+        </a>
+        <hr className="neo-dropdown__separator" />
+        <a className="neo-dropdown__link" href="/dropdown#">
+          <figure
+            className="neo-avatar neo-avatar--small"
+            data-initials="SM"
+          ></figure>
+          Another action
+        </a>
+      </div>
+    </div>
+  );
+};
+
 export const DropdownWithInput = () => {
+  const [isActive, setIsActive] = useState<boolean>(false);
+
   return (
     <div className="neo-dropdown neo-dropdown--active">
       <button
@@ -9,14 +103,21 @@ export const DropdownWithInput = () => {
       </button>
       <div className="neo-dropdown__content" role="menu">
         <a
-          className="neo-dropdown__link neo-icon-settings"
+          className={clsx(
+            "neo-dropdown__link neo-icon-settings",
+            isActive && "neo-dropdown__link--active"
+          )}
           role="menuitem"
-          href="placeholder"
+          href="#"
+          onClick={(e) => {
+            e.preventDefault();
+            setIsActive(!isActive);
+          }}
         >
-          Something else
+          Click to Activate
         </a>
         <a
-          className="neo-dropdown__link neo-dropdown--disabled neo-icon-robot"
+          className="neo-dropdown__link neo-dropdown--disabled neo-icon-settings"
           role="menuitem"
           href="placeholder"
         >
@@ -41,6 +142,8 @@ export const DropdownWithInput = () => {
 };
 
 export const DropdownIconButton = () => {
+  const [isActive, setIsActive] = useState<boolean>(false);
+
   return (
     <div style={{ display: "flex", justifyContent: "space-around" }}>
       <div className="neo-dropdown neo-dropdown--active">
@@ -50,11 +153,18 @@ export const DropdownIconButton = () => {
         ></button>
         <div className="neo-dropdown__content" role="menu">
           <a
-            className="neo-dropdown__link neo-icon-settings"
+            className={clsx(
+              "neo-dropdown__link neo-icon-settings",
+              isActive && "neo-dropdown__link--active"
+            )}
             role="menuitem"
-            href="placeholder"
+            href="#"
+            onClick={(e) => {
+              e.preventDefault();
+              setIsActive(!isActive);
+            }}
           >
-            Something else
+            Click to Activate
           </a>
           <a
             className="neo-dropdown__link neo-dropdown--disabled neo-icon-robot"
