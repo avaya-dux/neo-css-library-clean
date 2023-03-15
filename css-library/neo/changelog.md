@@ -18,7 +18,7 @@
 
 - Tweaked `neo-dropdown-link--active` class styles (NEO-1367)
 - Fixed issue with background color of Dropdown links on hover when used with shortcut
-
+- Fixed alignment of Table header cells with filters (NEO-1504)
 ### Sunsetting - Removing Full Support
 
 - Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
