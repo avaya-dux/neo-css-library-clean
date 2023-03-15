@@ -1,5 +1,3 @@
-// updated leftnav styles
-
 @mixin leftnav-main {
   &__main {
     background-color: $leftnav-background-color;
@@ -10,7 +8,8 @@
     flex-direction: column;
     justify-content: center;
     & > a,
-    & > .neo-leftnav__category {
+    & > .neo-leftnav__category,
+    & > .neo-leftnav__main__item {
       &:not(.neo-icon-page-first):focus,
       &:not(.neo-icon-page-first):focus-visible {
         outline-offset: -4px;
@@ -33,7 +32,6 @@
       line-height: $leftnav-main-default-font-line-height;
       letter-spacing: $leftnav-main-default-font-letter-spacing;
       word-break: break-word;
-      // transition: $tab-hover-transition;
       @include rtl-selector {
         border-left: none;
         border-right: $leftnav-main-active-border-width
@@ -56,12 +54,10 @@
         content: $leftnav-main-chevron-icon;
         position: absolute;
         transition: $accordion-icon-transition;
-        // hard-coded for now
         right: 16px;
         font-size: $leftnav-collapse-icon-font-size;
         @include rtl-selector {
           content: $leftnav-main-chevron-icon-reverse;
-          // hard-coded for now
           left: 16px;
           right: auto;
         }
@@ -72,7 +68,6 @@
         cursor: pointer;
         color: $leftnav-main-hover-color;
         background-color: $leftnav-hover-background-color;
-        // transition: $tab-hover-transition;
         transition: background-color $global-transition-duration
           $global-transition-timing;
         &:before {
@@ -82,7 +77,8 @@
     }
     &--active {
       & > a,
-      & > .neo-leftnav__category {
+      & > .neo-leftnav__category,
+      & > .neo-leftnav__main__item {
         border-color: $leftnav-main-active-color;
         color: $leftnav-main-active-color;
         font-size: $leftnav-main-active-font-size;
@@ -96,7 +92,6 @@
           border-color: $leftnav-main-active-color;
         }
         &:hover {
-          // background-color: $leftnav-hover-background-color;
           & > a {
             cursor: pointer;
             color: $leftnav-main-hover-color;
@@ -112,9 +107,9 @@
     }
     &--active[disabled] {
       cursor: not-allowed;
-      // background-color: $leftnav-background-color;
       & > a,
-      & > .neo-leftnav__category {
+      & > .neo-leftnav__category,
+      & > .neo-leftnav__main__item {
         cursor: not-allowed;
         background-color: $leftnav-background-color;
         color: $leftnav-main-active-disabled-color !important;
@@ -133,10 +128,9 @@
     &.neo-leftnav__disabled,
     &.neo-leftnav__disabled:hover {
       cursor: not-allowed;
-
-      // background-color: $leftnav-background-color;
       & > a,
-      & > .neo-leftnav__category {
+      & > .neo-leftnav__category,
+      & > .neo-leftnav__main__item {
         cursor: not-allowed;
         background-color: $leftnav-background-color;
         color: $leftnav-main-default-disabled-color;
@@ -162,7 +156,8 @@
         $global-transition-timing;
     }
     &--expand > a,
-    &--expand > .neo-leftnav__category {
+    &--expand > .neo-leftnav__category,
+    &--expand > .neo-leftnav__main__item {
       &.expandable:after {
         transition: $accordion-icon-transition;
         transform: rotate(90deg) $accordion-active-icon-animation;
@@ -183,18 +178,15 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    // transition: max-height, min-height $global-transition-duration ease-in-out;
     & > a,
     & .neo-leftnav__sub__item {
       word-break: break-word;
-      // animation properties
       overflow: hidden;
       width: 100%;
       color: $leftnav-sub-default-color;
       display: flex;
       align-items: center;
       margin: 0;
-      // hard-coded for now
       padding: 8px 28px 8px $leftnav-sub-padding-horizontal;
       text-decoration: none;
       @include rtl-selector {
@@ -204,7 +196,6 @@
       font-weight: $leftnav-sub-default-font-weight;
       line-height: $leftnav-sub-default-font-line-height;
       letter-spacing: $leftnav-sub-default-font-letter-spacing;
-      // transition: $tab-hover-transition;
       &:focus,
       &:focus-visible {
         color: $leftnav-sub-active-hover-color;
@@ -217,7 +208,6 @@
         width: $leftnav-active-dot-size;
         background-color: transparent;
         border-radius: 50%;
-        // hard-coded for now
         margin-right: 12px;
         @include rtl-selector {
           margin-right: 0px;
@@ -349,7 +339,6 @@
   &.neo-leftnav--condensed {
     position: relative;
     & .neo-leftnav {
-      //hard-coded space between last list item and toggle
       margin-bottom: 56px;
     }
     & .neo-leftnav__main {
@@ -357,7 +346,8 @@
       &:focus-visible {
         outline: 0;
       }
-      & > a {
+      & > a,
+      & > .neo-leftnav__main__item {
         padding: 16px !important;
         text-decoration: none;
         & span {
@@ -373,7 +363,8 @@
         }
       }
       &--expand {
-        & > a > span {
+        & > a > span,
+        & > .neo-leftnav__main__item > span {
           &:before {
             transition: $accordion-icon-transition;
             transform: rotate(90deg) $accordion-active-icon-animation;
@@ -418,7 +409,8 @@
       max-width: 55px !important;
       & .neo-leftnav__main {
         max-width: 55px !important;
-        & > a {
+        & > a,
+        & > .neo-leftnav__main__item {
           font-size: 0px;
           padding: 16px !important;
           max-width: 55px !important;

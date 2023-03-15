@@ -12,7 +12,7 @@
 
 ### New Features - New features that have recently been added
 
-- N/A
+- Added `neo-leftnav__main__item` class for additional flexibility when building Component (NEO-1433)
 
 ### Bugs Report - List of bugs that have been updated
 
