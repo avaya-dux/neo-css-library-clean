@@ -79,3 +79,52 @@ export const IconSizes = () => {
     </>
   );
 };
+
+export const IconStates = () => {
+  return (
+    <>
+      <h2>Icon states</h2>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "1rem",
+          marginBottom: "2rem"
+        }}
+      >
+        <span className="neo-icon-state neo-icon-state--available neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--away neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--busy neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--do-not-disturb neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--offline neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--lock neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--warning neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--missed neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--connected neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--inbound neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--outbound neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--acw neo-icon-voice"></span>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "1rem",
+        }}
+      >
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--available neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--away neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--busy neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--do-not-disturb neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--offline neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--lock neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--warning neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--missed neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--connected neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--inbound neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--outbound neo-icon-voice"></span>
+        <span className="neo-icon-state neo-icon-state--large neo-icon-state--acw neo-icon-voice"></span>
+      </div>
+    </>
+  );
+};

@@ -246,6 +246,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
     --channel-offline-color: #{$token-color-base-500};
     --channel-icon-generic-color: #{$token-color-base-100};
+    --channel-acw-color: #{$token-color-blue-400};
   }
 }
 @media (prefers-color-scheme: light) {
@@ -256,6 +257,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --channel-dnd-color: #{$token-channel-icon-dnd-color};
     --channel-offline-color: #{$token-channel-icon-offline-color};
     --channel-icon-generic-color: #{$token-channel-icon-generic-color};
+    --channel-acw-color: #{$token-color-blue-500};
   }
 }
 @media (prefers-color-scheme: dark) {

@@ -1,8 +1,8 @@
 @import "base/colors";
 @import "helpers";
 @import "mixins";
-@import "tokens-import";
 @import "themes/theme";
+@import "tokens-import";
 
 // Variables
 //
@@ -1114,24 +1114,10 @@ $checkbox-border-width: $token-checkbox-border-width !default;
   --channel-dnd-color: #{$token-channel-icon-dnd-color};
   --channel-offline-color: #{$token-channel-icon-offline-color};
   --channel-icon-generic-color: #{$token-channel-icon-generic-color};
+  --channel-acw-color: #{token-color-blue-500};
 }
-//   .neo-light {
-//     --channel-bg-color: #{$token-channel-icon-bg-color};
-//     --channel-available-color: #{$token-channel-icon-available-color};
-//     --channel-busy-away-color: #{$token-channel-icon-busy-away-color};
-//     --channel-dnd-color: #{$token-channel-icon-dnd-color};
-//     --channel-offline-color: #{$token-channel-icon-offline-color};
-//     --channel-icon-generic-color: #{$token-channel-icon-generic-color};
-//   }
-//   .neo-dark {
-//     --channel-bg-color: #{$token-color-base-900};
-//     --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
-//     --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
-//     --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
-//     --channel-offline-color: #{$token-color-base-500};
-//     --channel-icon-generic-color: #{$token-color-base-100};
-//   }
-// }
+
+$channel-acw-icon: '\f3f3' !default;
 
 $channel-icon-types: () !default;
 $channel-icon-types: map-merge(
@@ -1180,6 +1166,10 @@ $channel-icon-types: map-merge(
       color: var(--channel-icon-generic-color),
       icon: $token-icons-neo-icon-outbound-filled,
     ),
+    acw: (
+      color: var(--channel-acw-color),
+      icon: $channel-acw-icon
+    )
   ),
   $channel-icon-types
 );

@@ -13,6 +13,7 @@
 ### New Features - New features that have recently been added
 
 - Added `neo-leftnav__main__item` class for additional flexibility when building Component (NEO-1433)
+- Added new `acw` state icon to Icon State Component (NEO-1508)
 
 ### Bugs Report - List of bugs that have been updated
 

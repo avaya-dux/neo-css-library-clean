@@ -1,6 +1,6 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
-import { IconComponent, IconSizes } from "../components";
+import { IconComponent, IconSizes, IconStates } from "../components";
 ---
 
 <style>
@@ -11,6 +11,7 @@ import { IconComponent, IconSizes } from "../components";
 
 <NeoLayout title="Icons">
   <div class="icon-page__padding">
+    <IconStates/>
     <IconSizes />
     <IconComponent />
   </div>
