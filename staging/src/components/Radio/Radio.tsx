@@ -1,16 +1,16 @@
 export const Radio = () => {
   return (
-    <div className="neo-form-control">
+    <div className="neo-form-control" style={{width: '20%'}}>
       <div className="neo-input-group">
         <input
-          className="neo-radio"
+          className="neo-radio neo-radio--multiline"
           type="radio"
           name="radioExample"
           value="Red"
           id="radio1"
         />
 
-        <label htmlFor="radio1">Radio 1</label>
+        <label htmlFor="radio1">Radio 1 This is a radio with extra long text using new `--multiline` class suffix</label>
 
         <input
           className="neo-radio"

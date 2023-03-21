@@ -1,5 +1,3 @@
-// updated radio button styles
-
 @mixin radio--disabled {
   &[disabled] + label,
   &.neo-radio--disabled + .neo-tooltip > label {
@@ -13,7 +11,7 @@
   &.neo-radio--disabled:checked + .neo-tooltip > label {
     &::after {
       background-color: $radio-background;
-      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      border-radius: 50%;
       content: "";
       display: block;
       height: $radio-active-ellipse-size;
@@ -21,7 +19,6 @@
       left: $radio-ellipse-position-left;
       top: $radio-ellipse-position-top;
       position: absolute;
-      // transition: $global-hover-transition;
 
       @include rtl-selector {
         left: auto;
@@ -33,21 +30,18 @@
     &::before {
       background-color: $radio-background;
       border: $radio-disabled-border;
-      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      border-radius: 50%;
       content: "";
       display: block;
       height: $radio-size;
       width: $radio-size;
       position: absolute;
       top: $radio-position-top;
-      // transition: $global-hover-transition;
     }
   }
 }
 
 .neo-radio {
-  // display: none;
-  // visibility: hidden;
   opacity: 0;
   position: absolute;
   z-index: map-get($indexes-map, "radio");
@@ -61,6 +55,26 @@
       background-color: var(--neo-color-base-400);
     }
   }
+
+  &.neo-radio--multiline {
+    + label {
+      text-indent: 0px;
+      padding-left: 24px;
+      @include rtl-selector {
+        text-indent: 0px;
+        padding-right: 24px;
+        padding-left: 0px;
+      }
+      &:before {
+        left: 0;
+        @include rtl-selector {
+          right: 0;
+        }
+      }
+    }
+
+  }
+
   &:not(&-readonly) {
     + label {
       &:before {
@@ -75,14 +89,10 @@
     + label,
     &:focus:not(.neo-radio--disabled) + .neo-tooltip > label {
       &:before {
-        // box-shadow: 0 0px 8px $radio-background-active-color;
         outline: 1px auto $radio-background-active-color;
         outline-offset: 2px;
       }
     }
-    // &:focus:not(.neo-radio--disabled) + .neo-tooltip .neo-tooltip__content {
-    //   display: block;
-    // }
   }
 
   .neo-input-group--inline & + label {
@@ -104,8 +114,6 @@
   + label {
     color: $global-text-color;
     cursor: pointer;
-    // margin-right: $radio-label-offset-x;
-    // padding-left: $radio-text-offset;
     position: relative;
     text-indent: $radio-text-offset;
     margin-top: 8px;
@@ -113,13 +121,12 @@
 
     @include rtl-selector {
       margin: {
-        // left: $radio-label-offset-x;
         right: 0;
       }
     }
 
     &::after {
-      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      border-radius: 50%;
       background-color: $radio-background;
       content: "";
       display: block;
@@ -128,7 +135,6 @@
       left: $radio-ellipse-position-left;
       top: $radio-ellipse-position-top;
       position: absolute;
-      // transition: $global-hover-transition;
 
       @include rtl-selector {
         left: auto;
@@ -139,20 +145,19 @@
 
     &::before {
       background-color: $radio-background;
-      border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+      border-radius: 50%;
       content: "";
       display: block;
       height: $radio-size;
       width: $radio-size;
       position: absolute;
       top: $radio-position-top;
-      // transition: $global-hover-transition;
     }
   }
 
   &:checked + label::after,
   &:checked + .neo-tooltip > label::after {
-    border-radius: 50%; // hard-coded value associated with Ellipse Component type in Figma
+    border-radius: 50%;
     content: "";
     display: block;
     height: $radio-active-ellipse-size;
@@ -160,7 +165,6 @@
     left: $radio-ellipse-position-left;
     top: $radio-ellipse-position-top;
     position: absolute;
-    // transition: $global-hover-transition;
 
     @include rtl-selector {
       left: auto;
