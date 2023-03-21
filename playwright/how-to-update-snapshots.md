@@ -2,7 +2,15 @@
 
 ## prerequisites
 
-- install [Docker Desktop](https://www.docker.com/products/docker-desktop/) locally
+- install and start [Colima](https://github.com/abiosoft/colima), an open-source container runtime alternative (macOS only) by running the following commands from terminal:
+
+```
+# Homebrew
+brew install colima
+
+# Once installed, run colima
+colima start
+```
 
 **NOTE**:
 Playwright version: `v1.31.0`
