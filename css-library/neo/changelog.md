@@ -1,5 +1,31 @@
 # Changelog
 
+### 3.68.2
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
+### New Features - New features that have recently been added
+
+- N/A
+
+### Bugs Report - List of bugs that have been updated
+
+- Fixed issue where `.neo-light` class was applying unintended text styling to child elements (NEO-1521)
+
+### Sunsetting - Removing Full Support
+
+- Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
+
+### Work In Progress - Future Updates
+
+- N/A
+
 ### 3.68.1
 
 ### Breaking Changes - Needs Immediate Attention

@@ -192,7 +192,7 @@ hr {
   font-style: italic;
 }
 
-.neo-light {
+.neo-light:not(.neo-global-colors) {
   font-weight: 300;
 }
 
