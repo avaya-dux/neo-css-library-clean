@@ -67,6 +67,37 @@ export const Checkbox = () => {
   );
 };
 
+export const CheckboxWithLongLabel = () => {
+  return (
+    <div className="neo-form-control">
+      <div className="neo-input-group">
+        <input
+          className="neo-check"
+          type="checkbox"
+          id="checkbox1"
+          value="Checkbox 1"
+        />
+
+        <label htmlFor="checkbox1">
+          Check 1 with a very long label that will wrap to the next line
+        </label>
+
+        <input
+          className="neo-check"
+          type="checkbox"
+          id="checkbox2"
+          value="Checkbox 2"
+          defaultChecked
+        />
+
+        <label htmlFor="checkbox2">
+          Check 2 with a very long label that will wrap to the next line
+        </label>
+      </div>
+    </div>
+  );
+};
+
 export const CheckboxWithReadOnly = () => {
   return (
     <div className="neo-form-control">

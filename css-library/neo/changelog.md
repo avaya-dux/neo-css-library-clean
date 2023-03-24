@@ -41,6 +41,7 @@
 - Added `neo-leftnav__main__item` class for additional flexibility when building Component (NEO-1433)
 - Added new `acw` state icon to Icon State Component (NEO-1508)
 - Added new `neo-radio--multiline` class to correctly align text in Radio buttons with multiple lines of text (CCNXT-108299)
+- Updated checkboxes to be top aligned when their label is multi-lined
 
 ### Bugs Report - List of bugs that have been updated
 
