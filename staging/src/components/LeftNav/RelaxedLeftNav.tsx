@@ -27,25 +27,33 @@ export const RelaxedLeftNavWithSimpleJS = () => {
               onClick={() => onExpand(1)}
               aria-labelledby="tooltip1r"
             >
-              Accounts
+              Accounts This Is Multiple Lines Of Text That Should Wrap
             </div>
             <div className="neo-tooltip__content" id="tooltip1r">
               <div className="neo-arrow" />
               Accounts
             </div>
             <ul className="neo-leftnav__nav">
-              <li className="neo-leftnav__sub neo-leftnav__sub--active">
-                <span className="neo-leftnav__sub__item">Overview</span>
+              <li className="neo-leftnav__sub neo-leftnav__sub--multiline neo-leftnav__sub--active">
+                <span className="neo-leftnav__sub__item">
+                  Overview This Is An Extra Long String That Should Wrap
+                </span>
               </li>
 
-              <li className="neo-leftnav__sub">
+              <li className="neo-leftnav__sub neo-leftnav__sub--multiline">
                 <span>
-                  <span className="neo-leftnav__sub__item">Manage Users</span>
+                  <span className="neo-leftnav__sub__item">
+                    Manage Users This Is An Extra Long String That Should Wrap
+                  </span>
                 </span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <span><span><a className="neo-leftnav__sub__item">Billing</a></span></span>
+                <span>
+                  <span>
+                    <a className="neo-leftnav__sub__item">Billing</a>
+                  </span>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -70,7 +78,7 @@ export const RelaxedLeftNavWithSimpleJS = () => {
               onClick={() => onExpand(2)}
               aria-labelledby="tooltip2r"
             >
-              Configuration
+              Configuration This Is An Extra Long String That Should Wrap
             </div>
 
             <div className="neo-tooltip__content" id="tooltip2r">
@@ -80,15 +88,21 @@ export const RelaxedLeftNavWithSimpleJS = () => {
 
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub neo-leftnav__sub--active neo-leftnav__sub--no-icon">
-                <span><a className="neo-leftnav__sub__item">RBAC</a></span>
+                <span>
+                  <a className="neo-leftnav__sub__item">RBAC</a>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--no-icon">
-                <span><a className="neo-leftnav__sub__item">SIP Trunking</a></span>
+                <span>
+                  <a className="neo-leftnav__sub__item">SIP Trunking</a>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--no-icon">
-                <span><a className="neo-leftnav__sub__item">Directory Services</a></span>
+                <span>
+                  <a className="neo-leftnav__sub__item">Directory Services</a>
+                </span>
               </li>
             </ul>
           </li>
@@ -121,11 +135,17 @@ export const RelaxedLeftNavWithSimpleJS = () => {
               </li>
 
               <li className="neo-leftnav__sub">
-                <span><a className="neo-leftnav__sub__item">Transfer Destinations</a></span>
+                <span>
+                  <a className="neo-leftnav__sub__item">
+                    Transfer Destinations
+                  </a>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub">
-                <span><a className="neo-leftnav__sub__item">Work Assignments</a></span>
+                <span>
+                  <a className="neo-leftnav__sub__item">Work Assignments</a>
+                </span>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -139,8 +159,11 @@ export const RelaxedLeftNavWithSimpleJS = () => {
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-user-group" tabIndex={-1}>
-              Groups
+            <div
+              className="neo-leftnav__main__item neo-icon-user-group"
+              tabIndex={-1}
+            >
+              Groups This Is An Extra Long String That Should Wrap
             </div>
           </li>
         </ul>
@@ -180,10 +203,11 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
       >
         <ul className="neo-leftnav__nav">
           <li
-            className={`neo-leftnav__main neo-leftnav__main--active ${activate.includes(1) && !condensed
-              ? "neo-leftnav__main--expand"
-              : ""
-              }`}
+            className={`neo-leftnav__main neo-leftnav__main--active ${
+              activate.includes(1) && !condensed
+                ? "neo-leftnav__main--expand"
+                : ""
+            }`}
           >
             <div
               aria-label="Accounts"
@@ -197,48 +221,66 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub">
                 <span>
-                  <a tabIndex={-1} className="neo-leftnav__sub__item">Overview</a>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">
+                    Overview
+                  </a>
                 </span>
               </li>
 
               <li className="neo-leftnav__sub">
                 <span>
-                  <a tabIndex={-1} className="neo-leftnav__sub__item">Manage Users</a>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">
+                    Manage Users
+                  </a>
                 </span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
                 <span>
-                  <a tabIndex={-1} className="neo-leftnav__sub__item">Billing</a>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">
+                    Billing
+                  </a>
                 </span>
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--active">
                 <span>
-                  <a tabIndex={-1} className="neo-leftnav__sub__item">Payments</a>
+                  <a tabIndex={-1} className="neo-leftnav__sub__item">
+                    Payments
+                  </a>
                 </span>
               </li>
             </ul>
           </li>
 
           <li className="neo-leftnav__main neo-leftnav__main--active">
-            <div className="neo-leftnav__main__item neo-icon-address-book">Contact Center</div>
+            <div className="neo-leftnav__main__item neo-icon-address-book">
+              Contact Center
+            </div>
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-user-group">Groups</div>
+            <div className="neo-leftnav__main__item neo-icon-user-group">
+              Groups
+            </div>
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-settings">Settings</div>
+            <div className="neo-leftnav__main__item neo-icon-settings">
+              Settings
+            </div>
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-global">Menu 1</div>
+            <div className="neo-leftnav__main__item neo-icon-global">
+              Menu 1
+            </div>
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-configure">Menu 2</div>
+            <div className="neo-leftnav__main__item neo-icon-configure">
+              Menu 2
+            </div>
           </li>
 
           <li className="neo-leftnav__main">
@@ -246,15 +288,21 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-chart-gauge">Menu 4</div>
+            <div className="neo-leftnav__main__item neo-icon-chart-gauge">
+              Menu 4
+            </div>
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-view-tiles">Menu 5</div>
+            <div className="neo-leftnav__main__item neo-icon-view-tiles">
+              Menu 5
+            </div>
           </li>
 
           <li className="neo-leftnav__main">
-            <div className="neo-leftnav__main__item neo-icon-pie-chart">Menu 6</div>
+            <div className="neo-leftnav__main__item neo-icon-pie-chart">
+              Menu 6
+            </div>
           </li>
         </ul>
       </nav>

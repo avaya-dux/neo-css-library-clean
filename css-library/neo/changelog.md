@@ -12,7 +12,7 @@
 
 ### New Features - New features that have recently been added
 
-- N/A
+- Added new `.neo-leftnav__sub--multiline` class to correctly align active state dot when text wraps to multiple lines (NEO-1497)
 
 ### Bugs Report - List of bugs that have been updated
 

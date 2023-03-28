@@ -1,9 +1,9 @@
+import clsx from "clsx";
 /* eslint-disable */
 import { useEffect, useState } from "react";
-import clsx from "clsx";
 
 type LeftNav = {
-  className: string;
+  className?: string;
 };
 
 export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
@@ -32,28 +32,28 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
                 : "neo-leftnav__main neo-leftnav__main--active neo-tooltip neo-tooltip--right neo-tooltip--onhover"
             }
           >
-            <a
-              className="neo-icon-contact expandable"
+            <button
+              className="neo-leftnav__category neo-btn neo-btn-secondary--info neo-icon-contact expandable"
               onClick={() => onExpand(1)}
               aria-labelledby="tooltip1"
             >
-              Accounts
-            </a>
+              Accounts This Is An Extra Long String That Should Wrap
+            </button>
             <div className="neo-tooltip__content" id="tooltip1">
               <div className="neo-arrow" />
               Accounts
             </div>
             <ul className="neo-leftnav__nav neo-leftnav__nav--tooltip">
-              <li className="neo-leftnav__sub neo-leftnav__sub--active neo-tooltip neo-tooltip--right neo-tooltip--onhover">
-                <a>Overview</a>
+              <li className="neo-leftnav__sub neo-leftnav__sub--active neo-leftnav__sub--multiline neo-tooltip neo-tooltip--right neo-tooltip--onhover">
+                <a>Overview This Is An Extra Long String That Should Wrap This Is Many More Words To Show That The Shape Of The Dot Is Now Preserved With Many More Lines Of Text</a>
                 <div className="neo-tooltip__content" id="tooltip1">
                   <div className="neo-arrow"></div>
                   Tooltip
                 </div>
               </li>
 
-              <li className="neo-leftnav__sub">
-                <a>Manage Users</a>
+              <li className="neo-leftnav__sub neo-leftnav__sub--multiline">
+                <a>Manage Users This Is An Extra Long String That Should Wrap</a>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -78,7 +78,7 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
               onClick={() => onExpand(2)}
               aria-labelledby="tooltip2"
             >
-              Configuration
+              Configuration This Is An Extra Long String That Should Wrap
             </a>
 
             <div className="neo-tooltip__content" id="tooltip2">
@@ -142,7 +142,7 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
 
           <li className="neo-leftnav__main">
             <a className="neo-icon-user-group" tabIndex={-1}>
-              Groups
+              Groups This Is An Extra Long String That Should Wrap
             </a>
           </li>
         </ul>
