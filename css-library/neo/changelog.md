@@ -13,6 +13,7 @@
 ### New Features - New features that have recently been added
 
 - Added new `.neo-leftnav__sub--multiline` class to correctly align active state dot when text wraps to multiple lines (NEO-1497)
+- Updated `error`, `error-filled`, `warning`, `warning-filled` icons to new versions (NEO-1535)
 
 ### Bugs Report - List of bugs that have been updated
 
