@@ -1,5 +1,3 @@
-// pending fix for text alignment issue
-
 .neo-switch--multiline {
   height: auto !important;
 
@@ -31,11 +29,8 @@
   }
 }
 
-// updated switch styles
-
 @mixin switch-input {
   input {
-    // display: none;
     opacity: 0;
   }
 }
@@ -45,7 +40,6 @@
 
   input:focus-visible {
     + .neo-switch__icon:before {
-      // box-shadow: 0 0px 8px $radio-background-active-color;
       outline: 1px auto $radio-background-active-color;
       outline-offset: 2px;
     }
@@ -55,9 +49,9 @@
     cursor: pointer;
     display: block;
     left: 0;
-    // hard-coded to center switch
     top: 2px;
     position: absolute;
+    font-style: normal;
 
     @include rtl-selector {
       left: auto;
@@ -67,18 +61,20 @@
     &::before,
     &::after {
       border-radius: $switch-border-radius;
-      content: "";
       position: absolute;
       transition: $switch-transition;
+      font-family: "updated-neo-icons";
     }
 
     &::before {
       background-color: $switch-off-color;
       height: $switch-height;
       width: $switch-width;
+      content: "";
     }
 
     &::after {
+      color: $switch-off-color;
       background-color: $switch-ellipse-color;
       box-shadow: $switch-ellipse-box-shadow;
       height: $switch-knob-size;
@@ -86,11 +82,21 @@
       top: $switch-knob-indent-top;
       transform: translate(0, 0);
       width: $switch-knob-size;
+      display: flex;
+      align-items: center;
+      text-shadow: 0.5px 0px 0px $switch-off-color;;
+
 
       @include rtl-selector {
         left: auto;
         right: $switch-knob-indent-left;
       }
+    }
+  }
+
+  input:not(:checked) + .neo-switch__icon {
+    &::after {
+      content: "\f16e";
     }
   }
 }
@@ -104,6 +110,14 @@
 
     &::after {
       transform: translate($switch-translate-distance, 0);
+      content: "\f165";
+      font-size: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $switch-active-color;
+      text-shadow: 0.5px 0px 0px $switch-active-color;
+
 
       @include rtl-selector {
         transform: translate(-$switch-translate-distance, 0);
@@ -113,26 +127,34 @@
 }
 
 @mixin neo-switch--disabled {
-  // &--disabled,
-  // input:disabled + &__icon {
-  //   cursor: not-allowed;
-  //   opacity: $switch-disabled-opacity; //
-  // }
   &--disabled,
   &--disabled input + &__icon {
     cursor: not-allowed;
   }
 
   &--disabled {
-    color: $global-disabled-color; // should be disabled text color
+    color: $global-disabled-color;
   }
 
+
+
   &--disabled input:disabled + &__icon::before {
+
     background-color: $switch-disabled-off-background-color;
   }
 
   &--disabled input:checked:disabled + &__icon::before {
     background-color: $switch-disabled-on-background-color;
+  }
+
+  &--disabled input:disabled + &__icon::after {
+    color: $switch-disabled-off-background-color;
+    text-shadow: 0.5px 0px 0px $switch-disabled-off-background-color;
+  }
+
+  &--disabled input:checked:disabled + &__icon::after {
+    color: $switch-disabled-on-background-color;
+    text-shadow: 0.5px 0px 0px $switch-disabled-on-background-color;
   }
 
   &:focus input:disabled + &__icon,
@@ -149,10 +171,6 @@
   height: $switch-label-height;
   line-height: $body-line-height;
   min-width: $switch-width;
-  // hard-coded for now
-  // margin: 8px 0;
-  // hard-coded for now
-  // padding-left: $switch-width + $input-padding-x;
   padding-left: 27px;
   position: relative;
   color: $input-label-color;
@@ -160,10 +178,6 @@
   @include rtl-selector {
     padding-left: 0;
     padding-right: 27px;
-  }
-  &:focus-within {
-    // outline: rgba(20, 115, 230, 1) auto 2px;
-    // outline-offset: 2px;
   }
 
   &:focus-visible .neo-switch__icon {
