@@ -1,0 +1,16 @@
+{
+  "name": "@avaya/neo-icons",
+  "version": "1.0.0",
+  "author": "Avaya, Inc.",
+  "license": "MIT",
+  "description": "Avaya NEO Icon Library",
+  "keywords": [
+    "Avaya",
+    "Icons",
+    "Design",
+    "NEO",
+    "System",
+    "UI",
+    "UX"
+  ]
+}
