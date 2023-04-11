@@ -1,5 +1,31 @@
 # Changelog
 
+### 3.69.0
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
+### New Features - New features that have recently been added
+
+- Added new `mic-extended-off, mic-extended-on, vdn-incoming-call, user-return, list-number-complete, zoom-default, call-sms, table-insert, table-delete` icons (NEO-1556/NEO-1555/NEO-1563)
+
+### Bugs Report - List of bugs that have been updated
+
+- N/A
+
+### Sunsetting - Removing Full Support
+
+- Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
+
+### Work In Progress - Future Updates
+
+- N/A
+
 ### 3.68.2
 
 ### Breaking Changes - Needs Immediate Attention

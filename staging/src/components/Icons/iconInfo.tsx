@@ -2869,4 +2869,58 @@ export const icons: Icon[] = [
     category: "content",
     animated: false,
   },
+  {
+    name: "mic-extended-off",
+    bidirectional: true,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "mic-extended-on",
+    bidirectional: true,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "vdn-incoming-call",
+    bidirectional: true,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "user-return",
+    bidirectional: false,
+    category: "account",
+    animated: false,
+  },
+  {
+    name: "list-number-complete",
+    bidirectional: false,
+    category: "editor",
+    animated: false,
+  },
+  {
+    name: "zoom-default",
+    bidirectional: true,
+    category: "action",
+    animated: false,
+  },
+  {
+    name: "call-sms",
+    bidirectional: true,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "table-insert",
+    bidirectional: true,
+    category: "action",
+    animated: false,
+  },
+  {
+    name: "table-delete",
+    bidirectional: true,
+    category: "action",
+    animated: false,
+  },
 ];

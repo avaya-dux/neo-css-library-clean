@@ -537,5 +537,14 @@ const unicodes = {
   column: 62472,
   cut: 62473,
   row: 62474,
-  unlock: 62476
+  unlock: 62476,
+  'mic-extended-off': 62479,
+  'mic-extended-on': 62480,
+  'vdn-incoming-call': 62481,
+  'user-return': 62482,
+  'list-number-complete': 62483,
+  'zoom-default': 62484,
+  'call-sms': 62485,
+  'table-insert': 62486,
+  'table-delete': 62487
 }; module.exports.unicodes = unicodes
