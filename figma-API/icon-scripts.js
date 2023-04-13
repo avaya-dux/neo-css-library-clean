@@ -6,3 +6,4 @@ const combinedArgs = arg.join(" ");
 
 execSync("npm run pull-icons " + combinedArgs, { stdio: [0, 1, 2] });
 execSync("npm run write-icons", { stdio: [0, 1, 2] });
+execSync("npm run update-icon-info " + combinedArgs, { stdio: [0, 1, 2] })

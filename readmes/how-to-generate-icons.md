@@ -9,9 +9,8 @@
   - `yarn build-icons after-call-work`
   - `yarn build-icons after-call-work settings`
   - _NOTE_: this will pull the SVG file from Figma, you do not need to manually place the file on your machine
+  - When prompted, answer the terminal prompts regarding whether the new icons are bidirectional, animated and to which category they belong
 - go back to root (up one directory) and run `yarn all` to ensure all files are updated
-- add new icon to: `staging/src/components/Icons/iconInfo.tsx`
-- update [`neo-react` lib icons file](https://github.com/avaya-dux/neo-react-library/blob/main/src/utils/icons.ts)
 
 ## verifying that icons have been pulled and added successfully
 
@@ -24,5 +23,4 @@
 - rename the icons in icons-unicode.js
 - run build-icons script above to create SVG file
 - remove SVG file of the old icon
-- rename the icon entry in iconInfo.tsx
-- update icon in: `staging/src/components/Icons/iconInfo.tsx`
+- rename the icon entry in iconInfo.json
