@@ -17,6 +17,7 @@
     "@astrojs/svelte": "2.1.0",
     "@astrojs/vue": "2.1.1",
     "@astronomer/eslint-config-astro": "1.0.3",
+    "@avaya/neo-icons": "1.0.3",
     "@types/react": "18.0.35",
     "@types/react-dom": "18.0.11",
     "@typescript-eslint/eslint-plugin": "5.58.0",

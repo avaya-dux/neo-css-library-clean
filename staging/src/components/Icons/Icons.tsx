@@ -1,4 +1,5 @@
-import { Icon, iconCategories, icons } from "./iconInfo";
+import { icons } from "@avaya/neo-icons/neo-icon-info";
+import { Icon, iconCategories } from "@avaya/neo-icons/neo-icon-types";
 
 type iconCategoryContainer = {
   category: string;
@@ -45,7 +46,7 @@ export const IconComponent = () => {
   return (
     <>
       {iconCategories.map((category, index) => {
-        const iconsToRender = icons.filter(
+        const iconsToRender = (icons as Icon[]).filter(
           (icon) => icon.category === category
         );
 
@@ -89,7 +90,7 @@ export const IconStates = () => {
           display: "flex",
           justifyContent: "space-around",
           margin: "1rem",
-          marginBottom: "2rem"
+          marginBottom: "2rem",
         }}
       >
         <span className="neo-icon-state neo-icon-state--available neo-icon-voice"></span>

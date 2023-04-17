@@ -1,40 +1,5 @@
-type IconCategory =
-  | "navigation"
-  | "action"
-  | "account"
-  | "status"
-  | "communication"
-  | "alert"
-  | "content"
-  | "other"
-  | "editor"
-  | "file"
-  | "weather"
-  | "social";
-
-export interface Icon {
-  name: string;
-  bidirectional: boolean;
-  category: IconCategory;
-  animated: boolean;
-}
-
-export const iconCategories: IconCategory[] = [
-  "navigation",
-  "action",
-  "account",
-  "status",
-  "communication",
-  "alert",
-  "content",
-  "other",
-  "editor",
-  "file",
-  "weather",
-  "social",
-];
-
-export const icons: Icon[] = [
+// this file is auto-generated, DO NOT modify it
+ export const icons = [
   {
     name: "chevron-right",
     bidirectional: true,
@@ -2189,7 +2154,6 @@ export const icons: Icon[] = [
     category: "communication",
     animated: false,
   },
-
   {
     name: "messaging-ready",
     bidirectional: false,
@@ -2839,36 +2803,11 @@ export const icons: Icon[] = [
     category: "status",
     animated: false,
   },
-  {
-    name: "cell",
-    bidirectional: true,
-    category: "content",
-    animated: false,
-  },
-  {
-    name: "row",
-    bidirectional: true,
-    category: "content",
-    animated: false,
-  },
-  {
-    name: "column",
-    bidirectional: true,
-    category: "content",
-    animated: false,
-  },
-  {
-    name: "table",
-    bidirectional: true,
-    category: "content",
-    animated: false,
-  },
-  {
-    name: "cut",
-    bidirectional: false,
-    category: "content",
-    animated: false,
-  },
+  { name: "cell", bidirectional: true, category: "content", animated: false },
+  { name: "row", bidirectional: true, category: "content", animated: false },
+  { name: "column", bidirectional: true, category: "content", animated: false },
+  { name: "table", bidirectional: true, category: "content", animated: false },
+  { name: "cut", bidirectional: false, category: "content", animated: false },
   {
     name: "mic-extended-off",
     bidirectional: true,
