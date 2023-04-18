@@ -30,7 +30,7 @@
 - Navigate to the `figma-API` sub-project folder from the repository root
 - From the command line, run the following: `yarn package-icons`
 - Navigate to the `neo-icons-npm-package` sub-folder: `cd ../neo-icons-npm-package`
-- Validate that `neo-icon-info.js` and `neo-icons.css` have been appropriately updated
+- Validate that `neo-icon-info.js`, `neo-icon-names-type.ts` and `neo-icons.css` have been appropriately updated
 - Bump the package version number in the `package.json` file there as needed
 - Ensure that you are properly logged in to the NPM network by running: `npm login`
 - Publish the new version of the `@avaya/neo-icons` package to NPM by running: `npm publish`

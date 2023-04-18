@@ -129,7 +129,6 @@ resized-icons/
 neo-npm-package/neo/
 neo-npm-package/CHANGELOG.md
 neo-icons-npm-package/neo-icon-info.js
-neo-icons-npm-package/neo-icon-types.ts
 neo-icons-npm-package/neo-icon-names-type.ts
 neo-icons-npm-package/neo-icons.css
 
