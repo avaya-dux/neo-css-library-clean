@@ -22,6 +22,7 @@ const iconCategories = [
 ];
 
 async function updateIconInfoFile(icons) {
+  const iconNames = iconsArray.map((icon) => icon.name);
 
   for (const icon of icons) {
     const bidirectional = new Confirm({
@@ -62,6 +63,8 @@ async function updateIconInfoFile(icons) {
       animated: isAnimated,
     };
 
+    iconNames.push(icon);
+
     iconsArray.push(newIconInfoObject);
   }
 
@@ -87,6 +90,22 @@ async function updateIconInfoFile(icons) {
   )
     .then(function () {
       console.info("iconInfo.js created");
+    })
+    .catch((error) => {
+      console.error(`Error: ${error}`);
+    });
+
+  fs.writeFile(
+    "../neo-icons-npm-package/neo-icon-names-type.ts",
+    prettier.format(
+      `// this file is auto-generated, DO NOT modify it\n const iconNames = ${JSON.stringify(iconNames)} as const;
+     \n export type IconNamesType = typeof iconNames[number]`,
+      { parser: "babel-ts" }
+    ),
+    "utf-8"
+  )
+    .then(function () {
+      console.info("neo-icon-names-type.ts created");
     })
     .catch((error) => {
       console.error(`Error: ${error}`);
