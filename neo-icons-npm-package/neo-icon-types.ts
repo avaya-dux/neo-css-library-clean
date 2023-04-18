@@ -1,4 +1,4 @@
-type IconCategory =
+export type IconCategory =
   | "navigation"
   | "action"
   | "account"
