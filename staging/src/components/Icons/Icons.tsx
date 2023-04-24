@@ -1,5 +1,5 @@
 import { icons } from "@avaya/neo-icons/neo-icon-info";
-import { Icon, iconCategories } from "@avaya/neo-icons/neo-icon-types";
+import { Icon, IconCategory } from "@avaya/neo-icons/neo-icon-types";
 
 type iconCategoryContainer = {
   category: string;
@@ -42,6 +42,9 @@ const IconCategoryContainer = (props: iconCategoryContainer) => {
   );
 };
 
+const iconCategories: IconCategory[] = [
+  ...new Set(icons.map((icon) => icon.category as IconCategory)),
+];
 export const IconComponent = () => {
   return (
     <>
