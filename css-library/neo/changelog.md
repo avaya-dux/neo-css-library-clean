@@ -1,5 +1,33 @@
 # Changelog
 
+### 3.69.1
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
+### New Features - New features that have recently been added
+
+- N/A
+
+### Bugs Report - List of bugs that have been updated
+
+- Fixed alignment of Tooltips on Condensed Left Navigation (NEO-1461)
+- Fixed positioning and RTL styling of toggle button in Condensed Left Navigation
+- Fixed rotation of chevron icon in expanded Left Navigation items when in RTL mode
+
+### Sunsetting - Removing Full Support
+
+- Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
+
+### Work In Progress - Future Updates
+
+- N/A
+
 ### 3.69.0
 
 ### Breaking Changes - Needs Immediate Attention

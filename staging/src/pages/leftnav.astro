@@ -5,6 +5,8 @@ import {
   CondensedLeftNavWithScroll,
   RelaxedLeftNavWithSimpleJS,
   RelaxedCondensedLeftNavWithScroll,
+CondensedLeftNavWithTooltip,
+CondensedLeftNavWithTooltipRelaxed
 } from "../components";
 ---
 
@@ -41,6 +43,22 @@ import {
       <div class="custom-leftnav">
         <h4>Condensed LeftNav with scroll(Relaxed)</h4>
         <RelaxedCondensedLeftNavWithScroll client:load />
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-box">
+    <h3>
+      Condensed Left Navigation With Tooltip
+    </h3>
+    <div class="custom-main">
+      <div class="custom-leftnav">
+        <h4>Original selectors</h4>
+        <CondensedLeftNavWithTooltip client:load />
+      </div>
+      <div class="custom-leftnav">
+        <h4>Relaxed selectors</h4>
+        <CondensedLeftNavWithTooltipRelaxed client:load />
       </div>
     </div>
   </div>

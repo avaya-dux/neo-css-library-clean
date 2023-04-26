@@ -45,7 +45,11 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
             </div>
             <ul className="neo-leftnav__nav neo-leftnav__nav--tooltip">
               <li className="neo-leftnav__sub neo-leftnav__sub--active neo-leftnav__sub--multiline neo-tooltip neo-tooltip--right neo-tooltip--onhover">
-                <a>Overview This Is An Extra Long String That Should Wrap This Is Many More Words To Show That The Shape Of The Dot Is Now Preserved With Many More Lines Of Text</a>
+                <a>
+                  Overview This Is An Extra Long String That Should Wrap This Is
+                  Many More Words To Show That The Shape Of The Dot Is Now
+                  Preserved With Many More Lines Of Text
+                </a>
                 <div className="neo-tooltip__content" id="tooltip1">
                   <div className="neo-arrow"></div>
                   Tooltip
@@ -53,7 +57,9 @@ export const LeftNavWithSimpleJS = ({ className }: LeftNav) => {
               </li>
 
               <li className="neo-leftnav__sub neo-leftnav__sub--multiline">
-                <a>Manage Users This Is An Extra Long String That Should Wrap</a>
+                <a>
+                  Manage Users This Is An Extra Long String That Should Wrap
+                </a>
               </li>
 
               <li className="neo-leftnav__sub">
@@ -174,11 +180,12 @@ export const CondensedLeftNavWithScroll = () => {
           ? "neo-leftnav--wrapper neo-leftnav--wrapper-tooltip neo-leftnav--condensed--scrollable neo-leftnav--condensed hide-nav"
           : "neo-leftnav--wrapper neo-leftnav--wrapper-tooltip neo-leftnav--condensed--scrollable neo-leftnav--condensed"
       }
+      style={{ height: "400px" }}
     >
       <nav
         className="neo-leftnav"
         aria-label="secondary"
-        style={{ maxHeight: "200px" }}
+        style={{ maxHeight: "350px" }}
       >
         <ul className="neo-leftnav__nav">
           <li
@@ -198,7 +205,7 @@ export const CondensedLeftNavWithScroll = () => {
             </a>
 
             <ul className="neo-leftnav__nav">
-              <li className="neo-leftnav__sub">
+              <li className="neo-leftnav__sub neo-leftnav__sub--active">
                 <a tabIndex={-1}>Overview</a>
               </li>
 
@@ -206,17 +213,17 @@ export const CondensedLeftNavWithScroll = () => {
                 <a tabIndex={-1}>Manage Users</a>
               </li>
 
-              <li className="neo-leftnav__sub neo-leftnav__sub--active">
+              <li className="neo-leftnav__sub">
                 <a tabIndex={-1}>Billing</a>
               </li>
 
-              <li className="neo-leftnav__sub neo-leftnav__sub--active">
+              <li className="neo-leftnav__sub">
                 <a tabIndex={-1}>Payments</a>
               </li>
             </ul>
           </li>
 
-          <li className="neo-leftnav__main neo-leftnav__main--active">
+          <li className="neo-leftnav__main">
             <a className="neo-icon-address-book">Contact Center</a>
           </li>
 
@@ -253,21 +260,13 @@ export const CondensedLeftNavWithScroll = () => {
           </li>
         </ul>
       </nav>
-
-      <div className="neo-tooltip neo-tooltip-leftnav--condensed__toggle neo-tooltip--right neo-tooltip--onhover">
-        <a
-          role="button"
-          aria-label="expand navigation"
-          className="neo-icon-page-first neo-leftnav--condensed__toggle"
-          aria-labelledby="tooltip4"
-          onClick={() => setCondensed(!condensed)}
-        />
-
-        <div className="neo-tooltip__content" id="tooltip4">
-          <div className="neo-arrow" />
-          Expand/Collapse
-        </div>
-      </div>
+      <a
+        role="button"
+        aria-label="expand navigation"
+        className="neo-icon-page-first neo-leftnav--condensed__toggle"
+        aria-labelledby="tooltip4"
+        onClick={() => setCondensed(!condensed)}
+      />
     </div>
   );
 };

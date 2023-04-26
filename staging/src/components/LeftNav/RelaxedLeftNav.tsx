@@ -195,11 +195,12 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
           ? "neo-leftnav--wrapper neo-leftnav--wrapper-tooltip neo-leftnav--condensed--scrollable neo-leftnav--condensed hide-nav"
           : "neo-leftnav--wrapper neo-leftnav--wrapper-tooltip neo-leftnav--condensed--scrollable neo-leftnav--condensed"
       }
+      style={{height: '400px'}}
     >
       <nav
         className="neo-leftnav"
         aria-label="secondary"
-        style={{ maxHeight: "200px" }}
+        style={{ maxHeight: "350px" }}
       >
         <ul className="neo-leftnav__nav">
           <li
@@ -221,7 +222,7 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
             <ul className="neo-leftnav__nav">
               <li className="neo-leftnav__sub">
                 <span>
-                  <a tabIndex={-1} className="neo-leftnav__sub__item">
+                  <a tabIndex={-1} className="neo-leftnav__sub__item neo-leftnav__sub--active">
                     Overview
                   </a>
                 </span>
@@ -235,7 +236,7 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
                 </span>
               </li>
 
-              <li className="neo-leftnav__sub neo-leftnav__sub--active">
+              <li className="neo-leftnav__sub">
                 <span>
                   <a tabIndex={-1} className="neo-leftnav__sub__item">
                     Billing
@@ -243,7 +244,7 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
                 </span>
               </li>
 
-              <li className="neo-leftnav__sub neo-leftnav__sub--active">
+              <li className="neo-leftnav__sub">
                 <span>
                   <a tabIndex={-1} className="neo-leftnav__sub__item">
                     Payments
@@ -253,7 +254,7 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
             </ul>
           </li>
 
-          <li className="neo-leftnav__main neo-leftnav__main--active">
+          <li className="neo-leftnav__main">
             <div className="neo-leftnav__main__item neo-icon-address-book">
               Contact Center
             </div>
@@ -306,8 +307,6 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
           </li>
         </ul>
       </nav>
-
-      <div className="neo-tooltip neo-tooltip-leftnav--condensed__toggle neo-tooltip--right neo-tooltip--onhover">
         <a
           role="button"
           aria-label="expand navigation"
@@ -315,12 +314,6 @@ export const RelaxedCondensedLeftNavWithScroll = () => {
           aria-labelledby="tooltip4r"
           onClick={() => setCondensed(!condensed)}
         />
-
-        <div className="neo-tooltip__content" id="tooltip4r">
-          <div className="neo-arrow" />
-          Expand/Collapse
-        </div>
-      </div>
     </div>
   );
 };
