@@ -390,6 +390,10 @@
   &--left,
   &--right {
     display: flex;
+    & .neo-dropdown {
+      display: inline-flex;
+      align-items: center;
+    }
   }
   &--left {
     & > *:first-child {
@@ -398,6 +402,9 @@
         margin-left: $table-actions-bar-spacing;
         margin-right: 0px;
       }
+    }
+    .neo-form .neo-form-control {
+      margin-bottom: 0px;
     }
   }
   &--right {

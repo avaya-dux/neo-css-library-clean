@@ -1,0 +1,230 @@
+<div class="neo-table__actions">
+  <div class="neo-table__actions--left">
+    <form class="neo-form">
+      <div class="neo-form-control neo-input-icon">
+        <div class="neo-input-group">
+          <div class="neo-input-icon__wrapper neo-input-editable__wrapper">
+            <span class="neo-icon-search"></span>
+            <input class="neo-input" placeholder="Search Animals" />
+            <button
+              class="neo-input-editable__close neo-icon-end"
+              aria-label="close button"
+            ></button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="neo-table__actions--right">
+    <div class="neo-form-control">
+      <button class="neo-btn neo-btn-primary neo-btn-primary--default">
+        Add Animal
+      </button>
+    </div>
+  </div>
+</div>
+<table class="neo-table">
+  <thead>
+    <tr>
+      <th class="check">
+        <input
+          class="neo-check"
+          type="checkbox"
+          id="tablecheckbox1"
+          value="tablecheckbox1"
+          aria-checked="false"
+        />
+        <label for="tablecheckbox1"></label>
+      </th>
+      <th>
+        <div
+          class="neo-multiselect"
+          tab-index={0}
+          role="listbox"
+          aria-label="table-select"
+        >
+          First Name
+          <span class="neo-icon-filter"></span>
+          <div class="neo-multiselect__content">
+            <ul>
+              <li>A - Z</li>
+              <li>Z - A</li>
+              <li>Filter By</li>
+            </ul>
+          </div>
+        </div>
+        <span class="neo-icon-arrow-down"></span>
+        <span class="neo-icon-chevron-down"></span>
+      </th>
+      <th>Number</th>
+      <th>Email</th>
+      <th>Avatar</th>
+      <th>Chip</th>
+      <th>Icon</th>
+      <th>Button</th>
+      <th>More</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <input
+          class="neo-check"
+          type="checkbox"
+          id="tablecheckbox2"
+          value="tablecheckbox2"
+          aria-checked="false"
+        />
+        <label for="tablecheckbox2"></label>
+      </td>
+      <td>Thomas</td>
+      <td class="number">12345</td>
+      <td>thomas@shelby.ltd</td>
+      <td>
+        <figure class="neo-avatar" data-initials="TA"></figure>
+      </td>
+      <td>
+        <div
+          class="neo-chip neo-chip--default"
+          aria-label="Placeholder"
+        >
+          Placeholder
+        </div>
+      </td>
+      <td>
+        <span
+          class="neo-icon-error"
+          aria-label="error"
+          role="img"
+        ></span>
+      </td>
+      <td>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-refresh"
+          aria-label="refresh"
+        ></button>
+      </td>
+      <td>
+        <div class="neo-dropdown neo-dropdown--left neo-dropdown--onhover">
+          <button
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-more"
+            aria-label="more"
+          ></button>
+          <div class="neo-dropdown__content">
+            <div class="neo-dropdown__item neo-dropdown--onhover">
+              <a href="/" class="neo-dropdown__link">
+                Some Action
+              </a>
+              <div class="neo-dropdown__content">
+                <a href="/" class="neo-dropdown__link">
+                  Action
+                </a>
+                <a href="/" class="neo-dropdown__link neo-icon-error">
+                  Another action
+                </a>
+              </div>
+            </div>
+            <a
+              href="/"
+              class="neo-dropdown__link neo-dropdown--disabled"
+            >
+              Disabled action
+            </a>
+            <a href="/" class="neo-dropdown__link">
+              Separator link
+            </a>
+            <hr class="neo-dropdown__separator" />
+            <a href="/" class="neo-dropdown__link">
+              <figure
+                class="neo-avatar neo-avatar--small"
+                data-initials="SM"
+              ></figure>
+              Another action
+            </a>
+          </div>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input
+          class="neo-check"
+          type="checkbox"
+          id="tablecheckbox3"
+          value="tablecheckbox3"
+          aria-checked="false"
+        />
+        <label for="tablecheckbox3"></label>
+      </td>
+      <td>
+        <a href="/">Michael</a>
+      </td>
+      <td class="number">12345</td>
+      <td>michael@shelby.ltd</td>
+      <td>
+        <figure class="neo-avatar" data-initials="MD"></figure>
+      </td>
+      <td>
+        <div
+          class="neo-chip neo-chip--default"
+          aria-label="Placeholder"
+        >
+          Placeholder
+        </div>
+      </td>
+      <td>
+        <span
+          class="neo-icon-error"
+          aria-label="error"
+          role="img"
+        ></span>
+      </td>
+      <td>
+        <button
+          class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-refresh"
+          aria-label="refresh"
+        ></button>
+      </td>
+      <td>
+        <div class="neo-dropdown neo-dropdown--left neo-dropdown--onhover">
+          <button
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-more"
+            aria-label="more"
+          ></button>
+          <div class="neo-dropdown__content">
+            <div class="neo-dropdown__item neo-dropdown--onhover">
+              <a href="/" class="neo-dropdown__link">
+                Some Action
+              </a>
+              <div class="neo-dropdown__content">
+                <a href="/" class="neo-dropdown__link">
+                  Action
+                </a>
+                <a href="/" class="neo-dropdown__link neo-icon-error">
+                  Another action
+                </a>
+              </div>
+            </div>
+            <a
+              href="/"
+              class="neo-dropdown__link neo-dropdown--disabled"
+            >
+              Disabled action
+            </a>
+            <a href="/" class="neo-dropdown__link">
+              Separator link
+            </a>
+            <hr class="neo-dropdown__separator" />
+            <a href="/" class="neo-dropdown__link">
+              <figure
+                class="neo-avatar neo-avatar--small"
+                data-initials="SM"
+              ></figure>
+              Another action
+            </a>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>

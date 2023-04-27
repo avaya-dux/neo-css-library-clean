@@ -1,7 +1,7 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
 
-import { Table, TableWithSortHeaders, TableWithSelectAllRow } from "../components";
+import { Table, TableWithSortHeaders, TableWithSelectAllRow, TableWithActionsAndFilters, WSTableActions } from "../components";
 ---
 
 <NeoLayout title="Table">
@@ -13,5 +13,13 @@ import { Table, TableWithSortHeaders, TableWithSelectAllRow } from "../component
 
   <br/>
 
-  <TableWithSelectAllRow client:load />
+  <TableWithSelectAllRow />
+
+  <br/>
+
+  <TableWithActionsAndFilters />
+
+  <br/>
+
+  <WSTableActions/>
 </NeoLayout>

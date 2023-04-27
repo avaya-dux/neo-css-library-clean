@@ -16,6 +16,7 @@
 
 ### Bugs Report - List of bugs that have been updated
 
+- Tweaked styling of Dropdowns and Form elements in Table Actions (NEO-1500)
 - Fixed alignment of Tooltips on Condensed Left Navigation (NEO-1461)
 - Fixed positioning and RTL styling of toggle button in Condensed Left Navigation
 - Fixed rotation of chevron icon in expanded Left Navigation items when in RTL mode
