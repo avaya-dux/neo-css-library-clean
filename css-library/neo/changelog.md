@@ -16,6 +16,7 @@
 
 ### Bugs Report - List of bugs that have been updated
 
+- Fixd text color of disabled sub menu (NEO-1561)
 - Tweaked styling of Dropdowns and Form elements in Table Actions (NEO-1500)
 - Fixed alignment of Tooltips on Condensed Left Navigation (NEO-1461)
 - Fixed positioning and RTL styling of toggle button in Condensed Left Navigation

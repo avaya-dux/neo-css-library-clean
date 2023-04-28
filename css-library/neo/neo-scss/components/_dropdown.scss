@@ -32,7 +32,7 @@
     }
   }
   &:not(.neo-dropdown__link-header)::after {
-    color: $global-text-color;
+    color: $color;
     position: absolute;
     right: 0px;
     padding: 0 8px 0 0;
@@ -40,7 +40,7 @@
   }
   @include rtl-selector {
     &:not(.neo-dropdown__link-header)::before {
-      color: $global-text-color;
+      color: $color;
       position: absolute;
       left: 0px;
       padding: 0 8px 0 8px;
@@ -68,6 +68,15 @@
       &::after {
         font-size: 16px;
         vertical-align: middle;
+      }
+      &.neo-dropdown--disabled {
+        cursor: not-allowed;
+        color: $dropdown-disabled-font-color;
+        
+        @include neo-dropdown-arrow(
+          $arrow-icon: $dropdown-expand-right-icon,
+          $color: $global-disabled-color
+        );
       }
     }
   }
@@ -213,15 +222,14 @@
 
 @mixin neo-dropdown-disabled {
   $self: &;
-
   &--disabled {
     cursor: not-allowed;
-    color: $tab-disabled-color;
+    color: $dropdown-disabled-font-color;
 
     &:hover,
     &:focus {
       background-color: transparent;
-      color: $tab-disabled-color !important;
+      color: $dropdown-disabled-font-color !important;
     }
 
     #{$self}__link {

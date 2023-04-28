@@ -2952,6 +2952,7 @@ $leftnav-active-dot-size: $token-leftnav-active-circle-size !default;
   --dropdown-item-color: #{$token-dropdown-default-font-color};
   --dropdown-item-hover-color: #{$token-dropdown-hover-color};
   --dropdown-item-hover-background-color: #{$token-dropdown-hover-color};
+  --dropdown-disabled-font-color: #{$token-dropdown-disabled-font-color};
   --dropdown-readonly-font-color: #{$token-dropdown-readonly-font-color};
   --dropdown-shortcut-text-color: #{$token-dropdown-shortcut-text-color};
 }
@@ -3001,6 +3002,7 @@ $dropdown-content-background-color: var(
 $dropdown-content-arrow-color: var(--dropdown-content-arrow-color) !default;
 $dropdown-subcontent-arrow-color: $dropdown-content-arrow-color !default;
 $dropdown-item-color: var(--dropdown-item-color) !default;
+$dropdown-disabled-font-color: var(--dropdown-disabled-font-color) !default;
 $dropdown-item-hover-color: var(--dropdown-item-hover-color) !default;
 $dropdown-item-hover-background-color: var(
   --dropdown-item-hover-background-color

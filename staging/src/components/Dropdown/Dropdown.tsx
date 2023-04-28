@@ -64,6 +64,13 @@ export const Dropdown = () => {
           Disabled action
         </a>
         <a
+          className="neo-dropdown__link"
+          role="menuitem"
+          href="#"
+        >
+          Regular action
+        </a>
+        <a
           className={clsx(
             "neo-dropdown__link neo-icon-settings",
             separatorLinkIsActive && "neo-dropdown__link--active"
@@ -77,6 +84,15 @@ export const Dropdown = () => {
         >
           Click to Activate
         </a>
+        <div className="neo-dropdown__item">
+          <a
+            className="neo-dropdown__link neo-dropdown--disabled"
+            role="menuitem"
+            href="/dropdown#"
+          >
+            Disabled Sub Menu
+          </a>
+        </div>
         <hr className="neo-dropdown__separator" />
         <a className="neo-dropdown__link" href="/dropdown#">
           <figure
