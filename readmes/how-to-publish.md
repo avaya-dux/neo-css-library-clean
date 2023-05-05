@@ -18,8 +18,8 @@ from the root of the directory
 4. Ensure all supporting files exist (`colors/*`, `fonts/*`, `icons/*`) inside neo-npm-package/neo/dist/css
 5. copy-paste the contents of `css-library/neo/changelog.md` to `neo-npm-package/CHANGELOG.md`
 6. `cd neo-npm-package`: navigate to the root of the packaging sub-project
-7. `npm pack`: packages the contents of `neo-npm-package` into a tarball
-8. `npm publish`: creates and publishes a tarball to our registry
+7. `npm pack`: packages the contents of `neo-npm-package` into a .tgz (delete previous .tgz files)
+8. `npm publish`: creates and publishes a tarball (.tgz) to our registry
 
 ### post-publish steps
 
@@ -45,7 +45,7 @@ Once that is complete, the next step is to add the release to our GitHub
 6. add title using format: "v0.2.0 (Jan 18th 2022)"
 7. Copy Paste contents from appropriate version in `neo-npm-package/CHANGELOG.md` to release notes
 
--- **IMPORTANT**: The auto-generated release notes in GitHub will still include artifacts from the commit (ex. commit message, contributor username). Please make sure you go through and manually add the correct notes, backticks for code/class names, and JIRA tickets, following the examples from [previous releases](https://github.com/avaya-dux/neo-css-library/releases/tag/v3.66.0) as necessary
+-- **IMPORTANT**:  For the step above please make sure you go through and manually add the correct formatting( notes, backticks for code/class names, and JIRA tickets), following the examples from [previous releases](https://github.com/avaya-dux/neo-css-library/releases/tag/v3.66.0) as necessary.
 
 8. attach the binary generated from when you ran `npm pack` above (tgz file)
 9. click: "Publish release"
@@ -66,7 +66,7 @@ Once the publishing is completed, we must then update the Design Portal with an 
 
 5. go to the design portal project
 6. in this project, make sure you pull latest from `develop` branch and are working from it
-7. delete the existing zip file (at `static/documents/neo_zip*.zip`)
+7. delete the existing zip file (at `static/documents/neo.zip`)
 8. add newly created zip file to that same location
 
 9. go to `src/site_components/constants/version_number.js`

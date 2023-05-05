@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.69.1
+### 3.69.2
 
 ### Breaking Changes - Needs Immediate Attention
 
