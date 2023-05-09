@@ -1,6 +1,6 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
-import { PanelsWithMargins, LeftNavWithSimpleJS } from "../components";
+import { PanelsWithMargins, LeftNavWithSimpleJS, WorkspacesUIWithPanels } from "../components";
 ---
 
 <NeoLayout title="Panel">
@@ -94,6 +94,10 @@ import { PanelsWithMargins, LeftNavWithSimpleJS } from "../components";
       Panel with padding 16 and margin 8 top, right, bottom and margin 4 left
       </div>
     </div>
+
+    <br />
+  <h2>Sample Configurable UI With Panels</h2>
+ <WorkspacesUIWithPanels client:load />
   </div>
 </NeoLayout>
 
@@ -129,4 +133,5 @@ import { PanelsWithMargins, LeftNavWithSimpleJS } from "../components";
     height: 100%;
     background-color: white;
   }
+
 </style>

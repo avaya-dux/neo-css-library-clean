@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
 
+import "./ws-layout-panel-proposal.css";
+
 export const DefaultAndBorderedPanels = () => {
   return (
     <>
@@ -326,6 +328,172 @@ export const PanelsWithMargins = () => {
             </div>
           </div>
         </form>
+      </div>
+    </>
+  );
+};
+
+export const WorkspacesUIWithPanels = () => {
+  const WSLayoutConfigOptions = {
+    0: 1,
+    1: 2,
+    2: 2,
+    3: 2,
+    4: 2,
+    5: 3,
+    6: 3,
+    7: 3,
+    8: 3,
+    9: 4,
+    10: 4,
+    11: 4,
+    12: 5,
+    13: 5,
+    14: 5,
+    15: 5,
+    16: 5,
+    17: 6,
+  };
+
+  const [layoutConfig, setLayoutConfig] = useState("0");
+
+  const [panelsToRender, setPanelsToRender] = useState<number[]>([]);
+
+  useEffect(() => {
+    const numberOfPanelsToRender =
+      WSLayoutConfigOptions[
+        layoutConfig as unknown as keyof typeof WSLayoutConfigOptions
+      ];
+
+    setPanelsToRender([]);
+
+    for (let x = 1; x <= numberOfPanelsToRender; x++) {
+      setPanelsToRender(panelsToRender => [...panelsToRender, x]);
+    }
+  }, [layoutConfig]);
+
+  return (
+    <>
+      <div className="neo-form-control" style={{ margin: "18px 0px" }}>
+        <div className="neo-input-group">
+          <label htmlFor="layout-config">Select Layout Configuration</label>
+          <div className="neo-select" style={{ width: "30%" }}>
+            <select
+              id="layout-config"
+              onChange={(e) => setLayoutConfig(e.target.value)}
+            >
+              <option value="0">0 (default)</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+              <option value="11">11</option>
+              <option value="12">12</option>
+              <option value="13">13</option>
+              <option value="14">14</option>
+              <option value="15">15</option>
+              <option value="16">16</option>
+              <option value="17">17</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div
+        className="background-color neo-ws-layout neo-ws-layout--no-sidebar"
+        style={{ marginBottom: "12px", height: "600px" }}
+      >
+        <div
+          className="neo-panel neo-panel--bordered--bottom"
+          style={{ gridArea: "header" }}
+        >
+          <nav className="neo-navbar">
+            <div className="neo-nav--left">
+              <a className="neo-skipnav" href="#content">
+                Skip to main content
+              </a>
+
+              <a className="neo-navbar__brand" title="Neo Framework" href="https://design.avaya.com">
+                <img
+                  src="/assets/images/avaya-logo-header.svg"
+                  aria-label="Avaya logo"
+                />
+              </a>
+
+              <div className="neo-search-input neo-input-group neo-input-icon__wrapper neo-input-editable__wrapper">
+                <span className="neo-icon-search" />
+                <input className="neo-input" placeholder="Smart search" />
+                <button
+                  aria-label="clear search"
+                  className="neo-input-editable__close neo-icon-end"
+                  tabIndex={-1}
+                />
+              </div>
+            </div>
+
+            <div className="neo-nav">
+              <div className="neo-badge__navbutton">
+                <button
+                  className="neo-badge__navbutton--content neo-btn neo-icon-dashboard"
+                  aria-label="dashboard"
+                ></button>
+              </div>
+              <div className="neo-badge__navbutton">
+                <button
+                  className="neo-badge__navbutton--content neo-btn neo-icon-notifications-on"
+                  aria-label="notifications"
+                ></button>
+                <span className="neo-badge__icon" data-badge="99"></span>
+              </div>
+              <div className="neo-badge__navbutton">
+                <button
+                  className="neo-badge__navbutton--content neo-btn neo-icon-settings"
+                  aria-label="settings"
+                ></button>
+              </div>
+              <div
+                className="neo-nav-status neo-nav-status--ready"
+              >
+                <div className="neo-nav-status-info">
+                  <p>Barbara Barberson</p>
+                  <span className="neo-label neo-label--ready">
+                    Ready: 03:47
+                  </span>
+                </div>
+                <figure
+                  className="neo-avatar"
+                  data-initials="BB"
+                  title="Barbara Barberson"
+                ></figure>
+              </div>
+            </div>
+          </nav>
+        </div>
+        <div
+          className={clsx(
+            "neo-ws-layout--context",
+            `neo-ws-layout--context-${layoutConfig}`
+          )}
+        >
+          {panelsToRender.map((panel) => {
+            return (
+              <div
+                className={clsx(
+                  "neo-panel neo-panel--padding--8",
+                  `neo-ws-layout--context-grid-area-${panel}`
+                )}
+              >
+                {panel}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </>
   );
