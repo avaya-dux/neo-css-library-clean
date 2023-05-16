@@ -359,6 +359,11 @@ export const WorkspacesUIWithPanels = () => {
 
   const [panelsToRender, setPanelsToRender] = useState<number[]>([]);
 
+  const [hasLeftNavigation, setHasLeftNavigation] = useState<boolean>(true);
+
+  const [condensed, setCondensed] = useState(true);
+  const [activate, setActivate] = useState([1]);
+
   useEffect(() => {
     const numberOfPanelsToRender =
       WSLayoutConfigOptions[
@@ -368,13 +373,34 @@ export const WorkspacesUIWithPanels = () => {
     setPanelsToRender([]);
 
     for (let x = 1; x <= numberOfPanelsToRender; x++) {
-      setPanelsToRender(panelsToRender => [...panelsToRender, x]);
+      setPanelsToRender((panelsToRender) => [...panelsToRender, x]);
     }
   }, [layoutConfig]);
+
+  const onExpand = (number: number) => {
+    if (activate.includes(number)) {
+      setActivate((prevState) => prevState.filter((numb) => numb !== number));
+    } else {
+      setActivate((prevState) => [...prevState, number]);
+    }
+  };
 
   return (
     <>
       <div className="neo-form-control" style={{ margin: "18px 0px" }}>
+        <div className="neo-input-group" style={{ marginBottom: "8px" }}>
+          <label className="neo-switch" htmlFor="uncheckedCheckbox">
+            <input
+              id="uncheckedCheckbox"
+              type="checkbox"
+              role="switch"
+              checked={hasLeftNavigation}
+              onChange={() => setHasLeftNavigation(!hasLeftNavigation)}
+            />
+            <i className="neo-switch__icon"></i>
+            Toggle Left Navigation
+          </label>
+        </div>
         <div className="neo-input-group">
           <label htmlFor="layout-config">Select Layout Configuration</label>
           <div className="neo-select" style={{ width: "30%" }}>
@@ -382,36 +408,43 @@ export const WorkspacesUIWithPanels = () => {
               id="layout-config"
               onChange={(e) => setLayoutConfig(e.target.value)}
             >
-              <option value="0">0 (default)</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
-              <option value="4">4</option>
-              <option value="5">5</option>
-              <option value="6">6</option>
-              <option value="7">7</option>
-              <option value="8">8</option>
-              <option value="9">9</option>
-              <option value="10">10</option>
-              <option value="11">11</option>
-              <option value="12">12</option>
-              <option value="13">13</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
-              <option value="17">17</option>
+              <option value="0">Single Panel (default)</option>
+              <option value="1">One Panel Left, One Panel Right</option>
+              <option value="2">One Smaller Panel Left, One Larger Panel Right </option>
+              <option value="3">One Larger Panel Left, One Smaller Panel Right </option>
+              <option value="4">One Panel Top, One Panel Bottom</option>
+              <option value="5">Two Panels Left, One Panel Right</option>
+              <option value="6">One Panel Right, Two Panels Left</option>
+              <option value="7">Two Panels Top, One Panel Bottom</option>
+              <option value="8">One Panel Top, Two Panels Bottom</option>
+              <option value="9">Four Equal Panels</option>
+              <option value="10">One Panel Top, Three Panels Bottom</option>
+              <option value="11">Three Panels Top, One Panel Bottom</option>
+              <option value="12">One Panel Left, Two Panels Center, Two Panels Right</option>
+              <option value="13">Two Panels Left, One Panel Center, Two Panels Right</option>
+              <option value="14">Two Panels Left, Two Panels Center, One Panel Right</option>
+              <option value="15">Two Panels Top, Three Panels Bottom</option>
+              <option value="16">Three Panels Top, Two Panels Bottom</option>
+              <option value="17">Six Equal Panels</option>
+
             </select>
           </div>
         </div>
       </div>
 
       <div
-        className="background-color neo-ws-layout neo-ws-layout--no-sidebar"
+        className={clsx(
+          "background-color neo-ws-layout",
+          hasLeftNavigation
+            ? "neo-ws-layout--sidebar"
+            : "neo-ws-layout--no-sidebar"
+        )}
+        // setting height here because panels in example are empty and so collapse
+        // setting margin bottom to make example more visible on page
         style={{ marginBottom: "12px", height: "600px" }}
       >
         <div
-          className="neo-panel neo-panel--bordered--bottom"
-          style={{ gridArea: "header" }}
+          className="neo-ws-layout--header neo-panel neo-panel--bordered--bottom"
         >
           <nav className="neo-navbar">
             <div className="neo-nav--left">
@@ -419,7 +452,11 @@ export const WorkspacesUIWithPanels = () => {
                 Skip to main content
               </a>
 
-              <a className="neo-navbar__brand" title="Neo Framework" href="https://design.avaya.com">
+              <a
+                className="neo-navbar__brand"
+                title="Neo Framework"
+                href="https://design.avaya.com"
+              >
                 <img
                   src="/assets/images/avaya-logo-header.svg"
                   aria-label="Avaya logo"
@@ -457,9 +494,7 @@ export const WorkspacesUIWithPanels = () => {
                   aria-label="settings"
                 ></button>
               </div>
-              <div
-                className="neo-nav-status neo-nav-status--ready"
-              >
+              <div className="neo-nav-status neo-nav-status--ready">
                 <div className="neo-nav-status-info">
                   <p>Barbara Barberson</p>
                   <span className="neo-label neo-label--ready">
@@ -475,6 +510,104 @@ export const WorkspacesUIWithPanels = () => {
             </div>
           </nav>
         </div>
+        {hasLeftNavigation && (
+          <div
+            className="neo-ws-layout--sidebar neo-panel--bordered--side"
+          >
+            <div
+              className={
+                condensed
+                  ? "neo-leftnav--wrapper neo-leftnav--wrapper-tooltip neo-leftnav--condensed--scrollable neo-leftnav--condensed hide-nav"
+                  : "neo-leftnav--wrapper neo-leftnav--wrapper-tooltip neo-leftnav--condensed--scrollable neo-leftnav--condensed"
+              }
+            >
+              <nav className="neo-leftnav" aria-label="secondary">
+                <ul className="neo-leftnav__nav">
+                  <li
+                    className={clsx(
+                      "neo-leftnav__main neo-leftnav__main--active",
+                      activate.includes(1) && !condensed
+                        ? "neo-leftnav__main--expand"
+                        : ""
+                    )}
+                  >
+                   {/* eslint-disable-next-line */}
+                    <a
+                      aria-label="Accounts"
+                      className="neo-icon-contact"
+                      onClick={() => onExpand(1)}
+                    >
+                      Accounts
+                      <span className="neo-icon-chevron-left" />
+                    </a>
+
+                    <ul className="neo-leftnav__nav">
+                      <li className="neo-leftnav__sub neo-leftnav__sub--active">
+                        <a href="https://design.avaya.com" target="_blank">Overview</a>
+                      </li>
+
+                      <li className="neo-leftnav__sub">
+                        <a href="https://design.avaya.com" target="_blank">Manage Users</a>
+                      </li>
+
+                      <li className="neo-leftnav__sub">
+                        <a href="https://design.avaya.com" target="_blank">Billing</a>
+                      </li>
+
+                      <li className="neo-leftnav__sub">
+                        <a href="https://design.avaya.com" target="_blank">Payments</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-address-book">Contact Center</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-user-group">Groups</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-settings">Settings</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-global">Menu 1</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-configure">Menu 2</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-idea">Menu 3</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-chart-gauge">Menu 4</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-view-tiles">Menu 5</a>
+                  </li>
+
+                  <li className="neo-leftnav__main">
+                    <a href="https://design.avaya.com" target="_blank" className="neo-icon-pie-chart">Menu 6</a>
+                  </li>
+                </ul>
+              </nav>
+              {/* eslint-disable-next-line */}
+              <a
+                role="button"
+                aria-label="expand navigation"
+                className="neo-icon-page-first neo-leftnav--condensed__toggle"
+                aria-labelledby="tooltip4"
+                onClick={() => setCondensed(!condensed)}
+              />
+            </div>
+          </div>
+        )}
         <div
           className={clsx(
             "neo-ws-layout--context",

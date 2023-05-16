@@ -8,6 +8,10 @@
     "leftnav context context"
     "leftnav context context"
     "leftnav context context";
+    /* magic number below is the maximum width of the condensed side navigation plus extra room for the scroll bar -- should use a variable in the CSS library */
+  grid-template-columns: minmax(70px, auto) 3fr 3fr;
+  grid-template-rows: 1fr 3fr 3fr 3fr;
+  overflow-y: scroll;
 }
 
 .neo-ws-layout--no-sidebar {
@@ -16,7 +20,18 @@
     "context context"
     "context context"
     "context context";
-  grid-template-rows: 58px 1fr;
+    /* magic number below is the height of the navbar plus 1px for the bottom border -- should use a variable in the CSS library*/
+  grid-template-rows: 59px 1fr;
+}
+
+.neo-ws-layout--header {
+  grid-area: header;
+}
+
+.neo-ws-layout--sidebar {
+  grid-area: leftnav;
+  overflow: auto;
+  background-color: var(--global-background);
 }
 
 .neo-ws-layout--context {
@@ -24,6 +39,7 @@
   display: grid;
   padding: 8px;
   gap: 8px;
+  background-color: var(--neo-color-base-100);
 }
 
 .neo-ws-layout--context-1 {
@@ -63,8 +79,8 @@
   grid-template-areas:
     "1 3"
     "2 3";
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
 }
 .neo-ws-layout--context-5 .neo-panel.neo-ws-layout--context-grid-area-2 {
   grid-column: 1;
