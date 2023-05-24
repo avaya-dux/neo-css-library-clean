@@ -1,9 +1,5 @@
 {
   "chip": {
-    "padding": {
-      "horizontal": { "value": "undefinedpx" },
-      "vertical": { "value": "undefinedpx" }
-    },
     "editable-width": { "value": "128px" },
     "editable-height": { "value": "25px" },
     "default-color": { "value": "{color.base/1000.value}" },

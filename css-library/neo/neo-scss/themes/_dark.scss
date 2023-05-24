@@ -107,9 +107,9 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 }
 :root .neo-dark {
   --channel-bg-color: #{$token-color-base-900};
-  --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
-  --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
-  --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+  --channel-available-color: #{$token-color-green-400};
+  --channel-busy-away-color: #{$token-color-orange-500};
+  --channel-dnd-color: #{$token-color-red-400};
   --channel-offline-color: #{$token-color-base-500};
   --channel-icon-generic-color: #{$token-color-base-100};
   --channel-acw-color: #{$token-color-blue-400};
@@ -193,10 +193,10 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --avatar-success-color: #{$token-color-green-400};
   --avatar-warning-color: #{$token-color-orange-400};
   --avatar-alert-color: #{$token-color-red-400};
-  --avatar-status-available-color: #{$token-color-data-viz-categorial-dark-green};
-  --avatar-status-away-color: #{$token-color-data-viz-categorial-dark-orange};
-  --avatar-status-busy-color: #{$token-color-data-viz-categorial-dark-orange};
-  --avatar-status-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+  --avatar-status-available-color: #{$token-color-green-400};
+  --avatar-status-away-color: #{$token-color-orange-500};
+  --avatar-status-busy-color: #{$token-color-orange-500};
+  --avatar-status-dnd-color: #{$token-color-red-400};
   --avatar-status-offline-color: #{$token-color-base-500};
 }
 :root .neo-dark {

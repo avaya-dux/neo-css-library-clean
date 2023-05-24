@@ -197,7 +197,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 :root .neo-light {
   --avatar-background-color: #{$token-avatar-background-color};
   --avatar-font-color: #{$token-avatar-font-color};
-  --avatar-primary-color: #{$token-avatar-border-primary-info};
+  --avatar-primary-color: #{$token-avatar-border-default-info};
   --avatar-success-color: #{$token-avatar-border-success};
   --avatar-warning-color: #{$token-avatar-border-warning};
   --avatar-alert-color: #{$token-avatar-border-warning};

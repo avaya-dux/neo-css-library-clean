@@ -241,9 +241,9 @@ $button-color-event-rgb-dark: 241, 241, 241;
 @media (prefers-color-scheme: dark) {
   :root .neo-dynamic {
     --channel-bg-color: #{$token-color-base-900};
-    --channel-available-color: #{$token-color-data-viz-categorial-dark-green};
-    --channel-busy-away-color: #{$token-color-data-viz-categorial-dark-orange};
-    --channel-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+    --channel-available-color: #{$token-color-green-400};
+    --channel-busy-away-color: #{$token-color-orange-500};
+    --channel-dnd-color: #{$token-color-red-400};
     --channel-offline-color: #{$token-color-base-500};
     --channel-icon-generic-color: #{$token-color-base-100};
     --channel-acw-color: #{$token-color-blue-400};
@@ -454,10 +454,10 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --avatar-success-color: #{$token-color-green-400};
     --avatar-warning-color: #{$token-color-orange-400};
     --avatar-alert-color: #{$token-color-red-400};
-    --avatar-status-available-color: #{$token-color-data-viz-categorial-dark-green};
-    --avatar-status-away-color: #{$token-color-data-viz-categorial-dark-orange};
-    --avatar-status-busy-color: #{$token-color-data-viz-categorial-dark-orange};
-    --avatar-status-dnd-color: #{$token-color-data-viz-categorial-dark-red};
+    --avatar-status-available-color: #{$token-color-green-400};
+    --avatar-status-away-color: #{$token-color-orange-500};
+    --avatar-status-busy-color: #{$token-color-orange-500};
+    --avatar-status-dnd-color: #{$token-color-red-400};
     --avatar-status-offline-color: #{$token-color-base-500};
   }
 }
@@ -465,7 +465,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
   :root .neo-dynamic {
     --avatar-background-color: #{$token-avatar-background-color};
     --avatar-font-color: #{$token-avatar-font-color};
-    --avatar-primary-color: #{$token-avatar-border-primary-info};
+    --avatar-primary-color: #{$token-avatar-border-default-info};
     --avatar-success-color: #{$token-avatar-border-success};
     --avatar-warning-color: #{$token-avatar-border-warning};
     --avatar-alert-color: #{$token-avatar-border-warning};

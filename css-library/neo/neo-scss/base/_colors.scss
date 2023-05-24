@@ -1,8 +1,6 @@
-@import "../tokens-import.scss";
+@import "../tokens/colors";
 
 :root {
-  --neo-color-base-150: #{$token-color-base-150};
-  --neo-color-base-850: #{$token-color-base-850};
   --neo-color-data-viz-categorial-green: #{$token-color-data-viz-categorial-green};
   --neo-color-data-viz-categorial-purple-light: #{$token-color-data-viz-categorial-purple-light};
   --neo-color-data-viz-categorial-red: #{$token-color-data-viz-categorial-red};
@@ -10,52 +8,8 @@
   --neo-color-data-viz-categorial-teal: #{$token-color-data-viz-categorial-teal};
   --neo-color-data-viz-categorial-orange: #{$token-color-data-viz-categorial-orange};
   --neo-color-data-viz-categorial-blue-mid: #{$token-color-data-viz-categorial-blue-mid};
-  --neo-color-blue-100: #{$token-color-blue-100};
-  --neo-color-purple-500: #{$token-color-purple-500};
-  --neo-color-orange-600: #{$token-color-orange-600};
-  --neo-color-base-0: #{$token-color-base-0};
-  --neo-color-green-600: #{$token-color-green-600};
-  --neo-color-red-900: #{$token-color-red-900};
-  --neo-color-red-100: #{$token-color-red-100};
-  --neo-color-red-600: #{$token-color-red-600};
-  --neo-color-orange-500: #{$token-color-orange-500};
-  --neo-color-blue-600: #{$token-color-blue-600};
-  --neo-color-green-200: #{$token-color-green-200};
-  --neo-color-green-100: #{$token-color-green-100};
-  --neo-color-red-400: #{$token-color-red-400};
-  --neo-color-orange-900: #{$token-color-orange-900};
-  --neo-color-green-800: #{$token-color-green-800};
-  --neo-color-green-900: #{$token-color-green-900};
-  --neo-color-base-1000: #{$token-color-base-1000};
-  --neo-color-orange-400: #{$token-color-orange-400};
-  --neo-color-blue-800: #{$token-color-blue-800};
-  --neo-color-purple-100: #{$token-color-purple-100};
-  --neo-color-red-200: #{$token-color-red-200};
-  --neo-color-purple-200: #{$token-color-purple-200};
-  --neo-color-orange-800: #{$token-color-orange-800};
-  --neo-color-blue-500: #{$token-color-blue-500};
-  --neo-color-purple-900: #{$token-color-purple-900};
-  --neo-color-purple-800: #{$token-color-purple-800};
-  --neo-color-purple-400: #{$token-color-purple-400};
-  --neo-color-purple-600: #{$token-color-purple-600};
-  --neo-color-blue-900: #{$token-color-blue-900};
-  --neo-color-blue-200: #{$token-color-blue-200};
-  --neo-color-red-500: #{$token-color-red-500};
-  --neo-color-red-800: #{$token-color-red-800};
-  --neo-color-green-400: #{$token-color-green-400};
-  --neo-color-blue-400: #{$token-color-blue-400};
-  --neo-color-orange-100: #{$token-color-orange-100};
-  --neo-color-orange-200: #{$token-color-orange-200};
-  --neo-color-green-500: #{$token-color-green-500};
   --neo-color-data-viz-categorial-blue-dark: #{$token-color-data-viz-categorial-blue-dark};
   --neo-color-data-viz-categorial-purple: #{$token-color-data-viz-categorial-purple};
-  --neo-color-base-100: #{$token-color-base-100};
-  --neo-color-base-500: #{$token-color-base-500};
-  --neo-color-base-900: #{$token-color-base-900};
-  --neo-color-base-200: #{$token-color-base-200};
-  --neo-color-base-600: #{$token-color-base-600};
-  --neo-color-base-400: #{$token-color-base-400};
-  --neo-color-base-800: #{$token-color-base-800};
   --neo-color-data-viz-categorial-dark-blue-mid: #{$token-color-data-viz-categorial-dark-blue-mid};
   --neo-color-data-viz-categorial-dark-purple: #{$token-color-data-viz-categorial-dark-purple};
   --neo-color-data-viz-categorial-dark-purple-light: #{$token-color-data-viz-categorial-dark-purple-light};
@@ -65,4 +19,98 @@
   --neo-color-data-viz-categorial-dark-pink: #{$token-color-data-viz-categorial-dark-pink};
   --neo-color-data-viz-categorial-dark-teal: #{$token-color-data-viz-categorial-dark-teal};
   --neo-color-data-viz-categorial-dark-green: #{$token-color-data-viz-categorial-dark-green};
+}
+
+:root {
+  --neo-color-base-0: #{$token-color-base-0};
+  --neo-color-base-100: #{$token-color-base-100};
+  --neo-color-base-150: #{$token-color-base-150};
+  --neo-color-base-200: #{$token-color-base-200};
+  --neo-color-base-400: #{$token-color-base-400};
+  --neo-color-base-500: #{$token-color-base-500};
+  --neo-color-base-600: #{$token-color-base-600};
+  --neo-color-base-800: #{$token-color-base-800};
+  --neo-color-base-850: #{$token-color-base-850};
+  --neo-color-base-900: #{$token-color-base-900};
+  --neo-color-base-1000: #{$token-color-base-1000};
+
+  --neo-color-teal-100: #{$token-color-teal-100};
+  --neo-color-teal-200: #{$token-color-teal-200};
+  --neo-color-teal-300: #{$token-color-teal-300};
+  --neo-color-teal-400: #{$token-color-teal-400};
+  --neo-color-teal-500: #{$token-color-teal-500};
+  --neo-color-teal-700: #{$token-color-teal-700};
+  --neo-color-teal-600: #{$token-color-teal-600};
+  --neo-color-teal-800: #{$token-color-teal-800};
+  --neo-color-teal-900: #{$token-color-teal-900};
+
+  --neo-color-pink-100: #{$token-color-pink-100};
+  --neo-color-pink-200: #{$token-color-pink-200};
+  --neo-color-pink-300: #{$token-color-pink-300};
+  --neo-color-pink-400: #{$token-color-pink-400};
+  --neo-color-pink-500: #{$token-color-pink-500};
+  --neo-color-pink-600: #{$token-color-pink-600};
+  --neo-color-pink-700: #{$token-color-pink-700};
+  --neo-color-pink-800: #{$token-color-pink-800};
+  --neo-color-pink-900: #{$token-color-pink-900};
+
+  --neo-color-purple-100: #{$token-color-purple-100};
+  --neo-color-purple-200: #{$token-color-purple-200};
+  --neo-color-purple-300: #{$token-color-purple-300};
+  --neo-color-purple-400: #{$token-color-purple-400};
+  --neo-color-purple-500: #{$token-color-purple-500};
+  --neo-color-purple-600: #{$token-color-purple-600};
+  --neo-color-purple-700: #{$token-color-purple-700};
+  --neo-color-purple-800: #{$token-color-purple-800};
+  --neo-color-purple-900: #{$token-color-purple-900};
+
+  --neo-color-gold-100: #{$token-color-gold-100};
+  --neo-color-gold-200: #{$token-color-gold-200};
+  --neo-color-gold-300: #{$token-color-gold-300};
+  --neo-color-gold-400: #{$token-color-gold-400};
+  --neo-color-gold-500: #{$token-color-gold-500};
+  --neo-color-gold-600: #{$token-color-gold-600};
+  --neo-color-gold-700: #{$token-color-gold-700};
+  --neo-color-gold-800: #{$token-color-gold-800};
+  --neo-color-gold-900: #{$token-color-gold-900};
+
+  --neo-color-orange-100: #{$token-color-orange-100};
+  --neo-color-orange-200: #{$token-color-orange-200};
+  --neo-color-orange-300: #{$token-color-orange-300};
+  --neo-color-orange-400: #{$token-color-orange-400};
+  --neo-color-orange-500: #{$token-color-orange-500};
+  --neo-color-orange-600: #{$token-color-orange-600};
+  --neo-color-orange-700: #{$token-color-orange-700};
+  --neo-color-orange-800: #{$token-color-orange-800};
+  --neo-color-orange-900: #{$token-color-orange-900};
+
+  --neo-color-green-100: #{$token-color-green-100};
+  --neo-color-green-200: #{$token-color-green-200};
+  --neo-color-green-300: #{$token-color-green-300};
+  --neo-color-green-400: #{$token-color-green-400};
+  --neo-color-green-500: #{$token-color-green-500};
+  --neo-color-green-600: #{$token-color-green-600};
+  --neo-color-green-700: #{$token-color-green-700};
+  --neo-color-green-800: #{$token-color-green-800};
+  --neo-color-green-900: #{$token-color-green-900};
+
+  --neo-color-blue-100: #{$token-color-blue-100};
+  --neo-color-blue-200: #{$token-color-blue-200};
+  --neo-color-blue-300: #{$token-color-blue-300};
+  --neo-color-blue-400: #{$token-color-blue-400};
+  --neo-color-blue-500: #{$token-color-blue-500};
+  --neo-color-blue-600: #{$token-color-blue-600};
+  --neo-color-blue-700: #{$token-color-blue-700};
+  --neo-color-blue-800: #{$token-color-blue-800};
+  --neo-color-blue-900: #{$token-color-blue-900};
+
+  --neo-color-red-100: #{$token-color-red-100};
+  --neo-color-red-200: #{$token-color-red-200};
+  --neo-color-red-300: #{$token-color-red-300};
+  --neo-color-red-400: #{$token-color-red-400};
+  --neo-color-red-500: #{$token-color-red-500};
+  --neo-color-red-600: #{$token-color-red-600};
+  --neo-color-red-700: #{$token-color-red-700};
+  --neo-color-red-800: #{$token-color-red-800};
+  --neo-color-red-900: #{$token-color-red-900};
 }

@@ -1,5 +1,31 @@
 # Changelog
 
+
+### 3.70.0
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
+### New Features - New features that have recently been added
+
+- Updated Neo color library with new colors (NEO-1485)
+
+### Bugs Report - List of bugs that have been updated
+
+- N/A
+
+### Sunsetting - Removing Full Support
+
+- N/A
+
+### Work In Progress - Future Updates
+
+- N/A
 ### 3.69.2
 
 ### Breaking Changes - Needs Immediate Attention

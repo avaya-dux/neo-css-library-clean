@@ -161,7 +161,7 @@ async function channelIconVariants(value) {
   console.log(channelIconJSONObject);
   await fs
     .writeFile(
-      "../properties/components/channelIcons.json",
+      "../css-library/style-dictionary/properties/components/channelIcons.json",
       JSON.stringify(channelIconJSONObject)
     )
     .then(function () {

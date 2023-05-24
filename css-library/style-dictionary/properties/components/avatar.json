@@ -34,28 +34,20 @@
     },
     "border-width": { "value": "2px" },
     "border-style": { "value": "solid" },
-    "border-primary-info": { "value": "{color.blue/500.value}" },
+    "border-default-info": { "value": "{color.blue/500.value}" },
     "border-alert": { "value": "{color.red/500.value}" },
     "border-success": { "value": "{color.green/500.value}" },
     "border-warning": { "value": "{color.orange/500.value}" },
     "status-size-large": { "value": "20px" },
     "status-large-top": { "value": "1.25px" },
     "status-large-right": { "value": "1.25px" },
-    "status-available-color": {
-      "value": "{color.data viz/categorial/green.value}"
-    },
+    "status-available-color": { "value": "{color.green/500.value}" },
     "status-size-small": { "value": "12px" },
     "status-small-top": { "value": "0.75px" },
     "status-small-right": { "value": "0.75px" },
-    "status-away-color": {
-      "value": "{color.data viz/categorial/orange.value}"
-    },
-    "status-busy-color": {
-      "value": "{color.data viz/categorial/orange.value}"
-    },
-    "status-do not disturb-color": {
-      "value": "{color.data viz/categorial/red.value}"
-    },
+    "status-away-color": { "value": "{color.orange/400.value}" },
+    "status-busy-color": { "value": "{color.orange/400.value}" },
+    "status-do not disturb-color": { "value": "{color.red/500.value}" },
     "status-offline-color": { "value": "{color.base/400.value}" },
     "status-size-medium": { "value": "16px" },
     "status-medium-top": { "value": "1px" },

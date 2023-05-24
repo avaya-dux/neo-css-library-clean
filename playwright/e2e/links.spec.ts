@@ -17,11 +17,11 @@ test.describe("Links Page Visual Test", () => {
 
     await blockLink
       .hover()
-      .then(() => expect(blockLink).toHaveCSS("color", "rgb(18, 90, 179)"));
+      .then(() => expect(blockLink).toHaveCSS("color", "rgb(21, 94, 139)"));
 
     await inlineLink
       .hover()
-      .then(() => expect(inlineLink).toHaveCSS("color", "rgb(18, 90, 179)"));
+      .then(() => expect(inlineLink).toHaveCSS("color", "rgb(21, 94, 139)"));
 
     await expect(page).toHaveScreenshot(options);
   });

@@ -344,14 +344,14 @@ async function avatarStyles(value) {
     }
   }
   // console.log(avatarJSONObject);
-  // await fs
-  //   .writeFile(
-  //     '../properties/components/avatar.json',
-  //     JSON.stringify(avatarJSONObject)
-  //   )
-  //   .then(function () {
-  //     console.log('avatar.json created');
-  //   });
+  await fs
+    .writeFile(
+      '../css-library/style-dictionary/properties/components/avatar.json',
+      JSON.stringify(avatarJSONObject)
+    )
+    .then(function () {
+      console.log('avatar.json created');
+    });
 }
 
 exports.avatarStyles = avatarStyles;

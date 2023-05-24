@@ -54,14 +54,6 @@ async function chipStyles(value) {
       chipJSONObject.chips['min-width'] = {
         value: `${variant.size.x}px`,
       };
-      //padding-x
-      chipJSONObject.chips['padding-x'] = {
-        value: `${variant.children[0].paddingLeft}px`,
-      };
-      //padding-y
-      chipJSONObject.chips['padding-y'] = {
-        value: `${variant.children[0].paddingTop}px`,
-      };
       // item-spacing
       chipJSONObject.chips['item-spacing'] = {
         value: `${variant.children[0].itemSpacing}px`,

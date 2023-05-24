@@ -59,7 +59,7 @@ async function pullColorTokens(styles) {
   // note that the file path is relative to the location in which the function is called
 
   await fs
-    .writeFile('../properties/colorStyles.json', JSON.stringify(minColorStyles))
+    .writeFile('../css-library/style-dictionary/properties/colorStyles.json', JSON.stringify(minColorStyles))
     .then(function () {
       console.log('colorStyles.json created');
     })

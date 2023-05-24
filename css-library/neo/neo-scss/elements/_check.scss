@@ -194,15 +194,15 @@
     content: "";
     display: none;
     height: $checkbox-icon-height;
-    left: ($checkbox-size - $checkbox-icon-width) / 2;
+    left: calc(($checkbox-size - $checkbox-icon-width) / 2);
     position: absolute;
-    top: ($checkbox-size - $checkbox-icon-height) / 4;
+    top: calc(($checkbox-size - $checkbox-icon-height) / 4);
     transform: rotate(45deg);
     width: $checkbox-icon-width;
 
     @include rtl-selector {
       left: auto;
-      right: ($checkbox-size - $checkbox-icon-width) / 2;
+      right: calc(($checkbox-size - $checkbox-icon-width) / 2);
     }
   }
 }
