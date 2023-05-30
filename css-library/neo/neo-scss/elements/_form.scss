@@ -14,7 +14,7 @@
         color: $state-color-value;
       }
 
-      .neo-input,
+      .neo-input:not(:focus),
       .neo-chips,
       .neo-select select {
         border-color: $state-color-value;
@@ -192,7 +192,7 @@
         }
       }
     }
-    &--error {
+    &--error:not(:focus-within) {
       .neo-multiselect .neo-multiselect__header,
       .neo-multiselect .neo-multiselect-combo__header {
         border-color: $input-border-error-color;

@@ -13,7 +13,7 @@
 
 ### New Features - New features that have recently been added
 
-- Updated Neo color library with new colors (NEO-1485)
+- Updated Neo color library with set of new colors (NEO-1485)
 
 ### Bugs Report - List of bugs that have been updated
 

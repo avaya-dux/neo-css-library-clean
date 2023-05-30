@@ -24,18 +24,20 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 
   <h3>Text Input With Error State</h3>
 
-  <div class="text-input__layout">
-    <div class="neo-form-control neo-form-control--error">
-      <div class="neo-input-group">
-        <label for="input1"> Name</label>
-        <div class="neo-input-editable__wrapper">
-          <input class="neo-input" id="input1" type="text" />
-          <button
-            aria-label="clear input"
-            class="neo-input-edit__icon neo-icon-end"></button>
+  <div class="neo-form">
+    <div class="text-input__layout">
+      <div class="neo-form-control neo-form-control--error">
+        <div class="neo-input-group">
+          <label for="input1"> Name</label>
+          <div class="neo-input-editable__wrapper">
+            <input class="neo-input" id="input1" type="text" />
+            <button
+              aria-label="clear input"
+              class="neo-input-edit__icon neo-icon-end"></button>
+          </div>
         </div>
+        <div class="neo-input-hint">This is an error message.</div>
       </div>
-      <div class="neo-input-hint">This is an error message.</div>
     </div>
   </div>
 
@@ -45,7 +47,9 @@ import NeoLayout from "../layouts/NeoLayout.astro";
     <div class="neo-form-control">
       <div class="neo-input-group">
         <label for="input2"> Name</label>
-        <div class="neo-input-editable__wrapper neo-input-editable__wrapper--small">
+        <div
+          class="neo-input-editable__wrapper neo-input-editable__wrapper--small"
+        >
           <input class="neo-input" id="input2" type="text" />
           <button
             aria-label="clear input"
@@ -63,7 +67,12 @@ import NeoLayout from "../layouts/NeoLayout.astro";
       <div class="neo-input-group">
         <label for="input3"> Name</label>
         <div class="neo-input-editable__wrapper">
-          <input class="neo-input" id="input3" type="text" placeholder="placeholder text"/>
+          <input
+            class="neo-input"
+            id="input3"
+            type="text"
+            placeholder="placeholder text"
+          />
           <button
             aria-label="clear input"
             class="neo-input-edit__icon neo-icon-end"></button>
@@ -75,9 +84,7 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 </NeoLayout>
 
 <style>
-
-.text-input__layout {
-  width: 40%;
-}
-
+  .text-input__layout {
+    width: 40%;
+  }
 </style>

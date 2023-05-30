@@ -43,11 +43,11 @@
   --table-header-cell-hover-color: #{$token-color-blue-800};
   --table-background-color: #{$token-color-base-900};
   --table-row-disabled-color: #{$token-color-base-800};
-  --table-row-border-color: #{$token-color-base-800};
-  --table-row-hover-color: #{$token-color-blue-800};
+  --table-row-border-color: #{$token-color-base-900};
+  --table-row-hover-color: #{$token-color-base-850};
   --table-row-font-active-color: #{$token-color-blue-200};
   --table-nested-row-background-color: #{$token-color-base-800};
-  // --table-nested-row-border-color: #{$token-color-blue-600};
+  --table-row-border-hover-active-color: #{$token-color-base-900};
   --table-sheet-border-color: #{$token-color-base-600};
   --table-filter-row-background-color: #{$token-color-base-900};
   --table-hover-selected-row-background-color: #{$token-color-base-850};
@@ -171,6 +171,8 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 :root .neo-dark {
   --accordion-border-color: #{$token-color-base-500};
   --accordion-body-color: #{$token-color-base-900};
+  --accordion-header-text :#{$token-color-base-100};
+  --accordion-hover-background-color: #{$token-color-base-850};
 }
 :root .neo-dark {
   --sheet-background: #{$token-color-base-900};
@@ -273,7 +275,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --dropdown-content-background-color: #{$token-color-blue-400};
   --dropdown-content-arrow-color: #{$token-color-base-200};
   --dropdown-item-color: #{$token-color-base-800};
-  --dropdown-item-hover-color: #{$token-color-blue-200};
+  --dropdown-item-hover-color: #{$token-color-base-850};
   --dropdown-item-hover-background-color: #{$token-color-blue-200};
   --dropdown-disabled-font-color: #{$token-color-base-500};
   --dropdown-readonly-font-color: #{$token-color-base-200};
@@ -330,4 +332,8 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --stepper-disabled-indicator-color: #{$token-color-base-500};
   --stepper-disabled-main-text-font-color: #{$token-color-base-400};
   --stepper-disabled-optional-text-font-color: #{$token-color-base-400};
+}
+
+:root .neo-dark {
+  --panel-border-color: #{$token-color-base-600};
 }

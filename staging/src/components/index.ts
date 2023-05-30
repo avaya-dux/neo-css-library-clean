@@ -11,6 +11,7 @@ export * from "./Icons";
 export * from "./Widget";
 export * from "./Dropdown";
 export * from "./Panel";
+export * from "./Colors";
 
 // svelte
 export * from "./RootOptions";

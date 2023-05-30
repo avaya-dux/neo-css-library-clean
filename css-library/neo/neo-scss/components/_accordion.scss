@@ -29,6 +29,10 @@
       outline-offset: 0px;
     }
 
+    & &-text {
+      color: $accordion-header-text;
+    }
+
     & &-text::after {
       // chevron-up
       content: $accordion-contracted-icon;
@@ -75,14 +79,18 @@
       border-radius: 0;
     }
     .neo-accordion__item:hover {
-      background-color: var(--neo-color-base-100);
+      background-color: $accordion-hover-background-color;
       transition: background-color 0.4s;
       .neo-accordion__header {
         .neo-accordion__header-text {
-          background-color: var(--neo-color-base-100);
+          // color: var(--neo-color-base-1000);
+          background-color: $accordion-hover-background-color;
           transition: background-color 0.4s;
         }
       }
+      // .neo-accordion__content * {
+      //     color: var(--neo-color-base-1000);
+      // }
     }
   }
   &__item {

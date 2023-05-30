@@ -1750,37 +1750,15 @@ $list-item-divider: 1px solid var(--list-item-divider) !default;
 // Location: src/scss/components/_accordion.scss
 //
 
-// Accordion colour variables
-
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --accordion-border-color: #{$token-color-base-500};
-//     --accordion-body-color: #{$token-color-base-900};
-//   }
-//   .neo-dark {
-//     --accordion-border-color: #{$token-color-base-500};
-//     --accordion-body-color: #{$token-color-base-900};
-//   }
-//   .neo-light {
-//     --accordion-border-color: #{$token-accordion-border-color};
-//     --accordion-body-color: #{$token-accordion-background-color};
-//   }
-// }
-// @media (prefers-color-scheme: light) {
 :root {
   --accordion-border-color: #{$token-accordion-border-color};
   --accordion-body-color: #{$token-accordion-background-color};
+  --accordion-header-text :#{$token-color-base-1000};
+  --accordion-hover-background-color: #{$token-color-base-100};
 }
-//   .neo-light {
-//     --accordion-border-color: #{$token-accordion-border-color};
-//     --accordion-body-color: #{$token-accordion-background-color};
-//   }
-//   .neo-dark {
-//     --accordion-border-color: #{$token-color-base-500};
-//     --accordion-body-color: #{$token-color-base-900};
-//   }
-// }
 
+$accordion-hover-background-color: var(--accordion-hover-background-color) !default;
+$accordion-header-text: var(--accordion-header-text) !default;
 $accordion-body-background: var(--accordion-body-color) !default;
 $accordion-border-width: $token-accordion-border-width !default;
 $accordion-border-color: var(--accordion-border-color) !default;
@@ -3369,3 +3347,9 @@ $treeview-default-font-weight: $token-treeview-default-font-weight !default;
 $treeview-selected-font-weight: $token-treeview-selected-font-weight !default;
 $treeview-selected-border-width: $token-treeview-border-width !default;
 $treeview-expandable-icon: $token-icons-neo-icon-chevron-right !default;
+
+// Component name: Badge
+// Location: src/scss/elements/_panel.scss
+//
+
+$panel-border-color: var(--panel-border-color);

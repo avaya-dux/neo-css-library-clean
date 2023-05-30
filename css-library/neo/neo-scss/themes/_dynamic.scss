@@ -100,11 +100,11 @@
     --table-header-cell-hover-color: #{$token-color-blue-800};
     --table-background-color: #{$token-color-base-900};
     --table-row-disabled-color: #{$token-color-base-800};
-    --table-row-border-color: #{$token-color-base-800};
-    --table-row-hover-color: #{$token-color-blue-800};
+    --table-row-border-color: #{$token-color-base-900};
+    --table-row-hover-color: #{$token-color-base-850};
     --table-row-font-active-color: #{$token-color-blue-200};
     --table-nested-row-background-color: #{$token-color-base-800};
-    // --table-nested-row-border-color: #{$token-color-blue-600};
+    --table-row-border-hover-active-color: #{$token-color-base-900};
     --table-sheet-border-color: #{$token-color-base-600};
     --table-filter-row-background-color: #{$token-color-base-900};
     --table-hover-selected-row-background-color: #{$token-color-base-850};
@@ -116,11 +116,11 @@
     --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
     --table-background-color: #{$token-table-background-color};
     --table-row-disabled-color: #{$token-table-row-disabled-color};
-    --table-row-border-color: #{$token-table-row-border-color};
+    --table-row-border-color: #{$token-table-background-color};
     --table-row-hover-color: #{$token-table-row-hover-color};
     --table-row-font-active-color: #{$token-table-row-font-active-color};
     --table-nested-row-background-color: #{$token-table-nested-row-background-color};
-    // --table-nested-row-border-color: #{$token-table-nested-row-border-color};
+    --table-row-border-hover-active-color: #{$token-color-base-0};
     --table-sheet-border-color: #{$token-table-sheet-border-color};
     --table-filter-row-background-color: #{$token-table-filters-row-background-color};
     --table-hover-selected-row-background-color: #{$token-table-row-hover-selected-color};
@@ -390,12 +390,16 @@ $button-color-event-rgb-dark: 241, 241, 241;
   :root .neo-dynamic {
     --accordion-border-color: #{$token-color-base-500};
     --accordion-body-color: #{$token-color-base-900};
+    --accordion-header-text :#{$token-color-base-100};
+    --accordion-hover-background-color: #{$token-color-base-850};
   }
 }
 @media (prefers-color-scheme: light) {
   :root .neo-dynamic {
     --accordion-border-color: #{$token-accordion-border-color};
     --accordion-body-color: #{$token-accordion-background-color};
+    --accordion-header-text :#{$token-color-base-1000};
+    --accordion-hover-background-color: #{$token-color-base-100};
   }
 }
 @media (prefers-color-scheme: dark) {
@@ -633,7 +637,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --dropdown-content-background-color: #{$token-color-blue-400};
     --dropdown-content-arrow-color: #{$token-color-base-200};
     --dropdown-item-color: #{$token-color-base-800};
-    --dropdown-item-hover-color: #{$token-color-blue-200};
+    --dropdown-item-hover-color: #{$token-color-base-850};
     --dropdown-item-hover-background-color: #{$token-color-blue-200};
     --dropdown-disabled-font-color: #{$token-color-base-500};
     --dropdown-readonly-font-color: #{$token-color-base-200};
@@ -783,5 +787,15 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --stepper-disabled-indicator-color: #{$token-color-base-500};
     --stepper-disabled-main-text-font-color: #{$token-color-base-400};
     --stepper-disabled-optional-text-font-color: #{$token-color-base-400};
+  }
+}
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic {
+    --panel-border-color: #{$token-color-base-200};
+  }
+}
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --panel-border-color: #{$token-color-base-600};
   }
 }

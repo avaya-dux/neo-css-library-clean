@@ -42,6 +42,10 @@
   background-color: var(--neo-color-base-100);
 }
 
+.neo-dark .neo-ws-layout--context {
+  background-color: var(--neo-color-base-850);
+}
+
 .neo-ws-layout--context-1 {
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr;

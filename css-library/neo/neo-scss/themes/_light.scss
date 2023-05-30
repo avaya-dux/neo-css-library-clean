@@ -43,13 +43,14 @@
   --table-header-cell-hover-color: #{$token-table-header-cell-hover-color};
   --table-background-color: #{$token-table-background-color};
   --table-row-disabled-color: #{$token-table-row-disabled-color};
-  --table-row-border-color: #{$token-table-row-border-color};
+  --table-row-border-color: #{$token-table-background-color};
   --table-row-hover-color: #{$token-table-row-hover-color};
   --table-row-font-active-color: #{$token-table-row-font-active-color};
   --table-nested-row-background-color: #{$token-table-nested-row-background-color};
   --table-sheet-border-color: #{$token-table-sheet-border-color};
   --table-filter-row-background-color: #{$token-table-filters-row-background-color};
   --table-hover-selected-row-background-color: #{$token-table-row-hover-selected-color};
+  --table-row-border-hover-active-color: #{$token-color-base-0};
 }
 $button-color-primary-rgb-light: 20, 115, 230;
 $button-color-primary-rgb-dark: 76, 148, 237;
@@ -175,6 +176,8 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 :root .neo-light {
   --accordion-border-color: #{$token-accordion-border-color};
   --accordion-body-color: #{$token-accordion-background-color};
+  --accordion-header-text :#{$token-color-base-1000};
+  --accordion-hover-background-color: #{$token-color-base-100};
 }
 
 :root .neo-light {
@@ -346,4 +349,8 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --stepper-disabled-indicator-color: #{$token-stepper-disabled-indicator-color};
   --stepper-disabled-main-text-font-color: #{$token-stepper-disabled-main-text-font-color};
   --stepper-disabled-optional-text-font-color: #{$token-stepper-disabled-optional-text-font-color};
+}
+
+:root .neo-light {
+  --panel-border-color: #{$token-color-base-200};
 }
