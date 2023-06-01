@@ -4,10 +4,7 @@
   z-index: map-get($indexes-map, "check");
 
   &:focus-visible {
-    + label:not(:empty) {
-      outline: rgba(20, 115, 230, 1) auto 2px;
-    }
-    + label:empty {
+    + label:empty, + label:not(:empty) {
       &:before {
         outline: rgba(20, 115, 230, 1) auto 2px;
         outline-offset: 2px;

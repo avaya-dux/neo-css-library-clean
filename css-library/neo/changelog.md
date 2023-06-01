@@ -1,5 +1,30 @@
 # Changelog
 
+### 3.71.0
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
+### New Features - New features that have recently been added
+
+- N/A
+
+### Bugs Report - List of bugs that have been updated
+
+- Adjusted focus style on checkboxes to be consistent with other form elements (NEO-1689)
+
+### Sunsetting - Removing Full Support
+
+- N/A
+
+### Work In Progress - Future Updates
+
+- N/A
 
 ### 3.70.0
 
