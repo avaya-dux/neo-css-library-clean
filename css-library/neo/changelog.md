@@ -17,6 +17,7 @@
 ### Bugs Report - List of bugs that have been updated
 
 - Adjusted focus style on checkboxes to be consistent with other form elements (NEO-1689)
+- Fixed misconfigured Link hover color variable
 
 ### Sunsetting - Removing Full Support
 

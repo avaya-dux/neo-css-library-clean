@@ -1,9 +1,13 @@
 <script lang="ts">
+  import clsx from "clsx";
   let dir: "auto" | "ltr" | "rtl" = "auto";
-  let mode: "light" | "dark" | "dynamic" = "light";
+  let mode: "default" | "light" | "dark" | "dynamic" = "default";
 </script>
 
-<main {dir} class="neo-global-colors neo-{mode}">
+<main
+  {dir}
+  class={clsx("neo-global-colors", mode !== "default" && `neo-${mode}`)}
+>
   <div class="page-options">
     <fieldset>
       <legend>Root Level <code>`dir`</code> attribute</legend>
@@ -44,6 +48,17 @@
 
     <fieldset>
       <legend>Color Mode:</legend>
+
+      <div>
+        <input
+          id="default"
+          type="radio"
+          name="color-mode"
+          value="default"
+          bind:group={mode}
+        />
+        <label for="default"><code>default</code></label>
+      </div>
 
       <div>
         <input
