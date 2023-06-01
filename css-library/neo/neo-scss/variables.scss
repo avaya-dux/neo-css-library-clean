@@ -1753,11 +1753,13 @@ $list-item-divider: 1px solid var(--list-item-divider) !default;
 :root {
   --accordion-border-color: #{$token-accordion-border-color};
   --accordion-body-color: #{$token-accordion-background-color};
-  --accordion-header-text :#{$token-color-base-1000};
+  --accordion-header-text: #{$token-color-base-1000};
   --accordion-hover-background-color: #{$token-color-base-100};
 }
 
-$accordion-hover-background-color: var(--accordion-hover-background-color) !default;
+$accordion-hover-background-color: var(
+  --accordion-hover-background-color
+) !default;
 $accordion-header-text: var(--accordion-header-text) !default;
 $accordion-body-background: var(--accordion-body-color) !default;
 $accordion-border-width: $token-accordion-border-width !default;
@@ -3351,5 +3353,9 @@ $treeview-expandable-icon: $token-icons-neo-icon-chevron-right !default;
 // Component name: Badge
 // Location: src/scss/elements/_panel.scss
 //
+
+:root {
+  --panel-border-color: #{$token-color-base-200};
+}
 
 $panel-border-color: var(--panel-border-color);
