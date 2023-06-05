@@ -41,7 +41,7 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 
       <div class="neo-nav">
         <div class="neo-dropdown neo-dropdown--onhover">
-          <div class="neo-badge__navbutton">
+          <div class="neo-badge__navbutton" data-testid="navbar-button-parent">
             <button
               class="neo-badge__navbutton--content neo-btn neo-icon-user neo-dropdown__link-header"
             ></button>
@@ -208,7 +208,9 @@ import NeoLayout from "../layouts/NeoLayout.astro";
               </div>
             </div>
           </div>
-          <div class="neo-tooltip__content" id="tooltip1"><div class="neo-arrow"></div>Tooltip</div>
+          <div class="neo-tooltip__content" id="tooltip1">
+            <div class="neo-arrow"></div>Tooltip
+          </div>
         </div>
         <div class="neo-badge__navbutton">
           <button
@@ -222,12 +224,14 @@ import NeoLayout from "../layouts/NeoLayout.astro";
             disabled></button>
         </div>
 
-        <div class="neo-badge__navbutton">
-          <button
-            class="neo-badge__navbutton--content neo-btn neo-icon-notifications-on neo-dropdown__link-header"
-          ></button>
+        <div class="neo-dropdown">
+          <div class="neo-badge__navbutton">
+            <button
+              class="neo-badge__navbutton--content neo-btn neo-icon-notifications-on neo-dropdown__link-header"
+            ></button>
 
-          <span class="neo-badge__icon" data-badge="5"></span>
+            <span class="neo-badge__icon" data-badge="5"></span>
+          </div>
         </div>
 
         <div class="neo-badge__navbutton neo-badge__navbutton--active-disabled">

@@ -15,9 +15,11 @@ test.describe("Links Page Visual Test", () => {
       "Inline anchor element with '.neo-link--inline' class applied"
     );
 
-    await blockLink
-      .hover()
-      .then(() => expect(blockLink).toHaveCSS("color", "rgb(21, 94, 139)"));
+    await blockLink.hover().then(() => {
+      expect(blockLink).toHaveCSS("color", "rgb(21, 94, 139)");
+    });
+
+    await expect(page).toHaveScreenshot(options);
 
     await inlineLink
       .hover()
