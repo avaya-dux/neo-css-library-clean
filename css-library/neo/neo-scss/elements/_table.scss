@@ -95,13 +95,17 @@
       }
     }
     &.filters {
+      &:focus,
+      &:focus-within {
+        outline: rgba(20, 115, 230, 1) auto 2px;
+        outline-offset: -2px;
+      }
       .neo-multiselect {
         display: flex;
         align-items: center;
         &:focus,
         &:focus-within {
-          outline: rgba(20, 115, 230, 1) auto 2px;
-          outline-offset: -2px;
+          outline: none;
         }
       }
     }
@@ -123,43 +127,46 @@
         margin: 0 4px;
       }
     }
-    .neo-multiselect__content ul li {
-      font-weight: 400;
-      &:before {
-        visibility: hidden;
-        margin-right: $table-filter-icon-spacing;
-        font-size: $table-filter-font-size;
-        content: $token-icons-neo-icon-check;
-        font-family: updated-neo-icons !important;
-        -ms-font-feature-settings: "liga" 1;
-        font-feature-settings: "liga";
-        font-variant-ligatures: discretionary-ligatures;
-        font-style: normal;
-        font-weight: normal;
-        font-variant: normal;
-        text-transform: none;
-        line-height: 1;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-        display: inline-block;
-        height: auto;
-        width: auto;
-        letter-spacing: 0;
-        min-height: 0;
-        speak: none;
-        text-align: center;
-        text-transform: none;
-        vertical-align: middle;
-        @include rtl-selector {
-          margin-left: $table-filter-icon-spacing;
-          margin-right: 0px;
+    .neo-multiselect__content {
+      width: auto;
+      ul li {
+        font-weight: 400;
+        padding: 8px 56px 8px 16px;
+        &:before {
+          visibility: hidden;
+          margin-right: $table-filter-icon-spacing;
+          font-size: $table-filter-font-size;
+          content: $token-icons-neo-icon-check;
+          font-family: updated-neo-icons !important;
+          -ms-font-feature-settings: "liga" 1;
+          font-feature-settings: "liga";
+          font-variant-ligatures: discretionary-ligatures;
+          font-style: normal;
+          font-weight: normal;
+          font-variant: normal;
+          text-transform: none;
+          line-height: 1;
+          -webkit-font-smoothing: antialiased;
+          -moz-osx-font-smoothing: grayscale;
+          display: inline-block;
+          height: auto;
+          width: auto;
+          letter-spacing: 0;
+          min-height: 0;
+          speak: none;
+          text-align: center;
+          text-transform: none;
+          vertical-align: middle;
+          @include rtl-selector {
+            margin-left: $table-filter-icon-spacing;
+            margin-right: 0px;
+          }
+        }
+        &.selected:before {
+          visibility: initial;
         }
       }
-      &.selected:before {
-        visibility: initial;
-      }
     }
-
     span {
       cursor: pointer;
       &:first-child {

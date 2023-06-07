@@ -1,5 +1,9 @@
 import clsx from "clsx";
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+
 
 // TO-DO: Fix a11y issues with Table checkbox labels
 
@@ -106,6 +110,8 @@ export const Table = () => {
 };
 
 export const TableWithSortHeaders = () => {
+  const [isActive, setIsActive] = useState(false);
+
   return (
     <section>
       <h2>Table With Sort Headers</h2>
@@ -114,22 +120,21 @@ export const TableWithSortHeaders = () => {
         <thead>
           <tr>
             <th className="filters">
-              <div className="neo-multiselect">
+              <div
+                className={clsx(
+                  "neo-multiselect",
+                  isActive && "neo-multiselect--active"
+                )}
+                onClick={() => setIsActive(!isActive)}
+                data-testid="table-filters-cell"
+                tabIndex={0}
+              >
                 First Name<span className="neo-icon-chevron-down"></span>
                 <div className="neo-multiselect__content">
                   <ul>
-                    <li
-                    >
-                      A - Z
-                    </li>
-                    <li
-                    >
-                      Z - A
-                    </li>
-                    <li
-                    >
-                      Filter By
-                    </li>
+                    <li>A - Z</li>
+                    <li>Z - A</li>
+                    <li>Filter By</li>
                   </ul>
                 </div>
               </div>
