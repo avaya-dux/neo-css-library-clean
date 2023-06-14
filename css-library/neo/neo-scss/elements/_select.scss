@@ -207,7 +207,7 @@
 
     @include rtl-selector {
       right: auto;
-      left: 12px;
+      left: 8px;
     }
   }
   @include rtl-selector {
@@ -415,6 +415,7 @@
     background-color: $select-background-color;
     color: $select-font-color;
     border: $select-border-width $select-border-style $select-border-color;
+
     @include neo-multiselect-arrow();
 
     & .neo-input {
@@ -428,6 +429,11 @@
 
     padding-left: $token-input-padding-x;
     padding-right: $token-input-padding-x + 12px;
+
+    @include rtl-selector {
+      padding-left: 0 $token-input-padding-x * 2;
+      padding-right: $token-input-padding-x;
+    }
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;

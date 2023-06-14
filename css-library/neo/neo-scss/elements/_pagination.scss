@@ -8,17 +8,22 @@
 }
 
 @mixin pagination-select {
+  .neo-select {
+    margin-right: 8px;
+    > select {
+      width: auto;
+    }
+  }
+
   .neo-multiselect {
     margin-right: 8px;
     @include rtl-selector {
       margin-left: 8px;
-    }
-    &:focus-within .neo-multiselect__header {
-      margin: 0;
+      margin-right: 0px;
     }
 
     .neo-multiselect__header {
-      min-width: 70px;
+      width: auto;
       & ul li {
         padding: 8px 8px;
       }
@@ -27,6 +32,11 @@
       .neo-input {
         max-width: 32px;
       }
+    }
+    .neo-multiselect__content {
+      width: auto;
+      left: auto;
+      right: 0;
     }
   }
 }
@@ -226,8 +236,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  .neo-form--inline {
+    width: 90px;
+    display: inline-flex;
+    justify-content: flex-end;
+  }
+
   .neo-form-control {
     margin: 0px;
+    min-height: auto;
     .neo-input-group--inline {
       flex-direction: row;
       align-items: center;

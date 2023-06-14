@@ -12,6 +12,7 @@ export * from "./Widget";
 export * from "./Dropdown";
 export * from "./Panel";
 export * from "./Colors";
+export * from "./Pagination";
 
 // svelte
 export * from "./RootOptions";

@@ -1,8 +1,109 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
+
+import { PaginationMultiSelect } from "../components";
 ---
 
+<style>
+
+h3 {
+  margin-top: 2rem;
+}
+
+</style>
+
 <NeoLayout title="Pagination">
+  <h3>Pagination Row With Multiselect as Used in Neo Table examples</h3>
+
+  <PaginationMultiSelect client:load />
+
+  <h3>Pagination Row With Native Select as Used in WS/AXP </h3>
+
+  <div class="neo-pagination__row">
+    <div aria-label="show">1-10 / 41 shown</div>
+    <nav role="navigation" aria-label="pagination" class="neo-pagination">
+      <button
+        role="button"
+        aria-label="Go to previous page"
+        class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-left"
+        disabled></button>
+      <ul class="neo-pagination__list">
+        <li>
+          <button
+            role="button"
+            class="neo-btn-square neo-btn-square-secondary neo-btn-square-secondary--info"
+            aria-current="true"
+            aria-label="Go to page: 1"
+          >
+            1
+          </button>
+        </li>
+        <li>
+          <button
+            role="button"
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+            aria-current="false"
+            aria-label="Go to page: 2"
+          >
+            2
+          </button>
+        </li>
+        <li>
+          <button
+            role="button"
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+            aria-current="false"
+            aria-label="Go to page: 3"
+          >
+            3
+          </button>
+        </li>
+        <li>
+          <button
+            role="button"
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+            aria-current="false"
+            aria-label="Go to page: 4"
+          >
+            4
+          </button>
+        </li><li>
+          <button
+            role="button"
+            class="neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info"
+            aria-current="false"
+            aria-label="Go to page: 5"
+          >
+            5
+          </button>
+        </li>
+      </ul>
+      <button
+        role="button"
+        class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-right"
+        aria-label="Go to next page"></button>
+    </nav>
+    <div class="neo-form-control">
+      <div class="neo-input-group neo-input-group--inline">
+        <label for="pageSize">Show:</label><div class="neo-select">
+          <select
+            id="pageSize"
+            name="size"
+            class="neo-icon-chevron-down ng-pristine ng-valid ng-touched"
+            aria-label="Results per page"
+          >
+            <option value="5"> 5</option>
+            <option value="10"> 10</option>
+            <option value="20"> 20</option>
+            <option value="30"> 30</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <h3>Other Pagination Examples</h3>
+
   <nav class="neo-pagination" role="navigation" aria-label="pagination">
     <button
       class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-left"

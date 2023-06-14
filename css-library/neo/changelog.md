@@ -17,6 +17,9 @@
 ### Bugs Report - List of bugs that have been updated
 
 - Tweaked Table Header Filters Cell focus style, tweaked size of Cell dropdown (NEO-1690)
+- Fixed issue where Select content was being cut-off in Native Select used in Pagination (NEO-1023)
+- Fixed misc. styling issues with Multiselect used in Pagination
+- Fixed RTL issue Multiselect with Chips
 
 ### Sunsetting - Removing Full Support
 
