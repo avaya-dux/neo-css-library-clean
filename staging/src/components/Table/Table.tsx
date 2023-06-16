@@ -132,7 +132,7 @@ export const TableWithSortHeaders = () => {
                 First Name<span className="neo-icon-chevron-down"></span>
                 <div className="neo-multiselect__content">
                   <ul>
-                    <li>A - Z</li>
+                    <li className="selected">A - Z</li>
                     <li>Z - A</li>
                     <li>Filter By</li>
                   </ul>
