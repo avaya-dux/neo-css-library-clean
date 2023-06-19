@@ -16,7 +16,7 @@
     "@babel/preset-env": "7.22.5",
     "axios": "1.4.0",
     "babel-jest": "29.5.0",
-    "dotenv": "16.1.4",
+    "dotenv": "16.3.1",
     "jest-fetch-mock": "3.0.3",
     "replace-in-file": "7.0.1",
     "shx": "0.3.4",
