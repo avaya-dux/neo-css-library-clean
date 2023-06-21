@@ -1,6 +1,6 @@
 # Changelog
 
-### 3.71.1
+### 3.70.2
 
 ### Breaking Changes - Needs Immediate Attention
 
@@ -29,7 +29,7 @@
 
 - N/A
 
-### 3.71.0
+### 3.70.1
 
 ### Breaking Changes - Needs Immediate Attention
 
