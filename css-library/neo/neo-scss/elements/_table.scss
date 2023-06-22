@@ -308,6 +308,11 @@
     }
     .expand {
       transition: transform 0.15s ease;
+      &:not(.expand--active) {
+        @include rtl-selector {
+          transform: rotate(-180deg);
+        }
+      }
     }
     .expand--active {
       transition: transform 0.15s ease;

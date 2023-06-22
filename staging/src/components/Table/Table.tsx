@@ -4,7 +4,6 @@ import clsx from "clsx";
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 
-
 // TO-DO: Fix a11y issues with Table checkbox labels
 
 import { useState } from "react";
@@ -18,6 +17,7 @@ export const Table = () => {
       <table className="neo-table">
         <thead>
           <tr>
+            <th>Expand</th>
             <th>Name</th>
             <th>Number</th>
             <th>Email</th>
@@ -28,6 +28,7 @@ export const Table = () => {
         </thead>
         <tbody>
           <tr>
+            <td></td>
             <td>Thomas</td>
             <td className="number">12345</td>
             <td>thomas@shelby.ltd</td>
@@ -47,6 +48,7 @@ export const Table = () => {
             </td>
           </tr>
           <tr>
+            <td></td>
             <td>Michael</td>
             <td className="number">12345</td>
             <td>michael@shelby.ltd</td>
@@ -66,6 +68,36 @@ export const Table = () => {
             </td>
           </tr>
           <tr>
+            <td>
+              <button
+                className="expand neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-chevron-right"
+                aria-label="expand Michael"
+                aria-expanded="false"
+              ></button>
+            </td>
+            <td>Gavin</td>
+            <td className="number">12345</td>
+            <td>gavin@shelby.ltd</td>
+            <td>
+              <figure
+                className="neo-avatar"
+                data-initials="GS"
+              ></figure>
+            </td>
+            <td>
+              <div
+                className="neo-chip neo-chip--default"
+                aria-label="Placeholder"
+              >
+                Placeholder
+              </div>
+            </td>
+            <td>
+              <span className="neo-icon-error"></span>
+            </td>
+          </tr>
+          <tr>
+            <td></td>
             <td>Polly</td>
             <td className="number">12345</td>
             <td>polly@shelby.ltd</td>
@@ -85,6 +117,7 @@ export const Table = () => {
             </td>
           </tr>
           <tr>
+            <td></td>
             <td className="active">Stephen</td>
             <td className="number">12345</td>
             <td>stephen@shelby.ltd</td>

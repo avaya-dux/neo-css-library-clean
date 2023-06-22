@@ -1,5 +1,31 @@
 # Changelog
 
+### 3.70.3
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
+### New Features - New features that have recently been added
+
+- N/A
+
+### Bugs Report - List of bugs that have been updated
+
+- Added missing RTL styles to expand icon in expandable Table rows (NEO-1736)
+
+### Sunsetting - Removing Full Support
+
+- N/A
+
+### Work In Progress - Future Updates
+
+- N/A
+
 ### 3.70.2
 
 ### Breaking Changes - Needs Immediate Attention
