@@ -1126,7 +1126,7 @@ $checkbox-border-width: $token-checkbox-border-width !default;
   --channel-dnd-color: #{$token-channel-icon-dnd-color};
   --channel-offline-color: #{$token-channel-icon-offline-color};
   --channel-icon-generic-color: #{$token-channel-icon-generic-color};
-  --channel-acw-color: #{token-color-blue-500};
+  --channel-acw-color: #{$token-color-blue-500};
 }
 
 $channel-acw-icon: "\f3f3" !default;
