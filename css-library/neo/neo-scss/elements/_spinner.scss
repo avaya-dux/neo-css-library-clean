@@ -25,15 +25,9 @@
   }
 }
 
-// @if map_has_key($config, border-width) {
-//   &::after {
-//     border-width: map_get($config, border-width);
-//   }
-// }
-
 @mixin spin-ring-sizes {
   @each $name, $config in $spinner-ring-sizes {
-    @if $name == 'default' {
+    @if $name == "default" {
       @include spinner-size($config);
     } @else {
       &--#{$name} {
@@ -65,7 +59,7 @@
 
 @mixin different-sizes {
   @each $name, $config in $spinner-ring-sizes {
-    @if $name == 'default' {
+    @if $name == "default" {
       @include spinner-size($config);
     } @else {
       &--#{$name} {
@@ -77,7 +71,7 @@
 
 @mixin different-icon-sizes {
   @each $name, $config in $spinner-ring-sizes {
-    @if $name == 'default' {
+    @if $name == "default" {
       @include spinner-size-icon($config);
     } @else {
       &--#{$name} {
@@ -96,20 +90,11 @@
   align-self: center;
 
   &::after {
-    // background: center center no-repeat;
-    // background-size: cover;
-    // border-color: currentColor currentColor currentColor transparent;
-    // border-radius: 50%;
-    // border-style: solid;
-    // box-sizing: border-box;
-    font-family: 'updated-neo-icons';
+    font-family: "updated-neo-icons";
     content: $spinner-icon;
     display: inline-block;
     vertical-align: middle;
-    // height: 100%;
-    // margin: auto;
-    // width: 100%;
-    // @include position(absolute, 0, 0, 0, 0);
+    @include spinner-animation;
   }
 
   .neo-btn > &,
@@ -123,17 +108,9 @@
         right: initial;
       }
     }
-
-    // @include spinner-size(
-    //   (
-    //     size: $spinner-button-size,
-    //   )
-    // );
   }
 
-  @include spinner-animation;
   @include different-icon-sizes;
-  // @include different-sizes;
 }
 
 .neo-spinner {

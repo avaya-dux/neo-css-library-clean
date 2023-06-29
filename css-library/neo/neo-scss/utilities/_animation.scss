@@ -29,17 +29,10 @@
 // *Spinner (../components/_spinner.scss)
 
 @keyframes spinner-animation {
-  0% {
-    animation-timing-function: cubic-bezier($spinner-timing-0);
-    transform: rotate(0);
+  from {
+    transform: rotate(0deg);
   }
-
-  50% {
-    animation-timing-function: cubic-bezier($spinner-timing-50);
-    transform: rotate(180deg);
-  }
-
-  100% {
+  to {
     transform: rotate(360deg);
   }
 }

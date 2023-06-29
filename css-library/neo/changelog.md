@@ -18,6 +18,7 @@
 
 - Added missing RTL styles to expand icon in expandable Table rows (NEO-1736)
 - Fixed syntax issue in color variable for ACW state (NEO-1747)
+- Tweaked behavior of Spinner animation to avoid shifting on rotation (NEO-1002)
 
 ### Sunsetting - Removing Full Support
 
