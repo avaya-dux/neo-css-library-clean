@@ -12,10 +12,10 @@
   },
   "license": "UNLICENSED",
   "devDependencies": {
-    "@babel/core": "7.22.5",
-    "@babel/preset-env": "7.22.5",
+    "@babel/core": "7.22.8",
+    "@babel/preset-env": "7.22.7",
     "axios": "1.4.0",
-    "babel-jest": "29.5.0",
+    "babel-jest": "29.6.1",
     "dotenv": "16.3.1",
     "jest-fetch-mock": "3.0.3",
     "replace-in-file": "7.0.1",
