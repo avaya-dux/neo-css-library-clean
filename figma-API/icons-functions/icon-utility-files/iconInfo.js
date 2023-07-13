@@ -2862,4 +2862,52 @@
     category: "action",
     animated: false,
   },
+  {
+    name: "axp-alerting",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "axp-connected",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "axp-inbound",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "axp-missed",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "axp-not-ready",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "axp-outbound",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "axp-pending",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "axp-ready",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
 ];

@@ -546,5 +546,13 @@ const unicodes = {
   'zoom-default': 62484,
   'call-sms': 62485,
   'table-insert': 62486,
-  'table-delete': 62487
+  'table-delete': 62487,
+  'axp-alerting': 62488,
+  'axp-connected': 62489,
+  'axp-inbound': 62490,
+  'axp-missed': 62491,
+  'axp-not-ready': 62492,
+  'axp-outbound': 62493,
+  'axp-pending': 62494,
+  'axp-ready': 62495
 }; module.exports.unicodes = unicodes
