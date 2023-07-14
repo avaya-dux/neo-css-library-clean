@@ -2910,4 +2910,10 @@
     category: "communication",
     animated: false,
   },
+  {
+    name: "axp",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
 ];

@@ -12,7 +12,7 @@
 
 ### New Features - New features that have recently been added
 
-- Added "axp-alerting", "axp-connected", "axp-inbound", "axp-missed", "axp-not-ready", "axp-outbound", "axp-pending", "axp-ready" icons (NEO-1749)
+- Added "axp", "axp-alerting", "axp-connected", "axp-inbound", "axp-missed", "axp-not-ready", "axp-outbound", "axp-pending", "axp-ready" icons (NEO-1749)
 
 ### Bugs Report - List of bugs that have been updated
 

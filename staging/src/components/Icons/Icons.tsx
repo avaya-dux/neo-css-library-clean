@@ -57,6 +57,7 @@ from the "@avaya/neo-icons/neo-icon-info" file
 */
 
   const newIcons = [
+    "axp",
     "axp-alerting",
     "axp-connected",
     "axp-inbound",
@@ -80,6 +81,7 @@ from the "@avaya/neo-icons/neo-icon-info" file
         {newIcons.map((icon, index) => (
           <>
             <div
+              key={index}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -88,7 +90,6 @@ from the "@avaya/neo-icons/neo-icon-info" file
               }}
             >
               <span
-                key={index}
                 className={`neo-icon-${icon}`}
                 style={{ fontSize: "28px" }}
               ></span>

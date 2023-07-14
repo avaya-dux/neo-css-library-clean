@@ -554,5 +554,6 @@ const unicodes = {
   'axp-not-ready': 62492,
   'axp-outbound': 62493,
   'axp-pending': 62494,
-  'axp-ready': 62495
+  'axp-ready': 62495,
+  axp: 62496
 }; module.exports.unicodes = unicodes
