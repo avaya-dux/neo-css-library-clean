@@ -51,54 +51,15 @@ export const IconComponent = () => {
 Discovered that, because this page now pulls the icons directly from the neo-icons NPM package, it is difficult to demo new icons that require
 approval before being published.
 
-So, I've added new icons to be approved here temporarily. Once they are published, this section should be removed and the icons pulled directly
-from the "@avaya/neo-icons/neo-icon-info" file
+So, new icons should be added here temporarily. Once they are published, the section should be removed and the icons pulled directly
+from the "@avaya/neo-icons/neo-icon-info" file.
+
+TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-  const newIcons = [
-    "axp",
-    "axp-alerting",
-    "axp-connected",
-    "axp-inbound",
-    "axp-missed",
-    "axp-not-ready",
-    "axp-outbound",
-    "axp-pending",
-    "axp-ready",
-  ];
-
   return (
     <>
-      <h3>New Icons</h3>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around",
-          margin: "2rem 0;",
-        }}
-      >
-        {newIcons.map((icon, index) => (
-          <>
-            <div
-              key={index}
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
-              <span
-                className={`neo-icon-${icon}`}
-                style={{ fontSize: "28px" }}
-              ></span>
-              <p>{icon}</p>
-            </div>
-          </>
-        ))}
-      </div>
-
       {iconCategories.map((category, index) => {
         const iconsToRender = (icons as Icon[]).filter(
           (icon) => icon.category === category,

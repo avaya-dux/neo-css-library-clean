@@ -132,10 +132,10 @@
     eslint-config-airbnb-base "^14.2.1"
     eslint-plugin-jest "^24.1.3"
 
-"@avaya/neo-icons@1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.0.5.tgz#3310999f74c796bb332d2f5b8c0b3d2c026f24af"
-  integrity sha512-m0whlwxzt+enM1HPy9gO3DfyXiwOsZ4wuimSa5sY/1nVoaPMqdZQVkBQreDcj8youkC3C0AjA9X9LBSjZzF29Q==
+"@avaya/neo-icons@1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.1.0.tgz#d4ce5ab011d9016a34a7a6ec1c17908e5a0f29f4"
+  integrity sha512-QzGa0WkuB69HkFqTwe+A1XjPznGvCxsCaR/bINpM+niUDljgzhqD0D8vwheT0LFoYekRsnO9Shjnq+ZU7kOPYA==
 
 "@babel/code-frame@7.12.11":
   version "7.12.11"
