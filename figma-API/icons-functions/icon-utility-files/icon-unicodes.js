@@ -555,5 +555,17 @@ const unicodes = {
   'axp-outbound': 62493,
   'axp-pending': 62494,
   'axp-ready': 62495,
-  axp: 62496
+  axp: 62496,
+  'loop-single': 62497,
+  'loop-multiple': 62498,
+  'variable-assign': 62499,
+  'sub-accounts-select': 62500,
+  'sub-accounts-switch': 62501,
+  'customer-journey-retrieve-data': 62502,
+  'customer-journey-store-data': 62503,
+  'label-go': 62504,
+  'broadcast-play': 62505,
+  'broadcast-stop': 62506,
+  'callback-offer': 62507,
+  'queue-removed': 62508
 }; module.exports.unicodes = unicodes

@@ -93,7 +93,7 @@ const generateIcons = async () => {
 
         await fs.writeFile(
           CSSFileDir,
-          prettier.format(iconsCSSFile.toString(), {
+          await prettier.format(iconsCSSFile.toString(), {
             ...prettierConfig,
             filepath: CSSFileDir,
           })
@@ -102,7 +102,7 @@ const generateIcons = async () => {
         const iconsScssFile = "../../css-library/neo/neo-scss/icons.scss";
         await fs.writeFile(
           path.resolve(__dirname, iconsScssFile),
-          prettier.format(iconsCSSFile.toString(), {
+          await prettier.format(iconsCSSFile.toString(), {
             ...prettierConfig,
             filepath: path.resolve(__dirname, iconsScssFile),
           })

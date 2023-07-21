@@ -58,8 +58,51 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
+  const newIcons = [
+    "loop-single",
+    "loop-multiple",
+    "variable-assign",
+    "sub-accounts-select",
+    "sub-accounts-switch",
+    "customer-journey-retrieve-data",
+    "customer-journey-store-data",
+    "label-go",
+    "broadcast-play",
+    "broadcast-stop",
+    "callback-offer",
+    "queue-removed",
+  ];
+
   return (
     <>
+      <h3>New Icons</h3>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-around",
+          margin: "2rem 0;",
+        }}
+      >
+        {newIcons.map((icon, index) => (
+          <>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <span
+                key={index}
+                className={`neo-icon-${icon}`}
+                style={{ fontSize: "28px" }}
+              ></span>
+              <p>{icon}</p>
+            </div>
+          </>
+        ))}
+      </div>
       {iconCategories.map((category, index) => {
         const iconsToRender = (icons as Icon[]).filter(
           (icon) => icon.category === category,
