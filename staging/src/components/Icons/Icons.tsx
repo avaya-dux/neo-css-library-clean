@@ -59,18 +59,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 */
 
   const newIcons = [
-    "loop-single",
-    "loop-multiple",
-    "variable-assign",
-    "sub-accounts-select",
-    "sub-accounts-switch",
-    "customer-journey-retrieve-data",
-    "customer-journey-store-data",
-    "label-go",
-    "broadcast-play",
-    "broadcast-stop",
-    "callback-offer",
-    "queue-removed",
+    "missed"
   ];
 
   return (

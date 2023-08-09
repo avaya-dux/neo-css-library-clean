@@ -567,5 +567,6 @@ const unicodes = {
   'broadcast-play': 62505,
   'broadcast-stop': 62506,
   'callback-offer': 62507,
-  'queue-removed': 62508
+  'queue-removed': 62508,
+  missed: 62509
 }; module.exports.unicodes = unicodes
