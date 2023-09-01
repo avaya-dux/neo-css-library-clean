@@ -118,23 +118,28 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 }
 
 :root .neo-light {
+  --notification-font-color: #{$token-color-base-900};
+  --notification-timestamp-color: #{$token-color-base-600};
+  --notification-counter-color: #{$token-color-base-900};
+  --notification-button-color: #{$token-color-base-1000};
   --notification-elevation-color: #{$token-notification-elevation-color};
-  --notification-success-color: #{$token-notification-success-color};
-  --notification-success-border-color: #{$token-notification-success-color-border};
-  --notification-success-icon-color: #{$token-notification-success-icon-color};
-  --notification-warning-color: #{$token-notification-warning-color};
-  --notification-warning-border-color: #{$token-notification-warning-color-border};
-  --notification-warning-icon-color: #{$token-notification-warning-icon-color};
-  --notification-alert-color: #{$token-notification-alert-color};
-  --notification-alert-border-color: #{$token-notification-alert-color-border};
-  --notification-alert-icon-color: #{$token-notification-alert-icon-color};
-  --notification-info-color: #{$token-notification-info-color};
-  --notification-info-border-color: #{$token-notification-info-color-border};
-  --notification-info-icon-color: #{$token-notification-info-icon-color};
-  --notification-event-color: #{$token-notification-event-color};
-  --notification-event-border-color: #{$token-notification-event-color-border};
-  --notification-event-icon-color: #{$token-notification-event-icon-color};
+  --notification-success-color: #{$notification-success-color-light};
+  --notification-success-border-color: #{$token-color-green-500};
+  --notification-success-icon-color: #{$token-color-green-600};
+  --notification-warning-color: #{$notification-warning-color-light};
+  --notification-warning-border-color: #{$token-color-orange-500};
+  --notification-warning-icon-color: #{$token-color-orange-600};
+  --notification-alert-color: #{$notification-alert-color-light};
+  --notification-alert-border-color: #{$token-color-red-500};
+  --notification-alert-icon-color: #{$token-color-red-600};
+  --notification-info-color: #{$notification-info-color-light};
+  --notification-info-border-color: #{$token-color-blue-500};
+  --notification-info-icon-color: #{$token-color-blue-600};
+  --notification-event-color: #{$notification-event-color-light};
+  --notification-event-border-color: #{$token-color-base-500};
+  --notification-event-icon-color: #{$token-color-base-600};
 }
+
 :root .neo-light {
   --clear-close-color: #{$token-color-base-500};
   --clear-close-hover-color: #{$token-color-base-1000};

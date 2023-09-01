@@ -5,97 +5,454 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 <NeoLayout title="Notifications">
   <h2>Notifications</h2>
 
-  <h3>Normal Example w/ "elevation" class (box-shadow)</h3>
   <section>
+    <h3>Inline Notifications</h3>
     <div
+      class="neo-notification neo-notification--info"
       role="alert"
-      class="neo-notification neo-notification--info neo-notification__elevated"
       aria-live="polite"
     >
-      <div class="neo-notification__icon" />
-
-      <div class="neo-notification__message">
-        <div class="neo-notification__title">
-          Informational Toast/Notification
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 10:42 AM
+          </p>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Info
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          This is some info.
         </div>
-
-        <div class="neo-notification__description">
-          This component should be used to give the user "live" feedback. Eg,
-          "Form is being submitted"
+      </div><div class="neo-notification__actions"></div>
+    </div>
+    <div
+      class="neo-notification neo-notification--success"
+      role="alert"
+      aria-live="polite"
+    >
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 10:42 AM
+          </p>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Success
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          This is to notify of a success.
+        </div>
+      </div><div class="neo-notification__actions"></div>
+    </div>
+    <div
+      class="neo-notification neo-notification--alert"
+      role="alert"
+      aria-live="polite"
+    >
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 10:42 AM
+          </p>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Alert
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          This is to alert you to an error.
+        </div>
+      </div><div class="neo-notification__actions"></div>
+    </div>
+    <div
+      class="neo-notification neo-notification--warning"
+      role="alert"
+      aria-live="polite"
+    >
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 10:42 AM
+          </p>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Warning
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          This is to warning you of an issue.
+        </div>
+      </div><div class="neo-notification__actions"></div>
+    </div>
+  </section>
+  <section>
+    <h3>Inline Notification w/ Actions</h3>
+    <div
+      class="neo-notification neo-notification--info"
+      role="alert"
+      aria-live="polite"
+    >
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 10:42 AM
+          </p>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Info
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          This is some info.
         </div>
       </div>
-
-      <div class="neo-notification__options">
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info">
-          Secondary
-        </button>
-
-        <button class="neo-btn neo-btn-primary neo-btn-primary--info">
-          Primary
-        </button>
+      <div class="neo-notification__actions">
+        <div class="neo-notification__counter" aria-label="00:00">00:00</div>
+        <div class="neo-notification__options">
+          <button
+            class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
+            data-badge="">Edit</button
+          ><button
+            class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--info neo-notification__button"
+            data-badge="">Info</button
+          >
+        </div><div class="neo-notification__close">
+          <button
+            aria-label="Click this button will close this notification"
+            class="neo-icon-end"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section>
+    <h3>Non-inline Notification</h3>
+    <div
+      class="neo-notification neo-notification--alert"
+      role="alert"
+      aria-live="polite"
+    >
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 01:14 PM
+          </p><div
+            class="neo-tooltip neo-tooltip--down-right neo-tooltip--onhover"
+          >
+            <span
+              class="neo-badge"
+              data-badge="4"
+              aria-label="Badge representing number of times notification has occured:  4"
+              role="status"
+              aria-describedby=":r0:"></span><div
+              id=":r0:"
+              role="tooltip"
+              class="neo-tooltip__content neo-tooltip__content--multiline"
+            ><div class="neo-arrow"></div>Badge representing number of times notification has occured: 4</div>
+          </div>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Placeholder text for the main header. By default the header text will
+          be two lines of copy before it is truncated. Placeholder text for the
+          main header. By default the header text will be two lines of copy
+          before it is truncated.
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          Body copy placeholder, single line of text before it is truncated.
+          Body copy placeholder, single line of text before it is truncated.
+          Body copy placeholder, single line of text before it is truncated.
+        </div><div class="neo-notification__actions--multiline">
+          <div class="neo-notification__counter" aria-label="00:00">00:00</div>
+          <div class="neo-notification__options">
+            <button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--alert neo-notification__button"
+              data-badge="">Edit</button
+            ><button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--alert neo-notification__button"
+              data-badge="">Alert</button
+            >
+          </div>
+        </div>
+      </div><div class="neo-notification__actions">
+        <div class="neo-notification__close">
+          <button
+            aria-label="Click this button will close this notification"
+            class="neo-icon-end"></button>
+        </div>
       </div>
     </div>
   </section>
 
-  <h3>Forced <code>dir="ltr"</code></h3>
-  <section dir="ltr">
+  <section>
+    <h3>Non-inline Notification with Truncated Text Button Displayed</h3>
     <div
+      class="neo-notification neo-notification--alert"
       role="alert"
-      class="neo-notification neo-notification--info neo-notification__elevated"
       aria-live="polite"
     >
-      <div class="neo-notification__icon" />
-
-      <div class="neo-notification__message">
-        <div class="neo-notification__title">
-          LTR notification
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 01:14 PM
+          </p>
+          <div class="neo-tooltip neo-tooltip--down-right neo-tooltip--onhover">
+            <span
+              class="neo-badge"
+              data-badge="4"
+              aria-label="Badge representing number of times notification has occured:  4"
+              role="status"
+              aria-describedby=":r0:"></span><div
+              id=":r0:"
+              role="tooltip"
+              class="neo-tooltip__content neo-tooltip__content--multiline"
+            ><div class="neo-arrow"></div>Badge representing number of times notification has occured: 4</div>
+          </div>
+          <button
+            aria-label="Expand/collapse"
+            class="neo-btn neo-btn-square neo-btn--default neo-btn-tertiary neo-btn-tertiary--default neo-btn-square-tertiary--default neo-notification__button"
+            data-badge=""
+            ><span class="neo-icon-chevron-down" style="font-size: 20px;"
+            ></span></button
+          >
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Placeholder text for the main header. By default the header text will
+          be two lines of copy before it is truncated. Placeholder text for the
+          main header. By default the header text will be two lines of copy
+          before it is truncated.
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          Body copy placeholder, single line of text before it is truncated.
+          Body copy placeholder, single line of text before it is truncated.
+          Body copy placeholder, single line of text before it is truncated.
+        </div><div class="neo-notification__actions--multiline">
+          <div class="neo-notification__counter" aria-label="00:00">00:00</div>
+          <div class="neo-notification__options">
+            <button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--alert neo-notification__button"
+              data-badge="">Edit</button
+            ><button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--alert neo-notification__button"
+              data-badge="">Alert</button
+            >
+          </div>
         </div>
-
-        <div class="neo-notification__description">
-          Lorem ipsum dolor sit amet
+      </div><div class="neo-notification__actions">
+        <div class="neo-notification__close">
+          <button
+            aria-label="Click this button will close this notification"
+            class="neo-icon-end"></button>
         </div>
-      </div>
-
-      <div class="neo-notification__options">
-        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info">
-          Secondary
-        </button>
-
-        <button class="neo-btn neo-btn-primary neo-btn-primary--info">
-          Primary
-        </button>
       </div>
     </div>
   </section>
-
-  <h3>Forced <code>dir="rtl"</code></h3>
-  <section dir="rtl">
+  <section>
+    <h3>Elevated Notifications</h3>
     <div
-      role="alert"
       class="neo-notification neo-notification--info neo-notification__elevated"
+      role="alert"
       aria-live="polite"
     >
-      <div class="neo-notification__icon" />
-
-      <div class="neo-notification__message">
-        <div class="neo-notification__title">
-          LTR notification
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 10:42 AM
+          </p>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Info
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          This is some info.
         </div>
-
-        <div class="neo-notification__description">
-          Lorem ipsum dolor sit amet
+      </div><div class="neo-notification__actions"></div>
+    </div>
+    <div
+      class="neo-notification neo-notification--alert neo-notification__elevated"
+      role="alert"
+      aria-live="polite"
+    >
+      <div role="img" class="neo-notification__icon" aria-label="icon">
+      </div><div class="neo-notification__message">
+        <div class="neo-notification__message__wrapper">
+          <p class="neo-notification__timestamp neo-body-small">
+            08/28/2023, 01:14 PM
+          </p><div
+            class="neo-tooltip neo-tooltip--down-right neo-tooltip--onhover"
+          >
+            <span
+              class="neo-badge"
+              data-badge="4"
+              aria-label="Badge representing number of times notification has occured:  4"
+              role="status"
+              aria-describedby=":r0:"></span><div
+              id=":r0:"
+              role="tooltip"
+              class="neo-tooltip__content neo-tooltip__content--multiline"
+            ><div class="neo-arrow"></div>Badge representing number of times notification has occured: 4</div>
+          </div>
+        </div><div
+          class="neo-notification__title neo-notification__text--truncated neo-notification__title--truncated"
+        >
+          Placeholder text for the main header. By default the header text will
+          be two lines of copy before it is truncated. Placeholder text for the
+          main header. By default the header text will be two lines of copy
+          before it is truncated.
+        </div><div
+          class="neo-notification__description neo-notification__text--truncated neo-notification__description--truncated"
+        >
+          Body copy placeholder, single line of text before it is truncated.
+          Body copy placeholder, single line of text before it is truncated.
+          Body copy placeholder, single line of text before it is truncated.
+        </div><div class="neo-notification__actions--multiline">
+          <div class="neo-notification__counter" aria-label="00:00">00:00</div>
+          <div class="neo-notification__options">
+            <button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--alert neo-notification__button"
+              data-badge="">Edit</button
+            ><button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--alert neo-notification__button"
+              data-badge="">Alert</button
+            >
+          </div>
+        </div>
+      </div><div class="neo-notification__actions">
+        <div class="neo-notification__close">
+          <button
+            aria-label="Click this button will close this notification"
+            class="neo-icon-end"></button>
         </div>
       </div>
-
+    </div>
+  </section>
+  <section>
+    <h3>Legacy Notifications</h3>
+    <div
+      class="neo-notification neo-notification--success"
+      role="alert"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Success</div>
+        <div class="neo-notification__description">You are successful.</div>
+      </div>
+      <button aria-label="close notification" class="neo-icon-end"></button>
+    </div>
+    <div class="neo-notification neo-notification--warning" role="alert">
+      <div class="neo-notification__icon"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Warning</div>
+        <div class="neo-notification__description">This is a warning.</div>
+      </div>
+      <button aria-label="close notification" class="neo-icon-end"></button>
+    </div>
+    <div class="neo-notification neo-notification--alert" role="alert">
+      <div class="neo-notification__icon"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Alert</div>
+        <div class="neo-notification__description">This is an alert.</div>
+      </div>
+      <button aria-label="close notification" class="neo-icon-end"></button>
+    </div>
+    <div
+      class="neo-notification neo-notification--info"
+      role="alert"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Info</div>
+        <div class="neo-notification__description">This is some info.</div>
+      </div>
+      <button aria-label="close notification" class="neo-icon-end"></button>
+    </div>
+    <div
+      class="neo-notification neo-notification--event neo-notification"
+      role="alert"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon neo-icon-copy"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Event</div>
+        <div class="neo-notification__description">This is an event.</div>
+      </div>
+      <button aria-label="close notification" class="neo-icon-end"></button>
+    </div>
+    <div
+      class="neo-notification neo-notification--event"
+      role="alert"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon neo-icon-copy"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Header Text</div>
+        <div class="neo-notification__description">Description of message</div>
+      </div>
+      <button aria-label="close notification" class="neo-icon-end"></button>
+    </div>
+    <div
+      class="neo-notification neo-notification--event"
+      role="alert"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon neo-icon-copy"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Header Text</div>
+        <div class="neo-notification__description">Description of message</div>
+      </div>
+      <div class="neo-notification__counter">00:00</div>
+    </div>
+    <div
+      class="neo-notification neo-notification--event"
+      role="alert"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon neo-icon-copy"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__title">Header Text</div>
+        <div class="neo-notification__description">Description of message</div>
+      </div>
       <div class="neo-notification__options">
         <button class="neo-btn neo-btn-secondary neo-btn-secondary--info">
-          Secondary
+          Button
         </button>
-
-        <button class="neo-btn neo-btn-primary neo-btn-primary--info">
-          Primary
+        <button class="neo-btn neo-btn-secondary neo-btn-secondary--info">
+          Button
         </button>
       </div>
+    </div>
+    <div
+      class="neo-notification neo-notification--event"
+      role="alert"
+      aria-live="polite"
+    >
+      <div class="neo-notification__icon neo-icon-copy"></div>
+      <div class="neo-notification__message">
+        <div class="neo-notification__description">Description of message</div>
+      </div>
+      <button aria-label="close notification" class="neo-icon-end"></button>
     </div>
   </section>
 </NeoLayout>

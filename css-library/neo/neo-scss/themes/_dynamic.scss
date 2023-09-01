@@ -1,3 +1,5 @@
+@use "sass:color";
+
 @media (prefers-color-scheme: light) {
   :root .neo-dynamic {
     --icon-color: #{$token-color-base-1000};
@@ -260,44 +262,64 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --channel-acw-color: #{$token-color-blue-500};
   }
 }
+
+$notification-success-color-light: #F1FBF1;
+$notification-success-color-dark: #{$token-color-green-900};
+$notification-info-color-light: #F3F9FD;
+$notification-info-color-dark: #{$token-color-blue-900};
+$notification-alert-color-light: #FEF6F6;
+$notification-alert-color-dark: #{$token-color-red-900};
+$notification-warning-color-light: #FFFBF5;
+$notification-warning-color-dark: #{$token-color-orange-900};
+$notification-event-color-light: #F8F8F8;
+$notification-event-color-dark: #{$token-color-base-900};
+
 @media (prefers-color-scheme: dark) {
   :root .neo-dynamic {
+    --notification-font-color: #{$token-color-base-0};
+    --notification-timestamp-color: #{$token-color-base-200};
+    --notification-counter-color: #{$token-color-base-0};
+    --notification-button-color: #{$token-color-base-100};
     --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
-    --notification-success-color: #{$token-color-green-800};
-    --notification-success-icon-color: #{$token-color-green-200};
-    --notification-success-border-color: #{$token-color-green-600};
-    --notification-warning-color: #{$token-color-orange-800};
-    --notification-warning-icon-color: #{$token-color-orange-200};
-    --notification-warning-border-color: #{$token-color-orange-600};
-    --notification-alert-color: #{$token-color-red-800};
-    --notification-alert-icon-color: #{$token-color-red-200};
-    --notification-alert-border-color: #{$token-color-red-600};
-    --notification-info-color: #{$token-color-blue-800};
-    --notification-info-icon-color: #{$token-color-blue-200};
-    --notification-info-border-color: #{$token-color-blue-600};
-    --notification-event-color: #{$token-color-base-800};
+    --notification-success-color: #{$notification-success-color-dark};
+    --notification-success-icon-color: #{$token-color-green-300};
+    --notification-success-border-color: #{$token-color-green-400};
+    --notification-warning-color: #{$notification-warning-color-dark};
+    --notification-warning-icon-color: #{$token-color-orange-300};
+    --notification-warning-border-color: #{$token-color-orange-400};
+    --notification-alert-color: #{$notification-alert-color-dark};
+    --notification-alert-icon-color: #{$token-color-red-300};
+    --notification-alert-border-color: #{$token-color-red-400};
+    --notification-info-color: #{$notification-info-color-dark};
+    --notification-info-icon-color: #{$token-color-blue-300};
+    --notification-info-border-color: #{$token-color-blue-400};
+    --notification-event-color: #{$notification-event-color-dark};
     --notification-event-icon-color: #{$token-color-base-200};
-    --notification-event-border-color: #{$token-color-base-600};
+    --notification-event-border-color: #{$token-color-base-200};
   }
 }
 @media (prefers-color-scheme: light) {
   :root .neo-dynamic {
+    --notification-font-color: #{$token-color-base-900};
+    --notification-timestamp-color: #{$token-color-base-600};
+    --notification-counter-color: #{$token-color-base-900};
+    --notification-button-color: #{$token-color-base-1000};
     --notification-elevation-color: #{$token-notification-elevation-color};
-    --notification-success-color: #{$token-notification-success-color};
-    --notification-success-border-color: #{$token-notification-success-color-border};
-    --notification-success-icon-color: #{$token-notification-success-icon-color};
-    --notification-warning-color: #{$token-notification-warning-color};
-    --notification-warning-border-color: #{$token-notification-warning-color-border};
-    --notification-warning-icon-color: #{$token-notification-warning-icon-color};
-    --notification-alert-color: #{$token-notification-alert-color};
-    --notification-alert-border-color: #{$token-notification-alert-color-border};
-    --notification-alert-icon-color: #{$token-notification-alert-icon-color};
-    --notification-info-color: #{$token-notification-info-color};
-    --notification-info-border-color: #{$token-notification-info-color-border};
-    --notification-info-icon-color: #{$token-notification-info-icon-color};
-    --notification-event-color: #{$token-notification-event-color};
-    --notification-event-border-color: #{$token-notification-event-color-border};
-    --notification-event-icon-color: #{$token-notification-event-icon-color};
+    --notification-success-color: #{$notification-success-color-light};
+    --notification-success-border-color: #{$token-color-green-500};
+    --notification-success-icon-color: #{$token-color-green-600};
+    --notification-warning-color: #{$notification-warning-color-light};
+    --notification-warning-border-color: #{$token-color-orange-500};
+    --notification-warning-icon-color: #{$token-color-orange-600};
+    --notification-alert-color: #{$notification-alert-color-light};
+    --notification-alert-border-color: #{$token-color-red-500};
+    --notification-alert-icon-color: #{$token-color-red-600};
+    --notification-info-color: #{$notification-info-color-light};
+    --notification-info-border-color: #{$token-color-blue-500};
+    --notification-info-icon-color: #{$token-color-blue-600};
+    --notification-event-color: #{$notification-event-color-light};
+    --notification-event-border-color: #{$token-color-base-500};
+    --notification-event-icon-color: #{$token-color-base-600};
   }
 }
 @media (prefers-color-scheme: dark) {

@@ -38,6 +38,7 @@
 ### New Features - New features that have recently been added
 
 - Added "missed" icon (NEO-1775)
+- Re-worked Notification Component styles (NEO-1839)
 
 ### Bugs Report - List of bugs that have been updated
 

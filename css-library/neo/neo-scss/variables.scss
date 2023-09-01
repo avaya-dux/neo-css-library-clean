@@ -1216,98 +1216,34 @@ $channel-icon-large-size: $token-channel-icon-large-size !default;
 
 // Notification color variables
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
-//     --notification-success-color: #{$token-color-green-800};
-//     --notification-success-icon-color: #{$token-color-green-200};
-//     --notification-warning-color: #{$token-color-orange-800};
-//     --notification-warning-icon-color: #{$token-color-orange-200};
-//     --notification-alert-color: #{$token-color-red-800};
-//     --notification-alert-icon-color: #{$token-color-red-200};
-//     --notification-info-color: #{$token-color-blue-800};
-//     --notification-info-icon-color: #{$token-color-blue-200};
-//     --notification-event-color: #{$token-color-base-800};
-//     --notification-event-icon-color: #{$token-color-base-200};
-//   }
-//   .neo-dark {
-//     --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
-//     --notification-success-color: #{$token-color-green-800};
-//     --notification-success-icon-color: #{$token-color-green-200};
-//     --notification-warning-color: #{$token-color-orange-800};
-//     --notification-warning-icon-color: #{$token-color-orange-200};
-//     --notification-alert-color: #{$token-color-red-800};
-//     --notification-alert-icon-color: #{$token-color-red-200};
-//     --notification-info-color: #{$token-color-blue-800};
-//     --notification-info-icon-color: #{$token-color-blue-200};
-//     --notification-event-color: #{$token-color-base-800};
-//     --notification-event-icon-color: #{$token-color-base-200};
-//   }
-//   .neo-light {
-//     --notification-elevation-color: #{$token-notification-elevation-color};
-//     --notification-success-color: #{$token-notification-success-color};
-//     --notification-success-icon-color: #{$token-notification-success-icon-color};
-//     --notification-warning-color: #{$token-notification-warning-color};
-//     --notification-warning-icon-color: #{$token-notification-warning-icon-color};
-//     --notification-alert-color: #{$token-notification-alert-color};
-//     --notification-alert-icon-color: #{$token-notification-alert-icon-color};
-//     --notification-info-color: #{$token-notification-info-color};
-//     --notification-info-icon-color: #{$token-notification-info-icon-color};
-//     --notification-event-color: #{$token-notification-event-color};
-//     --notification-event-icon-color: #{$token-notification-event-icon-color};
-//   }
-// }
-// @media (prefers-color-scheme: light) {
 :root {
+  --notification-font-color: #{$token-color-base-900};
+  --notification-timestamp-color: #{$token-color-base-600};
+  --notification-counter-color: #{$token-color-base-900};
+  --notification-button-color: #{$token-color-base-1000};
   --notification-elevation-color: #{$token-notification-elevation-color};
-  --notification-success-color: #{$token-notification-success-color};
-  --notification-success-border-color: #{$token-notification-success-color-border};
-  --notification-success-icon-color: #{$token-notification-success-icon-color};
-  --notification-warning-color: #{$token-notification-warning-color};
-  --notification-warning-border-color: #{$token-notification-warning-color-border};
-  --notification-warning-icon-color: #{$token-notification-warning-icon-color};
-  --notification-alert-color: #{$token-notification-alert-color};
-  --notification-alert-border-color: #{$token-notification-alert-color-border};
-  --notification-alert-icon-color: #{$token-notification-alert-icon-color};
-  --notification-info-color: #{$token-notification-info-color};
-  --notification-info-border-color: #{$token-notification-info-color-border};
-  --notification-info-icon-color: #{$token-notification-info-icon-color};
-  --notification-event-color: #{$token-notification-event-color};
-  --notification-event-border-color: #{$token-notification-event-color-border};
-  --notification-event-icon-color: #{$token-notification-event-icon-color};
+  --notification-success-color: #{$notification-success-color-light};
+  --notification-success-border-color: #{$token-color-green-500};
+  --notification-success-icon-color: #{$token-color-green-600};
+  --notification-warning-color: #{$notification-warning-color-light};
+  --notification-warning-border-color: #{$token-color-orange-500};
+  --notification-warning-icon-color: #{$token-color-orange-600};
+  --notification-alert-color: #{$notification-alert-color-light};
+  --notification-alert-border-color: #{$token-color-red-500};
+  --notification-alert-icon-color: #{$token-color-red-600};
+  --notification-info-color: #{$notification-info-color-light};
+  --notification-info-border-color: #{$token-color-blue-500};
+  --notification-info-icon-color: #{$token-color-blue-600};
+  --notification-event-color: #{$notification-event-color-light};
+  --notification-event-border-color: #{$token-color-base-500};
+  --notification-event-icon-color: #{$token-color-base-600};
 }
-//   .neo-light {
-//     --notification-elevation-color: #{$token-notification-elevation-color};
-//     --notification-success-color: #{$token-notification-success-color};
-//     --notification-success-icon-color: #{$token-notification-success-icon-color};
-//     --notification-warning-color: #{$token-notification-warning-color};
-//     --notification-warning-icon-color: #{$token-notification-warning-icon-color};
-//     --notification-alert-color: #{$token-notification-alert-color};
-//     --notification-alert-icon-color: #{$token-notification-alert-icon-color};
-//     --notification-info-color: #{$token-notification-info-color};
-//     --notification-info-icon-color: #{$token-notification-info-icon-color};
-//     --notification-event-color: #{$token-notification-event-color};
-//     --notification-event-icon-color: #{$token-notification-event-icon-color};
-//   }
-//   .neo-dark {
-//     --notification-elevation-color: #{$token-shadows-elevationdark-300-color};
-//     --notification-success-color: #{$token-color-green-800};
-//     --notification-success-icon-color: #{$token-color-green-200};
-//     --notification-warning-color: #{$token-color-orange-800};
-//     --notification-warning-icon-color: #{$token-color-orange-200};
-//     --notification-alert-color: #{$token-color-red-800};
-//     --notification-alert-icon-color: #{$token-color-red-200};
-//     --notification-info-color: #{$token-color-blue-800};
-//     --notification-info-icon-color: #{$token-color-blue-200};
-//     --notification-event-color: #{$token-color-base-800};
-//     --notification-event-icon-color: #{$token-color-base-200};
-//   }
-// }
+
 
 $notification-option-spacing: $token-notification-option-spacing !default;
 $notification-text-spacing: $token-notification-text-spacing-y !default;
 $notification-icon-offset: $token-notification-icon-offset !default;
-$notification-font-color: $token-notification-font-color !default;
+$notification-font-color: var(--notification-font-color) !default;
 $notification-close-icon-size: $token-notification-close-icon-size !default;
 $notification-margin-bottom: $token-notification-margin-bottom !default;
 $notification-min-width: $token-notification-min-width !default;
