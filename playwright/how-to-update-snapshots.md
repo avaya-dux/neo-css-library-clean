@@ -27,7 +27,7 @@ From root (`neo-css-library`): `yarn github`
 
 From staging (`neo-css-library/staging`): `yarn start`
 
-From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.36.1-focal /bin/bash`
+From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.37.1-focal /bin/bash`
 
 From inside docker container:
 
