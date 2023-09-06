@@ -569,5 +569,6 @@ const unicodes = {
   'callback-offer': 62507,
   'queue-removed': 62508,
   missed: 62509,
-  http: 62510
+  http: 62510,
+  flow: 62511
 }; module.exports.unicodes = unicodes

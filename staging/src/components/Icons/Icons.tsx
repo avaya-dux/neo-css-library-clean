@@ -59,7 +59,12 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 */
 
   const newIcons = [
-    "http"
+    "flow",
+    "network-quality",
+    "network-quality-0",
+    "network-quality-1",
+    "network-quality-2",
+    "network-quality-3"
   ];
 
   return (
