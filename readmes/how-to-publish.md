@@ -61,7 +61,12 @@ Once the publishing is completed, we must then update the Design Portal with an 
 3. copy over the contents of the sub-project folder `neo-npm-package` into the `neo/neo_zip` folder
 4. `node neo/neo-file-archiver.js`: generate the zip file
 ​
-- - **TEMP**: on MacOS, you can right click on the `neo-npm-package` folder in Finder, and choose 'Compress "neo-npm-package"' from the contextual menu for the same result
+- - **TEMP**: on MacOS, you can right click on the `neo-npm-package` folder in Finder, and choose 'Compress "neo-npm-package"' from the contextual menu for the same result; then remove extraneous files and folders added by MacOS:
+
+``` 
+        zip -d neo-npm-package.zip __MACOSX/\*
+        zip -d neo-npm-package.zip \*/.DS_Store
+```
 - - **TEMP**: if you do this, make sure you rename the .zip file to `neo.zip` before proceeding
 ​
 5. go to the design portal project
@@ -70,7 +75,8 @@ Once the publishing is completed, we must then update the Design Portal with an 
 8. add newly created zip file to that same location
 ​
 9. go to `src/site_components/constants/version_number.js`
-10. update the `neoLatestVersion` variable to the latest version number
+10. update the `neoLatestVersion` variable to the latest version number and update the `lastest` field of the `timestamps` variable
+
 ​
 11. update `package.json` to use the latest version of the css-library (`@avaya/neo`); run `npm install --force` in design portal to update `package-lock.json`
 12. open a PR into `develop`, merge, then open a PR into `main` and merge. When this second PR is merged the site will be deployed to production.
