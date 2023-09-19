@@ -570,5 +570,8 @@ const unicodes = {
   'queue-removed': 62508,
   missed: 62509,
   http: 62510,
-  flow: 62511
+  flow: 62511,
+  boolean: 62512,
+  decimal: 62513,
+  integer: 62514
 }; module.exports.unicodes = unicodes
