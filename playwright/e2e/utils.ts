@@ -11,7 +11,7 @@ function capitalize(s) {
 
 export const getTestParameters = (pagePath: string, title:string = capitalize(pagePath)) => {
   const regex = new RegExp(title)
-  const baseURL = process.env.BASEURL || "http://127.0.0.1:3000"
+  const baseURL = process.env.BASEURL || "http://127.0.0.1:4321"
   const url = `${baseURL}/${pagePath}`
   return { title, titleRegex: regex, url }
 }

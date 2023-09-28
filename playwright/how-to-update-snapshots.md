@@ -2,10 +2,12 @@
 
 ## prerequisites
 
+- install and start Docker
 - install and start [Colima](https://github.com/abiosoft/colima), an open-source container runtime alternative (macOS only) by running the following commands from terminal:
 
 ```
 # Homebrew
+brew install docker
 brew install colima
 
 # Once installed, run colima
@@ -13,11 +15,11 @@ colima start
 ```
 
 **NOTE**:
-Playwright version: `v1.35.1`
+Playwright version: `v1.38.1`
 
 Ubuntu version: `20.04`, codenamed "focal".
 
-Thus, the docker image version chosen should be v1.35.1-focal.
+Thus, the docker image version chosen should be v1.38.1-focal.
 
 ## updating the snapshots and running tests
 
@@ -27,7 +29,7 @@ From root (`neo-css-library`): `yarn github`
 
 From staging (`neo-css-library/staging`): `yarn start`
 
-From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:3000 -it mcr.microsoft.com/playwright:v1.37.1-focal /bin/bash`
+From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:4321 -it mcr.microsoft.com/playwright:v1.38.1-focal /bin/bash`
 
 From inside docker container:
 

@@ -9,28 +9,28 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v3
         with:
-          node-version: '18.12.1'
+          node-version: '18.18.0'
       - name: build
         run: yarn github
       - name: start server
         run: |
           yarn preview &
           sleep 5
-          curl -I http://localhost:3000
+          curl -I http://localhost:4321
       - name: run playwright test using docker image
         uses: kohlerdominik/docker-run-action@v1.1.0
         with:
-          image: mcr.microsoft.com/playwright:v1.37.1-focal
+          image: mcr.microsoft.com/playwright:v1.38.1-focal
           shell: /bin/bash
           workdir: /work/
           environment: |
-            BASEURL=http://host.docker.internal:3000
+            BASEURL=http://host.docker.internal:4321
           volumes: |
             ${{ github.workspace }}/playwright:/work
           options: |
             --add-host host.docker.internal:host-gateway
           run: |
-            curl -I http://host.docker.internal:3000
+            curl -I http://host.docker.internal:4321
             yarn
             yarn playwright test
       - name: upload artifacts on test failure

@@ -17,7 +17,7 @@
     "github": "yarn && yarn build:css && yarn test:api && yarn workspace staging github",
     "preview": "yarn workspace staging start",
     "test:playwright": "cd playwright && yarn test:docker",
-    "test:visual": "start-server-and-test preview http://localhost:3000 test:playwright"
+    "test:visual": "start-server-and-test preview http://localhost:4321 test:playwright"
   },
   "workspaces": [
     "css-library",
@@ -25,6 +25,6 @@
     "staging"
   ],
   "devDependencies": {
-    "start-server-and-test": "2.0.0"
+    "start-server-and-test": "2.0.1"
   }
 }
