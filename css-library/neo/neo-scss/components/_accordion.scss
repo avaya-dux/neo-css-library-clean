@@ -1,9 +1,10 @@
-// new accordion styles
+.neo-accordion .neo-accordion__item .neo-accordion__header {
+  margin: 0;
+}
 
 @mixin accordion-header {
   &__header {
     @extend %list-item;
-    margin-right: 0 !important;
     border: none;
     cursor: pointer;
     position: relative;
@@ -34,7 +35,6 @@
     }
 
     & &-text::after {
-      // chevron-up
       content: $accordion-contracted-icon;
       font-family: "updated-neo-icons";
       position: absolute;
@@ -47,6 +47,7 @@
       @include rtl-selector {
         left: $accordion-icon-offset;
         right: auto;
+        transform: translate(0, -50%) rotate(180deg);
       }
     }
 
@@ -83,14 +84,10 @@
       transition: background-color 0.4s;
       .neo-accordion__header {
         .neo-accordion__header-text {
-          // color: var(--neo-color-base-1000);
           background-color: $accordion-hover-background-color;
           transition: background-color 0.4s;
         }
       }
-      // .neo-accordion__content * {
-      //     color: var(--neo-color-base-1000);
-      // }
     }
   }
   &__item {
@@ -127,6 +124,11 @@
   &__item--active {
     #{$parent-selector}__header #{$parent-selector}__header-text::after {
       transform: translate(0, -50%) $accordion-active-icon-animation-left-down;
+      @include rtl-selector {
+        left: $accordion-icon-offset;
+        right: auto;
+        transform: translate(0, -50%) rotate(270deg);
+      }
     }
     #{$parent-selector}__body {
       height: auto;
