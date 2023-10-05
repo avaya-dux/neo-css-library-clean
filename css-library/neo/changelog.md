@@ -1,31 +1,5 @@
 # Changelog
 
-### 3.77.0
-
-### Breaking Changes - Needs Immediate Attention
-
-- N/A
-
-### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
-
-- N/A
-
-### New Features - New features that have recently been added
-
-- N/A
-
-### Bugs Report - List of bugs that have been updated
-
-- Added missing RTL styles to Accordion headers (NEO-1853)
-
-### Sunsetting - Removing Full Support
-
-- N/A
-
-### Work In Progress - Future Updates
-
-- N/A
-
 ### 3.76.0
 
 ### Breaking Changes - Needs Immediate Attention
@@ -42,7 +16,7 @@
 
 ### Bugs Report - List of bugs that have been updated
 
-- N/A
+- Added missing RTL styles to Accordion headers (NEO-1853)
 
 ### Sunsetting - Removing Full Support
 
