@@ -83,6 +83,7 @@
       transform: translate(0, 0);
       width: $switch-knob-size;
       display: flex;
+      justify-content: center;
       align-items: center;
       text-shadow: 0.5px 0px 0px $switch-off-color;;
 

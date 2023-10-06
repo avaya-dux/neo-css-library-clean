@@ -17,6 +17,7 @@
 ### Bugs Report - List of bugs that have been updated
 
 - Added missing RTL styles to Accordion headers (NEO-1853)
+- Added missing alignment styling to Switch icons (NEO-1885)
 
 ### Sunsetting - Removing Full Support
 
