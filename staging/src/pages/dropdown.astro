@@ -1,10 +1,18 @@
 ---
 import NeoLayout from "../layouts/NeoLayout.astro";
-import { Dropdown, DropdownWithInput, DropdownIconButton } from "../components";
+import {
+  Dropdown,
+  DropdownWithInput,
+  DropdownIconButton,
+  ToggleRight,
+  ToggleLeft,
+  BelowUpwards,
+  ToggleRightUpwards,
+  ToggleLeftUpwards,
+} from "../components";
 ---
 
 <NeoLayout title="Dropdown">
-
   <h2>Dropdown</h2>
 
   <div class="dropdown-spacer"><Dropdown client:load /></div>
@@ -19,6 +27,20 @@ import { Dropdown, DropdownWithInput, DropdownIconButton } from "../components";
 
   <div class="dropdown-spacer"><DropdownIconButton client:load /></div>
 
+  <h2>Dropdown to the right</h2>
+  <ToggleRight />
+
+  <h2>Dropdown to the left</h2>
+  <ToggleLeft />
+
+  <h2>Dropdown opening upwards</h2>
+  <BelowUpwards />
+
+  <h2>Dropdown to the right and upwards</h2>
+  <ToggleRightUpwards />
+
+  <h2>Dropdown to the left and upwards</h2>
+  <ToggleLeftUpwards />
 
 
 </NeoLayout>

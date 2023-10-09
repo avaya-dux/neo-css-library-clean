@@ -13,6 +13,7 @@
 ### New Features - New features that have recently been added
 
 - Added "decimal", "boolean" and "integer" icons (NEO-1865)
+- NEO-1845 allow dropdown to expand upwards and to be placed to either side of the toggle
 
 ### Bugs Report - List of bugs that have been updated
 
