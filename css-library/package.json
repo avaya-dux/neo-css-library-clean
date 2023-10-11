@@ -14,7 +14,7 @@
     "watch": "parcel watch neo/neo-scss/*.scss"
   },
   "devDependencies": {
-    "@parcel/transformer-sass": "2.9.3",
+    "@parcel/transformer-sass": "2.10.0",
     "axios": "1.5.1",
     "cypress": "13.3.0",
     "cypress-image-snapshot": "4.0.1",
@@ -25,7 +25,7 @@
     "jest-fetch-mock": "3.0.3",
     "lodash": "4.17.21",
     "node-fetch": "3.3.2",
-    "parcel": "2.9.3",
+    "parcel": "2.10.0",
     "postcss": "8.4.31",
     "prettier": "3.0.3",
     "replace-in-file": "7.0.1",
