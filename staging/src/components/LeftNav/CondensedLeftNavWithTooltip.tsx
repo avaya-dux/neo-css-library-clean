@@ -154,6 +154,22 @@ export const CondensedLeftNavWithTooltip = () => {
               </div>
             </div>
           </li>
+
+          <li className="neo-leftnav__main">
+            <span/>
+              <div className="neo-tooltip neo-tooltip--right neo-tooltip--onhover">
+                <a
+                  aria-label="Accounts"
+                  className="neo-leftnav__main__item neo-icon-voice"
+                >
+                  Call
+                </a>
+
+                <div className="neo-tooltip__content">
+                  <div className="neo-arrow"></div>Call
+                </div>
+              </div>
+          </li>
         </ul>
       </nav>
 
@@ -330,6 +346,22 @@ export const CondensedLeftNavWithTooltipRelaxed = () => {
                 <div className="neo-arrow"></div>Bot
               </div>
             </div>
+          </li>
+
+          <li className="neo-leftnav__main">
+            <span/>
+              <div className="neo-tooltip neo-tooltip--right neo-tooltip--onhover">
+                <div
+                  aria-label="Accounts"
+                  className="neo-leftnav__main__item neo-icon-voice"
+                >
+                  Call
+                </div>
+
+                <div className="neo-tooltip__content">
+                  <div className="neo-arrow"></div>Call
+                </div>
+              </div>
           </li>
         </ul>
       </nav>

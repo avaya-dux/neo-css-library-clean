@@ -3,7 +3,8 @@
   & > .neo-leftnav__category,
   & > .neo-leftnav__main__item,
   & > .neo-tooltip > a,
-  & > .neo-tooltip > .neo-leftnav__main__item {
+  & > .neo-tooltip > .neo-leftnav__main__item,
+  & .neo-tooltip > .neo-leftnav__main__item {
     @content;
   }
 }
@@ -12,7 +13,8 @@
   & > a,
   & .neo-leftnav__sub__item,
   & > .neo-tooltip > a,
-  & > .neo-tooltip > .neo-leftnav__sub__item {
+  & > .neo-tooltip > .neo-leftnav__sub__item,
+  & .neo-tooltip > .neo-leftnav__sub__item {
     @content;
   }
 }

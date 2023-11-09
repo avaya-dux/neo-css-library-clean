@@ -1,6 +1,6 @@
 # Changelog
 
-# 3.77.0
+### 3.77.0
 
 ### Breaking Changes - Needs Immediate Attention
 
@@ -16,6 +16,7 @@
 
 ### Bugs Report - List of bugs that have been updated
 
+- Added more relaxed selectors to account for ASL Tooltip Component element heirarchy (NEO-1461)
 - Tweaked margin on Switch elements inside Widgets to avoid focus outline cut-off (CCNXT-108310)
 
 ### Sunsetting - Removing Full Support
