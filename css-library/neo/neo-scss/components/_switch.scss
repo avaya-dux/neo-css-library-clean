@@ -200,3 +200,11 @@
     right: 1px !important;
   }
 }
+
+.neo-widget__body .neo-form-control .neo-switch {
+  margin-left: 2px;
+  @include rtl-selector {
+    margin-left: initial;
+    margin-right: 2px;
+  }
+}

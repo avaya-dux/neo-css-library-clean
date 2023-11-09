@@ -1,0 +1,173 @@
+<h4>
+  This example demonstrates Workspaces team's usage of the Neo Form as per
+  CCNXT-108310
+</h4>
+
+<div class="neo-widget__content">
+  <div class="neo-widget__header">
+    <div class="neo-widget__header-left">
+      <h4>Header of Widget</h4>
+    </div>
+    <div class="neo-widget__header-right"></div>
+  </div>
+  <div class="neo-widget__body neo-widget__body">
+    <div class="neo-tabs" role="tablist">
+      <ul class="neo-tabs__nav">
+        <li class="neo-tabs__item neo-tabs__item--active" tabindex="0">
+          <a role="tab">Tab 1</a>
+        </li>
+        <li class="neo-tabs__item neo-tabs__item--disabled">
+          <a role="tab">Tab 2</a>
+        </li>
+        <li class="neo-tabs__item neo-tabs__item--active-disabled">
+          <a role="tab">Tab 3</a>
+        </li>
+        <li class="neo-tabs__item" tabindex="0">
+          <a role="tab">Tab 4</a>
+        </li>
+      </ul>
+    </div>
+    <form class="neo-form">
+      <div class="neo-form-control neo-form-control--required">
+        <div class="neo-input-group">
+          <label for="textInput"> Required Input group label</label>
+          <div class="neo-input-editable__wrapper">
+            <input
+              class="neo-input"
+              placeholder="Input with button"
+              type="text"
+            />
+            <button class="neo-input-edit__icon neo-icon-end"></button>
+          </div>
+        </div>
+        <div class="neo-input-hint">Input group helper text</div>
+      </div>
+      <div class="neo-form-control neo-form-control--error">
+        <div class="neo-input-group">
+          <label for="textInput"> Optional Input group label</label>
+          <div class="neo-input-editable__wrapper">
+            <input
+              class="neo-input"
+              placeholder="Input with no button"
+              type="text"
+            />
+          </div>
+        </div>
+        <div class="neo-input-hint">Input group error text</div>
+      </div>
+      <div class="neo-form-control">
+        <div class="neo-input-group">
+          <label for="color1"> Colors</label>
+          <div class="neo-select">
+            <select class="neo-icon-chevron-down" id="color1">
+              <option defaultselected="true">Loading...</option>
+              <option value="1">red</option>
+              <option value="2">orange</option>
+              <option value="3">yellow</option>
+              <option value="4">green</option>
+              <option value="5">blue</option>
+            </select>
+          </div>
+        </div>
+        <div class="neo-input-hint" id="select-hint">
+          Please choose a color.
+        </div>
+      </div>
+      <div class="neo-form-control neo-form-control--textarea">
+        <div class="neo-input-group">
+          <label for="textarea">Basic Example</label>
+
+          <textarea id="textarea" class="neo-input" type="text"
+            >Lorem ipsum dolor sit amet</textarea
+          >
+        </div>
+
+        <div class="neo-input-textarea__helper">
+          <div class="neo-input-hint">Helper text</div>
+
+          <div class="neo-input-textarea__counter">74 remaining / 100</div>
+        </div>
+      </div>
+      <div class="neo-form-control">
+        <div class="neo-input-group">
+          <label class="neo-switch" for="uncheckedCheckbox">
+            <input id="uncheckedCheckbox" type="checkbox" role="switch" />
+            <i class="neo-switch__icon"></i>
+             I'm initially unchecked
+          </label>
+          <label class="neo-switch" for="checkedCheckbox">
+            <input id="checkedCheckbox" type="checkbox" role="switch" checked />
+            <i class="neo-switch__icon"></i>
+             I'm initially checked
+          </label>
+        </div>
+      </div>
+      <div class="neo-form-control">
+        <div class="neo-input-group">
+          <input
+            class="neo-radio"
+            type="radio"
+            name="radio1"
+            id="radio1"
+            role="radio"
+          />
+          <label for="radio1">Radio 1</label>
+          <input
+            class="neo-radio"
+            type="radio"
+            name="radio2"
+            id="radio2"
+            role="radio"
+            checked
+          />
+          <label for="radio2">Radio 1</label>
+        </div>
+      </div>
+    </form>
+    <div class="form-footer">
+      <div class="form-footer-container">
+        <button class="neo-btn neo-btn-secondary neo-btn-secondary--default">
+          Cancel
+        </button>
+        <button class="neo-btn neo-btn-primary neo-btn-primary--default">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .neo-form {
+    padding-top: 10px;
+  }
+  .neo-select,
+  .neo-input-group {
+    width: 287px;
+  }
+  .form-footer-container {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: var(--neo-global-spacer-regular) 0;
+  }
+  .form-footer-container button {
+    margin: 10px 5px;
+  }
+
+  .form-footer {
+    border-top: #dce1e6 solid 1px;
+    margin-top: 8px;
+  }
+  .neo-widget__body {
+    /* height: 650px */
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  form {
+    flex: 1;
+  }
+</style>
