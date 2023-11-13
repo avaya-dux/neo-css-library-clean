@@ -5,7 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@playwright/test": "1.39.0",
-    "start-server-and-test": "2.0.1"
+    "start-server-and-test": "2.0.2"
   },
   "scripts": {
     "start": ". start_server.sh",

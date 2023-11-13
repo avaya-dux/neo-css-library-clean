@@ -25,6 +25,6 @@
     "staging"
   ],
   "devDependencies": {
-    "start-server-and-test": "2.0.1"
+    "start-server-and-test": "2.0.2"
   }
 }
