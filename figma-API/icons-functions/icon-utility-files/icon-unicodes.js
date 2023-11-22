@@ -573,5 +573,10 @@ const unicodes = {
   flow: 62511,
   boolean: 62512,
   decimal: 62513,
-  integer: 62514
+  integer: 62514,
+  'recording-pause': 62515,
+  input: 62516,
+  'input-output': 62517,
+  output: 62518,
+  forwarding: 62519
 }; module.exports.unicodes = unicodes

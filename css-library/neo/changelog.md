@@ -1,5 +1,33 @@
 # Changelog
 
+### 3.78.0
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
+
+- N/A
+
+### New Features - New features that have recently been added
+
+- Added 'recording-pause' icon (NEO-1938)
+- Added input, output and input-output icons (NEO-1940)
+- Added 'frowarding' icon (NEO-1938)
+
+### Bugs Report - List of bugs that have been updated
+
+- N/A
+
+### Sunsetting - Removing Full Support
+
+- N/A
+
+### Work In Progress - Future Updates
+
+- N/A
+
 ### 3.77.0
 
 ### Breaking Changes - Needs Immediate Attention

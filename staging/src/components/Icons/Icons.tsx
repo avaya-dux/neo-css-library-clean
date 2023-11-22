@@ -59,9 +59,11 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 */
 
   const newIcons = [
-    "boolean",
-    "decimal",
-    "integer"
+   "recording-pause",
+    "input",
+    "input-output",
+    "output",
+    "forwarding"
   ];
 
   return (
