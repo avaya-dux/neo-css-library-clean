@@ -219,7 +219,7 @@
           margin: 0 4px;
         }
       }
-      td .neo-btn-square {
+      td .neo-btn-square:not(.expand) {
         display: block;
       }
     }
@@ -306,6 +306,11 @@
         background-image: none;
       }
     }
+
+    .neo-tooltip .neo-btn-square.expand {
+      display: flex;
+    }
+
     .expand {
       transition: transform 0.15s ease;
       &:not(.expand--active) {

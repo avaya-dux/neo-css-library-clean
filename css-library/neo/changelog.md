@@ -14,11 +14,11 @@
 
 - Added 'recording-pause' icon (NEO-1938)
 - Added input, output and input-output icons (NEO-1940)
-- Added 'frowarding' icon (NEO-1938)
+- Added 'forwarding' icon (NEO-1938)
 
 ### Bugs Report - List of bugs that have been updated
 
-- N/A
+- Fixed issue where expand button with Tooltips in Table rows were shifting on hover (NEO-1925)
 
 ### Sunsetting - Removing Full Support
 

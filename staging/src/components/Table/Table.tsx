@@ -28,7 +28,19 @@ export const Table = () => {
         </thead>
         <tbody>
           <tr>
-            <td></td>
+            <td>
+              <div className="neo-tooltip neo-tooltip--right neo-tooltip--onhover">
+                <button
+                  className="expand neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-chevron-right"
+                  aria-label="expand Michael"
+                  aria-expanded="false"
+                ></button>
+                <div className="neo-tooltip__content" id="tooltip1">
+                  <div className="neo-arrow"></div>
+                  Tooltip
+                </div>
+              </div>
+            </td>
             <td>Thomas</td>
             <td className="number">12345</td>
             <td>thomas@shelby.ltd</td>
@@ -69,20 +81,23 @@ export const Table = () => {
           </tr>
           <tr>
             <td>
-              <button
-                className="expand neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-chevron-right"
-                aria-label="expand Michael"
-                aria-expanded="false"
-              ></button>
+              <div className="neo-tooltip neo-tooltip--right neo-tooltip--onhover">
+                <button
+                  className="expand neo-btn-square neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-chevron-right"
+                  aria-label="expand Gavin"
+                  aria-expanded="false"
+                ></button>
+                <div className="neo-tooltip__content" id="tooltip1">
+                  <div className="neo-arrow"></div>
+                  Tooltip
+                </div>
+              </div>
             </td>
             <td>Gavin</td>
             <td className="number">12345</td>
             <td>gavin@shelby.ltd</td>
             <td>
-              <figure
-                className="neo-avatar"
-                data-initials="GS"
-              ></figure>
+              <figure className="neo-avatar" data-initials="GS"></figure>
             </td>
             <td>
               <div
@@ -156,7 +171,7 @@ export const TableWithSortHeaders = () => {
               <div
                 className={clsx(
                   "neo-multiselect",
-                  isActive && "neo-multiselect--active"
+                  isActive && "neo-multiselect--active",
                 )}
                 onClick={() => setIsActive(!isActive)}
                 data-testid="table-filters-cell"
@@ -268,7 +283,7 @@ export const TableWithSelectAllRow = () => {
                     "neo-check",
                     selectedRows.length > 0 &&
                       selectedRows.length < 5 &&
-                      "neo-check--indeterminate"
+                      "neo-check--indeterminate",
                   )}
                   type="checkbox"
                   id="selectAllCheckbox"
@@ -328,7 +343,7 @@ export const TableWithSelectAllRow = () => {
             )}
             <tr
               className={clsx(
-                (selectAllOnPage || selectedRows.includes("row1")) && "active"
+                (selectAllOnPage || selectedRows.includes("row1")) && "active",
               )}
             >
               <td>
@@ -391,7 +406,7 @@ export const TableWithSelectAllRow = () => {
             </tr>
             <tr
               className={clsx(
-                (selectAllOnPage || selectedRows.includes("row2")) && "active"
+                (selectAllOnPage || selectedRows.includes("row2")) && "active",
               )}
             >
               <td>
@@ -445,7 +460,7 @@ export const TableWithSelectAllRow = () => {
             </tr>
             <tr
               className={clsx(
-                (selectAllOnPage || selectedRows.includes("row3")) && "active"
+                (selectAllOnPage || selectedRows.includes("row3")) && "active",
               )}
             >
               <td>
@@ -491,7 +506,7 @@ export const TableWithSelectAllRow = () => {
             </tr>
             <tr
               className={clsx(
-                (selectAllOnPage || selectedRows.includes("row4")) && "active"
+                (selectAllOnPage || selectedRows.includes("row4")) && "active",
               )}
             >
               <td>
@@ -541,7 +556,7 @@ export const TableWithSelectAllRow = () => {
             </tr>
             <tr
               className={clsx(
-                (selectAllOnPage || selectedRows.includes("row5")) && "active"
+                (selectAllOnPage || selectedRows.includes("row5")) && "active",
               )}
             >
               <td>
