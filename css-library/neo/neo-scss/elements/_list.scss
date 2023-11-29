@@ -84,7 +84,7 @@
     padding: $token-accordion-padding-y $token-accordion-padding-x !important;
     &:hover {
       cursor: pointer;
-      background-color: var(--neo-color-base-100);
+      background-color: $accordion-hover-background-color;
     }
   }
   &.neo-accordion__header--disabled > .neo-accordion__header-text {

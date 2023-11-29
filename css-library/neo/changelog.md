@@ -1,5 +1,6 @@
 # Changelog
 
+
 ### 3.78.0
 
 ### Breaking Changes - Needs Immediate Attention
@@ -19,6 +20,7 @@
 ### Bugs Report - List of bugs that have been updated
 
 - Fixed issue where expand button with Tooltips in Table rows were shifting on hover (NEO-1925)
+- Fixed incorrect hover color on Accordions (NEO-1928)
 
 ### Sunsetting - Removing Full Support
 
