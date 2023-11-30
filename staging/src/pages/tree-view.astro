@@ -1,0 +1,147 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Tree View">
+  <h2>Non-Interactive Tree Examples</h2>
+
+  <div class="two-columns">
+    <div class="neo-treeview">
+      <label for="ul-nested-tree-example">Nested Tree</label>
+
+      <ul id="ul-nested-tree-example" role="tree">
+        <li
+          dir="ltr"
+          role="treeitem"
+          aria-selected="true"
+          class="neo-treeview__sub-tree-item"
+        >
+          <div
+            class="neo-treeview__item neo-treeview__item--expanded neo-treeview__item--selected"
+          >
+            <span class="neo-treeview__item-left" role="button" tabindex="0">
+              <span class="neo-treeview__item--expandable"></span>
+               Branch One (string)
+            </span>
+
+            <span class="neo-treeview__item-right"></span>
+          </div>
+
+          <ul aria-expanded="true" role="group">
+            <li
+              class="neo-treeview__item"
+              dir="ltr"
+              role="treeitem"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <span class="neo-treeview__item-left">leaf one</span>
+            </li>
+          </ul>
+        </li>
+
+        <li
+          dir="ltr"
+          role="treeitem"
+          aria-selected="false"
+          class="neo-treeview__sub-tree-item"
+        >
+          <div class="neo-treeview__item">
+            <span class="neo-treeview__item-left" role="button" tabindex="-1">
+              <span class="neo-treeview__item--expandable"></span>
+              <div>
+                <b>Branch Two</b> (div)
+              </div>
+            </span>
+            <span class="neo-treeview__item-right"></span>
+          </div>
+
+          <ul aria-expanded="false" role="group">
+            <li
+              class="neo-treeview__item neo-treeview__item--disabled"
+              dir="ltr"
+              role="treeitem"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <span class="neo-treeview__item-left">leaf two</span>
+            </li>
+            <li
+              dir="ltr"
+              role="treeitem"
+              aria-selected="false"
+              class="neo-treeview__sub-tree-item"
+            >
+              <div class="neo-treeview__item neo-treeview__item--disabled">
+                <span
+                  class="neo-treeview__item-left"
+                  role="button"
+                  tabindex="-1"
+                >
+                  <span class="neo-treeview__item--expandable"></span>
+                   Branch Three (string)
+                </span>
+
+                <span class="neo-treeview__item-right"></span>
+              </div>
+
+              <ul aria-expanded="false" role="group">
+                <li
+                  class="neo-treeview__item neo-treeview__item--disabled"
+                  dir="ltr"
+                  role="treeitem"
+                  aria-selected="false"
+                  tabindex="-1"
+                >
+                  <span class="neo-treeview__item-left">leaf three</span>
+                </li>
+              </ul>
+            </li>
+
+            <li
+              class="neo-treeview__item neo-treeview__item--disabled"
+              dir="ltr"
+              role="treeitem"
+              aria-selected="false"
+              tabindex="-1"
+            >
+              <span class="neo-treeview__item-left">leaf four</span>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div class="neo-treeview">
+      <label for="ul-flat-tree-example">Flat Tree</label>
+
+      <ul aria-label="Flat Tree" id="ul-flat-tree-example" role="tree">
+        <li
+          class="neo-treeview__item"
+          dir="ltr"
+          role="treeitem"
+          aria-selected="false"
+          tabindex="0"
+        >
+          <span class="neo-treeview__item-left">leaf one</span>
+        </li>
+        <li
+          class="neo-treeview__item"
+          dir="ltr"
+          role="treeitem"
+          aria-selected="false"
+          tabindex="-1"
+        >
+          <span class="neo-treeview__item-left">leaf two</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+</NeoLayout>
+
+<style>
+  div.two-columns {
+    display: flex;
+    justify-content: space-around;
+  }
+</style>

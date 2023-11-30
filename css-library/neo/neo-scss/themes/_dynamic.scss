@@ -263,15 +263,15 @@ $button-color-event-rgb-dark: 241, 241, 241;
   }
 }
 
-$notification-success-color-light: #F1FBF1;
+$notification-success-color-light: #f1fbf1;
 $notification-success-color-dark: #{$token-color-green-900};
-$notification-info-color-light: #F3F9FD;
+$notification-info-color-light: #f3f9fd;
 $notification-info-color-dark: #{$token-color-blue-900};
-$notification-alert-color-light: #FEF6F6;
+$notification-alert-color-light: #fef6f6;
 $notification-alert-color-dark: #{$token-color-red-900};
-$notification-warning-color-light: #FFFBF5;
+$notification-warning-color-light: #fffbf5;
 $notification-warning-color-dark: #{$token-color-orange-900};
-$notification-event-color-light: #F8F8F8;
+$notification-event-color-light: #f8f8f8;
 $notification-event-color-dark: #{$token-color-base-900};
 
 @media (prefers-color-scheme: dark) {
@@ -412,7 +412,7 @@ $notification-event-color-dark: #{$token-color-base-900};
   :root .neo-dynamic {
     --accordion-border-color: #{$token-color-base-500};
     --accordion-body-color: #{$token-color-base-900};
-    --accordion-header-text :#{$token-color-base-100};
+    --accordion-header-text: #{$token-color-base-100};
     --accordion-hover-background-color: #{$token-color-base-850};
   }
 }
@@ -420,7 +420,7 @@ $notification-event-color-dark: #{$token-color-base-900};
   :root .neo-dynamic {
     --accordion-border-color: #{$token-accordion-border-color};
     --accordion-body-color: #{$token-accordion-background-color};
-    --accordion-header-text :#{$token-color-base-1000};
+    --accordion-header-text: #{$token-color-base-1000};
     --accordion-hover-background-color: #{$token-color-base-100};
   }
 }
@@ -819,5 +819,16 @@ $notification-event-color-dark: #{$token-color-base-900};
 @media (prefers-color-scheme: dark) {
   :root .neo-dynamic {
     --panel-border-color: #{$token-color-base-600};
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic {
+    --treeview-default-bg-colour: #{$token-color-base-900};
+    --treeview-hover-bg-colour: #{$token-color-base-850};
+    --treeview-default-font-colour: #{$token-color-base-150};
+    --treeview-hover-font-colour: #{$token-color-blue-300};
+    --treeview-selected-font-colour: #{$token-color-blue-400};
+    --treeview-disabled-font-colour: #{$token-color-base-500};
   }
 }

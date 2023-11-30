@@ -178,7 +178,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 :root .neo-dark {
   --accordion-border-color: #{$token-color-base-500};
   --accordion-body-color: #{$token-color-base-900};
-  --accordion-header-text :#{$token-color-base-100};
+  --accordion-header-text: #{$token-color-base-100};
   --accordion-hover-background-color: #{$token-color-base-850};
 }
 :root .neo-dark {
@@ -343,4 +343,13 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 
 :root .neo-dark {
   --panel-border-color: #{$token-color-base-600};
+}
+
+:root .neo-dark {
+  --treeview-default-bg-colour: #{$token-color-base-900};
+  --treeview-hover-bg-colour: #{$token-color-base-850};
+  --treeview-default-font-colour: #{$token-color-base-150};
+  --treeview-hover-font-colour: #{$token-color-blue-300};
+  --treeview-selected-font-colour: #{$token-color-blue-400};
+  --treeview-disabled-font-colour: #{$token-color-base-500};
 }
