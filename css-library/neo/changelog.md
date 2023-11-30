@@ -21,6 +21,7 @@
 
 - Fixed issue where expand button with Tooltips in Table rows were shifting on hover (NEO-1925)
 - Fixed incorrect hover color on Accordions (NEO-1928)
+- Added missing RTL styles to chevron in Dropdowns (NEO-1939)
 
 ### Sunsetting - Removing Full Support
 

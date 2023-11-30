@@ -29,22 +29,23 @@
   @include rtl-selector {
     &::after {
       padding: 0 $padding-left 0 0;
+      left: 0;
     }
   }
+
   &:not(.neo-dropdown__link-header)::after {
     color: $color;
     position: absolute;
     right: 0px;
-    padding: 0 8px 0 0;
+    padding: 0 $padding-left 0 0;
     vertical-align: middle;
-  }
-  @include rtl-selector {
-    &:not(.neo-dropdown__link-header)::before {
+    @include rtl-selector {
       color: $color;
       position: absolute;
+      right: initial;
       left: 0px;
-      padding: 0 8px 0 8px;
       vertical-align: middle;
+      transform: rotate(180deg);
     }
   }
 }
@@ -72,7 +73,7 @@
       &.neo-dropdown--disabled {
         cursor: not-allowed;
         color: $dropdown-disabled-font-color;
-        
+
         @include neo-dropdown-arrow(
           $arrow-icon: $dropdown-expand-right-icon,
           $color: $global-disabled-color
@@ -199,7 +200,6 @@
       right: 100% !important;
     }
   }
-
 
   @include neo-popover-content(
     $dropdown-animation-duration,
@@ -354,13 +354,13 @@
   }
 }
 
-@mixin neo-dropdown-content-placement ($position) {
+@mixin neo-dropdown-content-placement($position) {
   $self: &;
-  $content_selector : #{$self}__content;
+  $content_selector: #{$self}__content;
   $child_selector: #{$content_selector}#{$content_selector}--#{$position};
 
   &--onhover:hover > #{$child_selector},
-  &--active >  #{$child_selector},
+  &--active > #{$child_selector},
   &--onhover:focus > #{$child_selector} {
     @content;
   }
@@ -383,7 +383,7 @@
   @include neo-dropdown-readonly-text;
   @include neo-popover-states;
   @include neo-dropdown-shortcut;
-  @include neo-dropdown-content-placement(toggle-right){
+  @include neo-dropdown-content-placement(toggle-right) {
     display: inline;
     left: initial;
     top: initial;
@@ -391,19 +391,19 @@
       left: 100%;
       right: auto;
     }
-  };
-  @include neo-dropdown-content-placement(toggle-left){
+  }
+  @include neo-dropdown-content-placement(toggle-left) {
     display: inline;
     left: auto;
     right: 100%;
     top: initial;
-  };
-  @include neo-dropdown-content-placement(below-upwards){
+  }
+  @include neo-dropdown-content-placement(below-upwards) {
     top: auto;
     bottom: 100%;
-  };
-  @include neo-dropdown-content-placement(aside-upwards){
+  }
+  @include neo-dropdown-content-placement(aside-upwards) {
     top: auto;
     bottom: calc(100% - 36px);
-  };
+  }
 }
