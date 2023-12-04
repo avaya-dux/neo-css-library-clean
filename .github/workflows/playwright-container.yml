@@ -20,7 +20,7 @@ jobs:
       - name: run playwright test using docker image
         uses: kohlerdominik/docker-run-action@v1.1.0
         with:
-          image: mcr.microsoft.com/playwright:v1.40.0-focal
+          image: mcr.microsoft.com/playwright:v1.40.1-focal
           shell: /bin/bash
           workdir: /work/
           environment: |
