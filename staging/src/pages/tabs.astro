@@ -1,0 +1,48 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Tabs">
+  <h2>Tabs With Close Button</h2>
+
+  <br />
+
+  <div class="neo-tabs">
+    <div class="neo-tabs__nav" role="tablist">
+      <div class="neo-tabs__item" dir="ltr">
+        <a
+          aria-disabled="false"
+          aria-selected="true"
+          aria-label="You can press backspace or X to close tab Tab2"
+          role="tab"
+          class="neo-icon-settings"
+          dir="ltr"
+          href="#noop"
+          id="tab2"
+          rel="noreferrer"
+          tabindex="0"
+          >Tab2<span
+            id="447daa1e-4f6b-4971-8f1b-0a9702be267f"
+            class="neo-icon-end" tabindex="0"></span></a
+        >
+      </div>
+      <div class="neo-tabs__item neo-tabs__item--active" dir="ltr">
+        <a
+          aria-disabled="false"
+          aria-selected="true"
+          aria-label="You can press backspace or X to close tab Tab2"
+          role="tab"
+          class="neo-icon-check"
+          dir="ltr"
+          href="#noop"
+          id="tab2"
+          rel="noreferrer"
+          tabindex="0"
+          >Tab2<span
+            id="447daa1e-4f6b-4971-8f1b-0a9702be267f"
+            class="neo-icon-end" tabindex="0"></span></a
+        >
+      </div>
+    </div>
+  </div>
+</NeoLayout>
