@@ -25,9 +25,16 @@
 
 @mixin form--required {
   &--required {
-    > label,
-    > .neo-input-group ~ label,
-    > .neo-input-group > label {
+    > label > span,
+    > .neo-input-group ~ label > span,
+    > .neo-input-group > label > span {
+        color: $input-asterix-required-color;
+    }
+
+    // the block below is for backwards compatibility (NEO-1923)
+    > label:not(:has(> span)),
+    > .neo-input-group ~ label:not(:has(> span)),
+    > .neo-input-group > label:not(:has(> span)) {
       &::after {
         color: $input-asterix-required-color;
         content: " *";

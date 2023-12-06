@@ -251,6 +251,7 @@ export const InputCombinations = () => {
         <div className="neo-input-group">
           <label htmlFor="input-error">
             Input with icons & add on editable & error
+            <span aria-hidden="true" title="required"> *</span>
           </label>
           <div className="neo-input-group--addons">
             <div className="neo-input-icon__wrapper neo-input-editable__wrapper">
@@ -262,6 +263,7 @@ export const InputCombinations = () => {
                 aria-label="Input with icon"
                 aria-invalid="true"
                 aria-describedby="inputHint"
+                required
               />
               <button
                 onClick={(e) => {
@@ -346,10 +348,11 @@ export const InputCombinations = () => {
       <div className="neo-form-control neo-form-control--error neo-form-control--required">
         <div className="neo-input-group">
           <label
-            htmlFor="input-group-addon-on-left-plus-icon2"
+            htmlFor="input-group-addon-on-left-plus-icon3"
             aria-label="Addon on the left plus icon"
           >
             Addon on the left (icon included) and right editable error
+            <span aria-hidden="true" title="required"> *</span>
           </label>
           <div className="neo-input-group--addons">
             <div className="neo-input-group__addon neo-icon-call" />
@@ -362,6 +365,7 @@ export const InputCombinations = () => {
                 aria-label="Addon on the left plus icon"
                 aria-invalid="true"
                 aria-describedby="inputHint"
+                required
               />
               <button
                 onClick={(e) => {

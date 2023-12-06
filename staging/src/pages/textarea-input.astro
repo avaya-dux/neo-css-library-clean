@@ -60,9 +60,11 @@ const loremipsum = "Lorem ipsum dolor sit amet";
           <div class="neo-input-group">
             <label for="textarea-required-error">
               Required and in error state w/ "short" counter
+              <span aria-hidden="true" title="required"> *</span>
             </label>
 
             <textarea
+              required
               id="textarea-required-error"
               class="neo-input"
               type="text"

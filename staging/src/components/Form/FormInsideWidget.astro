@@ -30,12 +30,16 @@
     <form class="neo-form">
       <div class="neo-form-control neo-form-control--required">
         <div class="neo-input-group">
-          <label for="textInput"> Required Input group label</label>
+          <label for="textInput2"> Required Input group label
+            <span aria-hidden="true" title="required"> *</span>
+          </label>
           <div class="neo-input-editable__wrapper">
             <input
+              id="textInput2"
               class="neo-input"
               placeholder="Input with button"
               type="text"
+              required
             />
             <button class="neo-input-edit__icon neo-icon-end"></button>
           </div>
@@ -47,6 +51,7 @@
           <label for="textInput"> Optional Input group label</label>
           <div class="neo-input-editable__wrapper">
             <input
+              id="textInput"
               class="neo-input"
               placeholder="Input with no button"
               type="text"
