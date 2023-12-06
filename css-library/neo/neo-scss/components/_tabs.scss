@@ -44,8 +44,9 @@
       padding: 8px 16px 0px 16px;
       text-decoration: none;
 
-      &:focus {
-        outline: none;
+      &:focus, &:focus-visible {
+        outline: $global-outline-color auto 2px;
+      outline-offset: -4px;
       }
 
       &:before {
@@ -60,8 +61,12 @@
     .neo-icon-end {
       color: $tab-default-color;
     }
-    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):hover,
-    &:not(.neo-tabs__item--vertical-active-disabled):not(.neo-tabs__item--vertical--disabled):focus-within {
+    &:not(.neo-tabs__item--vertical-active-disabled):not(
+        .neo-tabs__item--vertical--disabled
+      ):hover,
+    &:not(.neo-tabs__item--vertical-active-disabled):not(
+        .neo-tabs__item--vertical--disabled
+      ):focus-within {
       background-color: $tab-hover-bg-color;
     }
     &:hover,
@@ -190,16 +195,29 @@
     .neo-icon-end {
       border-bottom: $tab-action-border-bottom-width solid transparent;
       color: $tab-default-color;
+      &:focus-visible {
+        outline: none;
+        &:before {
+          outline-offset: -1px;
+          outline: 2px auto #1473e6;
+        }
+      }
     }
 
-    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(.neo-tabs__item--vertical-active-disabled):hover,
-    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(.neo-tabs__item--vertical-active-disabled):focus-within {
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(
+        .neo-tabs__item--vertical-active-disabled
+      ):hover,
+    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):not(
+        .neo-tabs__item--vertical-active-disabled
+      ):focus-within {
       transition: $tab-hover-transition;
       background-color: $tab-hover-bg-color;
     }
 
     &:hover,
-    &:not(.neo-tabs__item--active-disabled):not(.neo-tabs__item--disabled):focus-within {
+    &:not(.neo-tabs__item--active-disabled):not(
+        .neo-tabs__item--disabled
+      ):focus-within {
       cursor: pointer;
       a {
         &:before {
