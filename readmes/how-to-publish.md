@@ -63,7 +63,7 @@ Once the publishing is completed, we must then update the Design Portal with an 
 ​
 - - **TEMP**: on MacOS, you can right click on the `neo-npm-package` folder in Finder, and choose 'Compress "neo-npm-package"' from the contextual menu for the same result; then remove extraneous files and folders added by MacOS:
 
-``` 
+```
         zip -d neo-npm-package.zip __MACOSX/\*
         zip -d neo-npm-package.zip \*/.DS_Store
 ```
@@ -95,3 +95,20 @@ Once the publishing is completed, we must then update the Design Portal with an 
 - **TEMP**: Navigate to the [NEO CSS Framework JIRA project versions page](https://jira.forge.avaya.com/projects/NEO/versions/), find and click into the version you are publishing, mark it as 'Released' and date the release as necessary.
 ​
 - - Note: If you do not find the version that you are publishing among those listed, or if you have any other issues with the above step, please ping Mo or Jim
+
+## how to publish icons
+
+- Navigate to the `figma-API` sub-project folder from the repository root
+- From the command line, run the following: `yarn package-icons`
+- Navigate to the `neo-icons-npm-package` sub-folder: `cd ../neo-icons-npm-package`
+- Validate that `neo-icon-info.js`, `neo-icon-names-type.ts` and `neo-icons.css` have been appropriately updated
+- Bump the package version number in the `package.json` file there as needed
+- Ensure that you are properly logged in to the NPM network by running: `npm login`
+- Publish the new version of the `@avaya/neo-icons` package to NPM by running: `npm publish`
+- Go to the design portal project
+- In this project, make sure you pull latest from `develop` branch and are working from it
+- Create a zip file from the `neo-icons-npm-package` by following the steps above for the CSS library version
+- Delete the existing zip file (at `static/documents/icons/neo-icons.zip`)
+- Add newly created zip file to that same location
+- Update `package.json` to use the latest version of the Neo icons library (`@avaya/neo-icons`); run `npm install --force` in design portal to update `package-lock.json`
+- Open a PR into `develop`, merge, then open a PR into `main` and merge. When this second PR is merged the site will be deployed to production.

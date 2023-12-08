@@ -68,47 +68,53 @@ async function updateIconInfoFile(icons) {
     iconsArray.push(newIconInfoObject);
   }
 
-  fs.writeFile(
-    "./icons-functions/icon-utility-files/iconInfo.json",
-    JSON.stringify(iconsArray),
-    "utf-8"
-  )
+  await fs
+    .writeFile(
+      "./icons-functions/icon-utility-files/iconInfo.json",
+      JSON.stringify(iconsArray),
+      "utf-8",
+    )
     .then(function () {
       console.info("iconInfo.json created");
     })
     .catch((error) => {
-      console.error(`Error: ${error}`);
+      console.error(`Error from iconInfo.json: ${error}`);
     });
 
-  fs.writeFile(
-    "./icons-functions/icon-utility-files/iconInfo.js",
-    `// this file is auto-generated, DO NOT modify it\n export const icons = ${prettier.format(
-      JSON.stringify(iconsArray),
-      { parser: "babel" }
-    )}`,
-    "utf-8"
-  )
+  const formattedIcons = await prettier.format(JSON.stringify(iconsArray), {
+    parser: "babel",
+  });
+
+  await fs
+    .writeFile(
+      "./icons-functions/icon-utility-files/iconInfo.js",
+      `// this file is auto-generated, DO NOT modify it\n export const icons = ${formattedIcons}`,
+      "utf-8",
+    )
     .then(function () {
       console.info("iconInfo.js created");
     })
     .catch((error) => {
-      console.error(`Error: ${error}`);
+      console.error(`Error from iconInfo.js: ${error}`);
     });
+
+  const formattedIconNames = await prettier.format(JSON.stringify(iconNames), {
+    parser: "babel",
+  });
+
+  const replacedString = formattedIconNames.replace("]", "] as const");
 
   fs.writeFile(
     "../neo-icons-npm-package/neo-icon-names-type.ts",
-    prettier.format(
-      `// this file is auto-generated, DO NOT modify it\n const iconNames = ${JSON.stringify(iconNames)} as const;
+    `// this file is auto-generated, DO NOT modify it\n const iconNames = ${replacedString}
      \n export type IconNamesType = typeof iconNames[number]`,
-      { parser: "babel-ts" }
-    ),
-    "utf-8"
+    "utf-8",
   )
     .then(function () {
       console.info("neo-icon-names-type.ts created");
     })
     .catch((error) => {
-      console.error(`Error: ${error}`);
+      console.error(`Error from neo-icon-names-type.ts: ${error}`);
     });
 }
 
