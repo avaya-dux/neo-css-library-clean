@@ -3502,5 +3502,11 @@
     "bidirectional": false,
     "category": "content",
     "animated": false
+  },
+  {
+    "name": "timetable",
+    "bidirectional": true,
+    "category": "action",
+    "animated": false
   }
 ]

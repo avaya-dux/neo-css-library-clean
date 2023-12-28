@@ -16,6 +16,7 @@
 
 - Verify that the correct `SVG` file has been added to `neo-css-library/css-library/style-dictionary/properties/assets/icons/svgs` folder
 - Verify that `neo-css-library/css-library/neo/neo-scss/icons.scss` has been generated with the new icon names added
+- Update and publish icon library, see `readmes/how-to-publish.md` section "how to publish icons"
 - run css-staging and view the Icons page to ensure that the proper icon was added
 
 # how to update icons

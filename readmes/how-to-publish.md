@@ -100,10 +100,13 @@ Once the publishing is completed, we must then update the Design Portal with an 
 
 - Navigate to the `figma-API` sub-project folder from the repository root
 - From the command line, run the following: `yarn package-icons`
-- Navigate to the `neo-icons-npm-package` sub-folder: `cd ../neo-icons-npm-package`
-- Validate that `neo-icon-info.js`, `neo-icon-names-type.ts` and `neo-icons.css` have been appropriately updated
-- Bump the package version number in the `package.json` file there as needed
-- Ensure that you are properly logged in to the NPM network by running: `npm login`
+- Navigate to the `neo-icons-npm-package` sub-project folder from the repository root
+- Validate that the following files have been updated appropriately
+  - `neo-icon-info.js`
+  - `neo-icon-names-type.ts`
+  - `neo-icons.css`
+- Bump the package version number in the `neo-icons-npm-package/package.json` file
+- On the command line, ensure that you are properly logged in to the NPM network by running: `npm login`
 - Publish the new version of the `@avaya/neo-icons` package to NPM by running: `npm publish`
 - Go to the design portal project
 - In this project, make sure you pull latest from `develop` branch and are working from it

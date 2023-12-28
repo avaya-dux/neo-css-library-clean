@@ -59,11 +59,12 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 */
 
   const newIcons = [
-   "recording-pause",
+    "recording-pause",
     "input",
     "input-output",
     "output",
-    "forwarding"
+    "forwarding",
+    "timetable",
   ];
 
   return (

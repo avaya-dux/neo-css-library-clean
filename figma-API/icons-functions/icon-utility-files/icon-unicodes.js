@@ -578,5 +578,6 @@ const unicodes = {
   input: 62516,
   'input-output': 62517,
   output: 62518,
-  forwarding: 62519
+  forwarding: 62519,
+  timetable: 62520
 }; module.exports.unicodes = unicodes
