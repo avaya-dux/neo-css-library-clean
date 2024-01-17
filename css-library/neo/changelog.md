@@ -1,11 +1,11 @@
 # Changelog
 
 
-### 3.80.0
+### 3.79.0
 
 ### New Features - Recently Added
 
-- N/A
+- Added 'timetable' icon (NEO-1987)
 
 ### Breaking Changes - Needs Immediate Attention
 
@@ -18,32 +18,6 @@
 ### Bugs - Updated List
 
 - Correcterd behavior of the breadcrumb to underline on hover
-
-### 3.79.0
-
-### Breaking Changes - Needs Immediate Attention
-
-- N/A
-
-### Additional Changes - The following items have been updated. Please make these updates at your earliest convenience.
-
-- N/A
-
-### New Features - New features that have recently been added
-
-- Added 'timetable' icon (NEO-1987)
-
-### Bugs Report - List of bugs that have been updated
-
-- N/A
-
-### Sunsetting - Removing Full Support
-
-- N/A
-
-### Work In Progress - Future Updates
-
-- N/A
 
 ### 3.78.0
 
