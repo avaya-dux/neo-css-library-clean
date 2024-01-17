@@ -1,6 +1,24 @@
 # Changelog
 
 
+### 3.80.0
+
+### New Features - Recently Added
+
+- N/A
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- Correcterd behavior of the breadcrumb to underline on hover
+
 ### 3.79.0
 
 ### Breaking Changes - Needs Immediate Attention

@@ -38,6 +38,7 @@
         text-decoration: none;
         &:hover {
           color: $breadcrumbs-hover-color;
+          text-decoration: underline;
         }
       }
       &--current a {
