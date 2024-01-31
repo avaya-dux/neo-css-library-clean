@@ -8,8 +8,26 @@ import { StackedInteractiveAccordion } from "../components";
     Interactive Example of Stacked Accordion (Opens one at a time) For Design
     Portal
   </h2>
+
   <div class="custom-accordion">
     <StackedInteractiveAccordion client:load />
+  </div>
+
+  <h2>static visual disabled example</h2>
+  <div class="custom-accordion">
+    <div class="neo-accordion neo-accordion__stacked">
+      <div class="neo-accordion__item">
+        <div class="neo-accordion__header neo-accordion__header--disabled">
+          <button
+            aria-expanded="false"
+            class="neo-accordion__header-text"
+            disabled
+          >
+            Accordion 1
+          </button>
+        </div>
+      </div>
+    </div>
   </div>
 </NeoLayout>
 
