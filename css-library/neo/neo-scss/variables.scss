@@ -1046,7 +1046,7 @@ $arrow-color: var(--arrow-color);
 //     --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
 //     --checkbox-icon-color: #{$token-checkbox-icon-color};
 //     --checkbox-font-color: #{$token-checkbox-label-font-color};
-//     --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+//     --checkbox-disabled-font-color: #{$token-color-base-600};
 //     --checkbox-border-color: #{$token-checkbox-border-color};
 //     --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
 //   }
@@ -1058,7 +1058,7 @@ $arrow-color: var(--arrow-color);
   --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
   --checkbox-icon-color: #{$token-checkbox-icon-color};
   --checkbox-font-color: #{$token-checkbox-label-font-color};
-  --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+  --checkbox-disabled-font-color: #{$token-color-base-600};
   --checkbox-border-color: #{$token-checkbox-border-color};
   --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
 }
@@ -1068,7 +1068,7 @@ $arrow-color: var(--arrow-color);
 //     --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
 //     --checkbox-icon-color: #{$token-checkbox-icon-color};
 //     --checkbox-font-color: #{$token-checkbox-label-font-color};
-//     --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+//     --checkbox-disabled-font-color: #{$token-color-base-600};
 //     --checkbox-border-color: #{$token-checkbox-border-color};
 //     --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
 //   }

@@ -223,7 +223,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --checkbox-disabled-background-color: #{$token-color-blue-600};
     --checkbox-icon-color: #{$token-color-base-900};
     --checkbox-font-color: #{$token-color-base-100};
-    --checkbox-disabled-font-color: #{$token-color-base-500};
+    --checkbox-disabled-font-color: #{$token-color-base-200};
     --checkbox-border-color: #{$token-color-blue-400};
     --checkbox-disabled-border-color: #{$token-color-blue-600};
   }
@@ -235,7 +235,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
     --checkbox-disabled-background-color: #{$token-checkbox-disabled-bg-color};
     --checkbox-icon-color: #{$token-checkbox-icon-color};
     --checkbox-font-color: #{$token-checkbox-label-font-color};
-    --checkbox-disabled-font-color: #{$token-checkbox-label-disabled-font-color};
+    --checkbox-disabled-font-color: #{$token-color-base-600};
     --checkbox-border-color: #{$token-checkbox-border-color};
     --checkbox-disabled-border-color: #{$token-checkbox-disabled-border-color};
   }
