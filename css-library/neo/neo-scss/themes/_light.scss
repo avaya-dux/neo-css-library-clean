@@ -227,7 +227,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 
 :root .neo-light {
   --chip-font-color: #{$token-chips-font-color};
-  --chip-disabled-font-color: #{$token-chips-disabled-font-color};
+  --chip-disabled-font-color: #{$token-color-base-600};
   --chip-default-color: #{$token-chips-default-bg-color};
   --chip-default-border-color: #{$token-chips-default-border-color};
   --chip-default-hover-bg-color: #{$token-chips-default-hover-bg-color};

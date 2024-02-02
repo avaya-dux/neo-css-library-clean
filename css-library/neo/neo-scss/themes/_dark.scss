@@ -218,7 +218,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
 }
 :root .neo-dark {
   --chip-font-color: #{$token-color-base-100};
-  --chip-disabled-font-color: #{$token-color-base-500};
+  --chip-disabled-font-color: #{$token-color-base-200};
   --chip-default-color: #{$token-color-base-800};
   --chip-default-border-color: #{$token-color-base-500};
   --chip-default-hover-bg-color: #{$token-color-base-600};

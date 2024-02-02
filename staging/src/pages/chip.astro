@@ -1,0 +1,98 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Chip">
+  <h2>Basic Chips</h2>
+
+  <div class="chip-container">
+    <div class="neo-chip neo-chip--default">Default</div>
+
+    <div class="neo-chip neo-chip--info">Info</div>
+
+    <div class="neo-chip neo-chip--success">Success</div>
+
+    <div class="neo-chip neo-chip--alert">Alert</div>
+
+    <div class="neo-chip neo-chip--warning">Warning</div>
+  </div>
+
+  <h2>Icon Chips</h2>
+
+  <div class="chip-container">
+    <div class="neo-chip neo-chip--default neo-icon-info">Default</div>
+
+    <div class="neo-chip neo-chip--info neo-icon-info">Info</div>
+
+    <div class="neo-chip neo-chip--success neo-icon-info">Success</div>
+
+    <div class="neo-chip neo-chip--alert neo-icon-info">Alert</div>
+
+    <div class="neo-chip neo-chip--warning neo-icon-info">Warning</div>
+  </div>
+
+  <h2>Disabled version of chips</h2>
+
+  <div class="chip-container">
+    <div class="neo-chip neo-chip--default neo-chip--default--disabled">
+      Default
+    </div>
+
+    <div class="neo-chip neo-chip--info neo-chip--info--disabled">Info</div>
+
+    <div class="neo-chip neo-chip--success neo-chip--success--disabled">
+      Success
+    </div>
+
+    <div class="neo-chip neo-chip--alert neo-chip--alert--disabled">Alert</div>
+
+    <div class="neo-chip neo-chip--warning neo-chip--warning--disabled">
+      Warning
+    </div>
+  </div>
+
+  <div class="chip-container">
+    <div
+      class="neo-chip neo-chip--default neo-chip--default--disabled neo-icon-info"
+    >
+      Default
+    </div>
+
+    <div class="neo-chip neo-chip--info neo-chip--info--disabled neo-icon-info">
+      Info
+    </div>
+
+    <div
+      class="neo-chip neo-chip--success neo-chip--success--disabled neo-icon-info"
+    >
+      Success
+    </div>
+
+    <div
+      class="neo-chip neo-chip--alert neo-chip--alert--disabled neo-icon-info"
+    >
+      Alert
+    </div>
+
+    <div
+      class="neo-chip neo-chip--warning neo-chip--warning--disabled neo-icon-info"
+    >
+      Warning
+    </div>
+  </div>
+</NeoLayout>
+
+<style>
+  div.chip-container {
+    width: 30rem;
+    outline: 1px solid #ccc;
+    padding: 1rem;
+
+    display: flex;
+    justify-content: space-around;
+  }
+
+  h2 {
+    margin-top: 2rem;
+  }
+</style>
