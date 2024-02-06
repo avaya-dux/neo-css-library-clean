@@ -81,6 +81,32 @@ import NeoLayout from "../layouts/NeoLayout.astro";
       <div class="neo-input-hint">Enter your name.</div>
     </div>
   </div>
+
+  <h3>Disabled Text Input</h3>
+
+  <div class="text-input__layout">
+    <div class="neo-form-control">
+      <div class="neo-input-group">
+        <label for="input4"> Name</label>
+        <div class="neo-input-editable__wrapper">
+          <input
+            class="neo-input"
+            disabled
+            id="input4"
+            type="text"
+            value="You can't change me!"
+          />
+          <button
+            aria-label="clear input"
+            class="neo-input-edit__icon neo-icon-end"
+            disabled
+            type="button"
+          >
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </NeoLayout>
 
 <style>
