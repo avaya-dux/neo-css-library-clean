@@ -3,7 +3,7 @@
   --global-font-color: #{$token-color-base-100};
   --global-background: #{$token-color-base-900};
   --global-text-inverse-color: #{$token-color-base-900};
-  --global-disabled-color: #{$token-color-base-400};
+  --global-disabled-color: #{$token-color-base-200};
   --global-disabled-background: #{$token-color-base-800};
   --global-outline-color: #{$token-color-blue-400};
 }
@@ -337,7 +337,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --stepper-optional-font-color: #{$token-color-base-400};
   --stepper-disabled-dash-color: #{$token-color-base-600};
   --stepper-disabled-indicator-color: #{$token-color-base-500};
-  --stepper-disabled-main-text-font-color: #{$token-color-base-400};
+  --stepper-disabled-main-text-font-color: #{$token-color-base-200};
   --stepper-disabled-optional-text-font-color: #{$token-color-base-400};
 }
 
