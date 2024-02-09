@@ -22,7 +22,6 @@
 @mixin list-item--disabled {
   &--disabled {
     cursor: not-allowed;
-    opacity: $group-list-item-opacity;
     background-color: $group-list-disabled-bg-color;
     color: $group-list-disabled-hover-color;
   }
@@ -89,10 +88,10 @@
   }
   &.neo-accordion__header--disabled > .neo-accordion__header-text {
     color: $group-list-disabled-hover-color;
-    opacity: 0.5;
+    background-color: $group-list-disabled-bg-color;
+
     &:hover {
       cursor: not-allowed;
-      background-color: $accordion-body-background !important;
     }
   }
 

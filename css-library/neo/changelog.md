@@ -1,6 +1,24 @@
 # Changelog
 
 
+### 3.80.1
+
+### New Features - Recently Added
+
+- N/A
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- Updated several disabled colors to pass accessibility requirements ([NEO-2093](https://jira.forge.avaya.com/browse/NEO-2093))
+
 ### 3.80.0
 
 ### New Features - Recently Added

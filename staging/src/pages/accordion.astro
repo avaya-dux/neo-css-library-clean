@@ -15,15 +15,23 @@ import { StackedInteractiveAccordion } from "../components";
 
   <h2>static visual disabled example</h2>
   <div class="custom-accordion">
-    <div class="neo-accordion neo-accordion__stacked">
+    <div class="neo-accordion">
       <div class="neo-accordion__item">
-        <div class="neo-accordion__header neo-accordion__header--disabled">
+        <div
+          class="neo-accordion__header neo-accordion__header--disabled"
+          role="heading"
+          aria-label="Accordion Heading"
+          aria-level="2"
+        >
           <button
-            aria-expanded="false"
             class="neo-accordion__header-text"
+            aria-expanded="false"
+            aria-controls="accordion-control-:R0:"
+            id=":R0:"
             disabled
+            aria-disabled="false"
           >
-            Accordion 1
+            Accordion Example
           </button>
         </div>
       </div>

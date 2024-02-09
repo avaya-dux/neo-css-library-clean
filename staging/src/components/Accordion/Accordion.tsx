@@ -1,12 +1,13 @@
 import { useState } from "react";
 import clsx from "clsx";
+
 const AccordionItem = ({ dataItem, onToggle, active }) => {
   const { title, body } = dataItem;
   return (
     <div
       className={clsx(
         "neo-accordion__item",
-        active && "neo-accordion__item--active"
+        active && "neo-accordion__item--active",
       )}
     >
       <div className="neo-accordion__header">

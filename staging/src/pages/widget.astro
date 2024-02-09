@@ -10,4 +10,26 @@ import { BasicWidget, BorderlessWidget, WidgetWithRadios } from "../components";
   <BorderlessWidget client:load />
   <br />
   <WidgetWithRadios client:load />
+  <br />
+  <div class="neo-widget__content">
+    <div class="neo-widget__header neo-widget__header-disabled">
+      <div class="neo-widget__header-left">
+        <span
+          role="img"
+          aria-label="settings"
+          class="neo-icon-settings neo-icon--small"></span><p>
+          DISABLED: Header of widget window
+        </p>
+      </div>
+      <div class="neo-widget__header-right"></div>
+    </div>
+
+    <div class="neo-widget__body neo-widget__body neo-widget__body-disabled">
+      <p class="neo-widget__message neo-widget__message-disabled">
+        Adipisicing in consequat incididunt occaecat sit eu
+        <strong> enim ex pariatur </strong>
+        . Ad eiusmod duis incididunt reprehenderit.
+      </p>
+    </div>
+  </div>
 </NeoLayout>

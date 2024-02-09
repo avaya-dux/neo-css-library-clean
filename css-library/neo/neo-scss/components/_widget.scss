@@ -151,6 +151,12 @@
   width: auto;
   padding: $widget-heading-padding;
 
+  &:has(.neo-widget__header-disabled),
+  &:has(.neo-widget__body-disabled) {
+    background-color: $global-disabled-bg;
+    color: $global-disabled-color;
+  }
+
   .neo-widget__header {
     background-color: $global-background;
     width: 100%;
