@@ -1,6 +1,24 @@
 # Changelog
 
 
+### 3.80.2
+
+### New Features - Recently Added
+
+- N/A
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- add `cursor: not-allowed` to disabled widget component
+
 ### 3.80.1
 
 ### New Features - Recently Added

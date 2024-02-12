@@ -71,7 +71,7 @@ const options = [
   </div>,
 ];
 
-export const Select = () => {
+export const SelectExamples = () => {
   return (
     <section>
       <h2>Select Examples</h2>
@@ -128,6 +128,25 @@ export const Select = () => {
                 className="neo-input "
                 placeholder="Select One"
                 id="combobox"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div style={{ width: 300 }}>
+        <h3>Disabled</h3>
+
+        <div className="neo-input-group">
+          <label htmlFor="disabled-combobox">Choose one</label>
+
+          <div className="neo-multiselect neo-multiselect--disabled">
+            <div className="neo-multiselect-combo__header">
+              <input
+                className="neo-input "
+                placeholder="Select One"
+                id="disabled-combobox"
+                disabled
               />
             </div>
           </div>

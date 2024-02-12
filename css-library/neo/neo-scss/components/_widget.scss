@@ -155,6 +155,7 @@
   &:has(.neo-widget__body-disabled) {
     background-color: $global-disabled-bg;
     color: $global-disabled-color;
+    cursor: not-allowed;
   }
 
   .neo-widget__header {
