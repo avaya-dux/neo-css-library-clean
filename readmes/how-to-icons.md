@@ -41,6 +41,8 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 
 We do not (currently) do releases for the icons package. Thus, you do not have to merge your PR into `main` before publishing.
 
+*IMPORTANT NOTE*: the icon library is (in effect) only the typings for the icons, not the icons themselves. Thus, if you use _only_ the icon library, the icons will not show.
+
 - Navigate to the `neo-icons-npm-package` sub-project folder from the repository root.
 - `npm login`: On the command line, ensure that you are properly logged in to the NPM network.
 - `npm publish`: Publish the new version of the `@avaya/neo-icons` package to NPM.
@@ -50,4 +52,4 @@ We do not (currently) do releases for the icons package. Thus, you do not have t
 - Update all projects that use the icons library.
   - CSS Staging: ensure that it's [Icons page](https://css-staging.netlify.app/icons/) and it's snapshots are updated.
   - Neo React Library: must publish Neo React after updating the icons so that the Design Portal can display the new icons.
-  - Design Portal: must be updated _after_ Neo React Library and include updates from both Neo Icons and Neo React. Ensure that it's [Icons page](https://design.avaya.com/icons) is updated.
+  - Design Portal: must be updated _after_ Neo React Library and include updates from Neo Icons, Neo CSS, and Neo React. Ensure that it's [Icons page](https://design.avaya.com/icons) is updated.

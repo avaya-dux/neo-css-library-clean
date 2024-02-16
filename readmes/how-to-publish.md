@@ -1,4 +1,4 @@
-## how to publish
+## how to publish neo-css
 
 ### pre-publish checks (TEMP)
 
