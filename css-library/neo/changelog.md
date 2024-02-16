@@ -1,6 +1,25 @@
 # Changelog
 
 
+### 3.80.3
+
+### New Features - Recently Added
+
+- Added 'transcript' icon (NEO-2081)
+- Updated 'variable-assign' icon (NEO-2107)
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- N/A
+
 ### 3.80.2
 
 ### New Features - Recently Added

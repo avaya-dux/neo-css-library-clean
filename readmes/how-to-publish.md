@@ -50,24 +50,3 @@ Once that is complete, the next step is to add the release to our GitHub
    ​
 8. attach the binary generated from when you ran `npm pack` above (tgz file)
 9. click: "Publish release"
-
-
-## how to publish icons
-
-- Navigate to the `figma-API` sub-project folder from the repository root
-- From the command line, run the following: `yarn package-icons`
-- Navigate to the `neo-icons-npm-package` sub-project folder from the repository root
-- Validate that the following files have been updated appropriately
-  - `neo-icon-info.js`
-  - `neo-icon-names-type.ts`
-  - `neo-icons.css`
-- Bump the package version number in the `neo-icons-npm-package/package.json` file
-- On the command line, ensure that you are properly logged in to the NPM network by running: `npm login`
-- Publish the new version of the `@avaya/neo-icons` package to NPM by running: `npm publish`
-- Go to the design portal project
-- In this project, make sure you pull latest from `develop` branch and are working from it
-- Create a zip file from the `neo-icons-npm-package` by following the steps above for the CSS library version
-- Delete the existing zip file (at `static/documents/icons/neo-icons.zip`)
-- Add newly created zip file to that same location
-- Update `package.json` to use the latest version of the Neo icons library (`@avaya/neo-icons`); run `npm install --force` in design portal to update `package-lock.json`
-- Open a PR into `develop`, merge, then open a PR into `main` and merge. When this second PR is merged the site will be deployed to production.

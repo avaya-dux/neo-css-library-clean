@@ -2929,12 +2929,6 @@
     animated: false,
   },
   {
-    name: "variable-assign",
-    bidirectional: true,
-    category: "action",
-    animated: false,
-  },
-  {
     name: "sub-accounts-select",
     bidirectional: false,
     category: "account",
@@ -3061,6 +3055,18 @@
   },
   {
     name: "timetable",
+    bidirectional: true,
+    category: "action",
+    animated: false,
+  },
+  {
+    name: "transcript",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "variable-assign",
     bidirectional: true,
     category: "action",
     animated: false,

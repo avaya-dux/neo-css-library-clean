@@ -558,7 +558,6 @@ const unicodes = {
   axp: 62496,
   'loop-single': 62497,
   'loop-multiple': 62498,
-  'variable-assign': 62499,
   'sub-accounts-select': 62500,
   'sub-accounts-switch': 62501,
   'customer-journey-retrieve-data': 62502,
@@ -579,5 +578,7 @@ const unicodes = {
   'input-output': 62517,
   output: 62518,
   forwarding: 62519,
-  timetable: 62520
+  timetable: 62520,
+  transcript: 62521,
+  'variable-assign': 62522
 }; module.exports.unicodes = unicodes

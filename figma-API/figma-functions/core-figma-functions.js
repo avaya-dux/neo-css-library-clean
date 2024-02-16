@@ -1,6 +1,6 @@
 const fs = require("fs").promises;
 const fetch = require("node-fetch");
-require("dotenv").config();
+require("dotenv").config({ path: ".env.local" });
 
 // Figma API credentials Object
 
