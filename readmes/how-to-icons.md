@@ -52,4 +52,5 @@ We do not (currently) do releases for the icons package. Thus, you do not have t
 - Update all projects that use the icons library.
   - CSS Staging: ensure that it's [Icons page](https://css-staging.netlify.app/icons/) and it's snapshots are updated.
   - Neo React Library: must publish Neo React after updating the icons so that the Design Portal can display the new icons.
+    - IMPORTANT: note that `neo-icons` is only the type definitions, and `neo-css` is the actual icons. Thus, if you want `neo-react` to have both the new types and icons, you must publish and import both libraries.
   - Design Portal: must be updated _after_ Neo React Library and include updates from Neo Icons, Neo CSS, and Neo React. Ensure that it's [Icons page](https://design.avaya.com/icons) is updated.
