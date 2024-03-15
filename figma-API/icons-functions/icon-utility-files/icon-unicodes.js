@@ -580,5 +580,8 @@ const unicodes = {
   forwarding: 62519,
   timetable: 62520,
   transcript: 62521,
-  'variable-assign': 62522
+  'variable-assign': 62522,
+  'next-filled': 62523,
+  'previous-filled': 62524,
+  'pause-filled': 62525
 }; module.exports.unicodes = unicodes

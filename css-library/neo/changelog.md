@@ -1,6 +1,25 @@
 # Changelog
 
 
+### 3.80.4
+
+### New Features - Recently Added
+
+- Added 'action/next-filled', 'action/previous-filled', 'action/pause-filled' icon (NEO-2182)
+- Updated 'action/play' icon (NEO-2182)
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- N/A
+
 ### 3.80.3
 
 ### New Features - Recently Added

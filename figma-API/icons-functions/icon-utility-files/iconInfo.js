@@ -669,7 +669,6 @@
     animated: false,
   },
   { name: "away", bidirectional: false, category: "status", animated: false },
-  { name: "play", bidirectional: false, category: "action", animated: false },
   {
     name: "recall-missed",
     bidirectional: false,
@@ -3071,4 +3070,23 @@
     category: "action",
     animated: false,
   },
+  {
+    name: "next-filled",
+    bidirectional: false,
+    category: "action",
+    animated: false,
+  },
+  {
+    name: "previous-filled",
+    bidirectional: false,
+    category: "action",
+    animated: false,
+  },
+  {
+    name: "pause-filled",
+    bidirectional: false,
+    category: "action",
+    animated: false,
+  },
+  { name: "play", bidirectional: false, category: "action", animated: false },
 ];
