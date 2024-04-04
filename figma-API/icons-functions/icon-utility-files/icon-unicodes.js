@@ -583,5 +583,7 @@ const unicodes = {
   'variable-assign': 62522,
   'next-filled': 62523,
   'previous-filled': 62524,
-  'pause-filled': 62525
+  'pause-filled': 62525,
+  'select-single-condition': 62526,
+  'global-variables': 62527
 }; module.exports.unicodes = unicodes

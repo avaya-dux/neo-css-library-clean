@@ -1,6 +1,24 @@
 # Changelog
 
 
+### 3.80.5
+
+### New Features - Recently Added
+
+- Added 'action/select-single-condition', 'action/global-varianles' icon (NEO-2193)
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- N/A
+
 ### 3.80.4
 
 ### New Features - Recently Added

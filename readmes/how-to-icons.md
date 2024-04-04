@@ -4,7 +4,8 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 
 ## one time setup
 
-- Ensure your `neo-css-library/figma-API/.env.local` file has a valid [Figma Access Token](https://www.figma.com/developers/api#access-tokens).
+- Ensure your `neo-css-library/figma-API/.env.local` file has a valid [Figma Access Token](https://www.figma.com/developers/api#access-tokens). The entry should be:
+  - FIGMA=your-token-string-goes-here
 - You must also have an NPMJS login and be a part of the [avaya organization](https://www.npmjs.com/settings/avaya/packages).
 
 ## how to add icons

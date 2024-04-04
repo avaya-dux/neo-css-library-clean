@@ -669,6 +669,7 @@
     animated: false,
   },
   { name: "away", bidirectional: false, category: "status", animated: false },
+  { name: "play", bidirectional: false, category: "action", animated: false },
   {
     name: "recall-missed",
     bidirectional: false,
@@ -3088,5 +3089,16 @@
     category: "action",
     animated: false,
   },
-  { name: "play", bidirectional: false, category: "action", animated: false },
+  {
+    name: "select-single-condition",
+    bidirectional: false,
+    category: "action",
+    animated: false,
+  },
+  {
+    name: "global-variables",
+    bidirectional: false,
+    category: "action",
+    animated: false,
+  },
 ];

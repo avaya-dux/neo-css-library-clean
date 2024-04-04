@@ -3532,5 +3532,17 @@
     "bidirectional": false,
     "category": "action",
     "animated": false
+  },
+  {
+    "name": "select-single-condition",
+    "bidirectional": false,
+    "category": "action",
+    "animated": false
+  },
+  {
+    "name": "global-variables",
+    "bidirectional": false,
+    "category": "action",
+    "animated": false
   }
 ]
