@@ -58,11 +58,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-  const newIcons = [
-    "next-filled",
-    "previous-filled",
-    "pause-filled",
-  ];
+  const newIcons = ["global-variables", "select-single-condition"];
 
   return (
     <>
