@@ -23,12 +23,6 @@
       color: $stepper-optional-font-color;
     }
   }
-
-  &.neo-stepper__item--complete {
-    p:first-child {
-      font-weight: $stepper-main-text-complete-font-weight;
-    }
-  }
 }
 
 @mixin neo-stepper-button-cursor {
@@ -65,11 +59,20 @@
       border-radius: $stepper-indicator-border-radius;
       position: relative;
       margin: 0 auto 0;
-      // z-index: 1;
       z-index: map-get($indexes-map, "stepper");
     }
 
+    &.neo-stepper__item--active::after {
+      background-color: $stepper-disabled-dash-color;
+      height: $stepper-disabled-dash-border-width;
+    }
+
     &.neo-stepper__item--complete {
+      &::after {
+        height: $stepper-dash-border-width;
+        background-color: $stepper-background-color;
+      }
+
       &::before {
         font-family: "updated-neo-icons";
         content: $token-icons-neo-icon-check;
@@ -80,6 +83,14 @@
         justify-content: center;
         display: flex;
       }
+
+      p:first-child {
+        font-weight: $stepper-main-text-complete-font-weight;
+      }
+    }
+
+    &.neo-stepper__item--editable:before {
+      content: "\f19b"; // edit icon
     }
 
     &.neo-stepper__item--disabled {
@@ -92,22 +103,24 @@
       }
     }
 
-    &:not(:last-child):after {
+    &:not(:last-child)::after {
       content: "";
-      height: $stepper-dash-border-width;
-      background-color: $stepper-background-color;
       position: relative;
       top: 12px;
       order: -1;
 
       // add half the width of the circle and add desired spacing
       left: calc(50% + 12px + 8px);
+      [dir="rtl"] & {
+        right: calc(50% + 12px + 8px);
+        left: unset;
+      }
 
       // subtract full width of circle and twice the desired spacing
       width: calc(100% - 24px - 16px);
     }
 
-    &.neo-stepper__item--disabled-next:not(:last-child):after {
+    &.neo-stepper__item--disabled-next:not(:last-child)::after {
       height: $stepper-disabled-dash-border-width;
       background-color: $stepper-disabled-dash-color;
     }
@@ -135,15 +148,20 @@
       border: 5px solid $stepper-background-color;
       border-radius: $stepper-indicator-border-radius;
       position: relative;
-      // z-index: 1;
       z-index: map-get($indexes-map, "stepper-vertical");
       flex: 0 0 $stepper-indicator-size;
       top: $stepper-dash-spacing;
     }
 
+    &.neo-stepper--vertical__item--active::after {
+      width: $stepper-disabled-dash-border-width;
+      background-color: $stepper-disabled-dash-color;
+    }
+
     &.neo-stepper--vertical__item--complete {
-      p:first-child {
-        font-weight: $stepper-main-text-font-weight;
+      &::after {
+        width: $stepper-dash-border-width;
+        background-color: $stepper-background-color;
       }
 
       &::before {
@@ -157,6 +175,14 @@
         justify-content: center;
         display: flex;
       }
+
+      p:first-child {
+        font-weight: $stepper-main-text-complete-font-weight;
+      }
+    }
+
+    &.neo-stepper__item--editable:before {
+      content: "\f19b"; // edit icon
     }
 
     &.neo-stepper--vertical__item--disabled {
@@ -170,18 +196,21 @@
       }
     }
 
-    &:not(:last-child):after {
+    &:not(:last-child)::after {
       content: "";
-      width: $stepper-dash-border-width;
-      background-color: $stepper-background-color;
       position: absolute;
       left: 0;
       top: calc(#{$stepper-indicator-size} + 16px);
       bottom: 0;
       transform: translateX(11px);
+      [dir="rtl"] & {
+        right: 0;
+        left: unset;
+        transform: translateX(-11px);
+      }
     }
 
-    &.neo-stepper--vertical__item--disabled-next:not(:last-child):after {
+    &.neo-stepper--vertical__item--disabled-next:not(:last-child)::after {
       width: $stepper-disabled-dash-border-width;
       background-color: $stepper-disabled-dash-color;
     }
@@ -189,5 +218,9 @@
 
   &__content {
     margin-left: $stepper-text-spacing;
+    [dir="rtl"] & {
+      margin-left: unset;
+      margin-right: $stepper-text-spacing;
+    }
   }
 }

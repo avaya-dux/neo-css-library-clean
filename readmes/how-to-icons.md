@@ -14,7 +14,8 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 - `yarn build-icons {iconname}`: this will pull information about the specified icon and query you about how to categorize it. Examples:
   - `yarn build-icons after-call-work`
   - `yarn build-icons after-call-work settings`
-- `yarn package-icons`: I (Joe) have no idea what this does... packages for publish maybe?
+- `yarn package-icons`: This generates the icon data for the neo-css and neo-icons
+- `yarn update-icon-info`: This generates/updates the TS icons file `neo-icons-npm-package/neo-icon-names-type.ts`
 - Go back to root (up one directory).
 - `yarn all`: build and test all packages
 - Ensure that the following files have been updated appropriately:
@@ -43,6 +44,18 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 We do not (currently) do releases for the icons package. Thus, you do not have to merge your PR into `main` before publishing.
 
 *IMPORTANT NOTE*: the icon library is (in effect) only the typings for the icons, not the icons themselves. Thus, if you use _only_ the icon library, the icons will not show.
+
+> If you have just completed the "how to add icons" instructions, you can skip these "build steps" directions (as they are also done as part of the "how to add icons" instructions) and go straight to the "publish steps" directions.
+
+### build steps
+
+- Navigate to the root of the project
+- `yarn all`: build all the things
+- `cd ./figma-API`: Navigate to Figma API sub-project
+- `yarn package-icons`: This generates the icon data for the neo-css and neo-icons
+- `yarn update-icon-info`: This generates/updates the TS icons file `neo-icons-npm-package/neo-icon-names-type.ts`
+
+### publish steps
 
 - Navigate to the `neo-icons-npm-package` sub-project folder from the repository root.
 - `npm login`: On the command line, ensure that you are properly logged in to the NPM network.

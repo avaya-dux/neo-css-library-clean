@@ -13,7 +13,7 @@
 
 ### Additional Changes - Update at Earliest Convenience
 
-- N/A
+- Updated Stepper components styling (NEO-1721)
 
 ### Bugs - Updated List
 
