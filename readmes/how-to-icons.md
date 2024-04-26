@@ -68,3 +68,8 @@ We do not (currently) do releases for the icons package. Thus, you do not have t
   - Neo React Library: must publish Neo React after updating the icons so that the Design Portal can display the new icons.
     - IMPORTANT: note that `neo-icons` is only the type definitions, and `neo-css` is the actual icons. Thus, if you want `neo-react` to have both the new types and icons, you must publish and import both libraries.
   - Design Portal: must be updated _after_ Neo React Library and include updates from Neo Icons, Neo CSS, and Neo React. Ensure that it's [Icons page](https://design.avaya.com/icons) is updated.
+    - You'll also need to update the Design Portal's `neo-icons.zip`, which is the file served when the user chooses to manually download the icons. Here are the steps:
+      - In the Neo CSS Library, compress the `icons` folder: `css-library/style-dictionary/properties/assets/icons`
+      - Rename the compressed file to: `neo-icons.zip`
+      - Move that file to the Design Portal by replacing the file with the same name in the `public` folder.
+      - Ensure that your PR with this update includes the information about what was updated as the file update alone will not inform the reviewer.
