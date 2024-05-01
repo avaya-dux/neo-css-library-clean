@@ -58,7 +58,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-  const newIcons = ["global-variables", "select-single-condition"];
+  const newIcons = ["cherry-pick", "global-variables", "select-single-condition"];
 
   return (
     <>

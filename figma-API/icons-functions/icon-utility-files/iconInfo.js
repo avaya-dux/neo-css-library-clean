@@ -3101,4 +3101,10 @@
     category: "action",
     animated: false,
   },
+  {
+    name: "cherry-pick",
+    bidirectional: false,
+    category: "action",
+    animated: false,
+  },
 ];

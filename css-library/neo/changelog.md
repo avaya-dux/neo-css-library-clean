@@ -1,5 +1,22 @@
 # Changelog
 
+### 3.80.6
+
+### New Features - Recently Added
+
+- Added 'cherry-pick' icon (NEO-2234)
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- N/A
 
 ### 3.80.5
 

@@ -9,7 +9,9 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 - You must also have an NPMJS login and be a part of the [avaya organization](https://www.npmjs.com/settings/avaya/packages).
 
 ## how to add icons
-
+- Make sure you are synced up to latest main branch and create a new branch
+- In `staging/src/components/icons/Icons.tsx` add the new icons names to the newIcons string array.
+- Example: const newIcons = ["cherry-pick", "global-variables", "select-single-condition"];
 - Navigate to the `figma-API` sub-project folder from the repository root
 - `yarn build-icons {iconname}`: this will pull information about the specified icon and query you about how to categorize it. Examples:
   - `yarn build-icons after-call-work`
@@ -21,11 +23,12 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 - Ensure that the following files have been updated appropriately:
   - `/neo-css-library/figma-API/icons-functions/icon-utility-files/icon-unicodes.js`
   - `/neo-css-library/figma-API/icons-functions/icon-utility-files/iconInfo.js`
-  - `/neo-css-library/figma-API/icons-functions/icon-utility-files/iconInfo.json`: you will need to manually format this file
+  - `/neo-css-library/figma-API/icons-functions/icon-utility-files/iconInfo.json`: you will need to manually format this file (shirt + cmd + f)
   - `/neo-css-library/css-library/neo/neo-scss/icons.scss`
 - Verify that the correct `SVG` file(s) have been added/updated in: `neo-css-library/css-library/style-dictionary/properties/assets/icons/svgs`
 - Update `css-library/neo/changelog.md`.
 - Bump the package version number in the `neo-icons-npm-package/package.json` file (if necessary).
+
 
 ## how to update an icon
 
@@ -45,9 +48,9 @@ We do not (currently) do releases for the icons package. Thus, you do not have t
 
 *IMPORTANT NOTE*: the icon library is (in effect) only the typings for the icons, not the icons themselves. Thus, if you use _only_ the icon library, the icons will not show.
 
-> If you have just completed the "how to add icons" instructions, you can skip these "build steps" directions (as they are also done as part of the "how to add icons" instructions) and go straight to the "publish steps" directions.
-
 ### build steps
+
+> If you have just completed the "how to add icons" instructions, you can skip these "build steps" directions (as they are also done as part of the "how to add icons" instructions) and go straight to the "publish steps" directions.
 
 - Navigate to the root of the project
 - `yarn all`: build all the things
@@ -65,6 +68,8 @@ We do not (currently) do releases for the icons package. Thus, you do not have t
 
 - Update all projects that use the icons library.
   - CSS Staging: ensure that it's [Icons page](https://css-staging.netlify.app/icons/) and it's snapshots are updated.
+  - In `staging/package.json` update the @avaya/neo-icons devDependency so it matches the version that you just published.
+  - CD to staging subfolder and run yarn install to get the latest icons. Then follow the steps on the how-to-publish.md document to publish the neo-css-library.
   - Neo React Library: must publish Neo React after updating the icons so that the Design Portal can display the new icons.
     - IMPORTANT: note that `neo-icons` is only the type definitions, and `neo-css` is the actual icons. Thus, if you want `neo-react` to have both the new types and icons, you must publish and import both libraries.
   - Design Portal: must be updated _after_ Neo React Library and include updates from Neo Icons, Neo CSS, and Neo React. Ensure that it's [Icons page](https://design.avaya.com/icons) is updated.

@@ -585,5 +585,6 @@ const unicodes = {
   'previous-filled': 62524,
   'pause-filled': 62525,
   'select-single-condition': 62526,
-  'global-variables': 62527
+  'global-variables': 62527,
+  'cherry-pick': 62528
 }; module.exports.unicodes = unicodes
