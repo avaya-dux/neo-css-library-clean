@@ -350,7 +350,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --stepper-background-color: #{$token-stepper-background-color};
   --stepper-main-font-color: #{$token-stepper-main-text-font-color};
   --stepper-optional-font-color: #{$token-stepper-optional-text-font-color};
-  --stepper-disabled-dash-color: #{$token-stepper-disabled-dash-color};
+  --stepper-disabled-dash-color: #{$token-color-base-400};
   --stepper-disabled-indicator-color: #{$token-stepper-disabled-indicator-color};
   --stepper-disabled-main-text-font-color: #{$token-color-base-600};
   --stepper-disabled-optional-text-font-color: #{$token-stepper-disabled-optional-text-font-color};

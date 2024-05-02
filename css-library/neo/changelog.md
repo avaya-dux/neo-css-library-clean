@@ -1,5 +1,24 @@
 # Changelog
 
+### 3.81.0
+
+### New Features - Recently Added
+
+- N/A
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- Updated helper text font colors to be more a11e
+- Updated Stepper line color (NEO-1601)
+
 ### 3.80.7
 
 ### New Features - Recently Added
@@ -303,6 +322,7 @@
 ### Work In Progress - Future Updates
 
 - N/A
+
 ### 3.73.0
 
 ### Breaking Changes - Needs Immediate Attention
@@ -492,6 +512,7 @@
 ### Work In Progress - Future Updates
 
 - N/A
+
 ### 3.69.2
 
 ### Breaking Changes - Needs Immediate Attention
@@ -625,6 +646,7 @@
 ### Bugs Report - List of bugs that have been updated
 
 - N/A
+
 ### Sunsetting - Removing Full Support
 
 - Q3 of 2023 - Data visualization color library will be eliminated as it will become a single library with the rest of Neo colors
