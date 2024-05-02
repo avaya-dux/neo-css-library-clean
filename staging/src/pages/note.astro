@@ -1,0 +1,312 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Note">
+  <div>
+    <p>Note that these are pure HTML and CSS examples.</p>
+    <p>
+      They do not have JS interactability and the character count will thus not
+      update, nor will any of the buttons be interactable.
+    </p>
+  </div>
+
+  <div class="sections">
+    <section>
+      <h3>Typical note</h3>
+
+      <div class="neo-note">
+        <div class="neo-note__title">
+          <div>Title</div>
+
+          <div class="neo-note__title__actions">
+            <div
+              class="neo-dropdown neo-dropdown--left"
+              role="group"
+              aria-label="menu actions"
+            >
+              <button
+                aria-label="menu actions"
+                class="neo-btn-square neo-btn-square--compact neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-ellipses-horizontal"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="neo-note__content neo-note__content--secondary">
+          <div
+            class="neo-note__content__author"
+            id="note-content-196a2d2f-aef0-4dc4-944d-f56f3640e8a2"
+          >
+            Author
+          </div>
+
+          Content
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>A note sent from "self"</h3>
+
+      <div class="neo-note">
+        <div class="neo-note__title">
+          <div>Title</div>
+
+          <div class="neo-note__title__actions">
+            <div
+              class="neo-dropdown neo-dropdown--left"
+              role="group"
+              aria-label="menu actions"
+            >
+              <button
+                aria-label="menu actions"
+                class="neo-btn-square neo-btn-square--compact neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-ellipses-horizontal"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="neo-note__content neo-note__content--primary">
+          <div
+            class="neo-note__content__author"
+            id="note-content-196a2d2f-aef0-4dc4-944d-f56f3640e8a2"
+          >
+            Me
+          </div>
+
+          Content
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Edit mode</h3>
+
+      <div class="neo-note">
+        <div class="neo-note__title">
+          <div>Title</div>
+
+          <div class="neo-note__title__actions"></div>
+        </div>
+
+        <div class="neo-note__content neo-note__content--secondary">
+          <div
+            class="neo-note__content__author"
+            id="note-content-196a2d2f-aef0-4dc4-944d-f56f3640e8a2"
+          >
+            Author
+          </div>
+
+          <div
+            data-testid="NeoInputWrapper-root"
+            class="neo-form-control neo-form-control--textarea"
+          >
+            <div
+              data-testid="NeoInputWrapper-group-root"
+              class="neo-input-group"
+            >
+              <textarea
+                class="neo-input"
+                id=":r2:"
+                aria-describedby=":r2:-counter"
+                aria-labelledby="note-content-196a2d2f-aef0-4dc4-944d-f56f3640e8a2"
+              ></textarea>
+
+              <div class="neo-input-textarea__helper">
+                <div class="neo-input-textarea__counter" id=":r2:-counter">
+                  500 remaining / 500
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="neo-note__content__actions">
+            <button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--default"
+              data-badge=""
+            >
+              Cancel
+            </button>
+            <button
+              class="neo-btn neo-btn--compact neo-btn-primary neo-btn-primary--default"
+              data-badge=""
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Edit mode for "self"</h3>
+
+      <div class="neo-note">
+        <div class="neo-note__title">
+          <div>Title</div>
+
+          <div class="neo-note__title__actions"></div>
+        </div>
+
+        <div class="neo-note__content neo-note__content--primary">
+          <div
+            class="neo-note__content__author"
+            id="note-content-196a2d2f-aef0-4dc4-944d-f56f3640e8a2"
+          >
+            Me
+          </div>
+
+          <div
+            data-testid="NeoInputWrapper-root"
+            class="neo-form-control neo-form-control--textarea"
+          >
+            <div
+              data-testid="NeoInputWrapper-group-root"
+              class="neo-input-group"
+            >
+              <textarea
+                class="neo-input"
+                id=":r2:"
+                aria-describedby=":r2:-counter"
+                aria-labelledby="note-content-196a2d2f-aef0-4dc4-944d-f56f3640e8a2"
+              ></textarea>
+
+              <div class="neo-input-textarea__helper">
+                <div class="neo-input-textarea__counter" id=":r2:-counter">
+                  500 remaining / 500
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="neo-note__content__actions">
+            <button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--default"
+              data-badge=""
+            >
+              Cancel
+            </button>
+            <button
+              class="neo-btn neo-btn--compact neo-btn-primary neo-btn-primary--default"
+              data-badge=""
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>Over the limit example</h3>
+
+      <div class="neo-note">
+        <div class="neo-note__title">
+          <div>Title</div>
+
+          <div class="neo-note__title__actions"></div>
+        </div>
+
+        <div class="neo-note__content neo-note__content--secondary">
+          <div
+            class="neo-note__content__author"
+            id="note-content-0b9f0ca1-4e70-4780-9464-fb62b9eed562"
+          >
+            Author
+          </div>
+
+          <div
+            data-testid="NeoInputWrapper-root"
+            class="neo-form-control neo-form-control--error neo-form-control--textarea"
+          >
+            <div
+              data-testid="NeoInputWrapper-group-root"
+              class="neo-input-group"
+            >
+              <textarea
+                class="neo-input"
+                id=":rn:"
+                aria-describedby=":rn:-hint :rn:-counter"
+                aria-labelledby="note-content-0b9f0ca1-4e70-4780-9464-fb62b9eed562"
+                >Content asdf</textarea
+              >
+
+              <div class="neo-input-textarea__helper">
+                <div class="neo-input-hint" id=":rn:-hint">Over the limit.</div>
+
+                <div class="neo-input-textarea__counter" id=":rn:-counter">
+                  2 over / 10
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="neo-note__content__actions">
+            <button
+              class="neo-btn neo-btn--compact neo-btn-secondary neo-btn-secondary--default"
+              data-badge=""
+            >
+              Cancel
+            </button>
+
+            <button
+              class="neo-btn neo-btn--compact neo-btn-primary neo-btn-primary--default"
+              data-badge=""
+            >
+              Save
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h3>With &ldquo;history&rdquo; example</h3>
+
+      <div class="neo-note">
+        <div class="neo-note__title">
+          <div>Title</div>
+
+          <div class="neo-note__title__actions">
+            <div
+              class="neo-dropdown neo-dropdown--left"
+              role="group"
+              aria-label="menu actions"
+            >
+              <button
+                aria-label="menu actions"
+                class="neo-btn-square neo-btn-square--compact neo-btn-square-tertiary neo-btn-square-tertiary--info neo-icon-ellipses-horizontal"
+              ></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="neo-note__content neo-note__content--secondary">
+          <div
+            class="neo-note__content__author"
+            id="note-content-0b9f0ca1-4e70-4780-9464-fb62b9eed562"
+          >
+            Author
+          </div>
+
+          Content asdf
+
+          <div class="neo-note__content__subtext neo-body-small">
+            <p>Edited: Author</p><p>May 1, 2024 | 11:05 AM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</NeoLayout>
+
+<style>
+  .sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+
+    margin-bottom: 10rem;
+  }
+</style>

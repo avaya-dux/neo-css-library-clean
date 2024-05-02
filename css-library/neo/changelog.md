@@ -4,7 +4,7 @@
 
 ### New Features - Recently Added
 
-- N/A
+- Added initial styling for Note component (NEO-2212)
 
 ### Breaking Changes - Needs Immediate Attention
 
@@ -23,6 +23,24 @@
 
 ### New Features - Recently Added
 
+- Added initial styling for Note component (NEO-2212)
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- Updated helper text font colors to be more a11e
+
+### 3.80.7
+
+### New Features - Recently Added
+
 - Added 'cherry-pick' icon (NEO-2234)
 
 ### Breaking Changes - Needs Immediate Attention
@@ -36,24 +54,6 @@
 ### Bugs - Updated List
 
 - N/A
-
-### 3.81.0
-
-### New Features - Recently Added
-
-- N/A
-
-### Breaking Changes - Needs Immediate Attention
-
-- N/A
-
-### Additional Changes - Update at Earliest Convenience
-
-- N/A
-
-### Bugs - Updated List
-
-- Updated helper text font colors to be more a11e
 
 ### 3.80.5
 
