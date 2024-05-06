@@ -1,5 +1,23 @@
 # Changelog
 
+### 3.81.1
+
+### New Features - Recently Added
+
+- N/A
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- Remove Panel Tabs classes.
+
 ### 3.81.0
 
 ### New Features - Recently Added
