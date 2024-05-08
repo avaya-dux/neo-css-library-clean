@@ -18,8 +18,7 @@ from the root of the directory
 4. Ensure all supporting files exist (`colors/*`, `fonts/*`, `icons/*`) inside neo-npm-package/neo/dist/css
 5. copy-paste the contents of `css-library/neo/changelog.md` to `neo-npm-package/CHANGELOG.md`
 6. `cd neo-npm-package`: navigate to the root of the packaging sub-project
-7. `npm pack`: packages the contents of `neo-npm-package` into a .tgz (delete previous .tgz files)
-8. `npm publish`: creates and publishes a tarball (.tgz) to our registry
+7. `npm publish`: creates and publishes a tarball (.tgz) to our registry
 
 
 ### post-publish steps

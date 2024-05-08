@@ -7,7 +7,7 @@
     line-height: $stepper-main-text-line-height;
   }
 
-  p:last-child {
+  p:last-child:not(:only-child) {
     color: $stepper-optional-font-color;
     font-size: $stepper-optional-text-font-size;
     font-weight: $stepper-optional-text-font-weight;
@@ -15,11 +15,13 @@
     line-height: $stepper-optional-text-line-height;
   }
 
-  &.neo-stepper__item--disabled {
+  &.neo-stepper__item--disabled,
+  &.neo-stepper--vertical__item--disabled {
     p:first-child {
       color: $stepper-disabled-main-text-font-color;
+      font-weight: $stepper-optional-text-font-weight;
     }
-    p:last-child {
+    p:last-child:not(:only-child) {
       color: $stepper-optional-font-color;
     }
   }
@@ -94,7 +96,6 @@
 
     &.neo-stepper__item--disabled {
       &::before {
-        color: white;
         background-color: transparent;
         border: $stepper-disabled-indicator-border-width
           $stepper-dash-border-style $stepper-disabled-indicator-color;
@@ -151,6 +152,11 @@
       top: $stepper-dash-spacing;
     }
 
+    p:only-child {
+      position: relative;
+      top: 10px;
+    }
+
     &.neo-stepper--vertical__item--active::after {
       width: $stepper-disabled-dash-border-width;
       background-color: $stepper-disabled-dash-color;
@@ -185,11 +191,9 @@
 
     &.neo-stepper--vertical__item--disabled {
       &::before {
-        color: white;
         background-color: transparent;
         border: $stepper-disabled-indicator-border-width
           $stepper-dash-border-style $stepper-disabled-indicator-color;
-        border-radius: $stepper-indicator-border-radius;
         cursor: not-allowed;
       }
     }

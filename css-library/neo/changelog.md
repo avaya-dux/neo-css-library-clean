@@ -1,5 +1,23 @@
 # Changelog
 
+### 3.81.2
+
+### New Features - Recently Added
+
+- N/A
+
+### Breaking Changes - Needs Immediate Attention
+
+- N/A
+
+### Additional Changes - Update at Earliest Convenience
+
+- N/A
+
+### Bugs - Updated List
+
+- Fix Stepper styling issues.
+
 ### 3.81.1
 
 ### New Features - Recently Added

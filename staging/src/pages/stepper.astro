@@ -4,27 +4,69 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 
 <NeoLayout title="Stepper">
   <h2>Horizontal Linear Stepper</h2>
-  <div class="container">
-    <div class="neo-stepper">
-      <span class="neo-stepper__item neo-stepper__item--complete">
-        <div><p>Step 1</p><p>This is step 1</p></div>
-      </span>
-      <span class="neo-stepper__item neo-stepper__item--complete">
-        <div><p>Step 2</p><p>This is step 2</p></div>
-      </span>
-      <span class="neo-stepper__item neo-stepper__item--active">
-        <div><p>Step 3</p><p>This is step 3</p></div>
-      </span>
-      <span
-        class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
-      >
-        <div><p>Step 4</p><p>This is step 4</p></div>
-      </span>
-      <span
-        class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
-      >
-        <div><p>Step 5</p><p>This is step 5</p></div>
-      </span>
+  <div>
+    <div class="container">
+      <div class="neo-stepper">
+        <span class="neo-stepper__item neo-stepper__item--complete">
+          <div><p>Step 1</p><p>This is step 1</p></div>
+        </span>
+        <span class="neo-stepper__item neo-stepper__item--complete">
+          <div><p>Step 2</p><p>This is step 2</p></div>
+        </span>
+        <span class="neo-stepper__item neo-stepper__item--active">
+          <div><p>Step 3</p><p>This is step 3</p></div>
+        </span>
+        <span
+          class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
+        >
+          <div><p>Step 4</p><p>This is step 4</p></div>
+        </span>
+        <span
+          class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
+        >
+          <div><p>Step 5</p><p>This is step 5</p></div>
+        </span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="neo-stepper">
+        <span class="neo-stepper__item neo-stepper__item--complete">
+          <div><p>Step 1</p></div>
+        </span>
+        <span class="neo-stepper__item neo-stepper__item--complete">
+          <div><p>Step 2</p></div>
+        </span>
+        <span class="neo-stepper__item neo-stepper__item--active">
+          <div><p>Step 3</p></div>
+        </span>
+        <span
+          class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
+        >
+          <div><p>Step 4</p></div>
+        </span>
+        <span
+          class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
+        >
+          <div><p>Step 5</p></div>
+        </span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="neo-stepper">
+        <span class="neo-stepper__item neo-stepper__item--complete"></span>
+        <span class="neo-stepper__item neo-stepper__item--complete"></span>
+        <span class="neo-stepper__item neo-stepper__item--active"></span>
+        <span
+          class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
+        >
+        </span>
+        <span
+          class="neo-stepper__item neo-stepper__item--disabled neo-stepper__item--disabled-next"
+        >
+        </span>
+      </div>
     </div>
   </div>
 
@@ -70,43 +112,110 @@ import NeoLayout from "../layouts/NeoLayout.astro";
   </div>
 
   <h2>Vertical Linear Stepper</h2>
-  <div class="container">
-    <div class="neo-stepper--vertical">
-      <span
-        class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
-      >
-        <div class="neo-stepper--vertical__content">
-          <p>Step 1</p><p>This is step 1</p>
-        </div>
-      </span>
-      <span
-        class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
-      >
-        <div class="neo-stepper--vertical__content">
-          <p>Step 2</p><p>This is step 2</p>
-        </div>
-      </span>
-      <span
-        class="neo-stepper--vertical__item neo-stepper--vertical__item--active"
-      >
-        <div class="neo-stepper--vertical__content">
-          <p>Step 3</p><p>This is step 3</p>
-        </div>
-      </span>
-      <span
-        class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
-      >
-        <div class="neo-stepper--vertical__content">
-          <p>Step 4</p><p>This is step 4</p>
-        </div>
-      </span>
-      <span
-        class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
-      >
-        <div class="neo-stepper--vertical__content">
-          <p>Step 5</p><p>This is step 5</p>
-        </div>
-      </span>
+  <div class="vertical-title-and-description-examples">
+    <div class="container">
+      <div class="neo-stepper--vertical">
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 1</p><p>This is step 1</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 2</p><p>This is step 2</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--active"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 3</p><p>This is step 3</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 4</p><p>This is step 4</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 5</p><p>This is step 5</p>
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="neo-stepper--vertical">
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 1</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 2</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--active"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 3</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 4</p>
+          </div>
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
+        >
+          <div class="neo-stepper--vertical__content">
+            <p>Step 5</p>
+          </div>
+        </span>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="neo-stepper--vertical">
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
+        >
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--complete"
+        >
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--active"
+        >
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
+        >
+        </span>
+        <span
+          class="neo-stepper--vertical__item neo-stepper--vertical__item--disabled neo-stepper--vertical__item--disabled-next"
+        >
+        </span>
+      </div>
     </div>
   </div>
 
@@ -159,6 +268,10 @@ import NeoLayout from "../layouts/NeoLayout.astro";
 </NeoLayout>
 
 <style>
+  div.vertical-title-and-description-examples {
+    display: flex;
+  }
+
   div.container {
     outline: 1px solid #ccc;
     padding: 2rem;
