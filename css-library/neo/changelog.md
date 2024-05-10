@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.3
+
+### New Features - Recently Added
+
+- Add Panel Tabs styles (NEO-2212)
+
 ### 3.81.2
 
 ### New Features - Recently Added
