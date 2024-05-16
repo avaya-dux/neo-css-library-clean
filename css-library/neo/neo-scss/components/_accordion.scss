@@ -41,13 +41,13 @@
       right: $accordion-icon-offset;
       text-align: center;
       top: 50%;
-      transform: translate(0, -50%) $accordion-icon-animation;
-      transition: $accordion-icon-transition;
+      transform: translate(0, -50%) rotate(-90deg);
+      transition: transform $token-interactivity-motion-fast
+        $global-transition-timing;
 
       @include rtl-selector {
         left: $accordion-icon-offset;
         right: auto;
-        transform: translate(0, -50%) rotate(180deg);
       }
     }
 
@@ -123,11 +123,10 @@
 
   &__item--active {
     #{$parent-selector}__header #{$parent-selector}__header-text::after {
-      transform: translate(0, -50%) $accordion-active-icon-animation-left-down;
+      transform: translate(0, -50%) rotate(90deg);
       @include rtl-selector {
         left: $accordion-icon-offset;
         right: auto;
-        transform: translate(0, -50%) rotate(270deg);
       }
     }
     #{$parent-selector}__body {

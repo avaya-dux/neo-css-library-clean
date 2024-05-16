@@ -5,6 +5,7 @@
 ### Bugs - Updated List
 
 - Fix font-family for Button and Accordion components (NEO-2249)
+- Update chevron position for Accordion component (NEO-2232)
 
 ### 3.81.3
 
