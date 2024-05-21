@@ -2,6 +2,10 @@
 
 ### 3.81.4
 
+### New Features - Recently Added
+
+- Add new icon: `communication/omni-sdk` (NEO-2274)
+
 ### Bugs - Updated List
 
 - Fix font-family for Button and Accordion components (NEO-2249)

@@ -11,8 +11,8 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 ## how to add icons
 - Make sure you are synced up to latest main branch and create a new branch
 - In `staging/src/components/icons/Icons.tsx` add the new icons names to the newIcons string array.
-- Example: const newIcons = ["cherry-pick", "global-variables", "select-single-condition"];
-- Navigate to the `figma-API` sub-project folder from the repository root
+  - Example: `const newIcons = ["cherry-pick", "global-variables", "select-single-condition"];`
+- `cd figma-API`: Navigate to the `figma-API` sub-project folder from the repository root
 - `yarn build-icons {iconname}`: this will pull information about the specified icon and query you about how to categorize it. Examples:
   - `yarn build-icons after-call-work`
   - `yarn build-icons after-call-work settings`
@@ -26,6 +26,7 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
   - `/neo-css-library/figma-API/icons-functions/icon-utility-files/iconInfo.json`: you will need to manually format this file (shirt + cmd + f)
   - `/neo-css-library/css-library/neo/neo-scss/icons.scss`
 - Verify that the correct `SVG` file(s) have been added/updated in: `neo-css-library/css-library/style-dictionary/properties/assets/icons/svgs`
+- Format file: `~/figma-API/icons-functions/icon-utility-files/iconInfo.json`
 - Update `css-library/neo/changelog.md`.
 - Bump the package version number in the `neo-icons-npm-package/package.json` file (if necessary).
 

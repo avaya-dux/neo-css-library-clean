@@ -3107,4 +3107,10 @@
     category: "action",
     animated: false,
   },
+  {
+    name: "omni-sdk",
+    bidirectional: true,
+    category: "communication",
+    animated: false,
+  },
 ];
