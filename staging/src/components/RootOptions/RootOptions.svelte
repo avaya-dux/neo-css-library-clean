@@ -1,7 +1,7 @@
 <script lang="ts">
-  import clsx from "clsx";
-  let dir: "auto" | "ltr" | "rtl" = "auto";
-  let mode: "default" | "light" | "dark" | "dynamic" = "default";
+import clsx from "clsx";
+$: mode = "default";
+$: dir = "auto";
 </script>
 
 <main

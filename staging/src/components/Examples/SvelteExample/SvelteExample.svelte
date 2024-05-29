@@ -1,7 +1,7 @@
 <script>
-  import Counter from "./Counter.svelte";
-  let count = 0;
-  $: isMoreThanOne = count > 1;
+import Counter from "./Counter.svelte";
+$: count = 0;
+$: isMoreThanOne = count > 1;
 </script>
 
 <Counter bind:count />

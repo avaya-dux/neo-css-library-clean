@@ -6,7 +6,7 @@
 
 > If snapshots need to be updated, refer to this [howto](../playwright/how-to-update-snapshots.md)
 
-> For linting we use [ESLint](https://eslint.org/) and [Prettier](https://prettier.io/).
+> For linting and formatting we use [Biome JS](https://github.com/biomejs/biome).
 
 > You can see an overview of [the libraries structure here](https://app.codesee.io/maps/public/267b4490-d552-11ec-bab4-dbed0529e43a). Generated via [CodeSee](https://www.codesee.io/).
 

@@ -8,17 +8,17 @@
 
 <script lang="ts">
 export default {
-  name: "VueExample",
-  data() {
-    return { count: 0 };
-  },
-  methods: {
-    increment() {
-      this.count++;
-    },
-    decrement() {
-      this.count--;
-    },
-  },
+	name: "VueExample",
+	data() {
+		return { count: 0 };
+	},
+	methods: {
+		increment() {
+			this.count++;
+		},
+		decrement() {
+			this.count--;
+		},
+	},
 };
 </script>
