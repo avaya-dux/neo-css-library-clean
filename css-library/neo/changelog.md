@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.5
+
+### Additional Changes - Update at Earliest Convenience
+
+- Table: checkboxes will now always show if they exist (instead of showing on hover and when checked) (NEO-2114)
+
 ### 3.81.4
 
 ### New Features - Recently Added
