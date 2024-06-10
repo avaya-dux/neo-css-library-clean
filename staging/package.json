@@ -8,7 +8,7 @@
     "dev": "astro dev",
     "format": "biome format --write ./src",
     "lint": "biome ci ./src",
-    "style-check": "biome check --apply ./src",
+    "style-check": "biome check --write ./src",
     "clean": "rm -rf coverage dist",
     "github": "yarn && yarn clean && yarn lint && yarn build",
     "all": "yarn style-check && yarn build"
