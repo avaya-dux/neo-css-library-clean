@@ -38,7 +38,7 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: end;
+    align-items: flex-end;
 
     .neo-note__title__actions {
       .neo-btn-square-tertiary.neo-icon-ellipses-horizontal {
@@ -68,7 +68,7 @@
 
     .neo-note__content__actions {
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       gap: 8px;
 
       margin-top: 8px;
