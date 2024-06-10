@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.6
+
+### Additional Changes - Update at Earliest Convenience
+
+- Pagination: fix darm mode hover issue (NEO-2290)
+
 ### 3.81.5
 
 ### Additional Changes - Update at Earliest Convenience

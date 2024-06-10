@@ -10,13 +10,15 @@
 @mixin pagination-select {
   .neo-select {
     margin-right: 8px;
-    > select {
+
+    >select {
       width: auto;
     }
   }
 
   .neo-multiselect {
     margin-right: 8px;
+
     @include rtl-selector {
       margin-left: 8px;
       margin-right: 0px;
@@ -24,15 +26,18 @@
 
     .neo-multiselect__header {
       width: auto;
+
       & ul li {
         padding: 8px 8px;
       }
     }
+
     .neo-multiselect-combo__header {
       .neo-input {
         max-width: 32px;
       }
     }
+
     .neo-multiselect__content {
       width: auto;
       left: auto;
@@ -44,12 +49,15 @@
 @mixin pagination-input {
   .neo-input {
     max-width: 40px;
+
     &:not(last-child) {
       margin-right: 32px;
+
       @include rtl-selector {
         margin-left: 32px;
       }
     }
+
     &:focus {
       margin: -1px 31px -1px 0px;
     }
@@ -68,6 +76,7 @@
     @include pagination-item--hover;
     @include pagination-item--disabled;
     @include pagination-item--active;
+
     &--more {
       align-self: flex-end;
     }
@@ -79,9 +88,11 @@
     color: $pagination-color;
     min-width: $pagination-min-width-item;
     text-decoration: none;
+
     @include rtl-selector {
       transform: rotate(180deg);
     }
+
     &:hover {
       background-color: $pagination-hover-background-color;
       color: $pagination-active-color;
@@ -102,6 +113,7 @@
 }
 
 @mixin pagination-item--disabled {
+
   &--disabled,
   &--disabled:hover,
   &--disabled:active,
@@ -130,10 +142,12 @@
     @extend %pagination;
     list-style-type: none;
     margin: $pagination-margin 0;
+
     & .neo-btn-square {
       width: 36px;
       height: 36px;
     }
+
     & li {
       height: 36px;
       width: 36px;
@@ -169,7 +183,7 @@
 .neo-pagination {
   @extend %pagination;
 
-  > .neo-pagination__select {
+  >.neo-pagination__select {
     width: auto;
   }
 
@@ -184,29 +198,28 @@
 .neo-pagination__arrow-btn {
   color: $global-text-color;
   border: none;
+
   &:focus {
     outline: $global-outline-color auto 2px;
   }
-  background-image: linear-gradient(
-    50deg,
+
+  background-image: linear-gradient(50deg,
     $button-tertiary-hover-background-color 0%,
     $button-tertiary-hover-background-color 50%,
     $button-secondary-background-color 50%,
-    $button-secondary-background-color 100%
-  );
+    $button-secondary-background-color 100%);
   background-repeat: no-repeat;
   background-size: 300%;
   background-position: 100% 0%;
-  transition: background-position $global-transition-duration
-    $global-transition-timing;
-  transition-delay: 0s, 0.15s;
+  transition: background-position $global-transition-duration $global-transition-timing;
+  transition-delay: 0s,
+  0.15s;
 
   &:hover {
     transition-property: background-position, background-color, color;
     transition-timing-function: $global-transition-timing;
     transition-duration: $global-transition-duration;
     transition-delay: 0s, 0.15s;
-    color: #000000;
     background-color: $button-tertiary-hover-background-color;
     cursor: pointer;
     background-position: 0% 100%;
@@ -217,6 +230,7 @@
     background-image: none;
     color: $token-color-base-400;
     background-color: transparent;
+
     &:hover {
       cursor: not-allowed;
       box-shadow: none;
@@ -225,6 +239,7 @@
       background-color: transparent;
     }
   }
+
   &:before {
     @include rtl-selector {
       transform: rotate(180deg);
@@ -246,9 +261,11 @@
   .neo-form-control {
     margin: 0px;
     min-height: auto;
+
     .neo-input-group--inline {
       flex-direction: row;
       align-items: center;
+
       label {
         padding: 0px;
         margin-right: 8px;
@@ -257,6 +274,7 @@
       }
     }
   }
+
   @include pagination-select;
   @include pagination-input;
 }
