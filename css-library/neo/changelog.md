@@ -5,6 +5,7 @@
 ### Additional Changes - Update at Earliest Convenience
 
 - Pagination: fix darm mode hover issue (NEO-2290)
+- Note: added `word-break: break-word; hyphens: auto;` to `.neo-note__content` (NEO-2284)
 
 ### 3.81.5
 

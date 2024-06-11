@@ -5,12 +5,14 @@
 
   --note-title-actions-icon-color: var(--neo-color-base-800);
 }
+
 :root .neo-dark .neo-note {
   --note-primary-background-color: var(--neo-color-blue-800);
   --note-secondary-background-color: var(--neo-color-base-800);
 
   --note-title-actions-icon-color: var(--neo-color-base-150);
 }
+
 @media (prefers-color-scheme: light) {
   :root .neo-dynamic .neo-note {
     --note-primary-background-color: var(--neo-color-blue-100);
@@ -19,6 +21,7 @@
     --note-title-actions-icon-color: var(--neo-color-base-800);
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root .neo-dynamic .neo-note {
     --note-primary-background-color: var(--neo-color-blue-800);
@@ -33,8 +36,8 @@
     min-height: 24px;
     padding-bottom: 4px;
 
-    font-size: 12px; /* neo-body-small */
-    line-height: 16px; /* neo-body-small */
+    font-size: 12px;
+    line-height: 16px;
 
     display: flex;
     justify-content: space-between;
@@ -50,10 +53,12 @@
   .neo-note__content {
     padding: 12px 16px;
     border-radius: 12px;
+    word-break: break-word;
 
     &.neo-note__content--primary {
       background-color: var(--note-primary-background-color);
     }
+
     &.neo-note__content--secondary {
       background-color: var(--note-secondary-background-color);
     }
@@ -61,9 +66,9 @@
     .neo-note__content__author {
       margin-bottom: 4px;
 
-      font-size: 12px; /* neo-body-small */
-      line-height: 16px; /* neo-body-small */
-      font-weight: 600; /* neo-semibold */
+      font-size: 12px;
+      line-height: 16px;
+      font-weight: 600;
     }
 
     .neo-note__content__actions {

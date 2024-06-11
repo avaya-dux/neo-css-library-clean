@@ -298,6 +298,57 @@ import NeoLayout from "../layouts/NeoLayout.astro";
         </div>
       </div>
     </section>
+
+    <section>
+      <h3>Limited space with long words</h3>
+
+      <div class="example-wrapper">
+        <div class="neo-note">
+          <div class="neo-note__title">
+            <div>A sentence with long words.</div>
+          </div>
+
+          <div class="neo-note__content neo-note__content--secondary">
+            <div
+              class="neo-note__content__author"
+              id="note-content-0b9f0ca1-4e70-4780-9464-fb62b9eed562"
+            >
+              Author
+            </div>
+
+            Antidisestablishmentarianism is a concept that
+            pneumonoultramicroscopicsilicovolcanoconiosis sufferers might find
+            challenging to discuss at length.
+
+            <div class="neo-note__content__subtext neo-body-small">
+              <p>Edited: Author</p><p>May 1, 2024 | 11:05 AM</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="neo-note">
+          <div class="neo-note__title">
+            <div>A sentence with a URL in it.</div>
+          </div>
+
+          <div class="neo-note__content neo-note__content--secondary">
+            <div
+              class="neo-note__content__author"
+              id="note-content-0b9f0ca1-4e70-4780-9464-fb62b9eed562"
+            >
+              Author
+            </div>
+
+            Please follow the link to the keyboard interactions page:
+            https://design.avaya.com/accessibility/keyboard-interactions-page#kb-sidenavigation
+
+            <div class="neo-note__content__subtext neo-body-small">
+              <p>Edited: Author</p><p>May 1, 2024 | 11:05 AM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </NeoLayout>
 
@@ -308,5 +359,14 @@ import NeoLayout from "../layouts/NeoLayout.astro";
     gap: 1rem;
 
     margin-bottom: 10rem;
+  }
+
+  .sections .example-wrapper {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .sections .example-wrapper > div {
+    width: 200px;
   }
 </style>
