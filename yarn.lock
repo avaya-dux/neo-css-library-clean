@@ -95,10 +95,10 @@
     "@vue/compiler-sfc" "^3.4.27"
     vite-plugin-vue-devtools "^7.2.1"
 
-"@avaya/neo-icons@1.8.9":
-  version "1.8.9"
-  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.8.9.tgz#8bbdacf3de4716d8ad5646fd34b00cb29cb8dde2"
-  integrity sha512-p6rHYwSyTFjEUeEI4Np8HBCXK6JHNtAGn3DY+ei9PkawphwzWUAV4iy+rPMYio5ias5Cnxk+1hpePycOjljrtA==
+"@avaya/neo-icons@1.8.11":
+  version "1.8.11"
+  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.8.11.tgz#f44b990153f5023e4cc404df84cdea975947f87b"
+  integrity sha512-dPCoIqEV+3ksjt1sSYryu/1nBDskJzeACt2LCjVcHXo3xB1Lu2DxD76EVarojcK+WWg7yI6pHDeNvMVB0JtUGQ==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.23.4":
   version "7.23.4"
@@ -7884,6 +7884,11 @@ node-domexception@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/node-domexception/-/node-domexception-1.0.0.tgz"
   integrity sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==
+
+node-fetch@2.6.1:
+  version "2.6.1"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.6.1.tgz#045bd323631f76ed2e2b55573394416b639a0052"
+  integrity sha512-V4aYg89jEoVRxRb2fJdAg8FHvI7cEyYdVAh94HH0UIK8oJxUfkjlDQN9RbMx+bEjP7+ggMiFRprSti032Oipxw==
 
 node-fetch@3.3.2:
   version "3.3.2"

@@ -58,7 +58,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-	const newIcons = ["omni-sdk"];
+	const newIcons = ["add-filled"];
 
 	return (
 		<>

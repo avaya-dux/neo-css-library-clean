@@ -587,5 +587,6 @@ const unicodes = {
   'select-single-condition': 62526,
   'global-variables': 62527,
   'cherry-pick': 62528,
-  'omni-sdk': 62529
+  'omni-sdk': 62529,
+  'add-filled': 62530
 }; module.exports.unicodes = unicodes

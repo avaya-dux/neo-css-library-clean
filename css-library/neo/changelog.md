@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.7
+
+### New Features - Recently Added
+
+- Added new icon: `content/add-filled`
+
 ### 3.81.6
 
 ### Additional Changes - Update at Earliest Convenience

@@ -3113,4 +3113,10 @@
     category: "communication",
     animated: false,
   },
+  {
+    name: "add-filled",
+    bidirectional: true,
+    category: "content",
+    animated: false,
+  },
 ];
