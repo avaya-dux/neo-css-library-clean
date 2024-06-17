@@ -5,6 +5,7 @@
 ### New Features - Recently Added
 
 - Added new icon: `content/add-filled`
+- Updated Panel Tabs component to allow for in place notifications (NEO-2295, NEO-2296)
 
 ### 3.81.6
 

@@ -104,12 +104,6 @@
   & p {
     margin: 0px;
   }
-  @include rtl-selector {
-    left: $notification-padding-x;
-    right: initial;
-    margin-right: initial;
-    margin-left: 0.5rem;
-  }
 }
 
 @mixin notification-elevated {
@@ -187,25 +181,16 @@
   }
 
   &__close {
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-right: 0.5rem;
-    @include rtl-selector {
-      margin-left: 0.5rem;
-    }
-    font-size: 2rem;
-    line-height: 1;
-    display: flex;
-    padding: 0px 0px 1rem 0px;
-
-    & > button {
+    &>button {
       background: 0 0;
       border: none;
+
       &:hover {
         cursor: pointer;
       }
+
       &::before {
-        font-size: 1.5rem;
+        font-size: 1rem;
       }
     }
   }

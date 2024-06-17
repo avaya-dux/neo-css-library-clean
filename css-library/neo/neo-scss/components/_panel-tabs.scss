@@ -3,14 +3,17 @@
   --paneltabs-border-color: var(--neo-color-base-200);
   --paneltabs-border-radius: 4px;
 }
+
 :root .neo-dark .neo-paneltabs {
   --paneltabs-border-color: var(--neo-color-base-600);
 }
+
 @media (prefers-color-scheme: light) {
   :root .neo-dynamic .neo-paneltabs {
     --paneltabs-border-color: var(--neo-color-base-200);
   }
 }
+
 @media (prefers-color-scheme: dark) {
   :root .neo-dynamic .neo-paneltabs {
     --paneltabs-border-color: var(--neo-color-base-600);
@@ -30,6 +33,7 @@
 
     border-left: none;
     border-right: 1px solid var(--paneltabs-border-color);
+
     [dir="rtl"] & {
       border-right: none;
       border-left: 1px solid var(--paneltabs-border-color);
@@ -88,6 +92,7 @@
 
     .neo-paneltabs__tabs-expand {
       margin-top: auto;
+
       [dir="rtl"] & {
         transform: rotate(-180deg);
       }
@@ -100,5 +105,9 @@
         }
       }
     }
+  }
+
+  .neo-notification {
+    margin-bottom: 0;
   }
 }
