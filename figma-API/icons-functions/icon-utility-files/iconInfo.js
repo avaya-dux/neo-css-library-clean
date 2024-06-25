@@ -3119,4 +3119,10 @@
     category: "content",
     animated: false,
   },
+  {
+    name: "translate",
+    bidirectional: false,
+    category: "content",
+    animated: false,
+  },
 ];

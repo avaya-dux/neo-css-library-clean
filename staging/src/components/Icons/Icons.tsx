@@ -58,7 +58,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-	const newIcons = ["add-filled"];
+	const newIcons = ["translate"];
 
 	return (
 		<>

@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.8
+
+### New Features - Recently Added
+
+- Added new icon: `content/translate`
+
 ### 3.81.7
 
 ### New Features - Recently Added

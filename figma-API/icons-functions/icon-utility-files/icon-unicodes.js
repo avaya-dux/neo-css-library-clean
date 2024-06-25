@@ -588,5 +588,6 @@ const unicodes = {
   'global-variables': 62527,
   'cherry-pick': 62528,
   'omni-sdk': 62529,
-  'add-filled': 62530
+  'add-filled': 62530,
+  translate: 62531
 }; module.exports.unicodes = unicodes
