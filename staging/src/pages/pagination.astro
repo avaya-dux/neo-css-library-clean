@@ -83,20 +83,41 @@ h3 {
         class="neo-btn-square neo-pagination__arrow-btn neo-icon-arrow-right"
         aria-label="Go to next page"></button>
     </nav>
-    <div class="neo-form-control">
-      <div class="neo-input-group neo-input-group--inline">
-        <label for="pageSize">Show:</label><div class="neo-select">
-          <select
-            id="pageSize"
-            name="size"
-            class="neo-icon-chevron-down ng-pristine ng-valid ng-touched"
-            aria-label="Results per page"
-          >
-            <option value="5"> 5</option>
-            <option value="10"> 10</option>
-            <option value="20"> 20</option>
-            <option value="30"> 30</option>
-          </select>
+    <div class="neo-form--inline">
+      <div class="neo-form-control">
+        <div class="neo-input-group neo-input-group--inline">
+          <label for="pageSize">Show:</label>
+          <div class="neo-select">
+            <select
+              id="pageSize"
+              name="size"
+              class="neo-icon-chevron-down ng-pristine ng-valid ng-touched"
+              aria-label="Results per page"
+            >
+              <option value="5"> 5</option>
+              <option value="10"> 10</option>
+              <option value="20"> 20</option>
+              <option value="30"> 30</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="neo-form-control">
+        <div class="neo-input-group neo-input-group--inline">
+          <label for="pageSizeUp">Show:</label>
+          <div class="neo-select neo-select--expanded">
+            <select
+              id="pageSizeUp"
+              name="size"
+              class="neo-icon-chevron-down ng-pristine ng-valid ng-touched"
+              aria-label="Results per page"
+            >
+              <option value="5"> 5</option>
+              <option value="10"> 10</option>
+              <option value="20"> 20</option>
+              <option value="30"> 30</option>
+            </select>
+          </div>
         </div>
       </div>
     </div>

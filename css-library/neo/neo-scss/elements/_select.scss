@@ -88,7 +88,7 @@
   }
 }
 
-@mixin neo-select-arrow {
+@mixin neo-select-arrow($select-expand-icon: $token-icons-neo-icon-chevron-down) {
   &--disabled:not(.neo-select--multiple)::after {
     color: $select-disabled-color;
   }
@@ -190,6 +190,10 @@
   @include neo-select-spinner;
 }
 
+.neo-select.neo-select--expanded {
+  @include neo-select-arrow($select-expand-icon: $token-icons-neo-icon-chevron-up);
+}
+
 @mixin neo-multiselect-arrow(
   $arrow-icon: $dropdown-expand-icon,
   $color: $global-text-color,
@@ -202,7 +206,7 @@
     vertical-align: middle;
     cursor: pointer;
     position: absolute;
-    right: $token-input-padding-y;
+    right: $token-input-padding-x;
     background-color: $input-background-color;
 
     @include rtl-selector {
@@ -396,16 +400,21 @@
     border: $select-border-width $select-border-style $select-border-color;
     @include neo-multiselect-arrow();
 
-    padding: $token-input-padding-y $token-input-padding-x * 2
+    padding: $token-input-padding-y $token-input-padding-x * 2 + 4px
       $token-input-padding-y $token-input-padding-x;
     @include rtl-selector {
       padding: $token-input-padding-y $token-input-padding-x
-        $token-input-padding-y $token-input-padding-x * 2;
+        $token-input-padding-y $token-input-padding-x * 2 + 4px;
     }
     font-size: $select-font-size;
     line-height: $select-line-height;
     letter-spacing: $select-letter-spacing;
   }
+
+  & .neo-multiselect__header.neo-multiselect__header--expanded {
+    @include neo-multiselect-arrow($arrow-icon: $token-icons-neo-icon-chevron-up);
+  }
+
   & .neo-multiselect-combo__header {
     border-radius: $select-border-radius;
     display: flex;
@@ -439,6 +448,10 @@
     letter-spacing: $select-letter-spacing;
   }
 
+  & .neo-multiselect-combo__header.neo-multiselect-combo__header--expanded {
+    @include neo-multiselect-arrow($arrow-icon: $token-icons-neo-icon-chevron-up);
+  }
+  
   @include neo-multiselect-states;
   @include neo-multiselect-content;
 }

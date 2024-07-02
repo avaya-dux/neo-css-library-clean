@@ -89,7 +89,12 @@ export const PaginationMultiSelect = () => {
 							onClick={() => setPaginationSelectActive(!paginationSelectActive)}
 							onKeyUp={() => setPaginationSelectActive(!paginationSelectActive)}
 						>
-							<div className="neo-multiselect__header">
+							<div
+								className={clsx(
+									"neo-multiselect__header",
+									paginationSelectActive && "neo-multiselect__header--expanded",
+								)}
+							>
 								{paginationSelectValue}
 							</div>
 							<div className="neo-multiselect__content">

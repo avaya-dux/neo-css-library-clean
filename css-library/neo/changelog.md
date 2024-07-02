@@ -1,5 +1,12 @@
 # Changelog
 
+### 3.81.9
+
+### Bugs - Updated List
+
+- Fix icon of chevron when Select is expanded
+- Fix positoning of chevron icon
+
 ### 3.81.8
 
 ### New Features - Recently Added
