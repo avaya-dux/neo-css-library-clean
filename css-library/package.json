@@ -16,7 +16,7 @@
   "devDependencies": {
     "@parcel/transformer-sass": "2.12.0",
     "axios": "1.7.2",
-    "cypress": "13.12.0",
+    "cypress": "13.13.0",
     "cypress-image-snapshot": "4.0.1",
     "dotenv": "16.4.5",
     "esm": "3.2.25",
@@ -26,7 +26,7 @@
     "lodash": "4.17.21",
     "node-fetch": "3.3.2",
     "parcel": "2.12.0",
-    "postcss": "8.4.38",
+    "postcss": "8.4.39",
     "prettier": "3.3.2",
     "replace-in-file": "7.2.0",
     "shx": "0.3.4",
