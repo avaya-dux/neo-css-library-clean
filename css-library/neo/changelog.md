@@ -4,8 +4,7 @@
 
 ### Bugs - Updated List
 
-- Fix icon of chevron when Select is expanded
-- Fix positoning of chevron icon
+- Fixed the appearance and positioning of chevron in the Select component (NEO-2262)
 
 ### 3.81.8
 
