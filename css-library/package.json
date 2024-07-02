@@ -30,7 +30,7 @@
     "prettier": "3.3.2",
     "replace-in-file": "7.2.0",
     "shx": "0.3.4",
-    "style-dictionary": "3.9.2",
+    "style-dictionary": "4.0.0",
     "susy": "3.0.8",
     "webfonts-generator": "0.4.0"
   }
