@@ -1,0 +1,92 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Sheet">
+  <h2>Sheet Examples</h2>
+
+  <section class="small-sheet-area">
+    <div
+      aria-labelledby="sheet-label-1"
+      role="dialog"
+      class="neo-sheet neo-slide sheet-horizontal-slide-in-shim"
+    >
+      <div class="neo-sheet__header">
+        <div class="neo-sheet__header--left" id="sheet-label-1">
+          Sheet header (title)
+        </div>
+
+        <div class="neo-sheet__header--right">
+          <button
+            class="neo-btn neo-btn--default neo-btn-secondary neo-btn-secondary--default"
+          >
+            Action 1
+          </button>
+
+          <button
+            class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+          >
+            Action 2
+          </button>
+        </div>
+      </div>
+
+      <div>Content goes here</div>
+    </div>
+
+    <div
+      aria-labelledby="sheet-label-2"
+      role="dialog"
+      class="neo-sheet neo-slide sheet-horizontal-slide-in-shim"
+    >
+      <div class="neo-sheet__header">
+        <div class="neo-sheet__header--left" id="sheet-label-2">
+          Long header example: Lorem ipsum dolor sit amet, consectetur
+          adipiscing elit.
+        </div>
+
+        <div class="neo-sheet__header--right">
+          <button
+            class="neo-btn neo-btn--default neo-btn-secondary neo-btn-secondary--default"
+          >
+            Action 1
+          </button>
+
+          <button
+            class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+          >
+            Action 2
+          </button>
+        </div>
+      </div>
+
+      <p>Sheet content.</p>
+
+      <p>
+        Fusce tortor enim, tincidunt quis sodales non, molestie vitae ex. Nullam
+        diam erat, tempor quis massa vel, efficitur hendrerit augue. Sed at
+        pulvinar eros, eu vehicula odio. Pellentesque nec augue semper, faucibus
+        neque id, tincidunt purus. In lectus diam, dictum vestibulum augue a,
+        vestibulum fringilla sapien. Pellentesque eget tortor odio. Sed vel
+        accumsan justo. Sed dignissim mauris eget ornare hendrerit. Duis nunc
+        diam, interdum sed cursus sed, interdum eu mi. Fusce id purus mollis
+        massa iaculis aliquam id finibus nunc. Sed pretium efficitur ultrices.
+        Mauris ut ante libero. Cras velit lectus, sagittis et felis dignissim,
+        faucibus interdum mauris. Phasellus facilisis ac ipsum fermentum
+        consectetur.
+      </p>
+    </div>
+  </section>
+</NeoLayout>
+
+<style>
+  section.small-sheet-area {
+    width: 500px;
+    border: 1px solid #ccc;
+    padding: 1em;
+
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+</style>

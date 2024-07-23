@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.10
+
+### Bugs - Updated List
+
+- Added spacing in the Sheet header between sections, and added spacing between the header and body sections. (NEO-2262)
+
 ### 3.81.9
 
 ### Bugs - Updated List
