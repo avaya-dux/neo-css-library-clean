@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.11
+
+### New Features - Recently Added
+
+- Added new icon: `content/ai`
+
 ### 3.81.10
 
 ### Bugs - Updated List

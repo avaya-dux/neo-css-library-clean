@@ -95,10 +95,10 @@
     "@vue/compiler-sfc" "^3.4.29"
     vite-plugin-vue-devtools "^7.3.0"
 
-"@avaya/neo-icons@1.8.12":
-  version "1.8.12"
-  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.8.12.tgz#aa73ae33dd32507351680e1e4d6b53967f983a4e"
-  integrity sha512-HJFsaJme7m3SMEMEtOuIiOnHVenUAZ7HVR1X2vagqPWhfgDkOq1agFszu2vhCPwUnO6HZIyCkGXrIbxTly1+VQ==
+"@avaya/neo-icons@1.8.13":
+  version "1.8.13"
+  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.8.13.tgz#5e2bf23983dc2587c7cb1edc3dd433e16ccd251a"
+  integrity sha512-9hvug4QR5IXYcafzto8ETxEvMoadCD/AfDjClJEfyf51DIrCZ3cAyOWMBmRLdzA8Qi0EV8IXHm+qvGXuEKz/6Q==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.23.4":
   version "7.23.4"
@@ -246,7 +246,7 @@
     "@jridgewell/trace-mapping" "^0.3.17"
     jsesc "^2.5.1"
 
-"@babel/generator@^7.24.10", "@babel/generator@^7.24.8", "@babel/generator@^7.24.9":
+"@babel/generator@^7.24.10":
   version "7.24.10"
   resolved "https://registry.yarnpkg.com/@babel/generator/-/generator-7.24.10.tgz#a4ab681ec2a78bbb9ba22a3941195e28a81d8e76"
   integrity sha512-o9HBZL1G2129luEUlG1hB4N/nlYNWHnpwlND9eOMclRqqu1YDy2sSYVCFUZwl8I1Gxh+QSRrP2vD7EpUmFVXxg==
@@ -7366,11 +7366,6 @@ locate-path@^5.0.0:
   integrity sha512-t7hw9pI+WvuwNJXwk5zVHpyhIqzg2qTlklJOf0mVxGSbe3Fp2VieZcduNYjaLDoy6p9uGpQEGWG87WpMKlNq8g==
   dependencies:
     p-locate "^4.1.0"
-
-lodash.debounce@^4.0.8:
-  version "4.0.8"
-  resolved "https://registry.yarnpkg.com/lodash.debounce/-/lodash.debounce-4.0.8.tgz#82d79bff30a67c4005ffd5e2515300ad9ca4d7af"
-  integrity sha512-FT1yDzDYEoYWhnSGnpE/4Kj1fLZkDFyqRb7fNt6FdYOSxlUWAtp42Eh6Wb0rGIv/m9Bgo7x4GhQbm5Ys4SG5ow==
 
 lodash.debounce@^4.0.8:
   version "4.0.8"

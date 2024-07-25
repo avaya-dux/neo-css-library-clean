@@ -589,5 +589,6 @@ const unicodes = {
   'cherry-pick': 62528,
   'omni-sdk': 62529,
   'add-filled': 62530,
-  translate: 62531
+  translate: 62531,
+  ai: 62532
 }; module.exports.unicodes = unicodes
