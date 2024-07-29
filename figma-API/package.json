@@ -13,7 +13,7 @@
   "license": "UNLICENSED",
   "devDependencies": {
     "@babel/core": "7.24.9",
-    "@babel/preset-env": "7.24.8",
+    "@babel/preset-env": "7.25.0",
     "axios": "1.7.2",
     "babel-jest": "29.7.0",
     "dotenv": "16.4.5",
