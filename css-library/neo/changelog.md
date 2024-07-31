@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.12
+
+### New Features - Recently Added
+
+- Added Neo SplitButton component (NEO-2336)
+
 ### 3.81.11
 
 ### New Features - Recently Added

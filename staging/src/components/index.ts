@@ -13,6 +13,7 @@ export * from "./Dropdown";
 export * from "./Panel";
 export * from "./Colors";
 export * from "./Pagination";
+export * from "./SplitButton";
 
 // svelte
 export * from "./RootOptions";
