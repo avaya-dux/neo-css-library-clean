@@ -3126,4 +3126,10 @@
     animated: false,
   },
   { name: "ai", bidirectional: true, category: "content", animated: false },
+  {
+    name: "filter-applied",
+    bidirectional: false,
+    category: "content",
+    animated: false,
+  },
 ];

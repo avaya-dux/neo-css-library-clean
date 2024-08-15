@@ -30,6 +30,9 @@ The "source of truth" for icons is Figma. Thus, we pull icon information from Fi
 - Verify that the correct `SVG` file(s) have been added/updated in: `neo-css-library/css-library/style-dictionary/properties/assets/icons/svgs`
 - Update `css-library/neo/changelog.md`.
 - Bump the package version number in the `neo-icons-npm-package/package.json` file (if necessary).
+- Update CSS Staging with new icons package version (`staging/package.json`).
+- Open CSS Staging in localhost and confirm that the new icon is displayed correctly.
+- Update Playwright's Icon page snapshots.
 
 ## how to update an icon
 

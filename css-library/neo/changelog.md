@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.13
+
+### New Features - Recently Added
+
+- Added new icon: `content/filter-applied`
+
 ### 3.81.12
 
 ### New Features - Recently Added

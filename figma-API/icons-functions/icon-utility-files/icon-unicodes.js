@@ -590,5 +590,6 @@ const unicodes = {
   'omni-sdk': 62529,
   'add-filled': 62530,
   translate: 62531,
-  ai: 62532
+  ai: 62532,
+  'filter-applied': 62533
 }; module.exports.unicodes = unicodes

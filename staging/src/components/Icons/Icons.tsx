@@ -58,7 +58,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-	const newIcons = ["ai"];
+	const newIcons = ["filter-applied"];
 
 	return (
 		<>
@@ -67,7 +67,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 				style={{
 					display: "flex",
 					justifyContent: "space-around",
-					margin: "2rem 0;",
+					margin: "2rem 0",
 				}}
 			>
 				{newIcons.map((icon, index) => (
