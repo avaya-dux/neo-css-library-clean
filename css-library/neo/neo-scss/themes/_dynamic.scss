@@ -212,7 +212,7 @@ $button-color-event-rgb-dark: 241, 241, 241;
 }
 @media (prefers-color-scheme: light) {
   :root .neo-dynamic {
-    --arrow-outer-color: #{$token-color-base-900};
+    --arrow-outer-color: #{$token-tooltip-background-color};
     --arrow-color: #{$token-color-base-0};
   }
 }

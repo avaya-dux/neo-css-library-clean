@@ -991,7 +991,7 @@ $neo-button-group-offset: 1px;
 // }
 // @media (prefers-color-scheme: light) {
 :root {
-  --arrow-outer-color: #{$token-color-base-900};
+  --arrow-outer-color: #{$token-tooltip-background-color};
   --arrow-color: #{$token-color-base-0};
 }
 //   .neo-light {

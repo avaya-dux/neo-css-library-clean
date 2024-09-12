@@ -92,7 +92,7 @@ $button-color-alert-rgb-dark: 229, 105, 96;
   --button-color-event-rgb: #{$button-color-event-rgb-light};
 }
 :root .neo-light {
-  --arrow-outer-color: #{$token-color-base-900};
+  --arrow-outer-color: #{$token-tooltip-background-color};
   --arrow-color: #{$token-color-base-0};
 }
 

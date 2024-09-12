@@ -1,0 +1,140 @@
+---
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Tooltip">
+  <h3 style="margin-bottom: 5rem;">Tooltips with positioning</h3>
+  <div class="tooltip-wrapper">
+
+      <div style="margin-left: 3rem;" class="neo-tooltip neo-tooltip--up neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Top tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Appears on top of button</div>
+      </div>
+
+      <div style="margin-left: 10rem;" class="neo-tooltip neo-tooltip--left neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Left tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Appears to the left of button</div>
+      </div>
+
+      <div style="margin-left: 1rem;" class="neo-tooltip neo-tooltip--down neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Bottom tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Appears below the button</div>
+      </div>
+
+      <div class="neo-tooltip neo-tooltip--right neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Right tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Appears to the right of button</div>
+      </div>
+  </div>
+
+  <div class="tooltip-wrapper">
+      <div class="neo-tooltip neo-tooltip--up-right neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Top Right tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Displays to the top right of button</div>
+      </div>
+
+      <div class="neo-tooltip neo-tooltip--down-right neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Bottom right tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Displays to the bottom right of button</div>
+      </div>
+
+      <div style="margin-left: 3rem;" class="neo-tooltip neo-tooltip--up-left neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Top left tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Displays to the Top left of button</div>
+      </div>
+
+      <div style="margin-left: 7rem;" class="neo-tooltip neo-tooltip--down-left neo-tooltip--onhover neo-tooltip--active">
+        <button
+          aria-describedby="tooltip-div-id"
+          class="neo-btn neo-btn--default neo-btn-primary neo-btn-primary--default"
+        >
+        Bottom left tooltip
+        </button>
+        <div
+          id="tooltip-div-id"
+          role="tooltip"
+          class="neo-tooltip__content neo-tooltip__content--multiline"
+        >
+          <div class="neo-arrow"/>Appears to the bottom left of button</div>
+      </div>
+  </div>
+</NeoLayout>
+
+<style>
+  .tooltip-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 5rem;
+    margin-bottom: 10rem;
+  }
+</style>

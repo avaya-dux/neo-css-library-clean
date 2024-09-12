@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.14
+
+### Bugs - Updated List
+
+- Added Neo Tooltip anchor fix (NEO-2271)
+
 ### 3.81.13
 
 ### New Features - Recently Added
