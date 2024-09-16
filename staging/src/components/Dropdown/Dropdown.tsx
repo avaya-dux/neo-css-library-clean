@@ -1,6 +1,8 @@
 import clsx from "clsx";
 import { useState } from "react";
 
+// TO-DO: Fix a11y issues with Table checkbox labels
+
 export const Dropdown = () => {
 	const [separatorLinkIsActive, setSeparatorLinkIsActive] =
 		useState<boolean>(false);

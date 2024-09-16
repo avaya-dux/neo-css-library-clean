@@ -294,7 +294,7 @@ export const TableWithSelectAllRow = () => {
 										setSelectedRows(selectAllOnPage ? [] : checkboxRows);
 									}}
 								/>
-								<label htmlFor="selectAllCheckbox" />
+								<label htmlFor="selectAllCheckbox" aria-label="select all" />
 							</th>
 							<th>First Name</th>
 							<th>Number</th>
@@ -361,9 +361,10 @@ export const TableWithSelectAllRow = () => {
 										checked={selectedRows.includes("row1") || selectAllOnPage}
 										onChange={onCheckboxChange}
 									/>
-									<label htmlFor="row1" />
+									<label htmlFor="row1" aria-label="select row 1" />
 									<div
 										className="neo-tooltip__content"
+										// biome-ignore lint/a11y/useSemanticElements: we built this before we knew better and if I change it now, it will break
 										role="tooltip"
 										id="table-tooltip"
 									>
@@ -422,7 +423,7 @@ export const TableWithSelectAllRow = () => {
 									checked={selectedRows.includes("row2") || selectAllOnPage}
 									onChange={onCheckboxChange}
 								/>
-								<label htmlFor="row2" />
+								<label htmlFor="row2" aria-label="select row 2" />
 							</td>
 							<td>
 								<a href="#fixme">Michael</a>
@@ -478,7 +479,7 @@ export const TableWithSelectAllRow = () => {
 									checked={selectedRows.includes("row3") || selectAllOnPage}
 									onChange={onCheckboxChange}
 								/>
-								<label htmlFor="row3" />
+								<label htmlFor="row3" aria-label="select row 3" />
 							</td>
 							<td>
 								<a href="#fixme">Polly</a>
@@ -532,7 +533,7 @@ export const TableWithSelectAllRow = () => {
 									checked={selectedRows.includes("row4") || selectAllOnPage}
 									onChange={onCheckboxChange}
 								/>
-								<label htmlFor="row4" />
+								<label htmlFor="row4" aria-label="select row 4" />
 							</td>
 							<td className="active">Stephen</td>
 							<td className="number">12345</td>
@@ -584,7 +585,7 @@ export const TableWithSelectAllRow = () => {
 									checked={selectedRows.includes("row5") || selectAllOnPage}
 									onChange={onCheckboxChange}
 								/>
-								<label htmlFor="row5" />
+								<label htmlFor="row5" aria-label="select row 5" />
 							</td>
 							<td>Jonas</td>
 							<td className="number">12345</td>

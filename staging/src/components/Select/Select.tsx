@@ -140,7 +140,6 @@ export const SelectExamples = () => {
 							<ul role="group">
 								<li
 									className="neo-option neo-option--selected"
-									// biome-ignore lint/a11y/noNoninteractiveElementToInteractiveRole: <explanation>
 									role="option"
 									aria-selected="true"
 									id=":r7:-item-0"
@@ -149,7 +148,6 @@ export const SelectExamples = () => {
 								</li>
 								<li
 									className="neo-option neo-option--disabled"
-									// biome-ignore lint/a11y/noNoninteractiveElementToInteractiveRole: <explanation>
 									role="option"
 									aria-selected="false"
 									id=":r7:-item-1"
@@ -165,7 +163,6 @@ export const SelectExamples = () => {
 								</p>
 								<li
 									className="neo-option neo-option--selected"
-									// biome-ignore lint/a11y/noNoninteractiveElementToInteractiveRole: <explanation>
 									role="option"
 									aria-selected="true"
 									id=":r7:-item-2"
@@ -181,7 +178,6 @@ export const SelectExamples = () => {
 								</p>
 								<li
 									className="neo-option neo-option--selected"
-									// biome-ignore lint/a11y/noNoninteractiveElementToInteractiveRole: <explanation>
 									role="option"
 									aria-selected="true"
 									id=":r7:-item-3"

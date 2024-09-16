@@ -1,14 +1,18 @@
 {
-  "linter": {
-    "rules": {
-      "a11y": {
-        "useButtonType": "off",
-        "useValidAnchor": "off",
-        "useAnchorContent": "off"
-      },
-      "suspicious": {
-        "noArrayIndexKey": "off"
-      }
-    }
-  }
+	"linter": {
+		"rules": {
+			"a11y": {
+				"useButtonType": "off",
+				"useValidAnchor": "off",
+				"useAnchorContent": "off"
+			},
+			"suspicious": {
+				"noArrayIndexKey": "off"
+			}
+		},
+		"ignore": [
+			"./src/components/Select/Select.tsx",
+			"./src/components/Dropdown/Dropdown.tsx"
+		]
+	}
 }

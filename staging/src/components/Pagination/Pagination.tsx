@@ -83,6 +83,7 @@ export const PaginationMultiSelect = () => {
 								paginationSelectActive && "neo-multiselect--active",
 							)}
 							aria-label="Show"
+							// biome-ignore lint/a11y/useSemanticElements: we built this before we knew better and if I change it now, it will break
 							role="listbox"
 							id="pagination-select"
 							tabIndex={0}
