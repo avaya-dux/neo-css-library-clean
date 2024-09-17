@@ -180,6 +180,32 @@
   }
 }
 
+/* set special font and background colors for pagination buttons */
+:root .neo-pagination__row {
+  --pagination-font-color: var(--neo-color-base-900);
+  --pagination-unselect-button-hover-color: var(--neo-color-base-100);
+}
+
+:root .neo-dark .neo-pagination__row {
+  --pagination-font-color: var(--neo-color-base-100);
+  --pagination-unselect-button-hover-color: var(--neo-color-base-800);
+}
+
+@media (prefers-color-scheme: light) {
+  :root .neo-dynamic .neo-pagination__row {
+    --pagination-font-color: var(--neo-color-base-900);
+    --pagination-unselect-button-hover-color: var(--neo-color-base-100);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  :root .neo-dynamic .neo-pagination__row {
+    --pagination-font-color: var(--neo-color-base-100);
+    --pagination-unselect-button-hover-color: var(--neo-color-base-800);
+  }
+}
+
+
 .neo-pagination {
   @extend %pagination;
 

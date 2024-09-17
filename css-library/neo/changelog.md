@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.15
+
+### Additional Changes - Update at Earliest Convenience
+
+- updated Pagination dark mode colors
+
 ### 3.81.14
 
 ### Bugs - Updated List
