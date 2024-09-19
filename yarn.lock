@@ -95,10 +95,10 @@
     "@vue/compiler-sfc" "^3.4.29"
     vite-plugin-vue-devtools "^7.3.0"
 
-"@avaya/neo-icons@1.8.15":
-  version "1.8.15"
-  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.8.15.tgz#4814998c290c3c443f16b751ed540d4da2400f50"
-  integrity sha512-ZqPOpcwvv+EiDLHpcDz0TdsaMaYNqZ7jkZkSKQeOxJNfo1iIdtR6QIk98j6nPvkPOvqW+oSPNdgHZohK70q2fg==
+"@avaya/neo-icons@1.8.16":
+  version "1.8.16"
+  resolved "https://registry.yarnpkg.com/@avaya/neo-icons/-/neo-icons-1.8.16.tgz#63ab62ae5d884f294e7939adb603ef32453ad637"
+  integrity sha512-GZ9eR21i/IyYN17xQDaVdOEywGIfq8o+zOtips9mKCkqvUnumx5ZOqv+h+9UzIr1A9YFRBdqGiPz+fH9zBQPIw==
 
 "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.22.13", "@babel/code-frame@^7.23.4":
   version "7.23.4"

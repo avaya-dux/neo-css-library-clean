@@ -3132,4 +3132,16 @@
     category: "content",
     animated: false,
   },
+  {
+    name: "nailed-up-off",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
+  {
+    name: "nailed-up-on",
+    bidirectional: false,
+    category: "communication",
+    animated: false,
+  },
 ];

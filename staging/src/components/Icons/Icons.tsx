@@ -58,7 +58,7 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-	const newIcons = ["filter-applied"];
+	const newIcons = ["nailed-up-off", "nailed-up-on"];
 
 	return (
 		<>

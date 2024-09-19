@@ -591,5 +591,7 @@ const unicodes = {
   'add-filled': 62530,
   translate: 62531,
   ai: 62532,
-  'filter-applied': 62533
+  'filter-applied': 62533,
+  'nailed-up-off': 62534,
+  'nailed-up-on': 62535
 }; module.exports.unicodes = unicodes
