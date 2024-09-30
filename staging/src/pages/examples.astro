@@ -4,7 +4,6 @@ import Layout from "../layouts/Layout.astro";
 
 import { ReactExample } from "../components/Examples/ReactExample";
 import SvelteExample from "../components/Examples/SvelteExample";
-import VueExample from "../components/Examples/VueExample.vue";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,19 +15,20 @@ import VueExample from "../components/Examples/VueExample.vue";
     <h1>Framework Examples</h1>
 
     <p>
-      <b>IMPORTANT NOTE:</b> Astro imports componetns as static HTML+CSS. If a component uses <i>any</i> JS, you must
-      add a <code>client:*</code> prop.
+      <b>IMPORTANT NOTE:</b> Astro imports componetns as static HTML+CSS. If a component
+      uses <i>any</i> JS, you must add a <code>client:*</code> prop.
     </p>
 
     <p>
-      I am using <code>client:load</code> for these examples, which loads the JS when
-      the component is first loaded.
+      I am using <code>client:load</code> for these examples, which loads the JS
+      when the component is first loaded.
     </p>
 
     <p>
-      Another note: you may notice that I'm using a <code>style</code> tag at the bottom of this component. Astro use
-      CSS modules by default, which means that CSS is scoped to the component it is written in by default. Thus, you
-      will <i>not</i> see the <code>p</code> styles written here on any other pages.
+      Another note: you may notice that I'm using a <code>style</code> tag at the
+      bottom of this component. Astro use CSS modules by default, which means that
+      CSS is scoped to the component it is written in by default. Thus, you will
+      <i>not</i> see the <code>p</code> styles written here on any other pages.
     </p>
 
     <section>
@@ -39,12 +39,6 @@ import VueExample from "../components/Examples/VueExample.vue";
 
     <section>
       <h2>SvelteExample Examples</h2>
-
-      <VueExample client:load />
-    </section>
-
-    <section>
-      <h2>Vue Examples</h2>
 
       <SvelteExample client:load />
     </section>
