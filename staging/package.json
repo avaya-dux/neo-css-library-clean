@@ -19,12 +19,12 @@
 		"@avaya/neo-icons": "1.8.16",
 		"@biomejs/biome": "1.9.3",
 		"@types/react": "18.3.11",
-		"@types/react-dom": "18.3.0",
-		"astro": "4.15.12",
+		"@types/react-dom": "18.3.1",
+		"astro": "4.16.3",
 		"clsx": "2.1.1",
 		"react": "18.3.1",
 		"react-dom": "18.3.1",
 		"svelte": "4.2.19",
-		"typescript": "5.6.2"
+		"typescript": "5.6.3"
 	}
 }

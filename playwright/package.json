@@ -4,12 +4,12 @@
 	"main": "index.js",
 	"license": "MIT",
 	"devDependencies": {
-		"@playwright/test": "1.47.2",
+		"@playwright/test": "1.48.0",
 		"start-server-and-test": "2.0.8"
 	},
 	"scripts": {
 		"start": ". start_server.sh",
-		"test:docker": "docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:4321 mcr.microsoft.com/playwright:v1.47.2-noble yarn playwright test",
+		"test:docker": "docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:4321 mcr.microsoft.com/playwright:v1.48.0-noble yarn playwright test",
 		"test:visual": "start-server-and-test 3000 test:docker",
 		"test:debug": "BASEURL='http://127.0.0.1:4321' playwright test --update-snapshots",
 		"test:update": "echo please refer to how-to-update-snapshots.md"

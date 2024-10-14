@@ -15,11 +15,11 @@ colima start
 ```
 
 **NOTE**:
-Playwright version: `v1.47.2`
+Playwright version: `v1.48.0`
 
 Ubuntu version: `24.04`, codenamed "noble".
 
-Thus, the docker image version chosen should be v1.47.2-noble.
+Thus, the docker image version chosen should be v1.48.0-noble.
 
 ## updating the snapshots and running tests
 
@@ -29,7 +29,7 @@ From root (`neo-css-library`): `yarn github`
 
 From staging (`neo-css-library/staging`): `yarn start`
 
-From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:4321 -it mcr.microsoft.com/playwright:v1.47.2-noble /bin/bash`
+From Playwright (`neo-css-library/playwright`): `docker run --rm --network host -v $(pwd):/work/ -w /work/ -e BASEURL=http://host.docker.internal:4321 -it mcr.microsoft.com/playwright:v1.48.0-noble /bin/bash`
 
 From inside docker container:
 
