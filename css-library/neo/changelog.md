@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.17
+
+### New Features - Recently Added
+
+- Added Neo Table component column resizing styles (NEO-2427)
+
 ### 3.81.16
 
 ### Additional Changes - Update at Earliest Convenience

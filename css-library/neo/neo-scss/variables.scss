@@ -618,6 +618,7 @@ $radio-ellipse-position-left: $token-radio-ellipse-position-left !default;
   --table-sheet-border-color: #{$token-table-sheet-border-color};
   --table-filter-row-background-color: #{$token-table-filters-row-background-color};
   --table-hover-selected-row-background-color: #{$token-table-row-hover-selected-color};
+  --table-resizer-background-color: #{$token-color-blue-500};
 }
 
 $table-row-hover-selected-color: var(
@@ -679,6 +680,7 @@ $table-sheet-border-width: $token-table-sheet-border-width !default;
 $table-sheet-border-style: $token-table-sheet-border-style !default;
 $table-nested-row-wrapper-padding-y: $token-table-nested-row-wrapper-padding-y !default;
 $table-nested-row-wrapper-padding-x: $token-table-nested-row-wrapper-padding-x !default;
+$table-resizer-background-color: var(--table-resizer-background-color) !default;
 
 //
 // Component name: Buttons

@@ -16,7 +16,10 @@ export const Table = () => {
 						<th>Expand</th>
 						<th>Name</th>
 						<th>Number</th>
-						<th>Email</th>
+						<th>
+							Email2
+							<div className="neo-table__resizer__th neo-table--resizing" />
+						</th>
 						<th>Avatar</th>
 						<th>Chip</th>
 						<th>Icon</th>
@@ -40,7 +43,10 @@ export const Table = () => {
 						</td>
 						<td>Thomas</td>
 						<td className="number">12345</td>
-						<td>thomas@shelby.ltd</td>
+						<td>
+							thomas@shelby.ltd
+							<div className="neo-table__resizer__td neo-table--resizing" />
+						</td>
 						<td>
 							<figure className="neo-avatar" data-initials="TA" />
 						</td>
@@ -60,7 +66,10 @@ export const Table = () => {
 						<td />
 						<td>Michael</td>
 						<td className="number">12345</td>
-						<td>michael@shelby.ltd</td>
+						<td>
+							michael@shelby.ltd
+							<div className="neo-table__resizer__td neo-table--resizing" />
+						</td>
 						<td>
 							<figure className="neo-avatar" data-initials="MD" />
 						</td>
@@ -93,7 +102,10 @@ export const Table = () => {
 						</td>
 						<td>Gavin</td>
 						<td className="number">12345</td>
-						<td>gavin@shelby.ltd</td>
+						<td>
+							gavin@shelby.ltd
+							<div className="neo-table__resizer__td neo-table--resizing" />
+						</td>
 						<td>
 							<figure className="neo-avatar" data-initials="GS" />
 						</td>
@@ -113,7 +125,10 @@ export const Table = () => {
 						<td />
 						<td>Polly</td>
 						<td className="number">12345</td>
-						<td>polly@shelby.ltd</td>
+						<td>
+							polly@shelby.ltd
+							<div className="neo-table__resizer__td neo-table--resizing" />
+						</td>
 						<td>
 							<figure className="neo-avatar" data-initials="PD" />
 						</td>
@@ -133,7 +148,10 @@ export const Table = () => {
 						<td />
 						<td className="active">Stephen</td>
 						<td className="number">12345</td>
-						<td>stephen@shelby.ltd</td>
+						<td>
+							stephen@shelby.ltd
+							<div className="neo-table__resizer__td neo-table--resizing" />
+						</td>
 						<td>
 							<figure className="neo-avatar" data-initials="SA" />
 						</td>
