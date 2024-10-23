@@ -382,7 +382,6 @@ export const TableWithSelectAllRow = () => {
 									<label htmlFor="row1" aria-label="select row 1" />
 									<div
 										className="neo-tooltip__content"
-										// biome-ignore lint/a11y/useSemanticElements: we built this before we knew better and if I change it now, it will break
 										role="tooltip"
 										id="table-tooltip"
 									>
