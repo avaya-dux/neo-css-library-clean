@@ -82,11 +82,74 @@ import NeoLayout from "../layouts/NeoLayout.astro";
       class="neo-icon-state neo-icon-state--large neo-icon-state--outbound neo-icon-voice"
       aria-label="DESCRIPTION OF ICON/ACTION"></span>
   </div>
+
+  <h3>With Notification Badge</h3>
+  <div class="icon-states-wrapper">
+    <span
+      class="neo-icon-state neo-icon-state--available neo-icon-voice"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+
+    <span
+      class="neo-icon-state neo-icon-state--large neo-icon-state--available neo-icon-voice"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+
+    <span
+      class="neo-icon-state neo-icon-state--available neo-icon-email"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+
+    <span
+      class="neo-icon-state neo-icon-state--large neo-icon-state--available neo-icon-email"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+
+    <span
+      class="neo-icon-state neo-icon-state--available neo-icon-messaging"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+
+    <span
+      class="neo-icon-state neo-icon-state--large neo-icon-state--available neo-icon-messaging"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+
+    <span
+      class="neo-icon-state neo-icon-state--available neo-icon-video-on"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+
+    <span
+      class="neo-icon-state neo-icon-state--large neo-icon-state--available neo-icon-video-on"
+      aria-label="DESCRIPTION OF ICON/ACTION"
+    >
+      <span class="neo-badge"></span>
+    </span>
+  </div>
 </NeoLayout>
 
 <style>
   .icon-states-wrapper {
     display: flex;
     margin-bottom: 2rem;
+
+    > span {
+      margin-right: 1rem;
+    }
   }
 </style>

@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.19
+
+### New Features - Recently Added
+
+- Allow badges on Icons that have states (available, busy, etc) (NEO-2460)
+
 ### 3.81.18
 
 - no change, published again
