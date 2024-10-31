@@ -12,7 +12,7 @@
 ​
 from the root of the directory
 ​
-1. update `neo-npm-package/package.json` version number in main branch
+1. create a release branch from main and update `neo-npm-package/package.json` version number
 2. `yarn build:for-publish` (from root): builds a production version of neo.css in the folder `neo-npm-package`, as well as all supporting files
 3. Ensure all supporting files exist (`colors/*`, `fonts/*`, `icons/*`) inside neo-npm-package/neo/dist/css
 4. copy-paste the contents of `css-library/neo/changelog.md` to `neo-npm-package/CHANGELOG.md`
@@ -49,3 +49,4 @@ Once that is complete, the next step is to add the release to our GitHub
    ​
 8. run `npm pack` to create the tar file and attach it to the release. Delete the tarball once it is attached to the release.
 9. click: "Publish release"
+10. create a PR from this release branch and merge into main
