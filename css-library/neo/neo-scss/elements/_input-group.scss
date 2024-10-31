@@ -10,12 +10,12 @@
     pointer-events: none;
   }
 
-  .neo-radio:not(.neo-radio-readonly) + label,
-  .neo-check:not(.neo-check-readonly) + label {
+  .neo-radio:not(.neo-radio-readonly)+label,
+  .neo-check:not(.neo-check-readonly)+label {
     pointer-events: initial !important;
   }
 
-  label:not(.neo-switch):not(.neo-label) + label {
+  label:not(.neo-switch):not(.neo-label)+label {
     padding-top: 0;
   }
 
@@ -61,8 +61,7 @@
       border-left: $input-border-width $input-border-style $input-border-color;
 
       @include rtl-selector {
-        border-right: $input-border-width $input-border-style
-          $input-border-color;
+        border-right: $input-border-width $input-border-style $input-border-color;
         border-left-width: 0;
       }
     }
@@ -70,8 +69,9 @@
 }
 
 @mixin neo-input-group-label-positioning {
-  label > &,
-  label + & {
+
+  label>&,
+  label+& {
     margin-top: $input-in-label-margin-top;
   }
 }
@@ -79,7 +79,8 @@
 .neo-input-group {
   display: flex;
   flex-direction: column;
-  & > label:not(.neo-switch) {
+
+  &>label:not(.neo-switch) {
     font-size: $token-input-label-font-size;
     line-height: $token-input-label-line-height;
     letter-spacing: $token-input-label-letter-spacing;
@@ -87,96 +88,142 @@
     color: $input-label-color;
     padding-bottom: 4px;
   }
-  & input + label:not(.neo-switch) {
+    /* label with icon */
+  .neo-form__label-with-icon {
+    display: flex;
+    align-items: center;
+    padding-bottom: 4px;
+
+    label:not(.neo-switch) {
+      font-size: $token-input-label-font-size;
+      line-height: $token-input-label-line-height;
+      letter-spacing: $token-input-label-letter-spacing;
+      font-weight: $token-input-label-font-weight;
+      color: $input-label-color;
+    }
+
+    &__spacer {
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  & input+label:not(.neo-switch) {
     padding-bottom: 4px;
   }
-  & .neo-check + label:before {
+
+  & .neo-check+label:before {
     line-height: 1.5;
   }
+
   .neo-input-group--addons {
     display: flex;
     vertical-align: middle;
     width: 100%;
     border: $input-border-width $input-border-style $input-border-color;
     border-radius: $input-border-radius;
+
     .neo-input {
       border: none;
+
       &:focus {
         box-shadow: none;
         padding: 8px 11px;
       }
     }
+
     & .neo-multiselect:focus {
       outline: none;
     }
+
     & .neo-select select {
       border: none;
+
       &:focus {
         outline: none;
       }
     }
+
     & .neo-multiselect .neo-multiselect__header {
       border: none;
+
       &:focus {
         outline: none;
       }
     }
+
     & .neo-multiselect .neo-multiselect-combo__header {
       border: none;
+
       &:focus {
         outline: none;
       }
     }
+
     & .neo-input-editable__wrapper {
       flex-grow: 1;
       border: none;
     }
-    & > .neo-input-editable__wrapper,
-    & > .neo-input-icon__wrapper {
+
+    &>.neo-input-editable__wrapper,
+    &>.neo-input-icon__wrapper {
       margin: 0 !important;
+
       &:focus,
       &:focus-within {
         margin: -1px -1px;
         box-shadow: none;
       }
     }
+
     &:hover {
       border-color: $token-input-border-hover-color;
+
       & .neo-input-group__addon {
         &:first-child {
           border-right-color: $token-input-border-hover-color;
+
           @include rtl-selector {
             border-left-color: $token-input-border-hover-color;
           }
         }
+
         &:last-child {
           border-left-color: $token-input-border-hover-color;
+
           @include rtl-selector {
             border-right-color: $token-input-border-hover-color;
           }
         }
       }
     }
+
     &:focus-within {
       border-color: $input-focus-border-color;
       border-width: 2px;
       margin: -1px -1px;
+
       .neo-input-editable__wrapper .neo-input-edit__icon {
         padding: 8px 13px;
       }
+
       & .neo-input-group__addon {
         &:first-child {
           border-right-color: $input-focus-border-color;
           border-right-width: 2px;
+
           @include rtl-selector {
             border-left-color: $input-focus-border-color;
             border-left-width: 2px;
           }
         }
+
         &:last-child {
           border-left-color: $input-focus-border-color;
           border-left-width: 2px;
           padding: 8px 10px;
+
           @include rtl-selector {
             border-right-color: $input-focus-border-color;
             border-right-width: 2px;
@@ -184,7 +231,8 @@
         }
       }
     }
-    .neo-input-hint + & {
+
+    .neo-input-hint+& {
       margin-bottom: 0;
     }
   }
@@ -195,31 +243,38 @@
     vertical-align: middle;
     width: 100%;
     align-items: center;
-    .neo-check + label {
+
+    .neo-check+label {
       margin-right: 24px;
       padding: 0 !important;
+
       @include rtl-selector {
         margin-right: 0px;
         margin-left: 24px;
       }
+
       &:before {
         line-height: 1.5;
       }
     }
-    .neo-radio + label {
+
+    .neo-radio+label {
       margin-right: 24px;
       margin-top: 0 !important;
       margin-bottom: 0 !important;
       padding-bottom: 0 !important;
+
       @include rtl-selector {
         margin-right: 0px;
         margin-left: 24px;
       }
     }
+
     .neo-switch {
       margin-right: $global-spacer;
       margin-top: 0;
       margin-bottom: 0;
+
       @include rtl-selector {
         margin-right: 0px;
         margin-left: $global-spacer;

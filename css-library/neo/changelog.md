@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.20
+
+### New Features - Recently Added
+
+- Style icon next to a label (NEO-2457)
+
 ### 3.81.19
 
 ### New Features - Recently Added

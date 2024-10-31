@@ -297,3 +297,42 @@
   margin-top: 0px;
   margin-bottom: 0px;
 }
+
+/* label with icon */
+.neo-form .neo-form-control>.neo-input-group .neo-form__label-with-icon,
+.neo-form .neo-form-control--required>.neo-input-group .neo-form__label-with-icon {
+  >label {
+    padding-bottom: unset;
+
+    &.neo-switch:only-child {
+      margin-top: unset;
+      margin-bottom: unset;
+    }
+  }
+
+  div {
+    span {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  span.neo-switch-children {
+    div {
+      span {
+        display: inline;
+      }
+    }
+  }
+}
+
+.neo-form
+	.neo-form-control--required
+	> .neo-input-group
+	.neo-form__label-with-icon
+	> label:after {
+	color: var(--input-asterix-color);
+	content: "*";
+	display: inline-block;
+	padding-inline-start: 2px;
+}

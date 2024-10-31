@@ -17,11 +17,13 @@
     position: absolute;
   }
 }
+
 .neo-switch-children {
   height: auto !important;
   white-space: pre-line;
   float: left;
   margin-left: 13px;
+
   @include rtl-selector {
     float: right !important;
     margin-left: 0 !important;
@@ -39,13 +41,13 @@
   /* stylelint-disable-next-line selector-class-pattern */
 
   input:focus-visible {
-    + .neo-switch__icon:before {
+    +.neo-switch__icon:before {
       outline: 1px auto $radio-background-active-color;
       outline-offset: 2px;
     }
   }
 
-  input + .neo-switch__icon {
+  input+.neo-switch__icon {
     cursor: pointer;
     display: block;
     left: 0;
@@ -85,8 +87,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      text-shadow: 0.5px 0px 0px $switch-off-color;;
-
+      text-shadow: 0.5px 0px 0px $switch-off-color;
 
       @include rtl-selector {
         left: auto;
@@ -95,7 +96,7 @@
     }
   }
 
-  input:not(:checked) + .neo-switch__icon {
+  input:not(:checked)+.neo-switch__icon {
     &::after {
       content: "\f16e";
     }
@@ -103,8 +104,9 @@
 }
 
 @mixin neo-switch--checked {
+
   /* stylelint-disable-next-line selector-class-pattern */
-  input:checked + .neo-switch__icon {
+  input:checked+.neo-switch__icon {
     &::before {
       background-color: $switch-active-color;
     }
@@ -128,8 +130,9 @@
 }
 
 @mixin neo-switch--disabled {
+
   &--disabled,
-  &--disabled input + &__icon {
+  &--disabled input+&__icon {
     cursor: not-allowed;
   }
 
@@ -139,27 +142,27 @@
 
 
 
-  &--disabled input:disabled + &__icon::before {
+  &--disabled input:disabled+&__icon::before {
 
     background-color: $switch-disabled-off-background-color;
   }
 
-  &--disabled input:checked:disabled + &__icon::before {
+  &--disabled input:checked:disabled+&__icon::before {
     background-color: $switch-disabled-on-background-color;
   }
 
-  &--disabled input:disabled + &__icon::after {
+  &--disabled input:disabled+&__icon::after {
     color: $switch-disabled-off-background-color;
     text-shadow: 0.5px 0px 0px $switch-disabled-off-background-color;
   }
 
-  &--disabled input:checked:disabled + &__icon::after {
+  &--disabled input:checked:disabled+&__icon::after {
     color: $switch-disabled-on-background-color;
     text-shadow: 0.5px 0px 0px $switch-disabled-on-background-color;
   }
 
-  &:focus input:disabled + &__icon,
-  &:focus input:checked + &__icon {
+  &:focus input:disabled+&__icon,
+  &:focus input:checked+&__icon {
     &::before {
       box-shadow: none;
     }
@@ -183,9 +186,7 @@
 
   &:focus-visible .neo-switch__icon {
     &::before {
-      box-shadow: $token-shadows-elevation-100-x-offset
-        $token-shadows-elevation-100-y-offset
-        $token-shadows-elevation-100-radius $switch-elevation-color;
+      box-shadow: $token-shadows-elevation-100-x-offset $token-shadows-elevation-100-y-offset $token-shadows-elevation-100-radius $switch-elevation-color;
     }
   }
 
@@ -195,7 +196,7 @@
   @include neo-switch--disabled;
 }
 
-.neo-switch.neo-switch--multiline input + .neo-switch__icon:after {
+.neo-switch.neo-switch--multiline input+.neo-switch__icon:after {
   @include rtl-selector {
     right: 1px !important;
   }
@@ -203,8 +204,36 @@
 
 .neo-widget__body .neo-form-control .neo-switch {
   margin-left: 2px;
+
   @include rtl-selector {
     margin-left: initial;
     margin-right: 2px;
+  }
+}
+
+/* Switch label with icon */
+.neo-input-group .neo-form__label-with-icon {
+  display: flex;
+  align-items: center;
+  padding-bottom: 4px;
+
+  & label.neo-switch {
+    height: $switch-label-height;
+    line-height: $body-line-height;
+    min-width: $switch-width;
+    position: relative;
+    color: $input-label-color;
+    padding-inline-start: 27px;
+    font-size: 14px;
+    display: flex;
+    margin-bottom: unset;
+
+    /* center align icon */
+    &+div {
+      span {
+        display: flex;
+        align-items: center;
+      }
+    }
   }
 }

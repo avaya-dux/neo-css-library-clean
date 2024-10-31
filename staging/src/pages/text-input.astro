@@ -107,6 +107,87 @@ import NeoLayout from "../layouts/NeoLayout.astro";
       </div>
     </div>
   </div>
+
+  <h3>Label with Icon Text Input</h3>
+  <form class="neo-form">
+    <div class="text-input__layout">
+      <div class="neo-form-control">
+        <div class="neo-input-group">
+          <div class="neo-form__label-with-icon">
+            <label for=":r1c:">Workflow ID</label>
+            <span class="neo-form__label-with-icon__spacer"/>
+            <div
+              class="neo-tooltip neo-tooltip--up-right neo-tooltip--onhover"
+            >
+              <span
+                role="img"
+                tabindex="0"
+                aria-label="workflow id"
+                aria-describedby=":r1d:"
+                class="neo-icon-info neo-icon--small"></span><div
+                id=":r1d:"
+                role="tooltip"
+                class="neo-tooltip__content neo-tooltip__content--multiline"
+              >
+                <div class="neo-arrow"></div>This is the ID of the workflow.
+              </div>
+            </div>
+          </div><div class="neo-input-editable__wrapper">
+            <input
+              class="neo-input"
+              id=":r1c:"
+              placeholder="label: icon"
+              type="text"
+              aria-required="true"
+              value=""
+            /><button
+              aria-label="clear input"
+              class="neo-input-edit__icon neo-icon-end"
+              type="button"></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+  <h3>Label with * and Icon Text Input</h3>
+  <form class="neo-form">
+    <div class="neo-form-control neo-form-control--required text-input__layout">
+      <div class="neo-input-group">
+        <div class="neo-form__label-with-icon">
+          <label for=":r1f:">Workflow ID</label>
+          <span class="neo-form__label-with-icon__spacer"/>
+          <div
+            class="neo-tooltip neo-tooltip--up-right neo-tooltip--onhover"
+          >
+            <span
+              role="img"
+              tabindex="0"
+              aria-label="workflow id"
+              aria-describedby=":r1g:"
+              class="neo-icon-info neo-icon--small"></span><div
+              id=":r1g:"
+              role="tooltip"
+              class="neo-tooltip__content neo-tooltip__content--multiline"
+            >
+              <div class="neo-arrow"></div>This is the ID of the workflow.
+            </div>
+          </div>
+        </div><div class="neo-input-editable__wrapper">
+          <input
+            class="neo-input"
+            id=":r1f:"
+            placeholder="label: required, icon"
+            type="text"
+            aria-required="true"
+            value=""
+          /><button
+            aria-label="clear input"
+            class="neo-input-edit__icon neo-icon-end"
+            type="button"></button>
+        </div>
+      </div>
+    </div>
+  </form>
 </NeoLayout>
 
 <style>
