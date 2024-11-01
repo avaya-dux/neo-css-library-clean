@@ -1,0 +1,88 @@
+---
+import {
+	CondensedLeftNavWithScroll,
+	CondensedLeftNavWithTooltip,
+	CondensedLeftNavWithTooltipRelaxed,
+	LeftNavWithSimpleJS,
+	RelaxedCondensedLeftNavWithScroll,
+	RelaxedLeftNavWithSimpleJS,
+} from "../components";
+import NeoLayout from "../layouts/NeoLayout.astro";
+---
+
+<NeoLayout title="Leftnav">
+  <div class="custom-box">
+    <h3>
+      Side by Side LeftNav components should look the same even with different
+      selectors
+    </h3>
+    <div class="custom-main">
+      <div class="custom-leftnav">
+        <h4>Original selectors</h4>
+        <LeftNavWithSimpleJS client:load />
+      </div>
+
+      <div class="custom-leftnav">
+        <h4>Relaxed selectors</h4>
+        <RelaxedLeftNavWithSimpleJS client:load />
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-box">
+    <h3>
+      Side by Side condensed LeftNav components should look the same even with different
+      selectors
+    </h3>
+    <div class="custom-main">
+      <div class="custom-leftnav">
+        <h4>Condensed LeftNav with scroll</h4>
+        <CondensedLeftNavWithScroll client:load />
+      </div>
+
+      <div class="custom-leftnav">
+        <h4>Condensed LeftNav with scroll(Relaxed)</h4>
+        <RelaxedCondensedLeftNavWithScroll client:load />
+      </div>
+    </div>
+  </div>
+
+  <div class="custom-box">
+    <h3>
+      Condensed Left Navigation With Tooltip
+    </h3>
+    <div class="custom-main">
+      <div class="custom-leftnav">
+        <h4>Original selectors</h4>
+        <CondensedLeftNavWithTooltip client:load />
+      </div>
+      <div class="custom-leftnav">
+        <h4>Relaxed selectors</h4>
+        <CondensedLeftNavWithTooltipRelaxed client:load />
+      </div>
+    </div>
+  </div>
+</NeoLayout>
+
+<style>
+  .custom-box {
+    border: 1px solid #000;
+  }
+
+  .custom-main {
+    display: flex;
+  }
+
+  .custom-leftnav {
+    display: inline-block;
+    margin: 2em;
+    border: 1px solid #ccc;
+    padding: 2em;
+  }
+
+  .custom-leftnav h4 {
+    text-transform: capitalize;
+    font-weight: 700;
+    padding: 0 0 1em;
+  }
+</style>

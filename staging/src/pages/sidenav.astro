@@ -1,86 +1,238 @@
 ---
-import {
-	CondensedLeftNavWithScroll,
-	CondensedLeftNavWithTooltip,
-	CondensedLeftNavWithTooltipRelaxed,
-	LeftNavWithSimpleJS,
-	RelaxedCondensedLeftNavWithScroll,
-	RelaxedLeftNavWithSimpleJS,
-} from "../components";
 import NeoLayout from "../layouts/NeoLayout.astro";
 ---
 
 <NeoLayout title="Sidenav">
-  <div class="custom-box">
-    <h3>
-      Side by Side Side Nav components should look the same even with different
-      selectors
-    </h3>
-    <div class="custom-main">
-      <div class="custom-leftnav">
-        <h4>Original selectors</h4>
-        <LeftNavWithSimpleJS client:load />
-      </div>
+  <section>
+    <h2>This page is a WIP</h2>
+    <aside>Please do not use for production systems</aside>
+  </section>
 
-      <div class="custom-leftnav">
-        <h4>Relaxed selectors</h4>
-        <RelaxedLeftNavWithSimpleJS client:load />
-      </div>
+  <section class="sidenav-section">
+    <h2>Multi-level Example</h2>
+
+    <div class="neo-sidenav--wrapper">
+      <nav class="neo-sidenav" aria-label="TODO: TRANSLATE ME">
+        <ul class="neo-sidenav__nav">
+          <li class="neo-sidenav__main">
+            <a href="#home" class="neo-icon-home">Home</a>
+          </li>
+
+          <li
+            class="neo-sidenav__main neo-sidenav__main--expand neo-sidenav__main--active"
+          >
+            <button
+              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-dashboard"
+              aria-label="Dashboards"
+            >
+              Dashboards
+            </button>
+
+            <ul class="neo-sidenav__nav">
+              <li class="neo-sidenav__sub neo-sidenav__sub--active">
+                <a href="#my-dashboard">My Dashboards</a>
+              </li>
+
+              <li class="neo-sidenav__sub">
+                <a href="#team-dashboard">Team Dashboards</a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="neo-sidenav__main neo-sidenav__main--expand">
+            <button
+              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-settings"
+              aria-label="Advanced"
+            >
+              Advanced
+            </button>
+
+            <ul class="neo-sidenav__nav">
+              <li class="neo-sidenav-category-group">
+                <div class="neo-sidenav-category-group-label">Settings</div>
+
+                <ul>
+                  <li class="neo-sidenav__sub">
+                    <a href="#applications">Applications</a>
+                  </li>
+
+                  <li
+                    class="neo-sidenav-sub-category neo-sidenav-sub-category--expand"
+                  >
+                    <button type="button" class="neo-btn">Actions</button>
+
+                    <ul>
+                      <li class="neo-sidenav__sub">
+                        <a href="#name">Name</a>
+                      </li>
+
+                      <li class="neo-sidenav__sub">
+                        <a href="#parameters">Parameters</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="neo-sidenav-category-group">
+                <div class="neo-sidenav-category-group-label">Reports</div>
+
+                <ul>
+                  <li class="neo-sidenav__sub">
+                    <a href="#geography">Geography</a>
+                  </li>
+
+                  <li class="neo-sidenav__sub">
+                    <a href="#devices">Devices</a>
+                  </li>
+
+                  <li class="neo-sidenav__sub">
+                    <a href="#depth-chart">Depth Chart</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="neo-sidenav__main">
+            <a href="#contact-center" class="neo-icon-address-book">
+              Contact Center
+            </a>
+          </li>
+
+          <li class="neo-sidenav__main">
+            <button
+              class="neo-btn neo-btn--default neo-btn-tertiary neo-btn-tertiary--default neo-icon-user"
+              disabled=""
+            >
+              Admin
+            </button>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </div>
 
-  <div class="custom-box">
-    <h3>
-      Side by Side condensed Side Nav components should look the same even with
-      different selectors
-    </h3>
-    <div class="custom-main">
-      <div class="custom-leftnav">
-        <h4>Condensed Side Nav with scroll</h4>
-        <CondensedLeftNavWithScroll client:load />
-      </div>
+    <div class="neo-sidenav--wrapper">
+      <nav class="neo-sidenav" aria-label="TODO: TRANSLATE ME">
+        <ul class="neo-sidenav__nav">
+          <li class="neo-sidenav__main">
+            <a href="#home" class="neo-icon-home">Home</a>
+          </li>
 
-      <div class="custom-leftnav">
-        <h4>Condensed Side Nav with scroll(Relaxed)</h4>
-        <RelaxedCondensedLeftNavWithScroll client:load />
-      </div>
+          <li class="neo-sidenav__main">
+            <button
+              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-dashboard"
+              aria-label="Dashboards"
+            >
+              Dashboards
+            </button>
+
+            <ul class="neo-sidenav__nav">
+              <li class="neo-sidenav__sub">
+                <a href="#my-dashboard">My Dashboards</a>
+              </li>
+
+              <li class="neo-sidenav__sub">
+                <a href="#team-dashboard">Team Dashboards</a>
+              </li>
+            </ul>
+          </li>
+
+          <li
+            class="neo-sidenav__main neo-sidenav__main--active neo-sidenav__main--expand"
+          >
+            <button
+              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-settings"
+              aria-label="Advanced"
+            >
+              Advanced
+            </button>
+
+            <ul class="neo-sidenav__nav">
+              <li class="neo-sidenav-category-group">
+                <div class="neo-sidenav-category-group-label">Settings</div>
+
+                <ul>
+                  <li class="neo-sidenav__sub">
+                    <a href="#applications">Applications</a>
+                  </li>
+
+                  <li
+                    class="neo-sidenav-sub-category neo-sidenav-sub-category--active neo-sidenav-sub-category--expand"
+                  >
+                    <button type="button" class="neo-btn">Actions</button>
+
+                    <ul>
+                      <li class="neo-sidenav__sub">
+                        <a href="#name">Name</a>
+                      </li>
+
+                      <li class="neo-sidenav__sub neo-sidenav__sub--active">
+                        <a href="#parameters">Parameters</a>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+
+              <li class="neo-sidenav-category-group">
+                <div class="neo-sidenav-category-group-label">Reports</div>
+
+                <ul>
+                  <li class="neo-sidenav__sub">
+                    <a href="#geography">Geography</a>
+                  </li>
+
+                  <li class="neo-sidenav__sub">
+                    <a href="#devices">Devices</a>
+                  </li>
+
+                  <li class="neo-sidenav__sub">
+                    <a href="#depth-chart">Depth Chart</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+
+          <li class="neo-sidenav__main">
+            <a href="#contact-center" class="neo-icon-address-book">
+              Contact Center
+            </a>
+          </li>
+
+          <li class="neo-sidenav__main">
+            <button
+              class="neo-btn neo-btn--default neo-btn-tertiary neo-btn-tertiary--default neo-icon-user"
+              disabled=""
+            >
+              Admin
+            </button>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </div>
-
-  <div class="custom-box">
-    <h3>Condensed Side Navigation With Tooltip</h3>
-    <div class="custom-main">
-      <div class="custom-leftnav">
-        <h4>Original selectors</h4>
-        <CondensedLeftNavWithTooltip client:load />
-      </div>
-      <div class="custom-leftnav">
-        <h4>Relaxed selectors</h4>
-        <CondensedLeftNavWithTooltipRelaxed client:load />
-      </div>
-    </div>
-  </div>
+  </section>
 </NeoLayout>
 
 <style>
-  .custom-box {
-    border: 1px solid #000;
+  section {
+    margin-bottom: 3rem;
   }
 
-  .custom-main {
-    display: flex;
-  }
+  .sidenav-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
 
-  .custom-leftnav {
-    display: inline-block;
-    margin: 2em;
-    border: 1px solid #ccc;
-    padding: 2em;
-  }
-
-  .custom-leftnav h4 {
-    text-transform: capitalize;
-    font-weight: 700;
-    padding: 0 0 1em;
+    > :nth-child(1) {
+      grid-column: 1 / -1; /* First element spans the full width */
+    }
+    > :nth-child(2) {
+      grid-column: 1 / 2; /* Second element takes the first column */
+    }
+    > :nth-child(3) {
+      grid-column: 2 / 3; /* Third element takes the second column */
+    }
   }
 </style>

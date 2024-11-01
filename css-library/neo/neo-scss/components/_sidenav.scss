@@ -1,0 +1,632 @@
+@mixin sidenav-main-selectors {
+
+  &>a,
+  &>.neo-sidenav__category,
+  &>.neo-sidenav__main__item,
+  &>.neo-tooltip>a,
+  &>.neo-tooltip>.neo-sidenav__main__item,
+  & .neo-tooltip>.neo-sidenav__main__item {
+    @content;
+  }
+}
+
+@mixin sidenav-sub-selectors {
+
+  &>a,
+  & .neo-sidenav__sub__item,
+  &>.neo-tooltip>a,
+  &>.neo-tooltip>.neo-sidenav__sub__item,
+  & .neo-tooltip>.neo-sidenav__sub__item {
+    @content;
+  }
+}
+
+@mixin sidenav-main {
+  &__main {
+    background-color: $leftnav-background-color;
+    position: relative;
+    min-height: $leftnav-main-max-height;
+    max-width: $leftnav-main-max-width;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    @include sidenav-main-selectors() {
+
+      &:not(.neo-icon-page-first):focus,
+      &:not(.neo-icon-page-first):focus-visible {
+        outline-offset: -4px;
+      }
+
+      text-align: inherit;
+      width: 100%;
+      min-height: $leftnav-main-max-height;
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+      flex-grow: 1;
+      color: $leftnav-main-default-color;
+      margin: 0;
+      padding: $leftnav-main-padding-horizontal ($leftnav-main-padding-horizontal * 2) $leftnav-main-padding-horizontal $leftnav-main-padding-horizontal;
+      border-left: $leftnav-main-active-border-width $leftnav-main-active-border-style transparent;
+      font-size: $leftnav-main-default-font-size;
+      font-weight: $leftnav-main-default-font-weight;
+      line-height: $leftnav-main-default-font-line-height;
+      letter-spacing: $leftnav-main-default-font-letter-spacing;
+      word-break: break-word;
+
+      @include rtl-selector {
+        border-left: none;
+        border-right: $leftnav-main-active-border-width $leftnav-main-active-border-style transparent;
+        padding: 0 $leftnav-main-padding-horizontal 0 ($leftnav-main-padding-horizontal * 2);
+      }
+
+      &:before {
+        margin-right: $leftnav-icon-spacing;
+        color: $leftnav-main-default-color;
+        font-size: $leftnav-main-icon-font-size;
+
+        @include rtl-selector {
+          margin-left: $leftnav-icon-spacing;
+          margin-right: 0;
+        }
+      }
+
+      &.expandable:after {
+        color: $leftnav-main-default-color;
+        font-family: "updated-neo-icons";
+        content: $leftnav-main-chevron-icon;
+        position: absolute;
+        transition: $accordion-icon-transition;
+        right: 16px;
+        font-size: $leftnav-collapse-icon-font-size;
+
+        @include rtl-selector {
+          content: $leftnav-main-chevron-icon-reverse;
+          left: 16px;
+          right: auto;
+        }
+      }
+
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        cursor: pointer;
+        color: $leftnav-main-hover-color;
+        background-color: $leftnav-hover-background-color;
+        transition: background-color $global-transition-duration $global-transition-timing;
+
+        &:before {
+          color: $leftnav-main-hover-color;
+        }
+      }
+    }
+
+    &--active {
+      @include sidenav-main-selectors() {
+        border-color: $leftnav-main-active-color;
+        color: $leftnav-main-active-color;
+        font-size: $leftnav-main-active-font-size;
+        font-weight: $leftnav-main-active-font-weight;
+        line-height: $leftnav-main-active-font-line-height;
+        letter-spacing: $leftnav-main-active-font-letter-spacing;
+
+        &:before {
+          color: $leftnav-main-active-color;
+        }
+
+        @include rtl-selector {
+          border-color: $leftnav-main-active-color;
+        }
+
+        &:hover {
+          &>a {
+            cursor: pointer;
+            color: $leftnav-main-hover-color;
+            border-color: $leftnav-main-hover-color;
+            background-color: $leftnav-hover-background-color;
+            transition: $tab-hover-transition;
+
+            &:before {
+              color: $leftnav-main-hover-color;
+            }
+          }
+        }
+      }
+    }
+
+    &--active[disabled] {
+      cursor: not-allowed;
+
+      @include sidenav-main-selectors() {
+        cursor: not-allowed;
+        background-color: $leftnav-background-color;
+        color: $leftnav-main-active-disabled-color !important;
+        border-color: $leftnav-main-active-disabled-color;
+        font-size: $leftnav-main-active-font-size;
+        font-weight: $leftnav-main-active-font-weight;
+        line-height: $leftnav-main-active-font-line-height;
+        letter-spacing: $leftnav-main-active-font-letter-spacing;
+
+        &:before {
+          color: $leftnav-main-active-disabled-color !important;
+        }
+      }
+    }
+
+    &[disabled],
+    &[disabled]:focus-within,
+    &.neo-sidenav__disabled,
+    &.neo-sidenav__disabled:hover {
+      cursor: not-allowed;
+
+      @include sidenav-main-selectors() {
+        cursor: not-allowed;
+        background-color: $leftnav-background-color;
+        color: $leftnav-main-default-disabled-color;
+
+        &:before {
+          color: $leftnav-main-default-disabled-color;
+        }
+
+        &.expandable:after {
+          color: $leftnav-main-default-disabled-color;
+        }
+
+        &:focus-visible {
+          outline: #1473e6 auto 2px;
+        }
+      }
+    }
+
+    &>.neo-sidenav__nav {
+      max-height: 0px;
+      transition: max-height $global-transition-duration cubic-bezier(0, 1, 0, 1);
+    }
+
+    &--expand>.neo-sidenav__nav {
+      max-height: 100vh;
+      transition: max-height $global-transition-duration $global-transition-timing;
+    }
+
+    &--expand>a,
+    &--expand>.neo-sidenav__category,
+    &--expand>.neo-sidenav__main__item,
+    &--expand>.neo-tooltip>a,
+    &--expand>.neo-tooltip>.neo-sidenav__main__item {
+      &.expandable:after {
+        transition: $accordion-icon-transition;
+        transform: rotate(90deg) $accordion-active-icon-animation;
+
+        @include rtl-selector {
+          transform: rotate(90deg);
+        }
+      }
+    }
+  }
+}
+
+@mixin sidenav-sub {
+  &__sub {
+    min-height: $leftnav-sub-max-height;
+    max-width: $leftnav-main-max-width;
+    background-color: $leftnav-background-color;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include sidenav-sub-selectors() {
+      text-align: inherit;
+      word-break: break-word;
+      overflow: hidden;
+      width: 100%;
+      color: $leftnav-sub-default-color;
+      display: flex;
+      align-items: center;
+      margin: 0;
+      padding: 8px 28px 8px $leftnav-sub-padding-horizontal;
+      text-decoration: none;
+
+      @include rtl-selector {
+        padding: 8px $leftnav-sub-padding-horizontal 8px 0px;
+      }
+
+      font-size: $leftnav-sub-default-font-size;
+      font-weight: $leftnav-sub-default-font-weight;
+      line-height: $leftnav-sub-default-font-line-height;
+      letter-spacing: $leftnav-sub-default-font-letter-spacing;
+
+      &:focus,
+      &:focus-visible {
+        color: $leftnav-sub-active-hover-color;
+        background-color: $leftnav-hover-background-color;
+        transition: $tab-hover-transition;
+      }
+
+      &::before {
+        content: "";
+        height: $leftnav-active-dot-size;
+        width: $leftnav-active-dot-size;
+        background-color: transparent;
+        border-radius: 50%;
+        margin-right: 12px;
+
+        @include rtl-selector {
+          margin-right: 0px;
+          margin-left: 12px;
+        }
+      }
+    }
+
+    &.neo-sidenav__sub--multiline {
+      position: relative;
+
+      @include sidenav-sub-selectors() {
+        padding: 8px 28px 8px 70px;
+
+        @include rtl-selector {
+          padding: 8px 70px 8px 28px;
+        }
+
+        &::before {
+          position: absolute;
+          left: 51px;
+
+          @include rtl-selector {
+            left: initial;
+            right: 51px;
+          }
+        }
+      }
+    }
+
+    &--no-icon {
+      @include sidenav-sub-selectors() {
+        padding: 8px 28px 8px $leftnav-sub-padding-no-icon-horizontal;
+
+        @include rtl-selector {
+          padding: 8px $leftnav-sub-padding-no-icon-horizontal 8px 0px;
+        }
+      }
+    }
+
+    &:hover {
+      cursor: pointer;
+      background-color: $leftnav-hover-background-color;
+      transition: $tab-hover-transition;
+
+      @include sidenav-sub-selectors() {
+        color: $leftnav-sub-active-hover-color;
+        background-color: $leftnav-hover-background-color;
+        transition: $tab-hover-transition;
+      }
+    }
+
+    &--active {
+      @include sidenav-sub-selectors() {
+        color: $leftnav-sub-active-color;
+        font-size: $leftnav-sub-active-font-size;
+        font-weight: $leftnav-sub-active-font-weight;
+        letter-spacing: $leftnav-sub-active-font-letter-spacing;
+
+        &::before {
+          content: "";
+          background-color: $leftnav-sub-active-color;
+        }
+      }
+
+      &:hover {
+        transition: $tab-hover-transition;
+        background-color: $leftnav-hover-background-color;
+
+        @include sidenav-sub-selectors() {
+          color: $leftnav-sub-active-hover-color;
+          background-color: $leftnav-hover-background-color;
+          transition: $tab-hover-transition;
+        }
+      }
+    }
+
+    &--active[disabled] {
+      background-color: $leftnav-background-color;
+      cursor: not-allowed;
+
+      @include sidenav-sub-selectors() {
+        cursor: not-allowed;
+        background-color: $leftnav-background-color;
+        color: $leftnav-sub-active-disabled-color !important;
+        font-size: $leftnav-sub-active-font-size;
+        font-weight: $leftnav-sub-active-font-weight;
+        letter-spacing: $leftnav-sub-active-font-letter-spacing;
+
+        &::before {
+          content: "";
+          background-color: $leftnav-sub-active-disabled-color;
+        }
+      }
+    }
+
+    &[disabled],
+    &[disabled]:focus {
+      background-color: $leftnav-background-color;
+      cursor: not-allowed;
+
+      @include sidenav-sub-selectors() {
+        cursor: not-allowed;
+        background-color: $leftnav-background-color;
+        color: $leftnav-sub-default-disabled-color;
+      }
+    }
+  }
+}
+
+@mixin sidenav-title {
+  &__title {
+    background-color: $leftnav-background-color;
+    min-height: $leftnav-title-height;
+    padding: $leftnav-title-padding-vertical 0 0 $leftnav-title-padding-horizontal;
+    font-size: $leftnav-title-font-size;
+    font-weight: $leftnav-title-font-weight;
+    line-height: $leftnav-title-font-line-height;
+    letter-spacing: $leftnav-title-font-letter-spacing;
+    color: $leftnav-title-font-color;
+
+    @include rtl-selector {
+      padding: $leftnav-title-padding-vertical $leftnav-title-padding-horizontal 0 0;
+    }
+  }
+}
+
+@mixin sidenav-links {
+  &__links {
+    background-color: $leftnav-background-color;
+
+    &>a {
+      color: $leftnav-sub-default-color;
+      font-size: $leftnav-link-font-size;
+      font-weight: $leftnav-link-font-weight;
+      line-height: $leftnav-link-font-line-height;
+      letter-spacing: $leftnav-link-font-letter-spacing;
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      &>a {
+        color: $link-hover-color;
+        transition: $tab-hover-transition;
+      }
+    }
+
+    min-height: $leftnav-link-height;
+    max-width: $leftnav-main-max-width;
+    padding: 0 0 0 $leftnav-link-padding-horizontal;
+
+    @include rtl-selector {
+      padding: 0 $leftnav-link-padding-horizontal 0 0;
+    }
+  }
+}
+
+@mixin sidenav-condensed {
+  &.neo-sidenav--condensed {
+    position: relative;
+
+    & .neo-sidenav {
+      margin-bottom: 56px;
+    }
+
+    & .neo-sidenav__main {
+      min-width: 240px;
+
+      &:focus-visible {
+        outline: 0;
+      }
+
+      @include sidenav-main-selectors {
+        padding: 16px !important;
+        text-decoration: none;
+
+        & span {
+          flex-grow: 1;
+          display: flex;
+          justify-content: flex-end;
+          flex-direction: row;
+          font-size: 16px;
+          color: var(--sidenav-default-color);
+
+          &:before {
+            transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+          }
+        }
+      }
+
+      &--expand {
+        @include sidenav-main-selectors() {
+          &>span {
+            &:before {
+              transition: $accordion-icon-transition;
+              transform: rotate(90deg) $accordion-active-icon-animation;
+
+              @include rtl-selector {
+                transform: rotate(-90deg);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    & .neo-sidenav--condensed__toggle {
+      left: 0;
+      padding: 16px !important;
+      max-width: 55px !important;
+
+      @include rtl-selector {
+        left: initial;
+        right: 0;
+      }
+
+      &::before {
+        transform: rotate(180deg);
+      }
+
+      &:hover {
+        text-decoration: none;
+        color: $leftnav-sub-active-hover-color;
+        background-color: $leftnav-hover-background-color;
+        transition: $tab-hover-transition;
+      }
+
+      .neo-sidenav__main {
+        min-width: 55px !important;
+        max-width: 55px !important;
+      }
+
+      max-width: 55px !important;
+      position: absolute;
+      bottom: 0;
+
+      &>a {
+        padding: 16px !important;
+        text-decoration: none;
+
+        &:before {
+          margin: 0px !important;
+        }
+      }
+    }
+
+    &.hide-nav {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 55px !important;
+
+      & .neo-sidenav__main {
+        max-width: 55px !important;
+
+        @include sidenav-main-selectors() {
+          font-size: 0px;
+          padding: 16px !important;
+          max-width: 55px !important;
+
+          & span {
+            visibility: hidden;
+          }
+
+          &:before {
+            margin: 0px !important;
+          }
+        }
+      }
+
+      .neo-sidenav--condensed__toggle {
+        left: 0;
+        padding: 16px !important;
+        max-width: 55px !important;
+
+        &:hover {
+          text-decoration: none;
+          color: $leftnav-sub-active-hover-color;
+          background-color: $leftnav-hover-background-color;
+          transition: $tab-hover-transition;
+        }
+
+        &::before {
+          transform: rotate(180deg);
+
+          @include rtl-selector {
+            transform: rotate(0deg);
+          }
+        }
+      }
+    }
+
+    &--scrollable {
+      .neo-sidenav {
+        overflow: auto;
+      }
+
+      &.neo-sidenav--condensed--scrollable.hide-nav {
+        max-width: 70px !important;
+      }
+
+      & .neo-sidenav__main {
+        min-width: initial;
+      }
+
+      & .neo-tooltip.neo-tooltip-sidenav--condensed__toggle {
+        width: 52px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+
+        @include rtl-selector() {
+          left: initial;
+          right: 0;
+        }
+      }
+
+      & .neo-tooltip--right .neo-sidenav--condensed__toggle+.neo-tooltip__content {
+        transform: translate(0, -118%);
+
+        @include rtl-selector() {
+          transform: translate(-100%, -118%);
+        }
+      }
+    }
+  }
+}
+
+.neo-sidenav {
+  @include NeoLinkStyles;
+
+  &--wrapper {
+    height: inherit;
+    max-width: 240px;
+    overflow: auto;
+    transition: max-width 0.2s ease !important;
+    @include sidenav-condensed;
+
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+
+  &--wrapper-tooltip {
+    overflow: inherit;
+  }
+
+  &__nav {
+    margin: 0;
+    overflow: hidden;
+  }
+
+  &__nav--tooltip {
+    overflow: inherit;
+  }
+
+  &__category,
+  &__disabled {
+    height: inherit;
+    justify-content: left;
+  }
+
+  @include sidenav-main;
+  @include sidenav-sub;
+  @include sidenav-title;
+  @include sidenav-links;
+
+  .neo-btn:not(:empty):before {
+    margin-right: 12px;
+  }
+}
+
+.neo-sidenav--collapsible {
+  @extend %sheet;
+
+  height: inherit;
+  padding: 0 0 17px 0 !important;
+}
