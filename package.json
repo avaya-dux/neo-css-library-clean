@@ -7,7 +7,7 @@
   "scripts": {
     "all": "yarn github",
     "build": "yarn build:css && yarn build:staging",
-    "build:css": "yarn workspace css-library build",
+    "build:css": "yarn workspace css-library build:nocache",
     "build:for-publish": "yarn workspace figma-api package-icons && yarn workspace css-library build:for-publish",
     "build:staging": "yarn workspace staging build",
     "dev": "yarn dev:css & yarn dev:staging",
