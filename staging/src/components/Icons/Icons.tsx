@@ -58,7 +58,14 @@ TO-DO: Create JIRA ticket to resolve this issue for adding icons in future
 
 */
 
-	const newIcons = ["nailed-up-off", "nailed-up-on"];
+	const newIcons = [
+		"next-best-action",
+		"next-best-action-rtl",
+		"suggested-response",
+		"suggested-response-rtl",
+		"faq",
+		"faq-rtl",
+	];
 
 	return (
 		<>

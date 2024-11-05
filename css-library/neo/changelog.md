@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.21
+
+### New Features - Recently Added
+
+- Add new icons (NEO-2470): next-best-action next-best-action-rtl suggested-response suggested-response-rtl faq faq-rtl
+
 ### 3.81.20
 
 ### New Features - Recently Added

@@ -3592,5 +3592,41 @@
 		"bidirectional": false,
 		"category": "communication",
 		"animated": false
+	},
+	{
+		"name": "suggested-response",
+		"bidirectional": false,
+		"category": "action",
+		"animated": false
+	},
+	{
+		"name": "suggested-response-rtl",
+		"bidirectional": false,
+		"category": "action",
+		"animated": false
+	},
+	{
+		"name": "faq",
+		"bidirectional": false,
+		"category": "content",
+		"animated": false
+	},
+	{
+		"name": "faq-rtl",
+		"bidirectional": false,
+		"category": "content",
+		"animated": false
+	},
+	{
+		"name": "next-best-action",
+		"bidirectional": false,
+		"category": "action",
+		"animated": false
+	},
+	{
+		"name": "next-best-action-rtl",
+		"bidirectional": false,
+		"category": "action",
+		"animated": false
 	}
 ]

@@ -593,5 +593,12 @@ const unicodes = {
   ai: 62532,
   'filter-applied': 62533,
   'nailed-up-off': 62534,
-  'nailed-up-on': 62535
-}; module.exports.unicodes = unicodes
+  'nailed-up-on': 62535,
+  'suggested-response': 62538,
+  'suggested-response-rtl': 62539,
+  faq: 62540,
+  'faq-rtl': 62541,
+  'next-best-action': 62542,
+  'next-best-action-rtl': 62543
+};
+module.exports.unicodes = unicodes;
