@@ -8,231 +8,1271 @@ import NeoLayout from "../layouts/NeoLayout.astro";
     <aside>Please do not use for production systems</aside>
   </section>
 
-  <section class="sidenav-section">
-    <h2>Multi-level Example</h2>
+  <section>
+    <h2>Implementation notes</h2>
 
-    <div class="neo-sidenav--wrapper">
-      <nav class="neo-sidenav" aria-label="TODO: TRANSLATE ME">
-        <ul class="neo-sidenav__nav">
-          <li class="neo-sidenav__main">
-            <a href="#home" class="neo-icon-home">Home</a>
-          </li>
+    <p>
+      Note that this Side Navigation has an <code>aria-label</code>. All Side
+      Navigation components <i>must</i> have an <code>aria-label</code> to describe
+      the purpose of the navigation to those using assistive technology.
+    </p>
 
-          <li
-            class="neo-sidenav__main neo-sidenav__main--expand neo-sidenav__main--active"
-          >
-            <button
-              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-dashboard"
-              aria-label="Dashboards"
-            >
-              Dashboards
-            </button>
+    <p>
+      You can show disabled navigation items, but you may <i>not</i> disable anchor
+      tags. Instead, if you must disable a link, use a button element.
+    </p>
 
-            <ul class="neo-sidenav__nav">
-              <li class="neo-sidenav__sub neo-sidenav__sub--active">
-                <a href="#my-dashboard">My Dashboards</a>
-              </li>
-
-              <li class="neo-sidenav__sub">
-                <a href="#team-dashboard">Team Dashboards</a>
-              </li>
-            </ul>
-          </li>
-
-          <li class="neo-sidenav__main neo-sidenav__main--expand">
-            <button
-              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-settings"
-              aria-label="Advanced"
-            >
-              Advanced
-            </button>
-
-            <ul class="neo-sidenav__nav">
-              <li class="neo-sidenav-category-group">
-                <div class="neo-sidenav-category-group-label">Settings</div>
-
-                <ul>
-                  <li class="neo-sidenav__sub">
-                    <a href="#applications">Applications</a>
-                  </li>
-
-                  <li
-                    class="neo-sidenav-sub-category neo-sidenav-sub-category--expand"
-                  >
-                    <button type="button" class="neo-btn">Actions</button>
-
-                    <ul>
-                      <li class="neo-sidenav__sub">
-                        <a href="#name">Name</a>
-                      </li>
-
-                      <li class="neo-sidenav__sub">
-                        <a href="#parameters">Parameters</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="neo-sidenav-category-group">
-                <div class="neo-sidenav-category-group-label">Reports</div>
-
-                <ul>
-                  <li class="neo-sidenav__sub">
-                    <a href="#geography">Geography</a>
-                  </li>
-
-                  <li class="neo-sidenav__sub">
-                    <a href="#devices">Devices</a>
-                  </li>
-
-                  <li class="neo-sidenav__sub">
-                    <a href="#depth-chart">Depth Chart</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-          <li class="neo-sidenav__main">
-            <a href="#contact-center" class="neo-icon-address-book">
-              Contact Center
-            </a>
-          </li>
-
-          <li class="neo-sidenav__main">
-            <button
-              class="neo-btn neo-btn--default neo-btn-tertiary neo-btn-tertiary--default neo-icon-user"
-              disabled=""
-            >
-              Admin
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
-
-    <div class="neo-sidenav--wrapper">
-      <nav class="neo-sidenav" aria-label="TODO: TRANSLATE ME">
-        <ul class="neo-sidenav__nav">
-          <li class="neo-sidenav__main">
-            <a href="#home" class="neo-icon-home">Home</a>
-          </li>
-
-          <li class="neo-sidenav__main">
-            <button
-              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-dashboard"
-              aria-label="Dashboards"
-            >
-              Dashboards
-            </button>
-
-            <ul class="neo-sidenav__nav">
-              <li class="neo-sidenav__sub">
-                <a href="#my-dashboard">My Dashboards</a>
-              </li>
-
-              <li class="neo-sidenav__sub">
-                <a href="#team-dashboard">Team Dashboards</a>
-              </li>
-            </ul>
-          </li>
-
-          <li
-            class="neo-sidenav__main neo-sidenav__main--active neo-sidenav__main--expand"
-          >
-            <button
-              class="neo-sidenav__category expandable neo-btn-secondary--info neo-btn neo-icon-settings"
-              aria-label="Advanced"
-            >
-              Advanced
-            </button>
-
-            <ul class="neo-sidenav__nav">
-              <li class="neo-sidenav-category-group">
-                <div class="neo-sidenav-category-group-label">Settings</div>
-
-                <ul>
-                  <li class="neo-sidenav__sub">
-                    <a href="#applications">Applications</a>
-                  </li>
-
-                  <li
-                    class="neo-sidenav-sub-category neo-sidenav-sub-category--active neo-sidenav-sub-category--expand"
-                  >
-                    <button type="button" class="neo-btn">Actions</button>
-
-                    <ul>
-                      <li class="neo-sidenav__sub">
-                        <a href="#name">Name</a>
-                      </li>
-
-                      <li class="neo-sidenav__sub neo-sidenav__sub--active">
-                        <a href="#parameters">Parameters</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-
-              <li class="neo-sidenav-category-group">
-                <div class="neo-sidenav-category-group-label">Reports</div>
-
-                <ul>
-                  <li class="neo-sidenav__sub">
-                    <a href="#geography">Geography</a>
-                  </li>
-
-                  <li class="neo-sidenav__sub">
-                    <a href="#devices">Devices</a>
-                  </li>
-
-                  <li class="neo-sidenav__sub">
-                    <a href="#depth-chart">Depth Chart</a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </li>
-
-          <li class="neo-sidenav__main">
-            <a href="#contact-center" class="neo-icon-address-book">
-              Contact Center
-            </a>
-          </li>
-
-          <li class="neo-sidenav__main">
-            <button
-              class="neo-btn neo-btn--default neo-btn-tertiary neo-btn-tertiary--default neo-icon-user"
-              disabled=""
-            >
-              Admin
-            </button>
-          </li>
-        </ul>
-      </nav>
-    </div>
+    <p>
+      Anchor tags must be used to navigate, and buttons must be used for
+      everything else. Note that if a button is used to show or hide elements,
+      it <i>must</i> have both an <code>aria-expanded</code> and a
+      <code>aria-controls</code> attribute.
+    </p>
   </section>
+
+  <section class="sidenav-section">
+    <h2 class="heading">Single-level Example</h2>
+
+    <nav class="neo-sidenav" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">
+            <span class="neo-icon-home"></span>Home
+          </a>
+        </li>
+
+        <li>
+          <a href="#dashboard" class="neo-sidenav-parent">
+            <span class="neo-icon-dashboard"></span>Dashboard
+          </a>
+        </li>
+
+        <li>
+          <a href="#settings" class="neo-sidenav-parent active">
+            <span class="neo-icon-settings"></span>Settings
+          </a>
+        </li>
+
+        <li>
+          <a href="#contact" class="neo-sidenav-parent">
+            <span class="neo-icon-address-book"></span>Contact
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-icon-user"></span>Admin
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="neo-sidenav" aria-label="side navigation">
+      <ul>
+        <li>
+          <a class="neo-sidenav-parent" href="#home">Home</a>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#dashboard">Dashboard</a>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent active" href="#settings">Settings</a>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">Contact</a>
+        </li>
+
+        <li>
+          <button class="neo-sidenav-parent" disabled>Admin</button>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="sidenav-section">
+    <h2 class="heading">Multi-level Example</h2>
+
+    <nav class="neo-sidenav" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">
+            <span class="neo-icon-home"></span>Home
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent"
+            aria-expanded="false"
+            aria-controls="dashboard-links-1"
+          >
+            <span class="neo-icon-dashboard"></span>Dashboard
+          </button>
+
+          <ul id="dashboard-links-1">
+            <li class="neo-sidenav-child">
+              <a href="#my-dashboards">My Dashboards</a>
+            </li>
+
+            <li>
+              <a class="neo-sidenav-child" href="#team-dashboards">
+                Team Dashboards
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-1"
+          >
+            <span class="neo-icon-settings"></span>Advanced
+          </button>
+
+          <ul id="advanced-links-1">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                Universal Options
+              </a>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Settings</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#applications">
+                    Applications
+                  </a>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child expanded"
+                    aria-expanded="true"
+                    aria-controls="my-actions-links-1"
+                  >
+                    My Actions
+                  </button>
+
+                  <ul id="my-actions-links-1">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="neo-sidenav-grandchild active"
+                        href="#my-parameters"
+                      >
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child"
+                    aria-expanded="false"
+                    aria-controls="team-actions-links-1"
+                  >
+                    Team Actions
+                  </button>
+
+                  <ul id="team-actions-links-1">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-name">
+                        Name
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#geography">Geography</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">
+            <span class="neo-icon-address-book"></span>Contact Center
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-icon-user"></span>Admin
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="neo-sidenav no-icons" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">Home</a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent"
+            aria-expanded="false"
+            aria-controls="dashboard-links-2"
+          >
+            Dashboard
+          </button>
+
+          <ul id="dashboard-links-2">
+            <li class="neo-sidenav-child">
+              <a href="#my-dashboards">My Dashboards</a>
+            </li>
+
+            <li>
+              <a class="neo-sidenav-child" href="#team-dashboards">
+                Team Dashboards
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-2"
+          >
+            Advanced
+          </button>
+
+          <ul id="advanced-links-2">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                Universal Options
+              </a>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Settings</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#applications">
+                    Applications
+                  </a>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child expanded"
+                    aria-expanded="true"
+                    aria-controls="my-actions-links-2"
+                  >
+                    My Actions
+                  </button>
+
+                  <ul id="my-actions-links-2">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="neo-sidenav-grandchild active"
+                        href="#my-parameters"
+                      >
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child"
+                    aria-expanded="false"
+                    aria-controls="team-actions-links-2"
+                  >
+                    Team Actions
+                  </button>
+
+                  <ul id="team-actions-links-2">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-name">
+                        Name
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#geography">Geography</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">Contact Center</a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">Admin</button>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="sidenav-section">
+    <h2 class="heading">Truncated text</h2>
+
+    <nav class="neo-sidenav" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">
+            <span class="neo-icon-home"></span>Home
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-3"
+          >
+            <span class="neo-icon-settings"></span>Advanced
+          </button>
+
+          <ul id="advanced-links-3">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                <span class="neo-sidenav-text-truncation">
+                  Et harum quidem rerum facilis est et expedita distinctio. Nam
+                  libero tempore, cum soluta nobis est eligendi optio cumque
+                  nihil impedit quo minus id quod maxime placeat facere
+                  possimus, omnis voluptas assumenda est, omnis dolor
+                  repellendus.
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Settings</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#applications">
+                    Applications
+                  </a>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child expanded"
+                    aria-expanded="true"
+                    aria-controls="my-actions-links-3"
+                  >
+                    My Actions
+                  </button>
+
+                  <ul id="my-actions-links-3">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="neo-sidenav-grandchild active"
+                        href="#my-parameters"
+                      >
+                        <span class="neo-sidenav-text-truncation">
+                          Temporibus autem quibusdam et aut officiis debitis aut
+                          rerum necessitatibus saepe eveniet ut et voluptates
+                          repudiandae sint et molestiae non recusandae.
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child"
+                    aria-expanded="false"
+                    aria-controls="team-actions-links-3"
+                  >
+                    <span class="neo-sidenav-text-truncation">
+                      Impedit quo minus id quod maxime placeat facere possimus,
+                      omnis voluptas assumenda est, omnis dolor repellendus.
+                    </span>
+                  </button>
+
+                  <ul id="team-actions-links-3">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-name">
+                        Name
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#geography">Geography</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">
+            <span class="neo-icon-address-book"></span>
+
+            <span class="neo-sidenav-text-truncation">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga.
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-icon-user"></span>
+
+            <span class="neo-sidenav-text-truncation">
+              Nam libero tempore, cum soluta nobis est eligendi optio cumque
+              nihil impedit quo minus id quod maxime placeat facere.
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="neo-sidenav no-icons" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">Home</a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-4"
+          >
+            Advanced
+          </button>
+
+          <ul id="advanced-links-4">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                <span class="neo-sidenav-text-truncation">
+                  Et harum quidem rerum facilis est et expedita distinctio. Nam
+                  libero tempore, cum soluta nobis est eligendi optio cumque
+                  nihil impedit quo minus id quod maxime placeat facere
+                  possimus, omnis voluptas assumenda est, omnis dolor
+                  repellendus.
+                </span>
+              </a>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Settings</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#applications">
+                    Applications
+                  </a>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child expanded"
+                    aria-expanded="true"
+                    aria-controls="my-actions-links-4"
+                  >
+                    My Actions
+                  </button>
+
+                  <ul id="my-actions-links-4">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="neo-sidenav-grandchild active"
+                        href="#my-parameters"
+                      >
+                        <span class="neo-sidenav-text-truncation">
+                          Temporibus autem quibusdam et aut officiis debitis aut
+                          rerum necessitatibus saepe eveniet ut et voluptates
+                          repudiandae sint et molestiae non recusandae.
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child"
+                    aria-expanded="false"
+                    aria-controls="team-actions-links-4"
+                  >
+                    <span class="neo-sidenav-text-truncation">
+                      Impedit quo minus id quod maxime placeat facere possimus,
+                      omnis voluptas assumenda est, omnis dolor repellendus.
+                    </span>
+                  </button>
+
+                  <ul id="team-actions-links-4">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-name">
+                        Name
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#geography">Geography</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">
+            <span class="neo-sidenav-text-truncation">
+              At vero eos et accusamus et iusto odio dignissimos ducimus qui
+              blanditiis praesentium voluptatum deleniti atque corrupti quos
+              dolores et quas molestias excepturi sint occaecati cupiditate non
+              provident, similique sunt in culpa qui officia deserunt mollitia
+              animi, id est laborum et dolorum fuga.
+            </span>
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-sidenav-text-truncation">
+              Nam libero tempore, cum soluta nobis est eligendi optio cumque
+              nihil impedit quo minus id quod maxime placeat facere.
+            </span>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="sidenav-section">
+    <h2 class="heading">Width Examples</h2>
+
+    <nav class="neo-sidenav width-180" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">
+            <span class="neo-icon-home"></span>Home
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent"
+            aria-expanded="false"
+            aria-controls="dashboard-links-3"
+          >
+            <span class="neo-icon-dashboard"></span>Dashboard
+          </button>
+
+          <ul id="dashboard-links-3">
+            <li class="neo-sidenav-child">
+              <a href="#my-dashboards">My Dashboards</a>
+            </li>
+
+            <li>
+              <a class="neo-sidenav-child" href="#team-dashboards">
+                Team Dashboards
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-5"
+          >
+            <span class="neo-icon-settings"></span>Advanced
+          </button>
+
+          <ul id="advanced-links-5">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                Universal Options
+              </a>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Settings</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#applications">
+                    Applications
+                  </a>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child expanded"
+                    aria-expanded="true"
+                    aria-controls="my-actions-links-5"
+                  >
+                    My Actions
+                  </button>
+
+                  <ul id="my-actions-links-5">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="neo-sidenav-grandchild active"
+                        href="#my-parameters"
+                      >
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child"
+                    aria-expanded="false"
+                    aria-controls="team-actions-links-5"
+                  >
+                    Team Actions
+                  </button>
+
+                  <ul id="team-actions-links-5">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-name">
+                        Name
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#geography">Geography</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">
+            <span class="neo-icon-address-book"></span>Contact Center
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-icon-user"></span>Admin
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="neo-sidenav width-500" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">
+            <span class="neo-icon-home"></span>Home
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent"
+            aria-expanded="false"
+            aria-controls="dashboard-links-4"
+          >
+            <span class="neo-icon-dashboard"></span>Dashboard
+          </button>
+
+          <ul id="dashboard-links-4">
+            <li class="neo-sidenav-child">
+              <a href="#my-dashboards">My Dashboards</a>
+            </li>
+
+            <li>
+              <a class="neo-sidenav-child" href="#team-dashboards">
+                Team Dashboards
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-6"
+          >
+            <span class="neo-icon-settings"></span>Advanced
+          </button>
+
+          <ul id="advanced-links-6">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                Universal Options
+              </a>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Settings</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#applications">
+                    Applications
+                  </a>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child"
+                    aria-expanded="false"
+                    aria-controls="my-actions-links-6"
+                  >
+                    My Actions
+                  </button>
+
+                  <ul id="my-actions-links-6">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child expanded"
+                    aria-expanded="true"
+                    aria-controls="team-actions-links-6"
+                  >
+                    Team Actions
+                  </button>
+
+                  <ul id="team-actions-links-6">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-name">
+                        Name
+                      </a>
+                    </li>
+
+                    <li>
+                      <a
+                        class="neo-sidenav-grandchild active"
+                        href="#team-parameters"
+                      >
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#geography">Geography</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">
+            <span class="neo-icon-address-book"></span>Contact Center
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-icon-user"></span>Admin
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <section class="sidenav-section">
+    <h2 class="heading">Extra Examples</h2>
+
+    <nav class="neo-sidenav" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">
+            <span class="neo-icon-home"></span>Home
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent"
+            aria-expanded="false"
+            aria-controls="dashboard-links-5"
+          >
+            <span class="neo-icon-dashboard"></span>Dashboard
+          </button>
+
+          <ul id="dashboard-links-5">
+            <li class="neo-sidenav-child">
+              <a href="#my-dashboards">My Dashboards</a>
+            </li>
+
+            <li>
+              <a class="neo-sidenav-child" href="#team-dashboards">
+                Team Dashboards
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-7"
+          >
+            <span class="neo-icon-settings"></span>Advanced
+          </button>
+
+          <ul id="advanced-links-7">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                Universal Options
+              </a>
+            </li>
+
+            <li>
+              <a class="neo-sidenav-child" href="#applications">
+                Applications
+              </a>
+            </li>
+
+            <li>
+              <button
+                class="neo-sidenav-child expanded"
+                aria-expanded="true"
+                aria-controls="my-actions-links-7"
+              >
+                My Actions
+              </button>
+
+              <ul id="my-actions-links-7">
+                <li>
+                  <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                </li>
+
+                <li>
+                  <a
+                    class="neo-sidenav-grandchild active"
+                    href="#my-parameters"
+                  >
+                    Parameters
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <button
+                class="neo-sidenav-child"
+                aria-expanded="false"
+                aria-controls="team-actions-links-7"
+              >
+                Team Actions
+              </button>
+
+              <ul id="team-actions-links-7">
+                <li>
+                  <a class="neo-sidenav-grandchild" href="#team-name"> Name </a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-grandchild" href="#team-parameters">
+                    Parameters
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#geography">Geography</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">
+            <span class="neo-icon-address-book"></span>Contact Center
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-icon-user"></span>Admin
+          </button>
+        </li>
+      </ul>
+    </nav>
+
+    <nav class="neo-sidenav" aria-label="side navigation">
+      <ul>
+        <li>
+          <a href="#home" class="neo-sidenav-parent">
+            <span class="neo-icon-home"></span>Home
+          </a>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent"
+            aria-expanded="false"
+            aria-controls="dashboard-links-6"
+          >
+            <span class="neo-icon-dashboard"></span>Dashboard
+          </button>
+
+          <ul id="dashboard-links-6">
+            <li class="neo-sidenav-child">
+              <a href="#my-dashboards">My Dashboards</a>
+            </li>
+
+            <li>
+              <a class="neo-sidenav-child" href="#team-dashboards">
+                Team Dashboards
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <button
+            class="neo-sidenav-parent expanded"
+            aria-expanded="true"
+            aria-controls="advanced-links-8"
+          >
+            <span class="neo-icon-settings"></span>Advanced
+          </button>
+
+          <ul id="advanced-links-8">
+            <li>
+              <a class="neo-sidenav-child" href="#universal-options">
+                Universal Options
+              </a>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Settings</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child" href="#applications">
+                    Applications
+                  </a>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child expanded"
+                    aria-expanded="true"
+                    aria-controls="my-actions-links-8"
+                  >
+                    My Actions
+                  </button>
+
+                  <ul id="my-actions-links-8">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-name">Name</a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#my-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+
+                <li>
+                  <button
+                    class="neo-sidenav-child"
+                    aria-expanded="false"
+                    aria-controls="team-actions-links-8"
+                  >
+                    Team Actions
+                  </button>
+
+                  <ul id="team-actions-links-8">
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-name">
+                        Name
+                      </a>
+                    </li>
+
+                    <li>
+                      <a class="neo-sidenav-grandchild" href="#team-parameters">
+                        Parameters
+                      </a>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <div class="neo-sidenav-category">Reports</div>
+
+              <ul>
+                <li>
+                  <a class="neo-sidenav-child active" href="#geography"
+                    >Geography</a
+                  >
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#devices">Devices</a>
+                </li>
+
+                <li>
+                  <a class="neo-sidenav-child" href="#depth-chart">
+                    Depth Chart
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a class="neo-sidenav-parent" href="#contact">
+            <span class="neo-icon-address-book"></span>Contact Center
+          </a>
+        </li>
+
+        <li>
+          <button disabled class="neo-sidenav-parent">
+            <span class="neo-icon-user"></span>Admin
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </section>
+
+  <style>
+    section {
+      margin-bottom: 3rem;
+    }
+
+    p {
+      width: 50ch;
+      margin-bottom: 1rem;
+    }
+
+    .sidenav-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas:
+        "header header"
+        "nav1   nav2";
+
+      > .heading {
+        grid-area: header;
+      }
+      > .neo-sidenav:nth-of-type(1) {
+        grid-area: nav1;
+      }
+      > .neo-sidenav:nth-of-type(2) {
+        grid-area: nav2;
+      }
+    }
+
+    .width-180 {
+      width: 180px;
+    }
+
+    .width-500 {
+      width: 500px;
+    }
+  </style>
 </NeoLayout>
-
-<style>
-  section {
-    margin-bottom: 3rem;
-  }
-
-  .sidenav-section {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-
-    > :nth-child(1) {
-      grid-column: 1 / -1; /* First element spans the full width */
-    }
-    > :nth-child(2) {
-      grid-column: 1 / 2; /* Second element takes the first column */
-    }
-    > :nth-child(3) {
-      grid-column: 2 / 3; /* Third element takes the second column */
-    }
-  }
-</style>

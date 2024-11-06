@@ -1,29 +1,29 @@
 {
-  "name": "figma-api",
-  "version": "1.0.0",
-  "scripts": {
-    "test": "jest --config ./jest.config.json",
-    "test:watch": "jest --config ./jest.config.json --watchAll=true",
-    "build-icons": "node icon-scripts",
-    "pull-icons": "node icon-pull.js",
-    "write-icons": "node ./icons-functions/icon-css-generator.js",
-    "update-icon-info": "node icon-info-update.js",
-    "package-icons": "shx mkdir -p ../neo-npm-package/neo/dist/css/icons/ && shx cp ../css-library/neo/neo-scss/icons.scss ../neo-npm-package/neo/dist/css/icons/neo-icons.css && shx cp ./icons-functions/icon-utility-files/iconInfo.js ../neo-icons-npm-package/neo-icon-info.js && shx cp ../css-library/neo/neo-scss/icons.scss ../neo-icons-npm-package/neo-icons.css"
-  },
-  "license": "UNLICENSED",
-  "devDependencies": {
-    "@babel/core": "7.26.0",
-    "@babel/preset-env": "7.26.0",
-    "axios": "1.7.7",
-    "babel-jest": "29.7.0",
-    "dotenv": "16.4.5",
-    "jest-fetch-mock": "3.0.3",
-    "replace-in-file": "7.2.0",
-    "shx": "0.3.4",
-    "webfonts-generator": "0.4.0"
-  },
-  "dependencies": {
-    "enquirer": "2.4.1",
-    "node-fetch": "2.7.0"
-  }
+	"name": "figma-api",
+	"version": "1.0.0",
+	"scripts": {
+		"test": "jest --config ./jest.config.json",
+		"test:watch": "jest --config ./jest.config.json --watchAll=true",
+		"build-icons": "node icon-scripts",
+		"pull-icons": "node icon-pull.js",
+		"write-icons": "node ./icons-functions/icon-css-generator.js",
+		"update-icon-info": "node icon-info-update.js",
+		"package-icons": "shx mkdir -p ../neo-npm-package/neo/dist/css/icons/ && shx cp ../css-library/neo/neo-scss/icons.scss ../neo-npm-package/neo/dist/css/icons/neo-icons.css && shx cp ./icons-functions/icon-utility-files/iconInfo.js ../neo-icons-npm-package/neo-icon-info.js && shx cp ../css-library/neo/neo-scss/icons.scss ../neo-icons-npm-package/neo-icons.css"
+	},
+	"license": "UNLICENSED",
+	"devDependencies": {
+		"@babel/core": "7.26.0",
+		"@babel/preset-env": "7.26.0",
+		"axios": "1.7.7",
+		"babel-jest": "29.7.0",
+		"dotenv": "16.4.5",
+		"jest-fetch-mock": "3.0.3",
+		"replace-in-file": "7.2.0",
+		"shx": "0.3.4",
+		"webfonts-generator": "0.4.0"
+	},
+	"dependencies": {
+		"enquirer": "2.4.1",
+		"node-fetch": "2.7.0"
+	}
 }

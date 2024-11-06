@@ -1,5 +1,11 @@
 # Changelog
 
+### 3.81.22
+
+### New Features - Recently Added
+
+- Add Side Navigation (NEO-2403)
+
 ### 3.81.21
 
 ### New Features - Recently Added

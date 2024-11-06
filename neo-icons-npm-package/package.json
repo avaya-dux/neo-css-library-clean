@@ -1,17 +1,9 @@
 {
-  "name": "@avaya/neo-icons",
+	"name": "@avaya/neo-icons",
 	"version": "1.8.17",
-  "author": "Avaya, Inc.",
-  "license": "MIT",
-  "description": "Avaya NEO Icon Library",
-  "type": "module",
-  "keywords": [
-    "Avaya",
-    "Icons",
-    "Design",
-    "NEO",
-    "System",
-    "UI",
-    "UX"
-  ]
+	"author": "Avaya, Inc.",
+	"license": "MIT",
+	"description": "Avaya NEO Icon Library",
+	"type": "module",
+	"keywords": ["Avaya", "Icons", "Design", "NEO", "System", "UI", "UX"]
 }

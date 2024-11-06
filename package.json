@@ -1,30 +1,26 @@
 {
-  "name": "neo-css-library",
-  "version": "0.0.1",
-  "private": true,
-  "author": "Mohammad Razian",
-  "license": "UNLICENSED",
-  "scripts": {
-    "all": "yarn github",
-    "build": "yarn build:css && yarn build:staging",
-    "build:css": "yarn workspace css-library build:nocache",
-    "build:for-publish": "yarn workspace figma-api package-icons && yarn workspace css-library build:for-publish",
-    "build:staging": "yarn workspace staging build",
-    "dev": "yarn dev:css & yarn dev:staging",
-    "dev:css": "yarn workspace css-library watch",
-    "dev:staging": "yarn workspace staging dev",
-    "test:api": "cd figma-API && yarn && yarn test",
-    "github": "yarn && yarn build:css && yarn test:api && yarn workspace staging github",
-    "preview": "yarn workspace staging start",
-    "test:playwright": "cd playwright && yarn test:docker",
-    "test:visual": "start-server-and-test preview http://localhost:4321 test:playwright"
-  },
-  "workspaces": [
-    "css-library",
-    "figma-api",
-    "staging"
-  ],
-  "devDependencies": {
-    "start-server-and-test": "2.0.8"
-  }
+	"name": "neo-css-library",
+	"version": "0.0.1",
+	"private": true,
+	"author": "Mohammad Razian",
+	"license": "UNLICENSED",
+	"scripts": {
+		"all": "yarn github",
+		"build": "yarn build:css && yarn build:staging",
+		"build:css": "yarn workspace css-library build:nocache",
+		"build:for-publish": "yarn workspace figma-api package-icons && yarn workspace css-library build:for-publish",
+		"build:staging": "yarn workspace staging build",
+		"dev": "yarn dev:css & yarn dev:staging",
+		"dev:css": "yarn workspace css-library watch",
+		"dev:staging": "yarn workspace staging dev",
+		"test:api": "cd figma-API && yarn && yarn test",
+		"github": "yarn && yarn build:css && yarn test:api && yarn workspace staging github",
+		"preview": "yarn workspace staging start",
+		"test:playwright": "cd playwright && yarn test:docker",
+		"test:visual": "start-server-and-test preview http://localhost:4321 test:playwright"
+	},
+	"workspaces": ["css-library", "figma-api", "staging"],
+	"devDependencies": {
+		"start-server-and-test": "2.0.8"
+	}
 }

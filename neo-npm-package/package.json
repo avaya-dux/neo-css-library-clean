@@ -1,16 +1,8 @@
 {
-  "name": "@avaya/neo",
-  "version": "3.81.21",
-  "author": "Avaya, Inc.",
-  "license": "MIT",
-  "description": "Avaya NEO CSS Library",
-  "keywords": [
-    "Avaya",
-    "CSS",
-    "Design",
-    "NEO",
-    "System",
-    "UI",
-    "UX"
-  ]
+	"name": "@avaya/neo",
+	"version": "3.81.21",
+	"author": "Avaya, Inc.",
+	"license": "MIT",
+	"description": "Avaya NEO CSS Library",
+	"keywords": ["Avaya", "CSS", "Design", "NEO", "System", "UI", "UX"]
 }
